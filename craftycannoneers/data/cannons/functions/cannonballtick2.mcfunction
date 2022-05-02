@@ -1,5 +1,4 @@
 execute as @s store result score @s x run data get entity @s Pos[0] 1000000
-execute as @s store result score @s y run data get entity @s Pos[1] 1000000
 execute as @s store result score @s z run data get entity @s Pos[2] 1000000
 
 execute as @s[scores={PowerM=1}] at @s run tp @s ^ ^ ^0.0012
@@ -18,11 +17,9 @@ execute as @s[scores={PowerM=13}] at @s run tp @s ^ ^ ^0.0024
 execute as @s[scores={PowerM=14}] at @s run tp @s ^ ^ ^0.0025
 
 execute as @s store result score @s dx run data get entity @s Pos[0] 1000000
-execute as @s store result score @s dy run data get entity @s Pos[1] 1000000
 execute as @s store result score @s dz run data get entity @s Pos[2] 1000000
 
 scoreboard players operation @s dx -= @s x
-scoreboard players operation @s dy -= @s y
 scoreboard players operation @s dz -= @s z
 
 #########
@@ -30,8 +27,7 @@ scoreboard players operation @s dz -= @s z
 #        "(...) Motion[0] double 0.002 (...)"        <--- the bigger this number, the faster the entity
 #########
 
-execute store result entity @s Motion[0] double 0.0045 run scoreboard players get @s dx
-execute store result entity @s Motion[1] double -0.0001 run scoreboard players get @s dy
-execute store result entity @s Motion[2] double 0.0045 run scoreboard players get @s dz
+execute store result entity @s Motion[0] double 0.0035 run scoreboard players get @s dx
+execute store result entity @s Motion[2] double 0.0035 run scoreboard players get @s dz
 
 tag @s add CannonballShot

@@ -35,7 +35,7 @@ execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s store result score 
 execute as @e[tag=cannonball] at @s run function cannons:cannonballrotation
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run tp @e[tag=cannonball,limit=1,sort=nearest,distance=..1] ^ ^2 ^2
 execute as @e[tag=cannonball,tag=!CannonballShot] at @s run function cannons:cannonballtick
-execute as @e[tag=cannonball,scores={CmdData=1..9}] at @s run function cannons:cannonballtick2
+execute as @e[tag=cannonball,scores={PowerM=8..CmdData=5..12}] at @s run function cannons:cannonballtick2
 #> End Fire Cannon
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run scoreboard players set @e[tag=GPDispL,distance=..2,limit=1,sort=nearest] CmdData 0
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run scoreboard players set @e[tag=GPDispR,distance=..2,limit=1,sort=nearest] CmdData 0
