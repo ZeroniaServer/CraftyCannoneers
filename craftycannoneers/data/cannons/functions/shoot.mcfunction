@@ -45,3 +45,7 @@ execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run tag @s remove F
 execute as @e[tag=!FireCannon,scores={cannonshot=30..}] at @s run scoreboard players reset @s cannonshot
 
 execute as @e[tag=Cannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 1 force
+
+#Kill cannonball on ground and summon creeper (TEMPORARY)
+execute as @e[tag=cannonball] at @s unless block ~ ~-1 ~ air run summon creeper ~ ~ ~ {NoGravity:1b,CustomName:'{"text":"Cannon Ball"}',ExplosionRadius:5,Fuse:0,Silent:1b,CustomNameVisible:0b,NoAI:1b,CanPickUpLoot:0b,DeathTime:19s,Tags:["CannonExplode"]}
+execute as @e[tag=cannonball] at @s unless block ~ ~-1 ~ air run kill @s
