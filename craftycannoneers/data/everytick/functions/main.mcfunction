@@ -4,3 +4,4 @@
 #Cannons
 function cannons:load
 function cannons:shoot
+function chests:loop

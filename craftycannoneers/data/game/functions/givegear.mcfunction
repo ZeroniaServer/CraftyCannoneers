@@ -13,4 +13,5 @@ item replace entity @s[team=Purple] armor.feet with leather_boots{Unbreakable:1b
 
 item replace entity @s hotbar.0 with iron_sword{Unbreakable:1b,display:{Name:'[{"text":"Pirate Cutlass","italic":false,"color":"dark_aqua"}]'}}
 item replace entity @s hotbar.1 with crossbow{Unbreakable:1b,display:{Name:'[{"text":"Pirate Hand Crossbow","italic":false,"color":"dark_aqua"}]'},Enchantments:[{id:quick_charge,lvl:2}],HideFlags:1,Charged:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{display:{Name:'[{"text":"Arrow","italic":false,"color":"dark_aqua"}]'}}}]}
+item replace entity @s hotbar.2 with spyglass{display:{Name:'[{"text":"Spotting Spyglass","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Use this Spyglass to find the","italic":false,"color":"aqua"}]','[{"text":"current weakpoint of a ship!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"","italic":false,"color":"dark_purple"}]']}}
 item replace entity @s hotbar.8 with arrow{display:{Name:'[{"text":"Arrow","italic":false,"color":"dark_aqua"}]'}} 4

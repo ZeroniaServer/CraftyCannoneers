@@ -4,7 +4,7 @@
     {
       "rolls": {
         "min": 3,
-        "max": 7,
+        "max": 4,
         "type": "minecraft:uniform"
       },
       "entries": [
@@ -28,11 +28,16 @@
           "weight": 3,
           "functions": [
             {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:16,Cannonball:1b,display:{Name:'[{\"text\":\"Simple Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"The most basic type of cannonball.\",\"italic\":false,\"color\":\"white\"}]']}}"
+            },
+            {
               "function": "minecraft:set_count",
-              "count": {
+              "count":
+              {
                 "min": 0,
                 "max": 1,
-                "type": "minecraft:uniform"
+                "type":"minecraft:uniform"
               }
             }
           ],
@@ -40,13 +45,17 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 3,
+          "weight": 5,
           "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Gunpowder\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Used to change the power of a cannon shot.\",\"italic\":false,\"color\":\"white\"}]']}}"
+            },
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 4,
-                "max": 9,
+                "min": 2,
+                "max": 5,
                 "type": "minecraft:uniform"
               }
             }
@@ -57,6 +66,10 @@
           "type": "minecraft:item",
           "weight": 2,
           "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,display:{Name:'[{\"text\":\"Gold\",\"italic\":false,\"color\":\"gold\"}]',Lore:['[{\"text\":\"Currency item used to purchase\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"special cannonballs.\",\"italic\":false,\"color\":\"white\"}]']}}"
+            },
             {
               "function": "minecraft:set_count",
               "count": {
@@ -82,9 +95,13 @@
           "weight": 2,
           "functions": [
             {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Golden Apple\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+            },
+            {
               "function": "minecraft:set_count",
               "count": {
-                "min": 0,
+                "min": -1,
                 "max": 1,
                 "type": "minecraft:uniform"
               }
@@ -97,10 +114,14 @@
           "weight": 2,
           "functions": [
             {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+            },
+            {
               "function": "minecraft:set_count",
               "count": {
-                "min": 2,
-                "max": 6,
+                "min": 1,
+                "max": 2,
                 "type": "minecraft:uniform"
               }
             }
