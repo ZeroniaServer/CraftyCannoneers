@@ -1,3 +1,6 @@
+scoreboard players set $drag CmdData 120
+scoreboard players set $gravity CmdData 400
+
 execute as @s store result score @s x run data get entity @s Pos[0] 1000000
 execute as @s store result score @s y run data get entity @s Pos[1] 1000000
 execute as @s store result score @s z run data get entity @s Pos[2] 1000000
@@ -35,3 +38,7 @@ execute store result entity @s Motion[1] double 0.004 run scoreboard players get
 execute store result entity @s Motion[2] double 0.004 run scoreboard players get @s dz
 
 tag @s add CannonballShot
+
+execute store result score @s x run data get entity @s Motion[0] 1000
+execute store result score @s y run data get entity @s Motion[1] 1000
+execute store result score @s z run data get entity @s Motion[2] 1000
