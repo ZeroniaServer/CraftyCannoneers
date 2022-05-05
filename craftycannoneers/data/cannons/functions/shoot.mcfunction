@@ -19,10 +19,10 @@ execute as @e[tag=FireCannon,scores={cannonshot=1}] at @s run playsound cannonlo
 execute as @e[tag=FireCannon,scores={cannonshot=5}] at @s run playsound cannonprime master @a ~ ~ ~ 0.4 1.7
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run playsound cannonshot master @a ~ ~ ~ 6 1
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1
-execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run particle explosion ^ ^0.8 ^2 0.1 0.1 0.1 0.1 3 force
-execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run particle flame ^ ^0.8 ^2 0.1 0.1 0.1 0.3 6 force
+execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run particle explosion ^ ^1.1 ^2 0.1 0.1 0.1 0.1 3 force
+execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run particle flame ^ ^1.1 ^2 0.1 0.1 0.1 0.3 6 force
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run particle minecraft:campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force
-execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run particle lava ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force
+execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run particle lava ^ ^1.1 ^2 0.1 0.1 0.1 0.02 10 force
 
 #Normal Cannonball
 scoreboard players add @e[tag=cannonball] CmdData 1
@@ -33,7 +33,7 @@ execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s store result score 
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s store result score @e[tag=cannonball,limit=1,sort=nearest,distance=..1] PowerM run scoreboard players operation @e[tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData += @e[tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s store result score @e[tag=cannonball,limit=1,sort=nearest,distance=..1] PowerV run scoreboard players operation @e[tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData += @e[tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
 execute as @e[tag=cannonball] at @s run function cannons:cannonballrotation
-execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run tp @e[tag=cannonball,limit=1,sort=nearest,distance=..1] ^ ^2 ^2
+execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run tp @e[tag=cannonball,limit=1,sort=nearest,distance=..1] ^ ^2 ^3.6
 execute as @e[tag=cannonball,tag=!CannonballShot] at @s run function cannons:cannonballtick
 
 function cannons:drag
