@@ -4,4 +4,9 @@
 #Cannons
 function cannons:load
 function cannons:shoot
+
+#Chests
 function chests:loop
+
+#Player related functions
+function game:shields
