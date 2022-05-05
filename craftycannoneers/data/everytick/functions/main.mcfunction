@@ -10,3 +10,6 @@ function chests:loop
 
 #Player related functions
 function game:shields
+
+#Game related functions or commands
+kill @e[type=falling_block]
