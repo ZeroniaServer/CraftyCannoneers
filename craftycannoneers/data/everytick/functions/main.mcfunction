@@ -13,3 +13,5 @@ function game:shields
 
 #Game related functions or commands
 kill @e[type=falling_block]
+#Weakpoints
+function game:shipweakpoint/spot

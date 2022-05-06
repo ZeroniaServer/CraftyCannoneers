@@ -1,5 +1,5 @@
 #> Gamerules
-gamerule mobGriefing false
+gamerule mobGriefing true
 ##TODO figure out a better way to handle explosion damage??
 
 #> Scoreboards
