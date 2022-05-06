@@ -5,6 +5,8 @@ gamerule mobGriefing false
 #> Scoreboards
 scoreboard objectives add RNGscore dummy
 scoreboard objectives add RNGmax dummy
+scoreboard objectives add drag dummy
+scoreboard objectives add gravity dummy
 
 #> Teams
 team add Orange

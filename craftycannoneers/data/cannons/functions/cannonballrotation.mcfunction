@@ -1,7 +1,7 @@
-execute as @s[scores={PowerL=1..}] at @s run tp @s ~ ~ ~ ~3 ~
+execute as @s[scores={PowerL=1..}] at @s run tp @s ~ ~ ~ ~1 ~
 scoreboard players remove @s[scores={PowerL=1..}] PowerL 1
 
-execute as @s[scores={PowerR=1..}] at @s run tp @s ~ ~ ~ ~-3 ~
+execute as @s[scores={PowerR=1..}] at @s run tp @s ~ ~ ~ ~-1 ~
 scoreboard players remove @s[scores={PowerR=1..}] PowerR 1
 
 execute as @s[scores={PowerV=1..}] at @s run tp @s ~ ~ ~ ~ ~-1.2
