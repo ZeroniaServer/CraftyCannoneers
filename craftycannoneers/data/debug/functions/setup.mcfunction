@@ -7,6 +7,8 @@ scoreboard objectives add RNGmax dummy
 scoreboard objectives add drag dummy
 scoreboard objectives add gravity dummy
 scoreboard objectives add doublehit dummy
+scoreboard objectives add CalcAir1 dummy
+scoreboard objectives add CalcAir2 dummy
 
 #> Teams
 team add Orange

@@ -23,10 +23,16 @@ execute as @s[tag=!InSafezone,tag=!Hit1,tag=HotCannonball] unless entity @s[scor
 #GAS EFFECT
 execute as @s[tag=!InSafezone,tag=Hit1,tag=GasCannonball] at @s run summon marker ^ ^-2 ^3 {Tags:["GasCloud"]}
 
-execute as @s[tag=InSafezone,tag=!Hit1] at @s run summon creeper ^ ^ ^1 {Tags:["CannonballCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:1}
-execute as @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..}] at @s run summon creeper ^ ^ ^1 {Tags:["CannonballCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:1}
-execute as @s[tag=!InSafezone,tag=!Hit1] at @s run summon creeper ^ ^ ^1 {Tags:["CannonballCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:3}
-execute as @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..}] at @s run summon creeper ^ ^ ^1 {Tags:["CannonballCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:2}
+execute as @s[tag=InSafezone,tag=!Hit1] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
+execute as @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
+
+execute as @s[tag=!InSafezone,tag=!Hit1] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}
+
+execute as @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2"]}
+
+execute as @e[tag=ImpactMarker] at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper
+
+
 execute as @s[tag=!Hit1] at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
 execute as @s[tag=Hit1,scores={doublehit=4..}] at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
 tag @s[tag=Hit1,scores={doublehit=4..}] add Hit2

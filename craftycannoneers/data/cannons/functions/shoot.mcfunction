@@ -7,6 +7,8 @@ tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:2b}}}] add 
 tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:3b}}}] add HoldCBC
 #Gas
 tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:4b}}}] add HoldGCB
+#Chain
+tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:5b}}}] add HoldCCB
 
 #> Fill Cannonball
 #Normal
@@ -21,12 +23,19 @@ execute as @a[tag=FillCB,tag=HoldCBC] at @s unless entity @e[tag=CannonDisp,scor
 #Gas
 execute as @a[tag=FillCB,tag=HoldGCB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
 execute as @a[tag=FillCB,tag=HoldGCB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 4
+#Chain
+execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
+execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 4
 
 #Global
 tag @a remove HoldCB
 tag @a remove HoldFB
 tag @a remove HoldCBC
+tag @a remove HoldGCB
+tag @a remove HoldCCB
+
 tag @a remove FillCB
+
 scoreboard players add @e[tag=Hit1] doublehit 1
 
 
@@ -68,6 +77,7 @@ execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s store res
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run tp @e[tag=CannonballCluster,tag=!Main,distance=..1] ^ ^2 ^3.6
 execute as @e[tag=CannonballCluster,tag=!clusteracc] run function cannons:clusteraccuracy
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run playsound cluster master @a ~ ~ ~ 4 1
+scoreboard players set @e[tag=CannonballCluster] doublehit 69
 #Gas Cannonball
 function cannons:gas
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=4}] at @s run playsound cannonshot master @a ~ ~ ~ 6 1.05
@@ -114,3 +124,4 @@ execute as @e[tag=cannonball,predicate=cannons:safezones/ocean] at @s run playso
 execute as @e[tag=cannonball,predicate=cannons:safezones/ocean] at @s run kill @s
 execute as @e[tag=cannonball] at @s unless block ~ ~-1 ~ air run function cannons:explode
 execute as @e[tag=cannonball] at @s unless block ^ ^ ^1 air run function cannons:explode
+function cannons:damagecalc
