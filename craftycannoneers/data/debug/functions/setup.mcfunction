@@ -1,12 +1,12 @@
 #> Gamerules
 gamerule mobGriefing true
-##TODO figure out a better way to handle explosion damage??
 
 #> Scoreboards
 scoreboard objectives add RNGscore dummy
 scoreboard objectives add RNGmax dummy
 scoreboard objectives add drag dummy
 scoreboard objectives add gravity dummy
+scoreboard objectives add doublehit dummy
 
 #> Teams
 team add Orange

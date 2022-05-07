@@ -19,14 +19,17 @@ execute as @s at @s if entity @s[predicate=cannons:safezones/orange/4] run tag @
 execute as @s at @s if entity @s[predicate=cannons:safezones/orange/5] run tag @s add InSafezone
 
 #FIREBALL EFFECT
-execute as @s[tag=!InSafezone,tag=!Hit1,tag=HotCannonball] at @s run summon marker ~ ~ ~ {Tags:["RingOfFire"]}
+execute as @s[tag=!InSafezone,tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run summon marker ^ ^-2 ^3 {Tags:["RingOfFire"]}
+#GAS EFFECT
+execute as @s[tag=!InSafezone,tag=Hit1,tag=GasCannonball] at @s run summon marker ^ ^-2 ^3 {Tags:["GasCloud"]}
 
-execute as @s[tag=InSafezone] at @s run summon creeper ^ ^ ^1 {Tags:["CannonballCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:1}
+execute as @s[tag=InSafezone,tag=!Hit1] at @s run summon creeper ^ ^ ^1 {Tags:["CannonballCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:1}
+execute as @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..}] at @s run summon creeper ^ ^ ^1 {Tags:["CannonballCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:1}
 execute as @s[tag=!InSafezone,tag=!Hit1] at @s run summon creeper ^ ^ ^1 {Tags:["CannonballCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:3}
-execute as @s[tag=!InSafezone,tag=Hit1] at @s run summon creeper ^ ^ ^1 {Tags:["CannonballCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:2}
+execute as @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..}] at @s run summon creeper ^ ^ ^1 {Tags:["CannonballCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:2}
 execute as @s[tag=!Hit1] at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
-execute as @s[tag=Hit1] at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
-tag @s[tag=Hit1] add Hit2
+execute as @s[tag=Hit1,scores={doublehit=4..}] at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
+tag @s[tag=Hit1,scores={doublehit=4..}] add Hit2
 tag @s add Hit1
 
 kill @s[tag=Hit2]

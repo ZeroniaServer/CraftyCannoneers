@@ -1,5 +1,7 @@
 scoreboard players add @e[tag=RingOfFire] CmdData 1
 
+execute as @e[tag=RingOfFire] at @s if entity @e[tag=GasCloud,distance=..5] run tag @e[tag=GasCloud,distance=..4] add GasExplode
+execute as @e[tag=RingOfFire] at @s if entity @e[tag=GasCloud,distance=..5] run kill @s
 execute as @e[tag=RingOfFire,scores={CmdData=1}] at @s run playsound minecraft:fireshot master @a ~ ~ ~ 1 0.6
 execute as @e[tag=RingOfFire,scores={CmdData=1}] at @s run fill ~-1 ~1 ~-1 ~1 ~1 ~1 fire replace air
 execute as @e[tag=RingOfFire,scores={CmdData=3}] at @s run fill ~-1 ~1 ~-1 ~1 ~1 ~1 air replace fire

@@ -27,6 +27,7 @@ tag @a remove HoldCB
 tag @a remove HoldFB
 tag @a remove HoldCBC
 tag @a remove FillCB
+scoreboard players add @e[tag=Hit1] doublehit 1
 
 
 #> Fire Cannon
@@ -68,9 +69,10 @@ execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run tp @e
 execute as @e[tag=CannonballCluster,tag=!clusteracc] run function cannons:clusteraccuracy
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run playsound cluster master @a ~ ~ ~ 4 1
 #Gas Cannonball
+function cannons:gas
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=4}] at @s run playsound cannonshot master @a ~ ~ ~ 6 1.05
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=4}] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1.05
-execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=4}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","GasCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:31}}]}
+execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=4}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","GasCannonball","Hit1"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:31}}]}
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=4}] at @s run playsound gasshot master @a ~ ~ ~ 4 1
 
 #Global
@@ -101,11 +103,7 @@ execute as @e[tag=CannonballCluster] at @s run particle smoke ~ ~ ~ 0 0 0 0.1 2 
 execute as @e[tag=HotCannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 1 force
 execute as @e[tag=HotCannonball] at @s run particle flame ~ ~ ~ 0.2 0.2 0.2 0.1 12 force
 execute as @e[tag=GasCannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 1 force
-execute as @e[tag=GasCannonball] at @s run particle minecraft:entity_effect ~ ~ ~ 0 2 0.5 0.4 0 force
-execute as @e[tag=GasCannonball] at @s run particle minecraft:entity_effect ~ ~ ~ 0 2 0.5 0.4 0 force
-execute as @e[tag=GasCannonball] at @s run particle minecraft:entity_effect ~ ~ ~ 0 2 0.5 0.4 0 force
-execute as @e[tag=GasCannonball] at @s run particle minecraft:entity_effect ~ ~ ~ 0 2 0.5 0.4 0 force
-execute as @e[tag=GasCannonball] at @s run particle minecraft:entity_effect ~ ~ ~ 0 2 0.5 0.4 0 force
+execute as @e[tag=GasCannonball] at @s run particle minecraft:soul ~ ~ ~ 0 0 0 0.02 2 force
 
 execute as @e[tag=cannonball,predicate=cannons:safezones/ocean] at @s run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force
 execute as @e[tag=cannonball,predicate=cannons:safezones/ocean] at @s run particle falling_water ~ ~1 ~ 0.2 0.4 0.1 0.2 150 force
