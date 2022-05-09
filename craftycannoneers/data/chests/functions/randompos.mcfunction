@@ -3,23 +3,23 @@ execute as @s at @s run function chests:randomtype
 tag @s add Randomized
 
 execute as @s at @s run spreadplayers ~ ~ 0 14 false @s
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tp @s ~ ~-1 ~
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tp @s ~ ~-1 ~
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tp @s ~ ~-1 ~
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tp @s ~ ~-1 ~
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tp @s ~ ~-1 ~
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tp @s ~ ~-1 ~
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tp @s ~ ~-1 ~
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tp @s ~ ~-1 ~
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tp @s ~ ~-1 ~
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tp @s ~ ~-1 ~
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tp @s ~ ~-1 ~
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tp @s ~ ~-1 ~
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tp @s ~ ~-1 ~
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tp @s ~ ~-1 ~
 
-execute as @s at @s unless entity @s[tag=Nope] unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run function chests:spawnnew
-execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tag @s add Nope
+execute as @s at @s unless entity @s[tag=Nope] unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run function chests:spawnnew
+execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block unless block ~ ~-1 ~ stone run tag @s add Nope
 
 execute as @s at @s unless entity @s[tag=Nope] unless block ~ ~ ~ air run function chests:spawnnew
 execute as @s at @s unless block ~ ~ ~ air run tag @s add Nope

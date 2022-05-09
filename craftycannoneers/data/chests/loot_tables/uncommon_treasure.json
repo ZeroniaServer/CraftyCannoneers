@@ -3,29 +3,14 @@
   "pools": [
     {
       "rolls": {
-        "min": 3,
-        "max": 4,
+        "min": 2,
+        "max": 3,
         "type": "minecraft:uniform"
       },
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 4,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 0,
-                "max": 1,
-                "type": "minecraft:uniform"
-              }
-            }
-          ],
-          "name": "minecraft:air"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
+          "weight": 1,
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -35,7 +20,7 @@
               "function": "minecraft:set_count",
               "count":
               {
-                "min": 0,
+                "min": 1,
                 "max": 1,
                 "type":"minecraft:uniform"
               }
@@ -54,8 +39,8 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 2,
-                "max": 5,
+                "min": 3,
+                "max": 7,
                 "type": "minecraft:uniform"
               }
             }
@@ -64,7 +49,7 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 2,
+          "weight": 3,
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -73,26 +58,17 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 6,
-                "max": 12,
+                "min": 4,
+                "max": 7,
                 "type": "minecraft:uniform"
               }
             }
           ],
           "name": "minecraft:gold_nugget"
-        }
-      ]
-    },
-    {
-      "rolls": {
-        "min": 1,
-        "max": 3,
-        "type": "minecraft:uniform"
-      },
-      "entries": [
+        },
         {
           "type": "minecraft:item",
-          "weight": 2,
+          "weight": 1,
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -101,7 +77,7 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": -1,
+                "min": 1,
                 "max": 1,
                 "type": "minecraft:uniform"
               }
@@ -121,12 +97,78 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 1,
-                "max": 2,
+                "max": 4,
                 "type": "minecraft:uniform"
               }
             }
           ],
           "name": "minecraft:arrow"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2,
+        "type": "minecraft:uniform"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Boarding Axe\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": -1,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:stone_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,Blocking:0,Damage:326,display:{Name:'[{\"text\":\"Shield\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": -2,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:shield"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Hook\",\"italic\":false,\"color\":\"dark_aqua\"}]'},AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:20,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,10659,12629,-21318]},{AttributeName:\"generic.attack_damage\",Amount:2.5,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,10759,12629,-21518]}]}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": -1,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:iron_hoe"
         }
       ]
     }
