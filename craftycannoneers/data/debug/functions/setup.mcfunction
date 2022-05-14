@@ -11,6 +11,7 @@ scoreboard objectives add CalcAir1 dummy
 scoreboard objectives add CalcAir2 dummy
 scoreboard objectives add modisigns trigger
 scoreboard objectives add moditimer dummy
+scoreboard objectives add leavegame trigger
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
@@ -37,3 +38,6 @@ team modify Purple friendlyFire false
 scoreboard players set $10 CmdData 10
 scoreboard players set $1200 CmdData 1200
 scoreboard players set $20 CmdData 20
+scoreboard players set $2 CmdData 2
+
+scoreboard players set $MaxTeamSize CmdData 5

@@ -1,5 +1,6 @@
 effect clear @s
 clear @s
+effect give @s weakness 1000000 255 true
 
 item replace entity @s[team=Orange] armor.head with diamond_hoe{Unbreakable:1b,CustomModelData:17,display:{Name:'[{"text":"Orange Pirate Hat","italic":false,"color":"#ff6600"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Take off this hat to leave the game!","italic":false,"color":"white","underlined":true,"bold":true},{"text":"","italic":false,"color":"dark_purple","underlined":false,"bold":false}]','[{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']}}
 item replace entity @s[team=Orange] armor.legs with leather_leggings{Unbreakable:1b,display:{color:16752384,Name:'[{"text":"Orange Pirate Leggings","italic":false,"color":"#ff6600"}]'},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:1}
@@ -12,10 +13,7 @@ item replace entity @s[team=Purple] armor.chest with leather_chestplate{Unbreaka
 item replace entity @s[team=Purple] armor.legs with leather_leggings{Unbreakable:1b,display:{color:13762815,Name:'[{"text":"Purple Pirate Leggings","italic":false,"color":"#9933ff"}]'},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:1}
 item replace entity @s[team=Purple] armor.feet with leather_boots{Unbreakable:1b,display:{color:13762815,Name:'[{"text":"Purple Pirate Boots","italic":false,"color":"#9933ff"}]'},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:1}
 
-item replace entity @s hotbar.0 with iron_sword{Unbreakable:1b,display:{Name:'[{"text":"Cutlass","italic":false,"color":"dark_aqua"}]'}}
-item replace entity @s hotbar.1 with crossbow{Unbreakable:1b,display:{Name:'[{"text":"Hand Crossbow","italic":false,"color":"dark_aqua"}]'},Enchantments:[{id:quick_charge,lvl:2}],HideFlags:1,Charged:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{display:{Name:'[{"text":"Arrow","italic":false,"color":"dark_aqua"}]'}}}]}
-item replace entity @s hotbar.2 with spyglass{display:{Name:'[{"text":"Spotting Spyglass","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Use this Spyglass to find the","italic":false,"color":"aqua"}]','[{"text":"current weakpoint of a ship!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"","italic":false,"color":"dark_purple"}]']}}
-item replace entity @s hotbar.8 with arrow{display:{Name:'[{"text":"Arrow","italic":false,"color":"dark_aqua"}]'}} 4
+item replace entity @s hotbar.0 with snowball{display:{Name:'[{"text":"Rock.","italic":false,"color":"red"}]',Lore:['[{"text":"Throw at player to insta-kill!","italic":false,"color":"dark_red"},{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"Okay not really... It just","italic":false,"color":"gray"}]','[{"text":"gives you something to do","italic":false,"color":"gray"}]','[{"text":"while you wait for the game","italic":false,"color":"gray"}]','[{"text":"to start...","italic":false,"color":"gray"}]']}} 15
 
 tellraw @s[team=Purple] ["",{"text":"You can take off your ","color":"white"},{"text":"Pirate Hat","bold":true,"color":"dark_purple"},{"text":" to leave the game!","color":"white"}]
 tellraw @s[team=Orange] ["",{"text":"You can take off your ","color":"white"},{"text":"Pirate Hat","bold":true,"color":"gold"},{"text":" to leave the game!","color":"white"}]
