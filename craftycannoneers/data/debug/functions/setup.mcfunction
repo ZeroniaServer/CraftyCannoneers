@@ -12,6 +12,8 @@ scoreboard objectives add CalcAir2 dummy
 scoreboard objectives add modisigns trigger
 scoreboard objectives add moditimer dummy
 scoreboard objectives add leavegame trigger
+scoreboard objectives add CannonTutorial dummy
+scoreboard objectives add ChestTutorial dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
