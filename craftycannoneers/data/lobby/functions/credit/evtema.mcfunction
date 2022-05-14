@@ -1,0 +1,4 @@
+tellraw @s ["","\n","\n","\n","\n","\n","\n","\n","\n","\n","\n","\n",{"text":"==============","color":"gray"},"\n",{"text":"Evtema3","color":"red"},"\n",{"text":"Game Developer","underlined":true,"color":"yellow"},"\n","\n",{"text":"Click here to visit socials:","italic":true,"color":"dark_gray"},"\n",{"text":"> YouTube","bold":true,"color":"red","clickEvent":{"action":"open_url","value":"https://www.youtube.com/Evtema3"}},"\n",{"text":"> Twitter","bold":true,"color":"dark_aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/evtema3"}},"\n",{"text":"==============","color":"gray"},"\n"]
+playsound minecraft:block.end_portal_frame.fill master @s ~ ~ ~ 1 1.4
+advancement revoke @s only lobby:evtema
+execute at @e[tag=EvtemaDeco] run particle dust 1 0 0 1 ~ ~1 ~ 0.2 0.5 0.2 0.1 40 force @s

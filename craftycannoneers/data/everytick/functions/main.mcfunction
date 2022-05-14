@@ -15,3 +15,15 @@ function game:shields
 kill @e[type=falling_block]
 #Weakpoints
 function game:shipweakpoint/spot
+
+#Game settings
+execute if score $gamestate CmdData matches -1 run function lobby:customizer/controller
+
+#Ingame
+##TODO: make sure to add a gamestate check once that all works.
+function game:ingame
+function lobby:joinpads
+
+#Bossbars
+execute if score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a[team=Lobby]
+execute unless score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a
