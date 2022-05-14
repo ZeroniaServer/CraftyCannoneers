@@ -12,7 +12,8 @@ execute as @a[tag=LeaveGame] at @s run tp @s @s
 execute as @a[tag=LeaveGame] at @s run tp @s -55 -21 0 -90 0
 execute as @a[tag=LeaveGame] at @s run clear @s
 execute as @a[tag=LeaveGame] at @s run effect clear @s
-execute as @a[tag=LeaveGame] at @s run team join Lobby @s
 execute as @a[tag=LeaveGame] at @s run gamemode adventure @s
-execute as @a[tag=LeaveGame] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~-1 ~ 1 1.2
+execute as @a[team=] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~-1 ~ 1 1.2
+execute as @a[tag=LeaveGame] unless entity @s[team=] at @s run playsound block.beehive.exit master @a ~ ~ ~ 1 1
+execute as @a[tag=LeaveGame] at @s run team join Lobby @s
 tag @a[tag=LeaveGame] remove LeaveGame
