@@ -1,5 +1,6 @@
 function game:ingame/chestspawning
-function game:arrow_pickup
+function game:ingame/arrowpickup
+function game:ingame/regensystem
 
 setblock 88 -27 55 minecraft:spruce_slab[type=top]
 spawnpoint @a[team=Orange] 88 -26 55
