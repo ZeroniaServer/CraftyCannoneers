@@ -1,5 +1,6 @@
 #> Gamerules
 gamerule mobGriefing true
+gamerule keepInventory true
 
 #> Scoreboards
 scoreboard objectives add RNGscore dummy
@@ -12,13 +13,14 @@ scoreboard objectives add CalcAir2 dummy
 scoreboard objectives add modisigns trigger
 scoreboard objectives add moditimer dummy
 scoreboard objectives add leavegame trigger
+scoreboard objectives add startgame trigger
 scoreboard objectives add CannonTutorial dummy
 scoreboard objectives add ChestTutorial dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
 bossbar add purpleshiphp "Purple HP"
-bossbar add orangeshiphp "Orange HP"
+bossbar add orangeship "Orange HP"
 
 bossbar set lobbybar name {"text":"Please confirm game settings at the Settings Map!","color":"blue","bold":true}
 bossbar set lobbybar max 1

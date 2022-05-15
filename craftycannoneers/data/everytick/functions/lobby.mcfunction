@@ -11,6 +11,10 @@ execute as @a[team=] run tellraw @s ["","\n",{"text":"Ahoy ","color":"aqua"},{"s
 execute as @a[team=] run title @s title ["",{"text":"Crafty ","bold":true,"color":"dark_purple"},{"text":"Cannoneers","bold":true,"color":"gold"}]
 execute as @a[team=] run title @s subtitle ["",{"text":"V0.1.0 ","color":"aqua"},{"text":"Made by ","color":"gray"},{"text":"Zeronia","color":"green"},{"text":"!","color":"gray"}]
 
+#XP
+xp set @a 0 levels
+xp set @a 0 points
+
 #Tutorials
 execute positioned -43 -23 -18 as @a[scores={CannonTutorial=1..},distance=6..] run tag @s remove TutorialCannon
 execute positioned -43 -23 -18 as @a[scores={ChestTutorial=1..},distance=6..] run tag @s remove TutorialChest
