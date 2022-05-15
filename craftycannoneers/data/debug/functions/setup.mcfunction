@@ -1,6 +1,7 @@
 #> Gamerules
 gamerule mobGriefing true
 gamerule keepInventory true
+gamerule doImmediateRespawn true
 
 #> Scoreboards
 scoreboard objectives add RNGscore dummy
