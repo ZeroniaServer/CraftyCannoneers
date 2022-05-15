@@ -20,5 +20,33 @@ execute unless score $DamageOrange CmdData matches 1.. run bossbar set orangeshi
 execute if score $DamagePurple CmdData matches 1.. run bossbar set purpleship color white
 execute if score $DamageOrange CmdData matches 1.. run bossbar set orangeship color white
 
+execute if score $DamagePurple CmdData matches 1.. run scoreboard players remove $PurpleHP CmdData 1
+execute if score $DamagePurple CmdData matches 1.. run scoreboard players remove $DamagePurple CmdData 1
+execute if score $DamageOrange CmdData matches 1.. run scoreboard players remove $OrangeHP CmdData 1
+execute if score $DamageOrange CmdData matches 1.. run scoreboard players remove $DamageOrange CmdData 1
+execute store result bossbar purpleship value run scoreboard players get $PurpleHP CmdData
+execute store result bossbar orangeship value run scoreboard players get $OrangeHP CmdData
+
+execute if score $DamagePurple CmdData matches 1.. run scoreboard players remove $PurpleHP CmdData 1
+execute if score $DamagePurple CmdData matches 1.. run scoreboard players remove $DamagePurple CmdData 1
+execute if score $DamageOrange CmdData matches 1.. run scoreboard players remove $OrangeHP CmdData 1
+execute if score $DamageOrange CmdData matches 1.. run scoreboard players remove $DamageOrange CmdData 1
+execute store result bossbar purpleship value run scoreboard players get $PurpleHP CmdData
+execute store result bossbar orangeship value run scoreboard players get $OrangeHP CmdData
+
+execute if score $DamagePurple CmdData matches 1.. run scoreboard players remove $PurpleHP CmdData 1
+execute if score $DamagePurple CmdData matches 1.. run scoreboard players remove $DamagePurple CmdData 1
+execute if score $DamageOrange CmdData matches 1.. run scoreboard players remove $OrangeHP CmdData 1
+execute if score $DamageOrange CmdData matches 1.. run scoreboard players remove $DamageOrange CmdData 1
+execute store result bossbar purpleship value run scoreboard players get $PurpleHP CmdData
+execute store result bossbar orangeship value run scoreboard players get $OrangeHP CmdData
+
+execute if score $DamagePurple CmdData matches 1.. run scoreboard players remove $PurpleHP CmdData 1
+execute if score $DamagePurple CmdData matches 1.. run scoreboard players remove $DamagePurple CmdData 1
+execute if score $DamageOrange CmdData matches 1.. run scoreboard players remove $OrangeHP CmdData 1
+execute if score $DamageOrange CmdData matches 1.. run scoreboard players remove $DamageOrange CmdData 1
+execute store result bossbar purpleship value run scoreboard players get $PurpleHP CmdData
+execute store result bossbar orangeship value run scoreboard players get $OrangeHP CmdData
+
 bossbar set purpleship players @a[team=!Lobby]
 bossbar set orangeship players @a[team=!Lobby]
