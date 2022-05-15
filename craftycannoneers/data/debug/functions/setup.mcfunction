@@ -17,7 +17,7 @@ scoreboard objectives add startgame trigger
 scoreboard objectives add CannonTutorial dummy
 scoreboard objectives add ChestTutorial dummy
 scoreboard objectives add playerUUID dummy
-scoreboard objectives add arrowtime
+scoreboard objectives add arrowtime dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
