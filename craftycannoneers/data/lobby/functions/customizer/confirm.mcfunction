@@ -4,6 +4,9 @@ scoreboard players reset @a modisigns
 scoreboard players reset @a moditimer
 tag @a remove ModiOwner
 
+scoreboard players operation $PurpleHP CmdData = $ShipHP CmdData
+scoreboard players operation $OrangeHP CmdData = $ShipHP CmdData
+
 scoreboard players operation $ticks CmdData = $TimeLimit CmdData
 scoreboard players operation $ticks CmdData *= $1200 CmdData
 
@@ -18,3 +21,5 @@ item replace entity @e[tag=LobbyEntity] armor.head with air
 
 tag @e[tag=joinpad] remove Locked
 scoreboard players reset @e[tag=joinpad] CmdData
+
+function arenaclear:fullreset

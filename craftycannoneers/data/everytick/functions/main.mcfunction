@@ -23,8 +23,10 @@ execute if score $gamestate CmdData matches -1 run function lobby:customizer/con
 
 #Ingame
 ##TODO: make sure to add a gamestate check once that all works.
-function game:ingame
-function lobby:joinpads
+execute if score $gamestate CmdData matches 2 run function game:ingame
+execute if score $gamestate CmdData matches ..2 run function lobby:joinpads
+execute if score $gamestate CmdData matches 0 run function game:startgame
+execute if score $gamestate CmdData matches 1 run function game:countdown
 
 #Bossbars
 execute if score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a[team=Lobby]
