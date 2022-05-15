@@ -1,1 +1,2 @@
 function game:ingame/chestspawning
+function game:arrow_pickup

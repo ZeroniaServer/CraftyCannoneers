@@ -1,6 +1,7 @@
 #> This function runs every tick. Use this as the main function to call other functions that should run every tick.
 function everytick:lobby
 function everytick:leavegame
+function everytick:no_drop
 
 #Cannons
 function cannons:load
