@@ -4,7 +4,7 @@ title @a title {"text":"Game Started!","color":"dark_aqua"}
 title @a[team=!Lobby,team=!Spectator] subtitle {"text":"Destroy the enemy ship!","color":"aqua"}
 title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"aqua"}
 
-bossbar add purpleship {"text":"Ship Health:","color":"white"}
+bossbar add purpleship ""
 bossbar add orangeship ""
 
 execute as @a[team=Purple] run function game:givegear
