@@ -1,4 +1,4 @@
-effect give @a[team=Lobby] saturation 1000000 100 true
+effect give @a saturation 1000000 100 true
 effect give @a[team=Lobby] instant_health 1000000 100 true
 effect give @a[team=Lobby] resistance 1000000 100 true
 effect give @a[team=Lobby] fire_resistance 1000000 100 true
