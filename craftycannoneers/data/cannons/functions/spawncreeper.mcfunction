@@ -4,6 +4,9 @@ execute as @e[tag=ImpactMarker,tag=Power2] at @s unless entity @s[scores={CmdDat
 
 execute as @e[tag=ImpactMarker,tag=Power3] at @s unless entity @s[scores={CmdData=1..}] run summon creeper ~ ~ ~ {Tags:["CannonballCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:3}
 
+execute as @e[tag=ImpactMarker,tag=GasPower] at @s unless entity @s[scores={CmdData=1..}] run summon creeper ~ ~ ~ {Tags:["GasCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:4}
+
+
 execute as @e[tag=ImpactMarker] at @s unless entity @s[predicate=cannons:safezones/island] unless entity @s[scores={CmdData=1..}] run function cannons:lightfill1
 execute as @e[tag=ImpactMarker] at @s unless entity @s[predicate=cannons:safezones/island] unless entity @s[scores={CmdData=1..}] run function cannons:airfill
 

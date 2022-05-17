@@ -25,7 +25,8 @@ execute as @e[tag=GasAS] at @s unless entity @e[tag=GasCloud,distance=..1] run k
 
 #> Hot Cannonball interaction
 execute as @e[tag=GasExplode] at @s run kill @e[tag=GasAS,distance=..1,limit=1,sort=nearest]
-execute as @e[tag=GasExplode] at @s run summon creeper ~ ~ ~ {Tags:["GasCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:3}
+execute as @e[tag=GasExplode] at @s run summon marker ~ ~ ~ {Tags:["ImpactMarker","GasPower"]}
+execute as @e[tag=ImpactMarker,tag=GasPower] at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper
 execute as @e[tag=GasExplode] at @s run particle flame ~ ~ ~ 2 2 2 1 150 force
 execute as @e[tag=GasExplode] at @s run particle flash ~ ~ ~ 0.1 0.1 0.1 0 4 force
 execute as @e[tag=GasExplode] at @s run particle large_smoke ~ ~ ~ 2 2 2 0.7 200 force

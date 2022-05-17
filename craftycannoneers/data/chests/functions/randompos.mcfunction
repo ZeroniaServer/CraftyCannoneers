@@ -2,7 +2,7 @@ execute as @s at @s run function chests:randomtype
 
 tag @s add Randomized
 
-execute as @s at @s run spreadplayers ~ ~ 0 14 false @s
+execute as @s at @s run spreadplayers ~ ~ 0 24 false @s
 execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
 execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~
 execute as @s at @s unless block ~ ~-1 ~ sand unless block ~ ~-1 ~ grass_block run tp @s ~ ~-1 ~

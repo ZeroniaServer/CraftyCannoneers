@@ -16,6 +16,11 @@ execute as @e[tag=CChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run 
 execute as @e[tag=CChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @e[tag=CChestAS,limit=1,sort=nearest,distance=..1] add Looted
 execute as @e[tag=CChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run kill @s
 
+execute as @e[tag=CChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run item replace entity @e[tag=CChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:21}
+execute as @e[tag=CChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run tag @e[tag=CChestAS,limit=1,sort=nearest,distance=..1] add Looted
+execute as @e[tag=CChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run tp @s ~ ~-200 ~
+execute as @e[tag=CChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run kill @s
+
 #Uncommon
 execute as @e[tag=UCChestHopper,tag=!Opened] at @s if data entity @s Items run item replace entity @e[tag=UCChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:24}
 execute as @e[tag=UCChestHopper,tag=!Opened] at @s if data entity @s Items run playsound block.chest.open master @a ~ ~ ~ 1 1.1
@@ -25,6 +30,11 @@ execute as @e[tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run
 execute as @e[tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run item replace entity @e[tag=UCChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:25}
 execute as @e[tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @e[tag=UCChestAS,limit=1,sort=nearest,distance=..1] add Looted
 execute as @e[tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run kill @s
+
+execute as @e[tag=UCChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run item replace entity @e[tag=UCChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:25}
+execute as @e[tag=UCChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run tag @e[tag=UCChestAS,limit=1,sort=nearest,distance=..1] add Looted
+execute as @e[tag=UCChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run tp @s ~ ~-200 ~
+execute as @e[tag=UCChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run kill @s
 
 #Rare
 execute as @e[tag=RChestHopper,tag=!Opened] at @s if data entity @s Items run item replace entity @e[tag=RChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:27}
@@ -36,6 +46,10 @@ execute as @e[tag=RChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run 
 execute as @e[tag=RChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @e[tag=RChestAS,limit=1,sort=nearest,distance=..1] add Looted
 execute as @e[tag=RChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run kill @s
 
+execute as @e[tag=RChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run item replace entity @e[tag=RChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:28}
+execute as @e[tag=RChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run tag @e[tag=RChestAS,limit=1,sort=nearest,distance=..1] add Looted
+execute as @e[tag=RChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run tp @s ~ ~-200 ~
+execute as @e[tag=RChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run kill @s
 
 #> Go down when empty
 scoreboard players add @e[tag=Looted,scores={CmdData=30..220}] CmdData 1
