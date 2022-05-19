@@ -1,3 +1,6 @@
+scoreboard players reset $DamageOrange CmdData
+scoreboard players reset $DamagePurple CmdData
+
 scoreboard players set $gamestate CmdData 2
 
 title @a title {"text":"Game Started!","color":"dark_aqua"}

@@ -19,6 +19,7 @@ scoreboard objectives add CannonTutorial dummy
 scoreboard objectives add ChestTutorial dummy
 scoreboard objectives add playerUUID dummy
 scoreboard objectives add arrowtime dummy
+scoreboard objectives add death minecraft.custom:minecraft.deaths
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"

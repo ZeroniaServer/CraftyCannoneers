@@ -19,3 +19,6 @@ item replace entity @s hotbar.8 with arrow{display:{Name:'[{"text":"Arrow","ital
 
 tellraw @s[team=Purple] ["",{"text":"You can take off your ","color":"white"},{"text":"Pirate Hat","bold":true,"color":"dark_purple"},{"text":" to leave the game!","color":"white"}]
 tellraw @s[team=Orange] ["",{"text":"You can take off your ","color":"white"},{"text":"Pirate Hat","bold":true,"color":"gold"},{"text":" to leave the game!","color":"white"}]
+
+effect give @s resistance 6 100 true
+effect give @s fire_resistance 6 100 true

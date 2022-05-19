@@ -23,6 +23,7 @@ execute if score $gamestate CmdData matches -1 run function lobby:customizer/con
 
 #Ingame
 ##TODO: make sure to add a gamestate check once that all works.
+execute if score $gamestate CmdData matches 3 run function game:ingame/gameend
 execute if score $gamestate CmdData matches 2 run function game:ingame
 execute if score $gamestate CmdData matches ..2 run function lobby:joinpads
 execute if score $gamestate CmdData matches 0 run function game:startgame
