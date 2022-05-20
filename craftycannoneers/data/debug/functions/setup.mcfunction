@@ -20,6 +20,7 @@ scoreboard objectives add ChestTutorial dummy
 scoreboard objectives add playerUUID dummy
 scoreboard objectives add arrowtime dummy
 scoreboard objectives add death minecraft.custom:minecraft.deaths
+scoreboard objectives add LeftGame minecraft.custom:minecraft.leave_game
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
@@ -35,12 +36,19 @@ bossbar set lobbybar color blue
 team add Lobby
 team add Orange
 team add Purple
+team add Spectator
 team modify Lobby color blue
 team modify Orange color gold
 team modify Purple color dark_purple
+team modify Spectator color gray
 team modify Lobby friendlyFire false
 team modify Orange friendlyFire false
 team modify Purple friendlyFire false
+team modify Spectator friendlyFire false
+team modify Lobby collisionRule never
+team modify Purple collisionRule never
+team modify Orange collisionRule never
+team modify Spectator collisionRule never
 
 #> Static scores
 scoreboard players set $10 CmdData 10

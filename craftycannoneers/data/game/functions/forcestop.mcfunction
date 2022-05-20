@@ -8,3 +8,5 @@ bossbar remove minecraft:orangeship
 
 scoreboard players reset $DamageOrange CmdData
 scoreboard players reset $DamagePurple CmdData
+
+execute unless score $ShipHP CmdData matches 1000 unless score $ShipHP CmdData matches 1250 unless score $ShipHP CmdData matches 1500 unless score $ShipHP CmdData matches 2000 run scoreboard players set $ShipHP CmdData 42069 

@@ -1,3 +1,6 @@
+execute as @a[scores={LeftGame=1..}] run tag @s add LeaveGame
+execute as @a[scores={LeftGame=1..}] run scoreboard players reset @s LeftGame
+
 scoreboard players enable @a[team=!Lobby] leavegame
 scoreboard players reset @a[team=Lobby] leavegame
 execute as @a[team=!Lobby,team=!Spectator] unless score @s leavegame matches 0 run tellraw @a ["",{"selector":"@s"},{"text":" left their team!","color":"blue"}]

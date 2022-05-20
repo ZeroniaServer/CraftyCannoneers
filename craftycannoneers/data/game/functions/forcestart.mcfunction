@@ -7,6 +7,8 @@ title @a title {"text":"Game Started!","color":"dark_aqua"}
 title @a[team=!Lobby,team=!Spectator] subtitle {"text":"Destroy the enemy ship!","color":"aqua"}
 title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"aqua"}
 
+execute if score $ShipHP CmdData matches 42069.. run function game:autohp
+
 bossbar add purpleship ""
 bossbar add orangeship ""
 
