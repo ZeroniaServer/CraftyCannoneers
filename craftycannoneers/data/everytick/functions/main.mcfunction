@@ -31,7 +31,7 @@ execute if score $gamestate CmdData matches 2.. as @a[team=!Lobby,team=!Spectato
 execute if score $gamestate CmdData matches 2.. as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run playsound minecraft:entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 0
 execute if score $gamestate CmdData matches 2.. as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run playsound minecraft:entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 1.4
 execute if score $gamestate CmdData matches 2.. as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run playsound minecraft:block.bubble_column.whirlpool_ambient master @a[distance=1..] ~ ~ ~ 1 1.2
-execute if score $gamestate CmdData matches 2.. as @a[team=Orange,predicate=!game:inarena] at @s run tp @s 88 -26 55 90
+execute if score $gamestate CmdData matches 2.. as @a[team=Orange,predicate=!game:inarena] at @s run tp @s 88 -26 55 90 0
 execute if score $gamestate CmdData matches 2.. as @a[team=Purple,predicate=!game:inarena] at @s run tp @s 52 -26 -55 -90 0
 
 #Cannons
