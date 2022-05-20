@@ -61,7 +61,7 @@ execute as @a[scores={death=1..},team=!Lobby,team=!Spectator] run function game:
 scoreboard players reset @a[scores={death=1..}] death
 
 
-execute unless score $TimeLimit CmdData matches 69420.. run function game:ingame/timer
+execute unless score $TimeLimit CmdData matches 42069.. run function game:ingame/timer
 
 #> Game end criteria
 #shiphp

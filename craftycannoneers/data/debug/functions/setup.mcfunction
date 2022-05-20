@@ -23,8 +23,8 @@ scoreboard objectives add death minecraft.custom:minecraft.deaths
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
-bossbar add purpleshiphp "Purple HP"
-bossbar add orangeship "Orange HP"
+bossbar add purpleshiphp ""
+bossbar add orangeship ""
 
 bossbar set lobbybar name {"text":"Please confirm game settings at the Settings Map!","color":"blue","bold":true}
 bossbar set lobbybar max 1
@@ -47,6 +47,6 @@ scoreboard players set $10 CmdData 10
 scoreboard players set $1200 CmdData 1200
 scoreboard players set $20 CmdData 20
 scoreboard players set $2 CmdData 2
-scoreboard players set $60 PPCData 60
+scoreboard players set $60 CmdData 60
 
 scoreboard players set $MaxTeamSize CmdData 5
