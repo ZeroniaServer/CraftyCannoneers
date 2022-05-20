@@ -22,7 +22,18 @@ execute positioned 83 -23 51 run function cannons:spawnorange
 execute positioned 62 -31 51 run function cannons:spawnorange
 execute positioned 74 -31 50 run function cannons:spawnorange
 
-summon wandering_trader 85 -27.5 -55 {Tags:["Trader"],NoAI:1b,Invulnerable:1b,PersistanceRequired:1b,NoGravity:1b,Silent:1b,Offers:{Recipes:[]}}
+#orange
+summon wandering_trader 72 -28 51 {Tags:["Trader"],NoAI:1b,Invulnerable:1b,PersistanceRequired:1b,NoGravity:1b,Silent:1b,Offers:{Recipes:[]}}
+summon wandering_trader 68 -28 50 {Tags:["Trader"],NoAI:1b,Invulnerable:1b,PersistanceRequired:1b,NoGravity:1b,Silent:1b,Offers:{Recipes:[]}}
+summon wandering_trader 64 -28 51 {Tags:["Trader"],NoAI:1b,Invulnerable:1b,PersistanceRequired:1b,NoGravity:1b,Silent:1b,Offers:{Recipes:[]}}
+summon wandering_trader 64 -31 50 {Tags:["Trader"],NoAI:1b,Invulnerable:1b,PersistanceRequired:1b,NoGravity:1b,Silent:1b,Offers:{Recipes:[]}}
+summon wandering_trader 72 -31 50 {Tags:["Trader"],NoAI:1b,Invulnerable:1b,PersistanceRequired:1b,NoGravity:1b,Silent:1b,Offers:{Recipes:[]}}
+#purple
+summon wandering_trader 68 -28 -51 {Tags:["Trader"],NoAI:1b,Invulnerable:1b,PersistanceRequired:1b,NoGravity:1b,Silent:1b,Offers:{Recipes:[]}}
+summon wandering_trader 72 -28 -50 {Tags:["Trader"],NoAI:1b,Invulnerable:1b,PersistanceRequired:1b,NoGravity:1b,Silent:1b,Offers:{Recipes:[]}}
+summon wandering_trader 76 -28 -51 {Tags:["Trader"],NoAI:1b,Invulnerable:1b,PersistanceRequired:1b,NoGravity:1b,Silent:1b,Offers:{Recipes:[]}}
+summon wandering_trader 76 -31 -50 {Tags:["Trader"],NoAI:1b,Invulnerable:1b,PersistanceRequired:1b,NoGravity:1b,Silent:1b,Offers:{Recipes:[]}}
+summon wandering_trader 68 -31 -50 {Tags:["Trader"],NoAI:1b,Invulnerable:1b,PersistanceRequired:1b,NoGravity:1b,Silent:1b,Offers:{Recipes:[]}}
 
 function arenaclear:villagertrades
 
