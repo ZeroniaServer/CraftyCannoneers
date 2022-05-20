@@ -28,9 +28,24 @@ execute as @s[tag=!InSafezone,tag=Hit1,tag=GasCannonball] at @s run summon marke
 execute as @s[tag=InSafezone,tag=!Hit1] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
 execute as @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
 
-execute as @s[tag=!InSafezone,tag=!Hit1] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}
+execute as @s[tag=!InSafezone,tag=!Hit1,tag=!ChainCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}
 
-execute as @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2"]}
+execute as @s[tag=!InSafezone,tag=Hit1,tag=!ChainCannonball,scores={doublehit=4..},tag=!ChainCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2"]}
+
+#Chain effect
+execute as @s[tag=ChainCannonball,predicate=cannons:ships/purple] at @s if entity @s[predicate=cannons:ships/abovesails] run scoreboard players add $DamagePurple CmdData 20
+execute as @s[tag=ChainCannonball,predicate=cannons:ships/orange] at @s if entity @s[predicate=cannons:ships/abovesails] run scoreboard players add $DamageOrange CmdData 20
+
+
+execute as @s[tag=!InSafezone,tag=!Hit1,tag=ChainCannonball] at @s run summon marker ^ ^ ^2 {Tags:["ImpactMarker","Power2"]}
+execute as @s[tag=!InSafezone,tag=!Hit1,tag=ChainCannonball] at @s run summon marker ^ ^ ^2 {Tags:["ImpactMarker","Power2"]}
+
+execute as @s[tag=!InSafezone,tag=Hit1,tag=!ChainCannonball,scores={doublehit=4..},tag=ChainCannonball] at @s run summon marker ^ ^ ^-2 {Tags:["ImpactMarker","Power2"]}
+execute as @s[tag=!InSafezone,tag=Hit1,tag=!ChainCannonball,scores={doublehit=4..},tag=ChainCannonball] at @s run summon marker ^ ^ ^-2 {Tags:["ImpactMarker","Power2"]}
+
+
+
+
 
 execute as @e[tag=ImpactMarker] at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper
 

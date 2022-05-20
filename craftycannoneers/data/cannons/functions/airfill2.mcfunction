@@ -5,7 +5,6 @@ execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] run s
 #execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] run scoreboard players add $DamagePurple CmdData 6
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] run scoreboard players operation $DamageOrange CmdData += @s CalcAir2
 #execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] run scoreboard players add $DamageOrange CmdData 6
-say hi
 scoreboard players reset @s CalcAir1
 scoreboard players reset @s CalcAir2
 tag @s remove DidDamage
