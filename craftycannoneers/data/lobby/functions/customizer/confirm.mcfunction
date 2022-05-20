@@ -4,6 +4,8 @@ scoreboard players reset @a modisigns
 scoreboard players reset @a moditimer
 tag @a remove ModiOwner
 
+scoreboard players operation $ticks CmdData = $TimeLimit CmdData
+
 scoreboard players operation $PurpleHP CmdData = $ShipHP CmdData
 scoreboard players operation $OrangeHP CmdData = $ShipHP CmdData
 

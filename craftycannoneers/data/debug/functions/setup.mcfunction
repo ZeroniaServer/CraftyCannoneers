@@ -47,5 +47,6 @@ scoreboard players set $10 CmdData 10
 scoreboard players set $1200 CmdData 1200
 scoreboard players set $20 CmdData 20
 scoreboard players set $2 CmdData 2
+scoreboard players set $60 PPCData 60
 
 scoreboard players set $MaxTeamSize CmdData 5
