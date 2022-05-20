@@ -46,3 +46,26 @@ execute as @a[tag=JoinOrange] run team join Orange @s
 execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] run function game:givelobbygear
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] run function game:givegear
 execute as @a[tag=JoinOrange] run tag @s remove JoinOrange
+
+#> Join Spectator
+execute as @e[tag=JoinpadSpec,tag=!Locked] at @s run tag @a[team=Lobby,limit=1,sort=random,distance=..1.2] add JoinSpec
+execute as @a[tag=JoinSpec] at @s run gamemode spectator @s
+execute as @a[tag=JoinSpec] at @s run team join Spectator @s
+execute as @a[tag=JoinSpec] at @s run tp @s @s
+execute as @a[tag=JoinSpec] at @s run tp @s 70 10 0
+execute as @a[tag=JoinSpec] at @s run playsound block.beehive.enter master @s ~ ~ ~ 1 1
+execute as @a[tag=JoinSpec] at @s run tellraw @a ["",{"selector":"@s","color":"dark_gray"},{"text":" is now spectating the game.","color":"gray"}]
+tag @a[tag=JoinSpec] add NewSpec
+tag @a[tag=JoinSpec] remove JoinSpec
+
+title @a[team=Spectator] actionbar {"text":"Fly into the center particle cluster to stop spectating!","bold":true,"color":"aqua"}
+
+execute positioned 70 10 0 as @a[team=Spectator,tag=!NewSpec,distance=..4] run trigger leavegame
+execute positioned 70 10 0 run tag @a[team=Spectator,tag=NewSpec,distance=5..] remove NewSpec
+execute positioned 70 10 0 run particle dust 0 1 3 2 ~ ~ ~ 1 1 1 0.1 10 force @a[team=Spectator]
+tag @a[tag=NewSpec,team=!Spectator] remove NewSpec
+
+execute as @a[team=Spectator] at @s unless entity @s[predicate=game:inarena] run tellraw @s {"text":"Unable to spectate outside of the arena!","color":"red"}
+execute as @a[team=Spectator] at @s unless entity @s[predicate=game:inarena] run tag @s add NewSpec
+execute as @a[team=Spectator] at @s unless entity @s[predicate=game:inarena] run tp @s @s
+execute as @a[team=Spectator] at @s unless entity @s[predicate=game:inarena] run tp @s 70 10 0
