@@ -25,6 +25,7 @@ execute as @a[team=Orange] run scoreboard players add $InOrange CmdData 1
 execute unless score $InPurple CmdData > $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData as @e[tag=JoinpadPurple,tag=!Locked] at @s run tag @a[team=Lobby,limit=1,sort=random,distance=..1.2] add JoinPurple
 execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] run tellraw @a ["",{"selector":"@s","color":"dark_blue"},{"text":" joined the ","color":"blue"},{"text":"Purple","color":"dark_purple"},{"text":" team!","color":"blue"}]
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] run tellraw @a ["",{"selector":"@s","color":"dark_blue"},{"text":" joined the ","color":"blue"},{"text":"Purple","color":"dark_purple"},{"text":" team! A late arrival, unfortunately.","color":"blue"}]
+execute if score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] run tellraw @s ["",{"text":"You can take off your ","color":"white"},{"text":"Pirate Hat","bold":true,"color":"dark_purple"},{"text":" to leave the game!","color":"white"}]
 execute as @a[tag=JoinPurple] at @s run tp @s @s 
 execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] at @s run tp @s -46 -28.5 2 -180 0
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] at @s run tp @s 52 -26 -55 -90 0
@@ -38,6 +39,7 @@ execute as @a[tag=JoinPurple] run tag @s remove JoinPurple
 execute unless score $InOrange CmdData > $InPurple CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData as @e[tag=JoinpadOrange,tag=!Locked] at @s run tag @a[team=Lobby,limit=1,sort=random,distance=..1.2] add JoinOrange
 execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] run tellraw @a ["",{"selector":"@s","color":"dark_blue"},{"text":" joined the ","color":"blue"},{"text":"Orange","color":"gold"},{"text":" team!","color":"blue"}]
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] run tellraw @a ["",{"selector":"@s","color":"dark_blue"},{"text":" joined the ","color":"blue"},{"text":"Orange","color":"gold"},{"text":" team! A late arrival, unfortunately.","color":"blue"}]
+execute if score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] run tellraw @s[team=Orange] ["",{"text":"You can take off your ","color":"white"},{"text":"Pirate Hat","bold":true,"color":"gold"},{"text":" to leave the game!","color":"white"}]
 execute as @a[tag=JoinOrange] at @s run tp @s @s 
 execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] at @s run tp @s -46 -28.5 -2 0 0
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] at @s run tp @s 88 -26 55 90 0
