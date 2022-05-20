@@ -24,14 +24,15 @@ execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run
 execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run playsound minecraft:block.bubble_column.whirlpool_ambient master @a[distance=1..] ~ ~ ~ 1 1.2
 execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run tag @s add LeaveGame
 
-#Lobby water
-execute as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force
-execute as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run particle falling_water ~ ~ ~ 0.2 0.4 0.1 0.2 150 force
-execute as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run particle minecraft:bubble_column_up ~ ~ ~ 0.4 0.2 0.4 0.1 20 force
-execute as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run playsound minecraft:entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 0
-execute as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run playsound minecraft:entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 1.4
-execute as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run playsound minecraft:block.bubble_column.whirlpool_ambient master @a[distance=1..] ~ ~ ~ 1 1.2
-execute as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run scoreboard players set @s death 1
+#Arena water
+execute if score $gamestate CmdData matches 2.. as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force
+execute if score $gamestate CmdData matches 2.. as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run particle falling_water ~ ~ ~ 0.2 0.4 0.1 0.2 150 force
+execute if score $gamestate CmdData matches 2.. as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run particle minecraft:bubble_column_up ~ ~ ~ 0.4 0.2 0.4 0.1 20 force
+execute if score $gamestate CmdData matches 2.. as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run playsound minecraft:entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 0
+execute if score $gamestate CmdData matches 2.. as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run playsound minecraft:entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 1.4
+execute if score $gamestate CmdData matches 2.. as @a[team=!Lobby,team=!Spectator,predicate=!game:inarena] at @s run playsound minecraft:block.bubble_column.whirlpool_ambient master @a[distance=1..] ~ ~ ~ 1 1.2
+execute if score $gamestate CmdData matches 2.. as @a[team=Orange,predicate=!game:inarena] at @s run tp @s 88 -26 55 90
+execute if score $gamestate CmdData matches 2.. as @a[team=Purple,predicate=!game:inarena] at @s run tp @s 52 -26 -55 -90 0
 
 #Cannons
 function cannons:load
