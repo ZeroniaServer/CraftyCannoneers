@@ -66,7 +66,8 @@ execute unless score $TimeLimit CmdData matches 42069.. run function game:ingame
 #> Game end criteria
 #players leave
 execute unless score $gamestate CmdData matches 3.. unless entity @a[team=Purple] unless entity @a[team=Orange] run tellraw @a {"text":"No players remaining. The previous game has been cancelled.","color":"red"}
-execute unless score $gamestate CmdData matches 3.. unless entity @a[team=Purple] unless entity @a[team=Orange] run function game:forcestop
+execute unless score $gamestate CmdData matches 3.. unless entity @a[team=Purple] unless entity @a[team=Orange] run schedule function game:forcestop 1s
+execute unless score $gamestate CmdData matches 3.. unless entity @a[team=Purple] unless entity @a[team=Orange] run scoreboard players set $gamestate CmdData 3
 
 #shiphp
 execute unless score $gamestate CmdData matches 3.. if score $PurpleHP CmdData matches ..0 run scoreboard players set $WinningTeam CmdData 1

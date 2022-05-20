@@ -1,3 +1,7 @@
+#> Forceloads
+forceload add -17 63 -112 -64
+forceload add 11 89 129 -89
+
 #> Gamerules
 gamerule mobGriefing true
 gamerule keepInventory true
