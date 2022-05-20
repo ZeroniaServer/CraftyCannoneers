@@ -8,6 +8,7 @@ execute as @e[type=arrow,nbt={inGround:1b},tag=!thanossnap,scores={arrowtime=1}]
 execute as @e[type=arrow,nbt={inGround:1b},tag=!thanossnap,scores={arrowtime=1}] at @s run playsound minecraft:block.wood.break master @a ~ ~ ~ 1 2
 kill @e[type=arrow,nbt={inGround:1b},tag=!thanossnap,scores={arrowtime=1}]
 tag @e[type=arrow,nbt={inGround:1b},tag=!thanossnap] add thanossnap
+kill @e[type=arrow,predicate=!game:inarena]
 
 #Pickup conditions
 execute as @e[type=arrow,nbt={pickup:1b}] run data merge entity @s {pickup:0}
