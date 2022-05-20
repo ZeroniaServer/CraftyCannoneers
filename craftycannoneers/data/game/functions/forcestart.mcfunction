@@ -7,8 +7,8 @@ title @a title {"text":"Game Started!","color":"dark_aqua"}
 title @a[team=!Lobby,team=!Spectator] subtitle {"text":"Destroy the enemy ship!","color":"aqua"}
 title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"aqua"}
 
-tellraw @s[team=Purple] ["",{"text":"You can take off your ","color":"white"},{"text":"Pirate Hat","bold":true,"color":"dark_purple"},{"text":" to leave the game!","color":"white"}]
-tellraw @s[team=Orange] ["",{"text":"You can take off your ","color":"white"},{"text":"Pirate Hat","bold":true,"color":"gold"},{"text":" to leave the game!","color":"white"}]
+tellraw @a[team=Purple] ["",{"text":"You can take off your ","color":"white"},{"text":"Pirate Hat","bold":true,"color":"dark_purple"},{"text":" to leave the game!","color":"white"}]
+tellraw @a[team=Orange] ["",{"text":"You can take off your ","color":"white"},{"text":"Pirate Hat","bold":true,"color":"gold"},{"text":" to leave the game!","color":"white"}]
 
 
 execute if score $ShipHP CmdData matches 42069.. run function game:autohp
