@@ -1,3 +1,7 @@
+execute as @s at @s run effect give @a[team=!Lobby,team=!Spectator,distance=..1] instant_damage 1 10 true
+execute as @s at @s run effect give @a[team=!Lobby,team=!Spectator,distance=1..3] instant_damage 1 1 true
+execute as @s at @s run effect give @a[team=!Lobby,team=!Spectator,distance=4..5] instant_damage 1 0 true
+
 execute as @e[tag=ImpactMarker,tag=Power1] at @s unless entity @s[scores={CmdData=1..}] run summon creeper ~ ~ ~ {Tags:["CannonballCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:-1}
 
 execute as @e[tag=ImpactMarker,tag=Power2] at @s unless entity @s[scores={CmdData=1..}] run summon creeper ~ ~ ~ {Tags:["CannonballCreeper"],Invulnerable:1b,Fuse:0,ExplosionRadius:1.3}
