@@ -1,3 +1,8 @@
+bossbar set purpleship players @a[team=!Lobby]
+bossbar set orangeship players @a[team=!Lobby]
+
+tag @e[tag=joinpad] add Locked
+
 scoreboard players add $EndTime CmdData 1
 
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 run title @a title {"text":"It's a tie!","color":"gray"}

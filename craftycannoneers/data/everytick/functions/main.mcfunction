@@ -25,10 +25,12 @@ execute if score $gamestate CmdData matches -1 run function lobby:customizer/con
 ##TODO: make sure to add a gamestate check once that all works.
 execute if score $gamestate CmdData matches 3 run function game:ingame/gameend
 execute if score $gamestate CmdData matches 2 run function game:ingame
-execute if score $gamestate CmdData matches ..2 run function lobby:joinpads
+function lobby:joinpads
 execute if score $gamestate CmdData matches 0 run function game:startgame
 execute if score $gamestate CmdData matches 1 run function game:countdown
 
 #Bossbars
 execute if score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a[team=Lobby]
 execute unless score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a
+execute if score $gamestate CmdData matches 3 run bossbar set lobbybar color red
+execute if score $gamestate CmdData matches 3 run bossbar set lobbybar name {"text":"A game is currently ending!","bold":true,"color":"red"}
