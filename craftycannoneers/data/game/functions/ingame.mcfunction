@@ -4,6 +4,7 @@ bossbar set lobbybar name {"text":"A game is currently in progress!","bold":true
 function game:ingame/chestspawning
 function game:ingame/arrowpickup
 function game:ingame/regensystem
+function game:ingame/boat
 
 setblock 88 -27 55 minecraft:spruce_slab[type=top]
 spawnpoint @a[team=Orange] 88 -26 55 90

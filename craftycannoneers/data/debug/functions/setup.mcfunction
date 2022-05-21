@@ -41,6 +41,7 @@ team add Lobby
 team add Orange
 team add Purple
 team add Spectator
+team add NoName
 team modify Lobby color blue
 team modify Orange color gold
 team modify Purple color dark_purple
@@ -53,7 +54,7 @@ team modify Lobby collisionRule never
 team modify Purple collisionRule never
 team modify Orange collisionRule never
 team modify Spectator collisionRule never
-
+team modify NoName nametagVisibility never
 #> Static scores
 scoreboard players set $10 CmdData 10
 scoreboard players set $1200 CmdData 1200
