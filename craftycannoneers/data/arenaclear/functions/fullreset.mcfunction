@@ -8,6 +8,7 @@ tp @e[tag=chest] ~ ~-200 ~
 kill @e[tag=chest]
 kill @e[type=item]
 kill @e[tag=Boat]
+kill @e[tag=EndFirework]
 
 execute positioned 70 -28 -50 run function cannons:spawnpurple
 execute positioned 74 -28 -50 run function cannons:spawnpurple

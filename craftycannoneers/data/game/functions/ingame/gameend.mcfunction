@@ -34,3 +34,52 @@ execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,tea
 
 execute if score $EndTime CmdData matches 150 run gamemode spectator @a[team=!Lobby,team=!Spectator]
 execute if score $EndTime CmdData matches 250.. run function game:forcestop
+
+#> Firework purple
+execute if score $EndTime CmdData matches 20 if score $WinningTeam CmdData matches 2 run tag @e[tag=cannon,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 30 if score $WinningTeam CmdData matches 2 run tag @e[tag=cannon,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 40 if score $WinningTeam CmdData matches 2 run tag @e[tag=cannon,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+
+execute if score $EndTime CmdData matches 100 if score $WinningTeam CmdData matches 2 run tag @e[tag=cannon,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 110 if score $WinningTeam CmdData matches 2 run tag @e[tag=cannon,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 120 if score $WinningTeam CmdData matches 2 run tag @e[tag=cannon,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+#> Firework orange
+execute if score $EndTime CmdData matches 20 if score $WinningTeam CmdData matches 1 run tag @e[tag=cannon,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 30 if score $WinningTeam CmdData matches 1 run tag @e[tag=cannon,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 40 if score $WinningTeam CmdData matches 1 run tag @e[tag=cannon,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+
+execute if score $EndTime CmdData matches 100 if score $WinningTeam CmdData matches 1 run tag @e[tag=cannon,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 110 if score $WinningTeam CmdData matches 1 run tag @e[tag=cannon,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 120 if score $WinningTeam CmdData matches 1 run tag @e[tag=cannon,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+
+
+
+
+execute as @e[tag=cannon,tag=Firework,predicate=cannons:ships/purple] at @s run summon armor_stand ~ ~ ~ {Pose:{Head:[329f,0f,0f]},Tags:["EndFirework","Purple"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:41}}]}
+execute as @e[tag=cannon,tag=Firework,predicate=cannons:ships/orange] at @s run summon armor_stand ~ ~ ~ {Pose:{Head:[329f,0f,0f]},Tags:["EndFirework","Orange"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:41}}]}
+
+
+
+
+execute as @e[tag=cannon,tag=Firework] at @s run tp @e[tag=EndFirework,limit=1,sort=nearest,distance=..1] @s
+execute as @e[tag=cannon,tag=Firework] at @s run particle explosion ^ ^1.1 ^2 0.1 0.1 0.1 0.1 3 force
+execute as @e[tag=cannon,tag=Firework] at @s run particle flame ^ ^1.1 ^2 0.1 0.1 0.1 0.3 6 force
+execute as @e[tag=cannon,tag=Firework] at @s run particle minecraft:campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force
+execute as @e[tag=cannon,tag=Firework] at @s run particle lava ^ ^1.1 ^2 0.1 0.1 0.1 0.02 10 force
+execute as @e[tag=cannon,tag=Firework] at @s run playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 5 0.8
+execute as @e[tag=cannon,tag=Firework] at @s run playsound cannonshot master @a ~ ~ ~ 6 1.6
+execute as @e[tag=cannon,tag=Firework] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1.6
+
+
+
+execute as @e[tag=cannon,tag=Firework] at @s run tag @s remove Firework
+
+scoreboard players add @e[tag=EndFirework] CmdData 1
+execute as @e[tag=EndFirework] at @s run particle minecraft:firework ~ ~ ~ 0 0 0 0.1 2 force
+execute as @e[tag=EndFirework,scores={CmdData=1..10}] at @s run tp @s ^ ^0.4 ^1.5
+execute as @e[tag=EndFirework,scores={CmdData=11..20}] at @s run tp @s ^ ^0.8 ^1.5
+execute as @e[tag=EndFirework,scores={CmdData=21..}] at @s run tp @s ^ ^1.4 ^1
+execute as @e[tag=EndFirework,scores={CmdData=21}] at @s run data merge entity @s {Pose:{Head:[303f,0f,0f]}}
+execute as @e[tag=EndFirework,tag=Purple,scores={CmdData=27}] at @s run summon firework_rocket ~ ~ ~ {LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:1,Flicker:1,Trail:1,Colors:[I;8073150],FadeColors:[I;12801229]}],Flight:0}}}}
+execute as @e[tag=EndFirework,tag=Orange,scores={CmdData=27}] at @s run summon firework_rocket ~ ~ ~ {LifeTime:0,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:1,Flicker:1,Trail:1,Colors:[I;15435844],FadeColors:[I;14602026]}],Flight:0}}}}
+kill @e[tag=EndFirework,scores={CmdData=27..}]
