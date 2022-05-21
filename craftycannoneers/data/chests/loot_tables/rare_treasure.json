@@ -3,14 +3,80 @@
   "pools": [
     {
       "rolls": {
-        "min": 3,
-        "max": 4,
+        "min": 4,
+        "max": 6,
         "type": "minecraft:uniform"
       },
       "entries": [
         {
           "type": "minecraft:item",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Gunpowder\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Used to change the power of a cannon shot.\",\"italic\":false,\"color\":\"white\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 4,
+                "max": 5,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:gunpowder"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Gold\",\"italic\":false,\"color\":\"gold\"}]',Lore:['[{\"text\":\"Currency item used to purchase\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"special cannonballs.\",\"italic\":false,\"color\":\"white\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 5,
+                "max": 7,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:gold_nugget"
+        },
+        {
+          "type": "minecraft:item",
           "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3,
+                "max": 4,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:arrow"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 2,
+        "max": 3,
+        "type": "minecraft:uniform"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 3,
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -30,45 +96,87 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 5,
+          "weight": 1,
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'[{\"text\":\"Gunpowder\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Used to change the power of a cannon shot.\",\"italic\":false,\"color\":\"white\"}]']}}"
+              "tag": "{CustomModelData:22,Cannonball:2b,display:{Name:'[{\"text\":\"Hot Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"On impact, sets an area around\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"it on fire, fire temporarily\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"disables cannons.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Has a special interaction with\",\"italic\":false,\"color\":\"dark_gray\"}]','[{\"text\":\"Gas Cannonballs...\",\"italic\":false,\"color\":\"dark_gray\"}]']}}"
             },
             {
               "function": "minecraft:set_count",
-              "count": {
-                "min": 3,
-                "max": 9,
-                "type": "minecraft:uniform"
+              "count":
+              {
+                "min": 1,
+                "max": 1,
+                "type":"minecraft:uniform"
               }
             }
           ],
-          "name": "minecraft:gunpowder"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'[{\"text\":\"Gold\",\"italic\":false,\"color\":\"gold\"}]',Lore:['[{\"text\":\"Currency item used to purchase\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"special cannonballs.\",\"italic\":false,\"color\":\"white\"}]']}}"
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 4,
-                "max": 9,
-                "type": "minecraft:uniform"
-              }
-            }
-          ],
-          "name": "minecraft:gold_nugget"
+          "name": "minecraft:diamond_hoe"
         },
         {
           "type": "minecraft:item",
           "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:29,Cannonball:3b,display:{Name:'[{\"text\":\"Cannonball Cluster\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Shoot 5 small cannonballs in 1 shot.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"These projectiles are extremely inaccurate!\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Best used against enemies occupying\",\"italic\":false,\"color\":\"dark_gray\"}]','[{\"text\":\"the center island...\",\"italic\":false,\"color\":\"dark_gray\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count":
+              {
+                "min": 1,
+                "max": 1,
+                "type":"minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:diamond_hoe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:31,Cannonball:4b,display:{Name:'[{\"text\":\"Gas Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"On impact, releases a strong\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"poisonous cloud of gas.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"The gas damages players inside it.\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Has a special interaction with\",\"italic\":false,\"color\":\"dark_gray\"}]','[{\"text\":\"Hot Cannonballs...\",\"italic\":false,\"color\":\"dark_gray\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count":
+              {
+                "min": 1,
+                "max": 1,
+                "type":"minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:diamond_hoe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:32,Cannonball:5b,display:{Name:'[{\"text\":\"Chain Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Half Cannonballs connected together\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"by a chain. A little less accurate,\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"but it has a wider area of effect.\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Deals bonus damage to sails!\",\"italic\":false,\"color\":\"dark_gray\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count":
+              {
+                "min": 1,
+                "max": 1,
+                "type":"minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:diamond_hoe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
           "functions": [
             {
               "function": "minecraft:set_nbt",
@@ -91,6 +199,63 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
+              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Hook\",\"italic\":false,\"color\":\"dark_aqua\"}]'},AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:20,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,10659,12629,-21318]},{AttributeName:\"generic.attack_damage\",Amount:4.0,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,10759,12629,-21518]}]}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:iron_hoe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,Blocking:0,Damage:316,display:{Name:'[{\"text\":\"Shield\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:shield"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Boarding Axe\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:stone_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
               "tag": "{CustomPotionColor:6886656,CustomPotionEffects:[{Id:30,Duration:100,Amplifier:0},{Id:1,Duration:160,Amplifier:1}],display:{Name:'[{\"text\":\"Trooper Ale\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
             },
             {
@@ -110,103 +275,18 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'[{\"text\":\"Arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+              "tag": "{Unbreakable:1b,AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:-3.5,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,13259,12629,-26518]},{AttributeName:\"generic.attack_damage\",Amount:7.5,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,13359,12629,-26718]}],display:{Name:'[{\"text\":\"Mace\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
             },
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 2,
-                "max": 5,
-                "type": "minecraft:uniform"
-              }
-            }
-          ],
-          "name": "minecraft:arrow"
-        }
-      ]
-    },
-    {
-      "rolls": {
-        "min": 1,
-        "max": 2,
-        "type": "minecraft:uniform"
-      },
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Boarding Axe\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": -1,
+                "min": 1,
                 "max": 1,
                 "type": "minecraft:uniform"
               }
             }
           ],
-          "name": "minecraft:stone_axe"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:1,Blocking:0,Damage:316,display:{Name:'[{\"text\":\"Shield\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": -1,
-                "max": 1,
-                "type": "minecraft:uniform"
-              }
-            }
-          ],
-          "name": "minecraft:shield"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Hook\",\"italic\":false,\"color\":\"dark_aqua\"}]'},AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:20,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,10659,12629,-21318]},{AttributeName:\"generic.attack_damage\",Amount:4.0,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,10759,12629,-21518]}]}"
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": -1,
-                "max": 1,
-                "type": "minecraft:uniform"
-              }
-            }
-          ],
-          "name": "minecraft:iron_hoe"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 2,
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Battle Axe\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": -1,
-                "max": 1,
-                "type": "minecraft:uniform"
-              }
-            }
-          ],
-          "name": "minecraft:diamond_axe"
+          "name": "minecraft:netherite_shovel"
         },
         {
           "type": "minecraft:item",
@@ -219,7 +299,7 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": -1,
+                "min": 1,
                 "max": 1,
                 "type": "minecraft:uniform"
               }
@@ -233,18 +313,18 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Unbreakable:1b,AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:-3.5,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,13259,12629,-26518]},{AttributeName:\"generic.attack_damage\",Amount:7,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,13359,12629,-26718]}],display:{Name:'[{\"text\":\"Mace\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Battle Axe\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
             },
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": -1,
+                "min": 1,
                 "max": 1,
                 "type": "minecraft:uniform"
               }
             }
           ],
-          "name": "minecraft:netherite_shovel"
+          "name": "minecraft:diamond_axe"
         }
       ]
     }

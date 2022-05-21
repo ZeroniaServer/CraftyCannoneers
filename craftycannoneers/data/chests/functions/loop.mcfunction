@@ -6,6 +6,20 @@ execute as @e[tag=NewChest,scores={CmdData=1..30}] at @s run particle block dirt
 execute as @e[tag=NewChest,scores={CmdData=1..30}] at @s run playsound minecraft:block.sand.break master @a ~ ~ ~ 1 1
 execute as @e[tag=NewChest,scores={CmdData=1}] at @s run playsound minecraft:block.gravel.break master @a ~ ~ ~ 1.2 0.9
 
+#> Particles
+#Common
+execute as @e[tag=CChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
+execute as @e[tag=CChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=!Lobby,distance=7..12]
+execute as @e[tag=CChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=!Lobby,distance=13..]
+#Uncommon
+execute as @e[tag=UCChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
+execute as @e[tag=UCChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=!Lobby,distance=7..12]
+execute as @e[tag=UCChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=!Lobby,distance=13..]
+#Rare
+execute as @e[tag=RChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
+execute as @e[tag=RChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=!Lobby,distance=7..12]
+execute as @e[tag=RChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=!Lobby,distance=13..]
+
 #Common
 execute as @e[tag=CChestHopper,tag=!Opened] at @s if data entity @s Items run item replace entity @e[tag=CChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:20}
 execute as @e[tag=CChestHopper,tag=!Opened] at @s if data entity @s Items run playsound block.chest.open master @a ~ ~ ~ 1 1.3
