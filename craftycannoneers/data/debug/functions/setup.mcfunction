@@ -8,6 +8,7 @@ gamerule keepInventory true
 gamerule doImmediateRespawn true
 gamerule doLimitedCrafting true
 gamerule doMobSpawning false
+gamerule doMobLoot false
 gamerule naturalRegeneration false
 execute unless score $gamestate CmdData matches 2 run gamerule fallDamage false
 
