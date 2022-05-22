@@ -41,7 +41,9 @@ execute if score $EndTime CmdData matches 30 if score $WinningTeam CmdData match
 execute if score $EndTime CmdData matches 40 if score $WinningTeam CmdData matches 2 run tag @e[tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
 
 execute if score $EndTime CmdData matches 100 if score $WinningTeam CmdData matches 2 run tag @e[tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 105 if score $WinningTeam CmdData matches 2 run tag @e[tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
 execute if score $EndTime CmdData matches 110 if score $WinningTeam CmdData matches 2 run tag @e[tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 115 if score $WinningTeam CmdData matches 2 run tag @e[tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
 execute if score $EndTime CmdData matches 120 if score $WinningTeam CmdData matches 2 run tag @e[tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
 #> Firework orange
 execute if score $EndTime CmdData matches 20 if score $WinningTeam CmdData matches 1 run tag @e[tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
@@ -49,7 +51,9 @@ execute if score $EndTime CmdData matches 30 if score $WinningTeam CmdData match
 execute if score $EndTime CmdData matches 40 if score $WinningTeam CmdData matches 1 run tag @e[tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
 
 execute if score $EndTime CmdData matches 100 if score $WinningTeam CmdData matches 1 run tag @e[tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 105 if score $WinningTeam CmdData matches 1 run tag @e[tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
 execute if score $EndTime CmdData matches 110 if score $WinningTeam CmdData matches 1 run tag @e[tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 115 if score $WinningTeam CmdData matches 1 run tag @e[tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
 execute if score $EndTime CmdData matches 120 if score $WinningTeam CmdData matches 1 run tag @e[tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
 
 execute if score $EndTime CmdData matches 41 run tag @e[tag=cannon,tag=Firework2] remove Firework2
