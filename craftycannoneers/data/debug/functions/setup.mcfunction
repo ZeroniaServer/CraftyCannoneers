@@ -6,6 +6,7 @@ forceload add 11 89 129 -89
 gamerule mobGriefing true
 gamerule keepInventory true
 gamerule doImmediateRespawn true
+gamerule doLimitedCrafting true
 
 #> Scoreboards
 scoreboard objectives add RNGscore dummy
