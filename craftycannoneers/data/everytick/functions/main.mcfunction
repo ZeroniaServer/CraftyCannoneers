@@ -2,6 +2,8 @@
 function everytick:lobby
 function everytick:leavegame
 function everytick:nodrop
+function everytick:rock
+
 execute unless block -43 -22 -14 minecraft:potted_fern run setblock -43 -22 -14 minecraft:potted_fern
 #inventory 25 gets replaced for no reason, but somehow that fixes an issue with ghost items. Could've used any other non-hotbar slot. Idek.
 item replace entity @a[nbt={Inventory:[{id:"minecraft:fern"}]}] inventory.25 with air

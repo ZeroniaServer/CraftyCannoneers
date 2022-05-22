@@ -7,6 +7,7 @@ gamerule mobGriefing true
 gamerule keepInventory true
 gamerule doImmediateRespawn true
 gamerule doLimitedCrafting true
+execute unless score $gamestate CmdData matches 2 run gamerule fallDamage false
 
 #> Scoreboards
 scoreboard objectives add RNGscore dummy
@@ -26,6 +27,8 @@ scoreboard objectives add playerUUID dummy
 scoreboard objectives add arrowtime dummy
 scoreboard objectives add death minecraft.custom:minecraft.deaths
 scoreboard objectives add LeftGame minecraft.custom:minecraft.leave_game
+scoreboard objectives add rockID dummy
+scoreboard objectives add rockOwner dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"

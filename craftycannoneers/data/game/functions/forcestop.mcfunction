@@ -3,6 +3,8 @@ tag @a[team=!Lobby] add LeaveGame
 scoreboard players set $WinningTeam CmdData 0
 scoreboard players set $EndTime CmdData 0
 
+gamerule fallDamage false
+
 bossbar remove minecraft:purpleship
 bossbar remove minecraft:orangeship
 

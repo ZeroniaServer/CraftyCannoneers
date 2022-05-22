@@ -24,13 +24,13 @@ execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matche
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Purple] at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 1.3
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Orange] at @s run playsound minecraft:entity.wither.spawn master @a ~ ~ ~ 1 2
 
-execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Orange] resistance 1000000 100 true
-execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Orange] instant_health 1000000 100 true
-execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Orange] regeneration 1000000 100 true
-execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Orange] weakness 1000000 100 true
-execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Orange] fire_resistance 1000000 100 true
-execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Orange] conduit_power 1000000 100 true
-execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Orange] jump_boost 1000000 255 true
+execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] resistance 1000000 100 true
+execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] instant_health 1000000 100 true
+execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] regeneration 1000000 100 true
+execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] weakness 1000000 100 true
+execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] fire_resistance 1000000 100 true
+execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] conduit_power 1000000 100 true
+execute if score $EndTime CmdData matches 1.. run gamerule fallDamage false
 
 execute if score $EndTime CmdData matches 150 run gamemode spectator @a[team=!Lobby,team=!Spectator]
 execute if score $EndTime CmdData matches 250.. run function game:forcestop

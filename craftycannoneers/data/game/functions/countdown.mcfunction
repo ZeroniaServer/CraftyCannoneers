@@ -11,7 +11,8 @@ execute if score $countSec CmdData matches 20.. run scoreboard players remove $C
 
 execute if score $countSec CmdData matches 20.. run scoreboard players reset $countSec CmdData
 
-execute if score $Countdown CmdData matches 0.. run bossbar set lobbybar name ["",{"text":"Game starting in ","bold":true,"color":"green"},{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"dark_green"},{"text":" seconds! ","bold":true,"color":"green"}]
+execute if score $Countdown CmdData matches 2.. run bossbar set lobbybar name ["",{"text":"Game starting in ","bold":true,"color":"green"},{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"dark_green"},{"text":" seconds! ","bold":true,"color":"green"}]
+execute if score $Countdown CmdData matches 1.. run bossbar set lobbybar name ["",{"text":"Game starting in ","bold":true,"color":"green"},{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"dark_green"},{"text":" second! ","bold":true,"color":"green"}]
 execute if score $Countdown CmdData matches 0.. run bossbar set lobbybar color green
 
 execute unless entity @a[team=Purple] run tellraw @a {"text":"Countdown canceled! Both teams need at least 1 player.","color":"red"}
