@@ -3,8 +3,20 @@ bossbar set lobbybar name {"text":"A game is currently in progress!","bold":true
 
 function game:ingame/chestspawning
 function game:ingame/arrowpickup
-function game:ingame/regensystem
 function game:ingame/boat
+
+#> Boat specific effects
+execute as @a[team=Orange,predicate=game:onorange,tag=!onboatregen] run effect give @s regeneration 1000000 0 true
+execute as @a[team=Purple,predicate=game:onpurple,tag=!onboatregen] run effect give @s regeneration 1000000 0 true
+execute as @a[team=Orange,predicate=game:onorange,tag=!onboatregen] run tag @s add onboatregen
+execute as @a[team=Purple,predicate=game:onpurple,tag=!onboatregen] run tag @s add onboatregen
+execute as @a[team=Orange,predicate=!game:onorange,tag=onboatregen] run effect clear @s regeneration
+execute as @a[team=Purple,predicate=!game:onpurple,tag=onboatregen] run effect clear @s regeneration
+execute as @a[team=Orange,predicate=!game:onorange,tag=onboatregen] run tag @s remove onboatregen
+execute as @a[team=Purple,predicate=!game:onpurple,tag=onboatregen] run tag @s remove onboatregen
+
+execute as @a[team=Orange,predicate=game:onpurple] run effect give @s weakness 1 0 true
+execute as @a[team=Purple,predicate=game:onorange] run effect give @s weakness 1 0 true
 
 setblock 88 -27 55 minecraft:spruce_slab[type=top]
 spawnpoint @a[team=Orange] 88 -26 55 90
