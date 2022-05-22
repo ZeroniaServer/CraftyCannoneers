@@ -24,6 +24,7 @@ execute as @a[team=Purple,predicate=game:onpurple,tag=!EnemyMSG] run tag @s add 
 
 execute as @a[team=Purple,tag=EnemyMSG,predicate=!game:onorange] run tag @s remove EnemyMSG
 execute as @a[team=Orange,tag=EnemyMSG,predicate=!game:onpurple] run tag @s remove EnemyMSG
+tag @a[tag=EnemyMSG,team=!Orange,team=!Purple] remove EnemyMSG
 
 execute as @a[team=Orange,predicate=game:onpurple] run effect give @s weakness 1 0 true
 execute as @a[team=Purple,predicate=game:onorange] run effect give @s weakness 1 0 true
