@@ -3,6 +3,7 @@ kill @e[tag=cannon]
 kill @e[tag=cannonball]
 tp @e[tag=Weakpoint] ~ ~-200 ~
 kill @e[tag=Weakpoint]
+kill @e[tag=WeakpointLoc]
 function arenaclear:shipplacement
 tp @e[tag=chest] ~ ~-200 ~
 kill @e[tag=chest]
@@ -43,4 +44,4 @@ function arenaclear:boatvehicles
 team join NoName @e[tag=Trader]
 
 #> Weakpoints
-#summon marker 70 -29 48 {Tags:["WeakpointLoc","Purple","Weakpoint"]}
+summon marker 70 -29 48 {Tags:["WeakpointLoc","Purple"]}

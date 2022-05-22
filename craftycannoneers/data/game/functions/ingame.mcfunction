@@ -6,8 +6,8 @@ function game:ingame/arrowpickup
 function game:ingame/boat
 
 #> Boat specific effects
-execute as @a[team=Orange,predicate=game:onorange,tag=!onboatregen] run effect give @s regeneration 1000000 0 true
-execute as @a[team=Purple,predicate=game:onpurple,tag=!onboatregen] run effect give @s regeneration 1000000 0 true
+execute as @a[team=Orange,predicate=game:onorange,tag=!onboatregen] run effect give @s regeneration 1000000 1 true
+execute as @a[team=Purple,predicate=game:onpurple,tag=!onboatregen] run effect give @s regeneration 1000000 1 true
 execute as @a[team=Orange,predicate=game:onorange,tag=!onboatregen] run tag @s add onboatregen
 execute as @a[team=Purple,predicate=game:onpurple,tag=!onboatregen] run tag @s add onboatregen
 execute as @a[team=Orange,predicate=!game:onorange,tag=onboatregen] run effect clear @s regeneration

@@ -11,6 +11,7 @@ execute as @a[team=!Lobby] unless score @s leavegame matches 0 run tag @s add Le
 execute as @a[team=Purple,nbt=!{Inventory:[{Slot:103b,id:"minecraft:diamond_hoe",Count:1b}]}] run trigger leavegame
 execute as @a[team=Orange,nbt=!{Inventory:[{Slot:103b,id:"minecraft:diamond_hoe",Count:1b}]}] run trigger leavegame
 
+execute as @a[tag=LeaveGame] run title @s times 0 50 15
 execute as @a[tag=LeaveGame] at @s run tp @s @s
 execute as @a[tag=LeaveGame] at @s run tp @s -55 -21 0 -90 0
 execute as @a[tag=LeaveGame] at @s run clear @s
