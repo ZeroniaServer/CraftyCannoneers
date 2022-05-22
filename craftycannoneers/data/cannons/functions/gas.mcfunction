@@ -14,8 +14,8 @@ execute as @e[tag=GasAS] at @s run particle minecraft:soul ~ ~ ~ 1.5 1.2 1.5 0.0
 execute as @e[tag=GasAS] at @s run tp @s ~ ~0.005 ~
 execute as @e[tag=GasCloud] at @s run tp @s ~ ~0.005 ~
 
-execute as @e[tag=GasCloud] at @s run effect give @a[distance=..3.5] poison 6 100 true
-execute as @e[tag=GasCloud] at @s run effect give @a[distance=..3.5] nausea 7 3 true
+execute as @e[tag=GasCloud] at @s run effect give @a[distance=..3.5,team=!Lobby,team=!Spectator] poison 6 100 true
+execute as @e[tag=GasCloud] at @s run effect give @a[distance=..3.5,team=!Lobby,team=!Spectator] nausea 7 3 true
 
 execute as @e[tag=GasCloud,scores={CmdData=243}] at @s run data merge entity @e[tag=GasAS,limit=1,sort=nearest,distance=..1] {Small:1b}
 execute as @e[tag=GasCloud,scores={CmdData=250..}] at @s run kill @e[tag=GasAS,limit=1,sort=nearest,distance=..1]
