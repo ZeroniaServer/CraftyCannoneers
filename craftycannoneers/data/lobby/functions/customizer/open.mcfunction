@@ -8,6 +8,7 @@ function lobby:customizer/updatesigns
 scoreboard players set $gamestate CmdData -1
 
 tag @e[tag=joinpad] add Locked
+kill @e[type=item]
 
 item replace entity @e[tag=TimeIcon] armor.head with diamond_hoe{CustomModelData:35}
 item replace entity @e[tag=HPIcon] armor.head with diamond_hoe{CustomModelData:36}
