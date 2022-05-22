@@ -70,7 +70,7 @@ scoreboard players add @e[tag=Looted,scores={CmdData=30..220}] CmdData 1
 execute as @e[tag=Looted,scores={CmdData=171..220}] at @s run tp @s ~ ~-0.033 ~
 execute as @e[tag=Looted,scores={CmdData=171..200}] at @s run particle block sand ~ ~ ~ 0 0 0 0.1 5 force
 execute as @e[tag=Looted,scores={CmdData=171..200}] at @s run particle block dirt ~ ~ ~ 0 0 0 0.1 5 force
-execute as @e[tag=Looted,scores={CmdData=171..200}] at @s run playsound minecraft:block.sand.break master @a ~ ~ ~ 1 1.1
-execute as @e[tag=Looted,scores={CmdData=200}] at @s run playsound minecraft:block.gravel.break master @a ~ ~ ~ 1.2 0.8
+execute as @e[tag=Looted,scores={CmdData=171..200}] at @s run playsound minecraft:block.composter.fill master @a ~ ~ ~ 1 1.6
+execute as @e[tag=Looted,scores={CmdData=200}] at @s run playsound minecraft:block.composter.fill_success master @a ~ ~ ~ 1 1.7
 execute as @e[tag=Looted,scores={CmdData=220..}] at @s run tp @s ~ ~-200 ~
 execute as @e[tag=Looted,scores={CmdData=220..}] at @s run kill @s

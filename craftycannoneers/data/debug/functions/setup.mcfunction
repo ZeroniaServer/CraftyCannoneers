@@ -32,6 +32,7 @@ scoreboard objectives add death minecraft.custom:minecraft.deaths
 scoreboard objectives add LeftGame minecraft.custom:minecraft.leave_game
 scoreboard objectives add rockID dummy
 scoreboard objectives add rockOwner dummy
+scoreboard objectives add spotting dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
@@ -61,6 +62,7 @@ team modify Lobby collisionRule never
 team modify Purple collisionRule never
 team modify Orange collisionRule never
 team modify Spectator collisionRule never
+team modify NoName collisionRule never
 team modify NoName nametagVisibility never
 #> Static scores
 scoreboard players set $10 CmdData 10

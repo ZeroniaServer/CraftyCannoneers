@@ -199,7 +199,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Hook\",\"italic\":false,\"color\":\"dark_aqua\"}]'},AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:20,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,10659,12629,-21318]},{AttributeName:\"generic.attack_damage\",Amount:4.0,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,10759,12629,-21518]}]}"
+              "tag": "{Damage:235,display:{Name:'[{\"text\":\"Hook\",\"italic\":false,\"color\":\"dark_aqua\"}]'},AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:20,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,10659,12629,-21318]},{AttributeName:\"generic.attack_damage\",Amount:3.5,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,10759,12629,-21518]}]}"
             },
             {
               "function": "minecraft:set_count",
@@ -275,7 +275,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Unbreakable:1b,AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:-3.5,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,13259,12629,-26518]},{AttributeName:\"generic.attack_damage\",Amount:7.5,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,13359,12629,-26718]}],display:{Name:'[{\"text\":\"Mace\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+              "tag": "{Unbreakable:1b,AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:-3.5,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,13259,12629,-26518]},{AttributeName:\"generic.attack_damage\",Amount:10.0,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,13359,12629,-26718]}],display:{Name:'[{\"text\":\"Mace\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
             },
             {
               "function": "minecraft:set_count",

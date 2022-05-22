@@ -14,9 +14,7 @@ item replace entity @s[team=Purple] armor.feet with leather_boots{AttributeModif
 
 item replace entity @s hotbar.0 with iron_sword{NoDrop:1b,Unbreakable:1b,display:{Name:'[{"text":"Cutlass","italic":false,"color":"dark_aqua"}]'}}
 item replace entity @s hotbar.1 with crossbow{NoDrop:1b,Unbreakable:1b,display:{Name:'[{"text":"Hand Crossbow","italic":false,"color":"dark_aqua"}]'},Enchantments:[{id:quick_charge,lvl:2}],HideFlags:7,Charged:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{display:{Name:'[{"text":"Arrow","italic":false,"color":"dark_aqua"}]'}}}]}
-item replace entity @s hotbar.2 with spyglass{NoDrop:1b,display:{Name:'{"text":"Spyglass","italic":false,"color":"dark_aqua"}'}}
-#Temporarily commented out & replaced with a default spyglass until weakpoints exist
-#item replace entity @s hotbar.2 with spyglass{NoDrop:1b,display:{Name:'[{"text":"Spotting Spyglass","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Use this Spyglass to find the","italic":false,"color":"aqua"}]','[{"text":"current weakpoint of a ship!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"","italic":false,"color":"dark_purple"}]']}}
+item replace entity @s hotbar.2 with spyglass{NoDrop:1b,display:{Name:'[{"text":"Spotting Spyglass","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Use this Spyglass to expose","italic":false,"color":"aqua"}]','[{"text":"the weakpoints of a ship!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"","italic":false,"color":"dark_purple"}]']}}
 item replace entity @s hotbar.8 with arrow{display:{Name:'[{"text":"Arrow","italic":false,"color":"dark_aqua"}]'}} 4
 
 effect give @s resistance 6 100 true
