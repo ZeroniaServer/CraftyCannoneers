@@ -50,8 +50,14 @@ execute as @s[tag=!InSafezone,tag=Hit1,tag=!ChainCannonball,scores={doublehit=4.
 execute as @e[tag=ImpactMarker] at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper
 
 
-execute as @s[tag=!Hit1] at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
-execute as @s[tag=Hit1,scores={doublehit=4..}] at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
+execute as @s[tag=!Hit1,predicate=cannons:ships/orange] at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
+execute as @s[tag=!Hit1,predicate=cannons:ships/purple] at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
+execute as @s[tag=Hit1,scores={doublehit=4..},predicate=cannons:ships/orange] at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
+execute as @s[tag=Hit1,scores={doublehit=4..},predicate=cannons:ships/purple] at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
+execute as @s[tag=!Hit1,tag=!CannonballCluster] at @s run playsound cannonball master @a ~ ~ ~ 4 1
+execute as @s[tag=!Hit1,tag=!CannonballCluster] at @s run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1
+execute as @s[tag=Hit1,scores={doublehit=4..},tag=!CannonballCluster] at @s run playsound cannonball master @a ~ ~ ~ 4 1.2
+execute as @s[tag=Hit1,scores={doublehit=4..},tag=!CannonballCluster] at @s run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1.2
 tag @s[tag=Hit1,scores={doublehit=4..}] add Hit2
 tag @s add Hit1
 
