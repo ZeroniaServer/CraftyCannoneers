@@ -33,6 +33,7 @@ scoreboard objectives add LeftGame minecraft.custom:minecraft.leave_game
 scoreboard objectives add rockID dummy
 scoreboard objectives add rockOwner dummy
 scoreboard objectives add spotting dummy
+scoreboard objectives add drowning dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"

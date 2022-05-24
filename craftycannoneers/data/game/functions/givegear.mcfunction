@@ -17,5 +17,6 @@ item replace entity @s hotbar.1 with crossbow{NoDrop:1b,Unbreakable:1b,display:{
 item replace entity @s hotbar.2 with spyglass{NoDrop:1b,display:{Name:'[{"text":"Spotting Spyglass","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Use this Spyglass to expose","italic":false,"color":"aqua"}]','[{"text":"the weakpoints of a ship!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"","italic":false,"color":"dark_purple"}]']}}
 item replace entity @s hotbar.8 with arrow{display:{Name:'[{"text":"Arrow","italic":false,"color":"dark_aqua"}]'}} 4
 
+effect give @s instant_health 1 100 true
 effect give @s resistance 6 100 true
 effect give @s fire_resistance 6 100 true

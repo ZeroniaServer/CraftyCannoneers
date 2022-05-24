@@ -82,6 +82,8 @@ bossbar set purpleship players @a[team=!Lobby]
 bossbar set orangeship players @a[team=!Lobby]
 
 execute as @a[scores={death=1..},team=!Lobby,team=!Spectator] run function game:givegear
+tp @a[team=Orange,scores={death=1..}] 88 -26 55 90 0
+tp @a[team=Purple,scores={death=1..}] 52 -26 -55 -90 0
 scoreboard players reset @a[scores={death=1..}] death
 
 
