@@ -42,6 +42,3 @@ function arenaclear:villagertrades
 function arenaclear:boatvehicles
 
 team join NoName @e[tag=Trader]
-
-#> Weakpoints
-summon marker 70 -29 48 {Tags:["WeakpointLoc","Purple"]}

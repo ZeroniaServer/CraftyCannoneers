@@ -7,7 +7,7 @@
             "player": {
               "looking_at": {
                 "type": "minecraft:slime",
-                "nbt": "{Tags:[\"Weakpoint\",\"invisible\"]}"
+                "nbt": "{Tags:[\"Weakpoint\",\"Purple\"]}"
               }
             }
           }
@@ -15,6 +15,6 @@
       }
     },
     "rewards": {
-      "function": "game:seeweakpoint"
+      "function": "game:seepurpleweakpoint"
     }
   }

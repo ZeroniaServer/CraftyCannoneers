@@ -1,10 +1,5 @@
-#execute as @e[tag=Weakpoint,type=slime] at @s run particle dust 1 1 1 1 ~ ~ ~ 0 0 0 0 1 force @a[tag=UsingSpyglass,tag=!SeeWeakpoint]
-#execute as @e[tag=Weakpoint,type=slime] at @s run particle dust 1 0 0 1 ~ ~ ~ 0 0 0 0 1 force @a[tag=UsingSpyglass,tag=SeeWeakpoint]
-
-#execute as @e[tag=Weakpoint,type=slime] at @s run particle dust 1 1 1 1 ~ ~ ~ 0 0 0 0 1 force @a[tag=UsingSpyglass,tag=!SeeWeakpoint]
-#execute as @e[tag=Weakpoint,type=slime] at @s run particle dust 1 0 0 1 ~ ~ ~ 0 0 0 0 1 force @a[tag=UsingSpyglass,tag=SeeWeakpoint]
-
 function game:shipweakpoint/xparticle
+function game:shipweakpoint/damage
 
 execute unless entity @e[type=slime,tag=Spotted,tag=Purple] run scoreboard players add @a[team=Purple,tag=SeeWeakpoint] spotting 1
 execute unless entity @e[type=slime,tag=Spotted,tag=Orange] run scoreboard players add @a[team=Orange,tag=SeeWeakpoint] spotting 1

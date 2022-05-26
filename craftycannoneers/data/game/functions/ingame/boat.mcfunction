@@ -15,10 +15,10 @@ tag @e[tag=BoatAS,tag=New] remove New
 
 
 
-execute unless entity @e[tag=BoatBoat,tag=1,tag=Sailing] positioned 109 -31 0 unless entity @e[tag=BoatBoat,tag=1,distance=..8] as @e[tag=BoatBoat,tag=1] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..7] run tag @e[tag=BoatBoat,tag=1] add Sinking
-execute unless entity @e[tag=BoatBoat,tag=2,tag=Sailing] positioned 31 -31 0 unless entity @e[tag=BoatBoat,tag=2,distance=..8] as @e[tag=BoatBoat,tag=2] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..7] run tag @e[tag=BoatBoat,tag=2] add Sinking
-execute unless entity @e[tag=BoatBoat,tag=3,tag=Sailing] positioned 83 -31 12 unless entity @e[tag=BoatBoat,tag=3,distance=..8] as @e[tag=BoatBoat,tag=3] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..7] run tag @e[tag=BoatBoat,tag=3] add Sinking
-execute unless entity @e[tag=BoatBoat,tag=4,tag=Sailing] positioned 57 -31 -12 unless entity @e[tag=BoatBoat,tag=4,distance=..8] as @e[tag=BoatBoat,tag=4] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..7] run tag @e[tag=BoatBoat,tag=4] add Sinking
+execute unless entity @e[tag=BoatBoat,tag=1,tag=Sailing] positioned 109 -31 0 unless entity @e[tag=BoatBoat,tag=1,distance=..8] as @e[tag=BoatBoat,tag=1] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..12] run tag @e[tag=BoatBoat,tag=1] add Sinking
+execute unless entity @e[tag=BoatBoat,tag=2,tag=Sailing] positioned 31 -31 0 unless entity @e[tag=BoatBoat,tag=2,distance=..8] as @e[tag=BoatBoat,tag=2] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..12] run tag @e[tag=BoatBoat,tag=2] add Sinking
+execute unless entity @e[tag=BoatBoat,tag=3,tag=Sailing] positioned 83 -31 12 unless entity @e[tag=BoatBoat,tag=3,distance=..8] as @e[tag=BoatBoat,tag=3] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..12] run tag @e[tag=BoatBoat,tag=3] add Sinking
+execute unless entity @e[tag=BoatBoat,tag=4,tag=Sailing] positioned 57 -31 -12 unless entity @e[tag=BoatBoat,tag=4,distance=..8] as @e[tag=BoatBoat,tag=4] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..12] run tag @e[tag=BoatBoat,tag=4] add Sinking
 
 scoreboard players add @e[tag=Boat,tag=Sinking] CmdData 1
 execute as @e[tag=BoatBoat,tag=Sinking,scores={CmdData=1}] at @s run particle minecraft:bubble_column_up ~ ~ ~ 0.8 0.2 0.8 0.1 10 force
