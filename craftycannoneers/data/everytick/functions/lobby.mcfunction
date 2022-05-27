@@ -21,3 +21,7 @@ execute positioned -43 -23 -18 as @a[scores={CannonTutorial=1..},distance=6..] r
 execute positioned -43 -23 -18 as @a[scores={ChestTutorial=1..},distance=6..] run tag @s remove TutorialChest
 execute positioned -43 -23 -18 as @a[scores={CannonTutorial=1..},distance=6..] run scoreboard players reset @s CannonTutorial
 execute positioned -43 -23 -18 as @a[scores={ChestTutorial=1..},distance=6..] run scoreboard players reset @s ChestTutorial
+
+scoreboard players reset @a[team=Lobby] MVPkill
+scoreboard players reset @a[team=Lobby] MVPdeath
+scoreboard players reset @a[team=Lobby] MVPcannon
