@@ -11,6 +11,7 @@ scoreboard players operation @e[type=creeper,tag=!HasUUID,limit=1,sort=nearest,d
 data modify entity @e[type=creeper,tag=!HasUUID,limit=1,sort=nearest,distance=..2] CustomName set from entity @s data.CustomName
 tag @a[team=!Spectator,team=!Lobby,distance=..5] add UtilKilled
 execute store result score @a[tag=UtilKilled,distance=..5] KillerUUID run scoreboard players get @s playerUUID
+execute as @e[type=creeper,tag=!HasUUID] run scoreboard players operation $current playerUUID = @s playerUUID
 tag @e[type=creeper,tag=!HasUUID] add HasUUID
 
 execute unless entity @s[predicate=cannons:safezones/island] unless entity @s[scores={CmdData=1..}] run function cannons:lightfill1
