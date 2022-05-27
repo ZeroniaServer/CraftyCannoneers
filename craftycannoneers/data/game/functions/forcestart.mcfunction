@@ -1,5 +1,6 @@
 scoreboard players reset $DamageOrange CmdData
 scoreboard players reset $DamagePurple CmdData
+scoreboard players reset $AnnouncedLast CmdData
 
 scoreboard players set $gamestate CmdData 2
 
