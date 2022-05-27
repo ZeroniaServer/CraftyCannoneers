@@ -9,10 +9,6 @@
                 "weight": 1,
                 "functions": [
                   {
-                    "function": "minecraft:set_nbt",
-                    "tag": "{display:{Name:'[{\"text\":\"Gold\",\"italic\":false,\"color\":\"gold\"}]',Lore:['[{\"text\":\"Currency item used to purchase\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"special cannonballs.\",\"italic\":false,\"color\":\"white\"}]']}}"
-                  },
-                  {
                     "function": "minecraft:set_count",
                     "count": {
                       "min": 0,

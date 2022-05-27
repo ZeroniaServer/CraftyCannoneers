@@ -16,5 +16,5 @@ item replace entity @s[team=Purple] armor.feet with leather_boots{AttributeModif
 
 item replace entity @s hotbar.0 with snowball{NoDrop:1b,display:{Name:'[{"text":"Rock.","italic":false,"color":"red"}]',Lore:['[{"text":"Throw at player to insta-kill!","italic":false,"color":"dark_red"},{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"Okay not really... It just","italic":false,"color":"gray"}]','[{"text":"gives you something to do","italic":false,"color":"gray"}]','[{"text":"while you wait for the game","italic":false,"color":"gray"}]','[{"text":"to start...","italic":false,"color":"gray"}]']}} 15
 
-tellraw @s[team=Purple] ["",{"text":"You can take off your ","color":"white"},{"text":"Pirate Hat","bold":true,"color":"dark_purple"},{"text":" to leave the game!","color":"white"}]
-tellraw @s[team=Orange] ["",{"text":"You can take off your ","color":"white"},{"text":"Pirate Hat","bold":true,"color":"gold"},{"text":" to leave the game!","color":"white"}]
+tellraw @s[team=Purple] ["",{"text":"You can take off your ","color":"aqua","italic":true},{"text":"Pirate Hat","bold":true,"color":"dark_purple"},{"text":" to leave the game!","color":"aqua","italic":true}]
+tellraw @s[team=Orange] ["",{"text":"You can take off your ","color":"aqua","italic":true},{"text":"Pirate Hat","bold":true,"color":"gold"},{"text":" to leave the game!","color":"aqua","italic":true}]
