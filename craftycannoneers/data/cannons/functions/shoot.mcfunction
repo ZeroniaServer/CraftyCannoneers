@@ -12,10 +12,10 @@ tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:5b}}}] add 
 
 #> MVP scores
 scoreboard players add @a[tag=FillCB,tag=HoldCB] MVPcannon 1
-scoreboard players add @a[tag=FillFB,tag=HoldCB] MVPcannon 1
-scoreboard players add @a[tag=FillCBC,tag=HoldCB] MVPcannon 1
-scoreboard players add @a[tag=FillGCB,tag=HoldCB] MVPcannon 1
-scoreboard players add @a[tag=FillCCB,tag=HoldCB] MVPcannon 1
+scoreboard players add @a[tag=FillCB,tag=HoldFB] MVPcannon 1
+scoreboard players add @a[tag=FillCB,tag=HoldCBC] MVPcannon 1
+scoreboard players add @a[tag=FillCB,tag=HoldGCB] MVPcannon 1
+scoreboard players add @a[tag=FillCB,tag=HoldCCB] MVPcannon 1
 
 #> Fill Cannonball
 #Normal
