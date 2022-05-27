@@ -15,6 +15,10 @@ tellraw @a[team=Orange] ["",{"text":"You can take off your ","color":"aqua","ita
 
 execute if score $ShipHP CmdData matches 42069.. run function game:autohp
 
+tag @a remove KillMVP
+tag @a remove DeathMVP
+tag @a remove CannonMVP
+
 bossbar add purpleship ""
 bossbar add orangeship ""
 

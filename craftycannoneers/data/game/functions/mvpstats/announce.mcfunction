@@ -1,6 +1,5 @@
-tellraw @a ["","\n",{"text":"Game Over!","underlined":true,"color":"green"}]
+tellraw @a ["","\n",{"text":"Game Over!","bold":true,"color":"green"}]
 tellraw @a ["",{"text":"Purple: ","color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"text":"Orange: ","color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
-
 #> Cannons
 scoreboard players set $MVPCount CmdData 0
 execute as @a[tag=CannonMVP] run scoreboard players add $MVPCount CmdData 1
@@ -18,5 +17,7 @@ scoreboard players set $MVPCount CmdData 0
 execute as @a[tag=DeathMVP] run scoreboard players add $MVPCount CmdData 1
 execute if score $MVPCount CmdData matches 1 run tellraw @a ["",{"selector":"@a[tag=DeathMVP,limit=1,sort=random]"},{"text":" visited Davy Jones' Locker! ","color":"aqua"},{"score":{"name":"@a[tag=DeathMVP,limit=1,sort=random]","objective":"MVPkill"},"bold":true,"color":"dark_aqua"},{"text":" pathetic deaths!","color":"aqua"}]
 execute if score $MVPCount CmdData matches 2.. run tellraw @a ["",{"selector":"@a[tag=DeathMVP]"},{"text":" visited Davy Jones' Locker! ","color":"aqua"},{"score":{"name":"@a[tag=DeathMVP,limit=1,sort=random]","objective":"MVPkill"},"bold":true,"color":"dark_aqua"},{"text":" pathetic deaths each!","color":"aqua"}]
+
+tellraw @a " "
 
 scoreboard players reset $MVPCount CmdData
