@@ -8,7 +8,7 @@ execute as @s[tag=ImpactMarker,tag=Power3] run summon creeper ~ ~ ~ {Tags:["Cann
 execute as @s[tag=ImpactMarker,tag=GasPower] run summon creeper ~ ~ ~ {Tags:["GasCreeper"],CustomName:'{"text":"a Gas Cannonball"}',Fuse:0,Silent:1b,CustomNameVisible:0b,NoAI:1b,CanPickUpLoot:0b,DeathTime:19s,ExplosionRadius:3}
 
 scoreboard players operation @e[type=creeper,tag=!HasUUID,limit=1,sort=nearest,distance=..2] playerUUID = @s playerUUID
-data modify entity @e[type=creeper,tag=!HasUUID,limit=1,sort=nearest,distance=..2] CustomName set from entity @s data.CustomName
+data modify entity @e[type=creeper,tag=!HasUUID,limit=1,sort=nearest,distance=..2] CustomName set from entity @s CustomName
 tag @a[team=!Spectator,team=!Lobby,distance=..5] add UtilKilled
 execute store result score @a[tag=UtilKilled,distance=..5] KillerUUID run scoreboard players get @s playerUUID
 execute as @e[type=creeper,tag=!HasUUID] run scoreboard players operation $current playerUUID = @s playerUUID
@@ -20,7 +20,7 @@ execute unless entity @s[predicate=cannons:safezones/island] unless entity @s[sc
 scoreboard players set @s CmdData 1
 
 execute as @a[tag=UtilKilled,distance=..5] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:10b,Duration:1,ShowParticles:0b}]}
-data modify storage craftycannoneers:temp CustomName set from entity @s data.CustomName
+data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
 execute as @e[type=area_effect_cloud,tag=damage,tag=!HasName] run data modify entity @s CustomName set from storage craftycannoneers:temp CustomName
 # data remove storage craftycannoneers:temp CustomName
 tag @e[type=area_effect_cloud,tag=damage,tag=!HasName] add HasName
