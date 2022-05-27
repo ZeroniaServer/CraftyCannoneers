@@ -44,8 +44,8 @@ execute as @s[tag=!InSafezone,tag=Hit1,tag=!ChainCannonball,scores={doublehit=4.
 execute as @s[tag=!InSafezone,tag=Hit1,tag=!ChainCannonball,scores={doublehit=4..},tag=ChainCannonball] at @s run summon marker ^ ^ ^-2 {Tags:["ImpactMarker","Power2"]}
 
 
-
-
+execute as @e[tag=ImpactMarker,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[tag=cannonball,limit=1,sort=nearest,distance=..4] playerUUID
+tag @e[tag=ImpactMarker,tag=!HasUUID] add HasUUID
 
 execute as @e[tag=ImpactMarker] at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper
 
