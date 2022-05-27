@@ -1,4 +1,4 @@
-scoreboard players set @s drag 120
+scoreboard players set @s drag 60
 scoreboard players set @s gravity 200
 
 scoreboard players set @s RNGmax 200
