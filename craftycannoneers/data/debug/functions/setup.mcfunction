@@ -8,7 +8,7 @@ gamerule keepInventory true
 gamerule doImmediateRespawn true
 gamerule doLimitedCrafting true
 gamerule doMobSpawning false
-gamerule doMobLoot false
+gamerule doMobLoot true
 gamerule naturalRegeneration false
 execute unless score $gamestate CmdData matches 2 run gamerule fallDamage false
 
@@ -29,11 +29,15 @@ scoreboard objectives add ChestTutorial dummy
 scoreboard objectives add playerUUID dummy
 scoreboard objectives add arrowtime dummy
 scoreboard objectives add death minecraft.custom:minecraft.deaths
+scoreboard objectives add kill playerKillCount
 scoreboard objectives add LeftGame minecraft.custom:minecraft.leave_game
 scoreboard objectives add rockID dummy
 scoreboard objectives add rockOwner dummy
 scoreboard objectives add spotting dummy
 scoreboard objectives add drowning dummy
+scoreboard objectives add MVPkill dummy
+scoreboard objectives add MVPdeath dummy
+scoreboard objectives add MVPcannon dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"

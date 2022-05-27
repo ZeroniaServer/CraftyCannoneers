@@ -87,3 +87,5 @@ execute if score $gamestate CmdData matches 2.. run bossbar set lobbybar players
 execute unless score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a
 execute if score $gamestate CmdData matches 3 run bossbar set lobbybar color red
 execute if score $gamestate CmdData matches 3 run bossbar set lobbybar name {"text":"A game is currently ending!","bold":true,"color":"red"}
+
+execute as @e[type=experience_orb] run kill @s

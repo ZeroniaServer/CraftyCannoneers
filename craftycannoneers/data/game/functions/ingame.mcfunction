@@ -86,6 +86,8 @@ tp @a[team=Orange,scores={death=1..}] 88 -26 55 90 0
 tp @a[team=Purple,scores={death=1..}] 52 -26 -55 -90 0
 scoreboard players reset @a[scores={death=1..}] death
 
+execute as @a[scores={kill=1..}]
+
 
 execute unless score $TimeLimit CmdData matches 42069.. run function game:ingame/timer
 

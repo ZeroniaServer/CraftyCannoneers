@@ -8,3 +8,4 @@ execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] run s
 scoreboard players reset @s CalcAir1
 scoreboard players reset @s CalcAir2
 tag @s remove DidDamage
+say poggers
