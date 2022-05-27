@@ -38,6 +38,7 @@ scoreboard objectives add drowning dummy
 scoreboard objectives add MVPkill dummy
 scoreboard objectives add MVPdeath dummy
 scoreboard objectives add MVPcannon dummy
+scoreboard objectives add KillerUUID dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"

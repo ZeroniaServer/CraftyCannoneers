@@ -103,6 +103,7 @@ execute as @e[tag=ChainCannonball] at @s run tp @s ~ ~ ~ ~20 ~
 
 #Global
 execute as @e[tag=NewCannonball] at @s run scoreboard players operation @s playerUUID = @e[tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID
+execute as @e[tag=NewCannonball] at @s run function cannons:namecannonball
 tag @e[tag=NewCannonball] remove NewCannonball
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run tp @e[tag=cannonball,limit=1,sort=nearest,distance=..1] @s
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s store result score @e[tag=cannonball,limit=1,sort=nearest,distance=..1] PowerL run scoreboard players get @e[tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
