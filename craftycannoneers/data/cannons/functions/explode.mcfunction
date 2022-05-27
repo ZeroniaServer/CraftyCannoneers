@@ -45,7 +45,7 @@ execute as @s[tag=!InSafezone,tag=Hit1,tag=!ChainCannonball,scores={doublehit=4.
 
 
 execute as @e[tag=ImpactMarker,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[tag=cannonball,limit=1,sort=nearest,distance=..4] playerUUID
-execute as @e[tag=ImpactMarker,tag=!HasUUID] at @s run data modify entity @s CustomName set from entity @e[tag=cannonball,limit=1,sort=nearest,distance=..4] CustomName
+execute as @e[tag=ImpactMarker,tag=!HasUUID] at @s run data modify entity @s data.CustomName set from entity @e[tag=cannonball,limit=1,sort=nearest,distance=..4] CustomName
 tag @e[tag=ImpactMarker,tag=!HasUUID] add HasUUID
 
 execute as @e[tag=ImpactMarker] at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper
