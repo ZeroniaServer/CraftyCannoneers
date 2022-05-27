@@ -13,18 +13,23 @@ tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:5b}}}] add 
 #> Fill Cannonball
 #Normal
 execute as @a[tag=FillCB,tag=HoldCB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
+execute as @a[tag=FillCB,tag=HoldCB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
 execute as @a[tag=FillCB,tag=HoldCB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 1
 #Hot
 execute as @a[tag=FillCB,tag=HoldFB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
+execute as @a[tag=FillCB,tag=HoldFB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
 execute as @a[tag=FillCB,tag=HoldFB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 2
 #Cluster
 execute as @a[tag=FillCB,tag=HoldCBC] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
+execute as @a[tag=FillCB,tag=HoldCBC] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
 execute as @a[tag=FillCB,tag=HoldCBC] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 3
 #Gas
 execute as @a[tag=FillCB,tag=HoldGCB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
+execute as @a[tag=FillCB,tag=HoldGCB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
 execute as @a[tag=FillCB,tag=HoldGCB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 4
 #Chain
 execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
+execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
 execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 5
 
 #Global
@@ -54,21 +59,21 @@ scoreboard players add @e[tag=cannonball] CmdData 1
 #Normal Cannonball
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=1}] at @s run playsound cannonshot master @a ~ ~ ~ 6 1
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=1}] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1
-execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=1}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","Cannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:16}}]}
+execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=1}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","Cannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:16}}]}
 #Hot Cannonball
 function cannons:firering
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=2}] at @s run playsound cannonshot master @a ~ ~ ~ 6 0.85
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=2}] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 0.85
-execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=2}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","HotCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:22}}]}
+execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=2}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","HotCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:22}}]}
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=2}] at @s run playsound fireshot master @a ~ ~ ~ 4 1
 #Cannonball Cluster
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run playsound cannonshot master @a ~ ~ ~ 6 1.2
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1.2
-execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","CannonballCluster","0","Hit1"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:30}}]}
-execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","CannonballCluster","1","Hit1"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:30}}]}
-execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","CannonballCluster","2","Hit1"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:30}}]}
-execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","CannonballCluster","3","Hit1"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:30}}]}
-execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","CannonballCluster","4","Hit1"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:30}}]}
+execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","CannonballCluster","0","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:30}}]}
+execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","CannonballCluster","1","Hit1","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:30}}]}
+execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","CannonballCluster","2","Hit1","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:30}}]}
+execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","CannonballCluster","3","Hit1","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:30}}]}
+execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","CannonballCluster","4","Hit1","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:30}}]}
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s run tp @e[tag=CannonballCluster,distance=..1] @s
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s store result score @e[tag=CannonballCluster,distance=..1] PowerL run scoreboard players get @e[tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=3}] at @s store result score @e[tag=CannonballCluster,distance=..1] PowerR run scoreboard players get @e[tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData
@@ -82,7 +87,7 @@ scoreboard players set @e[tag=CannonballCluster] doublehit 69
 function cannons:gas
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=4}] at @s run playsound cannonshot master @a ~ ~ ~ 6 1.05
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=4}] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1.05
-execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=4}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","GasCannonball","Hit1"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:31}}]}
+execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=4}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","GasCannonball","Hit1","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:31}}]}
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=4}] at @s run playsound gasshot master @a ~ ~ ~ 4 1
 #Chain Cannonball
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=5}] at @s run playsound cannonshot master @a ~ ~ ~ 6 0.9
@@ -91,12 +96,14 @@ execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=5}] at @s run plays
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=5}] at @s run playsound minecraft:block.chain.break master @a ~ ~ ~ 4 1.3
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=5}] at @s run playsound minecraft:block.chain.break master @a ~ ~ ~ 4 0.7
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=5}] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 0.9
-execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=5}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","ChainCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:40}}]}
+execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=5}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","ChainCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:40}}]}
 execute as @e[tag=CannonballCluster,tag=!chainacc] run function cannons:chainaccuracy
 
 execute as @e[tag=ChainCannonball] at @s run tp @s ~ ~ ~ ~20 ~
 
 #Global
+execute as @e[tag=NewCannonball] at @s run scoreboard players operation @s playerUUID = @e[tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID
+tag @e[tag=NewCannonball] remove NewCannonball
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run tp @e[tag=cannonball,limit=1,sort=nearest,distance=..1] @s
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s store result score @e[tag=cannonball,limit=1,sort=nearest,distance=..1] PowerL run scoreboard players get @e[tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s store result score @e[tag=cannonball,limit=1,sort=nearest,distance=..1] PowerR run scoreboard players get @e[tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData
@@ -117,6 +124,7 @@ execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run scoreboard play
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run function cannons:updategp
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run scoreboard players set @s CmdData 0
 execute as @e[tag=FireCannon,scores={cannonshot=30..}] at @s run tag @s remove FireCannon
+execute as @e[tag=!FireCannon,scores={cannonshot=30..}] at @s run scoreboard players reset @s playerUUID
 execute as @e[tag=!FireCannon,scores={cannonshot=30..}] at @s run scoreboard players reset @s cannonshot
 
 execute as @e[tag=Cannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 4 force
