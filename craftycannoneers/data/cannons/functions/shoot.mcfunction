@@ -97,7 +97,7 @@ execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=5}] at @s run plays
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=5}] at @s run playsound minecraft:block.chain.break master @a ~ ~ ~ 4 0.7
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=5}] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 0.9
 execute as @e[tag=FireCannon,scores={cannonshot=30..,CmdData=5}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","ChainCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:40}}]}
-execute as @e[tag=CannonballCluster,tag=!chainacc] run function cannons:chainaccuracy
+execute as @e[tag=ChainCannonball,tag=!chainacc] run function cannons:chainaccuracy
 
 execute as @e[tag=ChainCannonball] at @s run tp @s ~ ~ ~ ~20 ~
 

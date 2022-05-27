@@ -54,5 +54,8 @@ summon marker 58 -27 50 {Tags:["WeakpointLoc","Orange"]}
 summon marker 65 -19 53 {Tags:["WeakpointLoc","Orange"]}
 summon marker 67 -10 53 {Tags:["WeakpointLoc","Orange"]}
 summon marker 83 -14 52 {Tags:["WeakpointLoc","Orange"]}
+
+execute as @e[tag=WeakpointLoc] at @s run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 cave_air replace air
+
 function game:shipweakpoint/spawnnewpurple
 function game:shipweakpoint/spawnneworange

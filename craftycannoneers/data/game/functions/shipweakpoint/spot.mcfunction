@@ -36,8 +36,8 @@ execute as @a[tag=SeeWeakpoint,scores={spotting=51..55}] run title @s subtitle [
 
 #Un-spot over-time
 scoreboard players add @e[type=slime,tag=Spotted] spotting 1
-execute as @e[type=slime,tag=Spotted,scores={spotting=120..}] run tag @s remove Spotted
-execute as @e[type=slime,tag=!Spotted,scores={spotting=120..}] run scoreboard players reset @s spotting
+execute as @e[type=slime,tag=Spotted,scores={spotting=220..}] run tag @s remove Spotted
+execute as @e[type=slime,tag=!Spotted,scores={spotting=220..}] run scoreboard players reset @s spotting
 
 execute as @e[type=slime,tag=Spotted,tag=Purple] if entity @a[team=Purple,tag=SeeWeakpoint] run scoreboard players reset @s spotting
 execute as @e[type=slime,tag=Spotted,tag=Orange] if entity @a[team=Orange,tag=SeeWeakpoint] run scoreboard players reset @s spotting

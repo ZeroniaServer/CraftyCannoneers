@@ -1,7 +1,3 @@
-execute as @e[tag=WeakpointLoc,tag=Orange] at @s if block ~1 ~1 ~1 air if block ~ ~2 ~1 air if block ~ ~ ~1 air if block ~-1 ~1 ~1 air if block ~ ~1 ~1 air run kill @s
-execute as @e[tag=WeakpointLoc,tag=Purple] at @s if block ~1 ~1 ~-1 air if block ~ ~2 ~-1 air if block ~ ~ ~-1 air if block ~-1 ~1 ~-1 air if block ~ ~1 ~-1 air run kill @s
-
-
 tp @e[tag=Weakpoint,type=slime,tag=Orange] ~ ~-200 ~
 kill @e[tag=Weakpoint,tag=Orange]
 
