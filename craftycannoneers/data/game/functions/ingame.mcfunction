@@ -85,9 +85,11 @@ execute as @a[scores={death=1..},team=!Lobby,team=!Spectator] run function game:
 tp @a[team=Orange,scores={death=1..}] 88 -26 55 90 0
 tp @a[team=Purple,scores={death=1..}] 52 -26 -55 -90 0
 tag @a[scores={death=1..}] remove onboatregen
+scoreboard players add @a[team=!Lobby,team=!Spectator,scores={death=1..}] MVPdeath 1
 scoreboard players reset @a[scores={death=1..}] death
 
-execute as @a[scores={kill=1..}]
+scoreboard players add @a[team=!Lobby,team=!Spectator,scores={kill=1..}] MVPkill 1
+scoreboard players reset @a[scores={kill=1..}] kill
 
 
 execute unless score $TimeLimit CmdData matches 42069.. run function game:ingame/timer

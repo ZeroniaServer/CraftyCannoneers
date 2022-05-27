@@ -10,6 +10,13 @@ tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:4b}}}] add 
 #Chain
 tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:5b}}}] add HoldCCB
 
+#> MVP scores
+scoreboard players add @a[tag=FillCB,tag=HoldCB] MVPcannon 1
+scoreboard players add @a[tag=FillFB,tag=HoldCB] MVPcannon 1
+scoreboard players add @a[tag=FillCBC,tag=HoldCB] MVPcannon 1
+scoreboard players add @a[tag=FillGCB,tag=HoldCB] MVPcannon 1
+scoreboard players add @a[tag=FillCCB,tag=HoldCB] MVPcannon 1
+
 #> Fill Cannonball
 #Normal
 execute as @a[tag=FillCB,tag=HoldCB] at @s unless entity @e[tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air

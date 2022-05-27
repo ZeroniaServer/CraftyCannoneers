@@ -1,3 +1,6 @@
+tag @a[scores={LeftGame=1..}] remove KillMVP
+tag @a[scores={LeftGame=1..}] remove DeathMVP
+tag @a[scores={LeftGame=1..}] remove CannonMVP
 execute as @a[scores={LeftGame=1..}] run tag @s add LeaveGame
 execute as @a[scores={LeftGame=1..}] run scoreboard players reset @s LeftGame
 
@@ -22,4 +25,13 @@ execute as @a[team=] at @s run playsound minecraft:entity.experience_orb.pickup 
 execute as @a[tag=LeaveGame] unless entity @s[team=] at @s run playsound block.beehive.exit master @s ~ ~ ~ 1 1
 execute as @a[tag=LeaveGame] at @s run team join Lobby @s
 execute as @a[tag=LeaveGame] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:39,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+
+execute as @a[tag=LeaveGame,tag=KillMVP] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:42,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[tag=LeaveGame,tag=DeathMVP] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:48,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[tag=LeaveGame,tag=CannonMVP] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:45,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[tag=LeaveGame,tag=KillMVP,tag=DeathMVP] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:43,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[tag=LeaveGame,tag=CannonMVP,tag=DeathMVP] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:44,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[tag=LeaveGame,tag=CannonMVP,tag=KillMVP] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:46,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[tag=LeaveGame,tag=KillMVP,tag=DeathMVP,tag=CannonMVP] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:47,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+
 tag @a[tag=LeaveGame] remove LeaveGame
