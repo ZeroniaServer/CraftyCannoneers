@@ -1,4 +1,5 @@
 function lobby:customizer/open
+scoreboard players set @e[tag=joinpad] CmdData 0
 tag @a[team=!Lobby] add LeaveGame
 scoreboard players set $WinningTeam CmdData 0
 scoreboard players set $EndTime CmdData 0

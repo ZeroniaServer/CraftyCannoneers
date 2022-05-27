@@ -1,5 +1,5 @@
 scoreboard players add @e[tag=joinpad,tag=Locked] CmdData 1
-execute as @e[tag=joinpad,tag=Locked,scores={CmdData=1}] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1
+execute as @e[tag=joinpad,tag=Locked,scores={CmdData=1}] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force
 scoreboard players reset @e[tag=joinpad,tag=Locked,scores={CmdData=80..}] CmdData
 
 execute as @e[tag=JoinpadOrange,tag=!Locked] at @s run particle falling_dust orange_concrete ~ ~1 ~ 0.7 0.3 0.7 0 1 force
