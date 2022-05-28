@@ -10,7 +10,7 @@ execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] unle
 execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar name ["",{"text":"Awaiting ","bold":true,"color":"blue"},{"text":"Orange","bold":true,"underlined":true,"color":"gold"},{"text":" players...","bold":true,"color":"blue"}]
 execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar name ["",{"text":"Awaiting ","bold":true,"color":"blue"},{"text":"Purple","bold":true,"underlined":true,"color":"dark_purple"},{"text":" players...","bold":true,"color":"blue"}]
 execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar name {"text":"Waiting for the game to get started...","bold":true,"color":"blue"}
-execute unless score $gamestate CmdData matches 2.. run bossbar set lobbybar color blue
+execute unless score $gamestate CmdData matches 2.. unless score $Countdown CmdData matches 1.. run bossbar set lobbybar color blue
 
 #> Team balancing
 scoreboard players set $InTeams CmdData 0
