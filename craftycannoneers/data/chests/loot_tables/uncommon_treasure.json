@@ -119,7 +119,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Damage:225,display:{Name:'[{\"text\":\"Hook\",\"italic\":false,\"color\":\"dark_aqua\"}]'},AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:20,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,10659,12629,-21318]},{AttributeName:\"generic.attack_damage\",Amount:3.5,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,10759,12629,-21518]}]}"
+              "tag": "{Damage:200,display:{Name:'[{\"text\":\"Hook\",\"italic\":false,\"color\":\"dark_aqua\"}]'},AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:20,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,10659,12629,-21318]},{AttributeName:\"generic.attack_damage\",Amount:3,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,10759,12629,-21518]}]}"
             },
             {
               "function": "minecraft:set_count",
