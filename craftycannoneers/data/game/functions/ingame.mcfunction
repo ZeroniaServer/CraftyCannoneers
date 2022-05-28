@@ -137,3 +137,27 @@ execute as @a[scores={eatGapple=1..}] run scoreboard players set @s gappleTimer 
 scoreboard players reset @a eatGapple
 scoreboard players add @a[scores={gappleTimer=1..100}] gappleTimer 1
 scoreboard players set @a[scores={gappleTimer=101..}] gappleTimer 0
+
+#team chests
+fill 69 -29 60 67 -29 60 spruce_slab[type=top]
+fill 71 -29 -60 73 -29 -60 spruce_slab[type=top]
+
+execute unless entity @a[team=Purple,predicate=game:onorange] run tp @e[tag=orangeteamchest] 68.50 -28.00 60.50
+execute unless entity @a[team=Purple,predicate=game:onorange] as @e[tag=orangeteamchest,tag=Opened] at @s unless entity @a[team=Orange,distance=..5] run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 0.75
+execute unless entity @a[team=Purple,predicate=game:onorange] as @e[tag=orangeteamchest,tag=Opened] at @s unless entity @a[team=Orange,distance=..5] run data modify entity @e[tag=orangechestdisplay,limit=1] HandItems[0].tag.CustomModelData set value 19
+execute unless entity @a[team=Purple,predicate=game:onorange] as @e[tag=orangeteamchest,tag=Opened] at @s unless entity @a[team=Orange,distance=..5] run tag @s remove Opened
+
+execute if entity @a[team=Purple,predicate=game:onorange] as @e[tag=orangeteamchest,tag=Opened] at @s run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 0.75
+execute if entity @a[team=Purple,predicate=game:onorange] as @e[tag=orangeteamchest,tag=Opened] run data modify entity @e[tag=orangechestdisplay,limit=1] HandItems[0].tag.CustomModelData set value 19
+execute if entity @a[team=Purple,predicate=game:onorange] run tag @e[tag=orangeteamchest] remove Opened
+execute if entity @a[team=Purple,predicate=game:onorange] run tp @e[tag=orangeteamchest] 68.50 300 60.50
+
+execute unless entity @a[team=Orange,predicate=game:onpurple] run tp @e[tag=purpleteamchest] 72.50 -28.00 -59.50
+execute unless entity @a[team=Orange,predicate=game:onpurple] as @e[tag=purpleteamchest,tag=Opened] at @s unless entity @a[team=Purple,distance=..5] run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 0.75
+execute unless entity @a[team=Orange,predicate=game:onpurple] as @e[tag=purpleteamchest,tag=Opened] at @s unless entity @a[team=Purple,distance=..5] run data modify entity @e[tag=purplechestdisplay,limit=1] HandItems[0].tag.CustomModelData set value 19
+execute unless entity @a[team=Orange,predicate=game:onpurple] as @e[tag=purpleteamchest,tag=Opened] at @s unless entity @a[team=Purple,distance=..5] run tag @s remove Opened
+
+execute if entity @a[team=Orange,predicate=game:onpurple] as @e[tag=purpleteamchest,tag=Opened] at @s run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 0.75
+execute if entity @a[team=Orange,predicate=game:onpurple] as @e[tag=purpleteamchest,tag=Opened] run data modify entity @e[tag=purplechestdisplay,limit=1] HandItems[0].tag.CustomModelData set value 19
+execute if entity @a[team=Orange,predicate=game:onpurple] run tag @e[tag=purpleteamchest] remove Opened
+execute if entity @a[team=Orange,predicate=game:onpurple] run tp @e[tag=purpleteamchest] 72.50 300.00 -59.50

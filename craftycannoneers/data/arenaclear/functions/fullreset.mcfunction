@@ -4,6 +4,8 @@ kill @e[tag=cannonball]
 tp @e[tag=Weakpoint] ~ ~-200 ~
 kill @e[tag=Weakpoint]
 kill @e[tag=WeakpointLoc]
+kill @e[tag=chestdisplay]
+kill @e[tag=teamchest]
 function arenaclear:shipplacement
 tp @e[tag=chest] ~ ~-200 ~
 kill @e[tag=chest]

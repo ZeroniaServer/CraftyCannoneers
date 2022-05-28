@@ -25,3 +25,12 @@ fill 65 11 -56 65 10 -56 air
 fill 84 -27 -50 84 -26 -50 ladder[facing=south]
 fill 84 -27 -60 84 -26 -60 ladder[facing=north]
 fill 44 -19 -64 98 6 -46 moving_piston replace barrier
+
+#Team chests
+#ORANGE
+summon chest_minecart 68.50 -28.00 60.50 {Invulnerable:1b,Rotation:[-90.0f, 0.0f],CustomDisplayTile:1b,Tags:["teamchest","orangeteamchest"],DisplayState:{Name:"minecraft:air"}}
+summon armor_stand 68.53 -29.00 61.50 {Invulnerable:1b,DisabledSlots:4144959,Pose:{RightArm:[0.0f,90.0f,90.0f]},Invisible:1b,Tags:["chestdisplay","orangechestdisplay"],Marker:1b,Rotation:[90.0f,0.0f],HandItems:[{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:19,Damage:0}},{}]}
+
+#PURPLE
+summon chest_minecart 72.50 -28.00 -59.50 {Invulnerable:1b,Rotation:[-90.0f, 0.0f],CustomDisplayTile:1b,Tags:["teamchest","purpleteamchest"],DisplayState:{Name:"minecraft:air"}}
+summon armor_stand 72.53 -29.00 -60.50 {Invulnerable:1b,DisabledSlots:4144959,Pose:{RightArm:[0.0f,90.0f,90.0f]},Invisible:1b,Tags:["chestdisplay","purplechestdisplay"],Marker:1b,Rotation:[-90.0f,0.0f],HandItems:[{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:19,Damage:0}},{}]}
