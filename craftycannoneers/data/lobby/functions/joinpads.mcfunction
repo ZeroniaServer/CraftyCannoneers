@@ -35,6 +35,17 @@ execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] run fu
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] run function game:givegear
 execute as @a[tag=JoinPurple] run tag @s remove JoinPurple
 
+execute if score $InPurple CmdData > $InOrange CmdData as @e[tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] title ["",{"text":"Team Imbalanced!","color":"red","bold":true}]
+execute if score $InPurple CmdData > $InOrange CmdData as @e[tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] subtitle ["",{"text":"Join ","color":"dark_aqua","bold":false},{"text":"Orange","color":"gold","bold":true},{"text":" instead.","color":"dark_aqua","bold":false}]
+execute if score $InPurple CmdData > $InOrange CmdData as @e[tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] times 5 30 5
+execute if score $InPurple CmdData > $InOrange CmdData as @e[tag=JoinpadPurple,tag=!Locked] at @s run tag @a[distance=..1,team=Lobby,tag=!tryJoinPurple] add tryJoinPurple
+execute if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] title ["",{"text":"Team Full!","color":"red","bold":true}]
+execute if score $InPurple CmdData >= $MaxTeamSize CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData as @e[tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] subtitle ["",{"text":"Join ","color":"dark_aqua","bold":false},{"text":"Orange","color":"gold","bold":true},{"text":" instead.","color":"dark_aqua","bold":false}]
+execute if score $InPurple CmdData >= $MaxTeamSize CmdData if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] subtitle ["",{"text":"Feel free to spectate this game instead.","color":"gray","bold":false}]
+execute if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] times 5 30 5
+execute if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[tag=JoinpadPurple,tag=!Locked] at @s run tag @a[distance=..1,team=Lobby,tag=!tryJoinPurple] add tryJoinPurple
+execute as @e[tag=JoinpadPurple,tag=!Locked] at @s run tag @a[distance=2..,team=Lobby] remove tryJoinPurple
+
 #> Join Orange
 execute unless score $InOrange CmdData > $InPurple CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData as @e[tag=JoinpadOrange,tag=!Locked] at @s run tag @a[team=Lobby,limit=1,sort=random,distance=..1.2] add JoinOrange
 execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] run tellraw @a ["",{"selector":"@s","color":"blue"},{"text":" joined the ","color":"dark_aqua"},{"text":"Orange","color":"gold"},{"text":" team!","color":"dark_aqua"}]
@@ -48,6 +59,17 @@ execute as @a[tag=JoinOrange] run team join Orange @s
 execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] run function game:givelobbygear
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] run function game:givegear
 execute as @a[tag=JoinOrange] run tag @s remove JoinOrange
+
+execute if score $InOrange CmdData > $InPurple CmdData as @e[tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] title ["",{"text":"Team Imbalanced!","color":"red","bold":true}]
+execute if score $InOrange CmdData > $InPurple CmdData as @e[tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] subtitle ["",{"text":"Join ","color":"dark_aqua","bold":false},{"text":"Purple","color":"dark_purple","bold":true},{"text":" instead.","color":"dark_aqua","bold":false}]
+execute if score $InOrange CmdData > $InPurple CmdData as @e[tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] times 5 30 5
+execute if score $InOrange CmdData > $InPurple CmdData as @e[tag=JoinpadOrange,tag=!Locked] at @s run tag @a[distance=..1,team=Lobby,tag=!tryJoinOrange] add tryJoinOrange
+execute if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] title ["",{"text":"Team Full!","color":"red","bold":true}]
+execute if score $InOrange CmdData >= $MaxTeamSize CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData as @e[tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] subtitle ["",{"text":"Join ","color":"dark_aqua","bold":false},{"text":"Purple","color":"dark_purple","bold":true},{"text":" instead.","color":"dark_aqua","bold":false}]
+execute if score $InOrange CmdData >= $MaxTeamSize CmdData if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] subtitle ["",{"text":"Feel free to spectate this game instead.","color":"gray","bold":false}]
+execute if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] times 5 30 5
+execute if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[tag=JoinpadOrange,tag=!Locked] at @s run tag @a[distance=..1,team=Lobby,tag=!tryJoinOrange] add tryJoinOrange
+execute as @e[tag=JoinpadOrange,tag=!Locked] at @s run tag @a[distance=2..,team=Lobby] remove tryJoinOrange
 
 #> Join Spectator
 execute as @e[tag=JoinpadSpec,tag=!Locked] at @s run tag @a[team=Lobby,limit=1,sort=random,distance=..1.2] add JoinSpec
