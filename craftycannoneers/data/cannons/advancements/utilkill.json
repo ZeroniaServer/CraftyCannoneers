@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": {
+          "nbt": "{Health:0.0f}"
+        },
+        "damage": {
+          "type": {
+            "is_magic": true
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "cannons:utilkillcheck"
+  }
+}

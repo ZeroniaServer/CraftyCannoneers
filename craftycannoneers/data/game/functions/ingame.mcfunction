@@ -99,6 +99,8 @@ tag @a[scores={death=1..}] remove onboatregen
 scoreboard players add @a[team=!Lobby,team=!Spectator,scores={death=1..}] MVPdeath 1
 scoreboard players reset @a[scores={death=1..}] death
 
+effect give @a[team=!Lobby,team=!Spectator,scores={kill=1..,gappleTimer=0}] regeneration 4 2 true
+
 scoreboard players add @a[team=!Lobby,team=!Spectator,scores={kill=1..}] MVPkill 1
 scoreboard players reset @a[scores={kill=1..}] kill
 
@@ -129,3 +131,11 @@ execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matc
 execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..0 if score $OrangeHP CmdData = $PurpleHP CmdData run scoreboard players set $gamestate CmdData 3
 
 execute as @e[type=wandering_trader] at @s run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,team=!Lobby,team=!Spectator,distance=..10]
+
+#passive regen + gapple timer
+scoreboard players add @a gappleTimer 0
+execute as @a[scores={eatGapple=1..}] run scoreboard players set @s gappleTimer 1
+scoreboard players reset @a eatGapple
+scoreboard players add @a[scores={gappleTimer=1..100}] gappleTimer 1
+scoreboard players set @a[scores={gappleTimer=101..}] gappleTimer 0
+execute

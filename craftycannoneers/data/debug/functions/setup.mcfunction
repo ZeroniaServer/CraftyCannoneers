@@ -39,6 +39,8 @@ scoreboard objectives add MVPkill dummy
 scoreboard objectives add MVPdeath dummy
 scoreboard objectives add MVPcannon dummy
 scoreboard objectives add KillerUUID dummy
+scoreboard objectives add eatGapple minecraft.used:minecraft.golden_apple
+scoreboard objectives add gappleTimer dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
