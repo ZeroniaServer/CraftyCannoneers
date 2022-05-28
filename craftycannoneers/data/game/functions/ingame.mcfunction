@@ -35,6 +35,17 @@ spawnpoint @a[team=Orange] 88 -26 55 90
 setblock 52 -27 -55 minecraft:spruce_slab[type=top]
 spawnpoint @a[team=Purple] 52 -26 -55 -90
 
+setblock 68 -29 50 spruce_slab[type=top]
+setblock 72 -29 51 dark_oak_slab[type=top]
+setblock 64 -29 51 dark_oak_slab[type=top]
+setblock 64 -32 50 dark_oak_slab[type=top]
+setblock 72 -32 50 dark_oak_slab[type=top]
+setblock 72 -29 -50 spruce_slab[type=top]
+setblock 76 -29 -51 dark_oak_slab[type=top]
+setblock 68 -29 -51 dark_oak_slab[type=top]
+setblock 68 -32 -50 dark_oak_slab[type=top]
+setblock 76 -32 -50 dark_oak_slab[type=top]
+
 bossbar set purpleship name ["",{"text":"Purple: ","color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"text":"Orange: ","color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
 
 #> Bossbars
