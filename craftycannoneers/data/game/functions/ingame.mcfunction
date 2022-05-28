@@ -100,7 +100,6 @@ scoreboard players add @a[team=!Lobby,team=!Spectator,scores={death=1..}] MVPdea
 scoreboard players reset @a[scores={death=1..}] death
 
 effect give @a[team=!Lobby,team=!Spectator,scores={kill=1..,gappleTimer=0}] regeneration 4 2 true
-
 scoreboard players add @a[team=!Lobby,team=!Spectator,scores={kill=1..}] MVPkill 1
 scoreboard players reset @a[scores={kill=1..}] kill
 
@@ -138,4 +137,3 @@ execute as @a[scores={eatGapple=1..}] run scoreboard players set @s gappleTimer 
 scoreboard players reset @a eatGapple
 scoreboard players add @a[scores={gappleTimer=1..100}] gappleTimer 1
 scoreboard players set @a[scores={gappleTimer=101..}] gappleTimer 0
-execute
