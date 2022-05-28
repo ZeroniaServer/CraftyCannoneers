@@ -18,6 +18,10 @@ execute as @a[tag=SeeWeakpoint,team=Purple,scores={spotting=55..}] run tag @e[ty
 execute as @a[tag=SeeWeakpoint,team=Orange,scores={spotting=55..}] run tag @e[type=slime,tag=Weakpoint,tag=Orange] add Spotted
 execute as @a[tag=SeeWeakpoint,scores={spotting=55..}] run title @s subtitle {"text":" ","color":"white"}
 effect give @e[type=slime] invisibility 1 100 true
+execute as @a[tag=SeeWeakpoint,team=Purple,scores={spotting=55..}] run title @a[team=Purple] subtitle {"text":" ","color":"white"}
+execute as @a[tag=SeeWeakpoint,team=Purple,scores={spotting=55..}] run scoreboard players reset @a[team=Purple] spotting
+execute as @a[tag=SeeWeakpoint,team=Orange,scores={spotting=55..}] run title @a[team=Orange] subtitle {"text":" ","color":"white"}
+execute as @a[tag=SeeWeakpoint,team=Orange,scores={spotting=55..}] run scoreboard players reset @a[team=Orange] spotting
 scoreboard players reset @a[tag=SeeWeakpoint,scores={spotting=55..}] spotting
 
 #Titles are epic
@@ -36,8 +40,8 @@ execute as @a[tag=SeeWeakpoint,scores={spotting=51..55}] run title @s subtitle [
 
 #Un-spot over-time
 scoreboard players add @e[type=slime,tag=Spotted] spotting 1
-execute as @e[type=slime,tag=Spotted,scores={spotting=220..}] run tag @s remove Spotted
-execute as @e[type=slime,tag=!Spotted,scores={spotting=220..}] run scoreboard players reset @s spotting
+execute as @e[type=slime,tag=Spotted,scores={spotting=300..}] run tag @s remove Spotted
+execute as @e[type=slime,tag=!Spotted,scores={spotting=300..}] run scoreboard players reset @s spotting
 
 execute as @e[type=slime,tag=Spotted,tag=Purple] if entity @a[team=Purple,tag=SeeWeakpoint] run scoreboard players reset @s spotting
 execute as @e[type=slime,tag=Spotted,tag=Orange] if entity @a[team=Orange,tag=SeeWeakpoint] run scoreboard players reset @s spotting

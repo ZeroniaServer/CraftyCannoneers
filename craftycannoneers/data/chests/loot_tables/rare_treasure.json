@@ -80,7 +80,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:2,CustomModelData:16,Unbreakable:1b,Cannonball:1b,display:{Name:'[{\"text\":\"Simple Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"The most basic type of cannonball.\",\"italic\":false,\"color\":\"white\"}]']}}"
+              "tag": "{HideFlags:6,CustomModelData:16,Unbreakable:1b,Cannonball:1b,display:{Name:'[{\"text\":\"Simple Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"The most basic type of cannonball.\",\"italic\":false,\"color\":\"white\"}]']}}"
             },
             {
               "function": "minecraft:set_count",
@@ -100,7 +100,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:2,CustomModelData:22,Cannonball:2b,Unbreakable:1b,display:{Name:'[{\"text\":\"Hot Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"On impact, sets an area around\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"it on fire, fire temporarily\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"disables cannons.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Has a special interaction with\",\"italic\":false,\"color\":\"dark_gray\"}]','[{\"text\":\"Gas Cannonballs...\",\"italic\":false,\"color\":\"dark_gray\"}]']}}"
+              "tag": "{HideFlags:6,CustomModelData:22,Cannonball:2b,Unbreakable:1b,display:{Name:'[{\"text\":\"Hot Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"On impact, sets an area around\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"it on fire, fire temporarily\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"disables cannons.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Has a special interaction with\",\"italic\":false,\"color\":\"dark_gray\"}]','[{\"text\":\"Gas Cannonballs...\",\"italic\":false,\"color\":\"dark_gray\"}]']}}"
             },
             {
               "function": "minecraft:set_count",
@@ -120,7 +120,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:2,CustomModelData:29,Cannonball:3b,Unbreakable:1b,display:{Name:'[{\"text\":\"Cannonball Cluster\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Shoot 5 small cannonballs in 1 shot.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"These projectiles are extremely inaccurate!\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Best used against enemies occupying\",\"italic\":false,\"color\":\"dark_gray\"}]','[{\"text\":\"the center island...\",\"italic\":false,\"color\":\"dark_gray\"}]']}}"
+              "tag": "{HideFlags:6,CustomModelData:29,Cannonball:3b,Unbreakable:1b,display:{Name:'[{\"text\":\"Cannonball Cluster\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Shoot 5 small cannonballs in 1 shot.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"These projectiles are extremely inaccurate!\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Best used against enemies occupying\",\"italic\":false,\"color\":\"dark_gray\"}]','[{\"text\":\"the center island...\",\"italic\":false,\"color\":\"dark_gray\"}]']}}"
             },
             {
               "function": "minecraft:set_count",
@@ -140,7 +140,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:2,CustomModelData:31,Cannonball:4b,Unbreakable:1b,display:{Name:'[{\"text\":\"Gas Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"On impact, releases a strong\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"poisonous cloud of gas.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"The gas damages players inside it.\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Has a special interaction with\",\"italic\":false,\"color\":\"dark_gray\"}]','[{\"text\":\"Hot Cannonballs...\",\"italic\":false,\"color\":\"dark_gray\"}]']}}"
+              "tag": "{HideFlags:6,CustomModelData:31,Cannonball:4b,Unbreakable:1b,display:{Name:'[{\"text\":\"Gas Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"On impact, releases a strong\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"poisonous cloud of gas.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"The gas damages players inside it.\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Has a special interaction with\",\"italic\":false,\"color\":\"dark_gray\"}]','[{\"text\":\"Hot Cannonballs...\",\"italic\":false,\"color\":\"dark_gray\"}]']}}"
             },
             {
               "function": "minecraft:set_count",
@@ -160,7 +160,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:2,CustomModelData:32,Cannonball:5b,Unbreakable:1b,display:{Name:'[{\"text\":\"Chain Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Half Cannonballs connected together\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"by a chain. A little less accurate,\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"but it has a wider area of effect.\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Deals bonus damage to sails!\",\"italic\":false,\"color\":\"dark_gray\"}]']}}"
+              "tag": "{HideFlags:6,CustomModelData:32,Cannonball:5b,Unbreakable:1b,display:{Name:'[{\"text\":\"Chain Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Half Cannonballs connected together\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"by a chain. A little less accurate,\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"but it has a wider area of effect.\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Deals bonus damage to sails!\",\"italic\":false,\"color\":\"dark_gray\"}]']}}"
             },
             {
               "function": "minecraft:set_count",

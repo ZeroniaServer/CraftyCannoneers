@@ -80,7 +80,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:2,CustomModelData:16,Unbreakable:1b,Cannonball:1b,display:{Name:'[{\"text\":\"Simple Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"The most basic type of cannonball.\",\"italic\":false,\"color\":\"white\"}]']}}"
+              "tag": "{HideFlags:6,CustomModelData:16,Unbreakable:1b,Cannonball:1b,display:{Name:'[{\"text\":\"Simple Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"The most basic type of cannonball.\",\"italic\":false,\"color\":\"white\"}]']}}"
             },
             {
               "function": "minecraft:set_count",
