@@ -325,6 +325,25 @@
             }
           ],
           "name": "minecraft:diamond_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Unbreakable:1b,Harpoon:1,display:{Name:'[{\"text\":\"Harpoon\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"You can use this weapon to\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"dash forward once every\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"time you enter the water.\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]']},HideFlags:5}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:trident"
         }
       ]
     }

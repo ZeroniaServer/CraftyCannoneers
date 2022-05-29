@@ -4,6 +4,7 @@ bossbar set lobbybar name {"text":"A game is currently in progress!","bold":true
 function game:ingame/chestspawning
 function game:ingame/arrowpickup
 function game:ingame/boat
+function game:ingame/harpoon
 
 #> Boat specific effects
 execute as @a[team=Orange,predicate=game:onorange,tag=!onboatregen] run effect give @s regeneration 1000000 1 true
@@ -16,9 +17,9 @@ execute as @a[team=Orange,predicate=!game:onorange,tag=onboatregen] run tag @s r
 execute as @a[team=Purple,predicate=!game:onpurple,tag=onboatregen] run tag @s remove onboatregen
 
 execute as @a[team=Orange,predicate=game:onpurple,tag=!EnemyMSG] run title @s title {"text":" ","color":"red"}
-execute as @a[team=Orange,predicate=game:onpurple,tag=!EnemyMSG] run title @s subtitle {"text":"You've boarded the enemy ship...","color":"dark_red"}
+execute as @a[team=Orange,predicate=game:onpurple,tag=!EnemyMSG,tag=!SeeWeakpoint] unless entity @s[scores={openchest=1..}] run title @s subtitle {"text":"You've boarded the enemy ship...","color":"dark_red"}
 execute as @a[team=Purple,predicate=game:onorange,tag=!EnemyMSG] run title @s title {"text":" ","color":"red"}
-execute as @a[team=Purple,predicate=game:onorange,tag=!EnemyMSG] run title @s subtitle {"text":"You've boarded the enemy ship...","color":"dark_red"}
+execute as @a[team=Purple,predicate=game:onorange,tag=!EnemyMSG,tag=!SeeWeakpoint] unless entity @s[scores={openchest=1..}] run title @s subtitle {"text":"You've boarded the enemy ship...","color":"dark_red"}
 execute as @a[team=Orange,predicate=game:onpurple,tag=!EnemyMSG] run tag @s add EnemyMSG
 execute as @a[team=Purple,predicate=game:onpurple,tag=!EnemyMSG] run tag @s add EnemyMSG
 
@@ -141,23 +142,40 @@ scoreboard players set @a[scores={gappleTimer=101..}] gappleTimer 0
 #team chests
 fill 69 -29 60 67 -29 60 spruce_slab[type=top]
 fill 71 -29 -60 73 -29 -60 spruce_slab[type=top]
+function chests:openchest
 
-execute as @e[type=chest_minecart,tag=orangeteamchest] at @s unless entity @a[team=Purple,distance=..6] run tp @s 68.50 -28.00 60.50
+execute as @e[type=chest_minecart,tag=orangeteamchest] at @s unless entity @a[team=Purple,distance=..6] run tp @s 68.50 -27.5 60.50
 execute as @e[type=chest_minecart,tag=orangeteamchest,tag=Opened] at @s unless entity @a[team=Purple,distance=..6] unless entity @a[team=Orange,distance=..5] run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 0.75
-execute as @e[type=chest_minecart,tag=orangeteamchest,tag=Opened] at @s unless entity @a[team=Purple,distance=..6] unless entity @a[team=Orange,distance=..5] run data modify entity @e[type=armor_stand,tag=orangechestdisplay,limit=1] HandItems[0].tag.CustomModelData set value 19
+execute as @e[type=chest_minecart,tag=orangeteamchest,tag=Opened] at @s unless entity @a[team=Purple,distance=..6] unless entity @a[team=Orange,distance=..5] run item replace entity @e[type=armor_stand,tag=orangechestdisplay,limit=1] armor.head with diamond_hoe{CustomModelData:52}
 execute as @e[type=chest_minecart,tag=orangeteamchest,tag=Opened] at @s unless entity @a[team=Purple,distance=..6] unless entity @a[team=Orange,distance=..5] run tag @s remove Opened
 
 execute as @e[type=chest_minecart,tag=orangeteamchest,tag=Opened] at @s if entity @a[team=Purple,distance=..6] run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 0.75
-execute as @e[type=chest_minecart,tag=orangeteamchest,tag=Opened] at @s if entity @a[team=Purple,distance=..6] run data modify entity @e[type=armor_stand,tag=orangechestdisplay,limit=1] HandItems[0].tag.CustomModelData set value 19
+execute as @e[type=chest_minecart,tag=orangeteamchest,tag=!PlayedSound] at @s if entity @a[team=Purple,distance=..6] run item replace entity @e[type=armor_stand,tag=orangechestdisplay,limit=1] armor.head with diamond_hoe{CustomModelData:53}
+execute as @e[type=chest_minecart,tag=orangeteamchest,tag=!PlayedSound] at @s if entity @a[team=Purple,distance=..6] run summon area_effect_cloud ~ ~0.35 ~ {Duration:2000000000,Tags:["ChestNotif","Orange","chestdisplay"],CustomNameVisible:1b,CustomName:'{"text":"CHEST LOCKED","color":"dark_red","bold":"true","underlined":"true"}'}
+execute as @e[type=chest_minecart,tag=orangeteamchest,tag=!PlayedSound] at @s if entity @a[team=Purple,distance=..6] run summon area_effect_cloud ~ ~0.1 ~ {Duration:2000000000,Tags:["ChestNotif","Orange","chestdisplay"],CustomNameVisible:1b,CustomName:'{"text":"An enemy is nearby!","color":"red","bold":"true"}'}
 execute as @e[type=chest_minecart,tag=orangeteamchest,tag=Opened] at @s if entity @a[team=Purple,distance=..6] run tag @s remove Opened
+execute as @e[type=chest_minecart,tag=orangeteamchest,tag=!PlayedSound] at @s if entity @a[team=Purple,distance=..6] run playsound chestlock master @a ~ ~ ~ 1.3 1
+execute as @e[type=chest_minecart,tag=orangeteamchest,tag=!PlayedSound] at @s if entity @a[team=Purple,distance=..6] run tag @s add PlayedSound
+execute as @e[type=chest_minecart,tag=orangeteamchest,tag=PlayedSound] at @s unless entity @a[team=Purple,distance=..6] run playsound chestunlock master @a ~ ~ ~ 1.3 1
+execute as @e[type=chest_minecart,tag=orangeteamchest,tag=PlayedSound] at @s unless entity @a[team=Purple,distance=..6] run item replace entity @e[type=armor_stand,tag=orangechestdisplay,limit=1] armor.head with diamond_hoe{CustomModelData:52}
+execute as @e[type=chest_minecart,tag=orangeteamchest,tag=PlayedSound] at @s unless entity @a[team=Purple,distance=..6] run kill @e[type=area_effect_cloud,tag=ChestNotif,tag=Orange]
+execute as @e[type=chest_minecart,tag=orangeteamchest,tag=PlayedSound] at @s unless entity @a[team=Purple,distance=..6] run tag @s remove PlayedSound
 execute as @e[type=chest_minecart,tag=orangeteamchest] at @s if entity @a[team=Purple,distance=..6] run tp @s 68.50 300 60.50
 
-execute as @e[type=chest_minecart,tag=purpleteamchest] at @s unless entity @a[team=Orange,distance=..6] run tp @s 72.50 -28.00 -59.50
+execute as @e[type=chest_minecart,tag=purpleteamchest] at @s unless entity @a[team=Orange,distance=..6] run tp @s 72.50 -27.5 -59.50
 execute as @e[type=chest_minecart,tag=purpleteamchest,tag=Opened] at @s unless entity @a[team=Orange,distance=..6] unless entity @a[team=Purple,distance=..5] run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 0.75
-execute as @e[type=chest_minecart,tag=purpleteamchest,tag=Opened] at @s unless entity @a[team=Orange,distance=..6] unless entity @a[team=Purple,distance=..5] run data modify entity @e[type=armor_stand,tag=purplechestdisplay,limit=1] HandItems[0].tag.CustomModelData set value 19
+execute as @e[type=chest_minecart,tag=purpleteamchest,tag=Opened] at @s unless entity @a[team=Orange,distance=..6] unless entity @a[team=Purple,distance=..5] run item replace entity @e[type=armor_stand,tag=purplechestdisplay,limit=1] armor.head with diamond_hoe{CustomModelData:49}
 execute as @e[type=chest_minecart,tag=purpleteamchest,tag=Opened] at @s unless entity @a[team=Orange,distance=..6] unless entity @a[team=Purple,distance=..5] run tag @s remove Opened
 
 execute as @e[type=chest_minecart,tag=purpleteamchest,tag=Opened] at @s if entity @a[team=Orange,distance=..6] run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 0.75
-execute as @e[type=chest_minecart,tag=purpleteamchest,tag=Opened] at @s if entity @a[team=Orange,distance=..6] run data modify entity @e[type=armor_stand,tag=purplechestdisplay,limit=1] HandItems[0].tag.CustomModelData set value 19
+execute as @e[type=chest_minecart,tag=purpleteamchest,tag=!PlayedSound] at @s if entity @a[team=Orange,distance=..6] run item replace entity @e[type=armor_stand,tag=purplechestdisplay,limit=1] armor.head with diamond_hoe{CustomModelData:50}
+execute as @e[type=chest_minecart,tag=purpleteamchest,tag=!PlayedSound] at @s if entity @a[team=Orange,distance=..6] run summon area_effect_cloud ~ ~0.35 ~ {Duration:2000000000,Tags:["ChestNotif","Purple","chestdisplay"],CustomNameVisible:1b,CustomName:'{"text":"CHEST LOCKED","color":"dark_red","bold":"true","underlined":"true"}'}
+execute as @e[type=chest_minecart,tag=purpleteamchest,tag=!PlayedSound] at @s if entity @a[team=Orange,distance=..6] run summon area_effect_cloud ~ ~0.1 ~ {Duration:2000000000,Tags:["ChestNotif","Purple","chestdisplay"],CustomNameVisible:1b,CustomName:'{"text":"An enemy is nearby!","color":"red","bold":"true"}'}
 execute as @e[type=chest_minecart,tag=purpleteamchest,tag=Opened] at @s if entity @a[team=Orange,distance=..6] run tag @s remove Opened
+execute as @e[type=chest_minecart,tag=purpleteamchest,tag=!PlayedSound] at @s if entity @a[team=Orange,distance=..6] run playsound chestlock master @a ~ ~ ~ 1.3 1
+execute as @e[type=chest_minecart,tag=purpleteamchest,tag=!PlayedSound] at @s if entity @a[team=Orange,distance=..6] run tag @s add PlayedSound
+execute as @e[type=chest_minecart,tag=purpleteamchest,tag=PlayedSound] at @s unless entity @a[team=Orange,distance=..6] run playsound chestunlock master @a ~ ~ ~ 1.3 1
+execute as @e[type=chest_minecart,tag=purpleteamchest,tag=PlayedSound] at @s unless entity @a[team=Orange,distance=..6] run item replace entity @e[type=armor_stand,tag=purplechestdisplay,limit=1] armor.head with diamond_hoe{CustomModelData:49}
+execute as @e[type=chest_minecart,tag=purpleteamchest,tag=PlayedSound] at @s unless entity @a[team=Orange,distance=..6] run kill @e[type=area_effect_cloud,tag=ChestNotif,tag=Purple]
+execute as @e[type=chest_minecart,tag=purpleteamchest,tag=PlayedSound] at @s unless entity @a[team=Orange,distance=..6] run tag @s remove PlayedSound
 execute as @e[type=chest_minecart,tag=purpleteamchest] at @s if entity @a[team=Orange,distance=..6] run tp @s 72.50 300.00 -59.50

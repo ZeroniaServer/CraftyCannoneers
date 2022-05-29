@@ -41,6 +41,9 @@ scoreboard objectives add MVPcannon dummy
 scoreboard objectives add KillerUUID dummy
 scoreboard objectives add eatGapple minecraft.used:minecraft.golden_apple
 scoreboard objectives add gappleTimer dummy
+scoreboard objectives add useharpoon minecraft.used:minecraft.trident
+scoreboard objectives add eyeclick dummy
+scoreboard objectives add openchest dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
