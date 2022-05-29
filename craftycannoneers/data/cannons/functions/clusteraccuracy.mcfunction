@@ -7,19 +7,19 @@ scoreboard players add @s[tag=3] gravity 200
 scoreboard players add @s[tag=4] gravity 250
 
 scoreboard players set @s RNGmax 300
-execute as @s store result score @s RNGscore run data get entity @s UUID[0]
+execute store result score @s RNGscore run data get entity @s UUID[0]
 execute store result score @s RNGscore run scoreboard players operation @s RNGscore %= @s RNGmax
 
 scoreboard players operation @s drag += @s RNGscore
 
 scoreboard players set @s RNGmax 70
-execute as @s store result score @s RNGscore run data get entity @s UUID[1]
+execute store result score @s RNGscore run data get entity @s UUID[1]
 execute store result score @s RNGscore run scoreboard players operation @s RNGscore %= @s RNGmax
 
 scoreboard players operation @s gravity += @s RNGscore
 
 scoreboard players set @s RNGmax 8
-execute as @s store result score @s RNGscore run data get entity @s UUID[1]
+execute store result score @s RNGscore run data get entity @s UUID[1]
 execute store result score @s RNGscore run scoreboard players operation @s RNGscore %= @s RNGmax
 
 scoreboard players set $2 CmdData 2

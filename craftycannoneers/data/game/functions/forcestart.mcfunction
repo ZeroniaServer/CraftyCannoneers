@@ -41,9 +41,9 @@ execute as @a at @s run playsound entity.generic.explode master @s ~ ~ ~ 100 1.2
 
 
 #> Weakpoints
-kill @e[tag=WeakpointLoc]
+kill @e[type=marker,tag=WeakpointLoc]
 tp @e[type=slime] ~ ~-200 ~
-kill @e[tag=Weakpoint]
+kill @e[type=#game:weakpoint,tag=Weakpoint]
 summon marker 70 -30 -48 {Tags:["WeakpointLoc","Purple"]}
 summon marker 60 -27 -48 {Tags:["WeakpointLoc","Purple"]}
 summon marker 53 -26 -49 {Tags:["WeakpointLoc","Purple"]}
@@ -60,7 +60,7 @@ summon marker 65 -19 53 {Tags:["WeakpointLoc","Orange"]}
 summon marker 67 -10 53 {Tags:["WeakpointLoc","Orange"]}
 summon marker 83 -14 52 {Tags:["WeakpointLoc","Orange"]}
 
-execute as @e[tag=WeakpointLoc] at @s run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 cave_air replace air
+execute as @e[type=marker,tag=WeakpointLoc] at @s run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 cave_air replace air
 
 function game:shipweakpoint/spawnnewpurple
 function game:shipweakpoint/spawnneworange

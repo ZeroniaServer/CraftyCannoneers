@@ -1,1 +1,1 @@
-execute as @s at @s store result score @s CalcAir2 run fill ~5 ~5 ~5 ~-5 ~-5 ~-5 light[level=0] replace air
+execute at @s store result score @s CalcAir2 run fill ~5 ~5 ~5 ~-5 ~-5 ~-5 light[level=0] replace air

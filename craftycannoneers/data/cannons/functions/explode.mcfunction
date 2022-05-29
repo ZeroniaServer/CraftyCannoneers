@@ -1,24 +1,24 @@
 execute as @s[tag=!Hit1] at @s unless entity @s[predicate=cannons:safezones/island] run fill ~ ~-1 ~ ~ ~-1 ~ air replace #game:shipblocks
 execute as @s[tag=!Hit1] at @s unless entity @s[predicate=cannons:safezones/island] run fill ^1 ^1 ^1 ^-1 ^-1 ^1 air replace #game:shipblocks
 
-execute as @s at @s run tp @s ^ ^ ^1
+execute at @s run tp @s ^ ^ ^1
 #>Safezone check
 #Island
-execute as @s at @s if entity @s[predicate=cannons:safezones/island] run tag @s add InSafezone
+execute at @s if entity @s[predicate=cannons:safezones/island] run tag @s add InSafezone
 #Cannons
-execute as @s at @s if entity @e[tag=cannon,distance=..2] run tag @s add InSafezone
+execute at @s if entity @e[type=#game:cannon,tag=cannon,distance=..2] run tag @s add InSafezone
 #Purple
-execute as @s at @s if entity @s[predicate=cannons:safezones/purple/1] run tag @s add InSafezone
-execute as @s at @s if entity @s[predicate=cannons:safezones/purple/2] run tag @s add InSafezone
-execute as @s at @s if entity @s[predicate=cannons:safezones/purple/3] run tag @s add InSafezone
-execute as @s at @s if entity @s[predicate=cannons:safezones/purple/4] run tag @s add InSafezone
-execute as @s at @s if entity @s[predicate=cannons:safezones/purple/5] run tag @s add InSafezone
+execute at @s if entity @s[predicate=cannons:safezones/purple/1] run tag @s add InSafezone
+execute at @s if entity @s[predicate=cannons:safezones/purple/2] run tag @s add InSafezone
+execute at @s if entity @s[predicate=cannons:safezones/purple/3] run tag @s add InSafezone
+execute at @s if entity @s[predicate=cannons:safezones/purple/4] run tag @s add InSafezone
+execute at @s if entity @s[predicate=cannons:safezones/purple/5] run tag @s add InSafezone
 #Orange
-execute as @s at @s if entity @s[predicate=cannons:safezones/orange/1] run tag @s add InSafezone
-execute as @s at @s if entity @s[predicate=cannons:safezones/orange/2] run tag @s add InSafezone
-execute as @s at @s if entity @s[predicate=cannons:safezones/orange/3] run tag @s add InSafezone
-execute as @s at @s if entity @s[predicate=cannons:safezones/orange/4] run tag @s add InSafezone
-execute as @s at @s if entity @s[predicate=cannons:safezones/orange/5] run tag @s add InSafezone
+execute at @s if entity @s[predicate=cannons:safezones/orange/1] run tag @s add InSafezone
+execute at @s if entity @s[predicate=cannons:safezones/orange/2] run tag @s add InSafezone
+execute at @s if entity @s[predicate=cannons:safezones/orange/3] run tag @s add InSafezone
+execute at @s if entity @s[predicate=cannons:safezones/orange/4] run tag @s add InSafezone
+execute at @s if entity @s[predicate=cannons:safezones/orange/5] run tag @s add InSafezone
 
 #FIREBALL EFFECT
 execute as @s[tag=!InSafezone,tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run summon marker ^ ^-2 ^3 {Tags:["RingOfFire"]}
@@ -44,11 +44,11 @@ execute as @s[tag=!InSafezone,tag=Hit1,tag=!ChainCannonball,scores={doublehit=4.
 execute as @s[tag=!InSafezone,tag=Hit1,tag=!ChainCannonball,scores={doublehit=4..},tag=ChainCannonball] at @s run summon marker ^ ^ ^-2 {Tags:["ImpactMarker","Power2"]}
 
 
-execute as @e[tag=ImpactMarker,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[tag=cannonball,limit=1,sort=nearest,distance=..4] playerUUID
-execute as @e[tag=ImpactMarker,tag=!HasUUID] at @s run data modify entity @s CustomName set from entity @e[tag=cannonball,limit=1,sort=nearest,distance=..4] CustomName
-tag @e[tag=ImpactMarker,tag=!HasUUID] add HasUUID
+execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] playerUUID
+execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run data modify entity @s CustomName set from entity @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] CustomName
+tag @e[type=marker,tag=ImpactMarker,tag=!HasUUID] add HasUUID
 
-execute as @e[tag=ImpactMarker] at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper
+execute as @e[type=marker,tag=ImpactMarker] at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper
 
 
 execute as @s[tag=!Hit1,predicate=cannons:ships/orange] at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1

@@ -2,7 +2,7 @@ tag @s remove TutorialCannon
 scoreboard players add @s CannonTutorial 1
 execute if entity @s[scores={CannonTutorial=7..}] run scoreboard players set @s CannonTutorial 1
 
-execute as @s at @s run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1 2
+execute at @s run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1 2
 execute if entity @s[scores={CannonTutorial=6}] run tellraw @s ["",{"text":"[6/6] ","color":"gray"},{"text":"There are Special Cannonballs that you can find or purchase at your ship. These have special properties, so make sure you read the item lore ingame to learn about what they do!","color":"green"},"\n"]
 execute if entity @s[scores={CannonTutorial=5}] run tellraw @s ["",{"text":"[5/6] ","color":"gray"},{"text":"You can shoot a Cannonball by loading a Cannon.","color":"green"},"\n"]
 execute if entity @s[scores={CannonTutorial=4}] run tellraw @s ["",{"text":"[4/6] ","color":"gray"},{"text":"You can use the Gunpowder slots to aim your shot by putting more Gunpowder in one slot than the other.","color":"green"},"\n"]

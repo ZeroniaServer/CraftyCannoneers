@@ -2,7 +2,7 @@ tag @s remove TutorialChest
 scoreboard players add @s ChestTutorial 1
 execute if entity @s[scores={ChestTutorial=8..}] run scoreboard players set @s ChestTutorial 1
 
-execute as @s at @s run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1 2
+execute at @s run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1 2
 execute if entity @s[scores={ChestTutorial=7}] run tellraw @s ["",{"text":"[7/7] ","color":"gray"},{"text":"Gold can be used to purchase Special Cannonballs on your ship.","color":"green"},"\n"]
 execute if entity @s[scores={ChestTutorial=6}] run tellraw @s ["",{"text":"[6/7] ","color":"gray"},{"text":"It's good to stick around on the island and take as much loot from Chests as possible. But be careful: if you die, you lose all the items you were carrying with you.","color":"green"},"\n"]
 execute if entity @s[scores={ChestTutorial=5}] run tellraw @s ["",{"text":"[5/7] ","color":"gray"},{"text":"Rare","bold":true,"color":"dark_purple"},{"text":": Gold, Gunpowder, Simple Cannonballs, Arrows, Golden Apples, Trooper Ale, Shields, Weapons, Rare Weapons & Special Cannonballs.","color":"green"},"\n"]

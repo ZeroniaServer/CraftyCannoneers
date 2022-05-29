@@ -1,6 +1,6 @@
-execute as @s store result score @s x run data get entity @s Pos[0] 1000000
-execute as @s store result score @s y run data get entity @s Pos[1] 1000000
-execute as @s store result score @s z run data get entity @s Pos[2] 1000000
+execute store result score @s x run data get entity @s Pos[0] 1000000
+execute store result score @s y run data get entity @s Pos[1] 1000000
+execute store result score @s z run data get entity @s Pos[2] 1000000
 
 execute as @s[scores={PowerM=1}] at @s run tp @s ^ ^ ^0.0006
 execute as @s[scores={PowerM=2}] at @s run tp @s ^ ^ ^0.0007
@@ -17,9 +17,9 @@ execute as @s[scores={PowerM=12}] at @s run tp @s ^ ^ ^0.0017
 execute as @s[scores={PowerM=13}] at @s run tp @s ^ ^ ^0.0018
 execute as @s[scores={PowerM=14}] at @s run tp @s ^ ^ ^0.0019
 
-execute as @s store result score @s dx run data get entity @s Pos[0] 1000000
-execute as @s store result score @s dy run data get entity @s Pos[1] 1000000
-execute as @s store result score @s dz run data get entity @s Pos[2] 1000000
+execute store result score @s dx run data get entity @s Pos[0] 1000000
+execute store result score @s dy run data get entity @s Pos[1] 1000000
+execute store result score @s dz run data get entity @s Pos[2] 1000000
 
 scoreboard players operation @s dx -= @s x
 scoreboard players operation @s dy -= @s y

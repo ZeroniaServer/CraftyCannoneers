@@ -1,17 +1,17 @@
-kill @e[tag=Trader]
-kill @e[tag=cannon]
-kill @e[tag=cannonball]
-tp @e[tag=Weakpoint] ~ ~-200 ~
-kill @e[tag=Weakpoint]
-kill @e[tag=WeakpointLoc]
-kill @e[tag=chestdisplay]
-kill @e[tag=teamchest]
+kill @e[type=wandering_trader,tag=Trader]
+kill @e[type=#game:cannon,tag=cannon]
+kill @e[type=armor_stand,tag=cannonball]
+tp @e[type=#game:weakpoint,tag=Weakpoint] ~ ~-200 ~
+kill @e[type=#game:weakpoint,tag=Weakpoint]
+kill @e[type=marker,tag=WeakpointLoc]
+kill @e[type=armor_stand,tag=chestdisplay]
+kill @e[type=chest_minecart,tag=teamchest]
 function arenaclear:shipplacement
-tp @e[tag=chest] ~ ~-200 ~
-kill @e[tag=chest]
+tp @e[type=#game:chest,tag=chest] ~ ~-200 ~
+kill @e[type=#game:chest,tag=chest]
 kill @e[type=item]
-kill @e[tag=Boat]
-kill @e[tag=EndFirework]
+kill @e[type=#game:boat,tag=Boat]
+kill @e[type=armor_stand,tag=EndFirework]
 
 execute positioned 70 -28 -50 run function cannons:spawnpurple
 execute positioned 74 -28 -50 run function cannons:spawnpurple
@@ -43,4 +43,4 @@ summon wandering_trader 68 -31 -50 {Tags:["Trader"],CustomName:"\"Pirate Trader\
 function arenaclear:villagertrades
 function arenaclear:boatvehicles
 
-team join NoName @e[tag=Trader]
+team join NoName @e[type=wandering_trader,tag=Trader]

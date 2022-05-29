@@ -17,9 +17,9 @@ execute as @a run function lobby:customizer/gameinfo
 
 scoreboard players set $gamestate CmdData 0
 
-item replace entity @e[tag=LobbyEntity] armor.head with air
+item replace entity @e[type=armor_stand,tag=LobbyEntity] armor.head with air
 
-tag @e[tag=joinpad] remove Locked
-scoreboard players reset @e[tag=joinpad] CmdData
+tag @e[type=marker,tag=joinpad] remove Locked
+scoreboard players reset @e[type=marker,tag=joinpad] CmdData
 
 function arenaclear:fullreset
