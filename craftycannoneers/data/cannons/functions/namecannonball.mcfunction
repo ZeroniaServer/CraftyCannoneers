@@ -5,6 +5,7 @@ execute if entity @s[tag=HotCannonball] as @a[predicate=game:matches_uuid] run d
 execute if entity @s[tag=ChainCannonball] as @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text1:'{"text":""}',Text2:'["",{"selector":"@p[predicate=game:matches_uuid]"},{"text":"\'s Chain Cannonball"}]'}
 execute if entity @s[tag=GasCannonball] as @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text1:'{"text":""}',Text2:'["",{"selector":"@p[predicate=game:matches_uuid]"},{"text":"\'s Gas Cannonball"}]'}
 execute if entity @s[tag=CannonballCluster] as @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text1:'{"text":""}',Text2:'["",{"selector":"@p[predicate=game:matches_uuid]"},{"text":"\'s Cannonball Cluster"}]'}
+execute if entity @s[tag=BouncyCannonball] as @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text1:'{"text":""}',Text2:'["",{"selector":"@p[predicate=game:matches_uuid]"},{"text":"\'s Bouncy Cannonball"}]'}
 data modify entity @s CustomName set from block ~ 256 ~ Text2
 setblock ~ 256 ~ air
 scoreboard players reset $tempuuid playerUUID
