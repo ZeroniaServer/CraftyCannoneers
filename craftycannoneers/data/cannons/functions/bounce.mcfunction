@@ -27,6 +27,11 @@ execute as @e[type=marker,tag=ExplodeRNG] store result score @s RNGscore run dat
 execute as @e[type=marker,tag=ExplodeRNG] run scoreboard players operation @s RNGscore %= @s RNGmax
 execute as @s[tag=!InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}
 execute as @s[tag=InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
+
+execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] playerUUID
+execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run data modify entity @s CustomName set from entity @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] CustomName
+tag @e[type=marker,tag=ImpactMarker,tag=!HasUUID] add HasUUID
+
 execute as @s if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] run tag @s add Hit2
 execute as @s if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] run playsound cannonball master @a ~ ~ ~ 4 1.2
 execute as @s if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1.2

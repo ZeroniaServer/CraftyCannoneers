@@ -48,7 +48,6 @@ execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run scoreboard pl
 execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run data modify entity @s CustomName set from entity @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] CustomName
 tag @e[type=marker,tag=ImpactMarker,tag=!HasUUID] add HasUUID
 
-execute as @e[type=marker,tag=ImpactMarker] at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper
 
 
 execute as @s[type=armor_stand,tag=!Hit1,tag=!BouncyCannonball,predicate=cannons:ships/orange] at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
@@ -68,5 +67,7 @@ execute as @s[type=armor_stand,tag=Hit1,tag=BouncyCannonball,scores={doublehit=.
 execute as @s[type=armor_stand,tag=Hit1,tag=BouncyCannonball,scores={doublehit=4..}] at @s run function cannons:bounce
 execute as @s[type=armor_stand,tag=Hit1,tag=BouncyCannonball,scores={doublehit=4..}] at @s run scoreboard players reset @s doublehit
 tag @s add Hit1
+
+execute as @e[type=marker,tag=ImpactMarker] at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper
 
 kill @s[tag=Hit2]
