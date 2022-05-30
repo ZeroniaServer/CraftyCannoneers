@@ -9,8 +9,8 @@ execute as @s[tag=ImpactMarker,tag=GasPower] run summon creeper ~ ~ ~ {Tags:["Ga
 
 scoreboard players operation @e[type=creeper,tag=!HasUUID,limit=1,sort=nearest,distance=..2] playerUUID = @s playerUUID
 data modify entity @e[type=creeper,tag=!HasUUID,limit=1,sort=nearest,distance=..2] CustomName set from entity @s CustomName
-tag @a[team=!Spectator,team=!Lobby,distance=..7] add UtilKilled
-execute store result score @a[tag=UtilKilled,distance=..7] KillerUUID run scoreboard players get @s playerUUID
+tag @a[team=!Spectator,team=!Lobby,distance=..6] add UtilKilled
+execute store result score @a[tag=UtilKilled,distance=..6] KillerUUID run scoreboard players get @s playerUUID
 execute as @e[type=creeper,tag=!HasUUID] run scoreboard players operation $current playerUUID = @s playerUUID
 tag @e[type=creeper,tag=!HasUUID] add HasUUID
 
@@ -21,11 +21,11 @@ scoreboard players set @s CmdData 1
 
 execute if entity @s[tag=!cluster] as @a[tag=UtilKilled,distance=..2] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:3b,Duration:1,ShowParticles:0b}]}
 execute if entity @s[tag=!cluster] run tag @a[tag=UtilKilled,distance=..2] add damaged
-execute if entity @s[tag=!cluster] as @a[tag=UtilKilled,tag=!damaged,distance=..3] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:2b,Duration:1,ShowParticles:0b}]}
-execute if entity @s[tag=!cluster] run tag @a[tag=UtilKilled,tag=!damaged,distance=..3] add damaged
+execute if entity @s[tag=!cluster] as @a[tag=UtilKilled,tag=!damaged,distance=..4] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:2b,Duration:1,ShowParticles:0b}]}
+execute if entity @s[tag=!cluster] run tag @a[tag=UtilKilled,tag=!damaged,distance=..4] add damaged
 execute if entity @s[tag=!cluster] as @a[tag=UtilKilled,tag=!damaged,distance=..5] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:1b,Duration:1,ShowParticles:0b}]}
 execute if entity @s[tag=!cluster] run tag @a[tag=UtilKilled,tag=!damaged,distance=..5] add damaged
-execute if entity @s[tag=!cluster] as @a[tag=UtilKilled,tag=!damaged,distance=..7] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+execute if entity @s[tag=!cluster] as @a[tag=UtilKilled,tag=!damaged,distance=..6] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:0b,Duration:1,ShowParticles:0b}]}
 execute if entity @s[tag=!cluster] run tag @a remove damaged
 execute if entity @s[tag=cluster] as @a[tag=UtilKilled,distance=..5] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:3b,Duration:1,ShowParticles:0b}]}
 
