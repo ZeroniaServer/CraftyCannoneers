@@ -9,6 +9,8 @@ tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:3b}}}] add 
 tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:4b}}}] add HoldGCB
 #Chain
 tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:5b}}}] add HoldCCB
+#Bouncy
+tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:6b}}}] add HoldBCB
 
 #> MVP scores
 scoreboard players add @a[tag=FillCB,tag=HoldCB] MVPcannon 1
@@ -16,6 +18,7 @@ scoreboard players add @a[tag=FillCB,tag=HoldFB] MVPcannon 1
 scoreboard players add @a[tag=FillCB,tag=HoldCBC] MVPcannon 1
 scoreboard players add @a[tag=FillCB,tag=HoldGCB] MVPcannon 1
 scoreboard players add @a[tag=FillCB,tag=HoldCCB] MVPcannon 1
+scoreboard players add @a[tag=FillCB,tag=HoldBCB] MVPcannon 1
 
 #> Fill Cannonball
 #Normal
@@ -38,6 +41,10 @@ execute as @a[tag=FillCB,tag=HoldGCB] at @s unless entity @e[type=armor_stand,ta
 execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
 execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
 execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 5
+#Chain
+execute as @a[tag=FillCB,tag=HoldBCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
+execute as @a[tag=FillCB,tag=HoldBCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
+execute as @a[tag=FillCB,tag=HoldBCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 6
 
 #Global
 tag @a remove HoldCB
@@ -45,6 +52,7 @@ tag @a remove HoldFB
 tag @a remove HoldCBC
 tag @a remove HoldGCB
 tag @a remove HoldCCB
+tag @a remove HoldBCB
 
 tag @a remove FillCB
 
@@ -105,8 +113,12 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=5}
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=5}] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 0.9
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=5}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","ChainCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:40}}]}
 execute as @e[type=armor_stand,tag=ChainCannonball,tag=!chainacc] run function cannons:chainaccuracy
-
 execute as @e[type=armor_stand,tag=ChainCannonball] at @s run tp @s ~ ~ ~ ~20 ~
+#Bouncy Cannonball
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=6}] at @s run playsound cannonshot master @a ~ ~ ~ 6 1.1
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=6}] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1.1
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=6}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","BouncyCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:55}}]}
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=6}] at @s run playsound bounceshot master @a ~ ~ ~ 4 1
 
 #Global
 execute as @e[type=armor_stand,tag=NewCannonball] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID
@@ -151,4 +163,7 @@ execute as @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/ocean]
 execute as @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/ocean] at @s run kill @s
 execute as @e[type=armor_stand,tag=cannonball] at @s unless block ~ ~-1 ~ air run function cannons:explode
 execute as @e[type=armor_stand,tag=cannonball] at @s unless block ^ ^ ^1 air run function cannons:explode
+
+scoreboard players add @e[type=armor_stand,tag=BouncyCannonball,tag=Hit1,scores={gravity=..1000}] gravity 60
+
 function cannons:damagecalc
