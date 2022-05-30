@@ -1,0 +1,30 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Outstanding Performance!",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Become any type of MVP at the end of the game.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:diamond_hoe",
+            "nbt": "{CustomModelData:46}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "tutorial:notify"
+    },
+    "parent": "tutorial:purchase_cannonball"
+}

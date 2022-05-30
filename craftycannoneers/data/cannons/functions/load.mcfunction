@@ -1,6 +1,10 @@
 #> Tag for holding gunpowder
 tag @a[nbt={SelectedItem:{id:"minecraft:gunpowder"}}] add HoldGP
 
+#> Tutorial Advancement trigger
+execute as @a[tag=FillLeft,tag=HoldGP] run advancement grant @s only tutorial:fill_gunpowder
+execute as @a[tag=FillRight,tag=HoldGP] run advancement grant @s only tutorial:fill_gunpowder
+
 #> Fill gunpowder
 #Left
 execute as @a[tag=FillLeft,tag=HoldGP] at @s if entity @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..3] unless entity @e[type=armor_stand,tag=GPDispL,scores={CmdData=7..},limit=1,sort=nearest,distance=..3] at @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..3] run playsound minecraft:block.sand.break master @a ~ ~ ~ 0.6 2

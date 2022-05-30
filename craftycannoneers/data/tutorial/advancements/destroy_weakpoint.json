@@ -1,0 +1,29 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Perfect Aim",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Destroy an exposed weakpoint using a Cannonball.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:spyglass"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "tutorial:notify"
+    },
+    "parent": "tutorial:spot_weakpoint"
+}

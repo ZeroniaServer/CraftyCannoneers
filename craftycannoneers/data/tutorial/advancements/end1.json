@@ -1,0 +1,25 @@
+{
+    "display": {
+        "title": {
+            "text": "Tutorial Advancements",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Learn game mechanics by completing these advancements!",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:knowledge_book"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "location": {
+            "trigger": "minecraft:location"
+        }
+    },
+    "parent": "tutorial:all_cannonballs"
+}

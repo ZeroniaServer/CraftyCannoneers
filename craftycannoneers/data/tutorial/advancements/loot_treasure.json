@@ -1,0 +1,36 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Treasure!",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Loot a Treasure Chest.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:diamond_hoe",
+            "nbt": "{CustomModelData:19}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+              "entity": {
+                "type": "minecraft:hopper_minecart",
+                "nbt": "{Tags:[\"chest\"]}"
+              }
+            }
+          }
+    },
+    "rewards": {
+        "function": "tutorial:notify"
+    },
+    "parent": "tutorial:root"
+}

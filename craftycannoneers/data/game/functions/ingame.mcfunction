@@ -5,6 +5,7 @@ function game:ingame/chestspawning
 function game:ingame/arrowpickup
 function game:ingame/boat
 function game:ingame/harpoon
+function tutorial:showtip
 
 #> Boat specific effects
 execute as @a[team=Orange,predicate=game:onorange,tag=!onboatregen] run effect give @s regeneration 1000000 1 true
@@ -102,6 +103,7 @@ scoreboard players reset @a[scores={death=1..}] death
 
 effect give @a[team=!Lobby,team=!Spectator,scores={kill=1..,gappleTimer=0}] regeneration 4 2 true
 scoreboard players add @a[team=!Lobby,team=!Spectator,scores={kill=1..}] MVPkill 1
+execute as @a[team=!Lobby,team=!Spectator,scores={kill=1..}] run advancement grant @s only tutorial:kill_enemy
 scoreboard players reset @a[scores={kill=1..}] kill
 
 

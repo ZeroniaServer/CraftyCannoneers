@@ -1,0 +1,29 @@
+scoreboard players add $Tip CmdData 1
+
+execute if score $Tip CmdData matches 1200.. run tag @e[type=marker,tag=TipSet,limit=1,sort=random] add Selected
+
+execute as @e[type=marker,tag=Tip1,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"If you want to shoot a Cannonball more towards the left or right, you can put unequal amounts of Gunpowder into a Cannon's Gunpowder slots.","color":"gray"}]
+execute as @e[type=marker,tag=Tip2,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"In order to shoot a Cannonball you need to place Gunpowder in at least one of the 2 slots on the sides of the Cannon.","color":"gray"}]
+execute as @e[type=marker,tag=Tip3,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"All Cannonballs have different properties. Make sure to read the item lore to see what they do.","color":"gray"}]
+execute as @e[type=marker,tag=Tip4,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"Fire placed by Hot Cannonballs will deal extra damage to a ship once it extinguishes.","color":"gray"}]
+execute as @e[type=marker,tag=Tip5,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"Chain Cannonballs deal bonus damage to the sails of ships. Aim high!","color":"gray"}]
+execute as @e[type=marker,tag=Tip6,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"Cannonball Clusters are weak against ships, but they'll kill players with ease.","color":"gray"}]
+execute as @e[type=marker,tag=Tip7,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"Use your Spotting Spyglass to locate and temporarily expose weakpoints on the enemy ship.","color":"gray"}]
+execute as @e[type=marker,tag=Tip8,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"Using a Harpoon underwater will allow you to perform a quick dash.","color":"gray"}]
+execute as @e[type=marker,tag=Tip9,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"You can use a Skeleton Key to open the Team Chest of your enemies.","color":"gray"}]
+execute as @e[type=marker,tag=Tip10,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"Killing an enemy regenerates a little bit of health.","color":"gray"}]
+execute as @e[type=marker,tag=Tip11,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"Players drop a small amount of Gold on death.","color":"gray"}]
+execute as @e[type=marker,tag=Tip12,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"If you die, you lose all items you were carrying with you.","color":"gray"}]
+execute as @e[type=marker,tag=Tip13,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"Share any leftover resources with your teammates either by dropping them or putting it in the Team Chest on your ship.","color":"gray"}]
+execute as @e[type=marker,tag=Tip14,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"Arrows have a 50% chance of breaking on impact.","color":"gray"}]
+execute as @e[type=marker,tag=Tip15,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"In order to shoot a Cannonball you need to place Gunpowder in at least one of the 2 slots on the sides of the Cannon.","color":"gray"}]
+execute as @e[type=marker,tag=Tip16,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"Gas Cannonballs leave a cloud of Gas that weaken and damage any players who get inside it.","color":"gray"}]
+execute as @e[type=marker,tag=Tip17,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"Bouncy Cannonballs will blow up randomly after bouncing around for a little bit.","color":"gray"}]
+execute as @e[type=marker,tag=Tip18,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"10 Gunpowder is a good amount to keep in mind if you want to hit the hull of a ship.","color":"gray"}]
+execute as @e[type=marker,tag=Tip19,tag=Selected] run tellraw @a ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"You can remove Gunpowder from the Gunpowder slots of a Cannon by interacting with them while you're not holding Gunpowder in your hand.","color":"gray"}]
+
+execute unless entity @e[type=marker,tag=TipSet,tag=!Selected] run function tutorial:newset
+kill @e[type=marker,tag=TipSet,tag=Selected]
+
+
+execute if score $Tip CmdData matches 1200.. run scoreboard players reset $Tip CmdData

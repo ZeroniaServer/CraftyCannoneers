@@ -1,0 +1,30 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "The Craftiest Cannoneer...",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Use all of the different Cannonball types. (All time)",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:diamond_hoe",
+            "nbt": "{CustomModelData:29}"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "tutorial:notify"
+    },
+    "parent": "tutorial:fire_cannon"
+}

@@ -20,6 +20,9 @@ scoreboard players add @a[tag=FillCB,tag=HoldGCB] MVPcannon 1
 scoreboard players add @a[tag=FillCB,tag=HoldCCB] MVPcannon 1
 scoreboard players add @a[tag=FillCB,tag=HoldBCB] MVPcannon 1
 
+#> Tutorial Advancement trigger
+execute as @a[tag=FillCB] unless entity @s[tag=!HoldCB,tag=!HoldFB,tag=!HoldCBC,tag=!GCB,tag=!HoldCCB,tag=!HoldBCB] run advancement grant @s only tutorial:fire_cannon
+
 #> Fill Cannonball
 #Normal
 execute as @a[tag=FillCB,tag=HoldCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air

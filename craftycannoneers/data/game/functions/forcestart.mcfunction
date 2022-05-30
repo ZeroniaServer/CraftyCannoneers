@@ -9,6 +9,8 @@ gamerule fallDamage true
 title @a title {"text":"Game Started!","color":"dark_aqua"}
 title @a[team=!Lobby,team=!Spectator] subtitle {"text":"Destroy the enemy ship!","color":"aqua"}
 title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"aqua"}
+scoreboard players set $Tip CmdData 0
+function tutorial:newset
 
 tellraw @a[team=Purple] ["",{"text":"You can take off your ","color":"aqua","italic":true},{"text":"Pirate Hat","bold":true,"color":"dark_purple"},{"text":" to leave the game!","color":"aqua","italic":true}]
 tellraw @a[team=Orange] ["",{"text":"You can take off your ","color":"aqua","italic":true},{"text":"Pirate Hat","bold":true,"color":"gold"},{"text":" to leave the game!","color":"aqua","italic":true}]

@@ -1,0 +1,29 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "You Sunk My Battleship!",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Fire the winning shot.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:oak_boat"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "tutorial:notify"
+    },
+    "parent": "tutorial:destroy_weakpoint"
+}
