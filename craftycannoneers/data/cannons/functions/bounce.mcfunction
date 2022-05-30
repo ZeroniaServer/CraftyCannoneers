@@ -18,6 +18,8 @@ kill @e[tag=BounceRNG]
 
 scoreboard players add @s drag 4
 scoreboard players set @s gravity -400
+particle minecraft:sweep_attack ~ ~ ~ 1 0.1 1 0 8 force
+particle minecraft:cloud ~ ~ ~ 1 0.2 1 0.05 12 force
 
 execute as @s at @s run playsound bounce master @a ~ ~ ~ 2 1
 
@@ -25,8 +27,9 @@ summon marker ~ ~ ~ {Tags:["ExplodeRNG"]}
 scoreboard players set @e[type=marker,tag=ExplodeRNG] RNGmax 100
 execute as @e[type=marker,tag=ExplodeRNG] store result score @s RNGscore run data get entity @s UUID[0]
 execute as @e[type=marker,tag=ExplodeRNG] run scoreboard players operation @s RNGscore %= @s RNGmax
-execute as @s[tag=!InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}
-execute as @s[tag=InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
+execute as @s[type=armor_stand,tag=!InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}
+execute as @s[type=armor_stand,tag=InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
+execute as @s[type=armor_stand,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run tag @s add Hit2
 
 execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] playerUUID
 execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run data modify entity @s CustomName set from entity @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] CustomName
@@ -76,3 +79,5 @@ tag @s add CannonballShot
 execute store result score @s x run data get entity @s Motion[0] 1000
 execute store result score @s y run data get entity @s Motion[1] 1000
 execute store result score @s z run data get entity @s Motion[2] 1000
+
+execute if block ~ ~-1 ~ water run tp @s ~ ~-1 ~

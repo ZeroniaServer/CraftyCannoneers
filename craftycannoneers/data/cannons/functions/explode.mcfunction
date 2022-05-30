@@ -27,14 +27,14 @@ execute as @s[tag=!InSafezone,tag=Hit1,tag=GasCannonball] at @s run summon marke
 
 
 execute as @s[tag=InSafezone,tag=!Hit1,tag=!CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
-execute as @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=!CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
+execute as @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=!CannonballCluster,tag=!BouncyCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
 execute as @s[tag=!InSafezone,tag=!Hit1,tag=!ChainCannonball,tag=!CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}
-execute as @s[tag=!InSafezone,tag=Hit1,tag=!ChainCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2"]}
+execute as @s[tag=!InSafezone,tag=Hit1,tag=!ChainCannonball,scores={doublehit=4..},tag=!CannonballCluster,tag=!BouncyCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2"]}
 
 execute as @s[tag=InSafezone,tag=!Hit1,tag=CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1","cluster"]}
-execute as @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1","cluster"]}
+execute as @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=CannonballCluster,tag=!BouncyCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1","cluster"]}
 execute as @s[tag=!InSafezone,tag=!Hit1,tag=CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3","cluster"]}
-execute as @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..},tag=CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2","cluster"]}
+execute as @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..},tag=CannonballCluster,tag=!BouncyCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2","cluster"]}
 
 #Chain effect
 execute as @s[tag=ChainCannonball,predicate=cannons:ships/purple] at @s if entity @s[predicate=cannons:ships/abovesails] run scoreboard players add $DamagePurple CmdData 20

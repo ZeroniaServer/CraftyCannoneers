@@ -41,7 +41,7 @@ execute as @a[tag=FillCB,tag=HoldGCB] at @s unless entity @e[type=armor_stand,ta
 execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
 execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
 execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 5
-#Chain
+#Bouncy
 execute as @a[tag=FillCB,tag=HoldBCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
 execute as @a[tag=FillCB,tag=HoldBCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
 execute as @a[tag=FillCB,tag=HoldBCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 6
