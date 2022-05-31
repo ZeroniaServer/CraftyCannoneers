@@ -12,6 +12,8 @@ kill @e[type=#game:chest,tag=chest]
 kill @e[type=item]
 kill @e[type=#game:boat,tag=Boat]
 kill @e[type=armor_stand,tag=EndFirework]
+kill @e[type=arrow]
+kill @e[type=trident]
 
 execute positioned 70 -28 -50 run function cannons:spawnpurple
 execute positioned 74 -28 -50 run function cannons:spawnpurple
