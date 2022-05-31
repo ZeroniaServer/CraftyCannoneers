@@ -28,7 +28,8 @@ execute as @e[type=hopper_minecart,tag=CChestHopper,tag=!Opened] at @s if data e
 execute as @e[type=hopper_minecart,tag=CChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run playsound minecraft:entity.item.pickup master @a ~ ~ ~ 1 0.6
 execute as @e[type=hopper_minecart,tag=CChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run item replace entity @e[type=armor_stand,tag=CChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:21}
 execute as @e[type=hopper_minecart,tag=CChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @e[type=armor_stand,tag=CChestAS,limit=1,sort=nearest,distance=..1] add Looted
-execute as @e[type=hopper_minecart,tag=CChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run kill @s
+execute as @e[type=hopper_minecart,tag=CChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @s add Looted
+execute as @e[type=hopper_minecart,tag=CChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..6] run kill @s
 
 execute as @e[type=hopper_minecart,tag=CChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run item replace entity @e[type=armor_stand,tag=CChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:21}
 execute as @e[type=hopper_minecart,tag=CChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run tag @e[type=armor_stand,tag=CChestAS,limit=1,sort=nearest,distance=..1] add Looted
@@ -43,7 +44,8 @@ execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=!Opened] at @s if data 
 execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run playsound minecraft:entity.item.pickup master @a ~ ~ ~ 1 0.6
 execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run item replace entity @e[type=armor_stand,tag=UCChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:25}
 execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @e[type=armor_stand,tag=UCChestAS,limit=1,sort=nearest,distance=..1] add Looted
-execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run kill @s
+execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @s add Looted
+execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..6] run kill @s
 
 execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run item replace entity @e[type=armor_stand,tag=UCChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:25}
 execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run tag @e[type=armor_stand,tag=UCChestAS,limit=1,sort=nearest,distance=..1] add Looted
@@ -58,7 +60,8 @@ execute as @e[type=hopper_minecart,tag=RChestHopper,tag=!Opened] at @s if data e
 execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run playsound minecraft:entity.item.pickup master @a ~ ~ ~ 1 0.6
 execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run item replace entity @e[type=armor_stand,tag=RChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:28}
 execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @e[type=armor_stand,tag=RChestAS,limit=1,sort=nearest,distance=..1] add Looted
-execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run kill @s
+execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @s add Looted
+execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..6] run kill @s
 
 execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run item replace entity @e[type=armor_stand,tag=RChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:28}
 execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted] at @s unless entity @a[team=!Lobby,distance=..7] run tag @e[type=armor_stand,tag=RChestAS,limit=1,sort=nearest,distance=..1] add Looted
@@ -67,6 +70,7 @@ execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted] at @
 
 #> Go down when empty
 scoreboard players add @e[type=#game:chest,tag=Looted,scores={CmdData=30..220}] CmdData 1
+execute as @e[type=#game:chest,tag=Looted,scores={CmdData=171}] at @s run kill @e[type=hopper_minecart,tag=Looted,distance=..1,sort=nearest]
 execute as @e[type=#game:chest,tag=Looted,scores={CmdData=171..220}] at @s run tp @s ~ ~-0.033 ~
 execute as @e[type=#game:chest,tag=Looted,scores={CmdData=171..200}] at @s run particle block sand ~ ~ ~ 0 0 0 0.1 5 force
 execute as @e[type=#game:chest,tag=Looted,scores={CmdData=171..200}] at @s run particle block dirt ~ ~ ~ 0 0 0 0.1 5 force
