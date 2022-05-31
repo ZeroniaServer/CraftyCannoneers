@@ -12,6 +12,8 @@ execute as @e[type=boat,tag=BoatBoat,tag=!Sinking,tag=Sailing3] at @s unless ent
 
 tag @e[type=armor_stand,tag=BoatAS,tag=New] remove New
 
+execute as @e[type=boat,tag=BoatBoat,tag=!Sailing] at @s positioned ~ ~1 ~ as @a[distance=..0.7] at @s run tp @s ~ ~-0.3 ~
+
 tag @e[type=boat,tag=Sailing2] add Sailing3
 tag @e[type=boat,tag=Sailing1] add Sailing2
 tag @e[type=boat,tag=Sailing] add Sailing1
