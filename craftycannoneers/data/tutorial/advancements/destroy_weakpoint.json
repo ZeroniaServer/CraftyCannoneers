@@ -10,7 +10,7 @@
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:spyglass"
+            "item": "minecraft:target"
         },
         "frame": "challenge",
         "show_toast": true,
