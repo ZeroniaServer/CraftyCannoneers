@@ -78,3 +78,24 @@ execute as @e[type=#game:chest,tag=Looted,scores={CmdData=171..200}] at @s run p
 execute as @e[type=#game:chest,tag=Looted,scores={CmdData=200}] at @s run playsound minecraft:block.composter.fill_success master @a ~ ~ ~ 1 1.7
 execute as @e[type=#game:chest,tag=Looted,scores={CmdData=220..}] at @s run tp @s ~ ~-200 ~
 execute as @e[type=#game:chest,tag=Looted,scores={CmdData=220..}] at @s run kill @s
+
+
+
+#> Prevent certain items from being stored in chests
+#Hoppers
+execute as @e[type=minecraft:hopper_minecart,nbt={Items:[{id:"minecraft:iron_sword"}]}] at @s as @a[nbt=!{Inventory:[{id:"minecraft:iron_sword"}]},distance=..6] run function chests:checkitems
+execute as @e[type=minecraft:hopper_minecart,nbt={Items:[{id:"minecraft:crossbow"}]}] at @s as @a[nbt=!{Inventory:[{id:"minecraft:crossbow"}]},distance=..6] run function chests:checkitems
+execute as @e[type=minecraft:hopper_minecart,nbt={Items:[{id:"minecraft:spyglass"}]}] at @s as @a[nbt=!{Inventory:[{id:"minecraft:spyglass"}]},distance=..6] run function chests:checkitems
+
+execute as @e[type=minecraft:hopper_minecart,nbt={Items:[{id:"minecraft:iron_sword"}]}] run data remove entity @s Items[{id:"minecraft:iron_sword"}]
+execute as @e[type=minecraft:hopper_minecart,nbt={Items:[{id:"minecraft:crossbow"}]}] run data remove entity @s Items[{id:"minecraft:crossbow"}]
+execute as @e[type=minecraft:hopper_minecart,nbt={Items:[{id:"minecraft:spyglass"}]}] run data remove entity @s Items[{id:"minecraft:spyglass"}]
+
+#Chests
+execute as @e[type=minecraft:chest_minecart,nbt={Items:[{id:"minecraft:iron_sword"}]}] at @s as @a[nbt=!{Inventory:[{id:"minecraft:iron_sword"}]},distance=..6] run function chests:checkitems
+execute as @e[type=minecraft:chest_minecart,nbt={Items:[{id:"minecraft:crossbow"}]}] at @s as @a[nbt=!{Inventory:[{id:"minecraft:crossbow"}]},distance=..6] run function chests:checkitems
+execute as @e[type=minecraft:chest_minecart,nbt={Items:[{id:"minecraft:spyglass"}]}] at @s as @a[nbt=!{Inventory:[{id:"minecraft:spyglass"}]},distance=..6] run function chests:checkitems
+
+execute as @e[type=minecraft:chest_minecart,nbt={Items:[{id:"minecraft:iron_sword"}]}] run data remove entity @s Items[{id:"minecraft:iron_sword"}]
+execute as @e[type=minecraft:chest_minecart,nbt={Items:[{id:"minecraft:crossbow"}]}] run data remove entity @s Items[{id:"minecraft:crossbow"}]
+execute as @e[type=minecraft:chest_minecart,nbt={Items:[{id:"minecraft:spyglass"}]}] run data remove entity @s Items[{id:"minecraft:spyglass"}]
