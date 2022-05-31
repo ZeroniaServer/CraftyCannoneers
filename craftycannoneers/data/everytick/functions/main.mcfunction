@@ -3,6 +3,7 @@ function everytick:lobby
 function everytick:leavegame
 function everytick:nodrop
 function everytick:rock
+function everytick:seagull
 
 execute unless block -43 -22 -14 minecraft:potted_fern run setblock -43 -22 -14 minecraft:potted_fern
 execute unless block -54 -23 4 minecraft:potted_fern run setblock -54 -23 4 minecraft:potted_fern

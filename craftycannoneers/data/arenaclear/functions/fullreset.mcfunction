@@ -44,5 +44,6 @@ summon wandering_trader 68 -31 -50 {Tags:["Trader"],CustomName:"\"Pirate Trader\
 
 function arenaclear:villagertrades
 function arenaclear:boatvehicles
+function arenaclear:spawnseagulls
 
 team join NoName @e[type=wandering_trader,tag=Trader]
