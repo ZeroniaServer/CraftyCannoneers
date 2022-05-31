@@ -27,7 +27,7 @@ execute as @e[type=marker,tag=RingOfFire,tag=!HasUUID] at @s run data modify ent
 tag @e[type=marker,tag=RingOfFire,tag=!HasUUID] add HasUUID
 
 #GAS EFFECT
-execute as @s[tag=!InSafezone,tag=Hit1,tag=GasCannonball] at @s run summon marker ^ ^-2 ^3 {Tags:["GasCloud"]}
+execute as @s[tag=Hit1,tag=GasCannonball] at @s run summon marker ^ ^-2 ^3 {Tags:["GasCloud"]}
 
 
 execute as @s[tag=InSafezone,tag=!Hit1,tag=!CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
