@@ -203,4 +203,7 @@ execute as @e[type=armor_stand,tag=cannonball,tag=PlayerCannonball,tag=!Hit] at 
 
 scoreboard players add @e[type=armor_stand,tag=BouncyCannonball,tag=Hit1,scores={gravity=..1000}] gravity 60
 
+#Weakpoints
+function game:shipweakpoint/spot
+
 function cannons:damagecalc
