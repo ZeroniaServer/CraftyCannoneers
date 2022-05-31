@@ -94,7 +94,9 @@ execute store result bossbar orangeship value run scoreboard players get $Orange
 bossbar set purpleship players @a[team=!Lobby]
 bossbar set orangeship players @a[team=!Lobby]
 
+execute as @a[scores={death=1..}] run function cannons:despawnplayerc
 execute as @a[scores={death=1..},team=!Lobby,team=!Spectator] run function game:givegear
+execute as @a[scores={death=1..},team=!Lobby,team=!Spectator] run gamemode adventure @s[gamemode=!spectator]
 tp @a[team=Orange,scores={death=1..}] 88 -26 55 90 0
 tp @a[team=Purple,scores={death=1..}] 52 -26 -55 -90 0
 tag @a[scores={death=1..}] remove onboatregen
