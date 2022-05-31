@@ -68,8 +68,6 @@ function game:shields
 
 #Game related functions or commands
 kill @e[type=falling_block]
-# #Weakpoints
-# function game:shipweakpoint/spot
 
 #Game settings
 execute if score $gamestate CmdData matches -1 run function lobby:customizer/controller
