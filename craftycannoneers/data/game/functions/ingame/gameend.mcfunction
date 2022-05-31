@@ -24,6 +24,14 @@ execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matche
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Purple] at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 1.3
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Orange] at @s run playsound minecraft:entity.wither.spawn master @s ~ ~ ~ 1 2
 
+#Explosion animation
+execute if score $WinningTeam CmdData matches 1 run particle minecraft:explosion 72 -28 -55 12 12 4 0.1 10 force
+execute if score $WinningTeam CmdData matches 1 run particle minecraft:lava 72 -28 -55 12 12 4 0.1 12 force
+execute if score $WinningTeam CmdData matches 1 run particle minecraft:large_smoke 72 -28 -55 12 12 4 0.1 8 force
+execute if score $WinningTeam CmdData matches 2 run particle minecraft:explosion 68 -28 55 12 12 4 0.1 10 force
+execute if score $WinningTeam CmdData matches 2 run particle minecraft:lava 68 -28 55 12 12 4 0.1 12 force
+execute if score $WinningTeam CmdData matches 2 run particle minecraft:large_smoke 68 -28 55 12 12 4 0.1 8 force
+
 execute if score $EndTime CmdData matches 1 run function game:mvpstats/check
 execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] resistance 1000000 100 true
 execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] instant_health 1000000 100 true
