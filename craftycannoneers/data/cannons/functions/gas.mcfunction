@@ -25,8 +25,7 @@ execute as @e[type=armor_stand,tag=GasAS] at @s unless entity @e[type=marker,tag
 
 #> Hot Cannonball interaction
 execute as @e[type=marker,tag=GasExplode] at @s run kill @e[type=armor_stand,tag=GasAS,distance=..1,limit=1,sort=nearest]
-execute as @e[type=marker,tag=GasExplode] at @s run summon marker ~ ~ ~ {Tags:["ImpactMarker","GasPower"]}
-###TODO TRANSFER UUID HERE!!!
+execute as @e[type=marker,tag=GasExplode] at @s run summon marker ~ ~ ~ {Tags:["ImpactMarker","GasPower"],CustomName:'{"text":"a Gas Explosion"}'}
 execute as @e[type=marker,tag=ImpactMarker,tag=GasPower] at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper
 execute as @e[type=marker,tag=GasExplode] at @s run particle flame ~ ~ ~ 2 2 2 1 150 force
 execute as @e[type=marker,tag=GasExplode] at @s run particle flash ~ ~ ~ 0.1 0.1 0.1 0 4 force
