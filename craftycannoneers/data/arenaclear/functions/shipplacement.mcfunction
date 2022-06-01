@@ -28,9 +28,9 @@ setblock 62 -31 52 end_stone_brick_wall[up=true]
 fill 62 -30 51 62 -30 50 creeper_head
 fill 62 -31 51 62 -31 50 barrier
 
-setblock 74 -31 52 end_stone_brick_wall[up=true]
-fill 74 -30 51 74 -30 50 creeper_head
-fill 74 -31 51 74 -31 50 barrier
+setblock 74 -31 51 end_stone_brick_wall[up=true]
+fill 74 -30 50 74 -30 49 creeper_head
+fill 74 -31 50 74 -31 49 barrier
 
 setblock 83 -23 52 end_stone_brick_wall[up=true]
 fill 83 -22 51 83 -22 50 creeper_head
@@ -66,9 +66,9 @@ setblock 78 -31 -52 end_stone_brick_wall[up=true]
 fill 78 -30 -51 78 -30 -50 creeper_head
 fill 78 -31 -51 78 -31 -50 barrier
 
-setblock 66 -31 -52 end_stone_brick_wall[up=true]
-fill 66 -30 -51 66 -30 -50 creeper_head
-fill 66 -31 -51 66 -31 -50 barrier
+setblock 66 -31 -51 end_stone_brick_wall[up=true]
+fill 66 -30 -50 66 -30 -49 creeper_head
+fill 66 -31 -50 66 -31 -49 barrier
 
 setblock 57 -23 -52 end_stone_brick_wall[up=true]
 fill 57 -22 -51 57 -22 -50 creeper_head
