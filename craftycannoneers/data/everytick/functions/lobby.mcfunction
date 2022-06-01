@@ -6,6 +6,8 @@ effect give @a[team=Lobby] fire_resistance 1000000 100 true
 effect give @a[team=Lobby] water_breathing 1000000 255 true
 effect give @a[team=Lobby] weakness 1000000 255 true
 
+function lobby:parkour/parkour
+
 execute as @a[tag=!hasMoved,scores={jump=1..}] run tag @s add hasMoved
 execute as @a[tag=!hasMoved,scores={walk=30..}] run tag @s add hasMoved
 execute as @a[tag=!hasMoved,scores={sprint=50..}] run tag @s add hasMoved

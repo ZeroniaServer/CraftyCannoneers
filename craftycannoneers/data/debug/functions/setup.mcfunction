@@ -50,6 +50,21 @@ scoreboard objectives add sprint minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add crouch minecraft.custom:minecraft.crouch_one_cm
 scoreboard objectives add jump minecraft.custom:minecraft.jump
 
+#> Parkour
+scoreboard objectives add parkourMins dummy
+scoreboard objectives add parkourSecs dummy
+scoreboard objectives add parkourDeci dummy
+scoreboard objectives add parkourDeci2 dummy
+scoreboard objectives add parkourTimer dummy
+scoreboard objectives add finalParkourTime dummy
+scoreboard objectives add bestParkourMins dummy
+scoreboard objectives add bestParkourSecs dummy
+scoreboard objectives add bestParkourDeci dummy
+scoreboard objectives add bestParkourDeci2 dummy
+scoreboard objectives add bestParkourTime dummy
+execute unless entity @e[type=marker,tag=parkourStart] run summon marker -73 -22 -1 {Tags:["parkourStart"]}
+execute unless entity @e[type=marker,tag=parkourEnd] run summon marker -71 2 -4 {Tags:["parkourEnd"]}
+
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
 bossbar add purpleshiphp ""

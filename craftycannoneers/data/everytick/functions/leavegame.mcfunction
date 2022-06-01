@@ -35,4 +35,7 @@ execute as @a[tag=LeaveGame,tag=CannonMVP,tag=DeathMVP] at @s run item replace e
 execute as @a[tag=LeaveGame,tag=CannonMVP,tag=KillMVP] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:46,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired & Kills!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
 execute as @a[tag=LeaveGame,tag=KillMVP,tag=DeathMVP,tag=CannonMVP] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:47,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired, Kills & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
 
+execute as @a[tag=LeaveGame,tag=inParkour] run tellraw @s [{"text":"You left the game, so your Parkour run was canceled.","color":"red"}]
+execute as @a[tag=LeaveGame,tag=inParkour] run tag @s remove inParkour
+
 tag @a[tag=LeaveGame] remove LeaveGame
