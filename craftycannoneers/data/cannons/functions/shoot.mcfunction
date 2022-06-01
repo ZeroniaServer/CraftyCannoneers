@@ -67,8 +67,8 @@ execute as @a[tag=FillCB,tag=HoldPCB] at @s unless entity @e[type=armor_stand,ta
 #Tracer
 execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedTCB
 execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
-execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 8
 execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] cannonshot 30
+execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 8
 
 #Global
 tag @a remove HoldCB
@@ -169,7 +169,7 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run particle minecraft:campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run particle lava ^ ^1.1 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run playsound cannonshot master @a[tag=HoldTCB] ~ ~ ~ 0.7 2
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","TracerCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:16}}]}
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","TracerCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b}
 execute as @e[type=armor_stand,tag=TracerCannonball,tag=!traceracc] run function cannons:traceraccuracy
 
 #Global
