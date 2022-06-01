@@ -3,6 +3,11 @@
       "requirement": {
         "trigger": "minecraft:using_item",
         "conditions": {
+          "item": {
+            "items": [
+              "minecraft:spyglass"
+            ]
+          },
           "player": {
             "player": {
               "looking_at": {
