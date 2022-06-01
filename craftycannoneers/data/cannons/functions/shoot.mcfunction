@@ -151,7 +151,7 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=20,CmdData=7}] 
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=7}] at @s run playsound cannonshot master @a ~ ~ ~ 6 1.3
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=7}] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1.3
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=7}] at @s run summon armor_stand ~ ~1 ~ {CustomNameVisible:1b,Tags:["cannonball","PlayerCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:57}}],Passengers:[{id:"minecraft:armor_stand",Tags:["PCannonballdeco","New"],Marker:1b,Invulnerable:1b,Small:1b,NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b}]}]}
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=7}] as @e[tag=PCannonballdeco] at @s run tp @s @e[tag=PlayerCannonball,limit=1,sort=nearest]
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=7}] as @e[type=armor_stand,tag=PCannonballdeco] at @s run tp @s @e[type=armor_stand,tag=PlayerCannonball,limit=1,sort=nearest]
 execute as @e[type=armor_stand,tag=PlayerCannonball,tag=!playeracc] run function cannons:playeraccuracy
 execute as @e[type=armor_stand,tag=PlayerCannonball] at @s run function cannons:playercbtravel
 #Tracer Cannonball
@@ -202,7 +202,7 @@ execute as @e[type=armor_stand,tag=HotCannonball] at @s run particle flame ~ ~ ~
 execute as @e[type=armor_stand,tag=GasCannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 1 force
 execute as @e[type=armor_stand,tag=GasCannonball] at @s run particle minecraft:soul ~ ~ ~ 0 0 0 0.02 2 force
 execute as @e[type=armor_stand,tag=PlayerCannonball] at @s run particle minecraft:cloud ~ ~ ~ 0 0 0 0.02 1 force
-execute as @e[type=armor_stand,tag=TracerCannonball] at @s run function cannons:tracerparticle 
+execute as @e[type=armor_stand,tag=TracerCannonball] at @s run function cannons:tracerparticle
 
 execute as @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/ocean] at @s run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force
 execute as @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/ocean] at @s run particle falling_water ~ ~1 ~ 0.2 0.4 0.1 0.2 150 force

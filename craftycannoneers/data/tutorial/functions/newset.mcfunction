@@ -1,4 +1,4 @@
-kill @e[tag=TipSet]
+kill @e[type=marker,tag=TipSet]
 
 summon marker 0 0 0 {Tags:["TipSet","Tip1"]}
 summon marker 0 0 0 {Tags:["TipSet","Tip2"]}

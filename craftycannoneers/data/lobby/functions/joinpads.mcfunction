@@ -88,8 +88,8 @@ tag @a[tag=JoinSpec] remove JoinSpec
 
 title @a[team=Spectator] actionbar {"text":"Fly into a ring of seagulls to stop spectating!","bold":true,"color":"aqua"}
 
-execute as @a[team=Spectator,tag=!NewSpec] at @s if entity @e[tag=seagullSpawner,distance=..4] run trigger leavegame
-execute as @a[team=Spectator,tag=NewSpec] at @s unless entity @e[tag=seagullSpawner,distance=..4] run tag @s remove NewSpec
+execute as @a[team=Spectator,tag=!NewSpec] at @s if entity @e[type=marker,tag=seagullSpawner,distance=..4] run trigger leavegame
+execute as @a[team=Spectator,tag=NewSpec] at @s unless entity @e[type=marker,tag=seagullSpawner,distance=..4] run tag @s remove NewSpec
 tag @a[tag=NewSpec,team=!Spectator] remove NewSpec
 
 execute as @a[team=Spectator] at @s unless entity @s[predicate=game:inarena] run tellraw @s {"text":"Unable to spectate outside of the arena!","color":"red"}
