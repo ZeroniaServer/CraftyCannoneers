@@ -64,6 +64,21 @@ execute positioned 51 -31 17 unless block 51 -31 17 lily_pad unless entity @e[ty
 execute positioned 81 -36.8 -17 run particle minecraft:bubble_column_up 81 -36.8 -17 1.4 0 0 0.2 5 force @a[distance=..12]
 execute positioned 58 -36.8 17 run particle minecraft:bubble_column_up 58 -36.8 17 1.4 0 0 0.2 5 force @a[distance=..12]
 
+execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s run tag @s add InBubble
+execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1,tag=!InBubble] at @s run scoreboard players set @s bubblewarn 1
+execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s run tag @s add InBubble
+execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2,tag=!InBubble] at @s run scoreboard players set @s bubblewarn 1
+
+scoreboard players add @a[tag=InBubble] bubblewarn 1
+scoreboard players add @a[tag=!InBubble,scores={bubblewarn=1..}] bubblewarn 1
+execute as @a[tag=InBubble,scores={bubblewarn=3}] at @s run playsound minecraft:block.bubble_column.upwards_inside master @s ~ ~ ~ 1 0.8
+execute as @a[tag=InBubble,scores={bubblewarn=10}] at @s run playsound minecraft:block.bubble_column.whirlpool_inside master @s ~ ~ ~ 1 0.8
+execute as @a[tag=InBubble,scores={bubblewarn=10}] at @s run tellraw @s {"text":"A bubble column blocks your path...","color":"aqua"}
+scoreboard players set @a[tag=InBubble,scores={bubblewarn=60..}] bubblewarn 8
+scoreboard players reset @a[tag=!InBubble,scores={bubblewarn=60..}] bubblewarn
+tag @a[tag=InBubble,scores={bubblewarn=30..}] remove InBubble
+tag @a remove InBubble
+
 execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s run tp @s ~ ~ ~0.05
 execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s run tp @s ~ ~ ~-0.05
 execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s run tp @s ~ ~ ~0.05

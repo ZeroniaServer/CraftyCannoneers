@@ -44,6 +44,7 @@ scoreboard objectives add gappleTimer dummy
 scoreboard objectives add useharpoon minecraft.used:minecraft.trident
 scoreboard objectives add eyeclick dummy
 scoreboard objectives add openchest dummy
+scoreboard objectives add bubblewarn dummy
 scoreboard objectives add walk minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add sprint minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add crouch minecraft.custom:minecraft.crouch_one_cm
