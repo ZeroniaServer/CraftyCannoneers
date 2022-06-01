@@ -1,6 +1,6 @@
 execute as @e[type=armor_stand,tag=seagull,tag=1] at @s at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run tp @s ^ ^ ^6 facing entity @e[type=marker,tag=seagull,limit=1,sort=nearest]
-execute as @e[type=armor_stand,tag=seagull,tag=2] at @s at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run tp @s ^ ^ ^-6 facing entity @e[type=marker,tag=seagull,limit=1,sort=nearest]
-execute as @e[type=armor_stand,tag=seagull,tag=3] at @s at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run tp @s ^6 ^ ^ facing entity @e[type=marker,tag=seagull,limit=1,sort=nearest]
+execute as @e[type=armor_stand,tag=seagull,tag=2] at @s at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run tp @s ^ ^2 ^-6 facing entity @e[type=marker,tag=seagull,limit=1,sort=nearest]
+execute as @e[type=armor_stand,tag=seagull,tag=3] at @s at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run tp @s ^6 ^-1 ^ facing entity @e[type=marker,tag=seagull,limit=1,sort=nearest]
 execute as @e[type=armor_stand,tag=seagull,tag=4] at @s at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run tp @s ^-6 ^ ^ facing entity @e[type=marker,tag=seagull,limit=1,sort=nearest]
 
 execute as @e[type=marker,tag=seagull] at @s run tp @s ~ ~ ~ ~2 ~
