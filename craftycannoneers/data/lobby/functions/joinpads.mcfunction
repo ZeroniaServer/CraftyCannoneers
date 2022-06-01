@@ -1,14 +1,14 @@
 scoreboard players add @e[type=marker,tag=joinpad,tag=Locked] CmdData 1
-execute as @e[type=marker,tag=joinpad,tag=Locked,scores={CmdData=1}] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force
-execute if score $InOrange CmdData > $InPurple CmdData as @e[type=marker,tag=JoinpadOrange] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force
-execute if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force
-execute if score $InPurple CmdData > $InOrange CmdData as @e[type=marker,tag=JoinpadPurple] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force
-execute if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force
+execute as @e[type=marker,tag=joinpad,tag=Locked,scores={CmdData=1}] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
+execute if score $InOrange CmdData > $InPurple CmdData as @e[type=marker,tag=JoinpadOrange] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
+execute if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
+execute if score $InPurple CmdData > $InOrange CmdData as @e[type=marker,tag=JoinpadPurple] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
+execute if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
 scoreboard players reset @e[type=marker,tag=joinpad,tag=Locked,scores={CmdData=80..}] CmdData
 
-execute unless score $InOrange CmdData > $InPurple CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run particle falling_dust orange_concrete ~ ~1 ~ 0.7 0.3 0.7 0 1 force
-execute unless score $InPurple CmdData > $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0.7 0.3 0.7 0 1 force
-execute as @e[type=marker,tag=JoinpadSpec,tag=!Locked] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0.7 0.3 0.7 0 1 force
+execute unless score $InOrange CmdData > $InPurple CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run particle falling_dust orange_concrete ~ ~1 ~ 0.7 0.3 0.7 0 1 force @a[team=Lobby]
+execute unless score $InPurple CmdData > $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0.7 0.3 0.7 0 1 force @a[team=Lobby]
+execute as @e[type=marker,tag=JoinpadSpec,tag=!Locked] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0.7 0.3 0.7 0 1 force @a[team=Lobby]
 
 execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar name ["",{"text":"Awaiting ","bold":true,"color":"blue"},{"text":"Purple","bold":true,"underlined":true,"color":"dark_purple"},{"text":" and ","bold":true,"color":"blue"},{"text":"Orange","bold":true,"underlined":true,"color":"gold"},{"text":" players...","bold":true,"color":"blue"}]
 execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar name ["",{"text":"Awaiting ","bold":true,"color":"blue"},{"text":"Orange","bold":true,"underlined":true,"color":"gold"},{"text":" players...","bold":true,"color":"blue"}]
