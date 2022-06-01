@@ -3,6 +3,10 @@ execute as @e[type=boat,tag=BoatBoat,tag=!Sinking] at @s if entity @a[nbt={RootV
 execute as @e[type=armor_stand,tag=BoatAS] at @s if entity @a[team=Purple,nbt={RootVehicle:{}},distance=..1.5] run item replace entity @s armor.head with purple_banner{BlockEntityTag:{Patterns:[{Pattern:mc,Color:15},{Pattern:rs,Color:10},{Pattern:ls,Color:10},{Pattern:ts,Color:10},{Pattern:hhb,Color:10},{Pattern:sku,Color:0}]}}
 execute as @e[type=armor_stand,tag=BoatAS] at @s if entity @a[team=Orange,nbt={RootVehicle:{}},distance=..1.5] run item replace entity @s armor.head with orange_banner{BlockEntityTag:{Patterns:[{Pattern:mc,Color:15},{Pattern:rs,Color:1},{Pattern:ls,Color:1},{Pattern:hhb,Color:1},{Pattern:ts,Color:1},{Pattern:sku,Color:0}]}}
 
+tag @a[nbt={RootVehicle:{}}] add inBoat
+execute as @a[tag=inBoat,nbt=!{RootVehicle:{}}] at @s run tp @s ^1.5 ^ ^
+tag @a[tag=inBoat,nbt=!{RootVehicle:{}}] remove inBoat
+
 execute as @e[type=boat,tag=BoatBoat,tag=!Sinking,tag=Sailing3,tag=1] at @s unless entity @a[nbt={RootVehicle:{}},distance=..1.5] run summon boat ~ ~-0.1 ~ {Invulnerable:1b,Tags:["Boat","BoatBoat","1"],Passengers:[{id:"minecraft:armor_stand",Tags:["Boat","BoatAS","New"],Marker:1b,Invulnerable:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:black_banner",Count:1b,tag:{BlockEntityTag:{Patterns:[{Pattern:sku,Color:0}]}}}]},{}]}
 execute as @e[type=boat,tag=BoatBoat,tag=!Sinking,tag=Sailing3,tag=2] at @s unless entity @a[nbt={RootVehicle:{}},distance=..1.5] run summon boat ~ ~-0.1 ~ {Invulnerable:1b,Rotation:[180.0f,0.0f],Tags:["Boat","BoatBoat","2"],Passengers:[{id:"minecraft:armor_stand",Tags:["Boat","BoatAS","New"],Marker:1b,Invulnerable:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:black_banner",Count:1b,tag:{BlockEntityTag:{Patterns:[{Pattern:sku,Color:0}]}}}]},{}]}
 execute as @e[type=boat,tag=BoatBoat,tag=!Sinking,tag=Sailing3,tag=3] at @s unless entity @a[nbt={RootVehicle:{}},distance=..1.5] run summon boat ~ ~-0.1 ~ {Invulnerable:1b,Tags:["Boat","BoatBoat","3"],Passengers:[{id:"minecraft:armor_stand",Tags:["Boat","BoatAS","New"],Marker:1b,Invulnerable:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:black_banner",Count:1b,tag:{BlockEntityTag:{Patterns:[{Pattern:sku,Color:0}]}}}]},{}]}
@@ -12,7 +16,7 @@ execute as @e[type=boat,tag=BoatBoat,tag=!Sinking,tag=Sailing3] at @s unless ent
 
 tag @e[type=armor_stand,tag=BoatAS,tag=New] remove New
 
-execute as @e[type=boat,tag=BoatBoat,tag=!Sailing] at @s positioned ~ ~1 ~ as @a[distance=..0.7] at @s run tp @s ~ ~-0.3 ~
+# execute as @e[type=boat,tag=BoatBoat,tag=!Sailing] at @s positioned ~ ~1 ~ as @a[distance=..0.7] at @s run tp @s ~ ~-0.3 ~
 
 tag @e[type=boat,tag=Sailing2] add Sailing3
 tag @e[type=boat,tag=Sailing1] add Sailing2

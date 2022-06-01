@@ -28,9 +28,9 @@ fill 44 -19 -64 98 6 -46 moving_piston replace barrier
 
 #Team chests
 #ORANGE
-summon chest_minecart 68.50 -27.5 60.50 {Invulnerable:1b,Rotation:[-90.0f, 0.0f],CustomDisplayTile:1b,Tags:["teamchest","orangeteamchest"],CustomName:'{"text":"Orange Team Chest","color":"gold","bold":"true","underlined":"true"}',DisplayState:{Name:"minecraft:air"}}
-summon armor_stand 68.53 -29.00 60.50 {Invulnerable:1b,DisabledSlots:4144959,Invisible:1b,Tags:["chestdisplay","orangechestdisplay"],Marker:1b,Rotation:[180.0f,0.0f],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:52,Count:1b}},{}]}
+summon chest_minecart 68.50 -28 60.50 {Invulnerable:1b,Rotation:[-90.0f, 0.0f],CustomDisplayTile:1b,Tags:["teamchest","orangeteamchest"],CustomName:'{"text":"Orange Team Chest","color":"gold","bold":"true","underlined":"true"}',DisplayState:{Name:"minecraft:air"}}
+summon armor_stand 68.50 -29.00 60.50 {Invulnerable:1b,DisabledSlots:4144959,Invisible:1b,Tags:["chestdisplay","orangechestdisplay"],Marker:1b,Rotation:[180.0f,0.0f],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:52,Count:1b}},{}]}
 
 #PURPLE
-summon chest_minecart 72.50 -27.5 -59.50 {Invulnerable:1b,Rotation:[-90.0f, 0.0f],CustomDisplayTile:1b,Tags:["teamchest","purpleteamchest"],CustomName:'{"text":"Purple Team Chest","color":"dark_purple","bold":"true","underlined":"true"}',DisplayState:{Name:"minecraft:air"}}
-summon armor_stand 72.53 -29.00 -59.50 {Invulnerable:1b,DisabledSlots:4144959,Invisible:1b,Tags:["chestdisplay","purplechestdisplay"],Marker:1b,Rotation:[0.0f,0.0f],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:49,Count:1b}},{}]}
+summon chest_minecart 72.50 -28 -59.50 {Invulnerable:1b,Rotation:[-90.0f, 0.0f],CustomDisplayTile:1b,Tags:["teamchest","purpleteamchest"],CustomName:'{"text":"Purple Team Chest","color":"dark_purple","bold":"true","underlined":"true"}',DisplayState:{Name:"minecraft:air"}}
+summon armor_stand 72.50 -29.00 -59.50 {Invulnerable:1b,DisabledSlots:4144959,Invisible:1b,Tags:["chestdisplay","purplechestdisplay"],Marker:1b,Rotation:[0.0f,0.0f],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:49,Count:1b}},{}]}
