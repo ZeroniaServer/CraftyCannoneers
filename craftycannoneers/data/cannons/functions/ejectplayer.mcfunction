@@ -18,6 +18,8 @@ tp @a[team=!Lobby,team=!Spectator,gamemode=spectator,tag=PlayerEject] ^ ^ ^1
 gamemode adventure @a[team=!Lobby,team=!Spectator,gamemode=spectator,tag=PlayerEject]
 
 kill @e[type=armor_stand,tag=PCannonballdeco,limit=1,sort=nearest,distance=..3]
+data merge entity @e[type=slime,tag=PCannonballname,limit=1,sort=nearest,distance=..3] {DeathTime:19s}
+tp @e[type=slime,tag=PCannonballname,limit=1,sort=nearest,distance=..3] ~ -200 ~
 kill @s
 
 tag @a[tag=PlayerEject] remove PlayerEject

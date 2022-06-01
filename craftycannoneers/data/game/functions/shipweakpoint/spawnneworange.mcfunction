@@ -9,6 +9,6 @@ execute as @e[type=marker,tag=SelectedWeakP,tag=Orange] at @s unless block ~ ~ ~
 execute as @e[type=marker,tag=SelectedWeakP,tag=Orange] at @s unless block ~ ~ ~ air run summon marker ~1 ~ ~-1 {Tags:["Weakpoint","XParticle","1","Purple"]}
 execute as @e[type=marker,tag=SelectedWeakP,tag=Orange] at @s unless block ~ ~ ~ air run summon marker ~-1 ~ ~-1 {Tags:["Weakpoint","XParticle","2","Purple"]}
 
-team join NoName @e[type=slime]
+team join NoName @e[type=slime,tag=Weakpoint]
 
 kill @e[type=marker,tag=SelectedWeakP]

@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+      {
+        "rolls": 0,
+        "entries": [
+            {
+                "type": "minecraft:item",
+                "weight": 1,
+                "functions": [
+                  {
+                    "function": "minecraft:set_count",
+                    "count": {
+                      "min": 0,
+                      "max": 0,
+                      "type": "minecraft:uniform"
+                    }
+                  }
+                ],
+                "name": "minecraft:air"
+            }
+        ]
+      }
+    ]
+}
