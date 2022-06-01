@@ -194,7 +194,7 @@ function cannons:drag
 #> End Fire Cannon
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] unless entity @s[scores={CmdData=8}] at @s run scoreboard players set @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] CmdData 0
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] unless entity @s[scores={CmdData=8}] at @s run scoreboard players set @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] CmdData 0
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] unless entity @s[scores={CmdData=8}] at @s run function cannons:updategp
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run function cannons:updategp
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run scoreboard players set @s CmdData 0
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run tag @s remove FireCannon
 execute as @e[type=armor_stand,tag=!FireCannon,scores={cannonshot=30..}] at @s run scoreboard players reset @s playerUUID
