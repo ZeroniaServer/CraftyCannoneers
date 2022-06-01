@@ -54,3 +54,17 @@ execute positioned 42 -31 10 unless block 42 -31 10 lily_pad unless entity @e[ty
 
 execute positioned 51 -31 17 unless block 51 -31 17 lily_pad unless entity @e[type=boat,distance=..6] run playsound minecraft:block.lily_pad.place master @a ~ ~ ~ 0.4 1.3
 execute positioned 51 -31 17 unless block 51 -31 17 lily_pad unless entity @e[type=boat,distance=..6] run setblock 51 -31 17 lily_pad
+
+
+#> Cave entrances
+execute positioned 81 -36.8 -17 run particle minecraft:bubble_column_up 81 -36.8 -17 1.4 0 0 0.2 5 force @a[distance=..12]
+execute positioned 58 -36.8 17 run particle minecraft:bubble_column_up 58 -36.8 17 1.4 0 0 0.2 5 force @a[distance=..12]
+
+execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s run tp @s ~ ~ ~0.05
+execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s run tp @s ~ ~ ~-0.05
+execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s run tp @s ~ ~ ~0.05
+execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s run tp @s ~ ~ ~-0.05
+execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s run tp @s ~ ~ ~0.05
+execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s run tp @s ~ ~ ~-0.05
+execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s run tp @s ~ ~ ~0.05
+execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s run tp @s ~ ~ ~-0.05
