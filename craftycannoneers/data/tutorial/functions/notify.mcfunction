@@ -1,3 +1,3 @@
-tellraw @s[team=] ["",{"text":"Press ","color":"dark_aqua"},{"keybind":"key.advancements","bold":true,"color":"aqua"},{"text":" to view a list of Tutorial Advancements!","color":"dark_aqua"}]
+tellraw @s[tag=!firstJoined] ["",{"text":"Press ","color":"dark_aqua"},{"keybind":"key.advancements","bold":true,"color":"aqua"},{"text":" to view a list of Tutorial Advancements!","color":"dark_aqua"}]
 
-tellraw @s[team=!] ["",{"text":"Tutorial Advancement completed!","color":"green"},"\n",{"text":"Press ","color":"dark_aqua"},{"keybind":"key.advancements","bold":true,"color":"aqua"},{"text":" for a full list of Tutorial Advancements!","color":"dark_aqua"}]
+tellraw @s[tag=firstJoined] ["",{"text":"Tutorial Advancement completed!","color":"green"},"\n",{"text":"Press ","color":"dark_aqua"},{"keybind":"key.advancements","bold":true,"color":"aqua"},{"text":" for a full list of Tutorial Advancements!","color":"dark_aqua"}]
