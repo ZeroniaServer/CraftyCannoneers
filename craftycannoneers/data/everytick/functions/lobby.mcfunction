@@ -35,6 +35,19 @@ execute positioned -43 -23 -18 as @a[scores={ChestTutorial=1..},distance=6..] ru
 execute positioned -43 -23 -18 as @a[scores={CannonTutorial=1..},distance=6..] run scoreboard players reset @s CannonTutorial
 execute positioned -43 -23 -18 as @a[scores={ChestTutorial=1..},distance=6..] run scoreboard players reset @s ChestTutorial
 
+##Tutorial chest particles
+#Common
+execute as @e[type=armor_stand,tag=ChestTutorial,tag=Common] at @s run particle falling_dust light_gray_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=3}]
+execute as @e[type=armor_stand,tag=ChestTutorial,tag=Common] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=3}]
+#Uncommon
+execute as @e[type=armor_stand,tag=ChestTutorial,tag=Uncommon] at @s run particle falling_dust light_blue_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=4}]
+execute as @e[type=armor_stand,tag=ChestTutorial,tag=Uncommon] at @s run particle falling_dust light_blue_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=4}]
+#Rare
+execute as @e[type=armor_stand,tag=ChestTutorial,tag=Rare] at @s run particle falling_dust purple_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=5}]
+execute as @e[type=armor_stand,tag=ChestTutorial,tag=Rare] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=5}]
+
+
+
 scoreboard players reset @a[team=Lobby] MVPkill
 scoreboard players reset @a[team=Lobby] MVPdeath
 scoreboard players reset @a[team=Lobby] MVPcannon
