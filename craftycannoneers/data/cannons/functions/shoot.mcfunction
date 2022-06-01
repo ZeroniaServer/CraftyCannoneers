@@ -13,6 +13,8 @@ tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:5b}}}] add 
 tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:6b}}}] add HoldBCB
 #Player
 tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:7b}}}] add HoldPCB
+#Player
+tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:8b}}}] add HoldTCB
 
 #> MVP scores
 scoreboard players add @a[tag=FillCB,tag=HoldCB] MVPcannon 1
@@ -62,6 +64,11 @@ execute as @a[tag=FillCB,tag=HoldPCB] at @s unless entity @e[type=armor_stand,ta
 execute as @a[tag=FillCB,tag=HoldPCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedPCB
 execute as @a[tag=FillCB,tag=HoldPCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
 execute as @a[tag=FillCB,tag=HoldPCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 7
+#Tracer
+execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedTCB
+execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
+execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] CmdData 8
+execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] cannonshot 30
 
 #Global
 tag @a remove HoldCB
@@ -71,6 +78,7 @@ tag @a remove HoldGCB
 tag @a remove HoldCCB
 tag @a remove HoldBCB
 tag @a remove HoldPCB
+tag @a remove HoldTCB
 
 execute as @a[tag=UsedCB,tag=UsedFB,tag=UsedCBC,tag=UsedGCB,tag=UsedCCB,tag=UsedBCB,tag=UsedPCB] run advancement grant @s only tutorial:all_cannonballs
 tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedCB
@@ -80,6 +88,7 @@ tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedGCB
 tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedCCB
 tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedBCB
 tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedPCB
+tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedTCB
 
 tag @a remove FillCB
 
@@ -92,10 +101,10 @@ tag @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..}] add FireCannon
 scoreboard players add @e[type=armor_stand,tag=FireCannon] cannonshot 1
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=1}] at @s run playsound cannonload master @a ~ ~ ~ 1 1
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=5}] at @s run playsound cannonprime master @a ~ ~ ~ 0.4 1.7
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run particle explosion ^ ^1.1 ^2 0.1 0.1 0.1 0.1 3 force
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run particle flame ^ ^1.1 ^2 0.1 0.1 0.1 0.3 6 force
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run particle minecraft:campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run particle lava ^ ^1.1 ^2 0.1 0.1 0.1 0.02 10 force
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] unless entity @s[scores={CmdData=8}] at @s run particle explosion ^ ^1.1 ^2 0.1 0.1 0.1 0.1 3 force
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] unless entity @s[scores={CmdData=8}] at @s run particle flame ^ ^1.1 ^2 0.1 0.1 0.1 0.3 6 force
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] unless entity @s[scores={CmdData=8}] at @s run particle minecraft:campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] unless entity @s[scores={CmdData=8}] at @s run particle lava ^ ^1.1 ^2 0.1 0.1 0.1 0.02 10 force
 
 scoreboard players add @e[type=armor_stand,tag=cannonball] CmdData 1
 #Normal Cannonball
@@ -154,6 +163,15 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=7}
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=7}] as @e[tag=PCannonballdeco] at @s run tp @s @e[tag=PlayerCannonball,limit=1,sort=nearest]
 execute as @e[type=armor_stand,tag=PlayerCannonball,tag=!playeracc] run function cannons:playeraccuracy
 execute as @e[type=armor_stand,tag=PlayerCannonball] at @s run function cannons:playercbtravel
+#Tracer Cannonball
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run particle explosion ^ ^1.1 ^2 0.1 0.1 0.1 0.1 3 force @a[tag=HoldTCB]
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run particle flame ^ ^1.1 ^2 0.1 0.1 0.1 0.3 6 force @a[tag=HoldTCB]
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run particle minecraft:campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run particle lava ^ ^1.1 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run playsound cannonshot master @a[tag=HoldTCB] ~ ~ ~ 0.7 2
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","TracerCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:16}}]}
+execute as @e[type=armor_stand,tag=TracerCannonball,tag=!traceracc] run function cannons:traceraccuracy
+
 #Global
 execute as @e[type=armor_stand,tag=NewCannonball] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID
 execute as @e[type=armor_stand,tag=NewCannonball] at @s run function cannons:namecannonball
@@ -166,7 +184,7 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s st
 scoreboard players set $3 CmdData 3
 execute as @e[type=armor_stand,tag=cannonball,tag=!CannonballShot] store result score @s PowerL run scoreboard players operation @s PowerL *= $3 CmdData
 execute as @e[type=armor_stand,tag=cannonball,tag=!CannonballShot] store result score @s PowerR run scoreboard players operation @s PowerR *= $3 CmdData
-execute as @e[type=armor_stand,tag=cannonball,tag=!CannonballShot,tag=!playeracc,tag=!clusteracc,tag=!chainacc] run function cannons:accuracy
+execute as @e[type=armor_stand,tag=cannonball,tag=!CannonballShot,tag=!playeracc,tag=!clusteracc,tag=!chainacc,tag=!traceracc] run function cannons:accuracy
 execute as @e[type=armor_stand,tag=cannonball] at @s run function cannons:cannonballrotation
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run tp @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..1] ^ ^2 ^3.6
 execute as @e[type=armor_stand,tag=cannonball,tag=!CannonballShot,tag=!PlayerCannonball] at @s run function cannons:cannonballtick
@@ -174,9 +192,9 @@ execute as @e[type=armor_stand,tag=cannonball,tag=!CannonballShot,tag=PlayerCann
 
 function cannons:drag
 #> End Fire Cannon
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run scoreboard players set @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] CmdData 0
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run scoreboard players set @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] CmdData 0
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run function cannons:updategp
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] unless entity @s[scores={CmdData=8}] at @s run scoreboard players set @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] CmdData 0
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] unless entity @s[scores={CmdData=8}] at @s run scoreboard players set @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] CmdData 0
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] unless entity @s[scores={CmdData=8}] at @s run function cannons:updategp
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run scoreboard players set @s CmdData 0
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run tag @s remove FireCannon
 execute as @e[type=armor_stand,tag=!FireCannon,scores={cannonshot=30..}] at @s run scoreboard players reset @s playerUUID
@@ -188,6 +206,8 @@ execute as @e[type=armor_stand,tag=HotCannonball] at @s run particle large_smoke
 execute as @e[type=armor_stand,tag=HotCannonball] at @s run particle flame ~ ~ ~ 0.2 0.2 0.2 0.1 12 force
 execute as @e[type=armor_stand,tag=GasCannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 1 force
 execute as @e[type=armor_stand,tag=GasCannonball] at @s run particle minecraft:soul ~ ~ ~ 0 0 0 0.02 2 force
+execute as @e[type=armor_stand,tag=PlayerCannonball] at @s run particle minecraft:cloud ~ ~ ~ 0 0 0 0.02 1 force
+execute as @e[type=armor_stand,tag=TracerCannonball] at @s run function cannons:tracerparticle 
 
 execute as @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/ocean] at @s run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force
 execute as @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/ocean] at @s run particle falling_water ~ ~1 ~ 0.2 0.4 0.1 0.2 150 force
