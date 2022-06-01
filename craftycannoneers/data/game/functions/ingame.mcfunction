@@ -48,6 +48,42 @@ setblock 68 -29 -51 dark_oak_slab[type=top]
 setblock 68 -32 -50 dark_oak_slab[type=top]
 setblock 76 -32 -50 dark_oak_slab[type=top]
 
+setblock 70 -28 51 end_stone_brick_wall[up=true]
+fill 70 -27 50 70 -27 49 creeper_head
+
+setblock 66 -28 51 end_stone_brick_wall[up=true]
+fill 66 -27 50 66 -27 49 creeper_head
+
+setblock 62 -28 52 end_stone_brick_wall[up=true]
+fill 62 -27 51 62 -27 50 creeper_head
+
+setblock 62 -31 52 end_stone_brick_wall[up=true]
+fill 62 -30 51 62 -30 50 creeper_head
+
+setblock 74 -31 52 end_stone_brick_wall[up=true]
+fill 74 -30 51 74 -30 50 creeper_head
+
+setblock 83 -23 52 end_stone_brick_wall[up=true]
+fill 83 -22 51 83 -22 50 creeper_head
+
+setblock 70 -28 -51 end_stone_brick_wall[up=true]
+fill 70 -27 -50 70 -27 -49 creeper_head
+
+setblock 74 -28 -51 end_stone_brick_wall[up=true]
+fill 74 -27 -50 74 -27 -49 creeper_head
+
+setblock 78 -28 -52 end_stone_brick_wall[up=true]
+fill 78 -27 -51 78 -27 -50 creeper_head
+
+setblock 78 -31 -52 end_stone_brick_wall[up=true]
+fill 78 -30 -51 78 -30 -50 creeper_head
+
+setblock 66 -31 -52 end_stone_brick_wall[up=true]
+fill 66 -30 -51 66 -30 -50 creeper_head
+
+setblock 57 -23 -52 end_stone_brick_wall[up=true]
+fill 57 -22 -51 57 -22 -50 creeper_head
+
 bossbar set purpleship name ["",{"text":"Purple: ","color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"text":"Orange: ","color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
 
 #> Bossbars
