@@ -181,6 +181,10 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s st
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s store result score @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..1] PowerR run scoreboard players get @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s store result score @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..1] PowerM run scoreboard players operation @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData += @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s store result score @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..1] PowerV run scoreboard players operation @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData += @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
+
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run scoreboard players operation @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData -= @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run scoreboard players operation @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData -= @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
+
 scoreboard players set $3 CmdData 3
 execute as @e[type=armor_stand,tag=cannonball,tag=!CannonballShot] store result score @s PowerL run scoreboard players operation @s PowerL *= $3 CmdData
 execute as @e[type=armor_stand,tag=cannonball,tag=!CannonballShot] store result score @s PowerR run scoreboard players operation @s PowerR *= $3 CmdData
