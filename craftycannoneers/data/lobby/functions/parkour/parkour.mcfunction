@@ -27,8 +27,6 @@ scoreboard players reset @a[scores={click=1..}] click
 
 execute as @a[team=Lobby,tag=RestartParkour] at @s run tp @s @s
 execute as @a[team=Lobby,tag=RestartParkour] at @s run tp @s -71 -21 -1 90 0
-execute as @a[team=Lobby,tag=RestartParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.2
-execute as @a[team=Lobby,tag=RestartParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 0.8
 tag @a[team=Lobby,tag=RestartParkour] remove RestartParkour
 
 #Visual/Sound effects
