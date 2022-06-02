@@ -9,6 +9,7 @@ kill @e[type=chest_minecart,tag=teamchest]
 function arenaclear:shipplacement
 tp @e[type=#game:chest,tag=chest] ~ ~-200 ~
 kill @e[type=#game:chest,tag=chest]
+kill @e[type=area_effect_cloud,tag=ChestNotif]
 kill @e[type=item]
 kill @e[type=#game:boat,tag=Boat]
 kill @e[type=armor_stand,tag=EndFirework]
