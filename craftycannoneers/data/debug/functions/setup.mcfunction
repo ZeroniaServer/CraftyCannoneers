@@ -62,8 +62,11 @@ scoreboard objectives add bestParkourSecs dummy
 scoreboard objectives add bestParkourDeci dummy
 scoreboard objectives add bestParkourDeci2 dummy
 scoreboard objectives add bestParkourTime dummy
+
+#> Lobby entities
 execute unless entity @e[type=marker,tag=parkourStart] run summon marker -73 -22 -1 {Tags:["parkourStart"]}
 execute unless entity @e[type=marker,tag=parkourEnd] run summon marker -71 2 -4 {Tags:["parkourEnd"]}
+execute as @e[type=armor_stand,tag=TutorialAS,tag=CannonTutorial,limit=1] run tp @s -38.5 -23.0 -17.5
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
@@ -95,6 +98,7 @@ team modify Orange collisionRule never
 team modify Spectator collisionRule never
 team modify NoName collisionRule never
 team modify NoName nametagVisibility never
+
 #> Static scores
 scoreboard players set $10 CmdData 10
 scoreboard players set $1200 CmdData 1200
