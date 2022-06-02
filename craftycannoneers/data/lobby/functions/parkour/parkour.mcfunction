@@ -24,6 +24,9 @@ execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound minecraft:enti
 execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 1.3
 execute as @a[team=Lobby,tag=finishedParkour] at @s run particle firework ~ ~1 ~ 0 0 0 0.1 100 force @s
 
+#Store in leaderboard
+execute as @a[team=Lobby,tag=finishedParkour] if score @e[type=area_effect_cloud,tag=ParkourTime,limit=1] bestParkourTime > @s finalParkourTime at @s run function lobby:parkour/updatelb
+
 #First time completion
 execute as @a[team=Lobby,tag=finishedParkour,tag=!firstParkour] run scoreboard players operation @s bestParkourTime = @s finalParkourTime
 execute as @a[team=Lobby,tag=finishedParkour,tag=!firstParkour] run scoreboard players operation @s bestParkourMins = @s parkourMins
@@ -38,14 +41,6 @@ execute as @a[team=Lobby,tag=finishedParkour,tag=firstParkour] if score @s final
 execute as @a[team=Lobby,tag=finishedParkour,tag=firstParkour] if score @s finalParkourTime < @s bestParkourTime run scoreboard players operation @s bestParkourDeci = @s parkourDeci
 execute as @a[team=Lobby,tag=finishedParkour,tag=firstParkour] if score @s finalParkourTime < @s bestParkourTime run scoreboard players operation @s bestParkourDeci2 = @s parkourDeci2
 execute as @a[team=Lobby,tag=finishedParkour,tag=firstParkour] if score @s finalParkourTime < @s bestParkourTime run scoreboard players operation @s bestParkourTime = @s finalParkourTime
-
-#Store in leaderboard
-execute as @a[team=Lobby,tag=finishedParkour] if score @e[type=area_effect_cloud,tag=ParkourTime,limit=1] bestParkourTime > @s finalParkourTime at @s run function lobby:parkour/updatelb
-
-#Remove tags
-execute as @a[team=Lobby,tag=finishedParkour] run tag @s add firstParkour
-execute as @a[team=Lobby,tag=finishedParkour] run tag @s remove inParkour
-execute as @a[team=Lobby,tag=finishedParkour] run tag @s remove finishedParkour
 
 ##Scoreboard timer
 scoreboard players add @a[team=Lobby,tag=inParkour] finalParkourTime 1
@@ -64,6 +59,11 @@ execute as @a[team=Lobby,tag=inParkour] run scoreboard players operation @s park
 scoreboard players add @a[team=Lobby,tag=inParkour] parkourDeci2 5
 scoreboard players set @a[team=Lobby,tag=inParkour,scores={parkourDeci2=10}] parkourDeci2 0
 
+#Remove tags
+execute as @a[team=Lobby,tag=finishedParkour] run tag @s add firstParkour
+execute as @a[team=Lobby,tag=finishedParkour] run tag @s remove inParkour
+execute as @a[team=Lobby,tag=finishedParkour] run tag @s remove finishedParkour
+
 ##Reset time
 tag @a[team=Lobby,tag=inParkour,tag=onResetPlate] remove onResetPlate
 execute as @a[team=Lobby,tag=inParkour] at @s if entity @s[x=-73,y=-22,z=-1,dx=0,dy=0,dz=0] run tag @s add onResetPlate
@@ -72,6 +72,7 @@ scoreboard players set @a[team=Lobby,tag=inParkour,tag=!timeReset,tag=onResetPla
 scoreboard players set @a[team=Lobby,tag=inParkour,tag=!timeReset,tag=onResetPlate] parkourDeci 0
 scoreboard players set @a[team=Lobby,tag=inParkour,tag=!timeReset,tag=onResetPlate] parkourDeci2 0
 scoreboard players set @a[team=Lobby,tag=inParkour,tag=!timeReset,tag=onResetPlate] parkourTimer 0
+scoreboard players set @a[team=Lobby,tag=inParkour,tag=!timeReset,tag=onResetPlate] finalParkourTime 0
 scoreboard players set @a[team=Lobby,tag=inParkour,tag=!timeReset,tag=onResetPlate] checkpoint 0
 tag @a[team=Lobby,tag=inParkour,tag=!timeReset,tag=onResetPlate] add timeReset
 tag @a[team=Lobby,tag=inParkour,tag=timeReset,tag=!onResetPlate] remove timeReset
