@@ -64,7 +64,7 @@ execute as @a[team=Lobby,tag=inParkour] run scoreboard players operation @s park
 scoreboard players add @a[team=Lobby,tag=inParkour] parkourDeci2 5
 scoreboard players set @a[team=Lobby,tag=inParkour,scores={parkourDeci2=10}] parkourDeci2 0
 
-##Reset time TODO
+##Reset time
 tag @a[team=Lobby,tag=inParkour,tag=onResetPlate] remove onResetPlate
 execute as @a[team=Lobby,tag=inParkour] at @s if entity @s[x=-73,y=-22,z=-1,dx=0,dy=0,dz=0] run tag @s add onResetPlate
 scoreboard players set @a[team=Lobby,tag=inParkour,tag=!timeReset,tag=onResetPlate] parkourSecs 0
@@ -94,6 +94,7 @@ item replace entity @a[team=Lobby,tag=inParkour,nbt=!{Inventory:[{id:"minecraft:
 effect clear @a[team=!Lobby,tag=inParkour] invisibility
 tag @a[team=!Lobby,tag=inParkour] remove inParkour
 
+#### TODO IMPROVE
 #Exit parkour if you fall on the ground
 execute as @a[team=Lobby,tag=inParkour] at @s if block ~ ~-1 ~ black_concrete run tag @s remove inParkour
 execute as @a[team=Lobby,tag=inParkour] at @s if block ~-0.3 ~-1 ~ black_concrete run tag @s remove inParkour
