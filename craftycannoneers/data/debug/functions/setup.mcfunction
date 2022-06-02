@@ -12,6 +12,8 @@ gamerule doMobLoot true
 gamerule naturalRegeneration false
 execute unless score $gamestate CmdData matches 2 run gamerule fallDamage false
 
+setblock -74 -24 1 minecraft:oak_wall_sign
+
 #> Scoreboards
 scoreboard objectives add RNGscore dummy
 scoreboard objectives add RNGmax dummy
