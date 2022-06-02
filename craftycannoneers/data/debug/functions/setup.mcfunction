@@ -12,8 +12,6 @@ gamerule doMobLoot true
 gamerule naturalRegeneration false
 execute unless score $gamestate CmdData matches 2 run gamerule fallDamage false
 
-setblock -74 -24 1 minecraft:oak_wall_sign
-
 #> Scoreboards
 scoreboard objectives add RNGscore dummy
 scoreboard objectives add RNGmax dummy
@@ -109,6 +107,19 @@ scoreboard players set $2 CmdData 2
 scoreboard players set $60 CmdData 60
 
 #> Signs
-setblock -49 -28 -3 minecraft:oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}',Text4:'{"text":""}'}
-setblock -49 -28 3 minecraft:oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}',Text4:'{"text":""}'}
-setblock -44 -28 0 minecraft:oak_wall_sign[facing=west,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger startgame"},"text":""}',Text2:'{"color":"#00CC00","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FF55","text":"Start"},{"color":"#00CC00","text":" the game!"}],"text":""}',Text4:'{"text":""}'}
+setblock -49 -28 -3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}',Text4:'{"text":""}'}
+setblock -49 -28 3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}',Text4:'{"text":""}'}
+setblock -44 -28 0 oak_wall_sign[facing=west,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger startgame"},"text":""}',Text2:'{"color":"#00CC00","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FF55","text":"Start"},{"color":"#00CC00","text":" the game!"}],"text":""}',Text4:'{"text":""}'}
+setblock -74 -24 1 oak_wall_sign
+
+#> Other lobby blocks
+setblock -48 -24 14 creeper_head
+setblock -48 -25 13 creeper_head
+setblock -50 -25 7 creeper_head
+setblock -58 -25 -7 creeper_head
+setblock -56 -25 -6 creeper_head
+setblock -56 -25 -8 creeper_head
+setblock -44 -26 -8 creeper_head
+fill -39 -22 -18 -38 -22 -18 creeper_head
+fill -39 -23 -18 -38 -23 -18 barrier
+setblock -40 -23 -18 end_stone_brick_wall
