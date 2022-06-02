@@ -107,8 +107,11 @@ scoreboard players set $2 CmdData 2
 scoreboard players set $60 CmdData 60
 
 #> Signs
+setblock -49 -28 -3 air
 setblock -49 -28 -3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}',Text4:'{"text":""}'}
+setblock -49 -28 3 air
 setblock -49 -28 3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}',Text4:'{"text":""}'}
+setblock -44 -28 0 air
 setblock -44 -28 0 oak_wall_sign[facing=west,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger startgame"},"text":""}',Text2:'{"color":"#00CC00","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FF55","text":"Start"},{"color":"#00CC00","text":" the game!"}],"text":""}',Text4:'{"text":""}'}
 setblock -74 -24 1 oak_wall_sign
 
