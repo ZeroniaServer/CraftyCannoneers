@@ -49,6 +49,7 @@ scoreboard objectives add walk minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add sprint minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add crouch minecraft.custom:minecraft.crouch_one_cm
 scoreboard objectives add jump minecraft.custom:minecraft.jump
+scoreboard objectives add click minecraft.used:minecraft.carrot_on_a_stick
 
 #> Parkour
 scoreboard objectives add parkourMins dummy

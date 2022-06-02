@@ -4,6 +4,8 @@
 
 ##Start parkour
 execute as @a[team=Lobby,tag=!inParkour] at @s positioned ~ ~1 ~ if entity @e[type=marker,tag=parkourStart,limit=1,distance=..1.2] run tag @s add startParkour
+execute as @a[team=Lobby,tag=startParkour] run item replace entity @s hotbar.3 with carrot_on_a_stick{display:{Name:'{"text":"Restart Parkour","color":"green","bold":true,"italic":false}'},Unbreakable:1b,CustomModelData:1,Restart:1b,NoDrop:1b,HideFlags:127}
+execute as @a[team=Lobby,tag=startParkour] run item replace entity @s hotbar.5 with carrot_on_a_stick{display:{Name:'{"text":"Quit Parkour","color":"red","bold":true,"italic":false}'},Unbreakable:1b,CustomModelData:2,Quit:1b,NoDrop:1b,HideFlags:127}
 execute as @a[team=Lobby,tag=startParkour] run tellraw @s [{"text":"Parkour Run Started!","color":"dark_green","bold":true}]
 execute as @a[team=Lobby,tag=startParkour] at @s run playsound minecraft:entity.firework_rocket.twinkle_far master @s ~ ~ ~ 1 1
 execute as @a[team=Lobby,tag=startParkour] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 1 1.3
@@ -18,11 +20,23 @@ execute as @a[team=Lobby,tag=finishedParkour,scores={parkourSecs=10..,parkourMin
 execute as @a[team=Lobby,tag=finishedParkour,scores={parkourSecs=..9,parkourMins=10..}] run tellraw @a[team=!Purple,team=!Orange] ["",{"selector":"@s"},{"text":" completed the Parkour in ","color":"dark_green"},{"score":{"name":"@s","objective":"parkourMins"},"color":"green","bold":true},{"text":":0","color":"green","bold":true},{"score":{"name":"@s","objective":"parkourSecs"},"color":"green","bold":true},{"text":".","color":"green","bold":true},{"score":{"name":"@s","objective":"parkourDeci"},"color":"green","bold":true},{"score":{"name":"@s","objective":"parkourDeci2"},"color":"green","bold":true},{"text":"!","color":"dark_green"}]
 execute as @a[team=Lobby,tag=finishedParkour,scores={parkourSecs=10..,parkourMins=10..}] run tellraw @a[team=!Purple,team=!Orange] ["",{"selector":"@s"},{"text":" completed the Parkour in ","color":"dark_green"},{"score":{"name":"@s","objective":"parkourMins"},"color":"green","bold":true},{"text":":","color":"green","bold":true},{"score":{"name":"@s","objective":"parkourSecs"},"color":"green","bold":true},{"text":".","color":"green","bold":true},{"score":{"name":"@s","objective":"parkourDeci"},"color":"green","bold":true},{"score":{"name":"@s","objective":"parkourDeci2"},"color":"green","bold":true},{"text":"!","color":"dark_green"}]
 
+##Controls
+execute as @a[team=Lobby,tag=inParkour,scores={click=1..},predicate=lobby:parkourrestart] run tag @s add RestartParkour
+execute as @a[team=Lobby,tag=inParkour,scores={click=1..},predicate=lobby:parkourquit] run tag @s add CancelParkour
+scoreboard players reset @a[scores={click=1..}] click
+
+execute as @a[team=Lobby,tag=RestartParkour] at @s run tp @s @s
+execute as @a[team=Lobby,tag=RestartParkour] at @s run tp @s -71 -21 -1 90 0
+execute as @a[team=Lobby,tag=RestartParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.2
+execute as @a[team=Lobby,tag=RestartParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 0.8
+tag @a[team=Lobby,tag=RestartParkour] remove RestartParkour
+
 #Visual/Sound effects
 execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound minecraft:entity.firework_rocket.twinkle_far master @s ~ ~ ~ 1 1
 execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 1 1.1
 execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 1.3
 execute as @a[team=Lobby,tag=finishedParkour] at @s run particle firework ~ ~1 ~ 0 0 0 0.1 100 force @s
+execute as @a[team=Lobby,tag=finishedParkour] run clear @s carrot_on_a_stick
 
 #First time completion
 execute as @a[team=Lobby,tag=finishedParkour,tag=!firstParkour] run scoreboard players operation @s bestParkourTime = @s finalParkourTime
@@ -41,7 +55,6 @@ execute as @a[team=Lobby,tag=finishedParkour,tag=firstParkour] if score @s final
 
 #Store in leaderboard
 execute as @a[team=Lobby,tag=finishedParkour] if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime > @s finalParkourTime at @s run function lobby:parkour/updatelb
-
 
 ##Scoreboard timer
 scoreboard players add @a[team=Lobby,tag=inParkour] finalParkourTime 1
@@ -95,12 +108,13 @@ tag @a[team=!Lobby,tag=inParkour] remove inParkour
 
 #Exit parkour if you fall on the ground
 execute positioned -73 -22 -1 as @a[team=Lobby,tag=inParkour,distance=5..] at @s unless block ~ ~-1 ~ #lobby:parkourblocks run tag @s add CancelParkour
-tag @a[tag=CancelParkour] remove inParkour
-execute as @a[tag=CancelParkour] at @s run tp @s @s
-execute as @a[tag=CancelParkour] at @s run tp @s -71 -21 -1 90 0
-execute as @a[tag=CancelParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.2
-execute as @a[tag=CancelParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 0.8
-tag @a[tag=CancelParkour] remove CancelParkour
+tag @a[team=Lobby,tag=CancelParkour] remove inParkour
+execute as @a[team=Lobby,tag=CancelParkour] at @s run tp @s @s
+execute as @a[team=Lobby,tag=CancelParkour] at @s run tp @s -71 -21 -1 90 0
+execute as @a[team=Lobby,tag=CancelParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.2
+execute as @a[team=Lobby,tag=CancelParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 0.8
+execute as @a[team=Lobby,tag=CancelParkour] at @s run clear @s carrot_on_a_stick
+tag @a[team=Lobby,tag=CancelParkour] remove CancelParkour
 
 ##Reset objectives/tags for non-parkour players
 scoreboard players reset @a[tag=!inParkour] parkourTimer
@@ -111,3 +125,5 @@ scoreboard players reset @a[tag=!inParkour] parkourDeci2
 scoreboard players reset @a[tag=!inParkour] finalParkourTime
 tag @a[tag=!inParkour] remove onResetPlate
 tag @a[tag=!inParkour] remove timeReset
+tag @a[tag=!inParkour] remove CancelParkour
+tag @a[tag=!inParkour] remove RestartParkour
