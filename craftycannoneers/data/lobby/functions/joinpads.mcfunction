@@ -31,6 +31,7 @@ execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] run te
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] run tellraw @a ["",{"selector":"@s","color":"blue"},{"text":" joined the ","color":"dark_aqua"},{"text":"Purple","color":"dark_purple"},{"text":" team! A late arrival, unfortunately.","color":"dark_aqua"}]
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] run tellraw @s ["",{"text":"You can take off your ","color":"aqua","italic":true},{"text":"Pirate Hat","bold":true,"color":"dark_purple"},{"text":" to leave the game!","color":"aqua","italic":true}]
 execute as @a[tag=JoinPurple] at @s run tp @s @s
+execute as @a[tag=JoinPurple] run title @s times 0 50 15
 execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] at @s run tp @s -46 -28.5 2 -180 0
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] at @s run tp @s 52 -26 -55 -90 0
 execute as @a[tag=JoinPurple] at @s run playsound minecraft:block.beehive.enter master @a ~ ~ ~ 1 1
@@ -42,11 +43,11 @@ execute as @a[tag=JoinPurple] run tag @s remove JoinPurple
 execute if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] title ["",{"text":"Team Full!","color":"red","bold":true}]
 execute if score $InPurple CmdData >= $MaxTeamSize CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] subtitle ["",{"text":"Join ","color":"dark_aqua","bold":false},{"text":"Orange","color":"gold","bold":true},{"text":" instead.","color":"dark_aqua","bold":false}]
 execute if score $InPurple CmdData >= $MaxTeamSize CmdData if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] subtitle ["",{"text":"Feel free to spectate this game instead.","color":"gray","bold":false}]
-execute if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] times 5 30 5
+execute if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] times 0 30 5
 execute if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run tag @a[distance=..1,team=Lobby,tag=!tryJoinPurple] add tryJoinPurple
 execute if score $InPurple CmdData > $InOrange CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] title ["",{"text":"Team Imbalanced!","color":"red","bold":true}]
 execute if score $InPurple CmdData > $InOrange CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] subtitle ["",{"text":"Join ","color":"dark_aqua","bold":false},{"text":"Orange","color":"gold","bold":true},{"text":" instead.","color":"dark_aqua","bold":false}]
-execute if score $InPurple CmdData > $InOrange CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] times 5 30 5
+execute if score $InPurple CmdData > $InOrange CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinPurple] times 0 30 5
 execute if score $InPurple CmdData > $InOrange CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run tag @a[distance=..1,team=Lobby,tag=!tryJoinPurple] add tryJoinPurple
 execute as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run tag @a[distance=2..,team=Lobby] remove tryJoinPurple
 
@@ -56,6 +57,7 @@ execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] run te
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] run tellraw @a ["",{"selector":"@s","color":"blue"},{"text":" joined the ","color":"dark_aqua"},{"text":"Orange","color":"gold"},{"text":" team! A late arrival, unfortunately.","color":"dark_aqua"}]
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] run tellraw @s[team=Orange] ["",{"text":"You can take off your ","color":"aqua","italic":true},{"text":"Pirate Hat","bold":true,"color":"gold"},{"text":" to leave the game!","color":"aqua","italic":true}]
 execute as @a[tag=JoinOrange] at @s run tp @s @s
+execute as @a[tag=JoinOrange] run title @s times 0 50 15
 execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] at @s run tp @s -46 -28.5 -2 0 0
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] at @s run tp @s 88 -26 55 90 0
 execute as @a[tag=JoinOrange] at @s run playsound minecraft:block.beehive.enter master @a ~ ~ ~ 1 1
@@ -67,11 +69,11 @@ execute as @a[tag=JoinOrange] run tag @s remove JoinOrange
 execute if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] title ["",{"text":"Team Full!","color":"red","bold":true}]
 execute if score $InOrange CmdData >= $MaxTeamSize CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] subtitle ["",{"text":"Join ","color":"dark_aqua","bold":false},{"text":"Purple","color":"dark_purple","bold":true},{"text":" instead.","color":"dark_aqua","bold":false}]
 execute if score $InOrange CmdData >= $MaxTeamSize CmdData if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] subtitle ["",{"text":"Feel free to spectate this game instead.","color":"gray","bold":false}]
-execute if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] times 5 30 5
+execute if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] times 0 30 5
 execute if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run tag @a[distance=..1,team=Lobby,tag=!tryJoinOrange] add tryJoinOrange
 execute if score $InOrange CmdData > $InPurple CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] title ["",{"text":"Team Imbalanced!","color":"red","bold":true}]
 execute if score $InOrange CmdData > $InPurple CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] subtitle ["",{"text":"Join ","color":"dark_aqua","bold":false},{"text":"Purple","color":"dark_purple","bold":true},{"text":" instead.","color":"dark_aqua","bold":false}]
-execute if score $InOrange CmdData > $InPurple CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] times 5 30 5
+execute if score $InOrange CmdData > $InPurple CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run title @a[distance=..1,team=Lobby,tag=!tryJoinOrange] times 0 30 5
 execute if score $InOrange CmdData > $InPurple CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run tag @a[distance=..1,team=Lobby,tag=!tryJoinOrange] add tryJoinOrange
 execute as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run tag @a[distance=2..,team=Lobby] remove tryJoinOrange
 
