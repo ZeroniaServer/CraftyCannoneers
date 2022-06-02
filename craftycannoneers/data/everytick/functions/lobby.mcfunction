@@ -5,6 +5,7 @@ effect give @a[team=Lobby,tag=hasMoved] jump_boost 1000000 255 true
 effect give @a[team=Lobby] fire_resistance 1000000 100 true
 effect give @a[team=Lobby] water_breathing 1000000 255 true
 effect give @a[team=Lobby] weakness 1000000 255 true
+spawnpoint @a[team=Lobby] -55 -21 0 -90
 
 function lobby:parkour/parkour
 
