@@ -7,9 +7,8 @@ function game:ingame/boat
 function game:ingame/harpoon
 function tutorial:showtip
 
-execute unless entity @e[type=slime,tag=Weakpoint,tag=Orange] run function game:shipweakpoint/spawnnewpurple
-execute unless entity @e[type=slime,tag=Weakpoint,tag=Purple] run function game:shipweakpoint/spawnneworange
-execute unless entity @e[type=marker,tag=WeakpointLoc] run function game:shipweakpoint/weakpointloc
+execute unless entity @e[type=slime,tag=Weakpoint,tag=Orange] if entity @e[type=marker,tag=WeakpointLoc,tag=Orange] run function game:shipweakpoint/spawnnewpurple
+execute unless entity @e[type=slime,tag=Weakpoint,tag=Purple] if enitty @e[type=marker,tag=WeakpointLoc,tag=Purple] run function game:shipweakpoint/spawnneworange
 
 #> Boat specific effects
 execute as @a[team=Orange,predicate=game:onorange,tag=!onboatregen] run effect give @s regeneration 1000000 1 true
