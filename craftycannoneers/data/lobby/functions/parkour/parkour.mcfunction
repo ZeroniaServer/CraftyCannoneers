@@ -98,7 +98,7 @@ scoreboard players set @a[team=Lobby,tag=inParkour,tag=!timeReset,tag=onResetPla
 scoreboard players set @a[team=Lobby,tag=inParkour,tag=!timeReset,tag=onResetPlate] parkourTimer 0
 scoreboard players set @a[team=Lobby,tag=inParkour,tag=!timeReset,tag=onResetPlate] finalParkourTime 0
 scoreboard players set @a[team=Lobby,tag=inParkour,tag=!timeReset,tag=onResetPlate] checkpoint 0
-tellraw @a[team=Lobby,tag=inParkour,tag=!startParkour,tag=!timeReset,tag=onResetPlate] {"text":"Parkour time reset.","color":"dark_green","italic":true}
+tellraw @a[team=Lobby,tag=inParkour,tag=!startParkour,tag=!timeReset,tag=onResetPlate] {"text":"Parkour Time reset.","color":"dark_green","italic":true}
 execute as @a[team=Lobby,tag=startParkour] run tag @s remove startParkour
 tag @a[team=Lobby,tag=inParkour,tag=!timeReset,tag=onResetPlate] add timeReset
 tag @a[team=Lobby,tag=inParkour,tag=timeReset,tag=!onResetPlate] remove timeReset
