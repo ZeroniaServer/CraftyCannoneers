@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "team": "Orange"
+        },
+        "items": [
+          {
+            "items": [
+              "minecraft:snowball"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "game:clearrock"
+  }
+}
