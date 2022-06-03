@@ -22,8 +22,12 @@ execute as @a[team=Lobby,tag=finishedParkour,scores={parkourSecs=..9,parkourMins
 execute as @a[team=Lobby,tag=finishedParkour,scores={parkourSecs=10..,parkourMins=10..}] run tellraw @a[team=!Purple,team=!Orange] ["",{"selector":"@s"},{"text":" completed the Parkour in ","color":"dark_green"},{"score":{"name":"@s","objective":"parkourMins"},"color":"green","bold":true},{"text":":","color":"green","bold":true},{"score":{"name":"@s","objective":"parkourSecs"},"color":"green","bold":true},{"text":".","color":"green","bold":true},{"score":{"name":"@s","objective":"parkourDeci"},"color":"green","bold":true},{"score":{"name":"@s","objective":"parkourDeci2"},"color":"green","bold":true},{"text":"!","color":"dark_green"}]
 
 ##Controls
-execute as @a[team=Lobby,tag=inParkour,scores={click=1..},predicate=lobby:parkourrestart] run tag @s add RestartParkour
+scoreboard players add @a clickcooldown 0
+execute as @a[team=Lobby,tag=inParkour,scores={click=1..,clickcooldown=0},predicate=lobby:parkourrestart] run tag @s add RestartParkour
 execute as @a[team=Lobby,tag=inParkour,scores={click=1..},predicate=lobby:parkourquit] run tag @s add CancelParkour
+execute as @a[scores={clickcooldown=5..}] run scoreboard players set @s clickcooldown 0
+execute as @a[scores={clickcooldown=1..}] run scoreboard players add @s clickcooldown 1
+scoreboard players set @a[scores={click=1..}] clickcooldown 1
 scoreboard players reset @a[scores={click=1..}] click
 
 execute as @a[team=Lobby,tag=RestartParkour] at @s run tp @s @s
