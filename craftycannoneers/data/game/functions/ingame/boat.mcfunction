@@ -79,8 +79,8 @@ execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2,tag=!InBubble] 
 scoreboard players add @a[tag=InBubble] bubblewarn 1
 scoreboard players add @a[tag=!InBubble,scores={bubblewarn=1..}] bubblewarn 1
 execute as @a[tag=InBubble,scores={bubblewarn=3}] at @s run playsound minecraft:block.bubble_column.upwards_inside master @s ~ ~ ~ 1 0.8
-execute as @a[tag=InBubble,scores={bubblewarn=10}] at @s run playsound minecraft:block.bubble_column.whirlpool_inside master @s ~ ~ ~ 1 0.8
-execute as @a[tag=InBubble,scores={bubblewarn=10}] at @s run tellraw @s {"text":"A bubble column blocks your path...","color":"aqua"}
+execute as @a[tag=InBubble,scores={bubblewarn=15}] at @s run playsound minecraft:block.bubble_column.whirlpool_inside master @s ~ ~ ~ 1 0.8
+execute as @a[tag=InBubble,scores={bubblewarn=15}] at @s run tellraw @s {"text":"A bubble column blocks your path...","color":"aqua"}
 scoreboard players set @a[tag=InBubble,scores={bubblewarn=60..}] bubblewarn 8
 scoreboard players reset @a[tag=!InBubble,scores={bubblewarn=60..}] bubblewarn
 tag @a[tag=InBubble,scores={bubblewarn=30..}] remove InBubble
