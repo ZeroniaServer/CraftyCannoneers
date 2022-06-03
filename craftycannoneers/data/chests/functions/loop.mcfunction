@@ -3,8 +3,8 @@ execute as @e[type=armor_stand,tag=NewChest] unless score @s CmdData matches 31.
 execute as @e[type=armor_stand,tag=NewChest,scores={CmdData=1..30}] at @s run tp @s ~ ~0.033 ~
 execute as @e[type=armor_stand,tag=NewChest,scores={CmdData=1..30}] at @s run particle block sand ~ ~ ~ 0 0 0 0.1 5 force
 execute as @e[type=armor_stand,tag=NewChest,scores={CmdData=1..30}] at @s run particle block dirt ~ ~ ~ 0 0 0 0.1 5 force
-execute as @e[type=armor_stand,tag=NewChest,scores={CmdData=1..30}] at @s run playsound minecraft:block.sand.break master @a ~ ~ ~ 1 1
-execute as @e[type=armor_stand,tag=NewChest,scores={CmdData=1}] at @s run playsound minecraft:block.gravel.break master @a ~ ~ ~ 1.2 0.9
+execute as @e[type=armor_stand,tag=NewChest,scores={CmdData=1..30}] at @s run playsound chestrise master @a ~ ~ ~ 1 1
+execute as @e[type=armor_stand,tag=NewChest,scores={CmdData=1}] at @s run playsound chestspawn master @a ~ ~ ~ 1.2 0.9
 
 #> Particles
 #Common
