@@ -36,7 +36,8 @@ execute if score $EndTime CmdData matches 1 run function game:mvpstats/check
 execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] resistance 1000000 100 true
 execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] instant_health 1000000 100 true
 execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] regeneration 1000000 100 true
-execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] weakness 1000000 100 true
+execute if score $EndTime CmdData matches 1.. if score $WinningTeam CmdData matches 1 run effect give @a[team=Purple] weakness 1000000 100 true
+execute if score $EndTime CmdData matches 1.. if score $WinningTeam CmdData matches 2 run effect give @a[team=Orange] weakness 1000000 100 true
 execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] fire_resistance 1000000 100 true
 execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] conduit_power 1000000 100 true
 execute if score $EndTime CmdData matches 1.. run gamerule fallDamage false
