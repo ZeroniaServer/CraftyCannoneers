@@ -15,7 +15,7 @@ execute as @s[scores={PowerM=10}] at @s run tp @s ^ ^ ^0.0015
 execute as @s[scores={PowerM=11}] at @s run tp @s ^ ^ ^0.0016
 execute as @s[scores={PowerM=12}] at @s run tp @s ^ ^ ^0.0017
 execute as @s[scores={PowerM=13}] at @s run tp @s ^ ^ ^0.0018
-execute as @s[scores={PowerM=14}] at @s run tp @s ^ ^ ^0.0019
+execute as @s[scores={PowerM=14..}] at @s run tp @s ^ ^ ^0.0019
 
 execute store result score @s dx run data get entity @s Pos[0] 1000000
 execute store result score @s dy run data get entity @s Pos[1] 1000000
