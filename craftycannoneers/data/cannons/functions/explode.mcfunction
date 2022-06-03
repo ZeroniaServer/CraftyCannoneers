@@ -1,7 +1,7 @@
 execute as @s[tag=!Hit1] at @s unless entity @s[predicate=cannons:safezones/island] run fill ~ ~-1 ~ ~ ~-1 ~ air replace #game:shipblocks
 execute as @s[tag=!Hit1] at @s unless entity @s[predicate=cannons:safezones/island] run fill ^1 ^1 ^1 ^-1 ^-1 ^1 air replace #game:shipblocks
 
-execute at @s[tag=!BouncyCannonball] run tp @s ^ ^ ^1
+execute at @s[tag=!BouncyCannonball,tag=!PlayerCannonball] run tp @s ^ ^ ^1
 #>Safezone check
 #Island
 execute at @s if entity @s[predicate=cannons:safezones/island] run tag @s add InSafezone
