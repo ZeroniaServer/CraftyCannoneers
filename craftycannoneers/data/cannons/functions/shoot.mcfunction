@@ -211,10 +211,13 @@ execute as @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/ocean]
 execute as @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/ocean] at @s run playsound minecraft:entity.player.splash.high_speed master @a ~ ~ ~ 2 1.4
 execute as @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/ocean] at @s run playsound minecraft:block.bubble_column.whirlpool_ambient master @a ~ ~ ~ 2 1.2
 execute as @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/ocean] at @s run kill @s
+execute as @e[type=armor_stand,tag=cannonball,tag=!PlayerCannonball,tag=!TracerCannonball] at @s if block ~ ~ ~ #game:nonsolids run function cannons:explode
 execute as @e[type=armor_stand,tag=cannonball,tag=!PlayerCannonball,tag=!TracerCannonball] at @s unless block ~ ~-1 ~ air run function cannons:explode
 execute as @e[type=armor_stand,tag=cannonball,tag=!PlayerCannonball,tag=!TracerCannonball] at @s unless block ^ ^ ^1 air run function cannons:explode
+execute as @e[type=armor_stand,tag=cannonball,tag=PlayerCannonball,tag=!Hit] at @s if block ~ ~ ~ #game:nonsolids run function cannons:ejectplayer
 execute as @e[type=armor_stand,tag=cannonball,tag=PlayerCannonball,tag=!Hit] at @s unless block ~ ~-1 ~ air run function cannons:ejectplayer
 execute as @e[type=armor_stand,tag=cannonball,tag=PlayerCannonball,tag=!Hit] at @s unless block ^ ^ ^1 air run function cannons:ejectplayer
+execute as @e[type=armor_stand,tag=cannonball,tag=TracerCannonball] at @s if block ~ ~ ~ #game:nonsolids run function cannons:tracerhit
 execute as @e[type=armor_stand,tag=cannonball,tag=TracerCannonball] at @s unless block ~ ~-1 ~ air run function cannons:tracerhit
 execute as @e[type=armor_stand,tag=cannonball,tag=TracerCannonball] at @s unless block ^ ^ ^1 air run function cannons:tracerhit
 
