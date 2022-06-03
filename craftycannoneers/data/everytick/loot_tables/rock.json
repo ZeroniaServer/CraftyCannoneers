@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:snowball",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{NoDrop:1b,display:{Name:'[{\"text\":\"Rock.\",\"italic\":false,\"color\":\"red\"}]',Lore:['[{\"text\":\"Throw at player to insta-kill!\",\"italic\":false,\"color\":\"dark_red\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Okay not really... It just\",\"italic\":false,\"color\":\"gray\"}]','[{\"text\":\"gives you something to do\",\"italic\":false,\"color\":\"gray\"}]','[{\"text\":\"while you wait for the game\",\"italic\":false,\"color\":\"gray\"}]','[{\"text\":\"to start...\",\"italic\":false,\"color\":\"gray\"}]']}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
