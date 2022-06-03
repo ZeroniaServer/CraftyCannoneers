@@ -2,16 +2,16 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Fire In The Hole!",
+            "text": "This Is A Robbery!",
             "color": "aqua"
         },
         "description": {
-            "text": "Fire a Cannon by using Gunpowder and Cannonballs.",
+            "text": "Unlock the enemy team's Team Chest by using a Skeleton Key.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:diamond_hoe",
-            "nbt": "{CustomModelData:16}"
+            "item": "minecraft:ender_eye",
+            "nbt": "{CustomModelData:1}"
         },
         "frame": "task",
         "show_toast": true,
@@ -26,5 +26,5 @@
     "rewards": {
         "function": "tutorial:notify"
     },
-    "parent": "tutorial:tracer"
+    "parent": "tutorial:destroy_weakpoint"
 }

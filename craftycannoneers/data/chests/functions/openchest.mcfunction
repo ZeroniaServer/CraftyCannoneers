@@ -25,6 +25,7 @@ execute as @a[scores={openchest=14}] at @s run playsound key_turn master @a ~ ~ 
 execute as @a[scores={openchest=17}] at @s run playsound key_turn master @a ~ ~ ~ 0.5 1
 execute as @a[scores={openchest=20}] at @s run playsound key_turn master @a ~ ~ ~ 0.5 1.3
 execute as @a[scores={openchest=20}] at @s run playsound chestunlock master @a ~ ~ ~ 0.5 1.3
+execute as @a[scores={openchest=20}] at @s run advancement grant @s only tutorial:skeletonkey
 
 execute as @a[team=Purple,scores={openchest=20..}] at @s run tag @e[type=armor_stand,tag=orangechestdisplay,tag=!Unlocked] add Unlocked
 execute as @a[team=Orange,scores={openchest=20..}] at @s run tag @e[type=armor_stand,tag=purplechestdisplay,tag=!Unlocked] add Unlocked

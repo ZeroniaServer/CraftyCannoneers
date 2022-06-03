@@ -2,16 +2,16 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Fire In The Hole!",
+            "text": "Track And Trace",
             "color": "aqua"
         },
         "description": {
-            "text": "Fire a Cannon by using Gunpowder and Cannonballs.",
+            "text": "Use a Tracer Cannonball to find out where your next shot will land.",
             "color": "white"
         },
         "icon": {
             "item": "minecraft:diamond_hoe",
-            "nbt": "{CustomModelData:16}"
+            "nbt": "{CustomModelData:60}"
         },
         "frame": "task",
         "show_toast": true,
@@ -26,5 +26,5 @@
     "rewards": {
         "function": "tutorial:notify"
     },
-    "parent": "tutorial:tracer"
+    "parent": "tutorial:fill_gunpowder"
 }

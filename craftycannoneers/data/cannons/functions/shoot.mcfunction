@@ -65,6 +65,7 @@ execute as @a[tag=FillCB,tag=HoldPCB] at @s unless entity @e[type=armor_stand,ta
 execute as @a[tag=FillCB,tag=HoldPCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
 execute as @a[tag=FillCB,tag=HoldPCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 7
 #Tracer
+execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run advancement grant @s only tutorial:tracer
 execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
 execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedTCB
 execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
