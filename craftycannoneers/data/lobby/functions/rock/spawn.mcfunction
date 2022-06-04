@@ -1,5 +1,5 @@
 # summon temporary entity "in front of the player", if the player was standing at 0 0 0
-execute positioned 0.0 0 0.0 run summon marker ^ ^ ^1 {Tags:["direction"]}
+execute positioned 0.0 0 0.0 run summon marker ^ ^ ^2 {Tags:["direction"]}
 
 # summon the projectile entity
 execute anchored eyes positioned ^ ^ ^1 run summon llama_spit ~ ~ ~ {Tags:["rock"]}

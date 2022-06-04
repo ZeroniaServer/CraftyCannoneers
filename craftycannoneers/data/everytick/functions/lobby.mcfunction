@@ -8,6 +8,7 @@ effect give @a[team=Lobby] weakness 1000000 255 true
 spawnpoint @a[team=Lobby] -55 -21 0 -90
 
 function lobby:parkour/parkour
+function lobby:rock/rock
 
 execute as @a[tag=!hasMoved,scores={jump=1..}] run tag @s add hasMoved
 execute as @a[tag=!hasMoved,scores={walk=30..}] run tag @s add hasMoved
