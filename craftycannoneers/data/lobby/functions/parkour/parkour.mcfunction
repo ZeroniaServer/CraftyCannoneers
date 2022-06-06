@@ -64,7 +64,7 @@ execute as @a[team=Lobby,tag=finishedParkour,tag=firstParkour] if score @s final
 execute as @a[team=Lobby,tag=finishedParkour,tag=firstParkour] if score @s finalParkourTime < @s bestParkourTime run scoreboard players operation @s bestParkourTime = @s finalParkourTime
 
 #Store in leaderboard
-execute as @a[team=Lobby,tag=finishedParkour] if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime > @s finalParkourTime at @s run function lobby:parkour/updatelb
+execute as @a[team=Lobby,tag=finishedParkour] if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime > @s finalParkourTime run function lobby:parkour/updatelb
 
 ##Scoreboard timer
 scoreboard players add @a[team=Lobby,tag=inParkour] finalParkourTime 1
