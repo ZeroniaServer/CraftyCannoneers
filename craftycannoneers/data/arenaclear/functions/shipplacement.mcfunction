@@ -36,6 +36,11 @@ setblock 83 -23 52 end_stone_brick_wall[up=true]
 fill 83 -22 51 83 -22 50 creeper_head
 fill 83 -23 51 83 -23 50 barrier
 
+setblock 78 -26 51 dark_oak_door[facing=east,half=lower,hinge=left,open=true] destroy
+setblock 78 -25 51 dark_oak_door[facing=east,half=upper,hinge=left,open=true] destroy
+setblock 78 -26 59 dark_oak_door[facing=east,half=lower,hinge=right,open=true] destroy
+setblock 78 -25 59 dark_oak_door[facing=east,half=upper,hinge=right,open=true] destroy
+
 #Purple
 setblock 41 -38 -66 minecraft:structure_block[mode=load]{posX:0,mode:"LOAD",posY:1,posZ:0,name:"purpleship_2"}
 setblock 57 -38 -66 minecraft:structure_block[mode=load]{posX:0,mode:"LOAD",posY:1,posZ:0,name:"purpleship_1"}
@@ -73,6 +78,11 @@ fill 66 -31 -50 66 -31 -49 barrier
 setblock 57 -23 -52 end_stone_brick_wall[up=true]
 fill 57 -22 -51 57 -22 -50 creeper_head
 fill 57 -23 -51 57 -23 -50 barrier
+
+setblock 62 -26 -51 dark_oak_door[facing=west,half=lower,hinge=left,open=true] destroy
+setblock 62 -25 -51 dark_oak_door[facing=west,half=upper,hinge=left,open=true] destroy
+setblock 62 -26 -59 dark_oak_door[facing=west,half=lower,hinge=right,open=true] destroy
+setblock 62 -25 -59 dark_oak_door[facing=west,half=upper,hinge=right,open=true] destroy
 
 #Team chests
 #ORANGE

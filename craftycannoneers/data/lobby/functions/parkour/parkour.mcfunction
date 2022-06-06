@@ -64,7 +64,7 @@ execute as @a[team=Lobby,tag=finishedParkour,tag=firstParkour] if score @s final
 execute as @a[team=Lobby,tag=finishedParkour,tag=firstParkour] if score @s finalParkourTime < @s bestParkourTime run scoreboard players operation @s bestParkourTime = @s finalParkourTime
 
 #Store in leaderboard
-execute as @a[team=Lobby,tag=finishedParkour] if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime > @s finalParkourTime at @s run function lobby:parkour/updatelb
+execute as @a[team=Lobby,tag=finishedParkour] if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime > @s finalParkourTime run function lobby:parkour/updatelb
 
 ##Scoreboard timer
 scoreboard players add @a[team=Lobby,tag=inParkour] finalParkourTime 1
@@ -141,3 +141,7 @@ tag @a[tag=!inParkour] remove onResetPlate
 tag @a[tag=!inParkour] remove timeReset
 tag @a[tag=!inParkour] remove CancelParkour
 tag @a[tag=!inParkour] remove RestartParkour
+
+##Reset high score if necessary (TODO remove?)
+execute if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches ..0 run tellraw @a [{"text":"An error has occurred, so the Parkour leaderboard has been reset. If you see this message, ","color":"red"},{"text":"please report!","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"text":"Report on the Zeronia Discord Server","color":"white"}]}}]
+execute if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches ..0 run function lobby:parkour/resethighscore
