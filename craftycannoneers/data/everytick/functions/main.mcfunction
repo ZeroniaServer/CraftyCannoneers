@@ -59,6 +59,7 @@ scoreboard players reset @a[team=!Lobby,team=!Spectator,scores={drowning=1..},pr
 #Cannons
 function cannons:load
 function cannons:shoot
+function cannons:cannonclaim
 
 #Chests
 function chests:loop

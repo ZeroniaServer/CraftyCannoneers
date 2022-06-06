@@ -20,6 +20,8 @@ kill @e[type=trident]
 kill @e[type=armor_stand,tag=GasBubble]
 kill @e[type=armor_stand,tag=GasAS]
 kill @e[type=bat]
+kill @e[type=area_effect_cloud,tag=GPDispText]
+kill @e[type=area_effect_cloud,tag=CannonNametag]
 
 execute positioned 70 -28 -50 run function cannons:spawnpurple
 execute positioned 74 -28 -50 run function cannons:spawnpurple

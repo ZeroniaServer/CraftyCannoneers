@@ -26,7 +26,7 @@ scoreboard players add @a[tag=FillCB,tag=HoldBCB] MVPcannon 1
 scoreboard players add @a[tag=FillCB,tag=HoldPCB] MVPcannon 1
 
 #> Tutorial Advancement trigger
-execute as @a[tag=FillCB] unless entity @s[tag=!HoldCB,tag=!HoldFB,tag=!HoldCBC,tag=!GCB,tag=!HoldCCB,tag=!HoldBCB,tag=!HoldPCB] run advancement grant @s only tutorial:fire_cannon
+execute as @a[tag=FillCB] unless entity @s[tag=!HoldCB,tag=!HoldFB,tag=!HoldCBC,tag=!HoldGCB,tag=!HoldCCB,tag=!HoldBCB,tag=!HoldPCB] run advancement grant @s only tutorial:fire_cannon
 
 #> Fill Cannonball
 #Normal
@@ -92,6 +92,10 @@ tag @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..}] add FireCannon
 
 scoreboard players add @e[type=armor_stand,tag=FireCannon] cannonshot 1
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=1}] at @s run playsound cannonload master @a ~ ~ ~ 1 1
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=5}] at @s run scoreboard players set @s cannonclaim 91
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30,CmdData=8}] at @s run scoreboard players set @s cannonclaim 91
+execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonshot=30,CmdData=8}] at @s if score @s playerUUID matches 0 run scoreboard players reset @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] gpdisp_time
+execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonshot=30,CmdData=8}] at @s if score @s playerUUID matches 0 run scoreboard players reset @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] gpdisp_time
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=5}] at @s run playsound cannonprime master @a ~ ~ ~ 0.4 1.7
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=2}] at @s at @e[type=villager,tag=CannonVLeft,limit=1,sort=nearest,distance=..2] run particle soul_fire_flame ^ ^0.5 ^-0.2 .02 0.05 .02 .003 4 force
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=2}] at @s at @e[type=villager,tag=CannonVRight,limit=1,sort=nearest,distance=..2] run particle soul_fire_flame ^ ^0.5 ^-0.2 .02 0.05 .02 .003 4 force
@@ -169,6 +173,8 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run particle lava ^ ^1.1 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run playsound cannonshot master @a[tag=HoldTCB] ~ ~ ~ 0.7 2
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","TracerCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b}
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run tag @s add RecentTracer
+#execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run scoreboard players set @s[scores={cannonclaim=3..120}] cannonclaim 3
 execute as @e[type=armor_stand,tag=TracerCannonball,tag=!traceracc] run function cannons:traceraccuracy
 
 #Global
@@ -200,7 +206,7 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] unless e
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run function cannons:updategp
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run scoreboard players set @s CmdData 0
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s run tag @s remove FireCannon
-execute as @e[type=armor_stand,tag=!FireCannon,scores={cannonshot=30..}] at @s run scoreboard players reset @s playerUUID
+execute as @e[type=armor_stand,tag=!FireCannon,tag=!RecentTracer,scores={cannonshot=30..}] at @s run scoreboard players set @s playerUUID 0
 execute as @e[type=armor_stand,tag=!FireCannon,scores={cannonshot=30..}] at @s run scoreboard players reset @s cannonshot
 
 execute as @e[type=armor_stand,tag=Cannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 4 force

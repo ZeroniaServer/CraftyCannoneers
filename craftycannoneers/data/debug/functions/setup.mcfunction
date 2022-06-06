@@ -55,6 +55,7 @@ scoreboard objectives add throwsb minecraft.used:minecraft.snowball
 scoreboard objectives add gpdisp_time dummy
 scoreboard objectives add CannonID dummy
 scoreboard objectives add bounce dummy
+scoreboard objectives add cannonclaim dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
