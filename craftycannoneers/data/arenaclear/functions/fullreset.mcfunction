@@ -1,3 +1,5 @@
+scoreboard players set $current CannonID 0
+
 kill @e[type=wandering_trader,tag=Trader]
 kill @e[type=#game:cannon,tag=cannon]
 kill @e[type=armor_stand,tag=cannonball]

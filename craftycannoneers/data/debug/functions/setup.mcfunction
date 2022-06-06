@@ -52,6 +52,8 @@ scoreboard objectives add jump minecraft.custom:minecraft.jump
 scoreboard objectives add click minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add clickcooldown dummy
 scoreboard objectives add throwsb minecraft.used:minecraft.snowball
+scoreboard objectives add gpdisp_time dummy
+scoreboard objectives add CannonID dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
