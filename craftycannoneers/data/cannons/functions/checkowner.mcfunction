@@ -21,10 +21,10 @@ execute unless entity @e[type=armor_stand,tag=CurrentCheck] run tag @s remove Fi
 
 function cannons:unclaimmultiple
 
-scoreboard players set @e[tag=CurrentCheck,scores={cannonclaim=4..120}] cannonclaim 3
+scoreboard players set @e[type=armor_stand,tag=CurrentCheck,scores={cannonclaim=4..120}] cannonclaim 3
 
 
-tag @e[tag=CurrentCheck] remove CurrentCheck
+tag @e[type=armor_stand,tag=CurrentCheck] remove CurrentCheck
 
 scoreboard players reset $currentcannon playerUUID
 scoreboard players reset $currentcheck playerUUID
