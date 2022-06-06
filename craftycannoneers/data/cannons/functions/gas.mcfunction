@@ -7,6 +7,11 @@ execute as @e[type=armor_stand,tag=GasAS,scores={CmdData=1}] at @s run playsound
 execute as @e[type=armor_stand,tag=GasAS,scores={CmdData=6}] at @s run playsound minecraft:gasshot master @a ~ ~ ~ 1 1.3
 execute as @e[type=armor_stand,tag=GasAS,scores={CmdData=12}] at @s run playsound minecraft:gas master @a ~ ~ ~ 0.4 1.5
 scoreboard players set @e[type=armor_stand,tag=GasAS,scores={CmdData=13..}] CmdData 11
+execute as @e[type=marker,tag=GasCloud,scores={CmdData=1}] at @s run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b}
+execute as @e[type=marker,tag=GasCloud,scores={CmdData=1}] at @s run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b}
+execute as @e[type=marker,tag=GasCloud,scores={CmdData=1}] at @s run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b}
+execute as @e[type=marker,tag=GasCloud,scores={CmdData=1}] at @s run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b}
+execute as @e[type=marker,tag=GasCloud,scores={CmdData=1}] at @s run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b}
 
 execute as @e[type=armor_stand,tag=GasAS] at @s run particle dust 0 1 0.2 2 ~ ~1 ~ 1.2 0.5 1.3 0.2 9 force
 execute as @e[type=armor_stand,tag=GasAS] at @s run particle dust 0 1 0.6 2 ~ ~1 ~ 1 1 1 0.2 5 force
@@ -32,4 +37,25 @@ execute as @e[type=marker,tag=GasExplode] at @s run particle flash ~ ~ ~ 0.1 0.1
 execute as @e[type=marker,tag=GasExplode] at @s run particle large_smoke ~ ~ ~ 2 2 2 0.7 200 force
 execute as @e[type=marker,tag=GasExplode] at @s run particle lava ~ ~ ~ 1 1 1 1 60 force
 execute as @e[type=marker,tag=GasExplode] at @s run particle explosion_emitter ~ ~ ~ 1.5 1 1.5 1 5 force
+execute as @e[type=marker,tag=GasExplode] at @s run summon minecraft:lightning_bolt ~ ~300000 ~
+execute as @e[type=marker,tag=GasExplode] at @s run playsound gasexplode master @a ~ ~ ~ 4 1
+execute as @e[type=marker,tag=GasExplode] at @s run playsound gasexplode_distant master @a[distance=15..] ~ ~ ~ 8 1
 execute as @e[type=marker,tag=GasExplode] at @s run kill @s
+
+#> Bubbles
+scoreboard players add @e[type=bat,tag=GasBat] CmdData 1
+
+execute as @e[type=bat,tag=GasBat] at @s run particle soul ~ ~ ~ 0 0 0 0.03 1 force
+execute as @e[type=bat,tag=GasBat,scores={CmdData=15..}] at @s unless entity @e[type=armor_stand,tag=GasAS,distance=..3] unless entity @e[type=armor_stand,tag=GasBubble,tag=!New,distance=..2] run summon armor_stand ~ ~ ~ {Tags:["GasBubble","New"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:64}}],Silent:1b,Invulnerable:1b,DisabledSlots:4144959,Small:1b}
+execute as @e[type=armor_stand,tag=GasBubble,tag=New] at @s run tp @s @e[type=bat,tag=GasBat,limit=1,sort=nearest,distance=..2]
+execute as @e[type=bat,tag=GasBat,scores={CmdData=15..}] at @s unless entity @e[type=armor_stand,tag=GasAS,distance=..3] unless entity @e[type=armor_stand,tag=GasBubble,tag=!New,distance=..2] run kill @s
+tag @e[type=armor_stand,tag=GasBubble,tag=New] remove New
+scoreboard players add @e[type=armor_stand,tag=GasBubble,nbt={OnGround:1b}] CmdData 1
+execute as @e[type=armor_stand,tag=GasBubble,scores={CmdData=5}] at @s run data merge entity @s {NoGravity:1b,Marker:1b,Small:0b}
+execute as @e[type=armor_stand,tag=GasBubble,tag=!New,scores={CmdData=4..}] at @s run tp @s ~ ~0.01 ~
+execute as @e[type=armor_stand,tag=GasBubble,tag=!New,scores={CmdData=4..}] at @s run tp @s ^ ^ ^0.012
+execute as @e[type=armor_stand,tag=GasBubble] at @s run particle soul ~ ~0.7 ~ 0.3 0.3 0.3 0.03 1 force
+scoreboard players add @e[type=armor_stand,tag=GasBubble,tag=!New,scores={CmdData=4..}] CmdData 1
+
+execute as @e[type=armor_stand,tag=GasBubble,tag=!New,scores={CmdData=290}] run data merge entity @s {Small:1b}
+execute as @e[type=armor_stand,tag=GasBubble,tag=!New,scores={CmdData=300..}] run kill @s

@@ -21,7 +21,8 @@ execute at @s if entity @s[predicate=cannons:safezones/orange/4] run tag @s add 
 execute at @s if entity @s[predicate=cannons:safezones/orange/5] run tag @s add InSafezone
 
 #FIREBALL EFFECT
-execute as @s[tag=!InSafezone,tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run summon marker ^ ^-2 ^3 {Tags:["RingOfFire"]}
+execute as @s[tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run tag @e[type=armor_stand,tag=GasBubble,tag=!GasIgnite,distance=..6] add GasIgnite
+execute as @s[tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run summon marker ^ ^-2 ^3 {Tags:["RingOfFire"]}
 execute as @e[type=marker,tag=RingOfFire,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=HotCannonball,limit=1,sort=nearest,distance=..4] playerUUID
 execute as @e[type=marker,tag=RingOfFire,tag=!HasUUID] at @s run data modify entity @s CustomName set from entity @e[type=armor_stand,tag=HotCannonball,limit=1,sort=nearest,distance=..4] CustomName
 tag @e[type=marker,tag=RingOfFire,tag=!HasUUID] add HasUUID
