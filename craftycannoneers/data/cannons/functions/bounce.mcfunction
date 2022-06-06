@@ -17,16 +17,17 @@ execute as @s if entity @e[type=marker,tag=BounceRNG,scores={RNGscore=9}] at @s 
 kill @e[type=marker,tag=BounceRNG]
 
 scoreboard players add @s drag 4
-scoreboard players set @s gravity -400
+scoreboard players set @s gravity -300
 particle minecraft:sweep_attack ~ ~ ~ 1 0.1 1 0 8 force
 particle minecraft:cloud ~ ~ ~ 1 0.2 1 0.05 12 force
 
 execute as @s at @s run playsound bounce master @a ~ ~ ~ 2 1
 
-summon marker ~ ~ ~ {Tags:["ExplodeRNG"]}
-scoreboard players set @e[type=marker,tag=ExplodeRNG] RNGmax 100
-execute as @e[type=marker,tag=ExplodeRNG] store result score @s RNGscore run data get entity @s UUID[0]
-execute as @e[type=marker,tag=ExplodeRNG] run scoreboard players operation @s RNGscore %= @s RNGmax
+execute if score @s bounce matches 7.. run summon marker ~ ~ ~ {Tags:["ExplodeRNG"]}
+execute if score @s bounce matches 7.. run scoreboard players set @e[type=marker,tag=ExplodeRNG] RNGmax 100
+execute if score @s bounce matches 7.. as @e[type=marker,tag=ExplodeRNG] store result score @s RNGscore run data get entity @s UUID[0]
+execute if score @s bounce matches 7.. as @e[type=marker,tag=ExplodeRNG] run scoreboard players operation @s RNGscore %= @s RNGmax
+scoreboard players add @s bounce 1
 
 #bounce damage
 execute as @s[type=armor_stand,tag=!Hit2] unless entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] as @a[distance=..3] run tag @s add BouncyDamaged
