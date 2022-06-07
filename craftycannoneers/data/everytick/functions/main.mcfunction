@@ -4,21 +4,6 @@ function everytick:leavegame
 function everytick:nodrop
 function everytick:seagull
 
-execute unless block -43 -22 -14 minecraft:potted_fern run setblock -43 -22 -14 minecraft:potted_fern
-execute unless block -54 -23 4 minecraft:potted_fern run setblock -54 -23 4 minecraft:potted_fern
-execute as @a[team=Lobby] store result score @s slot run data get entity @s SelectedItemSlot
-#inventory 25 gets replaced for no reason, but somehow that fixes an issue with ghost items. Could've used any other non-hotbar slot. Idek.
-item replace entity @a[predicate=lobby:holdingfern] inventory.25 with air
-item replace entity @a[predicate=lobby:holdingfern,scores={slot=0}] hotbar.0 with air
-item replace entity @a[predicate=lobby:holdingfern,scores={slot=1}] hotbar.1 with air
-item replace entity @a[predicate=lobby:holdingfern,scores={slot=2}] hotbar.2 with air
-item replace entity @a[predicate=lobby:holdingfern,scores={slot=3}] hotbar.3 with air
-item replace entity @a[predicate=lobby:holdingfern,scores={slot=4}] hotbar.4 with air
-item replace entity @a[predicate=lobby:holdingfern,scores={slot=5}] hotbar.5 with air
-item replace entity @a[predicate=lobby:holdingfern,scores={slot=6}] hotbar.6 with air
-item replace entity @a[predicate=lobby:holdingfern,scores={slot=7}] hotbar.7 with air
-item replace entity @a[predicate=lobby:holdingfern,scores={slot=8}] hotbar.8 with air
-
 #Lobby water
 execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force
 execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run particle falling_water ~ ~ ~ 0.2 0.4 0.1 0.2 150 force

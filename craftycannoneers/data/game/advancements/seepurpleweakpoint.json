@@ -9,7 +9,8 @@
             ]
           },
           "player": {
-            "player": {
+            "type_specific": {
+              "type": "player",
               "looking_at": {
                 "type": "minecraft:slime",
                 "nbt": "{Tags:[\"Weakpoint\",\"Purple\"]}"
