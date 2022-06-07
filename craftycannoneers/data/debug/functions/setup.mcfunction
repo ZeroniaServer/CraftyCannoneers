@@ -56,6 +56,7 @@ scoreboard objectives add gpdisp_time dummy
 scoreboard objectives add CannonID dummy
 scoreboard objectives add bounce dummy
 scoreboard objectives add cannonclaim dummy
+scoreboard objectives add slot dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
