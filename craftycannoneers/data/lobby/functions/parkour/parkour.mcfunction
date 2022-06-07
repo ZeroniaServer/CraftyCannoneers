@@ -4,6 +4,7 @@
 
 ##Start parkour
 execute as @a[team=Lobby,tag=!inParkour] at @s positioned ~ ~1 ~ if entity @e[type=marker,tag=parkourStart,limit=1,distance=..1.3] run tag @s add startParkour
+execute as @a[team=Lobby,tag=startParkour] run function game:clearinventory
 execute as @a[team=Lobby,tag=startParkour] run item replace entity @s hotbar.3 with carrot_on_a_stick{display:{Name:'{"text":"Restart Parkour","color":"green","bold":true,"italic":false}'},Unbreakable:1b,CustomModelData:1,Restart:1b,NoDrop:1b,HideFlags:127}
 execute as @a[team=Lobby,tag=startParkour] run item replace entity @s hotbar.5 with carrot_on_a_stick{display:{Name:'{"text":"Quit Parkour","color":"red","bold":true,"italic":false}'},Unbreakable:1b,CustomModelData:2,Quit:1b,NoDrop:1b,HideFlags:127}
 execute as @a[team=Lobby,tag=startParkour] run tellraw @s [{"text":"Parkour Run Started!","color":"dark_green","bold":true}]
@@ -36,7 +37,8 @@ tag @a[team=Lobby,tag=RestartParkour] remove RestartParkour
 execute as @a[team=Lobby,tag=QuitParkour] run tag @s remove inParkour
 execute as @a[team=Lobby,tag=QuitParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.2
 execute as @a[team=Lobby,tag=QuitParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 0.8
-execute as @a[team=Lobby,tag=QuitParkour] at @s run clear @s carrot_on_a_stick
+execute as @a[team=Lobby,tag=QuitParkour] at @s run function game:clearinventory
+execute as @a[team=Lobby,tag=QuitParkour] at @s run function lobby:items
 execute as @a[team=Lobby,tag=QuitParkour] at @s run title @s actionbar {"text":""}
 execute as @a[team=Lobby,tag=QuitParkour] at @s run tellraw @s {"text":"Parkour Run Canceled.","color":"red","bold":true}
 tag @a[team=Lobby,tag=QuitParkour] remove QuitParkour
@@ -124,6 +126,8 @@ tag @a[team=Lobby,tag=CancelParkour] remove inParkour
 execute as @a[team=Lobby,tag=CancelParkour] positioned -71 -21 -1 if entity @s[distance=10..] at @s run tp @s @s
 execute as @a[team=Lobby,tag=CancelParkour] positioned -71 -21 -1 if entity @s[distance=10..] at @s run tp @s -71 -21 -1 90 0
 execute as @a[team=Lobby,tag=CancelParkour] positioned -71 -21 -1 unless entity @s[distance=10..] run tellraw @s {"text":"Parkour Run Canceled.","color":"red","bold":true}
+execute as @a[team=Lobby,tag=CancelParkour] positioned -71 -21 -1 unless entity @s[distance=10..] run function game:clearinventory
+execute as @a[team=Lobby,tag=CancelParkour] positioned -71 -21 -1 unless entity @s[distance=10..] run function lobby:items
 execute as @a[team=Lobby,tag=CancelParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.2
 execute as @a[team=Lobby,tag=CancelParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 0.8
 execute as @a[team=Lobby,tag=CancelParkour] at @s run clear @s carrot_on_a_stick
