@@ -15,6 +15,7 @@ execute as @e[type=armor_stand,tag=CurrentCheck] at @s run tag @e[type=villager,
 execute as @e[type=armor_stand,tag=CurrentCheck] at @s run tag @e[type=villager,tag=CannonVRight,limit=1,sort=nearest,distance=..2] add CurrentCheck
 execute as @e[type=armor_stand,tag=CurrentCheck] at @s run tag @e[type=villager,tag=CannonVMain,limit=1,sort=nearest,distance=..2] add CurrentCheck
 
+execute unless entity @e[type=armor_stand,tag=CurrentCheck] run tellraw @s {"text":"This Cannon is currently occupied!","italic":true,"color":"red"}
 execute unless entity @e[type=armor_stand,tag=CurrentCheck] run tag @s remove FillLeft
 execute unless entity @e[type=armor_stand,tag=CurrentCheck] run tag @s remove FillRight
 execute unless entity @e[type=armor_stand,tag=CurrentCheck] run tag @s remove FillCB
