@@ -4,6 +4,7 @@ execute positioned 0.0 0 0.0 run summon marker ^ ^ ^2 {Tags:["direction"]}
 # summon the projectile entity
 execute anchored eyes positioned ^ ^ ^1 run summon llama_spit ~ ~ ~ {Tags:["rock"]}
 execute anchored eyes positioned ^ ^ ^0.1 run summon llama_spit ~ ~ ~ {Tags:["rock2"]}
+execute as @e[type=snowball,tag=!init,limit=1,sort=nearest] run function lobby:rock/init
 
 # summon temporary llama and copy rotation
 execute positioned ~ -100 ~ run summon llama ~ ~ ~ {Tags:["myllama"]}
