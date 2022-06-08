@@ -22,6 +22,16 @@
         "requirement": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
+                "player": {
+                    "type": "minecraft:player",
+                    "type_specific": {
+                      "type": "player",
+                      "advancements": {
+                        "tutorial:objectives/objective1": true,
+                        "tutorial:objectives/objective2": false
+                      }
+                    }
+                  },
               "items": [
                 {
                   "items": [
