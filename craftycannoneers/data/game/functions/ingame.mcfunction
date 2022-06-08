@@ -134,11 +134,7 @@ execute store result bossbar orangeship value run scoreboard players get $Orange
 bossbar set purpleship players @a[team=!Lobby]
 bossbar set orangeship players @a[team=!Lobby]
 
-execute as @a[scores={death=1..},advancements={tutorial:objectives/objective7=false}] run advancement revoke @s from tutorial:objectives/objective1
-execute as @a[scores={death=1..},advancements={tutorial:objectives/objective7=false}] run advancement revoke @s from tutorial:objectives/objective6
-execute as @a[scores={death=1..},advancements={tutorial:objectives/objective7=false}] run advancement grant @s only tutorial:objectives/end1
-execute as @a[scores={death=1..},advancements={tutorial:objectives/objective7=false}] run advancement grant @s only tutorial:objectives/end2
-execute as @a[scores={death=1..},advancements={tutorial:objectives/objective7=false}] run scoreboard players set @s objectivecount 1
+execute as @a[scores={death=1..},advancements={tutorial:objectives/objective7=false}] run function tutorial:resetprogress
 execute as @a[scores={death=1..}] run function cannons:despawnplayerc
 execute as @a[scores={death=1..},team=!Lobby,team=!Spectator] run function game:givegear
 execute as @a[scores={death=1..},team=!Lobby,team=!Spectator] run gamemode adventure @s[gamemode=!spectator]
