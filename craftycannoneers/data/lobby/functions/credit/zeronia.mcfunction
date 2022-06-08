@@ -2,5 +2,6 @@ tellraw @s ["\n",{"text":"============ ","color":"gray"},{"text":"Zeronia","colo
 playsound minecraft:block.end_portal_frame.fill master @s ~ ~ ~ 1 1.8
 playsound minecraft:block.note_block.bit master @s ~ ~ ~ 1 1
 advancement revoke @s only lobby:zeronia
+advancement grant @s only tutorial:zzzunlockables/credits
 execute at @e[type=villager,tag=ZeroniaCredit] run particle block command_block ~ ~ ~ 0.2 0.2 0.2 0.1 50 force @s
 execute at @e[type=villager,tag=ZeroniaCredit] run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.1 10 force @s
