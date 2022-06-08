@@ -1,0 +1,26 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Intruder Alert!",
+            "color": "dark_aqua"
+        },
+        "description": {
+            "text": "Board the enemy team's ship.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:bell"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "tutorial:unlockables/playercannonball"
+}

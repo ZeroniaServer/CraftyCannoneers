@@ -2,18 +2,18 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Fire In The Hole!",
-            "color": "aqua"
+            "text": "Mow Em Down",
+            "color": "dark_aqua"
         },
         "description": {
-            "text": "Fire a Cannon by using Gunpowder and Cannonballs.",
+            "text": "Get a multi-kill using a Cannonball Cluster",
             "color": "white"
         },
         "icon": {
             "item": "minecraft:diamond_hoe",
-            "nbt": "{CustomModelData:16}"
+            "nbt": "{CustomModelData:29}"
         },
-        "frame": "task",
+        "frame": "goal",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": false
@@ -23,8 +23,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "rewards": {
-        "function": "tutorial:notify"
-    },
-    "parent": "tutorial:tracer"
+    "parent": "tutorial:unlockables/battleship"
 }

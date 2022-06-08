@@ -144,7 +144,7 @@ scoreboard players reset @a[scores={death=1..}] death
 
 effect give @a[team=!Lobby,team=!Spectator,scores={kill=1..,gappleTimer=0}] regeneration 4 2 true
 scoreboard players add @a[team=!Lobby,team=!Spectator,scores={kill=1..}] MVPkill 1
-execute as @a[team=!Lobby,team=!Spectator,scores={kill=1..}] run advancement grant @s only tutorial:kill_enemy
+execute as @a[team=!Lobby,team=!Spectator,scores={kill=1..}] run advancement grant @s only tutorial:unlockables/killplayer
 scoreboard players reset @a[scores={kill=1..}] kill
 
 

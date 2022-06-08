@@ -2,8 +2,8 @@
 tag @a[nbt={SelectedItem:{id:"minecraft:gunpowder"}}] add HoldGP
 
 #> Tutorial Advancement trigger
-execute as @a[tag=FillLeft,tag=HoldGP] run advancement grant @s only tutorial:fill_gunpowder
-execute as @a[tag=FillRight,tag=HoldGP] run advancement grant @s only tutorial:fill_gunpowder
+execute as @a[tag=FillLeft,tag=HoldGP,advancments={tutorial:objectives/objective4=true}] run advancement grant @s only tutorial:objectives/objective5
+execute as @a[tag=FillRight,tag=HoldGP,advancments={tutorial:objectives/objective4=true}] run advancement grant @s only tutorial:objectives/objective5
 
 #> Cannon Claim tag
 execute as @a[tag=FillLeft,tag=HoldGP] at @s run function cannons:checkowner

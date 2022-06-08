@@ -1,11 +1,11 @@
 {
     "display": {
         "title": {
-            "text": "Tutorial Advancements",
-            "color": "aqua"
+            "text": "Main Objectives",
+            "color": "green"
         },
         "description": {
-            "text": "Learn game mechanics by completing these advancements!",
+            "text": "Complete these objectives to learn about the game's basic mechanics!",
             "color": "white"
         },
         "icon": {

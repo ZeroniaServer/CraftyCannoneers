@@ -2,20 +2,20 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Parkour Pro",
-            "color": "aqua"
+            "text": "Easter Egg [5/???]",
+            "color": "green"
         },
         "description": {
-            "text": "Complete the Lobby Parkour course.",
+            "text": "Something for RR idk",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:netherite_boots"
+            "item": "minecraft:egg"
         },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
-        "hidden": false
+        "hidden": true
     },
     "criteria": {
         "impossible": {
@@ -23,7 +23,7 @@
         }
     },
     "rewards": {
-        "function": "tutorial:notify"
+        "function": "tutorial:completeobjective"
     },
-    "parent": "tutorial:purchase_cannonball"
+    "parent": "tutorial:eastereggs/goldy"
 }

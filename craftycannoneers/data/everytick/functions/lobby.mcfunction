@@ -9,6 +9,7 @@ spawnpoint @a[team=Lobby] -55 -21 0 -90
 
 function lobby:parkour/parkour
 function lobby:rock/rock
+function lobby:eastereggs
 
 execute as @a[tag=!hasMoved,scores={jump=1..}] run tag @s add hasMoved
 execute as @a[tag=!hasMoved,scores={walk=30..}] run tag @s add hasMoved
@@ -25,7 +26,6 @@ execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run tellraw @s ["","\n",
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~-1 ~ 1 1.2
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run title @s title ["",{"text":"Crafty ","bold":true,"color":"dark_purple"},{"text":"Cannoneers","bold":true,"color":"gold"}]
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run title @s subtitle ["",{"text":"V0.4.1 ","color":"aqua"},{"text":"Made by ","color":"gray"},{"text":"Zeronia","color":"green"},{"text":"!","color":"gray"}]
-execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run function tutorial:notify
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run tag @s add firstJoined
 execute as @a store result score @s playerUUID run data get entity @s UUID[0]
 

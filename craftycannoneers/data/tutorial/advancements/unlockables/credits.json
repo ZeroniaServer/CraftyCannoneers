@@ -2,17 +2,17 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "You Sunk My Battleship!",
-            "color": "aqua"
+            "text": "Roll the Credits!",
+            "color": "dark_aqua"
         },
         "description": {
-            "text": "Fire the winning shot.",
+            "text": "Interact with the Lobby's Credit armor stands.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:oak_boat"
+            "item": "minecraft:armor_stand"
         },
-        "frame": "challenge",
+        "frame": "goal",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": false
@@ -22,8 +22,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "rewards": {
-        "function": "tutorial:notify"
-    },
-    "parent": "tutorial:skeletonkey"
+    "parent": "tutorial:unlockables/root"
 }

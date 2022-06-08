@@ -1,0 +1,25 @@
+{
+    "display": {
+        "title": {
+            "text": "Bonus Objectives",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "Optional objectives that you can just complete for the fun of it.",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:book"
+        },
+        "frame": "goal",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false,
+        "background": "minecraft:textures/block/spruce_planks.png"
+    },
+    "criteria": {
+        "location": {
+            "trigger": "minecraft:location"
+        }
+    }
+}

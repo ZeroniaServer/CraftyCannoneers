@@ -2,15 +2,16 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Gunpowder Slots",
-            "color": "aqua"
+            "text": "Objective [7/10]",
+            "color": "green"
         },
         "description": {
-            "text": "Insert Gunpowder into a Cannon's Gunpowder Slots.",
+            "text": "Fire a Cannon.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:gunpowder"
+            "item": "minecraft:diamond_hoe",
+            "nbt": "{CustomModelData:16}"
         },
         "frame": "task",
         "show_toast": true,
@@ -23,7 +24,7 @@
         }
     },
     "rewards": {
-        "function": "tutorial:notify"
+        "function": "tutorial:completeobjective"
     },
-    "parent": "tutorial:loot_treasure"
+    "parent": "tutorial:objectives/objective6"
 }

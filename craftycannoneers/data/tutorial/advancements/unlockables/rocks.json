@@ -2,17 +2,17 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Perfect Aim",
-            "color": "aqua"
+            "text": "I LOVE ROCKS!!1!1",
+            "color": "dark_aqua" 
         },
         "description": {
-            "text": "Destroy an exposed weakpoint using a Cannonball.",
+            "text": "While you wait for the game to start, throw 50 Rocks.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:target"
+            "item": "minecraft:snowball"
         },
-        "frame": "challenge",
+        "frame": "goal",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": false
@@ -22,8 +22,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "rewards": {
-        "function": "tutorial:notify"
-    },
-    "parent": "tutorial:spot_weakpoint"
+    "parent": "tutorial:unlockables/parkour"
 }

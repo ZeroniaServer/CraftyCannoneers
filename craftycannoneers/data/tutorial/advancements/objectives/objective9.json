@@ -2,16 +2,15 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Track And Trace",
-            "color": "aqua"
+            "text": "Objective [8/10]",
+            "color": "green"
         },
         "description": {
-            "text": "Use a Tracer Cannonball to find out where your next shot will land.",
+            "text": "Spot a Ship Weakpoint using your Spotting Spyglass.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:diamond_hoe",
-            "nbt": "{CustomModelData:60}"
+            "item": "minecraft:spyglass"
         },
         "frame": "task",
         "show_toast": true,
@@ -24,7 +23,7 @@
         }
     },
     "rewards": {
-        "function": "tutorial:notify"
+        "function": "tutorial:completeobjective"
     },
-    "parent": "tutorial:fill_gunpowder"
+    "parent": "tutorial:objectives/objective8"
 }

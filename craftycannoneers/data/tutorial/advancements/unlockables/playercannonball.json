@@ -2,18 +2,18 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "This Is A Robbery!",
-            "color": "aqua"
+            "text": "Special Delivery!",
+            "color": "dark_aqua"
         },
         "description": {
-            "text": "Unlock the enemy team's Team Chest by using a Skeleton Key.",
+            "text": "Use a Player Cannonball.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:ender_eye",
-            "nbt": "{CustomModelData:1}"
+            "item": "minecraft:diamond_hoe",
+            "nbt": "{CustomModelData:56}"
         },
-        "frame": "task",
+        "frame": "goal",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": false
@@ -23,8 +23,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "rewards": {
-        "function": "tutorial:notify"
-    },
-    "parent": "tutorial:destroy_weakpoint"
+    "parent": "tutorial:unlockables/killplayer"
 }

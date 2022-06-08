@@ -1,0 +1,29 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Easter Egg [4/???]",
+            "color": "green"
+        },
+        "description": {
+            "text": "Somewhere, Goldy smiles on you...",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:egg"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "tutorial:completeobjective"
+    },
+    "parent": "tutorial:eastereggs/planetary"
+}

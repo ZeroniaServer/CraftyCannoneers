@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Treasure!",
-            "color": "aqua"
+            "text": "Objective [2/10]",
+            "color": "green"
         },
         "description": {
-            "text": "Loot a Treasure Chest.",
+            "text": "Loot at least 10 Gunpowder and 10 Gold from Treasure Chests.",
             "color": "white"
         },
         "icon": {
@@ -19,18 +19,12 @@
         "hidden": false
     },
     "criteria": {
-        "requirement": {
-            "trigger": "minecraft:player_interacted_with_entity",
-            "conditions": {
-              "entity": {
-                "type": "minecraft:hopper_minecart",
-                "nbt": "{Tags:[\"chest\"]}"
-              }
-            }
-          }
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
     },
     "rewards": {
-        "function": "tutorial:notify"
+        "function": "tutorial:completeobjective"
     },
-    "parent": "tutorial:root"
+    "parent": "tutorial:objectives/objective1"
 }

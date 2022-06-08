@@ -2,15 +2,15 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "The Better Pirate",
-            "color": "aqua"
+            "text": "Objective [1/10]",
+            "color": "green"
         },
         "description": {
-            "text": "Kill an enemy player.",
+            "text": "Go to the middle island.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:iron_sword"
+            "item": "minecraft:filled_map"
         },
         "frame": "task",
         "show_toast": true,
@@ -23,7 +23,7 @@
         }
     },
     "rewards": {
-        "function": "tutorial:notify"
+        "function": "tutorial:completeobjective"
     },
-    "parent": "tutorial:loot_treasure"
+    "parent": "tutorial:objectives/root"
 }
