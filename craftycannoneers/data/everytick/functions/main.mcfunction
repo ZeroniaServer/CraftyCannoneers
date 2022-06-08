@@ -63,6 +63,7 @@ execute if score $gamestate CmdData matches -1 run function lobby:customizer/con
 execute if score $gamestate CmdData matches 3 run function game:ingame/gameend
 execute if score $gamestate CmdData matches 2 run function game:ingame
 function lobby:joinpads
+function lobby:cbdisplays
 execute if score $gamestate CmdData matches 0 run function game:startgame
 execute if score $gamestate CmdData matches 1 run function game:countdown
 execute if score $gamestate CmdData matches 0 run scoreboard players set $Countdown CmdData 0
