@@ -12,3 +12,4 @@ execute if entity @s[scores={CannonTutorial=1}] run tellraw @s ["",{"text":"[1/6
 
 tag @s add TutorialCannon
 advancement revoke @s only lobby:cannontutorial
+advancement grant @s only tutorial:zzzunlockables/tutorial

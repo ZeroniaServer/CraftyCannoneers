@@ -2,6 +2,8 @@ scoreboard players operation $currentpcb playerUUID = @s playerUUID
 
 execute as @a if score @s playerUUID = $currentpcb playerUUID run tag @s add PlayerCannon
 
+advancement grant @a[tag=PlayerCannon] only tutorial:zzzunlockables/playercannonball
+
 execute as @a[tag=PlayerCannon,gamemode=!spectator] run gamemode spectator @s
 spectate @s @a[tag=PlayerCannon,limit=1,sort=nearest]
 
