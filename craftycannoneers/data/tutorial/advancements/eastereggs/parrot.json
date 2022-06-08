@@ -10,7 +10,8 @@
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:egg"
+            "item": "minecraft:diamond_hoe",
+            "nbt": "{CustomModelData:65}"
         },
         "frame": "challenge",
         "show_toast": true,

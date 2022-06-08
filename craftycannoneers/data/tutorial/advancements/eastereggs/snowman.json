@@ -6,11 +6,12 @@
             "color": "green"
         },
         "description": {
-            "text": "Find the Snowman hidden in a chest...",
+            "text": "The Snow Block. Take it.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:egg"
+            "item": "minecraft:diamond_hoe",
+            "nbt": "{CustomModelData:67}"
         },
         "frame": "challenge",
         "show_toast": true,

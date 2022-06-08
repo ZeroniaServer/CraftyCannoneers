@@ -60,6 +60,9 @@ kill @e[type=falling_block]
 #Game settings
 execute if score $gamestate CmdData matches -1 run function lobby:customizer/controller
 
+# Easter Eggs
+function lobby:easteregg/loop
+
 #Ingame
 execute if score $gamestate CmdData matches 3 run function game:ingame/gameend
 execute if score $gamestate CmdData matches 2 run function game:ingame
