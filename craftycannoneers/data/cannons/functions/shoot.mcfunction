@@ -1,91 +1,4 @@
-#> Tag for holding cannonballs
-#Normal
-tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:1b}}}] add HoldCB
-#Hot
-tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:2b}}}] add HoldFB
-#Cluster
-tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:3b}}}] add HoldCBC
-#Gas
-tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:4b}}}] add HoldGCB
-#Chain
-tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:5b}}}] add HoldCCB
-#Bouncy
-tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:6b}}}] add HoldBCB
-#Player
-tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:7b}}}] add HoldPCB
-#Player
-tag @a[nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:8b}}}] add HoldTCB
-
-#> MVP scores
-scoreboard players add @a[tag=FillCB,tag=HoldCB] MVPcannon 1
-scoreboard players add @a[tag=FillCB,tag=HoldFB] MVPcannon 1
-scoreboard players add @a[tag=FillCB,tag=HoldCBC] MVPcannon 1
-scoreboard players add @a[tag=FillCB,tag=HoldGCB] MVPcannon 1
-scoreboard players add @a[tag=FillCB,tag=HoldCCB] MVPcannon 1
-scoreboard players add @a[tag=FillCB,tag=HoldBCB] MVPcannon 1
-scoreboard players add @a[tag=FillCB,tag=HoldPCB] MVPcannon 1
-
-#> Tutorial Advancement trigger
-execute as @a[tag=FillCB,advancements={tutorial:objectives/objective6=true}] unless entity @s[tag=!HoldCB,tag=!HoldFB,tag=!HoldCBC,tag=!HoldGCB,tag=!HoldCCB,tag=!HoldBCB,tag=!HoldPCB] run advancement grant @s only tutorial:objectives/objective7
-
-#> Fill Cannonball
-#Normal
-execute as @a[tag=FillCB,tag=HoldCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
-execute as @a[tag=FillCB,tag=HoldCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedCB
-execute as @a[tag=FillCB,tag=HoldCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
-execute as @a[tag=FillCB,tag=HoldCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 1
-#Hot
-execute as @a[tag=FillCB,tag=HoldFB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
-execute as @a[tag=FillCB,tag=HoldFB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedFB
-execute as @a[tag=FillCB,tag=HoldFB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
-execute as @a[tag=FillCB,tag=HoldFB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 2
-#Cluster
-execute as @a[tag=FillCB,tag=HoldCBC] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
-execute as @a[tag=FillCB,tag=HoldCBC] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedCBC
-execute as @a[tag=FillCB,tag=HoldCBC] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
-execute as @a[tag=FillCB,tag=HoldCBC] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 3
-#Gas
-execute as @a[tag=FillCB,tag=HoldGCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
-execute as @a[tag=FillCB,tag=HoldGCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedGCB
-execute as @a[tag=FillCB,tag=HoldGCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..3] playerUUID = @s playerUUID
-execute as @a[tag=FillCB,tag=HoldGCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 4
-#Chain
-execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
-execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedCCB
-execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..3] playerUUID = @s playerUUID
-execute as @a[tag=FillCB,tag=HoldCCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 5
-#Bouncy
-execute as @a[tag=FillCB,tag=HoldBCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
-execute as @a[tag=FillCB,tag=HoldBCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedBCB
-execute as @a[tag=FillCB,tag=HoldBCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
-execute as @a[tag=FillCB,tag=HoldBCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 6
-#Player
-execute as @a[tag=FillCB,tag=HoldPCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
-execute as @a[tag=FillCB,tag=HoldPCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedPCB
-execute as @a[tag=FillCB,tag=HoldPCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
-execute as @a[tag=FillCB,tag=HoldPCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 7
-#Tracer
-execute as @a[tag=FillCB,tag=HoldTCB,advancements={tutorial:objectives/objective5=true}] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run advancement grant @s only tutorial:objectives/objective6
-execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
-execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedTCB
-execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
-execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] cannonshot 30
-execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 8
-
-execute as @a[tag=UsedCB,tag=UsedFB,tag=UsedCBC,tag=UsedGCB,tag=UsedCCB,tag=UsedBCB,tag=UsedPCB] run advancement grant @s only tutorial:zzzunlockables/cannoneer
-tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedCB
-tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedFB
-tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedCBC
-tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedGCB
-tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedCCB
-tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedBCB
-tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedPCB
-tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedTCB
-
-tag @a remove FillCB
-
 scoreboard players add @e[type=armor_stand,tag=Hit1] doublehit 1
-
 
 #> Fire Cannon
 tag @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..}] add FireCannon
@@ -241,7 +154,6 @@ scoreboard players add @e[type=armor_stand,tag=BouncyCannonball,tag=Hit1,scores=
 function game:shipweakpoint/spot
 
 function cannons:damagecalc
-
 
 #Global
 tag @a remove HoldCB
