@@ -1,1 +1,1 @@
-execute as @e[tag=!entityidset] run function cannons:entityid/assign_id
+execute as @e[type=villager,tag=!entityidset] run function cannons:entityid/assign_id
