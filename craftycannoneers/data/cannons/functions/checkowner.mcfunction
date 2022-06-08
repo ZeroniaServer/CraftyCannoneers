@@ -4,13 +4,8 @@ scoreboard players operation $currentcheck playerUUID = @s playerUUID
 execute as @s[tag=FillLeft,tag=HoldGP,advancements={tutorial:objectives/objective4=true}] run advancement grant @s only tutorial:objectives/objective5
 execute as @s[tag=FillRight,tag=HoldGP,advancements={tutorial:objectives/objective4=true}] run advancement grant @s only tutorial:objectives/objective5
 
-particle minecraft:angry_villager ~ ~ ~ 0 0 0 1 1 force
-
 execute as @e[type=armor_stand,tag=CannonDisp,tag=!Owned,distance=..3,limit=1,sort=nearest] if score @s playerUUID matches 0 run tag @s add NoOwner
 execute as @e[type=armor_stand,tag=CannonDisp,tag=!NoOwner,distance=..3,limit=1,sort=nearest] if score @s playerUUID = $currentcheck playerUUID run tag @s add Owned
-
-execute as @e[type=armor_stand,tag=CannonDisp,tag=NoOwner,limit=1,sort=nearest] at @s run particle minecraft:angry_villager ~ ~2 ~ 0 0 0 1 1 force
-execute as @e[type=armor_stand,tag=CannonDisp,tag=Owned,limit=1,sort=nearest] at @s run particle minecraft:bubble ~ ~2 ~ 0 0 0 1 1 force
 
 execute as @e[type=armor_stand,tag=Owned,limit=1,sort=nearest] if score @s playerUUID = $currentcheck playerUUID run scoreboard players operation $currentcannon playerUUID = @s playerUUID
 execute if entity @e[type=armor_stand,tag=NoOwner,limit=1,sort=nearest] run scoreboard players operation $currentcannon playerUUID = @s playerUUID
@@ -19,8 +14,6 @@ execute as @e[type=armor_stand,tag=NoOwner,limit=1,sort=nearest] run scoreboard 
 execute as @e[type=armor_stand,tag=Owned,limit=1,sort=nearest] run scoreboard players operation @s playerUUID = $currentcannon playerUUID
 tag @e[type=armor_stand,tag=NoOwner] remove NoOwner
 tag @e[type=armor_stand,tag=Owned] remove Owned
-
-execute as @e[type=armor_stand,tag=NewClaim] at @s run particle minecraft:cloud ~ ~2 ~ 0 0 0 0 1 force
 
 execute as @e[type=armor_stand,tag=CannonDisp] if score $currentcannon playerUUID = @s playerUUID run tag @s add CurrentCheck
 execute as @e[type=armor_stand,tag=CurrentCheck] at @s run tag @e[type=villager,tag=CannonVLeft,limit=1,sort=nearest,distance=..2] add CurrentCheck
