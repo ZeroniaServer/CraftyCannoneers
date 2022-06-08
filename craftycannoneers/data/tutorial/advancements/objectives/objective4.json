@@ -19,10 +19,26 @@
         "hidden": false
     },
     "criteria": {
-        "impossible": {
-            "trigger": "minecraft:impossible"
+        "requirement": {
+          "trigger": "minecraft:player_interacted_with_entity",
+          "conditions": {
+            "player": {
+              "type": "minecraft:player",
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "tutorial:objectives/objective3": true,
+                  "tutorial:objectives/objective4": false
+                }
+              }
+            },
+            "entity": {
+              "type": "minecraft:wandering_trader",
+              "nbt": "{Tags:[\"Trader\"]}"
+            }
+          }
         }
-    },
+      },
     "rewards": {
         "function": "tutorial:completeobjective"
     },

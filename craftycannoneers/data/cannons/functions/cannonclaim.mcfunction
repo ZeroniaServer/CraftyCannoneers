@@ -5,7 +5,7 @@ execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=3}] run scoreb
 execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=3}] at @s run setblock ~ 200 ~ crimson_sign
 execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=3}] as @a if score @s playerUUID = $nametag playerUUID run tag @s add SetCannonName
 execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=3}] at @s run data merge block ~ 200 ~ {Text1:'["",{"selector":"@p[tag=SetCannonName]"},{"text":"\'s Cannon","color":"#FFFFFF"}]'}
-execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=3}] at @s run summon area_effect_cloud ~ ~1.2 ~ {Duration:2000000000,Tags:["CannonNametag","New"],CustomNameVisible:1b}
+execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=3}] at @s unless entity @e[type=area_effect_cloud,tag=CannonNametag,tag=!New,distance=..2] run summon area_effect_cloud ~ ~1.2 ~ {Duration:2000000000,Tags:["CannonNametag","New"],CustomNameVisible:1b}
 execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=3}] at @s run data modify entity @e[type=area_effect_cloud,tag=CannonNametag,tag=New,limit=1,sort=nearest] CustomName set from block ~ 200 ~ Text1
 execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=3}] at @s run fill ~2 200 ~2 ~-2 200 ~-2 air replace crimson_sign
 tag @e[type=area_effect_cloud,tag=CannonNametag,tag=New] remove New

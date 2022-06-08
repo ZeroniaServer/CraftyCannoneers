@@ -19,9 +19,31 @@
         "hidden": false
     },
     "criteria": {
-        "impossible": {
-            "trigger": "minecraft:impossible"
-        }
+        "requirement": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "minecraft:gold_nugget"
+                  ],
+                  "count": {
+                    "min": 10,
+                    "max": 1000
+                  }
+                },
+                {
+                    "items": [
+                      "minecraft:gunpowder"
+                    ],
+                    "count": {
+                      "min": 10,
+                      "max": 1000
+                    }
+                  }
+              ]
+            }
+          }
     },
     "rewards": {
         "function": "tutorial:completeobjective"

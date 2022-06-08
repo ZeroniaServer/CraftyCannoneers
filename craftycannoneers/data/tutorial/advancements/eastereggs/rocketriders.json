@@ -12,7 +12,7 @@
         "icon": {
             "item": "minecraft:egg"
         },
-        "frame": "task",
+        "frame": "challenge",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": true
@@ -21,9 +21,6 @@
         "impossible": {
             "trigger": "minecraft:impossible"
         }
-    },
-    "rewards": {
-        "function": "tutorial:completeobjective"
     },
     "parent": "tutorial:eastereggs/goldy"
 }

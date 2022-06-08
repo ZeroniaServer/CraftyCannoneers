@@ -6,7 +6,7 @@
             "color": "green"
         },
         "description": {
-            "text": "Store items in your Team Chest.",
+            "text": "Open the Team Chest on your ship.",
             "color": "white"
         },
         "icon": {
@@ -18,10 +18,25 @@
         "hidden": false
     },
     "criteria": {
-        "impossible": {
-            "trigger": "minecraft:impossible"
+        "requirement": {
+          "trigger": "minecraft:player_interacted_with_entity",
+          "conditions": {
+            "player": {
+              "type": "minecraft:player",
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "tutorial:objectives/objective7": true,
+                  "tutorial:objectives/objective8": false
+                }
+              }
+            },
+            "entity": {
+              "type": "minecraft:chest_minecart"
+            }
+          }
         }
-    },
+      },
     "rewards": {
         "function": "tutorial:completeobjective"
     },

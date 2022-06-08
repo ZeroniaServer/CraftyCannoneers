@@ -57,6 +57,8 @@ scoreboard objectives add CannonID dummy
 scoreboard objectives add bounce dummy
 scoreboard objectives add cannonclaim dummy
 scoreboard objectives add parrotpet dummy
+scoreboard objectives add notifyobjective dummy
+scoreboard objectives add objectivecount dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
