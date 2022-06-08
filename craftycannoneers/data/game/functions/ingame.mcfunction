@@ -5,6 +5,7 @@ function game:ingame/chestspawning
 function game:ingame/arrowpickup
 function game:ingame/boat
 function game:ingame/harpoon
+function tutorial:notify
 function tutorial:showtip
 
 execute unless entity @e[type=slime,tag=Weakpoint,tag=Orange] if entity @e[type=marker,tag=WeakpointLoc,tag=Purple] run function game:shipweakpoint/spawnnewpurple
