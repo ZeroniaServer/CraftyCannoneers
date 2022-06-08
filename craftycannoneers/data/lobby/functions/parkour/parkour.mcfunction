@@ -122,6 +122,15 @@ tag @a[team=!Lobby,tag=inParkour] remove inParkour
 
 #Exit parkour if you fall on the ground
 execute positioned -73 -22 -1 as @a[team=Lobby,tag=inParkour,distance=5..] at @s unless block ~ ~-1 ~ #lobby:parkourblocks run tag @s add CancelParkour
+execute positioned -73 -22 -1 as @a[team=Lobby,tag=inParkour,distance=5..] at @s unless block ~-0.3 ~-1 ~ #lobby:parkourblocks run tag @s add CancelParkour
+execute positioned -73 -22 -1 as @a[team=Lobby,tag=inParkour,distance=5..] at @s unless block ~0.3 ~-1 ~ #lobby:parkourblocks run tag @s add CancelParkour
+execute positioned -73 -22 -1 as @a[team=Lobby,tag=inParkour,distance=5..] at @s unless block ~ ~-1 ~-0.3 #lobby:parkourblocks run tag @s add CancelParkour
+execute positioned -73 -22 -1 as @a[team=Lobby,tag=inParkour,distance=5..] at @s unless block ~ ~-1 ~0.3 #lobby:parkourblocks run tag @s add CancelParkour
+execute positioned -73 -22 -1 as @a[team=Lobby,tag=inParkour,distance=5..] at @s unless block ~0.3 ~-1 ~0.3 #lobby:parkourblocks run tag @s add CancelParkour
+execute positioned -73 -22 -1 as @a[team=Lobby,tag=inParkour,distance=5..] at @s unless block ~-0.3 ~-1 ~0.3 #lobby:parkourblocks run tag @s add CancelParkour
+execute positioned -73 -22 -1 as @a[team=Lobby,tag=inParkour,distance=5..] at @s unless block ~-0.3 ~-1 ~-0.3 #lobby:parkourblocks run tag @s add CancelParkour
+execute positioned -73 -22 -1 as @a[team=Lobby,tag=inParkour,distance=5..] at @s unless block ~0.3 ~-1 ~-0.3 #lobby:parkourblocks run tag @s add CancelParkour
+
 tag @a[team=Lobby,tag=CancelParkour] remove inParkour
 execute as @a[team=Lobby,tag=CancelParkour] positioned -71 -21 -1 if entity @s[distance=10..] at @s run tp @s @s
 execute as @a[team=Lobby,tag=CancelParkour] positioned -71 -21 -1 if entity @s[distance=10..] at @s run tp @s -71 -21 -1 90 0
