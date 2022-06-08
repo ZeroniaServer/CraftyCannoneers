@@ -39,8 +39,7 @@ spawnpoint @a[team=Purple] 52 -26 -55 -90
 
 execute as @a at @s run playsound entity.generic.explode master @s ~ ~ ~ 100 1.2
 
-
-
+scoreboard players reset @a loverocks
 
 #> Weakpoints
 kill @e[type=marker,tag=WeakpointLoc]

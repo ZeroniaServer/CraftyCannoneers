@@ -59,6 +59,7 @@ scoreboard objectives add cannonclaim dummy
 scoreboard objectives add parrotpet dummy
 scoreboard objectives add notifyobjective dummy
 scoreboard objectives add objectivecount dummy
+scoreboard objectives add loverocks minecraft.used:minecraft.snowball
 
 #> Parkour
 scoreboard objectives add parkourMins dummy

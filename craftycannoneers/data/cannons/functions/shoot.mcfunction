@@ -73,14 +73,14 @@ execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,ta
 execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 8
 
 execute as @a[tag=UsedCB,tag=UsedFB,tag=UsedCBC,tag=UsedGCB,tag=UsedCCB,tag=UsedBCB,tag=UsedPCB] run advancement grant @s only tutorial:zzzunlockables/cannoneer
-tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedCB
-tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedFB
-tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedCBC
-tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedGCB
-tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedCCB
-tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedBCB
-tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedPCB
-tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedTCB
+tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedCB
+tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedFB
+tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedCBC
+tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedGCB
+tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedCCB
+tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedBCB
+tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedPCB
+tag @a[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedTCB
 
 tag @a remove FillCB
 

@@ -16,3 +16,5 @@ execute if score $ForceCountdown CmdData matches 1.. as @a[tag=StartGame,sort=ra
 execute if score $ForceCountdown CmdData matches 1.. as @a[tag=StartGame,sort=random,limit=1] run bossbar set lobbybar name ["",{"text":"Game starting in ","bold":true,"color":"green"},{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"dark_green"},{"text":" seconds! ","bold":true,"color":"green"}]
 execute if score $ForceCountdown CmdData matches 1.. as @a[tag=StartGame,sort=random,limit=1] run scoreboard players set $gamestate CmdData 1
 tag @a[tag=StartGame] remove StartGame
+
+execute unless score $gamestate CmdData matches 1 as @a[scores={loverocks=50..}] unless entity @s[team=!Orange,team=!Purple] run advancement grant @s only tutorial:zzzunlockables/rocks
