@@ -2,16 +2,15 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "The Craftiest Cannoneer...",
+            "text": "Parkour Pro",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Use all of the different Cannonball types. (All time)",
+            "text": "Complete the Lobby Parkour course.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:diamond_hoe",
-            "nbt": "{CustomModelData:29}"
+            "item": "minecraft:netherite_boots"
         },
         "frame": "goal",
         "show_toast": true,
@@ -23,5 +22,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "tutorial:unlockables/mowemdown"
+    "parent": "tutorial:zzzunlockables/tutorial"
 }

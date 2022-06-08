@@ -2,15 +2,15 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Roll the Credits!",
+            "text": "Intruder Alert!",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Interact with the Lobby's Credit armor stands.",
+            "text": "Board the enemy team's ship.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:armor_stand"
+            "item": "minecraft:bell"
         },
         "frame": "goal",
         "show_toast": true,
@@ -22,5 +22,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "tutorial:unlockables/root"
+    "parent": "tutorial:zzzunlockables/playercannonball"
 }

@@ -25,5 +25,5 @@
     "rewards": {
         "function": "tutorial:completeobjective"
     },
-    "parent": "tutorial:unlockables/root"
+    "parent": "tutorial:zzzunlockables/root"
 }

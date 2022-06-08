@@ -2,15 +2,15 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Parkour Pro",
+            "text": "Interesting...",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Complete the Lobby Parkour course.",
+            "text": "Interact with objects in the Lobby's Tutorial Area.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:netherite_boots"
+            "item": "minecraft:knowledge_book"
         },
         "frame": "goal",
         "show_toast": true,
@@ -22,5 +22,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "tutorial:unlockables/tutorial"
+    "parent": "tutorial:zzzunlockables/credits"
 }

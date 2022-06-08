@@ -72,7 +72,7 @@ execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,ta
 execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] cannonshot 30
 execute as @a[tag=FillCB,tag=HoldTCB] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 8
 
-execute as @a[tag=UsedCB,tag=UsedFB,tag=UsedCBC,tag=UsedGCB,tag=UsedCCB,tag=UsedBCB,tag=UsedPCB] run advancement grant @s only tutorial:unlockables/cannoneer
+execute as @a[tag=UsedCB,tag=UsedFB,tag=UsedCBC,tag=UsedGCB,tag=UsedCCB,tag=UsedBCB,tag=UsedPCB] run advancement grant @s only tutorial:zzzunlockables/cannoneer
 tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedCB
 tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedFB
 tag @a[advancements={tutorial:all_cannonballs=true}] remove UsedCBC

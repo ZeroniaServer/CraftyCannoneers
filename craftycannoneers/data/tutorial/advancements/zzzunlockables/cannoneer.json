@@ -2,16 +2,16 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Special Delivery!",
+            "text": "The Craftiest Cannoneer...",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Use a Player Cannonball.",
+            "text": "Use all of the different Cannonball types. (All time)",
             "color": "white"
         },
         "icon": {
             "item": "minecraft:diamond_hoe",
-            "nbt": "{CustomModelData:56}"
+            "nbt": "{CustomModelData:29}"
         },
         "frame": "goal",
         "show_toast": true,
@@ -23,5 +23,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "tutorial:unlockables/killplayer"
+    "parent": "tutorial:zzzunlockables/rocks"
 }

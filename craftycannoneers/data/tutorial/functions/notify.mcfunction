@@ -12,3 +12,7 @@ execute as @a[team=!Lobby,team=!Spectator,advancements={tutorial:objectives/obje
 execute as @a[team=!Lobby,team=!Spectator,advancements={tutorial:objectives/objective10=false},scores={notifyobjective=200..,objectivecount=10}] run tellraw @s ["",{"text":"==============================","color":"dark_gray"},"\n",{"text":"Tutorial (","bold":true,"color":"green"},{"text":"10/10","italic":true,"color":"dark_green"},{"text":")","bold":true,"color":"green"},"\n",{"text":"Objective: ","color":"gold"},{"text":"Aim carefully and destroy an exposed Ship Weakpoint on the Enemy Ship.","color":"yellow"},"\n",{"text":"(You can use different amounts of Gunpowder and Tracer Cannonballs to try and aim a shot at the Weakpoint. Make sure the Weakpoint is exposed before you fire your Cannon!)","italic":true,"color":"gray"},"\n",{"text":"==============================","color":"dark_gray"},"\n"]
 
 scoreboard players reset @a[scores={notifyobjective=200..}] notifyobjective
+
+
+#> Unlocks
+execute as @a[team=!Lobby,team=!Spectator,advancements={tutorial:objectives/objective1=false}] at @s if predicate cannons:safezones/island run advancement grant @s only tutorial:objectives/objective1

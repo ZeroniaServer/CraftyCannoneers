@@ -2,15 +2,16 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "I LOVE ROCKS!!1!1",
-            "color": "dark_aqua" 
+            "text": "Special Delivery!",
+            "color": "dark_aqua"
         },
         "description": {
-            "text": "While you wait for the game to start, throw 50 Rocks.",
+            "text": "Use a Player Cannonball.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:snowball"
+            "item": "minecraft:diamond_hoe",
+            "nbt": "{CustomModelData:56}"
         },
         "frame": "goal",
         "show_toast": true,
@@ -22,5 +23,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "tutorial:unlockables/parkour"
+    "parent": "tutorial:zzzunlockables/killplayer"
 }

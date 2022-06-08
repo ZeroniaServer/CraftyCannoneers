@@ -2,15 +2,15 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Interesting...",
+            "text": "The Better Pirate",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Interact with objects in the Lobby's Tutorial Area.",
+            "text": "Kill an enemy player.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:knowledge_book"
+            "item": "minecraft:iron_sword"
         },
         "frame": "goal",
         "show_toast": true,
@@ -22,5 +22,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "tutorial:unlockables/credits"
+    "parent": "tutorial:zzzunlockables/root"
 }

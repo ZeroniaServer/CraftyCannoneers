@@ -2,15 +2,15 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "The Better Pirate",
-            "color": "dark_aqua"
+            "text": "I LOVE ROCKS!!1!1",
+            "color": "dark_aqua" 
         },
         "description": {
-            "text": "Kill an enemy player.",
+            "text": "While you wait for the game to start, throw 50 Rocks.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:iron_sword"
+            "item": "minecraft:snowball"
         },
         "frame": "goal",
         "show_toast": true,
@@ -22,5 +22,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "tutorial:unlockables/root"
+    "parent": "tutorial:zzzunlockables/parkour"
 }

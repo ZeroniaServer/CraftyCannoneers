@@ -21,5 +21,5 @@
             "trigger": "minecraft:location"
         }
     },
-    "parent": "tutorial:unlockables/rocks"
+    "parent": "tutorial:zzzunlockables/cannoneer"
 }

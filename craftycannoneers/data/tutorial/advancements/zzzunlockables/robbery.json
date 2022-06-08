@@ -2,16 +2,16 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Mow Em Down",
+            "text": "This Is A Robbery!",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Get a multi-kill using a Cannonball Cluster",
+            "text": "Unlock the enemy team's Team Chest using a Skeleton Key.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:diamond_hoe",
-            "nbt": "{CustomModelData:29}"
+            "item": "minecraft:ender_eye",
+            "nbt": "{CustomModelData:1}"
         },
         "frame": "goal",
         "show_toast": true,
@@ -23,5 +23,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "tutorial:unlockables/battleship"
+    "parent": "tutorial:zzzunlockables/intruder"
 }

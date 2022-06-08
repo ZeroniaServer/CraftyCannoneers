@@ -2,16 +2,15 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "This Is A Robbery!",
+            "text": "You Sunk My Battleship!",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Unlock the enemy team's Team Chest using a Skeleton Key.",
+            "text": "Fire the winning shot.",
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:ender_eye",
-            "nbt": "{CustomModelData:1}"
+            "item": "minecraft:oak_boat"
         },
         "frame": "goal",
         "show_toast": true,
@@ -23,5 +22,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-    "parent": "tutorial:unlockables/intruder"
+    "parent": "tutorial:zzzunlockables/robbery"
 }
