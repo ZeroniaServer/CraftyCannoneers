@@ -125,7 +125,7 @@ execute as @e[type=armor_stand,tag=!FireCannon,scores={cannonshot=30..}] at @s r
 execute store success score $cbanim CmdData if score $cbanim CmdData matches 0
 execute as @e[type=armor_stand,tag=cannonball] store result entity @s Air double 0 run scoreboard players get $cbanim CmdData
 
-execute as @e[type=armor_stand,tag=cannonball] at @s run particle campfire_cosy_smoke ^ ^ ^ 0.1 0.1 0.1 0.01 3 force
+execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball] at @s run particle campfire_cosy_smoke ^ ^ ^ 0.1 0.1 0.1 0.01 3 force
 
 execute as @e[type=armor_stand,tag=Cannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 4 force
 execute as @e[type=armor_stand,tag=CannonballCluster] at @s run particle smoke ~ ~ ~ 0 0 0 0.1 2 force
