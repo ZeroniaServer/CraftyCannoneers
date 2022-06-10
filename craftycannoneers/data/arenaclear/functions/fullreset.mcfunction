@@ -55,3 +55,5 @@ function arenaclear:boatvehicles
 function arenaclear:spawnseagulls
 
 team join NoName @e[type=wandering_trader,tag=Trader]
+
+effect give @e[type=minecraft:villager] minecraft:invisibility 1000000 100 true
