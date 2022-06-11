@@ -1,3 +1,6 @@
+advancement revoke @a only debug:interacttrapdoor
+advancement revoke @a only debug:interactfencegate
+
 execute unless block -78 -27 18 air unless block -78 -27 18 minecraft:lantern[waterlogged=false,hanging=true] run setblock -78 -27 18 minecraft:lantern[waterlogged=false,hanging=true] replace
 execute unless block -72 -22 30 air unless block -72 -22 30 minecraft:lantern[waterlogged=false,hanging=true] run setblock -72 -22 30 minecraft:lantern[waterlogged=false,hanging=true] replace
 execute unless block -67 -20 34 air unless block -67 -20 34 minecraft:lantern[waterlogged=false,hanging=true] run setblock -67 -20 34 minecraft:lantern[waterlogged=false,hanging=true] replace

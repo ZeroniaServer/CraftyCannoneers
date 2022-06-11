@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": {
+          "block": {
+            "tag": "minecraft:fence_gates"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "debug:trapdoors"
+  }
+}
