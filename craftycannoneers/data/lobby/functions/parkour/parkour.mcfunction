@@ -3,7 +3,7 @@
 #######################################################
 
 ##Start parkour
-execute as @a[team=Lobby,tag=!inParkour] at @s positioned ~ ~1 ~ if entity @e[type=marker,tag=parkourStart,limit=1,distance=..1.3] run tag @s add startParkour
+execute as @a[team=Lobby,tag=!inParkour] at @s if entity @s[x=-73,y=-22,z=-1,dx=0,dy=0,dz=0] run tag @s add startParkour
 execute as @a[team=Lobby,tag=startParkour] run function game:clearinventory
 execute as @a[team=Lobby,tag=startParkour] run item replace entity @s hotbar.3 with carrot_on_a_stick{display:{Name:'{"text":"Restart Parkour","color":"green","bold":true,"italic":false}'},Unbreakable:1b,CustomModelData:1,Restart:1b,NoDrop:1b,HideFlags:127}
 execute as @a[team=Lobby,tag=startParkour] run item replace entity @s hotbar.5 with carrot_on_a_stick{display:{Name:'{"text":"Quit Parkour","color":"red","bold":true,"italic":false}'},Unbreakable:1b,CustomModelData:2,Quit:1b,NoDrop:1b,HideFlags:127}
@@ -24,7 +24,7 @@ execute as @a[team=Lobby,tag=finishedParkour,scores={parkourSecs=10..,parkourMin
 ##Controls
 scoreboard players add @a clickcooldown 0
 execute as @a[team=Lobby,tag=inParkour,scores={click=1..,clickcooldown=0},predicate=lobby:parkourrestart] run tag @s add RestartParkour
-execute as @a[team=Lobby,tag=inParkour,scores={click=1..},predicate=lobby:parkourquit] run tag @s add QuitParkour
+execute as @a[team=Lobby,tag=inParkour,scores={click=1..,clickcooldown=0},predicate=lobby:parkourquit] run tag @s add QuitParkour
 execute as @a[scores={clickcooldown=5..}] run scoreboard players set @s clickcooldown 0
 execute as @a[scores={clickcooldown=1..}] run scoreboard players add @s clickcooldown 1
 scoreboard players set @a[scores={click=1..}] clickcooldown 1
