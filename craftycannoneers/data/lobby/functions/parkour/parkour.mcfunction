@@ -48,7 +48,8 @@ execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound minecraft:enti
 execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 1 1.1
 execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 1.3
 execute as @a[team=Lobby,tag=finishedParkour] at @s run particle firework ~ ~1 ~ 0 0 0 0.1 100 force @s
-execute as @a[team=Lobby,tag=finishedParkour] run clear @s carrot_on_a_stick
+execute as @a[team=Lobby,tag=finishedParkour] run function game:clearinventory
+execute as @a[team=Lobby,tag=finishedParkour] run function lobby:items
 
 #First time completion
 execute as @a[team=Lobby,tag=finishedParkour,tag=!firstParkour] run scoreboard players operation @s bestParkourTime = @s finalParkourTime
