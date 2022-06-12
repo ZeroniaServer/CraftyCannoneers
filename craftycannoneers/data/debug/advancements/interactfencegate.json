@@ -12,6 +12,6 @@
     }
   },
   "rewards": {
-    "function": "debug:trapdoors"
+    "function": "debug:fencegates"
   }
 }
