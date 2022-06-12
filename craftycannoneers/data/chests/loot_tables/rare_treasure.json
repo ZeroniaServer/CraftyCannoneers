@@ -296,7 +296,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Boarding Axe\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Boarding Axe\",\"italic\":false,\"color\":\"dark_aqua\"}]'},HideFlags:5}"
             },
             {
               "function": "minecraft:set_count",
@@ -334,7 +334,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Unbreakable:1b,AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:-3.5,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,13259,12629,-26518]},{AttributeName:\"generic.attack_damage\",Amount:12.0,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,13359,12629,-26718]}],display:{Name:'[{\"text\":\"Mace\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+              "tag": "{Unbreakable:1b,AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:-3.5,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,13259,12629,-26518]},{AttributeName:\"generic.attack_damage\",Amount:12.0,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,13359,12629,-26718]}],display:{Name:'[{\"text\":\"Mace\",\"italic\":false,\"color\":\"dark_aqua\"}]'},HideFlags:5}"
             },
             {
               "function": "minecraft:set_count",
@@ -353,7 +353,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Saber\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Saber\",\"italic\":false,\"color\":\"dark_aqua\"}]'},HideFlags:5}"
             },
             {
               "function": "minecraft:set_count",
@@ -372,7 +372,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Battle Axe\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Battle Axe\",\"italic\":false,\"color\":\"dark_aqua\"}]'},HideFlags:5}"
             },
             {
               "function": "minecraft:set_count",
