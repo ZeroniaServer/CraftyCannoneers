@@ -8,6 +8,6 @@ execute unless entity @e[type=armor_stand,tag=Parrot,scores={CmdData=1..}] run t
 execute unless entity @e[type=armor_stand,tag=Parrot,scores={CmdData=1..}] run tellraw @s[scores={parrotpet=50}] {"text":"The parrot loves you.","italic":true,"color":"light_purple"}
 execute unless entity @e[type=armor_stand,tag=Parrot,scores={CmdData=1..}] run advancement grant @s[scores={parrotpet=50}] only tutorial:eastereggs/parrot
 
-execute unless entity @e[type=armor_stand,tag=Parrot,scores={CmdData=1..}] at @e[type=armor_stand,tag=Parrot,limit=1] run playsound parrot master @a ~ ~ ~ 0.4 1
+execute unless entity @e[type=armor_stand,tag=Parrot,scores={CmdData=1..}] at @e[type=armor_stand,tag=Parrot,limit=1] run playsound parrot master @a ~ ~ ~ 1 1
 execute unless entity @e[type=armor_stand,tag=Parrot,scores={CmdData=1..}] at @e[type=armor_stand,tag=Parrot,limit=1] run particle heart ~ ~0.3 ~ 0.2 0.2 0.2 0.1 4
 execute unless entity @e[type=armor_stand,tag=Parrot,scores={CmdData=1..}] run scoreboard players set @e[type=armor_stand,tag=Parrot] CmdData 1
