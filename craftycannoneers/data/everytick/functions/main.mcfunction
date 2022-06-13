@@ -71,7 +71,7 @@ function lobby:cbdisplays
 execute if score $gamestate CmdData matches 0 run function game:startgame
 execute if score $gamestate CmdData matches 1 run function game:countdown
 execute if score $gamestate CmdData matches 0 run scoreboard players set $Countdown CmdData 0
-
+execute store success score $toggle CmdData if score $toggle CmdData matches 0
 
 #Bossbars
 execute if score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a[team=Lobby]

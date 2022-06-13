@@ -122,8 +122,7 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..}] at @s ru
 execute as @e[type=armor_stand,tag=!FireCannon,tag=!RecentTracer,scores={cannonshot=30..}] at @s run scoreboard players set @s playerUUID 0
 execute as @e[type=armor_stand,tag=!FireCannon,scores={cannonshot=30..}] at @s run scoreboard players reset @s cannonshot
 
-execute store success score $cbanim CmdData if score $cbanim CmdData matches 0
-execute as @e[type=armor_stand,tag=cannonball] store result entity @s Air double 0 run scoreboard players get $cbanim CmdData
+execute as @e[type=armor_stand,tag=cannonball] store result entity @s Air double 1 run scoreboard players get $toggle CmdData
 
 execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=!CannonballCluster] at @s run particle dust_color_transition 1 1 1 3.3 0.398 0.398 0.398 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force
 execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=CannonballCluster] at @s run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force

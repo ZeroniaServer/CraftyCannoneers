@@ -1,10 +1,9 @@
 # summon temporary entity "in front of the player", if the player was standing at 0 0 0
-execute positioned 0.0 0 0.0 run summon marker ^ ^ ^2 {Tags:["direction"]}
+execute positioned 0.0 0 0.0 run summon marker ^ ^ ^2.5 {Tags:["direction"]}
 
 # summon the projectile entity
 execute anchored eyes positioned ^ ^ ^1 run summon llama_spit ~ ~ ~ {Tags:["rock"]}
 execute anchored eyes positioned ^ ^ ^0.1 run summon llama_spit ~ ~ ~ {Tags:["rock2"]}
-execute as @e[type=snowball,tag=!init,limit=1,sort=nearest] run function lobby:rock/init
 
 # summon temporary llama and copy rotation
 execute positioned ~ -100 ~ run summon llama ~ ~ ~ {Tags:["myllama"]}
@@ -15,6 +14,10 @@ data modify entity @e[type=llama_spit,tag=rock2,limit=1] Owner set from entity @
 # copy the markers position tag to the spit's motion tag
 data modify entity @e[type=llama_spit,tag=rock,limit=1] Motion set from entity @e[type=marker,tag=direction,limit=1] Pos
 data modify entity @e[type=llama_spit,tag=rock2,limit=1] Motion set from entity @e[type=marker,tag=direction,limit=1] Pos
+
+# set up snowball
+data modify entity @e[type=snowball,tag=!init,limit=1,sort=nearest] Motion set from entity @e[type=marker,tag=direction,limit=1] Pos
+execute as @e[type=snowball,tag=!init,limit=1,sort=nearest] run function lobby:rock/init
 
 # clean up
 kill @e[type=marker,tag=direction]
