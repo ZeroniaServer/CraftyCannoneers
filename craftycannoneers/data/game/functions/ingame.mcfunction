@@ -137,6 +137,8 @@ execute store result bossbar orangeship value run scoreboard players get $Orange
 bossbar set purpleship players @a[team=!Lobby]
 bossbar set orangeship players @a[team=!Lobby]
 
+execute as @a run trigger startgame set 0
+
 execute as @a[scores={death=1..},advancements={tutorial:objectives/objective7=false}] run function tutorial:resetprogress
 execute as @a[scores={death=1..}] run function cannons:despawnplayerc
 execute as @a[scores={death=1..},team=!Lobby,team=!Spectator] run function game:givegear
