@@ -74,6 +74,8 @@ scoreboard objectives add bestParkourDeci dummy
 scoreboard objectives add bestParkourDeci2 dummy
 scoreboard objectives add bestParkourTime dummy
 scoreboard objectives add Falling minecraft.custom:minecraft.fall_one_cm
+scoreboard objectives add GamesPlayed dummy
+scoreboard objectives add toggleTips trigger
 
 #> Lobby entities
 execute unless entity @e[type=marker,tag=parkourStart] run summon marker -73 -22 -1 {Tags:["parkourStart"]}
