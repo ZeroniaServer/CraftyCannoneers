@@ -73,7 +73,8 @@ scoreboard objectives add bestParkourSecs dummy
 scoreboard objectives add bestParkourDeci dummy
 scoreboard objectives add bestParkourDeci2 dummy
 scoreboard objectives add bestParkourTime dummy
-scoreboard objectives add Falling minecraft.custom:minecraft.fall_one_cm
+scoreboard objectives remove Falling
+scoreboard objectives add Falling minecraft.custom:minecraft.time_since_death
 scoreboard objectives add GamesPlayed dummy
 scoreboard objectives add toggleTips trigger
 
