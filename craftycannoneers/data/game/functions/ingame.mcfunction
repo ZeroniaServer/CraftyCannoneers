@@ -8,6 +8,7 @@ function game:ingame/harpoon
 function game:ingame/boardingaxe
 function tutorial:notify
 function tutorial:showtip
+function game:ingame/bell
 
 execute unless entity @e[type=slime,tag=Weakpoint,tag=Orange] if entity @e[type=marker,tag=WeakpointLoc,tag=Purple] run function game:shipweakpoint/spawnnewpurple
 execute unless entity @e[type=slime,tag=Weakpoint,tag=Purple] if entity @e[type=marker,tag=WeakpointLoc,tag=Orange] run function game:shipweakpoint/spawnneworange

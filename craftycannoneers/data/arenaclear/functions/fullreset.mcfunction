@@ -22,7 +22,9 @@ kill @e[type=armor_stand,tag=GasAS]
 kill @e[type=bat]
 kill @e[type=area_effect_cloud,tag=GPDispText]
 kill @e[type=area_effect_cloud,tag=CannonNametag]
+kill @e[type=armor_stand,tag=ShipBell]
 
+#Cannons
 execute positioned 70 -28 -50 run function cannons:spawnpurple
 execute positioned 74 -28 -50 run function cannons:spawnpurple
 execute positioned 57 -23 -51 run function cannons:spawnpurple
@@ -36,6 +38,10 @@ execute positioned 70 -28 50 run function cannons:spawnorange
 execute positioned 83 -23 51 run function cannons:spawnorange
 execute positioned 62 -31 51 run function cannons:spawnorange
 execute positioned 74 -31 50 run function cannons:spawnorange
+
+#Ship bells
+summon armor_stand 63 -24.1 -55 {Invulnerable:1b,Marker:1b,NoGravity:1b,Silent:1b,Tags:["ShipBell","Purple"],ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1b,tag:{CustomModelData:68}}]}
+summon armor_stand 77 -24.1 55 {Invulnerable:1b,Marker:1b,NoGravity:1b,Silent:1b,Tags:["ShipBell","Orange"],ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1b,tag:{CustomModelData:68}}]}
 
 #orange
 summon wandering_trader 72 -28 51 {Tags:["Trader"],CustomName:"\"Pirate Trader\"",CustomNameVisible:0,NoAI:1b,Invulnerable:1b,PersistenceRequired:1b,NoGravity:1b,Silent:1b,Offers:{Recipes:[]}}

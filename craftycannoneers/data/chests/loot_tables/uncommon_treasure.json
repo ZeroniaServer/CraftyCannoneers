@@ -176,7 +176,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Boarding Axe\",\"italic\":false,\"color\":\"dark_aqua\"}]'},HideFlags:4}"
+              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Boarding Axe\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Gets Knockback when boarding\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"the Enemy Ship!\",\"italic\":false,\"color\":\"white\"}]']},HideFlags:4}"
             },
             {
               "function": "minecraft:set_count",

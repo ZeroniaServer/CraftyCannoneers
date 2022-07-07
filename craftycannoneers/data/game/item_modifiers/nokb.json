@@ -4,5 +4,9 @@
     "enchantments": {
       "minecraft:knockback": 0
     }
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{HideFlags:127,display:{Name:'[{\"text\":\"Boarding Axe\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Gets Knockback when boarding\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"the Enemy Ship!\",\"italic\":false,\"color\":\"white\"}]']}}"
   }
 ]

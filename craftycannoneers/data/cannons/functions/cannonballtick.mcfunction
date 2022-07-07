@@ -30,9 +30,9 @@ scoreboard players operation @s dz -= @s z
 #        "(...) Motion[0] double 0.002 (...)"        <--- the bigger this number, the faster the entity
 #########
 
-execute store result entity @s Motion[0] double 0.004 run scoreboard players get @s dx
-execute store result entity @s Motion[1] double 0.004 run scoreboard players get @s dy
-execute store result entity @s Motion[2] double 0.004 run scoreboard players get @s dz
+execute store result entity @s Motion[0] double 0.003 run scoreboard players get @s dx
+execute store result entity @s Motion[1] double 0.003 run scoreboard players get @s dy
+execute store result entity @s Motion[2] double 0.003 run scoreboard players get @s dz
 
 tag @s add CannonballShot
 

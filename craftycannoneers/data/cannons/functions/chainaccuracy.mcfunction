@@ -1,5 +1,5 @@
-scoreboard players set @s drag 100
-scoreboard players set @s gravity 110
+scoreboard players set @s drag 35
+scoreboard players set @s gravity 70
 
 scoreboard players set @s RNGmax 160
 execute store result score @s RNGscore run data get entity @s UUID[0]

@@ -72,8 +72,8 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=6}] 
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=6}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","BouncyCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:55}}]}
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=6}] at @s run playsound bounceshot master @a ~ ~ ~ 4 1
 #Player Cannonball
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=20,CmdData=7}] at @s run playsound cannonload master @a ~ ~ ~ 6 1.4
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=7}] at @s run playsound cannonshot master @a ~ ~ ~ 6 1.3
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30,CmdData=7}] at @s run playsound playershot master @a ~ ~ ~ 6.5 1
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=7}] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1.3
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=7}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","PlayerCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:57}}],Passengers:[{id:"minecraft:armor_stand",Tags:["PCannonballdeco","New"],Marker:1b,Invulnerable:1b,Small:1b,NoGravity:1b,Passengers:[{id:"minecraft:slime",Silent:1b,Invulnerable:1b,CustomNameVisible:1b,NoAI:1b,Size:1,Tags:["PCannonballname","New"]}],ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b}]}]}
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=7}] as @e[type=armor_stand,tag=PCannonballdeco] at @s run tp @s @e[type=armor_stand,tag=PlayerCannonball,limit=1,sort=nearest]
@@ -124,8 +124,8 @@ execute as @e[type=armor_stand,tag=!FireCannon,scores={cannonshot=30..}] at @s r
 
 execute as @e[type=armor_stand,tag=cannonball] store result entity @s Air double 1 run scoreboard players get $toggle CmdData
 
-execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=!CannonballCluster] at @s run particle dust_color_transition 1 1 1 3.3 0.398 0.398 0.398 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force
-execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=CannonballCluster] at @s run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force
+execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=!CannonballCluster] at @s run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force
+execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=CannonballCluster] at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force
 
 execute as @e[type=armor_stand,tag=Cannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 4 force
 execute as @e[type=armor_stand,tag=CannonballCluster] at @s run particle smoke ~ ~ ~ 0 0 0 0.1 2 force
