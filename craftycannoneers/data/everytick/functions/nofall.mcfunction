@@ -1,5 +1,6 @@
 ##Utility function to prevent lobby players from taking fall damage (credit: PingiPuck)
-tag @a[tag=hasMoved,nbt={FallDistance:0.0f}] add NotFalling
+scoreboard players add @a leavegame 0
+tag @a[scores={leavegame=0},nbt={FallDistance:0.0f}] add NotFalling
 scoreboard players set @a[tag=NotFalling] Falling 0
 scoreboard players set @a[team=!Lobby] Falling 0
 effect clear @a[tag=NotFalling,team=Lobby] jump_boost
