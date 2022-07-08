@@ -1,3 +1,7 @@
+#> Slabs
+execute unless block 77 -23 55 minecraft:dark_oak_slab run setblock 77 -23 55 minecraft:dark_oak_slab
+execute unless block 63 -23 -55 minecraft:dark_oak_slab run setblock 63 -23 -55 minecraft:dark_oak_slab
+
 execute as @e[type=armor_stand,tag=ShipBell,tag=Purple] if entity @a[team=Orange,predicate=game:onpurple] run scoreboard players add @s CmdData 1
 execute as @e[type=armor_stand,tag=ShipBell,tag=Orange] if entity @a[team=Purple,predicate=game:onorange] run scoreboard players add @s CmdData 1
 
