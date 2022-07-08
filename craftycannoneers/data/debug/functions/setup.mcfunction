@@ -61,6 +61,7 @@ scoreboard objectives add notifyobjective dummy
 scoreboard objectives add objectivecount dummy
 scoreboard objectives add loverocks minecraft.used:minecraft.snowball
 scoreboard objectives add bellring dummy
+scoreboard objectives add horntime dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy

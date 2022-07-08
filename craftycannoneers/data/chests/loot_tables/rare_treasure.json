@@ -403,6 +403,25 @@
             }
           ],
           "name": "minecraft:trident"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{instrument:\"minecraft:ponder_goat_horn\",Unbreakable:1b,Horn:1,display:{Name:'[{\"text\":\"Raid Horn\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Use this horn to temporarily\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"give your entire crew a buff.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]']},HideFlags:127}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:goat_horn"
         }
       ]
     }
