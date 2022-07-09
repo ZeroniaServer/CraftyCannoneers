@@ -21,3 +21,5 @@ item replace entity @s hotbar.8 with diamond_hoe{HideFlags:127,NoDrop:1b,Unbreak
 effect give @s instant_health 1 100 true
 effect give @s resistance 6 100 true
 effect give @s fire_resistance 6 100 true
+
+execute unless score $PVPbal BalanceScore matches 0 run function balancing:pvparmor

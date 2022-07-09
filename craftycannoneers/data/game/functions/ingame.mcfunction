@@ -154,6 +154,9 @@ scoreboard players reset @a[scores={death=1..}] death
 effect give @a[team=!Lobby,team=!Spectator,scores={kill=1..,gappleTimer=0}] regeneration 4 2 true
 scoreboard players add @a[team=!Lobby,team=!Spectator,scores={kill=1..}] MVPkill 1
 execute as @a[team=!Lobby,team=!Spectator,scores={kill=1..}] run advancement grant @s only tutorial:zzzunlockables/killplayer
+execute as @a[team=Orange,scores={kill=1..}] run scoreboard players add $OrangeKills BalanceScore 1
+execute as @a[team=Purple,scores={kill=1..}] run scoreboard players add $PurpleKills BalanceScore 1
+execute as @a[scores={kill=1..},limit=1,sort=random] run function balancing:pvpskillcheck
 scoreboard players reset @a[scores={kill=1..}] kill
 
 

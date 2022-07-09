@@ -46,3 +46,5 @@ execute as @a[tag=HoldHorn,scores={horntime=34..}] run title @s subtitle {"text"
 execute as @a[tag=HoldHorn,scores={horntime=34..}] at @s run playsound raidhorn master @a ~ ~ ~ 6 1
 execute as @a[tag=HoldHorn,scores={horntime=34..}] run scoreboard players reset @s horntime
 execute as @a[tag=HoldHorn,scores={horntime=34..}] run tag @s remove HoldHorn
+
+tag @a[tag=HoldHorn] remove HoldHorn

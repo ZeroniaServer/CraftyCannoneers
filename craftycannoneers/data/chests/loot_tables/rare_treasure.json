@@ -235,6 +235,25 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 6,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:2,Bomb:1b,display:{Name:'[{\"text\":\"Blast Bomb\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Throwable weapon which deals\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"a massive amount of knockback.\",\"italic\":false,\"color\":\"white\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2,
+                "max": 3,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:ender_eye"
+        },
+        {
+          "type": "minecraft:item",
           "weight": 3,
           "functions": [
             {

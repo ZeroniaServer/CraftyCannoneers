@@ -62,6 +62,8 @@ scoreboard objectives add objectivecount dummy
 scoreboard objectives add loverocks minecraft.used:minecraft.snowball
 scoreboard objectives add bellring dummy
 scoreboard objectives add horntime dummy
+scoreboard objectives add BalanceScore dummy
+scoreboard objectives add BombDelay dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
@@ -101,6 +103,7 @@ team add Orange
 team add Purple
 team add Spectator
 team add NoName
+team add Collide
 team modify Lobby color blue
 team modify Orange color gold
 team modify Purple color dark_purple
@@ -110,10 +113,11 @@ team modify Orange friendlyFire false
 team modify Purple friendlyFire false
 team modify Spectator friendlyFire false
 team modify Lobby collisionRule never
-team modify Purple collisionRule never
-team modify Orange collisionRule never
+team modify Purple collisionRule pushOwnTeam
+team modify Orange collisionRule pushOwnTeam
 team modify Spectator collisionRule never
 team modify NoName collisionRule never
+team modify Collide collisionRule always
 team modify NoName nametagVisibility never
 
 #> Static scores

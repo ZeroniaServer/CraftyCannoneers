@@ -6,6 +6,12 @@ scoreboard players set $gamestate CmdData 2
 
 gamerule fallDamage true
 
+#Balancing
+scoreboard players set $OrangeKills BalanceScore 0
+scoreboard players set $PurpleKills BalanceScore 0
+scoreboard players set $KillThreshold BalanceScore 0
+scoreboard players set $PVPbal BalanceScore 0
+
 title @a title {"text":"Game Started!","color":"dark_aqua"}
 title @a[team=!Lobby,team=!Spectator] subtitle {"text":"Destroy the enemy ship!","color":"aqua"}
 title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"aqua"}

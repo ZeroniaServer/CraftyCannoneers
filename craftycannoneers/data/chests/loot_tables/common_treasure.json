@@ -112,6 +112,25 @@
             }
           ],
           "name": "minecraft:golden_apple"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:2,Bomb:1b,display:{Name:'[{\"text\":\"Blast Bomb\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Throwable weapon which deals\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"a massive amount of knockback.\",\"italic\":false,\"color\":\"white\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:ender_eye"
         }
       ]
     }

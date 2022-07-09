@@ -48,6 +48,10 @@ function cannons:load
 function cannons:shoot
 function cannons:cannonclaim
 
+#Weapons
+function weapons:bomb/throw
+function weapons:bomb/functionality
+
 #Chests
 function chests:loop
 
