@@ -17,7 +17,7 @@ execute as @a[team=Orange,tag=SeeWeakpoint,scores={spotting=55},limit=1,sort=ran
 execute as @a[tag=SeeWeakpoint,team=Purple,scores={spotting=55..}] run tag @e[type=slime,tag=Weakpoint,tag=Purple] add Spotted
 execute as @a[tag=SeeWeakpoint,team=Orange,scores={spotting=55..}] run tag @e[type=slime,tag=Weakpoint,tag=Orange] add Spotted
 execute as @a[tag=SeeWeakpoint,scores={spotting=55..}] run title @s subtitle {"text":" ","color":"white"}
-#effect give @e[type=slime] invisibility 1 100 true
+effect give @e[type=slime] invisibility 1 100 true
 
 #> Tutorial Advancement trigger
 execute as @a[team=!Lobby,team=!Spectator,tag=SeeWeakpoint,scores={spotting=55..},advancements={tutorial:objectives/objective8=true}] run advancement grant @s only tutorial:objectives/objective9
