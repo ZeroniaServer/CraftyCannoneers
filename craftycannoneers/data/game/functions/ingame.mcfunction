@@ -199,7 +199,7 @@ fill 69 -29 60 67 -29 60 spruce_slab[type=top]
 fill 71 -29 -60 73 -29 -60 spruce_slab[type=top]
 function chests:openchest
 
-execute as @e[type=chest_minecart,tag=orangeteamchest] at @s unless entity @a[team=Purple,distance=..6] run tp @s 68.50 -28 60.50
+execute as @e[type=chest_minecart,tag=orangeteamchest] at @s unless entity @a[team=Purple,distance=..6] run tp @s 68.50 -28 60.50 0 0
 execute as @e[type=chest_minecart,tag=orangeteamchest,tag=Opened] at @s unless entity @a[team=Purple,distance=..6] unless entity @a[team=Orange,distance=..5] run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 0.75
 execute as @e[type=chest_minecart,tag=orangeteamchest,tag=Opened] at @s unless entity @a[team=Purple,distance=..6] unless entity @a[team=Orange,distance=..5] run item replace entity @e[type=armor_stand,tag=orangechestdisplay,limit=1] armor.head with diamond_hoe{CustomModelData:52}
 execute as @e[type=chest_minecart,tag=orangeteamchest,tag=Opened] at @s unless entity @a[team=Purple,distance=..6] unless entity @a[team=Orange,distance=..5] run tag @s remove Opened
@@ -235,7 +235,7 @@ execute if entity @e[type=armor_stand,tag=orangechestdisplay,tag=Unlocked] as @e
 
 ##########################
 
-execute as @e[type=chest_minecart,tag=purpleteamchest] at @s unless entity @a[team=Orange,distance=..6] run tp @s 72.50 -28 -59.50
+execute as @e[type=chest_minecart,tag=purpleteamchest] at @s unless entity @a[team=Orange,distance=..6] run tp @s 72.50 -28 -59.50 0 0
 execute as @e[type=chest_minecart,tag=purpleteamchest,tag=Opened] at @s unless entity @a[team=Orange,distance=..6] unless entity @a[team=Purple,distance=..5] run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 0.75
 execute as @e[type=chest_minecart,tag=purpleteamchest,tag=Opened] at @s unless entity @a[team=Orange,distance=..6] unless entity @a[team=Purple,distance=..5] run item replace entity @e[type=armor_stand,tag=purplechestdisplay,limit=1] armor.head with diamond_hoe{CustomModelData:49}
 execute as @e[type=chest_minecart,tag=purpleteamchest,tag=Opened] at @s unless entity @a[team=Orange,distance=..6] unless entity @a[team=Purple,distance=..5] run tag @s remove Opened
