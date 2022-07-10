@@ -69,6 +69,16 @@ summon marker 65 -19 53 {Tags:["WeakpointLoc","Orange"]}
 summon marker 67 -10 53 {Tags:["WeakpointLoc","Orange"]}
 summon marker 83 -14 52 {Tags:["WeakpointLoc","Orange"]}
 
+kill @e[type=marker,tag=LockSpawn]
+summon marker 54 -36 4 {Tags:["LockSpawn"]}
+summon marker 86 -36 -4 {Tags:["LockSpawn"]}
+summon marker 54 -31 3 {Tags:["LockSpawn"]}
+summon marker 86 -31 -3 {Tags:["LockSpawn"]}
+summon marker 88 -30 -11 {Tags:["LockSpawn"]}
+summon marker 52 -30 11 {Tags:["LockSpawn"]}
+summon marker 69 -29 -2 {Tags:["LockSpawn"]}
+summon marker 71 -29 2 {Tags:["LockSpawn"]}
+
 execute as @e[type=marker,tag=WeakpointLoc] at @s run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 cave_air replace air
 
 function game:shipweakpoint/spawnnewpurple

@@ -1,6 +1,8 @@
 execute as @a[team=Purple,scores={eyeclick=1..}] at @s if entity @e[type=armor_stand,tag=orangechestdisplay,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
 execute as @a[team=Orange,scores={eyeclick=1..}] at @s if entity @e[type=armor_stand,tag=purplechestdisplay,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
 
+execute as @a[team=Purple,scores={eyeclick=1..}] at @s if entity @e[type=armor_stand,tag=LChestAS,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
+execute as @a[team=Orange,scores={eyeclick=1..}] at @s if entity @e[type=armor_stand,tag=LChestAS,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
 
 execute as @a[scores={openchest=1..4}] run title @s title {"text":" ","color":"dark_aqua"}
 execute as @a[scores={openchest=1}] run title @s subtitle ["",{"text":"Unlocking Chest... ","color":"dark_aqua"},{"text":"[","color":"gray"},{"text":"||||||||||","bold":true,"color":"red"},{"text":"]","color":"gray"}]
@@ -27,8 +29,12 @@ execute as @a[scores={openchest=20}] at @s run playsound key_turn master @a ~ ~ 
 execute as @a[scores={openchest=20}] at @s run playsound chestunlock master @a ~ ~ ~ 0.5 1.3
 execute as @a[scores={openchest=20}] at @s run advancement grant @s only tutorial:zzzunlockables/robbery
 
-execute as @a[team=Purple,scores={openchest=20..}] at @s run tag @e[type=armor_stand,tag=orangechestdisplay,tag=!Unlocked] add Unlocked
-execute as @a[team=Orange,scores={openchest=20..}] at @s run tag @e[type=armor_stand,tag=purplechestdisplay,tag=!Unlocked] add Unlocked
+execute as @a[team=Purple,predicate=game:onorange,scores={openchest=20..}] at @s run tag @e[type=armor_stand,tag=orangechestdisplay,tag=!Unlocked] add Unlocked
+execute as @a[team=Orange,predicate=game:onpurple,scores={openchest=20..}] at @s run tag @e[type=armor_stand,tag=purplechestdisplay,tag=!Unlocked] add Unlocked
+
+execute as @a[team=Purple,predicate=!game:onorange,scores={openchest=20..}] at @s run tag @e[type=armor_stand,tag=LChestAS,tag=!Unlocked,limit=1,sort=nearest] add Unlocked
+execute as @a[team=Orange,predicate=!game:onpurple,scores={openchest=20..}] at @s run tag @e[type=armor_stand,tag=LChestAS,tag=!Unlocked,limit=1,sort=nearest] add Unlocked
+
 
 scoreboard players reset @a[scores={openchest=20..}] openchest
 

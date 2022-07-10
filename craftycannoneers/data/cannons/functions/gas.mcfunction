@@ -41,6 +41,8 @@ execute as @e[type=marker,tag=GasExplode] at @s run particle flash ~ ~ ~ 0.1 0.1
 execute as @e[type=marker,tag=GasExplode] at @s run particle large_smoke ~ ~ ~ 2 2 2 0.7 200 force
 execute as @e[type=marker,tag=GasExplode] at @s run particle lava ~ ~ ~ 1 1 1 1 60 force
 execute as @e[type=marker,tag=GasExplode] at @s run particle explosion_emitter ~ ~ ~ 1.5 1 1.5 1 5 force
+execute as @e[type=marker,tag=GasExplode,predicate=game:onpurple] at @s run scoreboard players add $DamagePurple CmdData 15
+execute as @e[type=marker,tag=GasExplode,predicate=game:onorange] at @s run scoreboard players add $DamageOrange CmdData 15
 execute as @e[type=marker,tag=GasExplode] at @s run summon minecraft:lightning_bolt ~ ~300000 ~
 execute as @e[type=marker,tag=GasExplode] at @s run playsound gasexplode master @a ~ ~ ~ 4 1
 execute as @e[type=marker,tag=GasExplode] at @s run playsound gasexplode_distant master @a[distance=15..] ~ ~ ~ 8 1

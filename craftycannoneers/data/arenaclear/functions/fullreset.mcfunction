@@ -6,6 +6,7 @@ kill @e[type=armor_stand,tag=cannonball]
 tp @e[type=#game:weakpoint,tag=Weakpoint] 0 -1000 0
 kill @e[type=#game:weakpoint,tag=Weakpoint]
 kill @e[type=marker,tag=WeakpointLoc]
+kill @e[type=marker,tag=LockSpawn]
 kill @e[type=armor_stand,tag=chestdisplay]
 kill @e[type=chest_minecart,tag=teamchest]
 function arenaclear:shipplacement
