@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_eye"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{CustomModelData:1,display:{Name:'[{\"text\":\"Skeleton Key\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Use this key to unlock \",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"any kind of locked Chests!\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]']}}"
+        }
+      ]
+    }
+  ]
+}

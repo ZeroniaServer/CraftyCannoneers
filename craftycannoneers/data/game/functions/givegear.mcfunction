@@ -12,11 +12,11 @@ item replace entity @s[team=Purple] armor.chest with leather_chestplate{Attribut
 item replace entity @s[team=Purple] armor.legs with leather_leggings{AttributeModifiers:[{AttributeName:"generic.armor",Amount:5,Slot:legs,Name:"generic.armor",UUID:[I;-122417,14321,165739,-28642]}],Unbreakable:1b,display:{color:13762815,Name:'[{"text":"Purple Pirate Leggings","italic":false,"color":"#9933ff"}]'},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
 item replace entity @s[team=Purple] armor.feet with leather_boots{AttributeModifiers:[{AttributeName:"generic.armor",Amount:2,Slot:feet,Name:"generic.armor",UUID:[I;-122417,14521,165739,-29042]}],Unbreakable:1b,display:{color:13762815,Name:'[{"text":"Purple Pirate Boots","italic":false,"color":"#9933ff"}]'},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
 
-item replace entity @s hotbar.0 with iron_sword{NoDrop:1b,Unbreakable:1b,display:{Name:'[{"text":"Cutlass","italic":false,"color":"dark_aqua"}]'}}
-item replace entity @s hotbar.1 with crossbow{NoDrop:1b,Unbreakable:1b,display:{Name:'[{"text":"Hand Crossbow","italic":false,"color":"dark_aqua"}]'},Enchantments:[{id:quick_charge,lvl:2}],HideFlags:7,Charged:1b,ChargedProjectiles:[{id:"minecraft:arrow",Count:1b,tag:{display:{Name:'[{"text":"Arrow","italic":false,"color":"dark_aqua"}]'}}}]}
-item replace entity @s hotbar.2 with spyglass{NoDrop:1b,display:{Name:'[{"text":"Spotting Spyglass","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Use this Spyglass to expose","italic":false,"color":"aqua"}]','[{"text":"the weakpoints of a ship!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"","italic":false,"color":"dark_purple"}]']}}
+loot replace entity @s hotbar.0 loot weapons:cutlass
+loot replace entity @s hotbar.1 loot weapons:crossbow
+loot replace entity @s hotbar.2 loot weapons:spyglass
 item replace entity @s hotbar.7 with arrow{display:{Name:'[{"text":"Arrow","italic":false,"color":"dark_aqua"}]'}} 4
-item replace entity @s hotbar.8 with diamond_hoe{HideFlags:127,NoDrop:1b,Unbreakable:1b,CustomModelData:60,Cannonball:8b,display:{Name:'[{"text":"Tracer Cannonball","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Using this Cannonball does not","italic":false,"color":"white"}]','[{"text":"consume any Gunpowder in a Cannon.","italic":false,"color":"white"},{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"Leaves behind a visible trail","italic":false,"color":"#66ff99"}]','[{"text":"which is only apparent to its user.","italic":false,"color":"#66ff99"},{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"","italic":false,"color":"dark_purple"}]']}}
+loot replace entity @s hotbar.8 loot weapons:tracer
 
 effect give @s instant_health 1 100 true
 effect give @s resistance 6 100 true

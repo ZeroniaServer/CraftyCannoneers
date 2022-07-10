@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:spyglass"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{NoDrop:1b,display:{Name:'[{\"text\":\"Spotting Spyglass\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Use this Spyglass to expose\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"the weakpoints of a ship!\",\"italic\":false,\"color\":\"aqua\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]']}}"
+        }
+      ]
+    }
+  ]
+}

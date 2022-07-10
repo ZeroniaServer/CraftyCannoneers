@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:goat_horn"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{instrument:\"minecraft:ponder_goat_horn\",Unbreakable:1b,Horn:1,display:{Name:'[{\"text\":\"Raid Horn\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Use this horn to temporarily\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"give your entire crew a buff.\",\"italic\":false,\"color\":\"white\"}]']},HideFlags:127}"
+        }
+      ]
+    }
+  ]
+}

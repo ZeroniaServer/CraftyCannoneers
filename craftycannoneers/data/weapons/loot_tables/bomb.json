@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_eye"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{CustomModelData:2,Bomb:1b,display:{Name:'[{\"text\":\"Blast Bomb\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Throwable weapon which deals\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"a massive amount of knockback.\",\"italic\":false,\"color\":\"white\"}]']}}"
+        }
+      ]
+    }
+  ]
+}
