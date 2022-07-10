@@ -48,9 +48,11 @@ execute as @a at @s run playsound entity.generic.explode master @s ~ ~ ~ 100 1.2
 scoreboard players reset @a loverocks
 
 #> Weakpoints
+tp @e[type=marker,tag=WeakpointLoc] 0 -1000 0
 kill @e[type=marker,tag=WeakpointLoc]
-tp @e[type=slime,tag=Weakpoint] ~ ~-200 ~
+tp @e[type=slime,tag=Weakpoint] 0 -1000 0
 kill @e[type=#game:weakpoint,tag=Weakpoint]
+
 summon marker 70 -30 -48 {Tags:["WeakpointLoc","Purple"]}
 summon marker 60 -27 -48 {Tags:["WeakpointLoc","Purple"]}
 summon marker 53 -26 -49 {Tags:["WeakpointLoc","Purple"]}

@@ -1,4 +1,4 @@
-tp @e[type=slime,tag=Weakpoint,tag=Purple] ~ ~-200 ~
+tp @e[type=slime,tag=Weakpoint,tag=Purple] 0 -1000 0
 kill @e[type=#game:weakpoint,tag=Weakpoint,tag=Purple]
 
 tag @e[type=marker,tag=WeakpointLoc,tag=Orange] remove SelectedWeakP

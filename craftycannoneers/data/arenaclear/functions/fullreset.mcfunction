@@ -3,13 +3,13 @@ scoreboard players set $current CannonID 0
 kill @e[type=wandering_trader,tag=Trader]
 kill @e[type=#game:cannon,tag=cannon]
 kill @e[type=armor_stand,tag=cannonball]
-tp @e[type=#game:weakpoint,tag=Weakpoint] ~ ~-200 ~
+tp @e[type=#game:weakpoint,tag=Weakpoint] 0 -1000 0
 kill @e[type=#game:weakpoint,tag=Weakpoint]
 kill @e[type=marker,tag=WeakpointLoc]
 kill @e[type=armor_stand,tag=chestdisplay]
 kill @e[type=chest_minecart,tag=teamchest]
 function arenaclear:shipplacement
-tp @e[type=#game:chest,tag=chest] ~ ~-200 ~
+tp @e[type=#game:chest,tag=chest] 0 -1000 0
 kill @e[type=#game:chest,tag=chest]
 kill @e[type=area_effect_cloud,tag=ChestNotif]
 kill @e[type=item]

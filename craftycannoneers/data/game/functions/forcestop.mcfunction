@@ -15,5 +15,7 @@ scoreboard players reset $DamagePurple CmdData
 execute unless score $ShipHP CmdData matches 1000 unless score $ShipHP CmdData matches 1250 unless score $ShipHP CmdData matches 1500 unless score $ShipHP CmdData matches 2000 run scoreboard players set $ShipHP CmdData 42069
 function lobby:customizer/updatesigns
 
-tp @e[type=marker,tag=WeakpointLoc] ~ ~-200 ~
+tp @e[type=marker,tag=WeakpointLoc] 0 -1000 0
+kill @e[type=marker,tag=WeakpointLoc]
+tp @e[type=slime,tag=Weakpoint] 0 -1000 0
 kill @e[type=#game:weakpoint,tag=Weakpoint]
