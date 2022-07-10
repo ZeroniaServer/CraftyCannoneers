@@ -9,6 +9,8 @@ summon villager ~ ~0.5 ~0.3 {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:
 summon villager ~0.5 ~0.5 ~0.5 {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-10000000,Tags:["CannonVRight","cannon","NoID"]}
 summon villager ~-0.5 ~0.5 ~0.5 {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-10000000,Tags:["CannonVLeft","cannon","NoID"]}
 
+team join NoName @e[type=villager,tag=cannon]
+
 item replace entity @e[type=armor_stand,tag=CannonDisp] armor.head with diamond_hoe{CustomModelData:1}
 
 execute as @e[type=villager,tag=NoID] run scoreboard players operation @s CannonID = $current CannonID
