@@ -27,7 +27,7 @@ execute if entity @s[scores={RNGscore=..4}] run tag @s add HLeft
 execute if entity @s[scores={RNGscore=5..8}] run tag @s add HRight
 scoreboard players operation @s[tag=HRight] RNGscore /= $2 CmdData
 
-execute as @s[tag=HLeft] run scoreboard players operation @s PowerL += @s RNGscore
-execute as @s[tag=HRight] run scoreboard players operation @s PowerR += @s RNGscore
+execute if entity @s[tag=HLeft] run scoreboard players operation @s PowerL += @s RNGscore
+execute if entity @s[tag=HRight] run scoreboard players operation @s PowerR += @s RNGscore
 
 tag @s add clusteracc
