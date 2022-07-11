@@ -1,4 +1,5 @@
-tag @a[nbt={SelectedItem:{id:"minecraft:goat_horn"}}] add HoldHorn
+tag @a[predicate=game:horn_mainhand] add HoldHorn
+tag @a[predicate=game:horn_offhand] add HoldHorn
 scoreboard players add @a[tag=HoldHorn,scores={eyeclick=1..}] horntime 1
 execute as @a[scores={horntime=1..}] unless entity @s[scores={eyeclick=1..}] run title @s subtitle {"text":" ","color":"white"}
 execute as @a[scores={horntime=1..}] unless entity @s[scores={eyeclick=1..}] run scoreboard players reset @s horntime
@@ -41,7 +42,8 @@ execute as @a[tag=HoldHorn,scores={horntime=34..}] at @s run effect give @s stre
 
 
 
-execute as @a[tag=HoldHorn,scores={horntime=34..}] run item replace entity @s weapon.mainhand with air
+execute as @a[predicate=game:horn_mainhand,tag=HoldHorn,scores={horntime=34..}] run item replace entity @s weapon.mainhand with air
+execute as @a[predicate=game:horn_offhand,tag=HoldHorn,scores={horntime=34..}] run item replace entity @s weapon.offhand with air
 execute as @a[tag=HoldHorn,scores={horntime=34..}] run title @s subtitle {"text":" ","color":"white"}
 execute as @a[tag=HoldHorn,scores={horntime=34..}] at @s run playsound raidhorn master @a ~ ~ ~ 6 1
 execute as @a[tag=HoldHorn,scores={horntime=34..}] run scoreboard players reset @s horntime

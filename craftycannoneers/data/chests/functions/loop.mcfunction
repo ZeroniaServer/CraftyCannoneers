@@ -104,7 +104,7 @@ execute as @e[type=minecraft:chest_minecart,nbt={Items:[{id:"minecraft:crossbow"
 execute as @e[type=minecraft:chest_minecart,nbt={Items:[{id:"minecraft:spyglass"}]}] run data remove entity @s Items[{id:"minecraft:spyglass"}]
 execute as @e[type=minecraft:chest_minecart,nbt={Items:[{id:"minecraft:diamond_hoe",tag:{Cannonball:8b}}]}] run data remove entity @s Items[{id:"minecraft:diamond_hoe",tag:{Cannonball:8b}}]
 
-tag @a[predicate=game:crossbow_loaded] add loaded
+tag @a[predicate=game:crossbow_loaded_mainhand] add loaded
 tag @a[predicate=game:crossbow_loaded_offhand] add loaded
-tag @a[predicate=game:crossbow] remove loaded
+tag @a[predicate=game:crossbow_mainhand] remove loaded
 tag @a[predicate=game:crossbow_offhand] remove loaded

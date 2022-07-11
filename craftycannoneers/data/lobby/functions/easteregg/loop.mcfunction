@@ -15,7 +15,7 @@ execute as @e[type=armor_stand,tag=SnowmanDeco,scores={CmdData=45}] at @s run pl
 execute as @e[type=armor_stand,tag=SnowmanDeco,scores={CmdData=75}] at @s run summon area_effect_cloud ~ ~1.7 ~ {Tags:["EasterEgg","SnowmanText"],Duration:30,CustomNameVisible:1b,CustomName:"\"...Because you are epic :)\""}
 execute as @e[type=armor_stand,tag=SnowmanDeco,scores={CmdData=75}] at @s run playsound snowmanspeak master @a ~ ~ ~ 1 1
 execute as @e[type=armor_stand,tag=SnowmanDeco,scores={CmdData=120}] at @s run clear @a[distance=..6] snow_block
-execute as @e[type=armor_stand,tag=SnowmanDeco,scores={CmdData=120}] at @s run give @a[distance=..6] snow_block{NoDrop:1b,display:{Name:'[{"text":"Snow Block","italic":false,"color":"light_purple"}]',Lore:['[{"text":"Because you are epic :)","color":"dark_gray"},{"text":"","color":"dark_purple","italic":false}]','[{"text":"","italic":false,"color":"dark_purple"}]']},HideFlags:3}
+execute as @e[type=armor_stand,tag=SnowmanDeco,scores={CmdData=120}] at @s run give @a[distance=..6] snow_block{NoDrop:1b,display:{Name:'[{"text":"Snow Block","italic":false,"color":"light_purple"}]',Lore:['[{"text":"Because you are epic :)","color":"dark_gray"},{"text":"","color":"dark_purple","italic":false}]']},HideFlags:3}
 execute as @e[type=armor_stand,tag=SnowmanDeco,scores={CmdData=120}] at @s run advancement grant @a[distance=..6] only tutorial:eastereggs/snowman
 execute as @e[type=armor_stand,tag=SnowmanDeco,scores={CmdData=135}] at @s run particle block snow_block ~ ~1 ~ 0.2 0.5 0.5 1 50
 execute as @e[type=armor_stand,tag=SnowmanDeco,scores={CmdData=135}] at @s run particle minecraft:falling_water ~ ~ ~ 0.5 1 0.5 0.5 50
