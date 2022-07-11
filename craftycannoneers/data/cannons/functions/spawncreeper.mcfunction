@@ -34,4 +34,3 @@ data modify storage craftycannoneers:temp CustomName set from entity @s CustomNa
 execute as @e[type=area_effect_cloud,tag=damage,tag=!HasName] run data modify entity @s CustomName set from storage craftycannoneers:temp CustomName
 data remove storage craftycannoneers:temp CustomName
 tag @e[type=area_effect_cloud,tag=damage,tag=!HasName] add HasName
-tag @a[tag=UtilKilled] remove UtilKilled

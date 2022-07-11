@@ -47,6 +47,7 @@ execute if score #loaded entityid matches 1 run function cannons:entityid/real_t
 function cannons:load
 function cannons:shoot
 function cannons:cannonclaim
+tag @a[tag=UtilKilled] remove UtilKilled
 
 #Weapons
 function weapons:bomb/throw
@@ -63,6 +64,7 @@ kill @e[type=falling_block]
 
 #Game settings
 execute if score $gamestate CmdData matches -1 run function lobby:customizer/controller
+execute unless score $gamestate CmdData matches -1 run tag @a remove NearModboard
 
 # Easter Eggs
 function lobby:easteregg/loop
