@@ -55,6 +55,7 @@ function weapons:bomb/functionality
 
 #Chests
 function chests:loop
+function chests:lockedchest
 
 #Player related functions
 function game:shields
