@@ -1,13 +1,17 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:using_item",
-        "conditions": {
-         "items": ["minecraft:goat_horn"]
-        }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+         "items": [
+           "minecraft:goat_horn"
+         ]
+       }
       }
-    },
-    "rewards": {
-      "function": "chests:usekey"
     }
+  },
+  "rewards": {
+    "function": "chests:usekey"
   }
+}

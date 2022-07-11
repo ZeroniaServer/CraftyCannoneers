@@ -1,8 +1,10 @@
-execute as @a[team=Purple,scores={eyeclick=1..}] at @s if entity @e[type=armor_stand,tag=orangechestdisplay,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
-execute as @a[team=Orange,scores={eyeclick=1..}] at @s if entity @e[type=armor_stand,tag=purplechestdisplay,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
+tag @a[nbt={SelectedItem:{id:"minecraft:ender_eye",tag:{Key:1b}}}] add HoldKey
 
-execute as @a[team=Purple,scores={eyeclick=1..}] at @s if entity @e[type=armor_stand,tag=LChestAS,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
-execute as @a[team=Orange,scores={eyeclick=1..}] at @s if entity @e[type=armor_stand,tag=LChestAS,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
+execute as @a[team=Purple,tag=HoldKey,scores={eyeclick=1..}] at @s if entity @e[type=armor_stand,tag=orangechestdisplay,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
+execute as @a[team=Orange,tag=HoldKey,scores={eyeclick=1..}] at @s if entity @e[type=armor_stand,tag=purplechestdisplay,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
+
+execute as @a[team=Purple,tag=HoldKey,scores={eyeclick=1..}] at @s if entity @e[type=armor_stand,tag=LChestAS,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
+execute as @a[team=Orange,tag=HoldKey,scores={eyeclick=1..}] at @s if entity @e[type=armor_stand,tag=LChestAS,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
 
 execute as @a[scores={openchest=1..4}] run title @s title {"text":" ","color":"dark_aqua"}
 execute as @a[scores={openchest=1}] run title @s subtitle ["",{"text":"Unlocking Chest... ","color":"dark_aqua"},{"text":"[","color":"gray"},{"text":"||||||||||","bold":true,"color":"red"},{"text":"]","color":"gray"}]
@@ -42,3 +44,5 @@ execute as @a[scores={openchest=1..}] unless entity @s[scores={eyeclick=1..}] ru
 execute as @a[scores={openchest=1..}] unless entity @s[scores={eyeclick=1..}] run title @s subtitle {"text":" ","color":"dark_aqua"}
 execute as @a[scores={openchest=1..}] unless entity @s[scores={eyeclick=1..}] run scoreboard players reset @s openchest
 scoreboard players reset @a[scores={eyeclick=1..}] eyeclick
+
+tag @a[tag=HoldKey] remove HoldKey
