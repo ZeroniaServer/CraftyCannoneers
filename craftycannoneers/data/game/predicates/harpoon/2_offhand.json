@@ -4,9 +4,7 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "items": [
-          "minecraft:air"
-        ]
+        "tag": "game:noninteractable"
       },
       "offhand": {
         "items": [
