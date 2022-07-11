@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:crossbow"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{NoDrop:1b,Unbreakable:1b,display:{Name:'[{\"text\":\"Hand Crossbow\",\"italic\":false,\"color\":\"dark_aqua\"}]'},Enchantments:[{id:quick_charge,lvl:2}],HideFlags:7,Charged:1b,ChargedProjectiles:[{id:\"minecraft:arrow\",Count:1b,tag:{display:{Name:'[{\"text\":\"Arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}}]}"
+        }
+      ]
+    }
+  ]
+}

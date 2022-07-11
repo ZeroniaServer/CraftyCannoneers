@@ -148,6 +148,7 @@ execute as @a[scores={death=1..},team=!Lobby,team=!Spectator] run gamemode adven
 tp @a[team=Orange,scores={death=1..}] 88 -26 55 90 0
 tp @a[team=Purple,scores={death=1..}] 52 -26 -55 -90 0
 tag @a[scores={death=1..}] remove onboatregen
+tag @a[scores={death=1..}] add loaded
 scoreboard players add @a[team=!Lobby,team=!Spectator,scores={death=1..}] MVPdeath 1
 scoreboard players reset @a[scores={death=1..}] death
 

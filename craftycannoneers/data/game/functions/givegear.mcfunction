@@ -13,7 +13,7 @@ item replace entity @s[team=Purple] armor.legs with leather_leggings{AttributeMo
 item replace entity @s[team=Purple] armor.feet with leather_boots{AttributeModifiers:[{AttributeName:"generic.armor",Amount:2,Slot:feet,Name:"generic.armor",UUID:[I;-122417,14521,165739,-29042]}],Unbreakable:1b,display:{color:13762815,Name:'[{"text":"Purple Pirate Boots","italic":false,"color":"#9933ff"}]'},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
 
 loot replace entity @s hotbar.0 loot weapons:cutlass
-loot replace entity @s hotbar.1 loot weapons:crossbow
+loot replace entity @s hotbar.1 loot weapons:crossbow_loaded
 loot replace entity @s hotbar.2 loot weapons:spyglass
 item replace entity @s hotbar.7 with arrow{display:{Name:'[{"text":"Arrow","italic":false,"color":"dark_aqua"}]'}} 4
 loot replace entity @s hotbar.8 loot weapons:tracer

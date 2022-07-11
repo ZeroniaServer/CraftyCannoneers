@@ -30,6 +30,7 @@ execute as @a[tag=LeaveGame] unless entity @s[team=] at @s run playsound block.b
 execute as @a[tag=LeaveGame] at @s run team join Lobby @s
 execute as @a[tag=LeaveGame] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:39,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
 tag @a[tag=LeaveGame] remove onboatregen
+tag @a[tag=LeaveGame] remove loaded
 execute as @a[tag=LeaveGame] run scoreboard players reset @s loverocks
 
 execute as @a[tag=LeaveGame] if score @s bestParkourTime = @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime run item replace entity @a[nbt={Inventory:[{id:"minecraft:diamond_hoe",tag:{CustomModelData:61},Slot:103b}]}] armor.head with diamond_hoe{CustomModelData:39,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
