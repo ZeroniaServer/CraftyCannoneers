@@ -2,7 +2,6 @@ tag @a[scores={LeftGame=1..}] remove KillMVP
 tag @a[scores={LeftGame=1..}] remove DeathMVP
 tag @a[scores={LeftGame=1..}] remove CannonMVP
 execute as @a[scores={LeftGame=1..}] run tag @s add LeaveGame
-execute as @a[scores={LeftGame=1..}] run scoreboard players reset @s LeftGame
 
 scoreboard players enable @a[team=!Lobby] leavegame
 scoreboard players reset @a[team=Lobby] leavegame
@@ -26,7 +25,8 @@ execute as @a[team=] run effect give @s slowness 2 100 true
 execute as @a[team=] run effect give @s jump_boost 2 128 true
 execute as @a[tag=LeaveGame] at @s run gamemode adventure @s
 execute as @a[tag=LeaveGame] run recipe take @s *
-execute as @a[tag=LeaveGame] unless entity @s[team=] at @s run playsound block.beehive.exit master @s ~ ~ ~ 1 1
+execute as @a[tag=LeaveGame] unless entity @s[team=] unless score @s LeftGame matches 1.. at @s run playsound block.beehive.exit master @s ~ ~ ~ 1 1
+execute as @a[scores={LeftGame=1..}] run scoreboard players reset @s LeftGame
 execute as @a[tag=LeaveGame] at @s run team join Lobby @s
 execute as @a[tag=LeaveGame] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:39,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
 tag @a[tag=LeaveGame] remove onboatregen

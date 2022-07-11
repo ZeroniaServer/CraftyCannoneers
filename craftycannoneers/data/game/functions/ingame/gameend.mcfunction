@@ -14,14 +14,14 @@ execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matche
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 run title @a[team=Orange] subtitle {"text":"Well played!","color":"green"}
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 run title @a[team=Purple] subtitle {"text":"Better luck next time...","color":"red"}
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 run title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"dark_gray"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a[team=Orange] at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 1.3
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a[team=Orange] at @s run playsound wingame master @s ~ ~ ~ 1 1.3
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a[team=Purple] at @s run playsound minecraft:entity.wither.spawn master @s ~ ~ ~ 1 2
 
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 run title @a title {"text":"Purple Team Won!","color":"dark_purple"}
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 run title @a[team=Purple] subtitle {"text":"Well played!","color":"green"}
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 run title @a[team=Orange] subtitle {"text":"Better luck next time...","color":"red"}
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 run title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"dark_gray"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Purple] at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 1.3
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Purple] at @s run playsound wingame master @s ~ ~ ~ 1 1.3
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Orange] at @s run playsound minecraft:entity.wither.spawn master @s ~ ~ ~ 1 2
 
 #Explosion animation

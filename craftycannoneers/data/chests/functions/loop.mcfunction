@@ -25,7 +25,7 @@ execute as @e[type=hopper_minecart,tag=CChestHopper,tag=!Opened] at @s if data e
 execute as @e[type=hopper_minecart,tag=CChestHopper,tag=!Opened] at @s if data entity @s Items run playsound block.chest.open master @a ~ ~ ~ 1 1.3
 execute as @e[type=hopper_minecart,tag=CChestHopper,tag=!Opened] at @s if data entity @s Items run tag @s add Opened
 
-execute as @e[type=hopper_minecart,tag=CChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run playsound minecraft:entity.item.pickup master @a ~ ~ ~ 1 0.6
+execute as @e[type=hopper_minecart,tag=CChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run playsound chestempty master @a ~ ~ ~ 1 0.6
 execute as @e[type=hopper_minecart,tag=CChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run item replace entity @e[type=armor_stand,tag=CChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:21}
 execute as @e[type=hopper_minecart,tag=CChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @e[type=armor_stand,tag=CChestAS,limit=1,sort=nearest,distance=..1] add Looted
 execute as @e[type=hopper_minecart,tag=CChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @s add Looted
@@ -41,7 +41,7 @@ execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=!Opened] at @s if data 
 execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=!Opened] at @s if data entity @s Items run playsound block.chest.open master @a ~ ~ ~ 1 1.1
 execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=!Opened] at @s if data entity @s Items run tag @s add Opened
 
-execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run playsound minecraft:entity.item.pickup master @a ~ ~ ~ 1 0.6
+execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run playsound chestempty master @a ~ ~ ~ 1 0.6
 execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run item replace entity @e[type=armor_stand,tag=UCChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:25}
 execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @e[type=armor_stand,tag=UCChestAS,limit=1,sort=nearest,distance=..1] add Looted
 execute as @e[type=hopper_minecart,tag=UCChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @s add Looted
@@ -57,7 +57,7 @@ execute as @e[type=hopper_minecart,tag=RChestHopper,tag=!Opened] at @s if data e
 execute as @e[type=hopper_minecart,tag=RChestHopper,tag=!Opened] at @s if data entity @s Items run playsound block.chest.open master @a ~ ~ ~ 1 0.7
 execute as @e[type=hopper_minecart,tag=RChestHopper,tag=!Opened] at @s if data entity @s Items run tag @s add Opened
 
-execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run playsound minecraft:entity.item.pickup master @a ~ ~ ~ 1 0.6
+execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run playsound chestempty master @a ~ ~ ~ 1 0.6
 execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run item replace entity @e[type=armor_stand,tag=RChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:28}
 execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @e[type=armor_stand,tag=RChestAS,limit=1,sort=nearest,distance=..1] add Looted
 execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @s add Looted

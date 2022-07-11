@@ -10,4 +10,6 @@ execute if score $ShipHP CmdData matches 1500 run data merge block -55 -23 9 {Te
 execute if score $ShipHP CmdData matches 1250 run data merge block -55 -23 9 {Text4:'{"text":"1250","color":"#FF49FC"}'}
 execute if score $ShipHP CmdData matches 1000 run data merge block -55 -23 9 {Text4:'{"text":"1000","color":"#FF49FC"}'}
 
+execute as @a[tag=ModiOwner] at @s run playsound ui.button.click master @s ~ ~ ~ 1 1
+
 scoreboard players reset @a[tag=ModiOwner] moditimer

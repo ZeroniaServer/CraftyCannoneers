@@ -5,7 +5,7 @@ scoreboard players set $2 arrowtime 2
 execute as @e[type=arrow,nbt={inGround:1b},tag=!thanossnap] store result score @s arrowtime run data get entity @s UUID[0]
 execute as @e[type=arrow,nbt={inGround:1b},tag=!thanossnap] run scoreboard players operation @s arrowtime %= $2 arrowtime
 execute as @e[type=arrow,nbt={inGround:1b},tag=!thanossnap,scores={arrowtime=1}] at @s run particle item arrow ~ ~ ~ 0.1 0.1 0.1 0.1 15
-execute as @e[type=arrow,nbt={inGround:1b},tag=!thanossnap,scores={arrowtime=1}] at @s run playsound minecraft:block.wood.break master @a ~ ~ ~ 1 2
+execute as @e[type=arrow,nbt={inGround:1b},tag=!thanossnap,scores={arrowtime=1}] at @s run playsound arrowbreak master @a ~ ~ ~ 1 2
 kill @e[type=arrow,nbt={inGround:1b},tag=!thanossnap,scores={arrowtime=1}]
 tag @e[type=arrow,nbt={inGround:1b},tag=!thanossnap] add thanossnap
 kill @e[type=arrow,predicate=!game:inarena]

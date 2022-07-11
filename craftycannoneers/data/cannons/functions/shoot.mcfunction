@@ -58,10 +58,10 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=4}
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=4}] at @s run playsound gasshot master @a ~ ~ ~ 4 1
 #Chain Cannonball
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=5}] at @s run playsound cannonshot master @a ~ ~ ~ 6 0.9
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=5}] at @s run playsound minecraft:block.chain.break master @a ~ ~ ~ 4 0
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=5}] at @s run playsound minecraft:block.chain.break master @a ~ ~ ~ 4 1
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=5}] at @s run playsound minecraft:block.chain.break master @a ~ ~ ~ 4 1.3
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=5}] at @s run playsound minecraft:block.chain.break master @a ~ ~ ~ 4 0.7
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=5}] at @s run playsound cannonshot2 master @a ~ ~ ~ 4 0
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=5}] at @s run playsound cannonshot2 master @a ~ ~ ~ 4 1
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=5}] at @s run playsound cannonshot2 master @a ~ ~ ~ 4 1.3
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=5}] at @s run playsound cannonshot2 master @a ~ ~ ~ 4 0.7
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26,CmdData=5}] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 0.9
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=5}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","ChainCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:40}}]}
 execute as @e[type=armor_stand,tag=ChainCannonball,tag=!chainacc] run function cannons:chainaccuracy

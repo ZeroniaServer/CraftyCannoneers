@@ -8,8 +8,8 @@ execute as @a[team=Lobby,tag=startParkour] run function game:clearinventory
 execute as @a[team=Lobby,tag=startParkour] run item replace entity @s hotbar.3 with carrot_on_a_stick{display:{Name:'{"text":"Restart Parkour","color":"green","bold":true,"italic":false}'},Unbreakable:1b,CustomModelData:1,Restart:1b,NoDrop:1b,HideFlags:127}
 execute as @a[team=Lobby,tag=startParkour] run item replace entity @s hotbar.5 with carrot_on_a_stick{display:{Name:'{"text":"Quit Parkour","color":"red","bold":true,"italic":false}'},Unbreakable:1b,CustomModelData:2,Quit:1b,NoDrop:1b,HideFlags:127}
 execute as @a[team=Lobby,tag=startParkour] run tellraw @s [{"text":"Parkour Run Started!","color":"dark_green","bold":true}]
-execute as @a[team=Lobby,tag=startParkour] at @s run playsound minecraft:entity.firework_rocket.twinkle_far master @s ~ ~ ~ 1 1
-execute as @a[team=Lobby,tag=startParkour] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 1 1.3
+execute as @a[team=Lobby,tag=startParkour] at @s run playsound parkourstart master @s ~ ~ ~ 1 1.3
+execute as @a[team=Lobby,tag=startParkour] at @s run playsound parkourstart2 master @s ~ ~ ~ 1 1
 execute as @a[team=Lobby,tag=startParkour] at @s run particle firework ~ ~1 ~ 0 0 0 0.1 100 force @s
 execute as @a[team=Lobby,tag=startParkour] run tag @s add inParkour
 
@@ -35,8 +35,8 @@ execute as @a[team=Lobby,tag=RestartParkour] at @s run tp @s -71 -21 -1 90 0
 tag @a[team=Lobby,tag=RestartParkour] remove RestartParkour
 
 execute as @a[team=Lobby,tag=QuitParkour] run tag @s remove inParkour
-execute as @a[team=Lobby,tag=QuitParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.2
-execute as @a[team=Lobby,tag=QuitParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 0.8
+execute as @a[team=Lobby,tag=QuitParkour] at @s run playsound parkourcancel master @s ~ ~ ~ 1 1.2
+execute as @a[team=Lobby,tag=QuitParkour] at @s run playsound parkourcancel master @s ~ ~ ~ 1 0.8
 execute as @a[team=Lobby,tag=QuitParkour] at @s run function game:clearinventory
 execute as @a[team=Lobby,tag=QuitParkour] at @s run function lobby:items
 execute as @a[team=Lobby,tag=QuitParkour] at @s run title @s actionbar {"text":""}
@@ -44,9 +44,9 @@ execute as @a[team=Lobby,tag=QuitParkour] at @s run tellraw @s {"text":"Parkour 
 tag @a[team=Lobby,tag=QuitParkour] remove QuitParkour
 
 #Visual/Sound effects
-execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound minecraft:entity.firework_rocket.twinkle_far master @s ~ ~ ~ 1 1
-execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 1 1.1
-execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound minecraft:ui.toast.challenge_complete master @s ~ ~ ~ 1 1.3
+execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound parkourfinish master @s ~ ~ ~ 1 1.1
+execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound parkourfinish2 master @s ~ ~ ~ 1 1
+execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound parkourfinish3 master @s ~ ~ ~ 1 1.3
 execute as @a[team=Lobby,tag=finishedParkour] at @s run particle firework ~ ~1 ~ 0 0 0 0.1 100 force @s
 execute as @a[team=Lobby,tag=finishedParkour] run function game:clearinventory
 execute as @a[team=Lobby,tag=finishedParkour] run function lobby:items
@@ -138,8 +138,8 @@ execute as @a[team=Lobby,tag=CancelParkour] positioned -71 -21 -1 if entity @s[d
 execute as @a[team=Lobby,tag=CancelParkour] positioned -71 -21 -1 unless entity @s[distance=10..] run tellraw @s {"text":"Parkour Run Canceled.","color":"red","bold":true}
 execute as @a[team=Lobby,tag=CancelParkour] positioned -71 -21 -1 unless entity @s[distance=10..] run function game:clearinventory
 execute as @a[team=Lobby,tag=CancelParkour] positioned -71 -21 -1 unless entity @s[distance=10..] run function lobby:items
-execute as @a[team=Lobby,tag=CancelParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.2
-execute as @a[team=Lobby,tag=CancelParkour] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 0.8
+execute as @a[team=Lobby,tag=CancelParkour] at @s run playsound parkourcancel master @s ~ ~ ~ 1 1.2
+execute as @a[team=Lobby,tag=CancelParkour] at @s run playsound parkourcancel master @s ~ ~ ~ 1 0.8
 execute as @a[team=Lobby,tag=CancelParkour] at @s run clear @s carrot_on_a_stick
 execute as @a[team=Lobby,tag=CancelParkour] at @s run title @s actionbar {"text":""}
 tag @a[team=Lobby,tag=CancelParkour] remove CancelParkour

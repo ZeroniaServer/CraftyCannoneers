@@ -12,7 +12,7 @@ scoreboard players operation $ticks CmdData *= $1200 CmdData
 
 title @a title {"text":"Settings Confirmed!","underlined":true,"color":"dark_green"}
 title @a subtitle {"text":"The game is ready to play!","color":"green"}
-execute as @a at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 1 1.5
+execute as @a at @s run playsound confirmsettings master @s ~ ~ ~ 1 1.5
 execute as @a run function lobby:customizer/gameinfo
 
 scoreboard players set $gamestate CmdData 0

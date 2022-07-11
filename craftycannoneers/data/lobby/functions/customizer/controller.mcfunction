@@ -35,7 +35,6 @@ execute as @a[tag=ModiOwner,limit=1,scores={modisigns=3384}] run function lobby:
 execute as @a[tag=ModiOwner,limit=1,scores={modisigns=5732}] run function lobby:customizer/confirm
 #Restore Defaults
 execute as @a[tag=ModiOwner,limit=1,scores={modisigns=6497}] run function lobby:customizer/defaults
-execute as @a[tag=ModiOwner,limit=1,scores={modisigns=6497}] run function lobby:customizer/updatesigns
 
 
 scoreboard players add @a[tag=ModiOwner] moditimer 1
