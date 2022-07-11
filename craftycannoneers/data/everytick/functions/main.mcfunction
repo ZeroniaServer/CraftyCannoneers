@@ -47,6 +47,7 @@ execute if score #loaded entityid matches 1 run function cannons:entityid/real_t
 function cannons:load
 function cannons:shoot
 function cannons:cannonclaim
+function cannons:hitmarkers
 tag @a[tag=UtilKilled] remove UtilKilled
 
 #Weapons

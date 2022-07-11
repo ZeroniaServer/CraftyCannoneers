@@ -64,6 +64,8 @@ scoreboard objectives add bellring dummy
 scoreboard objectives add horntime dummy
 scoreboard objectives add BalanceScore dummy
 scoreboard objectives add BombDelay dummy
+scoreboard objectives add HitmarkerType dummy
+scoreboard objectives add HitmarkerTimer dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
