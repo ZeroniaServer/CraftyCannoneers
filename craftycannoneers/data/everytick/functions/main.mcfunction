@@ -49,6 +49,7 @@ function cannons:shoot
 function cannons:cannonclaim
 function cannons:hitmarkers
 tag @a[tag=UtilKilled] remove UtilKilled
+tag @a[tag=GoldKilled] remove GoldKilled
 
 #Weapons
 function weapons:bomb/throw

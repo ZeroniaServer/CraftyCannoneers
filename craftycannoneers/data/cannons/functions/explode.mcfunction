@@ -31,15 +31,23 @@ tag @e[type=marker,tag=RingOfFire,tag=!HasUUID] add HasUUID
 #GAS EFFECT
 execute if entity @s[tag=Hit1,tag=GasCannonball] at @s run summon marker ^ ^-2 ^3 {Tags:["GasCloud"]}
 
-execute if entity @s[tag=InSafezone,tag=!Hit1,tag=!CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
-execute if entity @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=!CannonballCluster,tag=!BouncyCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
-execute if entity @s[tag=!InSafezone,tag=!Hit1,tag=!ChainCannonball,tag=!CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}
-execute if entity @s[tag=!InSafezone,tag=Hit1,tag=!ChainCannonball,scores={doublehit=4..},tag=!CannonballCluster,tag=!BouncyCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2"]}
+#General Impact Marker
+execute if entity @s[tag=InSafezone,tag=!Hit1,tag=!CannonballCluster,tag=!GoldenCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
+execute if entity @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=!CannonballCluster,tag=!BouncyCannonball,tag=!GoldenCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
+execute if entity @s[tag=!InSafezone,tag=!Hit1,tag=!ChainCannonball,tag=!CannonballCluster,tag=!GoldenCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}
+execute if entity @s[tag=!InSafezone,tag=Hit1,tag=!ChainCannonball,scores={doublehit=4..},tag=!CannonballCluster,tag=!BouncyCannonball,tag=!GoldenCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2"]}
 
+#Golden Cannonball
+execute if entity @s[tag=InSafezone,tag=!Hit1,tag=GoldenCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1","GoldImpact"]}
+execute if entity @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=GoldenCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1","GoldImpact"]}
+execute if entity @s[tag=!InSafezone,tag=!Hit1,tag=GoldenCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3","GoldImpact"]}
+execute if entity @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..},tag=GoldenCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2","GoldImpact"]}
+
+#Cannonball Cluster
 execute if entity @s[tag=InSafezone,tag=!Hit1,tag=CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1","cluster"]}
-execute if entity @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=CannonballCluster,tag=!BouncyCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1","cluster"]}
+execute if entity @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1","cluster"]}
 execute if entity @s[tag=!InSafezone,tag=!Hit1,tag=CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3","cluster"]}
-execute if entity @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..},tag=CannonballCluster,tag=!BouncyCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2","cluster"]}
+execute if entity @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..},tag=CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2","cluster"]}
 
 #Chain effect
 execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/purple] at @s if entity @s[predicate=cannons:ships/abovesails] run scoreboard players operation $hitmarkuuid playerUUID = @s playerUUID

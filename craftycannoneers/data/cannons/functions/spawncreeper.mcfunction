@@ -10,6 +10,7 @@ execute if entity @s[tag=ImpactMarker,tag=GasPower,predicate=!cannons:safezones/
 scoreboard players operation @e[type=creeper,tag=!HasUUID,limit=1,sort=nearest,distance=..2] playerUUID = @s playerUUID
 data modify entity @e[type=creeper,tag=!HasUUID,limit=1,sort=nearest,distance=..2] CustomName set from entity @s CustomName
 tag @a[team=!Spectator,team=!Lobby,distance=..6] add UtilKilled
+execute if entity @s[tag=GoldImpact] run tag @a[team=!Spectator,team=!Lobby,distance=..6] add GoldKilled
 execute store result score @a[tag=UtilKilled,distance=..6] KillerUUID run scoreboard players get @s playerUUID
 execute as @e[type=creeper,tag=!HasUUID] run scoreboard players operation $current playerUUID = @s playerUUID
 tag @e[type=creeper,tag=!HasUUID] add HasUUID
