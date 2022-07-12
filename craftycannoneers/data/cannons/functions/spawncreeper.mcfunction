@@ -7,11 +7,11 @@ execute if entity @s[tag=ImpactMarker,tag=Power2] run summon creeper ~ ~ ~ {Tags
 execute if entity @s[tag=ImpactMarker,tag=Power3] run summon creeper ~ ~ ~ {Tags:["CannonballCreeper"],CustomName:'{"text":"a Cannonball"}',Fuse:0,Silent:1b,CustomNameVisible:0b,NoAI:1b,CanPickUpLoot:0b,DeathTime:19s,ExplosionRadius:2}
 execute if entity @s[tag=ImpactMarker,tag=GasPower,predicate=!cannons:safezones/island] run summon creeper ~ ~ ~ {Tags:["GasCreeper"],CustomName:'{"text":"a Gas Explosion"}',Fuse:0,Silent:1b,CustomNameVisible:0b,NoAI:1b,CanPickUpLoot:0b,DeathTime:19s,ExplosionRadius:2}
 
-scoreboard players operation @e[type=creeper,tag=!HasUUID,limit=1,sort=nearest,distance=..2] playerUUID = @s[tag=!GasPower] playerUUID
+scoreboard players operation @e[type=creeper,tag=!HasUUID,limit=1,sort=nearest,distance=..2] playerUUID = @s playerUUID
 data modify entity @e[type=creeper,tag=!HasUUID,limit=1,sort=nearest,distance=..2] CustomName set from entity @s CustomName
 tag @a[team=!Spectator,team=!Lobby,distance=..6] add UtilKilled
-execute store result score @a[tag=UtilKilled,distance=..6] KillerUUID run scoreboard players get @s[tag=!GasPower] playerUUID
-execute as @e[type=creeper,tag=!HasUUID] run scoreboard players operation $current playerUUID = @s[tag=!GasPower] playerUUID
+execute store result score @a[tag=UtilKilled,distance=..6] KillerUUID run scoreboard players get @s playerUUID
+execute as @e[type=creeper,tag=!HasUUID] run scoreboard players operation $current playerUUID = @s playerUUID
 tag @e[type=creeper,tag=!HasUUID] add HasUUID
 
 execute unless entity @s[predicate=cannons:safezones/island] unless entity @s[scores={CmdData=1..}] run function cannons:lightfill1

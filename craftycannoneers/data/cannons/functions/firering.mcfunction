@@ -1,5 +1,7 @@
 scoreboard players add @e[type=marker,tag=RingOfFire] CmdData 1
 
+execute as @e[type=marker,tag=RingOfFire] at @s if entity @e[type=armor_stand,tag=GasBubble,distance=..5] run scoreboard players operation @e[type=armor_stand,tag=GasBubble,distance=..3] playerUUID = @s playerUUID
+execute as @e[type=marker,tag=RingOfFire] at @s if entity @e[type=marker,tag=GasCloud,distance=..5] run scoreboard players operation @e[type=marker,tag=GasCloud,distance=..3] playerUUID = @s playerUUID
 execute as @e[type=marker,tag=RingOfFire] at @s if entity @e[type=armor_stand,tag=GasBubble,distance=..5] run tag @e[type=armor_stand,tag=GasBubble,distance=..3] add GasIgnite
 execute as @e[type=marker,tag=RingOfFire] at @s if entity @e[type=marker,tag=GasCloud,distance=..5] run tag @e[type=marker,tag=GasCloud,distance=..3] add GasIgnite
 scoreboard players add @e[type=armor_stand,tag=GasIgnite] death 1
@@ -11,8 +13,8 @@ execute as @e[type=armor_stand,tag=GasIgnite] at @s run tag @e[type=armor_stand,
 execute as @e[type=armor_stand,tag=GasIgnite,scores={death=15..}] at @s run tag @e[type=marker,tag=GasCloud,distance=..4] add GasExplode
 execute as @e[type=marker,tag=GasIgnite,scores={death=15..}] at @s run tag @e[type=marker,tag=GasCloud,distance=..4] add GasExplode
 
-execute as @e[type=armor_stand,tag=GasIgnite,scores={death=5}] at @s run particle explosion ~ ~0.6 ~ 0 0 0 0 3 force 
-execute as @e[type=armor_stand,tag=GasIgnite] at @s run particle flame ~ ~0.6 ~ 0 0 0 0.1 1 force 
+execute as @e[type=armor_stand,tag=GasIgnite,scores={death=5}] at @s run particle explosion ~ ~0.6 ~ 0 0 0 0 3 force
+execute as @e[type=armor_stand,tag=GasIgnite] at @s run particle flame ~ ~0.6 ~ 0 0 0 0.1 1 force
 kill @e[type=armor_stand,tag=GasIgnite,scores={death=15..}]
 
 execute as @e[type=marker,tag=RingOfFire] at @s if entity @e[type=marker,tag=GasCloud,distance=..5] run kill @s

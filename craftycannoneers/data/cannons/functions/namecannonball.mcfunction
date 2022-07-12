@@ -9,6 +9,7 @@ execute if entity @s[tag=CannonballCluster] as @a[predicate=game:matches_uuid] r
 execute if entity @s[tag=BouncyCannonball] as @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text1:'{"text":""}',Text2:'["",{"selector":"@p[predicate=game:matches_uuid]"},{"text":"\'s Bouncy Cannonball"}]'}
 execute if entity @s[tag=PlayerCannonball] as @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text1:'{"text":""}',Text2:'["",{"selector":"@p[predicate=game:matches_uuid]"}]'}
 execute if entity @s[tag=Bomb] as @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text1:'{"text":""}',Text2:'["",{"selector":"@p[predicate=game:matches_uuid]"},{"text":"\'s Blast Bomb"}]'}
+execute if entity @s[tag=GasPower] as @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text1:'{"text":""}',Text2:'["",{"selector":"@p[predicate=game:matches_uuid]"},{"text":"\'s Gas Explosion"}]'}
 data modify entity @s CustomName set from block ~ 256 ~ Text2
 execute if entity @s[tag=PlayerCannonball] run data modify entity @e[type=slime,tag=PCannonballname,tag=New,limit=1,sort=nearest] CustomName set from entity @s CustomName
 execute if entity @s[tag=PlayerCannonball] run tag @e[type=slime,tag=PCannonballname,tag=New,limit=1,sort=nearest] remove New

@@ -23,13 +23,13 @@ execute at @s if entity @s[predicate=cannons:safezones/orange/5] run tag @s add 
 #FIREBALL EFFECT
 execute if entity @s[tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run tag @e[type=armor_stand,tag=GasBubble,tag=!GasIgnite,distance=..6] add GasIgnite
 execute if entity @s[tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run summon marker ^ ^-2 ^3 {Tags:["RingOfFire"]}
+execute if entity @s[tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run scoreboard players operation @e[type=armor_stand,tag=GasBubble,tag=!GasIgnite,distance=..6] playerUUID = @s playerUUID
 execute as @e[type=marker,tag=RingOfFire,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=HotCannonball,limit=1,sort=nearest,distance=..4] playerUUID
 execute as @e[type=marker,tag=RingOfFire,tag=!HasUUID] at @s run data modify entity @s CustomName set from entity @e[type=armor_stand,tag=HotCannonball,limit=1,sort=nearest,distance=..4] CustomName
 tag @e[type=marker,tag=RingOfFire,tag=!HasUUID] add HasUUID
 
 #GAS EFFECT
 execute if entity @s[tag=Hit1,tag=GasCannonball] at @s run summon marker ^ ^-2 ^3 {Tags:["GasCloud"]}
-
 
 execute if entity @s[tag=InSafezone,tag=!Hit1,tag=!CannonballCluster] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
 execute if entity @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=!CannonballCluster,tag=!BouncyCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
@@ -42,13 +42,15 @@ execute if entity @s[tag=!InSafezone,tag=!Hit1,tag=CannonballCluster] at @s run 
 execute if entity @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..},tag=CannonballCluster,tag=!BouncyCannonball] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2","cluster"]}
 
 #Chain effect
-execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/purple] at @s if entity @s[predicate=cannons:ships/abovesails] run scoreboard players operation $hitmarkuuid playerUUID = @s playerUUID 
+execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/purple] at @s if entity @s[predicate=cannons:ships/abovesails] run scoreboard players operation $hitmarkuuid playerUUID = @s playerUUID
 execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/purple] at @s if entity @s[predicate=cannons:ships/abovesails] run scoreboard players add $DamagePurple CmdData 20
-execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/purple] at @s if entity @s[predicate=cannons:ships/abovesails] as @a[team=Orange] if score @s playerUUID = $hitmarkuuid playerUUID run scoreboard players set @s HitmarkerType 1
+execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/purple] at @s if entity @s[predicate=cannons:ships/abovesails] as @a[team=Orange] if score @s playerUUID = $hitmarkuuid playerUUID unless score @s HitmarkerType matches 2 run scoreboard players reset @s HitmarkerTimer
+execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/purple] at @s if entity @s[predicate=cannons:ships/abovesails] as @a[team=Orange] if score @s playerUUID = $hitmarkuuid playerUUID unless score @s HitmarkerType matches 2 run scoreboard players set @s HitmarkerType 1
 execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/purple] at @s if entity @s[predicate=cannons:ships/abovesails] run scoreboard players reset $hitmarkuuid
 execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/orange] at @s if entity @s[predicate=cannons:ships/abovesails] run scoreboard players operation $hitmarkuuid playerUUID = @s playerUUID
 execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/orange] at @s if entity @s[predicate=cannons:ships/abovesails] run scoreboard players add $DamageOrange CmdData 20
-execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/orange] at @s if entity @s[predicate=cannons:ships/abovesails] as @a[team=Purple] if score @s playerUUID = $hitmarkuuid playerUUID run scoreboard players set @s HitmarkerType 1
+execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/orange] at @s if entity @s[predicate=cannons:ships/abovesails] as @a[team=Purple] if score @s playerUUID = $hitmarkuuid playerUUID unless score @s HitmarkerType matches 2 run scoreboard players reset @s HitmarkerTimer
+execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/orange] at @s if entity @s[predicate=cannons:ships/abovesails] as @a[team=Purple] if score @s playerUUID = $hitmarkuuid playerUUID unless score @s HitmarkerType matches 2 run scoreboard players set @s HitmarkerType 1
 execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/orange] at @s if entity @s[predicate=cannons:ships/abovesails] run scoreboard players reset $hitmarkuuid
 
 
