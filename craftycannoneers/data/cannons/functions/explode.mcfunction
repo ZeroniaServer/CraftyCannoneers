@@ -55,9 +55,9 @@ execute if entity @s[tag=ChainCannonball,predicate=cannons:ships/orange] at @s i
 
 
 execute if entity @s[tag=!InSafezone,tag=!Hit1,tag=ChainCannonball] at @s run summon marker ^ ^ ^2 {Tags:["ImpactMarker","Power2"]}
-execute if entity @s[tag=!InSafezone,tag=!Hit1,tag=ChainCannonball] at @s run summon marker ^ ^ ^2 {Tags:["ImpactMarker","Power2"]}
+execute if entity @s[tag=!InSafezone,tag=!Hit1,tag=ChainCannonball] at @s run summon marker ^ ^ ^-2 {Tags:["ImpactMarker","Power2"]}
 
-execute if entity @s[tag=!InSafezone,tag=Hit1,tag=ChainCannonball,scores={doublehit=4..}] at @s run summon marker ^ ^ ^-2 {Tags:["ImpactMarker","Power2"]}
+execute if entity @s[tag=!InSafezone,tag=Hit1,tag=ChainCannonball,scores={doublehit=4..}] at @s run summon marker ^ ^ ^2 {Tags:["ImpactMarker","Power2"]}
 execute if entity @s[tag=!InSafezone,tag=Hit1,tag=ChainCannonball,scores={doublehit=4..}] at @s run summon marker ^ ^ ^-2 {Tags:["ImpactMarker","Power2"]}
 
 
