@@ -12,7 +12,7 @@ execute as @a[scores={HitmarkerType=2,HitmarkerTimer=1}] at @s run playsound min
 
 execute as @a[scores={HitmarkerType=0..,HitmarkerTimer=1}] run title @s subtitle {"text":" "}
 
-execute as @a[scores={HitmarkerTimer=6}] run title @s title {"text":" "}
-execute as @a[scores={HitmarkerTimer=6}] run title @s subtitle {"text":" "}
-scoreboard players reset @a[scores={HitmarkerTimer=6..}] HitmarkerType
+execute as @a[scores={HitmarkerTimer=8}] run title @s title {"text":" "}
+execute as @a[scores={HitmarkerTimer=8}] run title @s subtitle {"text":" "}
+scoreboard players reset @a[scores={HitmarkerTimer=8..}] HitmarkerType
 execute as @a[scores={HitmarkerTimer=1..}] unless score @s HitmarkerType matches 0.. run scoreboard players reset @s HitmarkerTimer
