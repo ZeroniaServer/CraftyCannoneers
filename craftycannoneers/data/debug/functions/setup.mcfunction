@@ -124,6 +124,7 @@ team modify Collide collisionRule always
 team modify NoName nametagVisibility never
 
 #> Static scores
+scoreboard players set $3 CmdData 3
 scoreboard players set $10 CmdData 10
 scoreboard players set $1200 CmdData 1200
 scoreboard players set $20 CmdData 20

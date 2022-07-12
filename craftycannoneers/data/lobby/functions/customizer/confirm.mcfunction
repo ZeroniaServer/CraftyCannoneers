@@ -10,6 +10,8 @@ scoreboard players operation $OrangeHP CmdData = $ShipHP CmdData
 scoreboard players operation $ticks CmdData = $TimeLimit CmdData
 scoreboard players operation $ticks CmdData *= $1200 CmdData
 
+function lobby:customizer/lockboxdamage
+
 title @a title {"text":"Settings Confirmed!","underlined":true,"color":"dark_green"}
 title @a subtitle {"text":"The game is ready to play!","color":"green"}
 execute as @a at @s run playsound confirmsettings master @s ~ ~ ~ 1 1.5

@@ -88,7 +88,7 @@
       {
         "rolls": {
           "min": 2,
-          "max": 5,
+          "max": 4,
           "type": "minecraft:uniform"
         },
         "entries": [
@@ -98,7 +98,7 @@
             "functions": [
               {
                 "function": "minecraft:set_nbt",
-                "tag": "{HideFlags:127,CustomModelData:73,Unbreakable:1b,Cannonball:9b,display:{Name:'[{\"text\":\"Golden Cannonball\",\"color\":\"gold\",\"italic\":false}]',Lore:['[{\"text\":\"Can only be found in Locked Treasure Chests!\",\"italic\":false,\"color\":\"dark_red\",\"underlined\":true},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\",\"underlined\":false}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"The most fancy type of cannonball!\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"The Golden Cannonball gives Gold to\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"their users when they damage ships\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"or kill enemies.\",\"italic\":false,\"color\":\"aqua\"}]']}}"
+                "tag": "{HideFlags:127,CustomModelData:73,Unbreakable:1b,Cannonball:9b,display:{Name:'[{\"text\":\"Golden Cannonball\",\"color\":\"gold\",\"italic\":false}]',Lore:['[{\"text\":\"Can only be found in Locked Treasure Chests!\",\"italic\":false,\"color\":\"dark_red\",\"underlined\":true},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\",\"underlined\":false}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"The most fancy type of cannonball!\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"The Golden Cannonball gives Gold to\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"their users when they damage ships\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"or kill enemies with them.\",\"italic\":false,\"color\":\"aqua\"}]']}}"
               },
               {
                 "function": "minecraft:set_count",

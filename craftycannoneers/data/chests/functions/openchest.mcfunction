@@ -20,6 +20,7 @@ execute as @a[scores={openchest=15..16}] run title @s subtitle ["",{"text":"Unlo
 execute as @a[scores={openchest=17..18}] run title @s subtitle ["",{"text":"Unlocking Chest... ","color":"dark_aqua"},{"text":"[","color":"gray"},{"text":"|||||||||","bold":true,"color":"green"},{"text":"|","bold":true,"color":"red"},{"text":"]","color":"gray"}]
 execute as @a[scores={openchest=19..20}] run title @s subtitle ["",{"text":"Unlocking Chest... ","color":"dark_aqua"},{"text":"[","color":"gray"},{"text":"||||||||||","bold":true,"color":"green"},{"text":"]","color":"gray"}]
 execute as @a[scores={openchest=20}] at @s anchored eyes run particle item ender_eye{CustomModelData:1} ^ ^ ^0.6 0 0 0 0.1 10
+execute as @a[scores={openchest=20}] run title @s subtitle {"text":" "}
 item modify entity @a[predicate=chests:key,scores={openchest=20..}] weapon.mainhand game:reducecount
 item modify entity @a[predicate=chests:key_offhand,scores={openchest=20..}] weapon.offhand game:reducecount
 
@@ -41,6 +42,10 @@ execute as @a[team=Orange,predicate=!game:onpurple,scores={openchest=20..}] at @
 
 
 scoreboard players reset @a[scores={openchest=20..}] openchest
+
+execute as @a[scores={openchest=1..}] at @s unless entity @e[type=armor_stand,tag=LChestAS,tag=!Spawned,distance=..3] unless entity @e[type=armor_stand,tag=chestdisplay,tag=!Unlocked,distance=..3] run title @s title {"text":" ","color":"dark_aqua"}
+execute as @a[scores={openchest=1..}] at @s unless entity @e[type=armor_stand,tag=LChestAS,tag=!Spawned,distance=..3] unless entity @e[type=armor_stand,tag=chestdisplay,tag=!Unlocked,distance=..3] run title @s subtitle {"text":" ","color":"dark_aqua"}
+execute as @a[scores={openchest=1..}] at @s unless entity @e[type=armor_stand,tag=LChestAS,tag=!Spawned,distance=..3] unless entity @e[type=armor_stand,tag=chestdisplay,tag=!Unlocked,distance=..3] run scoreboard players reset @s openchest
 
 execute as @a[scores={openchest=1..}] unless entity @s[scores={eyeclick=1..}] run title @s title {"text":" ","color":"dark_aqua"}
 execute as @a[scores={openchest=1..}] unless entity @s[scores={eyeclick=1..}] run title @s subtitle {"text":" ","color":"dark_aqua"}
