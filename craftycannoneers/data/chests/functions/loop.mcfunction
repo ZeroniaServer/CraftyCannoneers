@@ -19,6 +19,11 @@ execute as @e[type=armor_stand,tag=UCChestAS,tag=!Looted,scores={CmdData=31..}] 
 execute as @e[type=armor_stand,tag=RChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
 execute as @e[type=armor_stand,tag=RChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=!Lobby,distance=7..12]
 execute as @e[type=armor_stand,tag=RChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=!Lobby,distance=13..]
+#Locked
+execute as @e[type=armor_stand,tag=LChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
+execute as @e[type=armor_stand,tag=LChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=!Lobby,distance=7..12]
+execute as @e[type=armor_stand,tag=LChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=!Lobby,distance=13..]
+
 
 #Common
 execute as @e[type=hopper_minecart,tag=CChestHopper,tag=!Opened] at @s if data entity @s Items run item replace entity @e[type=armor_stand,tag=CChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:20}

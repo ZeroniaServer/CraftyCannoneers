@@ -89,6 +89,11 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run tag @s add RecentTracer
 #execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run scoreboard players set @s[scores={cannonclaim=3..120}] cannonclaim 3
 execute as @e[type=armor_stand,tag=TracerCannonball,tag=!traceracc] run function cannons:traceraccuracy
+#Golden Cannonball
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=9}] at @s run playsound cannonshot master @a ~ ~ ~ 6 1
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=9}] at @s run playsound goldshot master @a ~ ~ ~ 4 1
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=9}] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=9}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","GoldenCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:73}}]}
 
 #Global
 execute as @e[type=armor_stand,tag=NewCannonball] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID
@@ -124,14 +129,16 @@ execute as @e[type=armor_stand,tag=!FireCannon,scores={cannonshot=30..}] at @s r
 
 execute as @e[type=armor_stand,tag=cannonball] store result entity @s Air double 1 run scoreboard players get $toggle CmdData
 
-execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=ChainCannonball] at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^1 0.1 0.1 0.1 0.01 3 force
-execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=ChainCannonball] at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^-1 0.1 0.1 0.1 0.01 3 force
-execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=!CannonballCluster,tag=!ChainCannonball] at @s run particle dust_color_transition 1 1 1 1.4 0.398 0.398 0.398 ^ ^ ^-1 0.1 0.1 0.1 0.01 3 force
+execute as @e[type=armor_stand,tag=cannonball,tag=ChainCannonball] at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^1 0.1 0.1 0.1 0.01 3 force
+execute as @e[type=armor_stand,tag=cannonball,tag=ChainCannonball] at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^-1 0.1 0.1 0.1 0.01 3 force
+execute as @e[type=armor_stand,tag=cannonball,tag=GoldenCannonball] at @s run particle dust_color_transition 1 0.835 0 1.4 1 0.667 0 ^ ^ ^-1 0.1 0.1 0.1 0.01 3 force
+execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=!CannonballCluster,tag=!ChainCannonball,tag=!GoldenCannonball] at @s run particle dust_color_transition 1 1 1 1.4 0.398 0.398 0.398 ^ ^ ^-1 0.1 0.1 0.1 0.01 3 force
 
-execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=!CannonballCluster,tag=!ChainCannonball] at @s run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force
+execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=!CannonballCluster,tag=!ChainCannonball,tag=!GoldenCannonball] at @s run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force
 execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=CannonballCluster] at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force
 
 execute as @e[type=armor_stand,tag=Cannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 4 force
+execute as @e[type=armor_stand,tag=GoldenCannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 2 force
 execute as @e[type=armor_stand,tag=CannonballCluster] at @s run particle smoke ~ ~ ~ 0 0 0 0.1 2 force
 execute as @e[type=armor_stand,tag=HotCannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 1 force
 execute as @e[type=armor_stand,tag=HotCannonball] at @s run particle flame ~ ~ ~ 0.2 0.2 0.2 0.1 12 force
@@ -173,3 +180,4 @@ tag @a remove HoldCCB
 tag @a remove HoldBCB
 tag @a remove HoldPCB
 tag @a remove HoldTCB
+tag @a remove HoldGOCB

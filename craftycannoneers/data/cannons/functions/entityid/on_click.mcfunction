@@ -22,6 +22,8 @@ tag @p[tag=clicker,nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball
 tag @p[tag=clicker,nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:7b}}}] add HoldPCB
 #Tracer
 tag @p[tag=clicker,nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:8b}}}] add HoldTCB
+#Golden
+tag @p[tag=clicker,nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:9b}}}] add HoldGOCB
 
 #> Cannon Claim tag
 execute at @s as @p[tag=clicker,tag=FillCB] run function cannons:checkowner
