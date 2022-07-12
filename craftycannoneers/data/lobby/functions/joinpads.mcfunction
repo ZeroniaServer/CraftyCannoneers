@@ -13,7 +13,7 @@ execute as @e[type=marker,tag=JoinpadSpec,tag=!Locked] at @s run particle fallin
 execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar name ["",{"text":"Awaiting ","bold":true,"color":"blue"},{"text":"Purple","bold":true,"underlined":true,"color":"dark_purple"},{"text":" and ","bold":true,"color":"blue"},{"text":"Orange","bold":true,"underlined":true,"color":"gold"},{"text":" players...","bold":true,"color":"blue"}]
 execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar name ["",{"text":"Awaiting ","bold":true,"color":"blue"},{"text":"Orange","bold":true,"underlined":true,"color":"gold"},{"text":" players...","bold":true,"color":"blue"}]
 execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar name ["",{"text":"Awaiting ","bold":true,"color":"blue"},{"text":"Purple","bold":true,"underlined":true,"color":"dark_purple"},{"text":" players...","bold":true,"color":"blue"}]
-execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar name {"text":"Waiting for the game to get started...","bold":true,"color":"blue"}
+execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar name {"text":"Waiting for teams to ready up...","bold":true,"color":"blue"}
 execute unless score $gamestate CmdData matches 2.. unless score $Countdown CmdData matches 1.. run bossbar set lobbybar color blue
 
 #> Team balancing
