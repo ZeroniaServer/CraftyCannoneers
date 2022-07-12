@@ -23,7 +23,7 @@ scoreboard objectives add CalcAir2 dummy
 scoreboard objectives add modisigns trigger
 scoreboard objectives add moditimer dummy
 scoreboard objectives add leavegame trigger
-scoreboard objectives add startgame trigger
+scoreboard objectives remove startgame
 scoreboard objectives add CannonTutorial dummy
 scoreboard objectives add ChestTutorial dummy
 scoreboard objectives add playerUUID dummy
@@ -66,6 +66,7 @@ scoreboard objectives add BalanceScore dummy
 scoreboard objectives add BombDelay dummy
 scoreboard objectives add HitmarkerType dummy
 scoreboard objectives add HitmarkerTimer dummy
+scoreboard objectives add readyup trigger
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
@@ -134,8 +135,8 @@ setblock -49 -28 -3 air
 setblock -49 -28 -3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}',Text4:'{"text":""}'}
 setblock -49 -28 3 air
 setblock -49 -28 3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}',Text4:'{"text":""}'}
-setblock -44 -28 0 air
-setblock -44 -28 0 oak_wall_sign[facing=west,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger startgame"},"text":""}',Text2:'{"color":"#00CC00","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FF55","text":"Start"},{"color":"#00CC00","text":" the game!"}],"text":""}',Text4:'{"text":""}'}
+data merge block -44 -28 0 {Text1:'{"clickEvent":{"action":"run_command","value":"trigger readyup"},"text":"Click here to","color":"#00CC00"}',Text2:'{"text":"Ready Up!","color":"#55FF55"}'}
+setblock -74 -24 1 air
 setblock -74 -24 1 oak_wall_sign
 
 #> Other lobby blocks
