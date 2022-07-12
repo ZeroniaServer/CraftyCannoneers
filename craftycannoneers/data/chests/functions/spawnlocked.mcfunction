@@ -6,5 +6,3 @@ execute as @e[type=marker,tag=SelectedLock] at @s run kill @s
 execute as @e[type=armor_stand,tag=LChestAS,tag=!Randomized] at @s run function chests:randomrotation
 
 scoreboard players reset $CombinedDamage CmdData
-
-say Locked Chest Spawned
