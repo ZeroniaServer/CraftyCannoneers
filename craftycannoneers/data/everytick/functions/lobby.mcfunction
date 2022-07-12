@@ -50,6 +50,9 @@ execute as @e[type=armor_stand,tag=ChestTutorial,tag=Uncommon] at @s run particl
 #Rare
 execute as @e[type=armor_stand,tag=ChestTutorial,tag=Rare] at @s run particle falling_dust purple_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=5}]
 execute as @e[type=armor_stand,tag=ChestTutorial,tag=Rare] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=5}]
+#Locked
+execute as @e[type=armor_stand,tag=ChestTutorial,tag=LockedChest] at @s run particle falling_dust red_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=6}]
+execute as @e[type=armor_stand,tag=ChestTutorial,tag=LockedChest] at @s run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=6}]
 
 
 
