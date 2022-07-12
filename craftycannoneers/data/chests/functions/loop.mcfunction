@@ -76,7 +76,7 @@ execute as @e[type=hopper_minecart,tag=RChestHopper,tag=Opened,tag=!Looted] at @
 #Locked
 execute as @e[type=chest_minecart,tag=lockedchest,tag=!Opened] at @s if data entity @s Items run item replace entity @e[type=armor_stand,tag=LChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:71}
 execute as @e[type=chest_minecart,tag=lockedchest,tag=!Opened] at @s if data entity @s Items run playsound block.chest.open master @a ~ ~ ~ 1 0.7
-execute as @e[type=chest_minecart,tag=lockedchest,tag=!Opened] at @s if data entity @s Items run playsound minecraft:entity.skeleton.hurt master @a ~ ~ ~ 1 2
+execute as @e[type=chest_minecart,tag=lockedchest,tag=!Opened] at @s if data entity @s Items run playsound lockedtreasureopen master @a ~ ~ ~ 1 2
 execute as @e[type=chest_minecart,tag=lockedchest,tag=!Opened] at @s if data entity @s Items run tag @s add Opened
 
 execute as @e[type=chest_minecart,tag=lockedchest,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run playsound chestempty master @a ~ ~ ~ 1 0.6

@@ -24,7 +24,7 @@ execute as @a[scores={openchest=20}] run title @s subtitle {"text":" "}
 item modify entity @a[predicate=chests:key,scores={openchest=20..}] weapon.mainhand game:reducecount
 item modify entity @a[predicate=chests:key_offhand,scores={openchest=20..}] weapon.offhand game:reducecount
 
-execute as @a[scores={openchest=1}] at @s run playsound chestlock master @a ~ ~ ~ 0.5 1.3
+execute as @a[scores={openchest=1}] at @s run playsound chestlock2 master @a ~ ~ ~ 0.5 1.3
 execute as @a[scores={openchest=5}] at @s run playsound key_turn master @a ~ ~ ~ 0.5 1
 execute as @a[scores={openchest=8}] at @s run playsound key_turn master @a ~ ~ ~ 0.5 1
 execute as @a[scores={openchest=11}] at @s run playsound key_turn master @a ~ ~ ~ 0.5 1
