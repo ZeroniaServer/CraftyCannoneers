@@ -135,7 +135,6 @@ setblock -49 -28 -3 air
 setblock -49 -28 -3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}',Text4:'{"text":""}'}
 setblock -49 -28 3 air
 setblock -49 -28 3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}',Text4:'{"text":""}'}
-data merge block -44 -28 0 {Text1:'{"clickEvent":{"action":"run_command","value":"trigger readyup"},"text":"Click here to","color":"#00CC00"}',Text2:'{"text":"Ready Up!","color":"#55FF55"}'}
 setblock -74 -24 1 air
 setblock -74 -24 1 oak_wall_sign
 

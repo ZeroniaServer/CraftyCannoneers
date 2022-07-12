@@ -100,10 +100,12 @@ execute if score $gamestate CmdData matches 0..1 unless entity @a[team=Orange] r
 execute if score $gamestate CmdData matches 0..1 unless entity @a[team=Purple] run scoreboard players set $PurpleReady CmdData 0
 execute if score $gamestate CmdData matches 2.. run scoreboard players set $OrangeReady CmdData 0
 execute if score $gamestate CmdData matches 2.. run scoreboard players set $PurpleReady CmdData 0
-execute if score $OrangeReady CmdData matches 1 run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"#55FF55","text":"✔","bold":true}],"text":""}'}
-execute if score $OrangeReady CmdData matches 0 run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
-execute if score $PurpleReady CmdData matches 1 run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","text":"Purple: "},{"color":"#55FF55","text":"✔","bold":true}],"text":""}'}
-execute if score $PurpleReady CmdData matches 0 run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","text":"Purple: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
+execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"#55FF55","text":"✔","bold":true}],"text":""}'}
+execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 0 run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
+execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","text":"Purple: "},{"color":"#55FF55","text":"✔","bold":true}],"text":""}'}
+execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 0 run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","text":"Purple: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
+execute if score $gamestate CmdData matches 0 run data merge block -44 -28 0 {Text1:'{"clickEvent":{"action":"run_command","value":"trigger readyup"},"text":"Click here to","color":"#00CC00"}',Text2:'{"text":"Ready Up!","color":"#55FF55"}'}
+execute if score $gamestate CmdData matches 1 run data merge block -44 -28 0 {Text1:'{"text":""}',Text2:'{"text":"Countdown","color":"#55FF55","bold":true}',Text3:'{"text":"Started","color":"#55FF55","bold":true}',Text4:'{"text":""}'}
 
 execute if score $gamestate CmdData matches 0 run function game:startgame
 execute if score $gamestate CmdData matches 1 run function game:countdown
