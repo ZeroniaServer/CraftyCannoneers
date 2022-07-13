@@ -120,7 +120,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:127,CustomModelData:29,Cannonball:3b,Unbreakable:1b,display:{Name:'[{\"text\":\"Cannonball Cluster\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Shoot 5 small cannonballs in 1 shot.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"These projectiles are extremely inaccurate!\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Best used against enemies occupying\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"the center island...\",\"italic\":false,\"color\":\"aqua\"}]']}}"
+              "tag": "{HideFlags:127,CustomModelData:29,Cannonball:3b,Unbreakable:1b,display:{Name:'[{\"text\":\"Cannonball Cluster\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Shoot 5 small cannonballs in 1 shot.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"These are extremely inaccurate!\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Best used against enemies occupying\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"the center island...\",\"italic\":false,\"color\":\"aqua\"}]']}}"
             },
             {
               "function": "minecraft:set_count",
@@ -140,7 +140,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:127,CustomModelData:31,Cannonball:4b,Unbreakable:1b,display:{Name:'[{\"text\":\"Gas Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"On impact, releases a strong\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"poisonous cloud of gas.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"The gas damages players inside it.\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Has a special interaction with\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"Hot Cannonballs...\",\"italic\":false,\"color\":\"aqua\"}]']}}"
+              "tag": "{HideFlags:127,CustomModelData:31,Cannonball:4b,Unbreakable:1b,display:{Name:'[{\"text\":\"Gas Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"On impact, releases a toxic cloud\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"of gas, poisoning players inside.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Has a special interaction with\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"Hot Cannonballs...\",\"italic\":false,\"color\":\"aqua\"}]']}}"
             },
             {
               "function": "minecraft:set_count",
