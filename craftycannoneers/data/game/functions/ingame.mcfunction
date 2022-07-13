@@ -25,6 +25,9 @@ execute as @a[team=Purple,predicate=!game:onpurple,tag=onboatregen] run effect c
 execute as @a[team=Orange,predicate=!game:onorange,tag=onboatregen] run tag @s remove onboatregen
 execute as @a[team=Purple,predicate=!game:onpurple,tag=onboatregen] run tag @s remove onboatregen
 
+execute as @a[team=Orange,predicate=game:onorange,predicate=!game:hasregen] run effect give @s regeneration 1000000 1 true
+execute as @a[team=Purple,predicate=game:onpurple,predicate=!game:hasregen] run effect give @s regeneration 1000000 1 true
+
 execute as @a[team=Orange,predicate=game:onpurple,tag=!EnemyMSG] run advancement grant @s only tutorial:zzzunlockables/intruder
 execute as @a[team=Orange,predicate=game:onpurple,tag=!EnemyMSG] run title @s title {"text":" ","color":"red"}
 execute as @a[team=Orange,predicate=game:onpurple,tag=!EnemyMSG,tag=!SeeWeakpoint] unless entity @s[scores={openchest=1..}] run title @s subtitle {"text":"You've boarded the enemy ship...","color":"dark_red"}
