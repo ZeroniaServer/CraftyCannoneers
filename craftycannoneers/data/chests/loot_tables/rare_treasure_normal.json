@@ -100,7 +100,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:127,CustomModelData:22,Cannonball:2b,Unbreakable:1b,display:{Name:'[{\"text\":\"Hot Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"On impact, sets an area around\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"it on fire, fire temporarily\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"disables cannons.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Has a special interaction with\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"Gas Cannonballs...\",\"italic\":false,\"color\":\"aqua\"}]']}}"
+              "tag": "{HideFlags:127,CustomModelData:22,Cannonball:2b,Unbreakable:1b,display:{Name:'[{\"text\":\"Hot Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"On impact, sets an area around\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"it on fire. Fire temporarily\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"disables cannons.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Has a special interaction with\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"Gas Cannonballs...\",\"italic\":false,\"color\":\"aqua\"}]']}}"
             },
             {
               "function": "minecraft:set_count",
