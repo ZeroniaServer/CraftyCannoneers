@@ -1,0 +1,5 @@
+data merge block -44 -28 0 {Text1:'{"clickEvent":{"action":"run_command","value":"trigger readyup"},"text":"Click here to","color":"#00CC00"}',Text2:'{"text":"Ready Up!","color":"#55FF55"}'}
+execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"#55FF55","text":"✔","bold":true}],"text":""}'}
+execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 0 run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
+execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","text":"Purple: "},{"color":"#55FF55","text":"✔","bold":true}],"text":""}'}
+execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 0 run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","text":"Purple: "},{"color":"red","text":"❌","bold":true}],"text":""}'}

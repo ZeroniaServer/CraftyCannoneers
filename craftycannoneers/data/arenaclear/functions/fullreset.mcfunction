@@ -65,4 +65,4 @@ team join NoName @e[type=wandering_trader,tag=Trader]
 
 effect give @e[type=minecraft:villager] minecraft:invisibility 1000000 100 true
 
-data merge block -44 -28 0 {Text1:'{"clickEvent":{"action":"run_command","value":"trigger readyup"},"text":"Click here to","color":"#00CC00"}',Text2:'{"text":"Ready Up!","color":"#55FF55"}'}
+function game:setreadysign

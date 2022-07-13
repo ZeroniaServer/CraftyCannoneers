@@ -19,8 +19,8 @@ execute if score $Countdown CmdData matches 2.. run bossbar set lobbybar name ["
 execute if score $Countdown CmdData matches 1 run bossbar set lobbybar name ["",{"text":"Game starting in ","bold":true,"color":"green"},{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"dark_green"},{"text":" second! ","bold":true,"color":"green"}]
 execute if score $Countdown CmdData matches 0.. run bossbar set lobbybar color green
 
-execute unless score $ForceCountdown CmdData matches 1.. unless entity @a[team=Purple] run tellraw @a {"text":"Countdown canceled! Both teams need at least 1 player.","color":"red"}
+execute unless score $ForceCountdown CmdData matches 1.. unless entity @a[team=Purple] run title @a[tag=!inParkour] actionbar {"text":"Countdown canceled! Both teams need at least 1 player.","color":"red"}
 execute unless score $ForceCountdown CmdData matches 1.. unless entity @a[team=Purple] run scoreboard players set $gamestate CmdData 0
-execute unless score $ForceCountdown CmdData matches 1.. unless entity @a[team=Orange] run tellraw @a {"text":"Countdown canceled! Both teams need at least 1 player.","color":"red"}
+execute unless score $ForceCountdown CmdData matches 1.. unless entity @a[team=Orange] run title @a[tag=!inParkour] actionbar {"text":"Countdown canceled! Both teams need at least 1 player.","color":"red"}
 execute unless score $ForceCountdown CmdData matches 1.. unless entity @a[team=Orange] run scoreboard players set $gamestate CmdData 0
-execute if score $gamestate CmdData matches 0 run data merge block -44 -28 0 {Text1:'{"clickEvent":{"action":"run_command","value":"trigger readyup"},"text":"Click here to","color":"#00CC00"}',Text2:'{"text":"Ready Up!","color":"#55FF55"}'}
+execute if score $gamestate CmdData matches 0 run function game:setreadysign
