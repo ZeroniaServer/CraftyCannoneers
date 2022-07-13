@@ -5,11 +5,15 @@ execute as @a[team=Orange] unless score @s readyup matches 0 unless score $Orang
 execute as @a[team=Orange] unless score @s readyup matches 0 if score $OrangeReady CmdData matches 1 run tellraw @a [{"text":"The ","color":"dark_aqua"},{"text":"Orange","color":"gold"},{"text":" team is no longer ready to play.","color":"dark_aqua"}]
 execute as @a[team=Orange] unless score @s readyup matches 0 run scoreboard players add $OrangeReady CmdData 1
 execute if score $OrangeReady CmdData matches 2.. run scoreboard players set $OrangeReady CmdData 0
+execute if score $OrangeReady CmdData matches 1 run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"#55FF55","text":"✔","bold":true}],"text":""}'}
+execute if score $OrangeReady CmdData matches 0 run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
 
 execute as @a[team=Purple] unless score @s readyup matches 0 unless score $PurpleReady CmdData matches 1 run tellraw @a [{"text":"The ","color":"dark_aqua"},{"text":"Purple","color":"dark_purple"},{"text":" team is ready to play!","color":"dark_aqua"}]
 execute as @a[team=Purple] unless score @s readyup matches 0 if score $PurpleReady CmdData matches 1 run tellraw @a [{"text":"The ","color":"dark_aqua"},{"text":"Purple","color":"dark_purple"},{"text":" team is no longer ready to play.","color":"dark_aqua"}]
 execute as @a[team=Purple] unless score @s readyup matches 0 run scoreboard players add $PurpleReady CmdData 1
 execute if score $PurpleReady CmdData matches 2.. run scoreboard players set $PurpleReady CmdData 0
+execute if score $PurpleReady CmdData matches 1 run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","text":"Purple: "},{"color":"#55FF55","text":"✔","bold":true}],"text":""}'}
+execute if score $PurpleReady CmdData matches 0 run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","text":"Purple: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
 
 execute as @a[team=!Lobby,team=!Spectator] unless score @s readyup matches 0 run scoreboard players reset @s readyup
 execute as @a[team=!Purple,team=!Orange] run trigger readyup set 0

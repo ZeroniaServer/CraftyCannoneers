@@ -24,6 +24,7 @@ execute as @a[tag=LeaveGame] at @s run effect clear @s
 execute as @a[team=] run effect give @s slowness 2 100 true
 execute as @a[team=] run effect give @s jump_boost 2 128 true
 execute as @a[tag=LeaveGame] at @s run gamemode adventure @s
+execute as @a[tag=LeaveGame] run attribute @s minecraft:generic.luck base set 0.0
 execute as @a[tag=LeaveGame] run recipe take @s *
 execute as @a[tag=LeaveGame] unless entity @s[team=] unless score @s LeftGame matches 1.. at @s run playsound block.beehive.exit master @s ~ ~ ~ 1 1
 execute as @a[scores={LeftGame=1..}] run scoreboard players reset @s LeftGame

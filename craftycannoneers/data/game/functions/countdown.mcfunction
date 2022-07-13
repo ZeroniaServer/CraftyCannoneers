@@ -1,3 +1,5 @@
+execute if score $countSec CmdData matches 1 run data merge block -44 -28 0 {Text1:'{"text":""}',Text2:'{"text":"Countdown","color":"#55FF55","bold":true}',Text3:'{"text":"Started","color":"#55FF55","bold":true}',Text4:'{"text":""}'}
+
 scoreboard players add $countSec CmdData 1
 execute unless score $Countdown CmdData matches 10 if score $countSec CmdData matches 10 as @a at @s run playsound minecraft:block.note_block.hat master @s ~ ~ ~ 0.5 1.1
 execute if score $countSec CmdData matches 20.. as @a at @s run playsound minecraft:block.note_block.hat master @s ~ ~ ~ 1 0.9
@@ -7,6 +9,8 @@ execute if score $Countdown CmdData matches 1 if score $countSec CmdData matches
 execute if score $Countdown CmdData matches 1 if score $countSec CmdData matches 10 as @a at @s run playsound minecraft:block.note_block.hat master @s ~ ~ ~ 1 0.7
 execute if score $Countdown CmdData matches 1 if score $countSec CmdData matches 20 as @a at @s run playsound minecraft:block.note_block.hat master @s ~ ~ ~ 1 0.7
 execute if score $Countdown CmdData matches ..0 run function game:forcestart
+execute if score $gamestate CmdData matches 2 run scoreboard players reset $ForceCountdown CmdData
+
 execute if score $countSec CmdData matches 20.. run scoreboard players remove $Countdown CmdData 1
 
 execute if score $countSec CmdData matches 20.. run scoreboard players reset $countSec CmdData
@@ -19,4 +23,4 @@ execute unless score $ForceCountdown CmdData matches 1.. unless entity @a[team=P
 execute unless score $ForceCountdown CmdData matches 1.. unless entity @a[team=Purple] run scoreboard players set $gamestate CmdData 0
 execute unless score $ForceCountdown CmdData matches 1.. unless entity @a[team=Orange] run tellraw @a {"text":"Countdown canceled! Both teams need at least 1 player.","color":"red"}
 execute unless score $ForceCountdown CmdData matches 1.. unless entity @a[team=Orange] run scoreboard players set $gamestate CmdData 0
-execute if score $gamestate CmdData matches 2 run scoreboard players reset $ForceCountdown CmdData
+execute if score $gamestate CmdData matches 0 run data merge block -44 -28 0 {Text1:'{"clickEvent":{"action":"run_command","value":"trigger readyup"},"text":"Click here to","color":"#00CC00"}',Text2:'{"text":"Ready Up!","color":"#55FF55"}'}
