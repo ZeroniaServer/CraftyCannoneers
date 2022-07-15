@@ -1,4 +1,5 @@
 execute as @e[type=armor_stand,tag=CannonDisp] unless score @s playerUUID matches 0 run scoreboard players add @s cannonclaim 1
+execute as @e[type=armor_stand,tag=CannonDisp,tag=OnFire,scores={cannonclaim=1..120}] run scoreboard players set @s cannonclaim 125
 
 #add nametag
 execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=3}] at @s run function cannons:setcannonname
