@@ -1,14 +1,18 @@
 execute unless score $gamestate CmdData matches 1 run scoreboard players enable @a[team=!Lobby,team=!Spectator] readyup
 execute if score $gamestate CmdData matches 1 as @a[team=!Lobby,team=!Spectator] run trigger readyup set 0
 
+execute as @a[team=Orange] unless score @s readyup matches 0 unless score $OrangeReady CmdData matches 1 at @s run playsound item.flintandsteel.use master @s ~ ~ ~ 1 0
 execute as @a[team=Orange] unless score @s readyup matches 0 unless score $OrangeReady CmdData matches 1 run title @a[tag=!inParkour] actionbar ["",{"selector":"@s","bold":true},{"text":" marked ","color":"dark_aqua"},{"text":"Orange","color":"gold","bold":true},{"text":" team as ","color":"dark_aqua"},{"text":"Ready!","color":"green","bold":true}]
+execute as @a[team=Orange] unless score @s readyup matches 0 if score $OrangeReady CmdData matches 1 at @s run playsound item.flintandsteel.use master @s ~ ~ ~ 1 0.6
 execute as @a[team=Orange] unless score @s readyup matches 0 if score $OrangeReady CmdData matches 1 run title @a[tag=!inParkour] actionbar ["",{"selector":"@s","bold":true},{"text":" marked ","color":"dark_aqua"},{"text":"Orange","color":"gold","bold":true},{"text":" team as ","color":"dark_aqua"},{"text":"Not Ready.","color":"red","bold":true}]
 execute as @a[team=Orange] unless score @s readyup matches 0 run scoreboard players add $OrangeReady CmdData 1
 execute if score $OrangeReady CmdData matches 2.. run scoreboard players set $OrangeReady CmdData 0
 execute as @a[team=Orange] unless score @s readyup matches 0 if score $OrangeReady CmdData matches 1 run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"#55FF55","text":"✔","bold":true}],"text":""}'}
 execute as @a[team=Orange] unless score @s readyup matches 0 if score $OrangeReady CmdData matches 0 run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
 
+execute as @a[team=Purple] unless score @s readyup matches 0 unless score $PurpleReady CmdData matches 1 at @s run playsound item.flintandsteel.use master @s ~ ~ ~ 1 0
 execute as @a[team=Purple] unless score @s readyup matches 0 unless score $PurpleReady CmdData matches 1 run title @a[tag=!inParkour] actionbar ["",{"selector":"@s","bold":true},{"text":" marked ","color":"dark_aqua"},{"text":"Purple","color":"dark_purple","bold":true},{"text":" team as ","color":"dark_aqua"},{"text":"Ready!","color":"green","bold":true}]
+execute as @a[team=Purple] unless score @s readyup matches 0 if score $PurpleReady CmdData matches 1 at @s run playsound item.flintandsteel.use master @s ~ ~ ~ 1 0.6
 execute as @a[team=Purple] unless score @s readyup matches 0 if score $PurpleReady CmdData matches 1 run title @a[tag=!inParkour] actionbar ["",{"selector":"@s","bold":true},{"text":" marked ","color":"dark_aqua"},{"text":"Purple","color":"dark_purple","bold":true},{"text":" team as ","color":"dark_aqua"},{"text":"Not Ready.","color":"red","bold":true}]
 execute as @a[team=Purple] unless score @s readyup matches 0 run scoreboard players add $PurpleReady CmdData 1
 execute if score $PurpleReady CmdData matches 2.. run scoreboard players set $PurpleReady CmdData 0
