@@ -14,6 +14,7 @@ scoreboard players set $PurpleKills BalanceScore 0
 scoreboard players set $KillThreshold BalanceScore 0
 scoreboard players set $PVPbal BalanceScore 0
 
+tag @a remove ClickedReady
 title @a title {"text":"Game Started!","color":"dark_aqua"}
 title @a[team=!Lobby,team=!Spectator] subtitle {"text":"Destroy the enemy ship!","color":"aqua"}
 title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"aqua"}
