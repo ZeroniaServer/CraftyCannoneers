@@ -20,6 +20,7 @@ kill @e[type=armor_stand,tag=GasIgnite,scores={death=15..}]
 execute as @e[type=marker,tag=RingOfFire] at @s if entity @e[type=marker,tag=GasCloud,distance=..5] run kill @s
 execute as @e[type=marker,tag=RingOfFire] at @s if entity @e[type=armor_stand,tag=GasBubble,distance=..5] run kill @s
 execute as @e[type=marker,tag=RingOfFire,scores={CmdData=1}] at @s run playsound minecraft:fireshot master @a ~ ~ ~ 1 0.6
+execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,scores={CmdData=1}] at @s run tag @e[type=armor_stand,tag=CannonDisp,distance=..6] add OnFire
 execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,scores={CmdData=1}] at @s run fill ~-1 ~1 ~-1 ~1 ~1 ~1 fire replace air
 execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,scores={CmdData=3}] at @s run fill ~-1 ~1 ~-1 ~1 ~1 ~1 air replace fire
 execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,scores={CmdData=3}] at @s run fill ~-2 ~2 ~-2 ~2 ~2 ~2 fire replace air
