@@ -37,16 +37,16 @@ execute as @e[type=armor_stand,tag=OnFire,tag=!FireCannon,scores={firetime=1}] a
 execute as @e[type=armor_stand,tag=OnFire,tag=!FireCannon,scores={firetime=1}] at @s if entity @e[type=armor_stand,tag=!CannonDisp,scores={CmdData=1..},distance=..1.5] run scoreboard players set @e[type=armor_stand,tag=GPDispL,scores={CmdData=1..},distance=..1.5,limit=1,sort=nearest] CmdData 0
 execute as @e[type=armor_stand,tag=OnFire,tag=!FireCannon,scores={firetime=1}] at @s if entity @e[type=armor_stand,tag=!CannonDisp,distance=..1.5] run scoreboard players set @e[type=armor_stand,tag=GPDispR,scores={CmdData=1..},distance=..1.5,limit=1,sort=nearest] CmdData 0
 execute as @e[type=armor_stand,tag=OnFire,tag=!FireCannon,scores={firetime=1}] at @s run function cannons:updategp
-execute as @e[type=armor_stand,tag=OnFire,tag=!FireCannon,scores={firetime=1}] at @s run data merge entity @e[type=villager,tag=CannonVLeft,distance=..1.5,limit=1,sort=nearest] {HasVisualFire:1b}
-execute as @e[type=armor_stand,tag=OnFire,tag=!FireCannon,scores={firetime=1}] at @s run data merge entity @e[type=villager,tag=CannonVRight,distance=..1.5,limit=1,sort=nearest] {HasVisualFire:1b}
-execute as @e[type=armor_stand,tag=OnFire,tag=!FireCannon,scores={firetime=1}] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:74}
-execute as @e[type=armor_stand,tag=OnFire,tag=!FireCannon,scores={firetime=1..}] at @s run particle smoke ^ ^1.4 ^0.4 0 0 1 0.1 2 force
-execute as @e[type=armor_stand,tag=OnFire,tag=!FireCannon,scores={firetime=1..}] at @s run particle flame ^ ^1.4 ^0.5 0 0 1 0.03 2 force
+execute as @e[type=armor_stand,tag=OnFire,scores={firetime=1}] at @s run data merge entity @e[type=villager,tag=CannonVLeft,distance=..1.5,limit=1,sort=nearest] {HasVisualFire:1b}
+execute as @e[type=armor_stand,tag=OnFire,scores={firetime=1}] at @s run data merge entity @e[type=villager,tag=CannonVRight,distance=..1.5,limit=1,sort=nearest] {HasVisualFire:1b}
+execute as @e[type=armor_stand,tag=OnFire,scores={firetime=1..30}] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:74}
+execute as @e[type=armor_stand,tag=OnFire,scores={firetime=1..}] at @s run particle smoke ^ ^1.4 ^0.4 0 0 1 0.1 2 force
+execute as @e[type=armor_stand,tag=OnFire,scores={firetime=1..}] at @s run particle flame ^ ^1.4 ^0.5 0 0 1 0.03 2 force
 
-execute as @e[type=armor_stand,tag=OnFire,tag=!FireCannon,scores={firetime=400..}] at @s run data merge entity @e[type=villager,tag=CannonVLeft,distance=..1.5,limit=1,sort=nearest] {HasVisualFire:0b}
-execute as @e[type=armor_stand,tag=OnFire,tag=!FireCannon,scores={firetime=400..}] at @s run data merge entity @e[type=villager,tag=CannonVRight,distance=..1.5,limit=1,sort=nearest] {HasVisualFire:0b}
-execute as @e[type=armor_stand,tag=OnFire,tag=!FireCannon,scores={firetime=400..}] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:1}
-execute as @e[type=armor_stand,tag=OnFire,tag=!FireCannon,scores={firetime=400..}] at @s run tag @s remove OnFire
+execute as @e[type=armor_stand,tag=OnFire,scores={firetime=400..}] at @s run data merge entity @e[type=villager,tag=CannonVLeft,distance=..1.5,limit=1,sort=nearest] {HasVisualFire:0b}
+execute as @e[type=armor_stand,tag=OnFire,scores={firetime=400..}] at @s run data merge entity @e[type=villager,tag=CannonVRight,distance=..1.5,limit=1,sort=nearest] {HasVisualFire:0b}
+execute as @e[type=armor_stand,tag=OnFire,scores={firetime=400..}] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:1}
+execute as @e[type=armor_stand,tag=OnFire,scores={firetime=400..}] at @s run tag @s remove OnFire
 execute as @e[type=armor_stand,tag=CannonDisp,tag=!OnFire,tag=!FireCannon,scores={firetime=1..}] at @s run scoreboard players reset @s firetime
 
 execute as @e[type=armor_stand,tag=FireBlank] at @s run playsound cannonshot_blank master @a ~ ~ ~ 6 1
