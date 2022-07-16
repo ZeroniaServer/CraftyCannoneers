@@ -91,6 +91,9 @@ execute if entity @s[type=armor_stand,tag=!Hit1,tag=!BouncyCannonball,tag=!Canno
 execute if entity @s[type=armor_stand,tag=!Hit1,tag=!BouncyCannonball,tag=!CannonballCluster] at @s run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1
 execute if entity @s[type=armor_stand,tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run playsound cannonball master @a ~ ~ ~ 4 1.2
 execute if entity @s[type=armor_stand,tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1.2
+execute if entity @s[type=armor_stand,tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a
+execute if entity @s[type=armor_stand,tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run particle flash ~ ~ ~ 0 0 0 0 5 force @a
+execute if entity @s[type=armor_stand,tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a
 tag @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..}] add Hit2
 
 execute if entity @s[type=armor_stand,tag=!Hit1,tag=BouncyCannonball] at @s run playsound bounce master @a ~ ~ ~ 2 0.8
