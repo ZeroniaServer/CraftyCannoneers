@@ -147,7 +147,7 @@ execute as @e[type=armor_stand,tag=cannonball,tag=ChainCannonball,scores={CmdDat
 execute as @e[type=armor_stand,tag=cannonball,tag=ChainCannonball,scores={CmdData=4..}] at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^-1 0.1 0.1 0.1 0.01 3 force
 execute as @e[type=armor_stand,tag=cannonball,tag=GoldenCannonball,scores={CmdData=4..}] at @s run particle dust_color_transition 1 0.835 0 1.4 1 0.667 0 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force
 
-execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=!CannonballCluster,tag=!ChainCannonball,tag=!GoldenCannonball,scores={CmdData=4..}] at @s run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force
+execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=!CannonballCluster,tag=!ChainCannonball,tag=!GoldenCannonball,tag=!bouncing,scores={CmdData=4..}] at @s run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force
 execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=CannonballCluster,scores={CmdData=4..}] at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force
 
 execute as @e[type=armor_stand,tag=Cannonball,scores={CmdData=4..}] at @s run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 4 force

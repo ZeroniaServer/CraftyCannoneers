@@ -99,6 +99,7 @@ tag @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..}] add Hit2
 execute if entity @s[type=armor_stand,tag=!Hit1,tag=BouncyCannonball] at @s run playsound bounce master @a ~ ~ ~ 2 0.8
 execute if entity @s[type=armor_stand,tag=!Hit1,tag=BouncyCannonball] at @s run tp @s @s
 
+execute if entity @s[type=armor_stand,tag=Hit1,tag=BouncyCannonball,scores={doublehit=..3}] at @s run tag @s add bouncing
 execute if entity @s[type=armor_stand,tag=Hit1,tag=BouncyCannonball,scores={doublehit=..3}] at @s run scoreboard players add @s gravity 100
 execute if entity @s[type=armor_stand,tag=Hit1,tag=BouncyCannonball,scores={doublehit=4..}] at @s run function cannons:bounce
 execute if entity @s[type=armor_stand,tag=Hit1,tag=BouncyCannonball,scores={doublehit=4..}] at @s run scoreboard players reset @s doublehit
