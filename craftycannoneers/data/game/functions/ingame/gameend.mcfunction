@@ -74,8 +74,9 @@ execute if score $EndTime CmdData matches 121 run tag @e[type=#game:cannon,tag=c
 
 
 execute as @e[type=#game:cannon,tag=cannon,tag=Firework,predicate=cannons:ships/purple] at @s run summon armor_stand ~ ~ ~ {Rotation:[0.0f,0.0f],Pose:{Head:[329f,0f,0f]},Tags:["EndFirework","Purple"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:41}}]}
+execute as @e[type=#game:cannon,tag=cannon,tag=Firework,predicate=cannons:ships/purple] at @s run summon marker ^ ^2 ^3 {Tags:["LightFlash","cannon"]}
 execute as @e[type=#game:cannon,tag=cannon,tag=Firework,predicate=cannons:ships/orange] at @s run summon armor_stand ~ ~ ~ {Rotation:[180.0f,0.0f],Pose:{Head:[329f,0f,0f]},Tags:["EndFirework","Orange"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:41}}]}
-
+execute as @e[type=#game:cannon,tag=cannon,tag=Firework,predicate=cannons:ships/orange] at @s run summon marker ^ ^2 ^3 {Tags:["LightFlash","cannon"]}
 
 
 

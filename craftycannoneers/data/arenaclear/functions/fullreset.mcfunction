@@ -1,5 +1,8 @@
 scoreboard players set $current CannonID 0
 
+scoreboard players set @e[type=marker,tag=LightFlash] CmdData 10
+execute as @e[type=marker,tag=LightFlash] at @s run fill ~ ~ ~ ~ ~ ~ air replace light
+kill @e[type=marker,tag=LightFlash]
 kill @e[type=wandering_trader,tag=Trader]
 kill @e[type=#game:cannon,tag=cannon]
 kill @e[type=armor_stand,tag=cannonball]

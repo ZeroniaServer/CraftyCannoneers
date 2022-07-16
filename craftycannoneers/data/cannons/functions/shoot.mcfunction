@@ -22,6 +22,20 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=28}] unless ent
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=29}] unless entity @s[scores={CmdData=8}] run item replace entity @s armor.head with diamond_hoe{CustomModelData:63}
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30}] unless entity @s[scores={CmdData=8}] run item replace entity @s armor.head with diamond_hoe{CustomModelData:1}
 
+#Light Flash
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30}] unless entity @s[scores={CmdData=8}] at @s run summon marker ^ ^2 ^4 {Tags:["LightFlash","cannon"]}
+scoreboard players add @e[type=marker,tag=LightFlash] CmdData 1
+execute as @e[type=marker,tag=LightFlash,scores={CmdData=1}] at @s run setblock ~ ~ ~ light[level=15]
+execute as @e[type=marker,tag=LightFlash,scores={CmdData=2}] at @s run setblock ~ ~ ~ light[level=14]
+execute as @e[type=marker,tag=LightFlash,scores={CmdData=3}] at @s run setblock ~ ~ ~ light[level=12]
+execute as @e[type=marker,tag=LightFlash,scores={CmdData=4}] at @s run setblock ~ ~ ~ light[level=10]
+execute as @e[type=marker,tag=LightFlash,scores={CmdData=5}] at @s run setblock ~ ~ ~ light[level=8]
+execute as @e[type=marker,tag=LightFlash,scores={CmdData=6}] at @s run setblock ~ ~ ~ light[level=6]
+execute as @e[type=marker,tag=LightFlash,scores={CmdData=7}] at @s run setblock ~ ~ ~ light[level=3]
+execute as @e[type=marker,tag=LightFlash,scores={CmdData=8}] at @s run setblock ~ ~ ~ light[level=1]
+execute as @e[type=marker,tag=LightFlash,scores={CmdData=9}] at @s run fill ~ ~ ~ ~ ~ ~ air replace light
+execute as @e[type=marker,tag=LightFlash,scores={CmdData=9..}] at @s run kill @s
+
 scoreboard players add @e[type=armor_stand,tag=cannonball] CmdData 1
 #Normal Cannonball
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=1}] at @s run playsound cannonshot master @a ~ ~ ~ 6 1
