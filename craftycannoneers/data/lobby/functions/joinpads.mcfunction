@@ -32,7 +32,7 @@ execute if score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] run tellra
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] run tellraw @s ["",{"text":"You can take off your ","color":"aqua","italic":true},{"text":"Pirate Hat","bold":true,"color":"dark_purple"},{"text":" to leave the game!","color":"aqua","italic":true}]
 execute as @a[tag=JoinPurple] at @s run tp @s @s
 execute as @a[tag=JoinPurple] run title @s times 0 50 15
-execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] at @s run tp @s -46 -28.5 2 -180 0
+execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] at @s run tp @s -46 -28.5 -2 0 0
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] at @s run tp @s 52 -26 -55 -90 0
 execute as @a[tag=JoinPurple] at @s run playsound minecraft:block.beehive.enter master @a ~ ~ ~ 1 1
 execute as @a[tag=JoinPurple] run team join Purple @s
@@ -59,7 +59,7 @@ execute if score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] run tellra
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] run tellraw @s[team=Orange] ["",{"text":"You can take off your ","color":"aqua","italic":true},{"text":"Pirate Hat","bold":true,"color":"gold"},{"text":" to leave the game!","color":"aqua","italic":true}]
 execute as @a[tag=JoinOrange] at @s run tp @s @s
 execute as @a[tag=JoinOrange] run title @s times 0 50 15
-execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] at @s run tp @s -46 -28.5 -2 0 0
+execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] at @s run tp @s -46 -28.5 2 -180 0
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] at @s run tp @s 88 -26 55 90 0
 execute as @a[tag=JoinOrange] at @s run playsound minecraft:block.beehive.enter master @a ~ ~ ~ 1 1
 execute as @a[tag=JoinOrange] run team join Orange @s
