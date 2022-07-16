@@ -14,10 +14,10 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=2}] at @s at @e
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=2}] at @s at @e[type=villager,tag=CannonVRight,limit=1,sort=nearest,distance=..2] run particle soul_fire_flame ^ ^0.5 ^-0.2 .02 0.05 .02 .003 4 force
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=5..25}] at @s at @e[type=villager,tag=CannonVLeft,limit=1,sort=nearest,distance=..2] run particle flame ^ ^0.7 ^-0.2 .02 0.1 .02 .003 2 force
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=5..25}] at @s at @e[type=villager,tag=CannonVRight,limit=1,sort=nearest,distance=..2] run particle flame ^ ^0.7 ^-0.2 .02 0.1 .02 .003 2 force
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] at @s run particle explosion ^ ^1.1 ^2 0.1 0.1 0.1 0.1 3 force
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] at @s run particle flame ^ ^1.1 ^2 0.1 0.1 0.1 0.3 6 force
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] at @s run particle explosion ^ ^2.1 ^2 0.1 0.1 0.1 0.1 3 force
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] at @s run particle flame ^ ^2.1 ^2 0.1 0.1 0.1 0.3 6 force
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] at @s run particle minecraft:campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] at @s run particle lava ^ ^1.1 ^2 0.1 0.1 0.1 0.02 10 force
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] at @s run particle lava ^ ^2.1 ^2 0.1 0.1 0.1 0.02 10 force
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=28}] unless entity @s[scores={CmdData=8}] run item replace entity @s armor.head with diamond_hoe{CustomModelData:62}
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=29}] unless entity @s[scores={CmdData=8}] run item replace entity @s armor.head with diamond_hoe{CustomModelData:63}
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30}] unless entity @s[scores={CmdData=8}] run item replace entity @s armor.head with diamond_hoe{CustomModelData:1}
@@ -80,10 +80,10 @@ execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=7}
 execute as @e[type=armor_stand,tag=PlayerCannonball,tag=!playeracc] run function cannons:playeraccuracy
 execute as @e[type=armor_stand,tag=PlayerCannonball] at @s run function cannons:playercbtravel
 #Tracer Cannonball
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run particle explosion ^ ^1.1 ^2 0.1 0.1 0.1 0.1 3 force @a[tag=HoldTCB]
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run particle flame ^ ^1.1 ^2 0.1 0.1 0.1 0.3 6 force @a[tag=HoldTCB]
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run particle explosion ^ ^2.1 ^2 0.1 0.1 0.1 0.1 3 force @a[tag=HoldTCB]
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run particle flame ^ ^2.1 ^2 0.1 0.1 0.1 0.3 6 force @a[tag=HoldTCB]
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run particle minecraft:campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
-execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run particle lava ^ ^1.1 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
+execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run particle lava ^ ^2.1 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run playsound cannonshot master @a[tag=HoldTCB] ~ ~ ~ 0.7 2
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run summon armor_stand ~ ~1 ~ {Tags:["cannonball","TracerCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b}
 execute as @e[type=armor_stand,tag=FireCannon,scores={cannonshot=30..,CmdData=8}] at @s run tag @s add RecentTracer
@@ -129,23 +129,22 @@ execute as @e[type=armor_stand,tag=!FireCannon,scores={cannonshot=30..}] at @s r
 
 execute as @e[type=armor_stand,tag=cannonball] store result entity @s Air double 1 run scoreboard players get $toggle CmdData
 
-execute as @e[type=armor_stand,tag=cannonball,tag=ChainCannonball] at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^1 0.1 0.1 0.1 0.01 3 force
-execute as @e[type=armor_stand,tag=cannonball,tag=ChainCannonball] at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^-1 0.1 0.1 0.1 0.01 3 force
-execute as @e[type=armor_stand,tag=cannonball,tag=GoldenCannonball] at @s run particle dust_color_transition 1 0.835 0 1.4 1 0.667 0 ^ ^ ^-1 0.1 0.1 0.1 0.01 3 force
-execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=!CannonballCluster,tag=!ChainCannonball,tag=!GoldenCannonball] at @s run particle dust_color_transition 1 1 1 1.4 0.398 0.398 0.398 ^ ^ ^-1 0.1 0.1 0.1 0.01 3 force
+execute as @e[type=armor_stand,tag=cannonball,tag=ChainCannonball,scores={CmdData=4..}] at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^1 0.1 0.1 0.1 0.01 3 force
+execute as @e[type=armor_stand,tag=cannonball,tag=ChainCannonball,scores={CmdData=4..}] at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^-1 0.1 0.1 0.1 0.01 3 force
+execute as @e[type=armor_stand,tag=cannonball,tag=GoldenCannonball,scores={CmdData=4..}] at @s run particle dust_color_transition 1 0.835 0 1.4 1 0.667 0 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force
 
-execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=!CannonballCluster,tag=!ChainCannonball,tag=!GoldenCannonball] at @s run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force
-execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=CannonballCluster] at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force
+execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=!CannonballCluster,tag=!ChainCannonball,tag=!GoldenCannonball,scores={CmdData=4..}] at @s run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force
+execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=CannonballCluster,scores={CmdData=4..}] at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force
 
-execute as @e[type=armor_stand,tag=Cannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 4 force
-execute as @e[type=armor_stand,tag=GoldenCannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 2 force
-execute as @e[type=armor_stand,tag=CannonballCluster] at @s run particle smoke ~ ~ ~ 0 0 0 0.1 2 force
-execute as @e[type=armor_stand,tag=HotCannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 1 force
-execute as @e[type=armor_stand,tag=HotCannonball] at @s run particle flame ~ ~ ~ 0.2 0.2 0.2 0.1 12 force
-execute as @e[type=armor_stand,tag=GasCannonball] at @s run particle large_smoke ~ ~ ~ 0 0 0 0.1 1 force
-execute as @e[type=armor_stand,tag=GasCannonball] at @s run particle minecraft:soul ~ ~ ~ 0 0 0 0.02 2 force
-execute as @e[type=armor_stand,tag=PlayerCannonball] at @s run particle minecraft:cloud ~ ~ ~ 0 0 0 0.02 1 force
-execute as @e[type=armor_stand,tag=TracerCannonball] at @s run function cannons:tracerparticle
+execute as @e[type=armor_stand,tag=Cannonball,scores={CmdData=4..}] at @s run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 4 force
+execute as @e[type=armor_stand,tag=GoldenCannonball,scores={CmdData=4..}] at @s run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 2 force
+execute as @e[type=armor_stand,tag=CannonballCluster,scores={CmdData=4..}] at @s run particle smoke ^ ^2 ^-8.5 0 0 0 0.1 2 force
+execute as @e[type=armor_stand,tag=HotCannonball,scores={CmdData=4..}] at @s run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 1 force
+execute as @e[type=armor_stand,tag=HotCannonball,scores={CmdData=4..}] at @s run particle flame ^ ^2 ^-8.5 0.2 0.2 0.2 0.1 12 force
+execute as @e[type=armor_stand,tag=GasCannonball,scores={CmdData=4..}] at @s run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 1 force
+execute as @e[type=armor_stand,tag=GasCannonball,scores={CmdData=4..}] at @s run particle minecraft:soul ^ ^2 ^-8.5 0 0 0 0.02 2 force
+execute as @e[type=armor_stand,tag=PlayerCannonball,scores={CmdData=4..}] at @s run particle minecraft:cloud ^ ^2 ^-8.5 0 0 0 0.02 1 force
+execute as @e[type=armor_stand,tag=TracerCannonball,scores={CmdData=4..}] at @s run function cannons:tracerparticle
 
 execute as @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/ocean] at @s run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force
 execute as @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/ocean] at @s run particle falling_water ~ ~1 ~ 0.2 0.4 0.1 0.2 150 force
@@ -156,13 +155,13 @@ execute as @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/ocean]
 execute as @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/ocean] at @s run kill @s
 execute as @e[type=armor_stand,tag=cannonball,tag=!PlayerCannonball,tag=!TracerCannonball] at @s if block ~ ~ ~ #game:nonsolids run function cannons:explode
 execute as @e[type=armor_stand,tag=cannonball,tag=!PlayerCannonball,tag=!TracerCannonball] at @s unless block ~ ~-1 ~ air run function cannons:explode
-execute as @e[type=armor_stand,tag=cannonball,tag=!PlayerCannonball,tag=!TracerCannonball] at @s unless block ^ ^ ^1 air run function cannons:explode
+execute as @e[type=armor_stand,tag=cannonball,tag=!PlayerCannonball,tag=!TracerCannonball] at @s unless block ^ ^ ^2 air run function cannons:explode
 execute as @e[type=armor_stand,tag=cannonball,tag=PlayerCannonball,tag=!Hit] at @s if block ~ ~ ~ #game:nonsolids run function cannons:ejectplayer
 execute as @e[type=armor_stand,tag=cannonball,tag=PlayerCannonball,tag=!Hit] at @s unless block ~ ~-1 ~ air run function cannons:ejectplayer
-execute as @e[type=armor_stand,tag=cannonball,tag=PlayerCannonball,tag=!Hit] at @s unless block ^ ^ ^1 air run function cannons:ejectplayer
+execute as @e[type=armor_stand,tag=cannonball,tag=PlayerCannonball,tag=!Hit] at @s unless block ^ ^ ^2 air run function cannons:ejectplayer
 execute as @e[type=armor_stand,tag=cannonball,tag=TracerCannonball] at @s if block ~ ~ ~ #game:nonsolids run function cannons:tracerhit
 execute as @e[type=armor_stand,tag=cannonball,tag=TracerCannonball] at @s unless block ~ ~-1 ~ air run function cannons:tracerhit
-execute as @e[type=armor_stand,tag=cannonball,tag=TracerCannonball] at @s unless block ^ ^ ^1 air run function cannons:tracerhit
+execute as @e[type=armor_stand,tag=cannonball,tag=TracerCannonball] at @s unless block ^ ^ ^2 air run function cannons:tracerhit
 
 scoreboard players add @e[type=armor_stand,tag=BouncyCannonball,tag=Hit1,scores={gravity=..1000}] gravity 60
 
