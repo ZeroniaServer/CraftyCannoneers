@@ -70,6 +70,7 @@ scoreboard objectives add readyup trigger
 scoreboard objectives add AccurL dummy
 scoreboard objectives add AccurR dummy
 scoreboard objectives add firetime dummy
+scoreboard objectives add blasttime dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy

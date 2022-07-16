@@ -10,9 +10,12 @@ execute as @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=6..}] at @s
 
 execute as @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=4}] run data merge entity @s {Marker:1b,NoGravity:1b}
 
-execute as @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=4}] at @s run summon area_effect_cloud ~ ~154 ~ {Tags:["BlastAEC"],Particle:"block air",Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:6f,Duration:1,Effects:[{Id:25,Amplifier:100,Duration:2,ShowParticles:0b}]}
-execute as @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=4}] at @s run summon area_effect_cloud ~ ~156 ~ {Tags:["BlastAEC"],Particle:"block air",Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:6f,Duration:1,Effects:[{Id:25,Amplifier:100,Duration:2,ShowParticles:0b}]}
-execute as @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=4}] at @s run summon area_effect_cloud ~ ~159 ~ {Tags:["BlastAEC"],Particle:"block air",Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:6f,Duration:1,Effects:[{Id:25,Amplifier:100,Duration:2,ShowParticles:0b}]}
+execute as @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=4}] at @s as @a[tag=!Blasted,gamemode=!spectator,distance=..5] at @s run summon area_effect_cloud ~ ~155 ~ {Tags:["BlastAEC"],Particle:"block air",Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:0.1f,Duration:1,Effects:[{Id:25,Amplifier:100,Duration:2,ShowParticles:0b}]}
+execute as @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=4}] at @s as @a[tag=!Blasted,gamemode=!spectator,distance=..5] run tag @s add Blasted
+
+scoreboard players add @a[tag=Blasted] blasttime 1
+tag @a[tag=Blasted,scores={blasttime=6..}] remove Blasted
+execute as @a[tag=!Blasted,scores={blasttime=1..}] run scoreboard players reset @s blasttime
 
 execute as @e[type=armor_stand,tag=Bomb] at @s if block ~ ~ ~ water run particle splash ~ ~1 ~ 0.1 0.2 0.1 0.1 20 force
 execute as @e[type=armor_stand,tag=Bomb] at @s if block ~ ~ ~ water run particle item ender_eye{CustomModelData:2} ~ ~1 ~ 0.1 0.1 0.1 0.1 10 force
@@ -25,7 +28,7 @@ effect give @e[type=area_effect_cloud,tag=BlastAEC] invisibility 1000000 100 tru
 execute as @e[type=slime,tag=BlastSlime] run scoreboard players add @s CmdData 1
 execute as @e[type=area_effect_cloud,tag=BlastAEC] run scoreboard players add @s CmdData 1
 execute as @e[type=area_effect_cloud,tag=BlastAEC,scores={CmdData=1}] at @s run tp @s ~ ~-155 ~
-execute as @e[type=slime,tag=BlastSlime,scores={CmdData=1}] at @s run tp @s ~ ~31 ~
+execute as @e[type=slime,tag=BlastSlime,scores={CmdData=1}] at @s run tp @s ~ ~33 ~
 execute as @e[type=slime,tag=BlastSlime,scores={CmdData=1}] at @s run data merge entity @s {NoAI:0b,Attributes:[{Name:"generic.attack_damage",Base:4f}]}
 execute as @e[type=slime,tag=BlastSlime,scores={CmdData=6..}] at @s run data merge entity @s {Size:0}
 execute as @e[type=slime,tag=BlastSlime,scores={CmdData=6..}] at @s run tp @s ~ ~-500 ~
