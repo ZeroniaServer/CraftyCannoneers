@@ -45,6 +45,7 @@ execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,tea
 execute if score $EndTime CmdData matches 1.. run gamerule fallDamage false
 
 execute if score $EndTime CmdData matches 150 run gamemode spectator @a[team=!Lobby,team=!Spectator]
+execute if score $EndTime CmdData matches 150 run effect clear @a[team=!Lobby,team=!Spectator]
 execute if score $EndTime CmdData matches 250.. run function game:forcestop
 
 #> Firework purple
