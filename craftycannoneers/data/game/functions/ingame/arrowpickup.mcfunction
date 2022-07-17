@@ -1,13 +1,9 @@
 ##Overhauls default arrow pickup system to give custom named arrows
 
-#50/50 chance of killing arrow
-scoreboard players set $2 arrowtime 2
-execute as @e[type=arrow,nbt={inGround:1b},tag=!thanossnap] store result score @s arrowtime run data get entity @s UUID[0]
-execute as @e[type=arrow,nbt={inGround:1b},tag=!thanossnap] run scoreboard players operation @s arrowtime %= $2 arrowtime
-execute as @e[type=arrow,nbt={inGround:1b},tag=!thanossnap,scores={arrowtime=1}] at @s run particle item arrow ~ ~ ~ 0.1 0.1 0.1 0.1 15
-execute as @e[type=arrow,nbt={inGround:1b},tag=!thanossnap,scores={arrowtime=1}] at @s run playsound arrowbreak master @a ~ ~ ~ 1 2
-kill @e[type=arrow,nbt={inGround:1b},tag=!thanossnap,scores={arrowtime=1}]
-tag @e[type=arrow,nbt={inGround:1b},tag=!thanossnap] add thanossnap
+#Kill arrows in the ground
+execute as @e[type=arrow,nbt={inGround:1b},scores={arrowtime=1}] at @s run particle item arrow ~ ~ ~ 0.1 0.1 0.1 0.1 15
+execute as @e[type=arrow,nbt={inGround:1b},scores={arrowtime=1}] at @s run playsound arrowbreak master @a ~ ~ ~ 1 2
+kill @e[type=arrow,nbt={inGround:1b},scores={arrowtime=1}]
 kill @e[type=arrow,predicate=!game:inarena]
 
 #Pickup conditions
