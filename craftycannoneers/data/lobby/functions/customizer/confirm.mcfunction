@@ -11,6 +11,7 @@ scoreboard players operation $ticks CmdData = $TimeLimit CmdData
 scoreboard players operation $ticks CmdData *= $1200 CmdData
 
 function lobby:customizer/lockboxdamage
+scoreboard players set $CombinedDamage CmdData 0
 
 title @a title {"text":"Settings Confirmed!","underlined":true,"color":"dark_green"}
 title @a subtitle {"text":"The game is ready to play!","color":"green"}
