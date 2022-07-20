@@ -29,8 +29,13 @@ execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] run tag @a[tag=
 execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] as @a[tag=UtilKilled,tag=!damaged,distance=..6] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:0b,Duration:1,ShowParticles:0b}]}
 execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] run tag @a remove damaged
 execute if entity @s[tag=GoldImpact] as @a[tag=UtilKilled,distance=..5] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:3b,Duration:1,ShowParticles:0b}]}
-execute if entity @s[tag=cluster] as @a[tag=UtilKilled,distance=..5] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:3b,Duration:1,ShowParticles:0b}]}
 execute if entity @s[tag=GasPower] as @a[tag=UtilKilled,distance=..6] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:3b,Duration:1,ShowParticles:0b}]}
+
+# clusters don't instakill players on their own ships
+execute if entity @s[tag=cluster] as @a[tag=UtilKilled,distance=..5] unless entity @s[predicate=game:onorange,team=Orange] unless entity @s[predicate=game:onpurple,team=Purple] at @s summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:3b,Duration:1,ShowParticles:0b}]}
+execute if entity @s[tag=cluster] as @a[tag=UtilKilled,distance=..5] if entity @s[predicate=game:onorange,team=Orange] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:2b,Duration:1,ShowParticles:0b}]}
+execute if entity @s[tag=cluster] as @a[tag=UtilKilled,distance=..5] if entity @s[predicate=game:onpurple,team=Purple] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:2b,Duration:1,ShowParticles:0b}]}
+
 
 data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
 execute as @e[type=area_effect_cloud,tag=damage,tag=!HasName] run data modify entity @s CustomName set from storage craftycannoneers:temp CustomName
