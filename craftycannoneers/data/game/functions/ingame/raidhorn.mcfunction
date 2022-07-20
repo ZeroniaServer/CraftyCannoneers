@@ -47,7 +47,10 @@ execute as @a[tag=HoldHorn,scores={horntime=34..}] at @s run effect give @s stre
 execute as @a[predicate=game:horn_mainhand,tag=HoldHorn,scores={horntime=34..}] run item replace entity @s weapon.mainhand with air
 execute as @a[predicate=game:horn_offhand,tag=HoldHorn,scores={horntime=34..}] run item replace entity @s weapon.offhand with air
 execute as @a[tag=HoldHorn,scores={horntime=34..}] run title @s subtitle {"text":" ","color":"white"}
-execute as @a[tag=HoldHorn,scores={horntime=34..}] at @s run playsound raidhorn master @a ~ ~ ~ 6 1
+execute as @a[team=Orange,tag=HoldHorn,scores={horntime=34..}] at @s run playsound raidhorn master @a[team=Orange] ~ ~ ~ 6 1
+execute as @a[team=Orange,tag=HoldHorn,scores={horntime=34..}] at @s run playsound raidhornenemy master @a[team=!Orange] ~ ~ ~ 6 1
+execute as @a[team=Purple,tag=HoldHorn,scores={horntime=34..}] at @s run playsound raidhorn master @a[team=Purple] ~ ~ ~ 6 1
+execute as @a[team=Purple,tag=HoldHorn,scores={horntime=34..}] at @s run playsound raidhornenemy master @a[team=!Purple] ~ ~ ~ 6 1
 execute as @a[tag=HoldHorn,scores={horntime=34..}] run scoreboard players reset @s horntime
 execute as @a[tag=HoldHorn,scores={horntime=34..}] run tag @s remove HoldHorn
 
