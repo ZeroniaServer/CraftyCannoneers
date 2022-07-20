@@ -18,8 +18,8 @@ execute as @e[type=boat,tag=BoatBoat,tag=!Sinking,tag=DismountCheck] at @s unles
 
 tag @e[type=armor_stand,tag=BoatAS,tag=New] remove New
 
-execute as @e[type=boat,tag=Sailing] unless score @s clickstick matches 10.. run scoreboard players add @s clickstick 1
-execute as @e[type=boat,tag=Sailing] if score @s clickstick matches 10.. run tag @s add DismountCheck
+execute as @e[type=boat,tag=Sailing] unless score @s click matches 7.. run scoreboard players add @s click 1
+execute as @e[type=boat,tag=Sailing] if score @s click matches 7.. run tag @s add DismountCheck
 
 execute unless entity @e[type=boat,tag=BoatBoat,tag=1,tag=Sailing] positioned 109 -31 0 unless entity @e[type=boat,tag=BoatBoat,tag=1,distance=..8] as @e[type=boat,tag=BoatBoat,tag=1] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..12] run tag @e[type=boat,tag=BoatBoat,tag=1] add Sinking
 execute unless entity @e[type=boat,tag=BoatBoat,tag=2,tag=Sailing] positioned 31 -31 0 unless entity @e[type=boat,tag=BoatBoat,tag=2,distance=..8] as @e[type=boat,tag=BoatBoat,tag=2] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..12] run tag @e[type=boat,tag=BoatBoat,tag=2] add Sinking
