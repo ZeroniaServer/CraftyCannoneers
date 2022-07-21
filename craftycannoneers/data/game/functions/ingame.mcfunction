@@ -10,6 +10,7 @@ function tutorial:notify
 function tutorial:showtip
 function game:ingame/bell
 function game:ingame/raidhorn
+function game:ingame/playerstuck
 function balancing:chestluck
 
 execute unless entity @e[type=slime,tag=Weakpoint,tag=Orange] if entity @e[type=marker,tag=WeakpointLoc,tag=Purple] run function game:shipweakpoint/spawnnewpurple
