@@ -57,8 +57,6 @@ scoreboard objectives add CannonID dummy
 scoreboard objectives add bounce dummy
 scoreboard objectives add cannonclaim dummy
 scoreboard objectives add parrotpet dummy
-scoreboard objectives add notifyobjective dummy
-scoreboard objectives add objectivecount dummy
 scoreboard objectives add loverocks minecraft.used:minecraft.snowball
 scoreboard objectives add bellring dummy
 scoreboard objectives add horntime dummy
@@ -71,6 +69,9 @@ scoreboard objectives add AccurL dummy
 scoreboard objectives add AccurR dummy
 scoreboard objectives add firetime dummy
 scoreboard objectives add blasttime dummy
+
+scoreboard objecitves remove notifyobjective
+scoreboard objecitves remove objectivecount
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
