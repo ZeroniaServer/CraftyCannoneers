@@ -70,8 +70,8 @@ scoreboard objectives add AccurR dummy
 scoreboard objectives add firetime dummy
 scoreboard objectives add blasttime dummy
 
-scoreboard objecitves remove notifyobjective
-scoreboard objecitves remove objectivecount
+scoreboard objectives remove notifyobjective
+scoreboard objectives remove objectivecount
 
 #> Parkour
 scoreboard objectives add parkourMins dummy

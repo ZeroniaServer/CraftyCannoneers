@@ -1,0 +1,5 @@
+tellraw @s ["\n",{"text":"==============","color":"gray"},"\n",{"text":"BlockyM_","color":"dark_purple"},"\n",{"text":"Trailer Director","underlined":true,"color":"yellow"},"\n","\n",{"text":"Click here to visit socials:","italic":true,"color":"dark_gray"},"\n",{"text":"> YouTube","bold":true,"color":"red","clickEvent":{"action":"open_url","value":"https://www.youtube.com/c/BlockyM"}},"\n",{"text":"==============","color":"gray"},"\n"]
+playsound clickcredits master @s ~ ~ ~ 1 1.4
+advancement revoke @s only lobby:blocky
+advancement grant @s only tutorial:zzzunlockables/credits
+execute at @e[type=armor_stand,tag=BlockyDeco] run particle dust 0 0.3 1 1 ~ ~1 ~ 0.2 0.5 0.2 0.1 40 force @s

@@ -91,6 +91,10 @@ execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=hideTips,tag=tempHideT
 tag @a remove tempHideTips
 scoreboard players reset @a[scores={toggleTips=1..}] toggleTips
 
+execute as @e[type=armor_stand,tag=YZERODeco] at @s run particle minecraft:enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2
+execute as @e[type=armor_stand,tag=EvtemaDeco] at @s run particle minecraft:enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2
+execute as @e[type=armor_stand,tag=StuffyDeco] at @s run particle minecraft:enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2
+
 #Ingame
 execute if score $gamestate CmdData matches 3 run function game:ingame/gameend
 execute if score $gamestate CmdData matches 2 run function game:ingame
