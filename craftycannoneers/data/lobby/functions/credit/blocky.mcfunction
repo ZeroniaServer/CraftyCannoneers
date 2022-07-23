@@ -2,4 +2,4 @@ tellraw @s ["\n",{"text":"==============","color":"gray"},"\n",{"text":"BlockyM_
 playsound clickcredits master @s ~ ~ ~ 1 1.4
 advancement revoke @s only lobby:blocky
 advancement grant @s only tutorial:zzzunlockables/credits
-execute at @e[type=armor_stand,tag=BlockyDeco] run particle dust 0 0.3 1 1 ~ ~1 ~ 0.2 0.5 0.2 0.1 40 force @s
+execute at @e[type=armor_stand,tag=BlockyDeco] run particle dust 1 0 1 1 ~ ~1 ~ 0.2 0.5 0.2 0.1 40 force @s
