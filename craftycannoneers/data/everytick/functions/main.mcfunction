@@ -85,7 +85,7 @@ execute as @a[scores={toggleTips=1..},tag=hideTips] run tag @s add tempHideTips
 execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=!hideTips] run tellraw @s [{"text":"You have disabled ingame tips. You can re-enable them using your Lobby Book.","color":"red"}]
 execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=!hideTips] run tag @s add hideTips
 
-execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=hideTips,tag=tempHideTips] run tellraw @s [{"text":"You have enabled ingame tips. You can disable them using your Lobby Book.","color":"red"}]
+execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=hideTips,tag=tempHideTips] run tellraw @s [{"text":"You have enabled ingame tips. You can disable them using your Lobby Book.","color":"green"}]
 execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=hideTips,tag=tempHideTips] run tag @s remove hideTips
 
 tag @a remove tempHideTips
