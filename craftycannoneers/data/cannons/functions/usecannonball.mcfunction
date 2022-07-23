@@ -1,6 +1,4 @@
 ### CANNONBALL
-#> Tutorial Advancement trigger
-execute if entity @s[tag=FillCB,advancements={tutorial:objectives/objective6=true}] unless entity @s[tag=!HoldCB,tag=!HoldFB,tag=!HoldCBC,tag=!HoldGCB,tag=!HoldCCB,tag=!HoldBCB,tag=!HoldPCB] run advancement grant @s only tutorial:objectives/objective7
 
 #> Fill Cannonball
 #Normal
@@ -46,7 +44,6 @@ execute if entity @s[tag=FillCB,tag=HoldPCB] unless entity @e[type=armor_stand,t
 execute if entity @s[tag=FillCB,tag=HoldPCB] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 7
 scoreboard players add @s[tag=FillCB,tag=HoldPCB,tag=UsedPCB] MVPcannon 1
 #Tracer
-execute if entity @s[tag=FillCB,tag=HoldTCB,advancements={tutorial:objectives/objective5=true}] at @s unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run advancement grant @s only tutorial:objectives/objective6
 execute if entity @s[tag=FillCB,tag=HoldTCB] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
 execute if entity @s[tag=FillCB,tag=HoldTCB] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedTCB
 execute if entity @s[tag=FillCB,tag=HoldTCB] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID

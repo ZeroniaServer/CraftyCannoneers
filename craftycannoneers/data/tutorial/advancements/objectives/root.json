@@ -1,11 +1,11 @@
 {
     "display": {
         "title": {
-            "text": "Main Objectives",
+            "text": "Practice Area",
             "color": "green"
         },
         "description": {
-            "text": "Complete these objectives to learn about the game's basic mechanics!",
+            "text": "Learn about the game in the Practice Area!",
             "color": "white"
         },
         "icon": {

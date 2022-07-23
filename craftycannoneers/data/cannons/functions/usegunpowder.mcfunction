@@ -1,7 +1,3 @@
-#> Tutorial Advancement trigger
-execute if entity @s[tag=FillLeft,tag=HoldGP,advancements={tutorial:objectives/objective4=true}] run advancement grant @s only tutorial:objectives/objective5
-execute if entity @s[tag=FillRight,tag=HoldGP,advancements={tutorial:objectives/objective4=true}] run advancement grant @s only tutorial:objectives/objective5
-
 #> Fill gunpowder
 #Left
 execute if entity @s[tag=FillLeft,tag=HoldGP] if entity @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..3] unless entity @e[type=armor_stand,tag=GPDispL,scores={CmdData=7..},limit=1,sort=nearest,distance=..3] at @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..3] run playsound gunpowder master @a ~ ~ ~ 0.6 2
