@@ -1,4 +1,4 @@
-tellraw @s ["\n",{"text":"==============","color":"gray"},"\n",{"text":"Stuffy","color":"aqua"},"\n",{"text":"Builder","underlined":true,"color":"yellow"},"\n","\n",{"text":"Click here to visit socials:","italic":true,"color":"dark_gray"},"\n",{"text":"> Twitter","bold":true,"color":"dark_aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/StuffyMC_"}},"\n",{"text":"==============","color":"gray"},"\n"]
+tellraw @s ["\n",{"text":"==============","color":"gray"},"\n",{"text":"Stuffy","color":"aqua"},"\n",{"text":"Builder/Level Designer","underlined":true,"color":"yellow"},"\n","\n",{"text":"Click here to visit socials:","italic":true,"color":"dark_gray"},"\n",{"text":"> Twitter","bold":true,"color":"dark_aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/StuffyMC_"}},"\n",{"text":"> YouTube","bold":true,"color":"red","clickEvent":{"action":"open_url","value":"https://www.youtube.com/channel/UC1dZkdBlxjDbDrsu-GdB0Kw"}},"\n",{"text":"==============","color":"gray"},"\n"]
 playsound clickcredits master @s ~ ~ ~ 1 1.4
 advancement revoke @s only lobby:stuffy
 advancement grant @s only tutorial:zzzunlockables/credits
