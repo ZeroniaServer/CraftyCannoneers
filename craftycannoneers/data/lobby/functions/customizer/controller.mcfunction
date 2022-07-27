@@ -6,8 +6,8 @@ execute positioned -54.5 -25 8 run effect clear @a[distance=4..,tag=ModiOwner] g
 execute positioned -54.5 -25 8 run tag @a[distance=4..,tag=ModiOwner] remove ModiOwner
 execute positioned -54.5 -25 8 run scoreboard players reset @a[distance=4..,tag=NearModboard] modisigns
 execute positioned -54.5 -25 8 run tag @a[distance=4..,tag=NearModboard] remove NearModboard
-execute unless entity @a[tag=ModiOwner] run bossbar set lobbybar name {"text":"Please confirm game settings at the Settings Map!","color":"blue","bold":true}
-execute if entity @a[tag=ModiOwner] run bossbar set lobbybar name ["",{"selector":"@a[tag=ModiOwner]","bold":true,"color":"dark_blue"},{"text":" is in control of game settings!","bold":true,"color":"blue"}]
+execute unless entity @a[tag=ModiOwner] run bossbar set lobbybar name {"text":"Please confirm game settings at the Settings Map!","color":"aqua"}
+execute if entity @a[tag=ModiOwner] run bossbar set lobbybar name ["",{"selector":"@a[tag=ModiOwner]","bold":true},{"text":" is in control of game settings!","color":"aqua"}]
 bossbar set lobbybar color blue
 
 execute unless entity @a[tag=ModiOwner] as @a[scores={modisigns=3384..},limit=1] at @s run playsound minecraft:entity.villager.work_cartographer master @a ~ ~ ~ 1 1

@@ -100,7 +100,7 @@ bossbar add lobbybar "Lobbybar"
 bossbar add purpleshiphp ""
 bossbar add orangeship ""
 
-bossbar set lobbybar name {"text":"Please confirm game settings at the Settings Map!","color":"blue","bold":true}
+bossbar set lobbybar name {"text":"Please confirm game settings at the Settings Map!","color":"aqua"}
 bossbar set lobbybar max 1
 bossbar set lobbybar value 1
 bossbar set lobbybar color blue
