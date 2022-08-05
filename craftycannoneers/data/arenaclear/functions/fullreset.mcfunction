@@ -4,7 +4,7 @@ scoreboard players set @e[type=marker,tag=LightFlash] CmdData 10
 execute as @e[type=marker,tag=LightFlash] at @s run fill ~ ~ ~ ~ ~ ~ air replace light
 kill @e[type=marker,tag=LightFlash]
 kill @e[type=wandering_trader,tag=Trader]
-kill @e[type=#game:cannon,tag=cannon]
+kill @e[type=#game:cannon,tag=cannon,tag=!Tutorial]
 kill @e[type=armor_stand,tag=cannonball]
 tp @e[type=#game:weakpoint,tag=Weakpoint] 0 -1000 0
 kill @e[type=#game:weakpoint,tag=Weakpoint]
