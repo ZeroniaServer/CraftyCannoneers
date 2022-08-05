@@ -3,9 +3,6 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "player": {
-          "team": "Lobby"
-        },
         "items": [
           {
             "items": [
@@ -17,6 +14,6 @@
     }
   },
   "rewards": {
-    "function": "game:clearrocklobby"
+    "function": "lobby:rock/clearrock"
   }
 }
