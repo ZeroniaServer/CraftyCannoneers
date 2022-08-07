@@ -19,4 +19,4 @@ tag @e[type=villager,tag=NoID] remove NoID
 tag @e[type=armor_stand,tag=NoID] remove NoID
 scoreboard players add $current CannonID 1
 
-scoreboard players set @e[type=armor_stand,tag=CannonDisp] playerUUID 0
+scoreboard players set @e[type=armor_stand,tag=CannonDisp,tag=!Tutorial] playerUUID 0
