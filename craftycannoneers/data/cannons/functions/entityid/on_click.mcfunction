@@ -29,7 +29,7 @@ tag @p[tag=clicker,nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball
 execute at @s as @p[tag=clicker,tag=FillCB] run function cannons:checkowner
 execute at @s as @p[tag=clicker,tag=FillLeft,tag=HoldGP] run function cannons:checkowner
 execute at @s as @p[tag=clicker,tag=FillRight,tag=HoldGP] run function cannons:checkowner
-execute at @s run tag @p[tag=clicker,tag=FillLeft,tag=!HoldGP] remove FillLeft
-execute at @s run tag @p[tag=clicker,tag=FillRight,tag=!HoldGP] remove FillRight
 execute at @s if entity @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..3,scores={CmdData=1..}] as @p[tag=clicker,tag=FillLeft,tag=!HoldGP] run function cannons:checkowner
 execute at @s if entity @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..3,scores={CmdData=1..}] as @p[tag=clicker,tag=FillRight,tag=!HoldGP] run function cannons:checkowner
+execute at @s run tag @p[tag=clicker,tag=FillLeft,tag=!HoldGP] remove FillLeft
+execute at @s run tag @p[tag=clicker,tag=FillRight,tag=!HoldGP] remove FillRight
