@@ -24,8 +24,8 @@ kill @e[type=trident]
 kill @e[type=armor_stand,tag=GasBubble]
 kill @e[type=armor_stand,tag=GasAS]
 kill @e[type=bat]
-kill @e[type=area_effect_cloud,tag=GPDispText]
-kill @e[type=area_effect_cloud,tag=CannonNametag]
+kill @e[type=area_effect_cloud,tag=GPDispText,tag=!Tutorial]
+kill @e[type=area_effect_cloud,tag=CannonNametag,tag=!Tutorial]
 kill @e[type=armor_stand,tag=ShipBell]
 
 #Cannons
