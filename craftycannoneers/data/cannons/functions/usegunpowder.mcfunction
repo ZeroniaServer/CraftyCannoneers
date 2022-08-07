@@ -1,7 +1,7 @@
 #> Fill gunpowder
 #Left
 execute if entity @s[tag=FillLeft,tag=HoldGP] if entity @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..3] unless entity @e[type=armor_stand,tag=GPDispL,scores={CmdData=7..},limit=1,sort=nearest,distance=..3] at @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..3] run playsound gunpowder master @a ~ ~ ~ 0.6 2
-execute if entity @s[tag=FillLeft,tag=HoldGP] if entity @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..3] unless entity @e[type=armor_stand,tag=GPDispL,scores={CmdData=7..},limit=1,sort=nearest,distance=..3] run clear @s gunpowder 1
+execute if entity @s[tag=FillLeft,tag=HoldGP,team=!Lobby] if entity @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..3] unless entity @e[type=armor_stand,tag=GPDispL,scores={CmdData=7..},limit=1,sort=nearest,distance=..3] run clear @s gunpowder 1
 execute if entity @s[tag=FillLeft,tag=HoldGP] if entity @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..3] unless entity @e[type=armor_stand,tag=GPDispL,scores={CmdData=7..},limit=1,sort=nearest,distance=..3] run scoreboard players add @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..3] CmdData 1
 execute if entity @s[tag=FillLeft,tag=HoldGP] run function cannons:updategp
 execute if entity @s[tag=FillLeft,tag=HoldGP] as @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..3] run tag @s add DisplayGP
@@ -11,7 +11,7 @@ execute if entity @s[tag=FillLeft,tag=HoldGP] as @e[type=armor_stand,tag=GPDispL
 
 #Right
 execute if entity @s[tag=FillRight,tag=HoldGP] if entity @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..3] unless entity @e[type=armor_stand,tag=GPDispR,scores={CmdData=7..},limit=1,sort=nearest,distance=..3] at @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..3] run playsound gunpowder master @a ~ ~ ~ 0.6 2
-execute if entity @s[tag=FillRight,tag=HoldGP] if entity @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..3] unless entity @e[type=armor_stand,tag=GPDispR,scores={CmdData=7..},limit=1,sort=nearest,distance=..3] run clear @s gunpowder 1
+execute if entity @s[tag=FillRight,tag=HoldGP,team=!Lobby] if entity @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..3] unless entity @e[type=armor_stand,tag=GPDispR,scores={CmdData=7..},limit=1,sort=nearest,distance=..3] run clear @s gunpowder 1
 execute if entity @s[tag=FillRight,tag=HoldGP] if entity @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..3] unless entity @e[type=armor_stand,tag=GPDispR,scores={CmdData=7..},limit=1,sort=nearest,distance=..3] run scoreboard players add @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..3] CmdData 1
 execute if entity @s[tag=FillRight,tag=HoldGP] run function cannons:updategp
 execute if entity @s[tag=FillRight,tag=HoldGP] as @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..3] run tag @s add DisplayGP

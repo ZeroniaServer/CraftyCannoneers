@@ -200,7 +200,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{Unbreakable:1b,HideFlags:127,CustomModelData:56,Unbreakable:1b,Cannonball:7b,display:{Name:'[{\"text\":\"Player Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Non-lethal Cannonball. Launch yourself by\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"shooting the barrel that you\\'re inside of.\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Deals no damage to blocks or players.\",\"italic\":false,\"color\":\"aqua\"}]']}}"
+              "tag": "{HideFlags:127,CustomModelData:56,Unbreakable:1b,Cannonball:7b,display:{Name:'[{\"text\":\"Player Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Non-lethal Cannonball. Launch yourself by\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"shooting the barrel that you\\'re inside of.\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Deals no damage to blocks or players.\",\"italic\":false,\"color\":\"aqua\"}]']}}"
             },
             {
               "function": "minecraft:set_count",
