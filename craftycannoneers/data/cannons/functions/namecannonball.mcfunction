@@ -9,6 +9,7 @@ execute if entity @s[tag=CannonballCluster] as @a[predicate=game:matches_uuid] r
 execute if entity @s[tag=BouncyCannonball] as @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text1:'{"text":""}',Text2:'["",{"selector":"@p[predicate=game:matches_uuid]"},{"text":"\'s Bouncy Cannonball"}]'}
 execute if entity @s[tag=PlayerCannonball] as @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text1:'{"text":""}',Text2:'["",{"selector":"@p[predicate=game:matches_uuid]"}]'}
 execute if entity @s[tag=GoldenCannonball] as @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text1:'{"text":""}',Text2:'["",{"selector":"@p[predicate=game:matches_uuid]"},{"text":"\'s Golden Cannonball"}]'}
+execute if entity @s[tag=TracerCannonball] as @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text1:'{"text":""}',Text2:'["",{"selector":"@p[predicate=game:matches_uuid]"},{"text":"\'s Tracer Cannonball"}]'}
 execute if entity @s[tag=Bomb] as @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text1:'{"text":""}',Text2:'["",{"selector":"@p[predicate=game:matches_uuid]"},{"text":"\'s Blast Bomb"}]'}
 execute if entity @s[tag=GasPower] as @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text1:'{"text":""}',Text2:'["",{"selector":"@p[predicate=game:matches_uuid]"},{"text":"\'s Gas Explosion"}]'}
 data modify entity @s CustomName set from block ~ 256 ~ Text2
