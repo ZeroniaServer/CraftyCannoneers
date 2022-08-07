@@ -7,7 +7,6 @@ execute as @e[type=armor_stand,tag=DisplayGP,tag=GPDispL,scores={gpdisp_time=1}]
 execute as @e[type=armor_stand,tag=DisplayGP,tag=GPDispL,scores={gpdisp_time=1}] at @s at @e[type=villager,tag=CannonVLeft,tag=Tutorial,limit=1,sort=nearest,distance=..2] run summon area_effect_cloud ~ ~0.2 ~ {Tags:["cannon","GPDispText","1","Tutorial"],Duration:2000000000}
 execute as @e[type=armor_stand,tag=DisplayGP,tag=GPDispL,scores={gpdisp_time=1}] at @s at @e[type=villager,tag=CannonVRight,tag=Tutorial,limit=1,sort=nearest,distance=..2] run summon area_effect_cloud ~ ~0.2 ~ {Tags:["cannon","GPDispText","2","Tutorial"],Duration:2000000000}
 
-execute as @e[type=armor_stand,tag=DisplayGP,tag=GPDispL,scores={CmdData=0,gpdisp_time=2}] at @s run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2]
 execute as @e[type=armor_stand,tag=DisplayGP,tag=GPDispL,scores={CmdData=0,gpdisp_time=2}] at @s run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:"\"0\"",CustomNameVisible:1b}
 execute as @e[type=armor_stand,tag=DisplayGP,tag=GPDispL,scores={CmdData=1,gpdisp_time=2}] at @s run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:"\"1\"",CustomNameVisible:1b}
 execute as @e[type=armor_stand,tag=DisplayGP,tag=GPDispL,scores={CmdData=2,gpdisp_time=2}] at @s run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:"\"2\"",CustomNameVisible:1b}
