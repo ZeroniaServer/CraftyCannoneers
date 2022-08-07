@@ -13,7 +13,7 @@ execute if entity @s[scores={CalcAir2=0..},tag=!Hit1,predicate=cannons:ships/pur
 execute if entity @s[tag=GoldImpact,scores={CalcAir2=0..},tag=!Hit1,predicate=cannons:ships/purple] as @a[team=Orange] if score @s playerUUID = $hitmarkuuid playerUUID run loot give @s loot cannons:coins
 execute if entity @s[tag=GoldImpact,scores={CalcAir2=0..},tag=!Hit1,predicate=cannons:ships/purple] as @a[team=Orange] if score @s playerUUID = $hitmarkuuid playerUUID at @s run playsound minecraft:entity.item.pickup player @s ~ ~ ~ 0.25 2
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] if score $DamagePurple CmdData >= $PurpleHP CmdData as @a[team=Orange] if score @s playerUUID = $tempuuid playerUUID run advancement grant @s only tutorial:zzzunlockables/battleship
-execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] if score $DamagePurple CmdData >= $PurpleHP CmdData run scoreboard players reset $tempuuid
+execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] if score $DamagePurple CmdData >= $PurpleHP CmdData run scoreboard players reset $tempuuid playerUUID
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] run scoreboard players reset $hitmarkuuid
 
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] run scoreboard players operation $DamageOrange CmdData += @s CalcAir2
@@ -28,7 +28,7 @@ execute if entity @s[scores={CalcAir2=0..},tag=!Hit1,predicate=cannons:ships/ora
 execute if entity @s[tag=GoldImpact,scores={CalcAir2=0..},tag=!Hit1,predicate=cannons:ships/orange] as @a[team=Purple] if score @s playerUUID = $hitmarkuuid playerUUID run loot give @s loot cannons:coins
 execute if entity @s[tag=GoldImpact,scores={CalcAir2=0..},tag=!Hit1,predicate=cannons:ships/orange] as @a[team=Purple] if score @s playerUUID = $hitmarkuuid playerUUID at @s run playsound minecraft:entity.item.pickup player @s ~ ~ ~ 0.25 2
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] if score $DamageOrange CmdData >= $OrangeHP CmdData as @a[team=Purple] if score @s playerUUID = $tempuuid playerUUID run advancement grant @s only tutorial:zzzunlockables/battleship
-execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] if score $DamageOrange CmdData >= $OrangeHP CmdData run scoreboard players reset $tempuuid
+execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] if score $DamageOrange CmdData >= $OrangeHP CmdData run scoreboard players reset $tempuuid playerUUID
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] run scoreboard players reset $hitmarkuuid
 
 scoreboard players reset @s CalcAir1

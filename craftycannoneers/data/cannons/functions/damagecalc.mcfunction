@@ -5,5 +5,6 @@ execute as @e[type=marker,tag=ImpactMarker,tag=HitWeakpointPurple] at @s run fun
 
 execute as @e[type=marker,tag=ImpactMarker,scores={CmdData=3}] at @s unless entity @s[predicate=cannons:safezones/island] unless entity @s[predicate=cannons:safezones/tutorial] run function cannons:lightfill2
 execute as @e[type=marker,tag=ImpactMarker,scores={CmdData=3}] at @s unless entity @s[predicate=cannons:safezones/island] unless entity @s[predicate=cannons:safezones/tutorial] run function cannons:afterdamage
+execute as @e[type=marker,tag=ImpactMarker,scores={CmdData=3}] at @s unless entity @s[predicate=cannons:safezones/island] if entity @s[predicate=cannons:safezones/tutorial] run function cannons:afterdamagetutorial
 
 kill @e[type=marker,tag=ImpactMarker,scores={CmdData=3..}]
