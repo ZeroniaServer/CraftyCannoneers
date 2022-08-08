@@ -69,6 +69,7 @@ scoreboard objectives add AccurL dummy
 scoreboard objectives add AccurR dummy
 scoreboard objectives add firetime dummy
 scoreboard objectives add blasttime dummy
+scoreboard objectives add button dummy
 
 scoreboard objectives remove notifyobjective
 scoreboard objectives remove objectivecount

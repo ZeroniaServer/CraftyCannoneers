@@ -17,6 +17,7 @@ execute as @a[tag=LeaveGame] run title @s times 0 50 15
 execute as @a[tag=LeaveGame] at @s run tp @s @s
 execute as @a[tag=LeaveGame] at @s run tp @s -55 -21 0 -90 0
 execute as @a[tag=LeaveGame] at @s run clear @s
+execute as @a[tag=LeaveGame] run function lobby:easteregg/buttonreset
 execute as @a[tag=LeaveGame] run function lobby:items
 execute as @a[tag=LeaveGame] at @s run effect clear @s
 execute as @a[team=] run effect give @s slowness 2 100 true

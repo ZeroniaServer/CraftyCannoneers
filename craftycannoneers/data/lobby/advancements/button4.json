@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": {
+          "position": {
+            "x": {
+              "min": -63,
+              "max": -62
+            },
+            "y": {
+              "min": -18,
+              "max": -17
+            },
+            "z": {
+              "min": -18,
+              "max": -17
+            }
+          },
+          "block": {
+            "blocks": [
+              "minecraft:stone_button"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "lobby:easteregg/buttoncheck"
+  }
+}

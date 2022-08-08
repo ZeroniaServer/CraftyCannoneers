@@ -1,5 +1,6 @@
 effect clear @s
 clear @s
+function lobby:easteregg/buttonreset
 
 item replace entity @s[team=Orange] armor.head with diamond_hoe{NoDrop:1b,AttributeModifiers:[{AttributeName:"generic.armor",Amount:2,Slot:head,Name:"generic.armor",UUID:[I;-122417,13921,165739,-27842]}],Unbreakable:1b,CustomModelData:17,display:{Name:'[{"text":"Orange Pirate Hat","italic":false,"color":"#ff6600"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Take off this hat to leave the game!","italic":false,"color":"white","underlined":true,"bold":true},{"text":"","italic":false,"color":"dark_purple","underlined":false,"bold":false}]','[{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},HideFlags:7}
 item replace entity @s[team=Orange] armor.legs with leather_leggings{AttributeModifiers:[{AttributeName:"generic.armor",Amount:5,Slot:legs,Name:"generic.armor",UUID:[I;-122417,14321,165739,-28642]}],Unbreakable:1b,display:{color:16752384,Name:'[{"text":"Orange Pirate Leggings","italic":false,"color":"#ff6600"}]'},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
