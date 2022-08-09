@@ -1,1 +1,2 @@
 function tutorial:cannondock
+function tutorial:trainingdummies/functionality
