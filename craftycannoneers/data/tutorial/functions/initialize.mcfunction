@@ -1,4 +1,4 @@
-kill @e[tag=cannon,tag=Tutorial]
+kill @e[type=#game:cannon,tag=cannon,tag=Tutorial]
 
 execute positioned -283 -24 -26 run function cannons:spawntutorial
 execute positioned -283 -24 -37 run function cannons:spawntutorial
