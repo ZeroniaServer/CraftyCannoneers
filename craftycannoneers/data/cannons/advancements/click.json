@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "villager": {
+    "clickable": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
         "entity": [
@@ -8,13 +8,13 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:villager"
+              "type": "#game:clickable"
             }
           }
         ]
       }
     },
-    "not_villager": {
+    "!clickable": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
         "entity": [
@@ -24,7 +24,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type": "minecraft:villager"
+                "type": "#game:clickable"
               }
             }
           }
@@ -930,8 +930,8 @@
   },
   "requirements": [
     [
-      "villager",
-      "not_villager"
+      "clickable",
+      "!clickable"
     ],
     [
       "bit0",

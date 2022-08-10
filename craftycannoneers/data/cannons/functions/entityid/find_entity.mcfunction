@@ -33,4 +33,4 @@ execute if entity @s[advancements={cannons:click={bit29=true}}] run scoreboard p
 execute if entity @s[advancements={cannons:click={bit30=true}}] run scoreboard players add $hit entityid 1073741824
 execute if entity @s[advancements={cannons:click={bit31=true}}] run scoreboard players remove $hit entityid 2147483647
 execute if entity @s[advancements={cannons:click={bit31=true}}] run scoreboard players remove $hit entityid 1
-execute as @e[type=villager] if score @s entityid = $hit entityid run function cannons:entityid/on_click
+execute as @e[type=#game:clickable] if score @s entityid = $hit entityid run function cannons:entityid/on_click
