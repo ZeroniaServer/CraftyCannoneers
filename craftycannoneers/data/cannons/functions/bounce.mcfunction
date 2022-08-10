@@ -30,10 +30,10 @@ execute if score @s bounce matches 7.. as @e[type=marker,tag=ExplodeRNG] run sco
 scoreboard players add @s bounce 1
 
 #bounce damage
-execute if entity @s[type=armor_stand,tag=!Hit2] unless entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] as @a[distance=..3] run tag @s add BouncyDamaged
+execute if entity @s[tag=!Hit2] unless entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] as @a[distance=..3] run tag @s add BouncyDamaged
 execute store result score @a[tag=BouncyDamaged,distance=..3] KillerUUID run scoreboard players get @s playerUUID
 
-execute if entity @s[type=armor_stand,tag=!Hit2] unless entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] as @a[tag=BouncyDamaged,distance=..3] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["bouncydamage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:1b,Duration:1,ShowParticles:0b}]}
+execute if entity @s[tag=!Hit2] unless entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] as @a[tag=BouncyDamaged,distance=..3] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["bouncydamage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7b,Amplifier:1b,Duration:1,ShowParticles:0b}]}
 
 data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
 execute as @e[type=area_effect_cloud,tag=bouncydamage,tag=!HasName] run data modify entity @s CustomName set from storage craftycannoneers:temp CustomName
@@ -42,9 +42,9 @@ tag @e[type=area_effect_cloud,tag=bouncydamage,tag=!HasName] add HasName
 tag @a[tag=BouncyDamaged] remove BouncyDamaged
 
 #explosion
-execute if entity @s[type=armor_stand,tag=!InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}
-execute if entity @s[type=armor_stand,tag=InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
-execute if entity @s[type=armor_stand,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run tag @s add Hit2
+execute if entity @s[tag=!InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}
+execute if entity @s[tag=InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
+execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run tag @s add Hit2
 
 execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] playerUUID
 execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run data modify entity @s CustomName set from entity @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] CustomName

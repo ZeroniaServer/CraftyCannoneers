@@ -1,5 +1,5 @@
-execute if entity @s[type=wandering_trader,tag=Trader] at @s run playsound trader_ambient master @p[tag=clicker] ~ ~ ~ 0.5
-execute if entity @s[type=wandering_trader,tag=Teacher] at @s run playsound teacher_ambient master @p[tag=clicker] ~ ~ ~ 0.5
+execute if entity @s[tag=Trader] at @s run playsound trader_ambient master @p[tag=clicker] ~ ~ ~ 0.5
+execute if entity @s[tag=Teacher] at @s run playsound teacher_ambient master @p[tag=clicker] ~ ~ ~ 0.5
 
 execute if entity @s[tag=CannonVLeft] run tag @p[tag=clicker] add FillLeft
 execute if entity @s[tag=CannonVRight] run tag @p[tag=clicker] add FillRight
