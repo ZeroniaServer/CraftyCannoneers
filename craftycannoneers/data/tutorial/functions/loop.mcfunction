@@ -1,2 +1,3 @@
 function tutorial:cannondock
+function tutorial:watchtower
 function tutorial:trainingdummies/functionality
