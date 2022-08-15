@@ -210,7 +210,6 @@ scoreboard players set @a[scores={gappleTimer=101..}] gappleTimer 0
 #team chests
 fill 69 -29 60 67 -29 60 spruce_slab[type=top]
 fill 71 -29 -60 73 -29 -60 spruce_slab[type=top]
-function chests:openchest
 
 execute as @e[type=chest_minecart,tag=orangeteamchest] at @s unless entity @a[team=Purple,distance=..6] run tp @s 68.50 -28 60.50 0 0
 execute as @e[type=chest_minecart,tag=orangeteamchest,tag=Opened] at @s unless entity @a[team=Purple,distance=..6] unless entity @a[team=Orange,distance=..5] run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 0.75

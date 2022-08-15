@@ -1,0 +1,165 @@
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run clear @s
+
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run item replace entity @s armor.head with diamond_hoe{CustomModelData:39,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=KillMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:42,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Kills!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=DeathMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:48,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Deaths! Congrats!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=CannonMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:45,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons fired!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=KillMVP,tag=DeathMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:43,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Kills & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=CannonMVP,tag=DeathMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:44,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=CannonMVP,tag=KillMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:46,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired & Kills!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=KillMVP,tag=DeathMVP,tag=CannonMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:47,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired, Kills & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run item replace entity @s hotbar.4 with ender_eye{CustomModelData:1,Key:1b,display:{Name:'[{"text":"Skeleton Key","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Use this key to unlock ","italic":false,"color":"white"}]','[{"text":"any kind of locked Chests!","italic":false,"color":"white"},{"text":"","italic":false,"color":"dark_purple"}]']}}
+
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] at @s run playsound minecraft:entity.experience_orb.pickup master @a ~ ~ ~ 1 0.6
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run title @s title {"text":"Treasure Pit","color":"aqua"}
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run title @s subtitle {"text":"(Learn about Treasure Chests)","color":"yellow"}
+
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run tag @s add InPit
+
+
+
+
+execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run title @s title {"text":" "}
+execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run title @s subtitle {"text":" "}
+execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run clear @s
+execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run function lobby:items
+execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run item replace entity @s armor.head with diamond_hoe{CustomModelData:39,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[predicate=!tutorial:treasurepit,tag=InPit,tag=KillMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:42,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Kills!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[predicate=!tutorial:treasurepit,tag=InPit,tag=DeathMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:48,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Deaths! Congrats!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[predicate=!tutorial:treasurepit,tag=InPit,tag=CannonMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:45,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons fired!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[predicate=!tutorial:treasurepit,tag=InPit,tag=KillMVP,tag=DeathMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:43,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Kills & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[predicate=!tutorial:treasurepit,tag=InPit,tag=CannonMVP,tag=DeathMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:44,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[predicate=!tutorial:treasurepit,tag=InPit,tag=CannonMVP,tag=KillMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:46,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired & Kills!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[predicate=!tutorial:treasurepit,tag=InPit,tag=KillMVP,tag=DeathMVP,tag=CannonMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:47,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired, Kills & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run tag @s remove InPit
+
+
+
+
+
+
+
+
+#> Spawn fake treasures
+execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless entity @e[type=armor_stand,tag=CChestFakeC] run summon armor_stand -238 -29 -20 {Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Marker:1b,Invisible:1b,Tags:["fakechest","CChestFakeC","NewFake"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:19}}],Passengers:[{id:"hopper_minecart",LootTable:"chests:common_treasure",CustomDisplayTile:1b,DisplayState:{Name:"minecraft:air"},Invulnerable:1b,Silent:1b,Enabled:0b,CustomName:'{"text":"Common Treasure Chest","color":"dark_gray","bold":"true","underlined":"true"}',NoAI:1b,Tags:["CChestFake","fakechest"]}]}
+execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless entity @e[type=armor_stand,tag=UCChestFakeC] run summon armor_stand -237 -29 -17 {Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Marker:1b,Invisible:1b,Tags:["fakechest","UCChestFakeC","NewFake"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:23}}],Passengers:[{id:"hopper_minecart",LootTable:"chests:uncommon_treasure",CustomDisplayTile:1b,DisplayState:{Name:"minecraft:air"},Invulnerable:1b,Silent:1b,Enabled:0b,CustomName:'{"text":"Uncommon Treasure Chest","color":"dark_aqua","bold":"true","underlined":"true"}',NoAI:1b,Tags:["UCChestFake","fakechest"]}]}
+execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless entity @e[type=armor_stand,tag=RChestFakeC] run summon armor_stand -233 -29 -18 {Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Marker:1b,Invisible:1b,Tags:["fakechest","RChestFakeC","NewFake"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:26}}],Passengers:[{id:"hopper_minecart",LootTable:"chests:rare_treasure",CustomDisplayTile:1b,DisplayState:{Name:"minecraft:air"},Invulnerable:1b,Silent:1b,Enabled:0b,CustomName:'{"text":"Rare Treasure Chest","color":"dark_purple","bold":"true","underlined":"true"}',NoAI:1b,Tags:["RChestFake","fakechest"]}]}
+execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless entity @e[type=armor_stand,tag=LChestFakeC] run summon armor_stand -232 -29 -21 {Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Marker:1b,Invisible:1b,Tags:["fakechest","LChestFakeC","NewFake"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:69}}]}
+
+execute as @e[tag=fakechest] unless score @s CmdData matches 11.. run scoreboard players add @s CmdData 1
+execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run particle block sand ~ ~ ~ 0 0 0 0.1 2
+execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run particle block mud ~ ~ ~ 0 0 0 0.1 3
+execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run playsound minecraft:block.mud.break master @a ~ ~ ~ 1 1
+execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run playsound minecraft:block.sand.break master @a ~ ~ ~ 1 1
+execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run tp @s ~ ~0.1 ~
+
+
+
+
+
+
+
+
+#> Particles
+#Common
+execute as @e[type=armor_stand,tag=CChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
+execute as @e[type=armor_stand,tag=CChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=7..12]
+execute as @e[type=armor_stand,tag=CChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=13..]
+#Uncommon
+execute as @e[type=armor_stand,tag=UCChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
+execute as @e[type=armor_stand,tag=UCChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=7..12]
+execute as @e[type=armor_stand,tag=UCChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=13..]
+#Rare
+execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
+execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=7..12]
+execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=13..]
+#Locked
+execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
+execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=7..12]
+execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=13..]
+
+
+#Common
+execute as @e[type=hopper_minecart,tag=CChestFake,tag=!Opened] at @s if data entity @s Items run item replace entity @e[type=armor_stand,tag=CChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:20}
+execute as @e[type=hopper_minecart,tag=CChestFake,tag=!Opened] at @s if data entity @s Items run playsound block.chest.open master @a ~ ~ ~ 1 1.3
+execute as @e[type=hopper_minecart,tag=CChestFake,tag=!Opened] at @s if data entity @s Items run tag @s add Opened
+
+execute as @e[type=hopper_minecart,tag=CChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run playsound chestempty master @a ~ ~ ~ 1 0.6
+execute as @e[type=hopper_minecart,tag=CChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run item replace entity @e[type=armor_stand,tag=CChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:21}
+execute as @e[type=hopper_minecart,tag=CChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @e[type=armor_stand,tag=CChestFakeC,limit=1,sort=nearest,distance=..1] add Looted
+execute as @e[type=hopper_minecart,tag=CChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @s add Looted
+execute as @e[type=hopper_minecart,tag=CChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s unless entity @a[team=Lobby,distance=..6] run kill @s
+
+execute as @e[type=hopper_minecart,tag=CChestFake,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run item replace entity @e[type=armor_stand,tag=CChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:21}
+execute as @e[type=hopper_minecart,tag=CChestFake,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run tag @e[type=armor_stand,tag=CChestFakeC,limit=1,sort=nearest,distance=..1] add Looted
+execute as @e[type=hopper_minecart,tag=CChestFake,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run tp @s 0 -1000 0
+execute as @e[type=hopper_minecart,tag=CChestFake,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run kill @s
+
+#Uncommon
+execute as @e[type=hopper_minecart,tag=UCChestFake,tag=!Opened] at @s if data entity @s Items run item replace entity @e[type=armor_stand,tag=UCChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:24}
+execute as @e[type=hopper_minecart,tag=UCChestFake,tag=!Opened] at @s if data entity @s Items run playsound block.chest.open master @a ~ ~ ~ 1 1.1
+execute as @e[type=hopper_minecart,tag=UCChestFake,tag=!Opened] at @s if data entity @s Items run tag @s add Opened
+
+execute as @e[type=hopper_minecart,tag=UCChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run playsound chestempty master @a ~ ~ ~ 1 0.6
+execute as @e[type=hopper_minecart,tag=UCChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run item replace entity @e[type=armor_stand,tag=UCChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:25}
+execute as @e[type=hopper_minecart,tag=UCChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @e[type=armor_stand,tag=UCChestFakeC,limit=1,sort=nearest,distance=..1] add Looted
+execute as @e[type=hopper_minecart,tag=UCChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @s add Looted
+execute as @e[type=hopper_minecart,tag=UCChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s unless entity @a[team=Lobby,distance=..6] run kill @s
+
+execute as @e[type=hopper_minecart,tag=UCChestFake,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run item replace entity @e[type=armor_stand,tag=UCChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:25}
+execute as @e[type=hopper_minecart,tag=UCChestFake,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run tag @e[type=armor_stand,tag=UCChestFakeC,limit=1,sort=nearest,distance=..1] add Looted
+execute as @e[type=hopper_minecart,tag=UCChestFake,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run tp @s 0 -1000 0
+execute as @e[type=hopper_minecart,tag=UCChestFake,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run kill @s
+
+#Rare
+execute as @e[type=hopper_minecart,tag=RChestFake,tag=!Opened] at @s if data entity @s Items run item replace entity @e[type=armor_stand,tag=RChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:27}
+execute as @e[type=hopper_minecart,tag=RChestFake,tag=!Opened] at @s if data entity @s Items run playsound block.chest.open master @a ~ ~ ~ 1 0.7
+execute as @e[type=hopper_minecart,tag=RChestFake,tag=!Opened] at @s if data entity @s Items run tag @s add Opened
+
+execute as @e[type=hopper_minecart,tag=RChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run playsound chestempty master @a ~ ~ ~ 1 0.6
+execute as @e[type=hopper_minecart,tag=RChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run item replace entity @e[type=armor_stand,tag=RChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:28}
+execute as @e[type=hopper_minecart,tag=RChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @e[type=armor_stand,tag=RChestFakeC,limit=1,sort=nearest,distance=..1] add Looted
+execute as @e[type=hopper_minecart,tag=RChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @s add Looted
+execute as @e[type=hopper_minecart,tag=RChestFake,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s unless entity @a[team=Lobby,distance=..6] run kill @s
+
+execute as @e[type=hopper_minecart,tag=RChestFake,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run item replace entity @e[type=armor_stand,tag=RChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:28}
+execute as @e[type=hopper_minecart,tag=RChestFake,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run tag @e[type=armor_stand,tag=RChestFakeC,limit=1,sort=nearest,distance=..1] add Looted
+execute as @e[type=hopper_minecart,tag=RChestFake,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run tp @s 0 -1000 0
+execute as @e[type=hopper_minecart,tag=RChestFake,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run kill @s
+
+#Locked
+execute as @e[type=chest_minecart,tag=fakelockedchest,tag=!Opened] at @s if data entity @s Items run item replace entity @e[type=armor_stand,tag=LChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:71}
+execute as @e[type=chest_minecart,tag=fakelockedchest,tag=!Opened] at @s if data entity @s Items run playsound block.chest.open master @a ~ ~ ~ 1 0.7
+execute as @e[type=chest_minecart,tag=fakelockedchest,tag=!Opened] at @s if data entity @s Items run playsound lockedtreasureopen master @a ~ ~ ~ 1 2
+execute as @e[type=chest_minecart,tag=fakelockedchest,tag=!Opened] at @s if data entity @s Items run tag @s add Opened
+
+execute as @e[type=chest_minecart,tag=fakelockedchest,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run playsound chestempty master @a ~ ~ ~ 1 0.6
+execute as @e[type=chest_minecart,tag=fakelockedchest,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run item replace entity @e[type=armor_stand,tag=LChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:72}
+execute as @e[type=chest_minecart,tag=fakelockedchest,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @e[type=armor_stand,tag=LChestFakeC,limit=1,sort=nearest,distance=..1] add Looted
+execute as @e[type=chest_minecart,tag=fakelockedchest,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s run tag @s add Looted
+execute as @e[type=chest_minecart,tag=fakelockedchest,tag=Opened,tag=!Looted,nbt={Items:[]}] at @s unless entity @a[team=Lobby,distance=..6] run kill @s
+
+execute as @e[type=chest_minecart,tag=fakelockedchest,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run item replace entity @e[type=armor_stand,tag=LChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:72}
+execute as @e[type=chest_minecart,tag=fakelockedchest,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run tag @e[type=armor_stand,tag=LChestFakeC,limit=1,sort=nearest,distance=..1] add Looted
+execute as @e[type=chest_minecart,tag=fakelockedchest,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run tp @s 0 -1000 0
+execute as @e[type=chest_minecart,tag=fakelockedchest,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run kill @s
+
+
+execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] at @s run summon chest_minecart ~ ~ ~ {LootTable:"chests:locked_treasure",Silent:1b,Invulnerable:1b,Rotation:[-90.0f, 0.0f],CustomDisplayTile:1b,Tags:["fakechest","fakelockedchest"],CustomName:'{"text":"Locked Treasure Chest","color":"dark_red","bold":"true","underlined":"true"}',DisplayState:{Name:"minecraft:air"}}
+execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] at @s run scoreboard players set @e[type=chest_minecart,tag=fakechest] CmdData 11
+execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:70}
+execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] at @s run scoreboard players set @e[type=chest_minecart,tag=lockedchest,limit=1,sort=nearest,distance=..1] CmdData 30
+execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] run tag @s add Spawned
+
+execute as @e[type=chest_minecart,tag=fakelockedchest] at @s run tp @s @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=Spawned,limit=1,sort=nearest,distance=..2]
+
+
+#> Despawn looted fakes
+execute as @e[tag=fakechest,tag=Looted] run scoreboard players add @s CmdData 1
+execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run particle block sand ~ ~ ~ 0 0 0 0.1 2
+execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run particle block mud ~ ~ ~ 0 0 0 0.1 3
+execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run playsound minecraft:block.mud.place master @a ~ ~ ~ 1 1
+execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run playsound minecraft:block.sand.place master @a ~ ~ ~ 1 1
+execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..23}] at @s run tp @s ~ ~-0.1 ~
+execute as @e[tag=fakechest,tag=Looted,scores={CmdData=40..}] at @s run tp @s ~ ~-200 ~
+execute as @e[tag=fakechest,tag=Looted,scores={CmdData=40..}] at @s run kill @s
