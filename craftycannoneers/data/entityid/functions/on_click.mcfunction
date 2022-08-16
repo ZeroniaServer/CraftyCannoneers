@@ -1,13 +1,13 @@
 #> Interacting with Tutorial Weapon item frames
-execute if entity @s[tag=TutorialWeapon,tag=Cutlass] run loot give @p[tag=clicker] loot weapons:cutlass
-execute if entity @s[tag=TutorialWeapon,tag=Saber] run loot give @p[tag=clicker] loot weapons:saber
-execute if entity @s[tag=TutorialWeapon,tag=BoardingAxe] run loot give @p[tag=clicker] loot weapons:boarding_axe
-execute if entity @s[tag=TutorialWeapon,tag=BattleAxe] run loot give @p[tag=clicker] loot weapons:battle_axe
-execute if entity @s[tag=TutorialWeapon,tag=Mace] run loot give @p[tag=clicker] loot weapons:mace
-execute if entity @s[tag=TutorialWeapon,tag=Hook] run loot give @p[tag=clicker] loot weapons:hook
-execute if entity @s[tag=TutorialWeapon,tag=Crossbow] run loot give @p[tag=clicker] loot weapons:crossbow_loaded
-execute if entity @s[tag=TutorialWeapon,tag=Crossbow] run loot give @p[tag=clicker] loot weapons:arrows
-execute if entity @s[tag=TutorialWeapon,tag=Harpoon] run loot give @p[tag=clicker] loot weapons:harpoon
+execute if entity @s[tag=TutorialWeapon,tag=Cutlass] as @p[tag=clicker] run loot give @s loot weapons:cutlass
+execute if entity @s[tag=TutorialWeapon,tag=Saber] as @p[tag=clicker] run loot give @s loot weapons:saber
+execute if entity @s[tag=TutorialWeapon,tag=BoardingAxe] as @p[tag=clicker] run loot give @s loot weapons:boarding_axe
+execute if entity @s[tag=TutorialWeapon,tag=BattleAxe] as @p[tag=clicker] run loot give @s loot weapons:battle_axe
+execute if entity @s[tag=TutorialWeapon,tag=Mace] as @p[tag=clicker] run loot give @s loot weapons:mace
+execute if entity @s[tag=TutorialWeapon,tag=Hook] as @p[tag=clicker] run loot give @s loot weapons:hook
+execute if entity @s[tag=TutorialWeapon,tag=Crossbow] as @p[tag=clicker] run loot give @s loot weapons:crossbow_loaded
+execute if entity @s[tag=TutorialWeapon,tag=Crossbow] as @p[tag=clicker] run loot give @s loot weapons:arrows
+execute if entity @s[tag=TutorialWeapon,tag=Harpoon] as @p[tag=clicker] run loot give @s loot weapons:harpoon
 execute if entity @s[tag=TutorialWeapon] as @p[tag=clicker] at @s run playsound minecraft:entity.item.pickup player @s ~ ~ ~ 0.25 2
 
 #> Interacting with Traders/Teachers

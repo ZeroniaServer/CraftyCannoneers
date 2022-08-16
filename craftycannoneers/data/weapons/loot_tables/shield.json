@@ -12,6 +12,19 @@
         {
           "function": "minecraft:set_nbt",
           "tag": "{CustomModelData:1,Blocking:0,Damage:316,display:{Name:'[{\"text\":\"Shield\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+        },
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{NoDrop:1b}",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
+            }
+          ]
         }
       ]
     }

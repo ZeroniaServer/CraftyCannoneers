@@ -22,6 +22,21 @@
           ],
           "name": "minecraft:arrow"
         }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{NoDrop:1b}",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
+            }
+          ]
+        }
       ]
     }
   ]
