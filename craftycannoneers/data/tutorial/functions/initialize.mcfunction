@@ -37,3 +37,11 @@ fill -282 -18 -62 -283 -18 -62 creeper_head
 setblock -281 -19 -70 end_stone_brick_wall
 fill -282 -19 -70 -283 -19 -70 barrier
 fill -282 -18 -70 -283 -18 -70 creeper_head
+
+function tutorial:trainingdummies/despawnall
+
+execute positioned -241.5 -26.5 -39.5 rotated 135 0 run function tutorial:trainingdummies/spawn
+execute positioned -239.5 -26.5 -45.5 rotated 90 0 run function tutorial:trainingdummies/spawn
+execute positioned -241.5 -26.5 -49.5 rotated 45 0 run function tutorial:trainingdummies/spawn
+execute positioned -247.5 -25.5 -58.5 rotated 45 0 run function tutorial:trainingdummies/spawn
+execute positioned -250.5 -25.5 -59.5 rotated 0 0 run function tutorial:trainingdummies/spawn
