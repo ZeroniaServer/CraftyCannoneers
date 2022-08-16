@@ -6,23 +6,13 @@ function everytick:seagull
 function everytick:arrowkill
 
 #Lobby water
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=!game:tutorialbounds] at @s if block ~ ~ ~ water run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=!game:tutorialbounds] at @s if block ~ ~ ~ water run particle falling_water ~ ~ ~ 0.2 0.4 0.1 0.2 150 force
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=!game:tutorialbounds] at @s if block ~ ~ ~ water run particle minecraft:bubble_column_up ~ ~ ~ 0.4 0.2 0.4 0.1 20 force
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=!game:tutorialbounds] at @s if block ~ ~ ~ water run playsound minecraft:entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 0
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=!game:tutorialbounds] at @s if block ~ ~ ~ water run playsound minecraft:entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 1.4
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=!game:tutorialbounds] at @s if block ~ ~ ~ water run playsound minecraft:block.bubble_column.whirlpool_ambient master @a[distance=1..] ~ ~ ~ 1 1.2
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=!game:tutorialbounds] at @s if block ~ ~ ~ water run tag @s add LeaveGame
-
-#Tutorial water
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=game:tutorialbounds] at @s if block ~ ~ ~ water run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=game:tutorialbounds] at @s if block ~ ~ ~ water run particle falling_water ~ ~ ~ 0.2 0.4 0.1 0.2 150 force
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=game:tutorialbounds] at @s if block ~ ~ ~ water run particle minecraft:bubble_column_up ~ ~ ~ 0.4 0.2 0.4 0.1 20 force
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=game:tutorialbounds] at @s if block ~ ~ ~ water run playsound minecraft:entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 0
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=game:tutorialbounds] at @s if block ~ ~ ~ water run playsound minecraft:entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 1.4
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=game:tutorialbounds] at @s if block ~ ~ ~ water run playsound minecraft:block.bubble_column.whirlpool_ambient master @a[distance=1..] ~ ~ ~ 1 1.2
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=game:tutorialbounds] at @s if block ~ ~ ~ water run tp @s @s
-execute as @a[team=Lobby,predicate=!game:inlobby,predicate=game:tutorialbounds] at @s if block ~ ~ ~ water run tp @s -264 -20 -21
+execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force
+execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run particle falling_water ~ ~ ~ 0.2 0.4 0.1 0.2 150 force
+execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run particle minecraft:bubble_column_up ~ ~ ~ 0.4 0.2 0.4 0.1 20 force
+execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run playsound minecraft:entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 0
+execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run playsound minecraft:entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 1.4
+execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run playsound minecraft:block.bubble_column.whirlpool_ambient master @a[distance=1..] ~ ~ ~ 1 1.2
+execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run tag @s add LeaveGame
 
 #Arena water
 execute if score $gamestate CmdData matches 2.. as @a[team=!Lobby,team=!Spectator,scores={drowning=1}] at @s run playsound minecraft:entity.player.hurt_drown master @a ~ ~ ~ 1 1
