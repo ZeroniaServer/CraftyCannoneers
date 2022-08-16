@@ -163,3 +163,6 @@ execute as @e[type=#game:chest,tag=fakechest,tag=Looted,scores={CmdData=11..21}]
 execute as @e[type=#game:chest,tag=fakechest,tag=Looted,scores={CmdData=11..23}] at @s run tp @s ~ ~-0.1 ~
 execute as @e[type=#game:chest,tag=fakechest,tag=Looted,scores={CmdData=40..}] at @s run tp @s ~ ~-200 ~
 execute as @e[type=#game:chest,tag=fakechest,tag=Looted,scores={CmdData=40..}] at @s run kill @s
+
+scoreboard players add @e[type=#game:chest,tag=fakechest,tag=Opened] eyeclick 1
+execute as @e[type=#game:chest,tag=fakechest,tag=Opened,scores={eyeclick=140..}] run data remove entity @s Items
