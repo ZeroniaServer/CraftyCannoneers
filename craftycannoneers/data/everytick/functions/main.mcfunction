@@ -3,6 +3,7 @@ function everytick:lobby
 function everytick:leavegame
 function everytick:nodrop
 function everytick:seagull
+function everytick:arrowkill
 
 #Lobby water
 execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force

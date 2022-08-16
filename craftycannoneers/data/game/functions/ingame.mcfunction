@@ -2,7 +2,6 @@ bossbar set lobbybar color green
 bossbar set lobbybar name {"text":"A game is currently in progress!","bold":true,"color":"green"}
 
 function game:ingame/chestspawning
-function game:ingame/arrowpickup
 function game:ingame/boat
 function game:ingame/harpoon
 function game:ingame/boardingaxe
