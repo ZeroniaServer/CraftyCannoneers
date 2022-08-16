@@ -1,12 +1,21 @@
 #> Interacting with Tutorial Weapon item frames
+execute if entity @s[tag=TutorialWeapon,tag=Cutlass] as @p[tag=clicker] run clear @s iron_sword
 execute if entity @s[tag=TutorialWeapon,tag=Cutlass] as @p[tag=clicker] run loot give @s loot weapons:cutlass
+execute if entity @s[tag=TutorialWeapon,tag=Saber] as @p[tag=clicker] run clear @s diamond_sword
 execute if entity @s[tag=TutorialWeapon,tag=Saber] as @p[tag=clicker] run loot give @s loot weapons:saber
+execute if entity @s[tag=TutorialWeapon,tag=BoardingAxe] as @p[tag=clicker] run clear @s stone_axe
 execute if entity @s[tag=TutorialWeapon,tag=BoardingAxe] as @p[tag=clicker] run loot give @s loot weapons:boarding_axe
+execute if entity @s[tag=TutorialWeapon,tag=BattleAxe] as @p[tag=clicker] run clear @s diamond_axe
 execute if entity @s[tag=TutorialWeapon,tag=BattleAxe] as @p[tag=clicker] run loot give @s loot weapons:battle_axe
+execute if entity @s[tag=TutorialWeapon,tag=Mace] as @p[tag=clicker] run clear @s netherite_shovel
 execute if entity @s[tag=TutorialWeapon,tag=Mace] as @p[tag=clicker] run loot give @s loot weapons:mace
+execute if entity @s[tag=TutorialWeapon,tag=Hook] as @p[tag=clicker] run clear @s iron_hoe
 execute if entity @s[tag=TutorialWeapon,tag=Hook] as @p[tag=clicker] run loot give @s loot weapons:hook
+execute if entity @s[tag=TutorialWeapon,tag=Crossbow] as @p[tag=clicker] run clear @s crossbow
 execute if entity @s[tag=TutorialWeapon,tag=Crossbow] as @p[tag=clicker] run loot give @s loot weapons:crossbow_loaded
+execute if entity @s[tag=TutorialWeapon,tag=Crossbow] as @p[tag=clicker] run clear @s arrow
 execute if entity @s[tag=TutorialWeapon,tag=Crossbow] as @p[tag=clicker] run loot give @s loot weapons:arrows
+execute if entity @s[tag=TutorialWeapon,tag=Harpoon] as @p[tag=clicker] run clear @s trident
 execute if entity @s[tag=TutorialWeapon,tag=Harpoon] as @p[tag=clicker] run loot give @s loot weapons:harpoon
 execute if entity @s[tag=TutorialWeapon] as @p[tag=clicker] at @s run playsound minecraft:entity.item.pickup player @s ~ ~ ~ 0.25 2
 
