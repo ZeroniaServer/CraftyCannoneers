@@ -1,13 +1,6 @@
 execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run clear @s
 
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run item replace entity @s armor.head with diamond_hoe{CustomModelData:39,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=KillMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:42,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Kills!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=DeathMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:48,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Deaths! Congrats!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=CannonMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:45,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons fired!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=KillMVP,tag=DeathMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:43,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Kills & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=CannonMVP,tag=DeathMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:44,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=CannonMVP,tag=KillMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:46,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired & Kills!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=KillMVP,tag=DeathMVP,tag=CannonMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:47,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired, Kills & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run function lobby:hats
 execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run item replace entity @s hotbar.4 with ender_eye{NoDrop:1b,CustomModelData:1,Key:1b,display:{Name:'[{"text":"Skeleton Key","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Use this key to unlock ","italic":false,"color":"white"}]','[{"text":"any kind of locked Chests!","italic":false,"color":"white"},{"text":"","italic":false,"color":"dark_purple"}]']}}
 
 execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] at @s run playsound ding master @a ~ ~ ~ 1 0.6
@@ -16,29 +9,11 @@ execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run
 
 execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run tag @s add InPit
 
-
-
-
 execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run title @s title {"text":" "}
 execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run title @s subtitle {"text":" "}
 execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run clear @s
 execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run function lobby:items
-execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run item replace entity @s armor.head with diamond_hoe{CustomModelData:39,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
-execute as @a[predicate=!tutorial:treasurepit,tag=InPit,tag=KillMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:42,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Kills!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
-execute as @a[predicate=!tutorial:treasurepit,tag=InPit,tag=DeathMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:48,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Deaths! Congrats!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
-execute as @a[predicate=!tutorial:treasurepit,tag=InPit,tag=CannonMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:45,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons fired!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
-execute as @a[predicate=!tutorial:treasurepit,tag=InPit,tag=KillMVP,tag=DeathMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:43,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Kills & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
-execute as @a[predicate=!tutorial:treasurepit,tag=InPit,tag=CannonMVP,tag=DeathMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:44,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
-execute as @a[predicate=!tutorial:treasurepit,tag=InPit,tag=CannonMVP,tag=KillMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:46,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired & Kills!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
-execute as @a[predicate=!tutorial:treasurepit,tag=InPit,tag=KillMVP,tag=DeathMVP,tag=CannonMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:47,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired, Kills & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
 execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run tag @s remove InPit
-
-
-
-
-
-
-
 
 #> Spawn fake treasures
 execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless entity @e[type=armor_stand,tag=CChestFakeC] run summon armor_stand -238 -29.05 -20 {PersistenceRequired:1b,Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Marker:1b,Invisible:1b,Tags:["fakechest","CChestFakeC","NewFake"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:19}}],Passengers:[{id:"hopper_minecart",PersistenceRequired:1b,LootTable:"tutorial:common_treasure",CustomDisplayTile:1b,DisplayState:{Name:"minecraft:air"},Invulnerable:1b,Silent:1b,Enabled:0b,CustomName:'{"text":"Common Treasure Chest","color":"dark_gray","bold":"true","underlined":"true"}',NoAI:1b,Tags:["CChestFake","fakechest"]}]}
@@ -52,13 +27,6 @@ execute as @e[type=#game:chest,tag=fakechest,scores={CmdData=..10}] at @s run pa
 execute as @e[type=#game:chest,tag=fakechest,scores={CmdData=..10}] at @s run playsound chesttutorial master @a ~ ~ ~ 1 1
 execute as @e[type=#game:chest,tag=fakechest,scores={CmdData=..10}] at @s run playsound chestrise master @a ~ ~ ~ 1 1
 execute as @e[type=#game:chest,tag=fakechest,scores={CmdData=..10}] at @s run tp @s ~ ~0.1 ~
-
-
-
-
-
-
-
 
 #> Particles
 #Common
@@ -77,7 +45,6 @@ execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}
 execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
 execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=7..12]
 execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=13..]
-
 
 #Common
 execute as @e[type=hopper_minecart,tag=CChestFake,tag=!Opened] at @s if data entity @s Items run item replace entity @e[type=armor_stand,tag=CChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:20}
@@ -144,7 +111,6 @@ execute as @e[type=chest_minecart,tag=fakelockedchest,tag=Opened,tag=!Looted] at
 execute as @e[type=chest_minecart,tag=fakelockedchest,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run tp @s 0 -1000 0
 execute as @e[type=chest_minecart,tag=fakelockedchest,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run kill @s
 
-
 execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] at @s run summon chest_minecart ~ ~-0.05 ~ {PersistenceRequired:1b,LootTable:"tutorial:locked_treasure",Silent:1b,Invulnerable:1b,Rotation:[-90.0f, 0.0f],CustomDisplayTile:1b,Tags:["fakechest","fakelockedchest"],CustomName:'{"text":"Locked Treasure Chest","color":"dark_red","bold":"true","underlined":"true"}',DisplayState:{Name:"minecraft:air"}}
 execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] at @s run scoreboard players set @e[type=chest_minecart,tag=fakechest] CmdData 11
 execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:70}
@@ -152,7 +118,6 @@ execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] at @s 
 execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] run tag @s add Spawned
 
 execute as @e[type=chest_minecart,tag=fakelockedchest] at @s run tp @s @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=Spawned,limit=1,sort=nearest,distance=..2]
-
 
 #> Despawn looted fakes
 execute as @e[type=#game:chest,tag=fakechest,tag=Looted] run scoreboard players add @s CmdData 1
