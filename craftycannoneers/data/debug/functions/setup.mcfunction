@@ -28,7 +28,7 @@ scoreboard objectives remove startgame
 scoreboard objectives add CannonTutorial dummy
 scoreboard objectives add ChestTutorial dummy
 scoreboard objectives add playerUUID dummy
-scoreboard objectives add arrowtime dummy
+scoreboard objectives remove arrowtime
 scoreboard objectives add death minecraft.custom:minecraft.deaths
 scoreboard objectives add kill playerKillCount
 scoreboard objectives add LeftGame minecraft.custom:minecraft.leave_game
