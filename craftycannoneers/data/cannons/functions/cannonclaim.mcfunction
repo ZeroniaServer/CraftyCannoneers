@@ -9,6 +9,10 @@ execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=120..}] at @s 
 execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=120..}] run scoreboard players set @s playerUUID 0
 execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=120..}] at @s if score @s playerUUID matches 0 run scoreboard players reset @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] gpdisp_time
 execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=120..}] at @s if score @s playerUUID matches 0 run scoreboard players reset @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] gpdisp_time
+execute as @e[type=armor_stand,tag=CannonDisp,tag=Tutorial,scores={cannonclaim=120..}] at @s if score @s playerUUID matches 0 run scoreboard players set @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] CmdData 0
+execute as @e[type=armor_stand,tag=CannonDisp,tag=Tutorial,scores={cannonclaim=120..}] at @s if score @s playerUUID matches 0 run scoreboard players set @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] CmdData 0
+execute as @e[type=armor_stand,tag=CannonDisp,tag=Tutorial,scores={cannonclaim=120..}] at @s if score @s playerUUID matches 0 run item replace entity @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] armor.head with air
+execute as @e[type=armor_stand,tag=CannonDisp,tag=Tutorial,scores={cannonclaim=120..}] at @s if score @s playerUUID matches 0 run item replace entity @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] armor.head with air
 execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=120..}] if score @s playerUUID matches 0 run scoreboard players reset @s cannonclaim
 
 
