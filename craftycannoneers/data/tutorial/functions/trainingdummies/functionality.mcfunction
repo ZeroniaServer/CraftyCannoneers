@@ -54,6 +54,8 @@ execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] at @s run part
 execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] at @s run particle block oak_planks ~ ~1.3 ~ 0 0.3 0 0.1 50
 execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] at @s run particle block hay_block ^0.2 ^1 ^ 0 0.1 0 0.1 20
 execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] at @s run particle block hay_block ^-0.2 ^1 ^ 0 0.1 0 0.1 20
+execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=2}] at @s run summon marker ~ ~ ~ {Tags:["DummyRespawn","TrainingDummy"]}
+execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=2}] at @s run tp @e[type=marker,tag=DummyRespawn,limit=1,sort=nearest,distance=..2] @s
 execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=2}] at @s run summon item ~ ~1.2 ~ {Tags:["DummyDeadItem","pumpkin"],Item:{id:"minecraft:carved_pumpkin",Count:1b},PickupDelay:1000,Motion:[0.03d,0.2d,0.05d]}
 execute as @e[type=item,tag=DummyDeadItem,tag=!UUIDConfirmed] run data modify entity @s Item.tag.hash set from entity @s UUID[0]
 execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=2}] at @s run summon item ~ ~1.2 ~ {Tags:["DummyDeadItem","wheat"],Item:{id:"minecraft:wheat",Count:1b},PickupDelay:1000,Motion:[-0.05d,0.25d,0.05d]}
@@ -73,3 +75,7 @@ execute as @e[type=item,tag=DummyDeadItem,tag=wheat,scores={CmdData=36}] at @s r
 execute as @e[type=item,tag=DummyDeadItem,tag=pumpkin,scores={CmdData=36}] at @s run particle block carved_pumpkin ~ ~0.3 ~ 0 0 0 0.1 12
 execute as @e[type=item,tag=DummyDeadItem,tag=hat,scores={CmdData=36}] at @s run particle block black_wool ~ ~0.3 ~ 0 0 0 0.1 12
 execute as @e[type=item,tag=DummyDeadItem,scores={CmdData=40..}] run kill @s
+
+scoreboard players add @e[type=marker,tag=DummyRespawn] CmdData 1
+execute as @e[type=marker,tag=DummyRespawn,scores={CmdData=70}] at @s run function tutorial:trainingdummies/spawn
+execute as @e[type=marker,tag=DummyRespawn,scores={CmdData=70..}] at @s run kill @s

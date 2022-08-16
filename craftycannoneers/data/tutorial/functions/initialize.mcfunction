@@ -1,4 +1,5 @@
 kill @e[type=#game:cannon,tag=cannon,tag=Tutorial]
+function tutorial:trainingdummies/despawnall
 
 execute positioned -283 -24 -26 run function cannons:spawntutorial
 execute positioned -283 -24 -37 run function cannons:spawntutorial
