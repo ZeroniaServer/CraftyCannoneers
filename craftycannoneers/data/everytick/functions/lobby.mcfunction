@@ -3,7 +3,7 @@ effect give @a[team=Lobby] instant_health 1000000 100 true
 effect give @a[team=Lobby] resistance 1000000 100 true
 effect give @a[team=Lobby] fire_resistance 1000000 100 true
 effect give @a[team=Lobby] water_breathing 1000000 255 true
-#effect give @a[team=Lobby] weakness 1000000 255 true
+effect give @a[team=Lobby,tag=!InCombat] weakness 1000000 255 true
 spawnpoint @a[team=Lobby] -55 -21 0 -90
 
 function lobby:parkour/parkour

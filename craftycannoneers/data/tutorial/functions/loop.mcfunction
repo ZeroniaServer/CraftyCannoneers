@@ -1,3 +1,4 @@
+function tutorial:combatarea
 function tutorial:cannondock
 function tutorial:watchtower
 function tutorial:treasurepit
