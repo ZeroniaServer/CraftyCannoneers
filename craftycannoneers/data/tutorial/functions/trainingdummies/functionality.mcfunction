@@ -34,8 +34,8 @@ execute as @e[type=husk,tag=DummyHurt] at @s run tag @s remove DummyHurt
 
 
 scoreboard players add @e[type=armor_stand,tag=DummyHurtAnim] CmdData 1
-execute as @e[type=armor_stand,tag=DummyHurtAnim,scores={CmdData=1}] at @s run playsound minecraft:block.wool.hit master @a ~ ~ ~ 1 1
-execute as @e[type=armor_stand,tag=DummyHurtAnim,scores={CmdData=1}] at @s run playsound minecraft:entity.armor_stand.hit master @a ~ ~ ~ 1 0.7
+execute as @e[type=armor_stand,tag=DummyHurtAnim,scores={CmdData=1}] at @s run playsound trainingdummy_hit1 master @a ~ ~ ~ 1 1
+execute as @e[type=armor_stand,tag=DummyHurtAnim,scores={CmdData=1}] at @s run playsound trainingdummy_hit2 master @a ~ ~ ~ 1 0.7
 execute as @e[type=armor_stand,tag=DummyHurtAnim,scores={CmdData=1}] run data merge entity @s {Pose:{Head:[0f,4f,0f]}}
 execute as @e[type=armor_stand,tag=DummyHurtAnim,scores={CmdData=2}] run data merge entity @s {Pose:{Head:[0f,0f,0f]}}
 execute as @e[type=armor_stand,tag=DummyHurtAnim,scores={CmdData=3}] run data merge entity @s {Pose:{Head:[0f,-4f,0f]}}
@@ -45,10 +45,10 @@ execute as @e[type=armor_stand,tag=TDAS,tag=!DummyHurtAnim,scores={CmdData=1..}]
 
 scoreboard players add @e[type=armor_stand,tag=DummyDead] eyeclick 1
 
-execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] at @s run playsound minecraft:block.wool.hit master @a ~ ~ ~ 1 1
-execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] at @s run playsound minecraft:block.wool.hit master @a ~ ~ ~ 1 0
-execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] at @s run playsound minecraft:entity.armor_stand.hit master @a ~ ~ ~ 1 0.7
-execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] at @s run playsound minecraft:entity.armor_stand.hit master @a ~ ~ ~ 1 2
+execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] at @s run playsound trainingdummy_hit1 master @a ~ ~ ~ 1 1
+execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] at @s run playsound trainingdummy_hit3 master @a ~ ~ ~ 1 0
+execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] at @s run playsound trainingdummy_hit2 master @a ~ ~ ~ 1 0.7
+execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] at @s run playsound trainingdummy_hit2 master @a ~ ~ ~ 1 2
 execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] run item replace entity @s armor.head with air
 execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] at @s run particle cloud ~ ~ ~ 0 0 0 0.2 10
 execute as @e[type=armor_stand,tag=DummyDead,scores={eyeclick=1}] at @s run particle block oak_planks ~ ~1.3 ~ 0 0.3 0 0.1 50

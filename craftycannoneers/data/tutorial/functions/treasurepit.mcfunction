@@ -10,7 +10,7 @@ execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=
 execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit,tag=KillMVP,tag=DeathMVP,tag=CannonMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:47,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired, Kills & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
 execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run item replace entity @s hotbar.4 with ender_eye{CustomModelData:1,Key:1b,display:{Name:'[{"text":"Skeleton Key","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Use this key to unlock ","italic":false,"color":"white"}]','[{"text":"any kind of locked Chests!","italic":false,"color":"white"},{"text":"","italic":false,"color":"dark_purple"}]']}}
 
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] at @s run playsound minecraft:entity.experience_orb.pickup master @a ~ ~ ~ 1 0.6
+execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] at @s run playsound ding master @a ~ ~ ~ 1 0.6
 execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run title @s title {"text":"Treasure Pit","color":"aqua"}
 execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run title @s subtitle {"text":"(Learn about Treasure Chests)","color":"yellow"}
 
@@ -49,8 +49,8 @@ execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless en
 execute as @e[tag=fakechest] unless score @s CmdData matches 11.. run scoreboard players add @s CmdData 1
 execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run particle block sand ~ ~ ~ 0 0 0 0.1 2
 execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run particle block mud ~ ~ ~ 0 0 0 0.1 3
-execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run playsound minecraft:block.mud.break master @a ~ ~ ~ 1 1
-execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run playsound minecraft:block.sand.break master @a ~ ~ ~ 1 1
+execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run playsound chesttutorial master @a ~ ~ ~ 1 1
+execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run playsound chestrise master @a ~ ~ ~ 1 1
 execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run tp @s ~ ~0.1 ~
 
 
@@ -158,8 +158,8 @@ execute as @e[type=chest_minecart,tag=fakelockedchest] at @s run tp @s @e[type=a
 execute as @e[tag=fakechest,tag=Looted] run scoreboard players add @s CmdData 1
 execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run particle block sand ~ ~ ~ 0 0 0 0.1 2
 execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run particle block mud ~ ~ ~ 0 0 0 0.1 3
-execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run playsound minecraft:block.mud.place master @a ~ ~ ~ 1 1
-execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run playsound minecraft:block.sand.place master @a ~ ~ ~ 1 1
+execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run playsound chesttutorial master @a ~ ~ ~ 1 1
+execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run playsound chestbury master @a ~ ~ ~ 1 1
 execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..23}] at @s run tp @s ~ ~-0.1 ~
 execute as @e[tag=fakechest,tag=Looted,scores={CmdData=40..}] at @s run tp @s ~ ~-200 ~
 execute as @e[tag=fakechest,tag=Looted,scores={CmdData=40..}] at @s run kill @s

@@ -19,7 +19,7 @@ execute as @a[gamemode=!spectator,predicate=tutorial:cannondock,tag=!OnDock,tag=
 execute as @a[gamemode=!spectator,predicate=tutorial:cannondock,tag=!OnDock,tag=CannonMVP,tag=KillMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:46,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired & Kills!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
 execute as @a[gamemode=!spectator,predicate=tutorial:cannondock,tag=!OnDock,tag=KillMVP,tag=DeathMVP,tag=CannonMVP] run item replace entity @s armor.head with diamond_hoe{CustomModelData:47,Unbreakable:1b,display:{Name:'[{"text":"MVP Pirate Hat","italic":false,"color":"gold"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Most Cannons Fired, Kills & Deaths!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
 
-execute as @a[gamemode=!spectator,predicate=tutorial:cannondock,tag=!OnDock] at @s run playsound minecraft:entity.experience_orb.pickup master @a ~ ~ ~ 1 0.6
+execute as @a[gamemode=!spectator,predicate=tutorial:cannondock,tag=!OnDock] at @s run playsound ding master @a ~ ~ ~ 1 0.6
 execute as @a[gamemode=!spectator,predicate=tutorial:cannondock,tag=!OnDock] run title @s title {"text":"Cannon Dock","color":"aqua"}
 execute as @a[gamemode=!spectator,predicate=tutorial:cannondock,tag=!OnDock] run title @s subtitle {"text":"(Learn how to shoot Cannons)","color":"yellow"}
 
