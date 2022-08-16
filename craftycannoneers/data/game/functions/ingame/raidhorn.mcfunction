@@ -1,5 +1,5 @@
-tag @a[predicate=game:horn_mainhand] add HoldHorn
-tag @a[predicate=game:horn_offhand] add HoldHorn
+tag @a[team=!Lobby,predicate=game:horn_mainhand] add HoldHorn
+tag @a[team=!Lobby,predicate=game:horn_offhand] add HoldHorn
 scoreboard players add @a[tag=HoldHorn,scores={eyeclick=1..}] horntime 1
 execute as @a[scores={horntime=1..}] unless entity @s[scores={eyeclick=1..}] run title @s subtitle {"text":" ","color":"white"}
 execute as @a[scores={horntime=1..}] unless entity @s[scores={eyeclick=1..}] run scoreboard players reset @s horntime

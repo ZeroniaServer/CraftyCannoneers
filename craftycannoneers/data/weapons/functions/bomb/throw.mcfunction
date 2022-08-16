@@ -1,5 +1,5 @@
-tag @a[predicate=weapons:bomb_mainhand] add HoldBomb
-tag @a[predicate=weapons:bomb_offhand] add HoldBomb
+tag @a[team=!Lobby,predicate=weapons:bomb_mainhand] add HoldBomb
+tag @a[team=!Lobby,predicate=weapons:bomb_offhand] add HoldBomb
 
 execute as @a[tag=HoldBomb,tag=!BombDelay,scores={eyeclick=1..}] at @s run playsound entity.witch.throw master @a ~ ~ ~ 0.4 0.9
 execute as @a[tag=HoldBomb,tag=!BombDelay,scores={eyeclick=1..}] at @s run summon armor_stand ~ ~1.62 ~ {Small:1b,Silent:1b,Tags:["Bomb","ThrowBomb","bomb"],ArmorItems:[{},{},{},{id:"minecraft:ender_eye",tag:{CustomModelData:2},Count:1}],Invisible:1,DisabledSlots:4144959}

@@ -5,12 +5,12 @@
         "conditions": {
           "entity": {
             "type": "minecraft:wandering_trader",
-            "nbt": "{Tags:[\"ChestTeacher\"]}"
+            "nbt": "{Tags:[\"WeakpointTeacher\"]}"
           }
         }
       }
     },
     "rewards": {
-      "function": "lobby:tutorial/chest"
+      "function": "lobby:tutorial/weakpoint"
     }
   }

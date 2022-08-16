@@ -35,24 +35,28 @@ xp set @a 0 levels
 xp set @a 0 points
 
 #Tutorials
-execute positioned -43 -23 -18 as @a[scores={CannonTutorial=1..},distance=6..] run tag @s remove TutorialCannon
-execute positioned -43 -23 -18 as @a[scores={ChestTutorial=1..},distance=6..] run tag @s remove TutorialChest
-execute positioned -43 -23 -18 as @a[scores={CannonTutorial=1..},distance=6..] run scoreboard players reset @s CannonTutorial
-execute positioned -43 -23 -18 as @a[scores={ChestTutorial=1..},distance=6..] run scoreboard players reset @s ChestTutorial
+execute positioned -283 -24 -42 as @a[scores={CannonTutorial=1..},distance=8..] run tag @s remove TutorialCannon
+execute positioned -242 -26 -22 as @a[scores={ChestTutorial=1..},distance=8..] run tag @s remove TutorialChest
+execute positioned -260 -27 -56 as @a[scores={CombatTutorial=1..},distance=8..] run tag @s remove TutorialCombat
+execute positioned -279 -11 -15 as @a[scores={WeakpointTutorial=1..},distance=8..] run tag @s remove TutorialWeakpoint
+execute positioned -283 -24 -42 as @a[scores={CannonTutorial=1..},distance=8..] run scoreboard players reset @s CannonTutorial
+execute positioned -242 -26 -22 as @a[scores={ChestTutorial=1..},distance=8..] run scoreboard players reset @s ChestTutorial
+execute positioned -260 -27 -56 as @a[scores={CombatTutorial=1..},distance=8..] run scoreboard players reset @s CombatTutorial
+execute positioned -279 -11 -15 as @a[scores={WeakpointTutorial=1..},distance=8..] run scoreboard players reset @s WeakpointTutorial
 
 ##Tutorial chest particles
 #Common
-execute as @e[type=armor_stand,tag=ChestTutorial,tag=Common] at @s run particle falling_dust light_gray_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=3}]
-execute as @e[type=armor_stand,tag=ChestTutorial,tag=Common] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=3}]
+execute as @e[type=armor_stand,tag=CChestFakeC] at @s run particle falling_dust light_gray_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=3}]
+execute as @e[type=armor_stand,tag=CChestFakeC] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=3}]
 #Uncommon
-execute as @e[type=armor_stand,tag=ChestTutorial,tag=Uncommon] at @s run particle falling_dust light_blue_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=4}]
-execute as @e[type=armor_stand,tag=ChestTutorial,tag=Uncommon] at @s run particle falling_dust light_blue_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=4}]
+execute as @e[type=armor_stand,tag=UCChestFakeC] at @s run particle falling_dust light_blue_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=4}]
+execute as @e[type=armor_stand,tag=UCChestFakeC] at @s run particle falling_dust light_blue_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=4}]
 #Rare
-execute as @e[type=armor_stand,tag=ChestTutorial,tag=Rare] at @s run particle falling_dust purple_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=5}]
-execute as @e[type=armor_stand,tag=ChestTutorial,tag=Rare] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=5}]
+execute as @e[type=armor_stand,tag=RChestFakeC] at @s run particle falling_dust purple_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=5}]
+execute as @e[type=armor_stand,tag=RChestFakeC] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=5}]
 #Locked
-execute as @e[type=armor_stand,tag=ChestTutorial,tag=LockedChest] at @s run particle falling_dust red_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=6}]
-execute as @e[type=armor_stand,tag=ChestTutorial,tag=LockedChest] at @s run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=6}]
+execute as @e[type=armor_stand,tag=LChestFakeC] at @s run particle falling_dust red_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=6}]
+execute as @e[type=armor_stand,tag=LChestFakeC] at @s run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=6}]
 
 
 
