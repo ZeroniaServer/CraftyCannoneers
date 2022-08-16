@@ -28,6 +28,6 @@
     }
   },
   "rewards": {
-    "function": "lobby:easteregg/buttoncheck"
+    "function": "lobby:easteregg/button/check"
   }
 }

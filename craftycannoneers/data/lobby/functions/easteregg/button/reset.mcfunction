@@ -5,4 +5,7 @@ advancement revoke @s only lobby:button4
 advancement revoke @s only lobby:button5
 advancement revoke @s only lobby:button6
 advancement revoke @s only lobby:button7
+advancement revoke @s only lobby:button8
+advancement revoke @s only lobby:button9
+advancement revoke @s only lobby:button10
 scoreboard players reset @s button
