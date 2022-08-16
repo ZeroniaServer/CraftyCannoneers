@@ -1,0 +1,1 @@
+execute as @e[type=#entityid:clickable,tag=!entityidset] run function entityid:assign_id

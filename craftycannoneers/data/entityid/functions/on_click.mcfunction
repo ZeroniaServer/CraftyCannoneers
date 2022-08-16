@@ -1,6 +1,20 @@
+#> Interacting with Tutorial Weapon item frames
+execute if entity @s[tag=TutorialWeapon,tag=Cutlass] run loot give @p[tag=clicker] loot weapons:cutlass
+execute if entity @s[tag=TutorialWeapon,tag=Saber] run loot give @p[tag=clicker] loot weapons:saber
+execute if entity @s[tag=TutorialWeapon,tag=BoardingAxe] run loot give @p[tag=clicker] loot weapons:boarding_axe
+execute if entity @s[tag=TutorialWeapon,tag=BattleAxe] run loot give @p[tag=clicker] loot weapons:battle_axe
+execute if entity @s[tag=TutorialWeapon,tag=Mace] run loot give @p[tag=clicker] loot weapons:mace
+execute if entity @s[tag=TutorialWeapon,tag=Hook] run loot give @p[tag=clicker] loot weapons:hook
+execute if entity @s[tag=TutorialWeapon,tag=Crossbow] run loot give @p[tag=clicker] loot weapons:crossbow_loaded
+execute if entity @s[tag=TutorialWeapon,tag=Crossbow] run loot give @p[tag=clicker] loot weapons:arrows
+execute if entity @s[tag=TutorialWeapon,tag=Harpoon] run loot give @p[tag=clicker] loot weapons:harpoon
+execute if entity @s[tag=TutorialWeapon] as @p[tag=clicker] at @s run playsound minecraft:entity.item.pickup player @s ~ ~ ~ 0.25 2
+
+#> Interacting with Traders/Teachers
 execute if entity @s[tag=Trader] at @s run playsound trader_ambient master @p[tag=clicker] ~ ~ ~ 0.5
 execute if entity @s[tag=Teacher] at @s run playsound teacher_ambient master @p[tag=clicker] ~ ~ ~ 0.5
 
+#> Tags for interacting with cannons
 execute if entity @s[tag=CannonVLeft] run tag @p[tag=clicker] add FillLeft
 execute if entity @s[tag=CannonVRight] run tag @p[tag=clicker] add FillRight
 execute if entity @s[tag=CannonVMain,tag=Charged] run tag @p[tag=clicker] add FillCB

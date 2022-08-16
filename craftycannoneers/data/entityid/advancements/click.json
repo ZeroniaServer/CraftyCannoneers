@@ -8,7 +8,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "#game:clickable"
+              "type": "#entityid:clickable"
             }
           }
         ]
@@ -24,7 +24,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type": "#game:clickable"
+                "type": "#entityid:clickable"
               }
             }
           }
@@ -1063,6 +1063,6 @@
     ]
   ],
   "rewards": {
-    "function": "cannons:entityid/test_click"
+    "function": "entityid:test_click"
   }
 }

@@ -1,1 +1,0 @@
-execute as @e[type=#game:clickable,tag=!entityidset] run function cannons:entityid/assign_id

@@ -45,3 +45,14 @@ execute positioned -239.5 -26.5 -45.5 rotated 90 0 run function tutorial:trainin
 execute positioned -241.5 -26.5 -49.5 rotated 45 0 run function tutorial:trainingdummies/spawn
 execute positioned -247.5 -25.5 -58.5 rotated 45 0 run function tutorial:trainingdummies/spawn
 execute positioned -250.5 -25.5 -59.5 rotated 0 0 run function tutorial:trainingdummies/spawn
+
+kill @e[type=item_frame,tag=TutorialWeapon]
+
+summon item_frame -261.50 -24.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-25,TileX:-262,Tags:["TutorialWeapon","Cutlass"]}
+summon item_frame -260.50 -24.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-25,TileX:-261,Tags:["TutorialWeapon","Saber"]}
+summon item_frame -259.50 -24.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-25,TileX:-260,Tags:["TutorialWeapon","BoardingAxe"]}
+summon item_frame -258.50 -24.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-25,TileX:-259,Tags:["TutorialWeapon","BattleAxe"]}
+summon item_frame -257.50 -24.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-25,TileX:-258,Tags:["TutorialWeapon","Mace"]}
+summon item_frame -260.50 -25.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-26,TileX:-261,Tags:["TutorialWeapon","Hook"]}
+summon item_frame -259.50 -25.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-26,TileX:-260,Tags:["TutorialWeapon","Crossbow"]}
+summon item_frame -258.50 -25.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-26,TileX:-259,Tags:["TutorialWeapon","Harpoon"]}

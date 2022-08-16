@@ -43,7 +43,7 @@ title @a[team=!Lobby,team=!Spectator,scores={drowning=1..},predicate=game:inaren
 scoreboard players reset @a[team=!Lobby,team=!Spectator,scores={drowning=1..},predicate=game:inarena] drowning
 
 #Cannons
-execute if score #loaded entityid matches 1 run function cannons:entityid/real_tick
+execute if score #loaded entityid matches 1 run function entityid:real_tick
 function cannons:load
 function cannons:shoot
 function cannons:cannonclaim
