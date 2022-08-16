@@ -41,17 +41,17 @@ execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run tag @s remove InPit
 
 
 #> Spawn fake treasures
-execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless entity @e[type=armor_stand,tag=CChestFakeC] run summon armor_stand -238 -29 -20 {Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Marker:1b,Invisible:1b,Tags:["fakechest","CChestFakeC","NewFake"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:19}}],Passengers:[{id:"hopper_minecart",LootTable:"chests:common_treasure",CustomDisplayTile:1b,DisplayState:{Name:"minecraft:air"},Invulnerable:1b,Silent:1b,Enabled:0b,CustomName:'{"text":"Common Treasure Chest","color":"dark_gray","bold":"true","underlined":"true"}',NoAI:1b,Tags:["CChestFake","fakechest"]}]}
-execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless entity @e[type=armor_stand,tag=UCChestFakeC] run summon armor_stand -237 -29 -17 {Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Marker:1b,Invisible:1b,Tags:["fakechest","UCChestFakeC","NewFake"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:23}}],Passengers:[{id:"hopper_minecart",LootTable:"chests:uncommon_treasure",CustomDisplayTile:1b,DisplayState:{Name:"minecraft:air"},Invulnerable:1b,Silent:1b,Enabled:0b,CustomName:'{"text":"Uncommon Treasure Chest","color":"dark_aqua","bold":"true","underlined":"true"}',NoAI:1b,Tags:["UCChestFake","fakechest"]}]}
-execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless entity @e[type=armor_stand,tag=RChestFakeC] run summon armor_stand -233 -29 -18 {Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Marker:1b,Invisible:1b,Tags:["fakechest","RChestFakeC","NewFake"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:26}}],Passengers:[{id:"hopper_minecart",LootTable:"chests:rare_treasure",CustomDisplayTile:1b,DisplayState:{Name:"minecraft:air"},Invulnerable:1b,Silent:1b,Enabled:0b,CustomName:'{"text":"Rare Treasure Chest","color":"dark_purple","bold":"true","underlined":"true"}',NoAI:1b,Tags:["RChestFake","fakechest"]}]}
-execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless entity @e[type=armor_stand,tag=LChestFakeC] run summon armor_stand -232 -29 -21 {Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Marker:1b,Invisible:1b,Tags:["fakechest","LChestFakeC","NewFake"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:69}}]}
+execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless entity @e[type=armor_stand,tag=CChestFakeC] run summon armor_stand -238 -29.05 -20 {PersistenceRequired:1b,Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Marker:1b,Invisible:1b,Tags:["fakechest","CChestFakeC","NewFake"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:19}}],Passengers:[{id:"hopper_minecart",PersistenceRequired:1b,LootTable:"chests:common_treasure",CustomDisplayTile:1b,DisplayState:{Name:"minecraft:air"},Invulnerable:1b,Silent:1b,Enabled:0b,CustomName:'{"text":"Common Treasure Chest","color":"dark_gray","bold":"true","underlined":"true"}',NoAI:1b,Tags:["CChestFake","fakechest"]}]}
+execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless entity @e[type=armor_stand,tag=UCChestFakeC] run summon armor_stand -237 -29.05 -17 {PersistenceRequired:1b,Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Marker:1b,Invisible:1b,Tags:["fakechest","UCChestFakeC","NewFake"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:23}}],Passengers:[{id:"hopper_minecart",PersistenceRequired:1b,LootTable:"chests:uncommon_treasure",CustomDisplayTile:1b,DisplayState:{Name:"minecraft:air"},Invulnerable:1b,Silent:1b,Enabled:0b,CustomName:'{"text":"Uncommon Treasure Chest","color":"dark_aqua","bold":"true","underlined":"true"}',NoAI:1b,Tags:["UCChestFake","fakechest"]}]}
+execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless entity @e[type=armor_stand,tag=RChestFakeC] run summon armor_stand -233 -29.05 -18 {PersistenceRequired:1b,Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Marker:1b,Invisible:1b,Tags:["fakechest","RChestFakeC","NewFake"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:26}}],Passengers:[{id:"hopper_minecart",PersistenceRequired:1b,LootTable:"chests:rare_treasure",CustomDisplayTile:1b,DisplayState:{Name:"minecraft:air"},Invulnerable:1b,Silent:1b,Enabled:0b,CustomName:'{"text":"Rare Treasure Chest","color":"dark_purple","bold":"true","underlined":"true"}',NoAI:1b,Tags:["RChestFake","fakechest"]}]}
+execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless entity @e[type=armor_stand,tag=LChestFakeC] run summon armor_stand -232 -29.05 -21 {PersistenceRequired:1b,Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Marker:1b,Invisible:1b,Tags:["fakechest","LChestFakeC","NewFake"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:69}}]}
 
-execute as @e[tag=fakechest] unless score @s CmdData matches 11.. run scoreboard players add @s CmdData 1
-execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run particle block sand ~ ~ ~ 0 0 0 0.1 2
-execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run particle block mud ~ ~ ~ 0 0 0 0.1 3
-execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run playsound chesttutorial master @a ~ ~ ~ 1 1
-execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run playsound chestrise master @a ~ ~ ~ 1 1
-execute as @e[tag=fakechest,scores={CmdData=..10}] at @s run tp @s ~ ~0.1 ~
+execute as @e[type=#game:chest,tag=fakechest] unless score @s CmdData matches 11.. run scoreboard players add @s CmdData 1
+execute as @e[type=#game:chest,tag=fakechest,scores={CmdData=..10}] at @s run particle block sand ~ ~ ~ 0 0 0 0.1 2
+execute as @e[type=#game:chest,tag=fakechest,scores={CmdData=..10}] at @s run particle block mud ~ ~ ~ 0 0 0 0.1 3
+execute as @e[type=#game:chest,tag=fakechest,scores={CmdData=..10}] at @s run playsound chesttutorial master @a ~ ~ ~ 1 1
+execute as @e[type=#game:chest,tag=fakechest,scores={CmdData=..10}] at @s run playsound chestrise master @a ~ ~ ~ 1 1
+execute as @e[type=#game:chest,tag=fakechest,scores={CmdData=..10}] at @s run tp @s ~ ~0.1 ~
 
 
 
@@ -145,7 +145,7 @@ execute as @e[type=chest_minecart,tag=fakelockedchest,tag=Opened,tag=!Looted] at
 execute as @e[type=chest_minecart,tag=fakelockedchest,tag=Opened,tag=!Looted] at @s unless entity @a[team=Lobby,distance=..7] run kill @s
 
 
-execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] at @s run summon chest_minecart ~ ~ ~ {LootTable:"chests:locked_treasure",Silent:1b,Invulnerable:1b,Rotation:[-90.0f, 0.0f],CustomDisplayTile:1b,Tags:["fakechest","fakelockedchest"],CustomName:'{"text":"Locked Treasure Chest","color":"dark_red","bold":"true","underlined":"true"}',DisplayState:{Name:"minecraft:air"}}
+execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] at @s run summon chest_minecart ~ ~-0.05 ~ {PersistenceRequired:1b,LootTable:"chests:locked_treasure",Silent:1b,Invulnerable:1b,Rotation:[-90.0f, 0.0f],CustomDisplayTile:1b,Tags:["fakechest","fakelockedchest"],CustomName:'{"text":"Locked Treasure Chest","color":"dark_red","bold":"true","underlined":"true"}',DisplayState:{Name:"minecraft:air"}}
 execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] at @s run scoreboard players set @e[type=chest_minecart,tag=fakechest] CmdData 11
 execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] at @s run item replace entity @s armor.head with diamond_hoe{CustomModelData:70}
 execute as @e[type=armor_stand,tag=LChestFakeC,tag=Unlocked,tag=!Spawned] at @s run scoreboard players set @e[type=chest_minecart,tag=lockedchest,limit=1,sort=nearest,distance=..1] CmdData 30
@@ -155,11 +155,11 @@ execute as @e[type=chest_minecart,tag=fakelockedchest] at @s run tp @s @e[type=a
 
 
 #> Despawn looted fakes
-execute as @e[tag=fakechest,tag=Looted] run scoreboard players add @s CmdData 1
-execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run particle block sand ~ ~ ~ 0 0 0 0.1 2
-execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run particle block mud ~ ~ ~ 0 0 0 0.1 3
-execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run playsound chesttutorial master @a ~ ~ ~ 1 1
-execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run playsound chestbury master @a ~ ~ ~ 1 1
-execute as @e[tag=fakechest,tag=Looted,scores={CmdData=11..23}] at @s run tp @s ~ ~-0.1 ~
-execute as @e[tag=fakechest,tag=Looted,scores={CmdData=40..}] at @s run tp @s ~ ~-200 ~
-execute as @e[tag=fakechest,tag=Looted,scores={CmdData=40..}] at @s run kill @s
+execute as @e[type=#game:chest,tag=fakechest,tag=Looted] run scoreboard players add @s CmdData 1
+execute as @e[type=#game:chest,tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run particle block sand ~ ~ ~ 0 0 0 0.1 2
+execute as @e[type=#game:chest,tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run particle block mud ~ ~ ~ 0 0 0 0.1 3
+execute as @e[type=#game:chest,tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run playsound chesttutorial master @a ~ ~ ~ 1 1
+execute as @e[type=#game:chest,tag=fakechest,tag=Looted,scores={CmdData=11..21}] at @s run playsound chestbury master @a ~ ~ ~ 1 1
+execute as @e[type=#game:chest,tag=fakechest,tag=Looted,scores={CmdData=11..23}] at @s run tp @s ~ ~-0.1 ~
+execute as @e[type=#game:chest,tag=fakechest,tag=Looted,scores={CmdData=40..}] at @s run tp @s ~ ~-200 ~
+execute as @e[type=#game:chest,tag=fakechest,tag=Looted,scores={CmdData=40..}] at @s run kill @s
