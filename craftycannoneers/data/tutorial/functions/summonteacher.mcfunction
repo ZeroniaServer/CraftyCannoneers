@@ -1,0 +1,1 @@
+summon wandering_trader ~ ~ ~ {Tags:["Teacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:generic.movement_speed,Base:0}],PersistenceRequired:1b}
