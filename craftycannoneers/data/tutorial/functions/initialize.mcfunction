@@ -60,8 +60,11 @@ summon item_frame -259.50 -25.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,
 summon item_frame -258.50 -25.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-26,TileX:-259,Tags:["TutorialWeapon","Harpoon"]}
 
 kill @e[type=marker,tag=TutorialWarp]
+kill @e[type=area_effect_cloud,tag=TutorialWarp]
 summon marker -42 -22 -21 {Tags:["TutorialWarp","ToIsland"]}
 summon marker -264 -21 -21 {Tags:["TutorialWarp","FromIsland"]}
+summon area_effect_cloud -42 -21 -21 {Tags:["TutorialWarp","ToIsland"],CustomName:'{"text":"Warp to Tutorial Island","color":"aqua","bold":"true"}',CustomNameVisible:1b,Duration:2000000000}
+summon area_effect_cloud -264 -20 -21 {Tags:["TutorialWarp","FromIsland"],CustomName:'{"text":"Back to Lobby","color":"aqua","bold":"true"}',CustomNameVisible:1b,Duration:2000000000}
 
 #> Teachers
 summon wandering_trader -283 -24 -42 {Rotation:[-90.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","CannonTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:generic.movement_speed,Base:0}],PersistenceRequired:1b}
