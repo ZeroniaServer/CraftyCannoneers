@@ -34,7 +34,14 @@ execute as @a[tag=SpotFake,scores={spotfakewp=36..40}] run title @s subtitle [""
 execute as @a[tag=SpotFake,scores={spotfakewp=41..45}] run title @s subtitle ["",{"text":"Spotting... ","color":"dark_aqua"},{"text":"[ ","color":"gray"},{"text":"||||||||","bold":true,"color":"green"},{"text":"||","bold":true,"color":"red"},{"text":" ]","color":"gray"}]
 execute as @a[tag=SpotFake,scores={spotfakewp=46..50}] run title @s subtitle ["",{"text":"Spotting... ","color":"dark_aqua"},{"text":"[ ","color":"gray"},{"text":"|||||||||","bold":true,"color":"green"},{"text":"|","bold":true,"color":"red"},{"text":" ]","color":"gray"}]
 execute as @a[tag=SpotFake,scores={spotfakewp=51..55}] run title @s subtitle ["",{"text":"Spotting... ","color":"dark_aqua"},{"text":"[ ","color":"gray"},{"text":"||||||||||","bold":true,"color":"green"},{"text":" ]","color":"gray"}]
-
+execute as @a[tag=SpotFake,scores={spotfakewp=55}] run tellraw @s ["",{"text":"Ship weakpoint exposed by ","color":"dark_aqua"},{"selector":"@s"}]
+execute as @a[tag=SpotFake1,scores={spotfakewp=55}] run tag @s add Exposed1
+execute as @a[tag=SpotFake2,scores={spotfakewp=55}] run tag @s add Exposed2
+execute as @a[tag=SpotFake3,scores={spotfakewp=55}] run tag @s add Exposed3
+execute as @a[tag=SpotFake4,scores={spotfakewp=55}] run tag @s add Exposed4
+execute as @a[tag=SpotFake5,scores={spotfakewp=55}] run tag @s add Exposed5
+execute as @a[tag=SpotFake6,scores={spotfakewp=55}] run tag @s add Exposed6
+execute as @a[tag=SpotFake7,scores={spotfakewp=55}] run tag @s add Exposed7
 
 execute as @a[tag=SpotFake,scores={spotfakewp=1}] at @s run playsound minecraft:item.spyglass.use master @s ~ ~ ~ 1 0.6
 execute as @a[tag=SpotFake,scores={spotfakewp=3}] at @s run playsound minecraft:item.spyglass.use master @s ~ ~ ~ 1 0.7
@@ -47,6 +54,40 @@ execute as @a[tag=SpotFake,scores={spotfakewp=55..}] run tag @s remove SpotFake
 title @a[tag=!SpotFake,scores={spotfakewp=1..}] title {"text":""}
 title @a[tag=!SpotFake,scores={spotfakewp=1..}] subtitle {"text":""}
 scoreboard players reset @a[tag=!SpotFake,scores={spotfakewp=1..}] spotfakewp
+
+
+#> Remove exposed status over time
+scoreboard players add @a[tag=Exposed1] fakeexpose1 1
+scoreboard players add @a[tag=Exposed2] fakeexpose2 1
+scoreboard players add @a[tag=Exposed3] fakeexpose3 1
+scoreboard players add @a[tag=Exposed4] fakeexpose4 1
+scoreboard players add @a[tag=Exposed5] fakeexpose5 1
+scoreboard players add @a[tag=Exposed6] fakeexpose6 1
+scoreboard players add @a[tag=Exposed7] fakeexpose7 1
+
+tag @a[tag=Exposed1,scores={fakeexpose1=500..}] remove Exposed1
+tag @a[tag=Exposed2,scores={fakeexpose2=500..}] remove Exposed2
+tag @a[tag=Exposed3,scores={fakeexpose3=500..}] remove Exposed3
+tag @a[tag=Exposed4,scores={fakeexpose4=500..}] remove Exposed4
+tag @a[tag=Exposed5,scores={fakeexpose5=500..}] remove Exposed5
+tag @a[tag=Exposed6,scores={fakeexpose6=500..}] remove Exposed6
+tag @a[tag=Exposed7,scores={fakeexpose7=500..}] remove Exposed7
+
+tag @a[tag=!InTower] remove Exposed1
+tag @a[tag=!InTower] remove Exposed2
+tag @a[tag=!InTower] remove Exposed3
+tag @a[tag=!InTower] remove Exposed4
+tag @a[tag=!InTower] remove Exposed5
+tag @a[tag=!InTower] remove Exposed6
+tag @a[tag=!InTower] remove Exposed7
+
+scoreboard players reset @a[tag=!Exposed1,scores={fakeexpose1=1..}] fakeexpose1
+scoreboard players reset @a[tag=!Exposed2,scores={fakeexpose2=1..}] fakeexpose2
+scoreboard players reset @a[tag=!Exposed3,scores={fakeexpose3=1..}] fakeexpose3
+scoreboard players reset @a[tag=!Exposed4,scores={fakeexpose4=1..}] fakeexpose4
+scoreboard players reset @a[tag=!Exposed5,scores={fakeexpose5=1..}] fakeexpose5
+scoreboard players reset @a[tag=!Exposed6,scores={fakeexpose6=1..}] fakeexpose6
+scoreboard players reset @a[tag=!Exposed7,scores={fakeexpose7=1..}] fakeexpose7
 
 
 

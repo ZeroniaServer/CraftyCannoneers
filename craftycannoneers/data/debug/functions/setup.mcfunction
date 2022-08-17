@@ -76,6 +76,13 @@ scoreboard objectives add button dummy
 scoreboard objectives add CombatTutorial dummy
 scoreboard objectives add WeakpointTutorial dummy
 scoreboard objectives add spotfakewp dummy
+scoreboard objectives add fakeexpose1 dummy
+scoreboard objectives add fakeexpose2 dummy
+scoreboard objectives add fakeexpose3 dummy
+scoreboard objectives add fakeexpose4 dummy
+scoreboard objectives add fakeexpose5 dummy
+scoreboard objectives add fakeexpose6 dummy
+scoreboard objectives add fakeexpose7 dummy
 
 scoreboard objectives remove notifyobjective
 scoreboard objectives remove objectivecount
