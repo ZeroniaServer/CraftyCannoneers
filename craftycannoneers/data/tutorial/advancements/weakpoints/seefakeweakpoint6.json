@@ -13,7 +13,7 @@
               "type": "player",
               "looking_at": {
                 "type": "minecraft:slime",
-                "nbt": "{Tags:[\"FakeWeakpoint\"]}"
+                "nbt": "{Tags:[\"FakeWeakpoint\",\"S6\"]}"
               }
             }
           }
@@ -21,6 +21,6 @@
       }
     },
     "rewards": {
-      "function": "tutorial:seefakeweakpoint"
+      "function": "tutorial:weakpoint/seefakeweakpoint6"
     }
   }

@@ -1,0 +1,26 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "items": [
+              "minecraft:spyglass"
+            ]
+          },
+          "player": {
+            "type_specific": {
+              "type": "player",
+              "looking_at": {
+                "type": "minecraft:slime",
+                "nbt": "{Tags:[\"FakeWeakpoint\",\"S2\"]}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "tutorial:weakpoint/seefakeweakpoint2"
+    }
+  }
