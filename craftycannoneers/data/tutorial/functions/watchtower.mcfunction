@@ -53,3 +53,10 @@ scoreboard players reset @a[tag=!SpotFake,scores={spotfakewp=1..}] spotfakewp
 
 tag @a[team=Lobby] remove UsingSpyglass
 tag @a[tag=SpotFake] remove SpotFake
+tag @a[tag=SpotFake1] remove SpotFake1
+tag @a[tag=SpotFake2] remove SpotFake2
+tag @a[tag=SpotFake3] remove SpotFake3
+tag @a[tag=SpotFake4] remove SpotFake4
+tag @a[tag=SpotFake5] remove SpotFake5
+tag @a[tag=SpotFake6] remove SpotFake6
+tag @a[tag=SpotFake7] remove SpotFake7
