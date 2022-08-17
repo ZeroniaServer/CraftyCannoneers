@@ -1,7 +1,14 @@
 kill @e[type=#game:cannon,tag=cannon,tag=Tutorial]
 function tutorial:trainingdummies/despawnall
 kill @e[type=wandering_trader,tag=Teacher]
-
+kill @e[type=area_effect_cloud,tag=CannonText]
+kill @e[type=villager,tag=CannonTutorial]
+kill @e[type=villager,tag=ChestTutorial]
+kill @e[type=armor_stand,tag=CannonTutorial]
+kill @e[type=armor_stand,tag=ChestTutorial]
+fill -40 -23 -18 -38 -22 -18 air
+execute as @e[type=area_effect_cloud,name="Tutorial Area"] run data merge entity @s {CustomName:'{"text":"Training Island","bold":true,"color":"aqua"}'}
+execute as @e[type=area_effect_cloud,name="(interact with objects to learn about their purpose)"] run data merge entity @s {CustomName:'{"text":"(a special island used to learn about the game\'s mechanics)","italic":true,"color":"yellow"}'}
 execute positioned -283 -24 -26 run function cannons:spawntutorial
 execute positioned -283 -24 -37 run function cannons:spawntutorial
 execute positioned -283 -24 -48 run function cannons:spawntutorial
