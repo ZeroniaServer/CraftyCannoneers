@@ -16,7 +16,7 @@ execute as @a[team=Orange,nbt=!{Inventory:[{Slot:103b,id:"minecraft:diamond_hoe"
 execute as @a[tag=LeaveGame] run title @s times 0 50 15
 execute as @a[tag=LeaveGame] at @s run tp @s @s
 execute as @a[tag=LeaveGame,predicate=!game:tutorialbounds] run tp @s -55 -21 0 -90 0
-execute as @a[tag=LeaveGame,predicate=game:tutorialbounds] run tp @s -264 -20 -21
+execute as @a[tag=LeaveGame,predicate=game:tutorialbounds] run tp @s -264 -20 -21 -90 0
 execute as @a[tag=LeaveGame,predicate=game:tutorialbounds] run tag @s add Warped
 execute as @a[tag=LeaveGame] at @s run clear @s
 execute as @a[tag=LeaveGame] run function lobby:easteregg/buttonreset
