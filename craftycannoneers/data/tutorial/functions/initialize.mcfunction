@@ -27,6 +27,7 @@ summon slime -386 -27 -62 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S4"],In
 summon slime -390 -19 -55 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S5"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
 summon slime -390 -10 -54 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S6"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
 summon slime -389 -14 -37 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S7"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+execute as @e[type=slime,tag=FakeWeakpoint] at @s run summon marker ~ ~ ~ {Tags:["FakeWeakpoint","FakePointMarker"]}
 execute as @e[type=slime,tag=FakeWeakpoint] at @s run summon marker ~-1 ~ ~1 {Tags:["FakeWeakpoint","FXParticle","1"]}
 execute as @e[type=slime,tag=FakeWeakpoint] at @s run summon marker ~-1 ~ ~-1 {Tags:["FakeWeakpoint","FXParticle","2"]}
 
