@@ -19,3 +19,4 @@ execute as @a[predicate=!tutorial:watchtower,tag=InTower] run tag @s remove InTo
 function tutorial:xparticle
 
 tag @a[team=Lobby] remove UsingSpyglass
+tag @a[tag=SpotFake] remove SpotFake
