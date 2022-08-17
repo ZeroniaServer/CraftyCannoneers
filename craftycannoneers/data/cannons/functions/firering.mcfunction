@@ -27,8 +27,8 @@ execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,sco
 execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,scores={CmdData=3}] at @s run fill ~-2 ~2 ~-2 ~2 ~2 ~2 fire replace air
 execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,scores={CmdData=5}] at @s run fill ~-2 ~2 ~-2 ~2 ~2 ~2 air replace fire
 execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,scores={CmdData=5}] at @s run fill ~-3 ~3 ~-3 ~3 ~3 ~3 fire replace air
-execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,scores={CmdData=5..}] run gamerule doFireTick true
-execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,scores={CmdData=155}] run gamerule doFireTick false
+execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,predicate=!cannons:safezones/tutorial,scores={CmdData=5..}] run gamerule doFireTick true
+execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,predicate=!cannons:safezones/tutorial,scores={CmdData=155}] run gamerule doFireTick false
 execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,scores={CmdData=505}] run function cannons:extinguishfire
 execute as @e[type=marker,tag=RingOfFire,scores={CmdData=505..}] run kill @s
 
