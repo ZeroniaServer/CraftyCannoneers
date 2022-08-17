@@ -15,3 +15,7 @@ execute as @a[predicate=!tutorial:watchtower,tag=InTower] run title @s subtitle 
 execute as @a[predicate=!tutorial:watchtower,tag=InTower] run clear @s
 execute as @a[predicate=!tutorial:watchtower,tag=InTower] run function lobby:items
 execute as @a[predicate=!tutorial:watchtower,tag=InTower] run tag @s remove InTower
+
+function tutorial:xparticle
+
+tag @a[team=Lobby] remove UsingSpyglass

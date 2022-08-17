@@ -50,5 +50,5 @@ execute as @e[type=slime,tag=Spotted,tag=Orange] if entity @a[team=Orange,tag=Se
 
 
 
-tag @a remove UsingSpyglass
+tag @a[team=!Lobby] remove UsingSpyglass
 tag @a remove SeeWeakpoint

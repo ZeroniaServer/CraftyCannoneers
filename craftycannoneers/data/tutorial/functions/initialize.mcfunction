@@ -6,6 +6,9 @@ kill @e[type=villager,tag=CannonTutorial]
 kill @e[type=villager,tag=ChestTutorial]
 kill @e[type=armor_stand,tag=CannonTutorial]
 kill @e[type=armor_stand,tag=ChestTutorial]
+tp @e[type=slime,tag=FakeWeakpoint] ~ ~-200 ~
+kill @e[type=slime,tag=FakeWeakpoint]
+kill @e[type=marker,tag=FakeWeakpoint]
 fill -40 -23 -18 -38 -22 -18 air
 execute as @e[type=area_effect_cloud,name="Tutorial Area"] run data merge entity @s {CustomName:'{"text":"Training Island","bold":true,"color":"aqua"}'}
 execute as @e[type=area_effect_cloud,name="(interact with objects to learn about their purpose)"] run data merge entity @s {CustomName:'{"text":"(a special island used to learn about the game\'s mechanics)","italic":true,"color":"yellow"}'}
@@ -16,6 +19,25 @@ execute positioned -282 -19 -62 run function cannons:spawntutorial
 execute positioned -282 -19 -70 run function cannons:spawntutorial
 execute positioned -283 -24 -70 run function cannons:spawntutorial
 execute positioned -283 -24 -62 run function cannons:spawntutorial
+
+summon slime -386 -26 -33 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S1"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+summon slime -385 -26 -40 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S2"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+summon slime -384 -30 -50 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S3"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+summon slime -386 -27 -62 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S4"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+summon slime -390 -19 -55 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S5"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+summon slime -390 -10 -54 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S6"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+summon slime -389 -14 -37 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S7"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+execute as @e[type=slime,tag=FakeWeakpoint] at @s run summon marker ~-1 ~ ~1 {Tags:["FakeWeakpoint","FXParticle","1"]}
+execute as @e[type=slime,tag=FakeWeakpoint] at @s run summon marker ~-1 ~ ~-1 {Tags:["FakeWeakpoint","FXParticle","2"]}
+
+execute as @e[type=slime,tag=S1] at @s run tp @s ~15 ~2.5 ~2
+execute as @e[type=slime,tag=S2] at @s run tp @s ~15 ~2.5 ~3.5
+execute as @e[type=slime,tag=S3] at @s run tp @s ~15 ~3 ~5
+execute as @e[type=slime,tag=S4] at @s run tp @s ~15 ~3 ~7
+execute as @e[type=slime,tag=S5] at @s run tp @s ~18 ~2 ~7
+execute as @e[type=slime,tag=S6] at @s run tp @s ~26 ~ ~9
+execute as @e[type=slime,tag=S7] at @s run tp @s ~28 ~1 ~5.5
+
 
 forceload add -413 -379 -95 -15
 
