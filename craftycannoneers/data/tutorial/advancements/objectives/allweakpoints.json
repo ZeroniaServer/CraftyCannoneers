@@ -1,0 +1,111 @@
+{
+    "display": {
+        "title": {
+            "text": "Test Advancement",
+            "color": "green"
+        },
+        "description": {
+            "text": "skull reaction",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:skeleton_skull"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "S1": {
+          "trigger": "minecraft:tick",
+          "conditions": {
+            "player": {
+              "nbt": "{Tags:[\"Exposed1\"]}",
+              "team": "Lobby"
+            }
+          }
+        },
+        "S2": {
+          "trigger": "minecraft:tick",
+          "conditions": {
+            "player": {
+              "nbt": "{Tags:[\"Exposed2\"]}",
+              "team": "Lobby"
+            }
+          }
+        },
+        "S3": {
+          "trigger": "minecraft:tick",
+          "conditions": {
+            "player": {
+              "nbt": "{Tags:[\"Exposed3\"]}",
+              "team": "Lobby"
+            }
+          }
+        },
+        "S4": {
+          "trigger": "minecraft:tick",
+          "conditions": {
+            "player": {
+              "nbt": "{Tags:[\"Exposed4\"]}",
+              "team": "Lobby"
+            }
+          }
+        },
+        "S5": {
+          "trigger": "minecraft:tick",
+          "conditions": {
+            "player": {
+              "nbt": "{Tags:[\"Exposed5\"]}",
+              "team": "Lobby"
+            }
+          }
+        },
+        "S6": {
+          "trigger": "minecraft:tick",
+          "conditions": {
+            "player": {
+              "nbt": "{Tags:[\"Exposed6\"]}",
+              "team": "Lobby"
+            }
+          }
+        },
+        "S7": {
+          "trigger": "minecraft:tick",
+          "conditions": {
+            "player": {
+              "nbt": "{Tags:[\"Exposed7\"]}",
+              "team": "Lobby"
+            }
+          }
+        }
+      },
+      "requirements": [
+        [
+          "S1"
+        ],
+        [
+          "S2"
+        ],
+        [
+          "S3"
+        ],
+        [
+          "S4"
+        ],
+        [
+          "S5"
+        ],
+        [
+          "S6"
+        ],
+        [
+          "S7"
+        ]
+      ],
+      "rewards": {
+        "function": "tutorial:seeallweakpoints"
+      },
+    "parent": "tutorial:objectives/end"
+  }
