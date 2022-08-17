@@ -21,5 +21,6 @@
         "location": {
             "trigger": "minecraft:location"
         }
-    }
+    },
+    "parent": "tutorial:objectives/watchtower"
 }
