@@ -10,7 +10,7 @@
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:egg"
+            "item": "minecraft:tnt"
         },
         "frame": "challenge",
         "show_toast": true,

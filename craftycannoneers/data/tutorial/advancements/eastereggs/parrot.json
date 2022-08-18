@@ -10,8 +10,7 @@
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:diamond_hoe",
-            "nbt": "{CustomModelData:65}"
+            "item": "minecraft:parrot_spawn_egg"
         },
         "frame": "challenge",
         "show_toast": true,
