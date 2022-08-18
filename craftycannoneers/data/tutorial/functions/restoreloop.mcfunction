@@ -1,4 +1,3 @@
-say hi
 clone ~ ~-1 ~ ~-22 ~1 ~-62 ~978 ~-1 ~-62
 scoreboard players add @s CmdData 1
 execute store result score $restoreY CmdData run data get entity @s Pos[1]
