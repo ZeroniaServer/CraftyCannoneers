@@ -1,9 +1,9 @@
 execute as @e[type=husk,tag=TDZombie] store result score @s CmdData run data get entity @s Health
+execute as @e[type=husk,tag=TDZombie] store result score @s eyeclick run data get entity @s HurtTime
 
-execute as @e[type=husk,tag=TDZombie] if score @s eyeclick > @s CmdData at @s run tag @e[type=armor_stand,tag=TDAS,distance=..1,limit=1,sort=nearest] add DummyHurtAnim
-execute as @e[type=husk,tag=TDZombie] if score @s eyeclick > @s CmdData run tag @s add DummyHurt
-execute as @e[type=husk,tag=TDZombie] if score @s eyeclick > @s CmdData run scoreboard players reset @e[type=armor_stand,tag=TDAS,distance=..1,limit=1,sort=nearest,scores={CmdData=1..}] CmdData
-execute as @e[type=husk,tag=TDZombie] if score @s eyeclick > @s CmdData store result score @s eyeclick run data get entity @s Health
+execute as @e[type=husk,tag=TDZombie] if score @s eyeclick matches 10 at @s run tag @e[type=armor_stand,tag=TDAS,distance=..1,limit=1,sort=nearest] add DummyHurtAnim
+execute as @e[type=husk,tag=TDZombie] if score @s eyeclick matches 10 run tag @s add DummyHurt
+execute as @e[type=husk,tag=TDZombie] if score @s eyeclick matches 10 run scoreboard players reset @e[type=armor_stand,tag=TDAS,distance=..1,limit=1,sort=nearest,scores={CmdData=1..}] CmdData
 
 execute as @e[type=husk,tag=DummyHurt,scores={CmdData=19}] at @s run data merge entity @e[type=area_effect_cloud,tag=NameTag,distance=..2,limit=1,sort=nearest] {CustomName:'["",{"text":"❤ ","color":"red"},{"text":"19","color":"green"},{"text":"/","color":"gray"},{"text":"20","color":"dark_green"}]'}
 execute as @e[type=husk,tag=DummyHurt,scores={CmdData=18}] at @s run data merge entity @e[type=area_effect_cloud,tag=NameTag,distance=..2,limit=1,sort=nearest] {CustomName:'["",{"text":"❤ ","color":"red"},{"text":"18","color":"green"},{"text":"/","color":"gray"},{"text":"20","color":"dark_green"}]'}
