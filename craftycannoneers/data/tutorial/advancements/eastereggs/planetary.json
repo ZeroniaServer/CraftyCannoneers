@@ -2,7 +2,7 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Easter Egg [3/???]",
+            "text": "Easter Egg [3/5]",
             "color": "green"
         },
         "description": {
@@ -10,7 +10,7 @@
             "color": "white"
         },
         "icon": {
-            "item": "minecraft:egg"
+            "item": "minecraft:end_stone"
         },
         "frame": "challenge",
         "show_toast": true,
