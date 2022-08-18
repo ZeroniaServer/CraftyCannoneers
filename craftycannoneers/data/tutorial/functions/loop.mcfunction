@@ -4,7 +4,7 @@ function tutorial:watchtower
 function tutorial:treasurepit
 function tutorial:trainingdummies/functionality
 function tutorial:itemframes
-function tutorial:restoreloop
+execute as @e[type=marker,tag=ShipRestore] at @s run function tutorial:restoreloop
 
 execute as @e[type=wandering_trader,tag=Teacher] run data merge entity @s {HandItems:[],Offers:{Recipes:[]}}
 effect clear @e[type=wandering_trader,tag=Teacher] invisibility
