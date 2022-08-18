@@ -37,7 +37,7 @@ execute unless entity @e[type=armor_stand,tag=cannonball,predicate=cannons:safez
 execute unless entity @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/tutorial] if score $shipstatus CmdData matches 1 if score $shiptimer CmdData matches 1160 run title @a[team=Lobby,tag=OnDock] actionbar ["",{"text":"The Training Ship will repair itself in ","color":"aqua"},{"text":"2","bold":true,"color":"blue"},{"text":" seconds!","color":"aqua"}]
 execute unless entity @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/tutorial] if score $shipstatus CmdData matches 1 if score $shiptimer CmdData matches 1180 run title @a[team=Lobby,tag=OnDock] actionbar ["",{"text":"The Training Ship will repair itself in ","color":"aqua"},{"text":"1","bold":true,"color":"blue"},{"text":" second!","color":"aqua"}]
 
-execute unless entity @a[predicate=game:tutorialbounds] if score $shipstatus CmdData matches 1 if score $shiptimer CmdData matches 1.. run function tutorial:restoreship
+execute if entity @a[predicate=game:tutorialbounds] unless entity @a[tag=OnDock] if score $shipstatus CmdData matches 1 if score $shiptimer CmdData matches 1.. run function tutorial:restoreship
 execute unless entity @a[predicate=game:tutorialbounds] as @e[type=armor_stand,tag=CannonDisp,tag=Tutorial,scores={eyeclick=1..}] run scoreboard players set @s eyeclick 120
 
 execute as @e[type=marker,tag=ShipRestore] at @s run function tutorial:restoreloop

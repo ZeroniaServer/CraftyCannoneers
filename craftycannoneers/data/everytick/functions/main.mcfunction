@@ -74,7 +74,7 @@ execute unless score $gamestate CmdData matches -1 run tag @a remove NearModboar
 function lobby:easteregg/loop
 
 # Tutorial Area
-function tutorial:loop
+execute if entity @e[type=marker,tag=FakeWeakpoint] run function tutorial:loop
 
 #Toggle tips
 execute as @a unless score @s GamesPlayed matches 0..3 run scoreboard players set @s GamesPlayed 3
