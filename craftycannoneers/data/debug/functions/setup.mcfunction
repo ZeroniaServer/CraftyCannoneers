@@ -107,7 +107,9 @@ scoreboard objectives add toggleTips trigger
 #> Lobby entities
 execute unless entity @e[type=marker,tag=parkourStart] run summon marker -73 -22 -1 {Tags:["parkourStart"]}
 execute unless entity @e[type=marker,tag=parkourEnd] run summon marker -71 2 -4 {Tags:["parkourEnd"]}
-execute as @e[type=armor_stand,tag=TutorialAS,tag=CannonTutorial,limit=1] run tp @s -38.5 -23.0 -17.5
+kill @e[tag=Goldy]
+summon villager -61.2 -31.8 50 {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-10000000,Tags:["GoldyVillager","Goldy"]}
+summon armor_stand -61.2 -30.6 50 {Small:1b,Invulnerable:1b,Silent:1b,Marker:1b,NoGravity:1b,Invisible:1b,Tags:["GoldyAS","Goldy"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:79}}]}
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"

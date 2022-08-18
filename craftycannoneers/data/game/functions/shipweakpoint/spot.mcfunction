@@ -17,7 +17,6 @@ execute as @a[team=Orange,tag=SeeWeakpoint,scores={spotting=55},limit=1,sort=ran
 execute as @a[tag=SeeWeakpoint,team=Purple,scores={spotting=55..}] run tag @e[type=slime,tag=Weakpoint,tag=Purple] add Spotted
 execute as @a[tag=SeeWeakpoint,team=Orange,scores={spotting=55..}] run tag @e[type=slime,tag=Weakpoint,tag=Orange] add Spotted
 execute as @a[tag=SeeWeakpoint,scores={spotting=55..}] run title @s subtitle {"text":" ","color":"white"}
-effect give @e[type=slime] invisibility 1000000 100 true
 
 
 execute as @a[tag=SeeWeakpoint,team=Purple,scores={spotting=55..}] run title @a[team=Purple] subtitle {"text":" ","color":"white"}

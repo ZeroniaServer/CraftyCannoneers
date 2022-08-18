@@ -6,6 +6,9 @@ effect give @a[team=Lobby] water_breathing 1000000 255 true
 effect give @a[team=Lobby,tag=!InCombat] weakness 1000000 255 true
 spawnpoint @a[team=Lobby] -55 -21 0 -90
 
+effect give @e[type=minecraft:villager] minecraft:invisibility 1000000 100 true
+effect give @e[type=slime] invisibility 1000000 100 true
+
 function lobby:parkour/parkour
 function lobby:rock/rock
 function lobby:eastereggs
