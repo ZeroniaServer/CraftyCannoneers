@@ -1,0 +1,42 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": {
+          "location": {
+            "position": {
+              "z": {
+                "min": -59
+              }
+            }
+          }
+        },
+        "location": {
+          "position": {
+            "x": {
+              "min": -258,
+              "max": -257
+            },
+            "y": {
+              "min": -25,
+              "max": -24
+            },
+            "z": {
+              "min": -60,
+              "max": -59
+            }
+          },
+          "block": {
+            "blocks": [
+              "minecraft:barrel"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "tutorial:weapons/mace"
+  }
+}

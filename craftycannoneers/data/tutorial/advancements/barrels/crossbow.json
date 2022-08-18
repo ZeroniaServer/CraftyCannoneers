@@ -1,0 +1,42 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": {
+          "location": {
+            "position": {
+              "z": {
+                "min": -59
+              }
+            }
+          }
+        },
+        "location": {
+          "position": {
+            "x": {
+              "min": -260,
+              "max": -259
+            },
+            "y": {
+              "min": -26,
+              "max": -25
+            },
+            "z": {
+              "min": -60,
+              "max": -59
+            }
+          },
+          "block": {
+            "blocks": [
+              "minecraft:barrel"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "tutorial:weapons/crossbow"
+  }
+}
