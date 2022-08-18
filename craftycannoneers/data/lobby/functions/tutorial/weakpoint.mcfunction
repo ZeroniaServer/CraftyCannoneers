@@ -13,4 +13,3 @@ execute if entity @s[scores={WeakpointTutorial=1}] run tellraw @s ["",{"text":"[
 
 tag @s add TutorialWeakpoint
 advancement revoke @s only lobby:weakpointtutorial
-advancement grant @s only tutorial:zzzunlockables/tutorial
