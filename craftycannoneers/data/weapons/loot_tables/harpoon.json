@@ -15,7 +15,7 @@
         },
         {
           "function": "minecraft:set_nbt",
-          "tag": "{Damage:250,NoDrop:1b}",
+          "tag": "{NoDrop:1b}",
           "conditions": [
             {
               "condition": "minecraft:entity_properties",

@@ -28,3 +28,6 @@ execute as @a[predicate=!tutorial:combatarea,predicate=!tutorial:combatarea2,tag
 execute as @a[predicate=!tutorial:combatarea,predicate=!tutorial:combatarea2,tag=InCombat] run clear @s
 execute as @a[predicate=!tutorial:combatarea,predicate=!tutorial:combatarea2,tag=InCombat] run function lobby:items
 execute as @a[predicate=!tutorial:combatarea,predicate=!tutorial:combatarea2,tag=InCombat] run tag @s remove InCombat
+
+execute as @e[type=trident] at @s unless predicate tutorial:combatarea run function tutorial:returnharpoon
+execute as @e[type=trident,nbt={inGround:1b}] run function tutorial:returnharpoon
