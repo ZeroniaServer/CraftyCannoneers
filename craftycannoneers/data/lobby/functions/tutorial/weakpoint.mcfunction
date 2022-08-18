@@ -1,7 +1,7 @@
 tag @s remove TutorialWeakpoint
 scoreboard players add @s WeakpointTutorial 1
 execute if entity @s[scores={WeakpointTutorial=9..}] run scoreboard players set @s WeakpointTutorial 1
-execute if entity @s[scores={WeakpointTutorial=9}] run advancement grant @s only tutorial:objectives/watchtower
+execute if entity @s[scores={WeakpointTutorial=8}] run advancement grant @s only tutorial:objectives/watchtower
 execute if entity @s[scores={WeakpointTutorial=8}] run tellraw @s ["",{"text":"[✔] ","color":"gold"},{"text":"Now it's your turn. Use your Spotting Spyglass to expose some Weakpoints!","color":"green"},"\n"]
 execute if entity @s[scores={WeakpointTutorial=7}] run tellraw @s ["",{"text":"[7/8] ","color":"gray"},{"text":"Note that you can only spot one Weakpoint at a time in a real game. However, here at the Watchtower, you can see multiple at once just so you can get a feel for exposing them.","color":"green"},"\n"]
 execute if entity @s[scores={WeakpointTutorial=6}] run tellraw @s ["",{"text":"[6/8] ","color":"gray"},{"text":"Once you hit one Weakpoint, the next one becomes visible. Keep on spotting and hitting them until there are none left!","color":"green"},"\n"]
