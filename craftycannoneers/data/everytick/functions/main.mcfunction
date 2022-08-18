@@ -70,11 +70,13 @@ kill @e[type=falling_block]
 execute if score $gamestate CmdData matches -1 run function lobby:customizer/controller
 execute unless score $gamestate CmdData matches -1 run tag @a remove NearModboard
 
-# Easter Eggs
+#Easter Eggs
 function lobby:easteregg/loop
 
-# Tutorial Area
-execute if entity @e[type=marker,tag=FakeWeakpoint] run function tutorial:loop
+#Training Island
+execute if entity @a[team=Lobby,predicate=game:tutorialbounds] run function tutorial:loop
+execute as @e[type=marker,tag=TutorialWarp] at @s run function tutorial:warppads/main
+execute as @a[team=Lobby] at @s unless entity @e[type=marker,tag=TutorialWarp,distance=..1.2] run tag @s remove Warped
 
 #Toggle tips
 execute as @a unless score @s GamesPlayed matches 0..3 run scoreboard players set @s GamesPlayed 3

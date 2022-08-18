@@ -16,10 +16,6 @@ execute as @a[predicate=!tutorial:watchtower,tag=InTower] run clear @s
 execute as @a[predicate=!tutorial:watchtower,tag=InTower] run function lobby:items
 execute as @a[predicate=!tutorial:watchtower,tag=InTower] run tag @s remove InTower
 
-function tutorial:xparticle
-
-
-
 #Titles are epic
 scoreboard players add @a[tag=SpotFake] spotfakewp 1
 execute as @a[tag=SpotFake,scores={spotfakewp=1..55}] run title @s title {"text":" ","color":"white"}

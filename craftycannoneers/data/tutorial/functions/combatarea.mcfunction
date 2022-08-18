@@ -31,3 +31,5 @@ execute as @a[predicate=!tutorial:combatarea,predicate=!tutorial:combatarea2,tag
 
 execute as @e[type=trident] at @s unless predicate tutorial:combatarea unless predicate tutorial:combatarea2 run function tutorial:returnharpoon
 execute as @e[type=trident,nbt={inGround:1b}] run function tutorial:returnharpoon
+
+function tutorial:itemframes
