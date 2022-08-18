@@ -3,7 +3,7 @@ execute if entity @s[predicate=cannons:safezones/tutorial] unless score $gamesta
 
 execute if entity @s[predicate=cannons:ships/purple] run summon marker 39 -40 -68 {Tags:["FireRemover","Purple"]}
 execute if entity @s[predicate=cannons:ships/orange] run summon marker 34 -40 43 {Tags:["FireRemover","Orange"]}
-execute if entity @s[predicate=cannons:safezones/tutorial] run summon marker -418 -40 -83 {Tags:["FireRemover","Tutorial"]}
+execute if entity @s[predicate=cannons:safezones/tutorial] run summon marker -410 -40 -83 {Tags:["FireRemover","Tutorial"]}
 
 tag @s add self
 scoreboard players operation @e[type=marker,tag=FireRemover,tag=!HasUUID] playerUUID = @s playerUUID

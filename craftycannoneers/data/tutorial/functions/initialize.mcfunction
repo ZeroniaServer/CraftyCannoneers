@@ -20,23 +20,23 @@ execute positioned -282 -19 -70 run function cannons:spawntutorial
 execute positioned -283 -24 -70 run function cannons:spawntutorial
 execute positioned -283 -24 -62 run function cannons:spawntutorial
 
-summon slime -386 -26 -33 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S1"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
-summon slime -385 -26 -40 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S2"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
-summon slime -384 -30 -50 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S3"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
-summon slime -386 -27 -62 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S4"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
-summon slime -390 -19 -55 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S5"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
-summon slime -390 -10 -54 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S6"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
-summon slime -389 -14 -37 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S7"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+summon slime -378 -26 -33 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S1"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+summon slime -377 -26 -40 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S2"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+summon slime -376 -30 -50 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S3"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+summon slime -378 -27 -62 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S4"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+summon slime -382 -19 -55 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S5"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+summon slime -382 -10 -54 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S6"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
+summon slime -382 -14 -37 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S7"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
 execute as @e[type=slime,tag=FakeWeakpoint] at @s run function tutorial:spawnweakpointmarkers
 
-execute as @e[type=slime,tag=S1] at @s run tp @s ~15 ~2.5 ~2
-execute as @e[type=slime,tag=S2] at @s run tp @s ~15 ~2.5 ~3.5
-execute as @e[type=slime,tag=S3] at @s run tp @s ~15 ~3 ~5
-execute as @e[type=slime,tag=S4] at @s run tp @s ~15 ~3 ~7
-execute as @e[type=slime,tag=S5] at @s run tp @s ~18 ~2 ~7
-execute as @e[type=slime,tag=S6] at @s run tp @s ~26 ~ ~9
-execute as @e[type=slime,tag=S7] at @s run tp @s ~28 ~1 ~5.5
-
+execute as @e[type=slime,tag=S1] at @s run tp @s ~7 ~1.5 ~1
+execute as @e[type=slime,tag=S2] at @s run tp @s ~7 ~1.5 ~1.5
+execute as @e[type=slime,tag=S3] at @s run tp @s ~7 ~1.5 ~2.5
+execute as @e[type=slime,tag=S4] at @s run tp @s ~9 ~1.5 ~4
+execute as @e[type=slime,tag=S5] at @s run tp @s ~10 ~1 ~4
+execute as @e[type=slime,tag=S6] at @s run tp @s ~18 ~ ~7
+execute as @e[type=slime,tag=S7] at @s run tp @s ~20 ~1 ~4
+execute as @e[type=slime,tag=S4] at @s run particle flame ~ ~ ~ 0 0 0 0 10 force
 
 forceload add -413 -379 -95 -15
 
