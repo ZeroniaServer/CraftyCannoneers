@@ -7,7 +7,6 @@ scoreboard players set $gamestate CmdData 2
 data merge block -44 -28 0 {Text1:'{"text":""}',Text2:'{"text":""}',Text3:'{"text":""}',Text4:'{"text":""}'}
 
 gamerule fallDamage true
-gamerule doFireTick false
 
 #Balancing
 scoreboard players set $OrangeKills BalanceScore 0
