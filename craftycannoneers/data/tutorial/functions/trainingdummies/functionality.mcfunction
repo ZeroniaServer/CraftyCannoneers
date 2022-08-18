@@ -1,3 +1,6 @@
+execute as @e[type=armor_stand,tag=TDAS,tag=!nograv,nbt={OnGround:1b}] run data merge entity @s {NoGravity:1b,Marker:1b}
+tag @e[type=armor_stand,tag=TDAS,tag=!nograv,nbt={OnGround:1b}] add nograv
+
 execute as @e[type=husk,tag=TDZombie] store result score @s CmdData run data get entity @s Health
 execute as @e[type=husk,tag=TDZombie] store result score @s eyeclick run data get entity @s HurtTime
 
