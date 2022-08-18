@@ -55,7 +55,6 @@ title @a[tag=!SpotFake,scores={spotfakewp=1..}] title {"text":""}
 title @a[tag=!SpotFake,scores={spotfakewp=1..}] subtitle {"text":""}
 scoreboard players reset @a[tag=!SpotFake,scores={spotfakewp=1..}] spotfakewp
 
-
 #> Remove exposed status over time
 scoreboard players add @a[tag=Exposed1] fakeexpose1 1
 scoreboard players add @a[tag=Exposed2] fakeexpose2 1
@@ -80,6 +79,14 @@ tag @a[tag=!InTower] remove Exposed4
 tag @a[tag=!InTower] remove Exposed5
 tag @a[tag=!InTower] remove Exposed6
 tag @a[tag=!InTower] remove Exposed7
+
+advancement revoke @a[tag=!InTower,advancements={tutorial:objectives/allweakpoints=false}] only tutorial:objectives/allweakpoints S1
+advancement revoke @a[tag=!InTower,advancements={tutorial:objectives/allweakpoints=false}] only tutorial:objectives/allweakpoints S2
+advancement revoke @a[tag=!InTower,advancements={tutorial:objectives/allweakpoints=false}] only tutorial:objectives/allweakpoints S3
+advancement revoke @a[tag=!InTower,advancements={tutorial:objectives/allweakpoints=false}] only tutorial:objectives/allweakpoints S4
+advancement revoke @a[tag=!InTower,advancements={tutorial:objectives/allweakpoints=false}] only tutorial:objectives/allweakpoints S5
+advancement revoke @a[tag=!InTower,advancements={tutorial:objectives/allweakpoints=false}] only tutorial:objectives/allweakpoints S6
+advancement revoke @a[tag=!InTower,advancements={tutorial:objectives/allweakpoints=false}] only tutorial:objectives/allweakpoints S7
 
 scoreboard players reset @a[tag=!Exposed1,scores={fakeexpose1=1..}] fakeexpose1
 scoreboard players reset @a[tag=!Exposed2,scores={fakeexpose2=1..}] fakeexpose2
