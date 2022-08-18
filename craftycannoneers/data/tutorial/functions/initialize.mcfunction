@@ -36,7 +36,6 @@ execute as @e[type=slime,tag=S4] at @s run tp @s ~9 ~1.5 ~4
 execute as @e[type=slime,tag=S5] at @s run tp @s ~10 ~1 ~4
 execute as @e[type=slime,tag=S6] at @s run tp @s ~18 ~ ~7
 execute as @e[type=slime,tag=S7] at @s run tp @s ~20 ~1 ~4
-execute as @e[type=slime,tag=S4] at @s run particle flame ~ ~ ~ 0 0 0 0 10 force
 
 forceload add -413 -379 -95 -15
 
