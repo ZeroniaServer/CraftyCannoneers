@@ -86,7 +86,6 @@ scoreboard players reset @a[scores={toggleTips=1..,GamesPlayed=1..}]
 
 execute as @a[scores={toggleTips=1..},tag=hideTips] run tag @s add tempHideTips
 
-execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=!hideTips] run tag @s remove NeedsTutorial
 execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=!hideTips] run tellraw @s [{"text":"You have disabled ingame tips. You can re-enable them using your Lobby Book.","color":"red"}]
 execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=!hideTips] run tag @s add hideTips
 

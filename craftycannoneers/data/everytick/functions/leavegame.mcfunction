@@ -28,6 +28,12 @@ execute as @a[team=] run effect give @s jump_boost 2 128 true
 execute as @a[tag=LeaveGame] at @s run gamemode adventure @s
 execute as @a[tag=LeaveGame] run attribute @s minecraft:generic.luck base set 0.0
 execute as @a[tag=LeaveGame] run recipe take @s *
+tag @a[tag=LeaveGame,advancements={tutorial:objectives/combat=false}] add NeedsTutorial
+tag @a[tag=LeaveGame,advancements={tutorial:objectives/cannon=false}] add NeedsTutorial
+tag @a[tag=LeaveGame,advancements={tutorial:objectives/treasure=false}] add NeedsTutorial
+tag @a[tag=LeaveGame,advancements={tutorial:objectives/watchtower=false}] add NeedsTutorial
+execute as @a[tag=NeedsTutorial,tag=!hideTips,scores={LeftGame=1..}] run tellraw @s ["","\n",{"text":"It seems like you're new to ","color":"green"},{"text":"Crafty ","bold":true,"color":"dark_purple"},{"text":"Cannoneers","bold":true,"color":"gold"},{"text":"!","color":"green"},"\n",{"text":"We highly recommend you to check out the ","color":"green"},{"text":"Training Island","bold":true,"color":"aqua"},{"text":" before playing the actual game!","color":"green"},"\n",{"text":"You can go there by using the blue teleport platform on the left side of the lobby.","italic":true,"color":"dark_green"},"\n"]
+tag @a[tag=NeedsTutorial] remove NeedsTutorial
 execute as @a[tag=LeaveGame] unless entity @s[team=] unless score @s LeftGame matches 1.. at @s run playsound block.beehive.exit master @s ~ ~ ~ 1 1
 execute as @a[scores={LeftGame=1..}] run scoreboard players reset @s LeftGame
 execute as @a[tag=LeaveGame] at @s run team join Lobby @s
