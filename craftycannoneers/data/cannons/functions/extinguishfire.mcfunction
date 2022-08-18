@@ -1,4 +1,4 @@
-gamerule doFireTick false
+execute if entity @s[predicate=!cannons:safezones/tutorial] run gamerule doFireTick false
 
 summon marker 39 -40 -68 {Tags:["FireRemover","Purple"]}
 summon marker 34 -40 43 {Tags:["FireRemover","Orange"]}
@@ -10,4 +10,4 @@ tag @e[type=marker,tag=FireRemover,tag=!HasUUID] add HasUUID
 tag @s remove self
 
 execute as @e[type=marker,tag=FireRemover] at @s run function cannons:extinguishloop
-gamerule doFireTick true
+execute if entity @s[predicate=!cannons:safezones/tutorial] run gamerule doFireTick true
