@@ -1,7 +1,7 @@
 {
     "display": {
         "title": {
-            "text": "Easter Eggs",
+            "text": "Easter Egg Hunter",
             "color": "aqua"
         },
         "description": {
@@ -12,9 +12,9 @@
             "item": "minecraft:dragon_egg"
         },
         "frame": "goal",
-        "show_toast": false,
+        "show_toast": true,
         "announce_to_chat": false,
-        "hidden": false
+        "hidden": true
     },
     "criteria": {
         "location": {
