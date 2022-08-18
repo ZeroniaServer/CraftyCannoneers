@@ -41,6 +41,7 @@ execute as @a[tag=LeaveGame] at @s run team join Lobby @s
 tag @a[tag=LeaveGame] remove onboatregen
 tag @a[tag=LeaveGame] remove loaded
 execute as @a[tag=LeaveGame] run scoreboard players reset @s loverocks
+execute as @a[tag=LeaveGame,advancements={tutorial:zzzunlockables/rocks={50=false}}] run advancement revoke @s only tutorial:zzzunlockables/rocks
 
 execute as @a[tag=LeaveGame,tag=inParkour] run tellraw @s [{"text":"You left the game, so your Parkour run was canceled.","color":"red"}]
 execute as @a[tag=LeaveGame,tag=inParkour] run tag @s remove inParkour
