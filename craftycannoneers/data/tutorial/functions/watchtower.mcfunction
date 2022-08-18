@@ -34,7 +34,7 @@ execute as @a[tag=SpotFake,scores={spotfakewp=36..40}] run title @s subtitle [""
 execute as @a[tag=SpotFake,scores={spotfakewp=41..45}] run title @s subtitle ["",{"text":"Spotting... ","color":"dark_aqua"},{"text":"[ ","color":"gray"},{"text":"||||||||","bold":true,"color":"green"},{"text":"||","bold":true,"color":"red"},{"text":" ]","color":"gray"}]
 execute as @a[tag=SpotFake,scores={spotfakewp=46..50}] run title @s subtitle ["",{"text":"Spotting... ","color":"dark_aqua"},{"text":"[ ","color":"gray"},{"text":"|||||||||","bold":true,"color":"green"},{"text":"|","bold":true,"color":"red"},{"text":" ]","color":"gray"}]
 execute as @a[tag=SpotFake,scores={spotfakewp=51..55}] run title @s subtitle ["",{"text":"Spotting... ","color":"dark_aqua"},{"text":"[ ","color":"gray"},{"text":"||||||||||","bold":true,"color":"green"},{"text":" ]","color":"gray"}]
-execute as @a[tag=SpotFake,scores={spotfakewp=55}] run tellraw @s ["",{"text":"Ship weakpoint exposed by ","color":"dark_aqua"},{"selector":"@s"}]
+execute as @a[tag=SpotFake,scores={spotfakewp=55}] run tellraw @s ["","\n",{"text":"Ship weakpoint exposed by ","color":"aqua"},{"selector":"@s"},"\n"]
 execute as @a[tag=SpotFake1,scores={spotfakewp=55}] run tag @s add Exposed1
 execute as @a[tag=SpotFake2,scores={spotfakewp=55}] run tag @s add Exposed2
 execute as @a[tag=SpotFake3,scores={spotfakewp=55}] run tag @s add Exposed3

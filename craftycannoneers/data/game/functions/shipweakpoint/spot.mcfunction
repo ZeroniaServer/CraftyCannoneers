@@ -11,9 +11,9 @@ execute as @a[tag=SeeWeakpoint,scores={spotting=3}] at @s run playsound minecraf
 execute as @a[tag=SeeWeakpoint,scores={spotting=5}] at @s run playsound minecraft:item.spyglass.use master @s ~ ~ ~ 1 1.3
 execute as @a[tag=SeeWeakpoint,scores={spotting=10..55}] at @s run playsound minecraft:item.spyglass.stop_using master @s ~ ~ ~ 1 2
 execute as @a[team=Purple,tag=SeeWeakpoint,scores={spotting=55},limit=1,sort=random] run execute as @a[team=Purple] at @s run playsound weakpointspot master @s ~ ~ ~ 0.4 1.4
-execute as @a[team=Purple,tag=SeeWeakpoint,scores={spotting=55},limit=1,sort=random] run tellraw @a[team=Purple] ["",{"text":"Ship weakpoint exposed by ","color":"dark_aqua"},{"selector":"@s"}]
+execute as @a[team=Purple,tag=SeeWeakpoint,scores={spotting=55},limit=1,sort=random] run tellraw @a[team=Purple] ["","\n",{"text":"Ship weakpoint exposed by ","color":"aqua"},{"selector":"@s"},"\n"]
 execute as @a[team=Orange,tag=SeeWeakpoint,scores={spotting=55},limit=1,sort=random] run execute as @a[team=Orange] at @s run playsound weakpointspot master @s ~ ~ ~ 0.4 1.4
-execute as @a[team=Orange,tag=SeeWeakpoint,scores={spotting=55},limit=1,sort=random] run tellraw @a[team=Orange] ["",{"text":"Ship weakpoint exposed by ","color":"dark_aqua"},{"selector":"@s"}]
+execute as @a[team=Orange,tag=SeeWeakpoint,scores={spotting=55},limit=1,sort=random] run tellraw @a[team=Orange] ["","\n",{"text":"Ship weakpoint exposed by ","color":"aqua"},{"selector":"@s"},"\n"]
 execute as @a[tag=SeeWeakpoint,team=Purple,scores={spotting=55..}] run tag @e[type=slime,tag=Weakpoint,tag=Purple] add Spotted
 execute as @a[tag=SeeWeakpoint,team=Orange,scores={spotting=55..}] run tag @e[type=slime,tag=Weakpoint,tag=Orange] add Spotted
 execute as @a[tag=SeeWeakpoint,scores={spotting=55..}] run title @s subtitle {"text":" ","color":"white"}
