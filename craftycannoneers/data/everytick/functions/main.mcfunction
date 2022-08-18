@@ -77,7 +77,7 @@ function lobby:easteregg/loop
 function tutorial:loop
 
 #Toggle tips
-execute as @a unless score @s GamesPlayed matches 0..10 run scoreboard players set @s GamesPlayed 10
+execute as @a unless score @s GamesPlayed matches 0..3 run scoreboard players set @s GamesPlayed 3
 
 scoreboard players enable @a toggleTips
 execute as @a[scores={toggleTips=1..,GamesPlayed=2..}] run tellraw @s [{"text":"You cannot do this until you play ","color":"red"},{"score":{"name":"@s","objective":"GamesPlayed"},"color":"red"},{"text":" more games."}]
@@ -86,6 +86,7 @@ scoreboard players reset @a[scores={toggleTips=1..,GamesPlayed=1..}]
 
 execute as @a[scores={toggleTips=1..},tag=hideTips] run tag @s add tempHideTips
 
+execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=!hideTips] run tag @s remove NeedsTutorial
 execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=!hideTips] run tellraw @s [{"text":"You have disabled ingame tips. You can re-enable them using your Lobby Book.","color":"red"}]
 execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=!hideTips] run tag @s add hideTips
 

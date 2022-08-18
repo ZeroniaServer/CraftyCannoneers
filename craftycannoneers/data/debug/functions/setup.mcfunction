@@ -107,14 +107,6 @@ scoreboard objectives add toggleTips trigger
 #> Lobby entities
 execute unless entity @e[type=marker,tag=parkourStart] run summon marker -73 -22 -1 {Tags:["parkourStart"]}
 execute unless entity @e[type=marker,tag=parkourEnd] run summon marker -71 2 -4 {Tags:["parkourEnd"]}
-kill @e[tag=Goldy]
-summon villager -61.2 -31.8 50 {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-10000000,Tags:["GoldyVillager","Goldy"]}
-summon armor_stand -61.2 -30.6 50 {Small:1b,Invulnerable:1b,Silent:1b,Marker:1b,NoGravity:1b,Invisible:1b,Tags:["GoldyAS","Goldy"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:79}}]}
-
-kill @e[tag=Planetary]
-summon villager -49 -7 37 {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-10000000,Tags:["PlanetaryVillager","Planetary"]}
-summon armor_stand -49 -7 37 {Small:1b,Invulnerable:1b,Silent:1b,Marker:1b,NoGravity:1b,Invisible:1b,Tags:["PlanetaryAS","Planetary"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:80}}]}
-summon armor_stand -49 -7 37 {Small:1b,Invulnerable:1b,Silent:1b,Marker:1b,NoGravity:1b,Invisible:1b,Tags:["PlanetaryAS","Planetary"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:81}}]}
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"

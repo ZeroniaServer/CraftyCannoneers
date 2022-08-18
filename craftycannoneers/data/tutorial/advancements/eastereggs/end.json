@@ -1,0 +1,25 @@
+{
+    "display": {
+        "title": {
+            "text": "Easter Eggs",
+            "color": "aqua"
+        },
+        "description": {
+            "text": "You found all the Easter Eggs!",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:dragon_egg"
+        },
+        "frame": "goal",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "location": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "tutorial:eastereggs/rocketriders"
+}
