@@ -25,9 +25,9 @@ execute as @a[predicate=!tutorial:cannondock,tag=OnDock] run function lobby:item
 execute as @a[predicate=!tutorial:cannondock,tag=OnDock] run tag @s remove OnDock
 
 #> Ship restoring
-execute unless entity @e[type=armor_stand,tag=cannonball] unless entity @e[type=marker,tag=ShipRestore] unless entity @e[type=marker,tag=FakeWeakpoint,tag=!WeakpointDamaged] run function tutorial:restoreship
-execute unless entity @e[type=armor_stand,tag=cannonball] if score $shipstatus CmdData matches 1 if score $shiptimer CmdData matches 1..1199 run scoreboard players add $shiptimer CmdData 1
-execute unless entity @e[type=armor_stand,tag=cannonball] if score $shipstatus CmdData matches 1 if score $shiptimer CmdData matches 1200 run function tutorial:restoreship
+execute unless entity @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/tutorial] unless entity @e[type=marker,tag=ShipRestore] unless entity @e[type=marker,tag=FakeWeakpoint,tag=!WeakpointDamaged] run function tutorial:restoreship
+execute unless entity @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/tutorial] if score $shipstatus CmdData matches 1 if score $shiptimer CmdData matches 1..1199 run scoreboard players add $shiptimer CmdData 1
+execute unless entity @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/tutorial] if score $shipstatus CmdData matches 1 if score $shiptimer CmdData matches 1200 run function tutorial:restoreship
 execute unless entity @a[predicate=game:tutorialbounds] if score $shipstatus CmdData matches 1 if score $shiptimer CmdData matches 1.. run function tutorial:restoreship
 
 execute as @e[type=marker,tag=ShipRestore] at @s run function tutorial:restoreloop
