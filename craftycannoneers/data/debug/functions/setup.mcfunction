@@ -121,7 +121,9 @@ team add Purple
 team add Spectator
 team add NoName
 team add Collide
+team add Developer
 team modify Lobby color blue
+team modify Developer color dark_green
 team modify Orange color gold
 team modify Purple color dark_purple
 team modify Spectator color gray
