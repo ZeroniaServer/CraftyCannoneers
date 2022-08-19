@@ -12,7 +12,7 @@ execute as @a[gamemode=!spectator,predicate=tutorial:cannondock,tag=!OnDock] run
 
 execute as @a[gamemode=!spectator,predicate=tutorial:cannondock,tag=!OnDock] run function lobby:hats
 
-execute as @a[gamemode=!spectator,predicate=tutorial:cannondock,tag=!OnDock] at @s run playsound ding master @a ~ ~ ~ 1 0.6
+execute as @a[gamemode=!spectator,predicate=tutorial:cannondock,tag=!OnDock] at @s run playsound ding master @s ~ ~ ~ 1 0.6
 execute as @a[gamemode=!spectator,predicate=tutorial:cannondock,tag=!OnDock] run title @s title {"text":"Cannon Dock","color":"aqua"}
 execute as @a[gamemode=!spectator,predicate=tutorial:cannondock,tag=!OnDock] run title @s subtitle {"text":"(Learn how to shoot Cannons)","color":"yellow"}
 

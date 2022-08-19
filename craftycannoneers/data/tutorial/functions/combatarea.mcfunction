@@ -1,4 +1,4 @@
-execute as @a[gamemode=!spectator,predicate=tutorial:combatarea,tag=!InCombat] at @s run playsound ding master @a ~ ~ ~ 1 0.6
+execute as @a[gamemode=!spectator,predicate=tutorial:combatarea,tag=!InCombat] at @s run playsound ding master @s ~ ~ ~ 1 0.6
 execute as @a[gamemode=!spectator,predicate=tutorial:combatarea,tag=!InCombat] run title @s title {"text":"Combat Area","color":"aqua"}
 execute as @a[gamemode=!spectator,predicate=tutorial:combatarea,tag=!InCombat] run title @s subtitle {"text":"(Try out some weapons)","color":"yellow"}
 
@@ -7,7 +7,7 @@ execute as @a[gamemode=!spectator,predicate=tutorial:combatarea,tag=!InCombat] r
 execute as @a[gamemode=!spectator,predicate=tutorial:combatarea,tag=!InCombat] run effect clear @s weakness
 execute as @a[gamemode=!spectator,predicate=tutorial:combatarea,tag=!InCombat] run tag @s add InCombat
 
-execute as @a[gamemode=!spectator,predicate=tutorial:combatarea2,tag=!InCombat] at @s run playsound ding master @a ~ ~ ~ 1 0.6
+execute as @a[gamemode=!spectator,predicate=tutorial:combatarea2,tag=!InCombat] at @s run playsound ding master @s ~ ~ ~ 1 0.6
 execute as @a[gamemode=!spectator,predicate=tutorial:combatarea2,tag=!InCombat] run title @s title {"text":"Combat Area","color":"aqua"}
 execute as @a[gamemode=!spectator,predicate=tutorial:combatarea2,tag=!InCombat] run title @s subtitle {"text":"(Try out some weapons)","color":"yellow"}
 

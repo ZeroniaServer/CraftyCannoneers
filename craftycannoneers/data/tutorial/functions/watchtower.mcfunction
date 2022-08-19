@@ -4,7 +4,7 @@ execute as @a[gamemode=!spectator,predicate=tutorial:watchtower,tag=!InTower] ru
 
 execute as @a[gamemode=!spectator,predicate=tutorial:watchtower,tag=!InTower] at @s run item replace entity @s hotbar.4 with spyglass{NoDrop:1b,display:{Name:'[{"text":"Spotting Spyglass","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Use this Spyglass to expose","italic":false,"color":"aqua"}]','[{"text":"the weakpoints of a ship!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']}}
 
-execute as @a[gamemode=!spectator,predicate=tutorial:watchtower,tag=!InTower] at @s run playsound ding master @a ~ ~ ~ 1 0.6
+execute as @a[gamemode=!spectator,predicate=tutorial:watchtower,tag=!InTower] at @s run playsound ding master @s ~ ~ ~ 1 0.6
 execute as @a[gamemode=!spectator,predicate=tutorial:watchtower,tag=!InTower] run title @s title {"text":"Watchtower","color":"aqua"}
 execute as @a[gamemode=!spectator,predicate=tutorial:watchtower,tag=!InTower] run title @s subtitle {"text":"(Learn about spotting Weakpoints)","color":"yellow"}
 
