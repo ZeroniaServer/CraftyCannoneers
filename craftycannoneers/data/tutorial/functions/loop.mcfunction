@@ -34,6 +34,5 @@ execute if entity @e[type=#game:chest,tag=fakechest,scores={CmdData=..10}] run s
 execute if score $runtreasure CmdData matches 1 run function tutorial:treasurepit
 
 #> Pirate Teachers
-execute as @e[type=wandering_trader,tag=Teacher] run data merge entity @s {HandItems:[],Offers:{Recipes:[]}}
-effect clear @e[type=wandering_trader,tag=Teacher] invisibility
+execute as @e[type=wandering_trader,tag=Teacher] run data merge entity @s {Offers:{Recipes:[]}}
 execute as @e[type=wandering_trader,tag=Teacher] at @s run tp @s ~ ~ ~ facing entity @p[team=Lobby,distance=..10]
