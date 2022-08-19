@@ -1,1 +1,1 @@
-execute as @e[type=marker,tag=FakeWeakpoint,tag=WeakpointDamaged] run tag @s remove WeakpointDamaged
+tag @e[type=marker,tag=FakeWeakpoint,tag=WeakpointDamaged] remove WeakpointDamaged
