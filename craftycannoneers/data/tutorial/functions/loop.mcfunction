@@ -26,7 +26,12 @@ execute if score $runxparticle CmdData matches 1 as @e[type=marker,tag=FXParticl
 execute if score $runwatchtower CmdData matches 1 run function tutorial:watchtower
 
 #> Treasure Pit
-function tutorial:treasurepit
+scoreboard players set $runtreasure CmdData 0
+execute if entity @a[team=Lobby,predicate=tutorial:treasurepit] run scoreboard players set $runtreasure CmdData 1
+execute if entity @a[team=Lobby,tag=InPit] run scoreboard players set $runtreasure CmdData 1
+execute if entity @e[type=#game:chest,tag=fakechest,tag=Looted] run scoreboard players set $runtreasure CmdData 1
+execute if entity @e[type=#game:chest,tag=fakechest,scores={CmdData=..10}] run scoreboard players set $runtreasure CmdData 1
+execute if score $runtreasure CmdData matches 1 run function tutorial:treasurepit
 
 #> Pirate Teachers
 execute as @e[type=wandering_trader,tag=Teacher] run data merge entity @s {HandItems:[],Offers:{Recipes:[]}}
