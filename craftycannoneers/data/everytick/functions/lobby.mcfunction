@@ -33,7 +33,6 @@ execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run title @s title ["",{
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run title @s subtitle ["",{"text":"V0.7.0 ","color":"aqua"},{"text":"Made by ","color":"gray"},{"text":"Zeronia","color":"green"},{"text":"!","color":"gray"}]
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run scoreboard players set @s GamesPlayed 10
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run tellraw @s ["","\n",{"text":"Welcome aboard! ","bold":true,"color":"dark_green"},"\n",{"text":"It seems like you're new to ","color":"green"},{"text":"Crafty ","bold":true,"color":"dark_purple"},{"text":"Cannoneers","bold":true,"color":"gold"},{"text":"!","color":"green"},"\n",{"text":"We highly recommend you to check out the ","color":"green"},{"text":"Training Island","bold":true,"color":"aqua"},{"text":" before playing the actual game!","color":"green"},"\n",{"text":"You can go there by using the blue warp pad on the left side of the Lobby.","italic":true,"color":"dark_green"},"\n"]
-execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run tellraw @s ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"text":"Thank you for using the resource pack!","color":"aqua","italic":true}]}]
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run tag @s add firstJoined
 execute as @a store result score @s playerUUID run data get entity @s UUID[0]
 
