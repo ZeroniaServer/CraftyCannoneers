@@ -26,7 +26,7 @@ execute unless entity @e[type=boat,tag=BoatBoat,tag=2,tag=Sailing] positioned 31
 execute unless entity @e[type=boat,tag=BoatBoat,tag=3,tag=Sailing] positioned 83 -31 12 unless entity @e[type=boat,tag=BoatBoat,tag=3,distance=..8] as @e[type=boat,tag=BoatBoat,tag=3] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..12] run tag @e[type=boat,tag=BoatBoat,tag=3] add Sinking
 execute unless entity @e[type=boat,tag=BoatBoat,tag=4,tag=Sailing] positioned 57 -31 -12 unless entity @e[type=boat,tag=BoatBoat,tag=4,distance=..8] as @e[type=boat,tag=BoatBoat,tag=4] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..12] run tag @e[type=boat,tag=BoatBoat,tag=4] add Sinking
 
-scoreboard players add @e[type=boat,tag=BoatBoat,tag=Sinking]  1
+scoreboard players add @e[type=boat,tag=BoatBoat,tag=Sinking] CmdData 1
 execute as @e[type=boat,tag=BoatBoat,tag=Sinking,scores={CmdData=1}] at @s run particle minecraft:bubble_column_up ~ ~ ~ 0.8 0.2 0.8 0.1 10 force
 execute as @e[type=boat,tag=BoatBoat,tag=Sinking,scores={CmdData=1}] at @s run particle minecraft:splash ~ ~1 ~ 0.4 0.5 0.4 0.1 100 force
 execute as @e[type=boat,tag=BoatBoat,tag=Sinking,scores={CmdData=1}] at @s run playsound minecraft:entity.generic.swim master @a ~ ~ ~ 1 0.8
