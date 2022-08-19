@@ -1,5 +1,6 @@
 execute at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=OnDock]
-execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass]
+execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=!SpotFake6]
+execute at @s run particle dust 0 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=SpotFake6]
 #fade 0
 execute if entity @s[tag=S6] at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=Exposed6,scores={fakeexpose6=..200}]
 
@@ -15,7 +16,8 @@ execute if entity @s[tag=S6] at @s run particle dust 1.275 1.085 1.085 1.2 ~0.5 
 execute if entity @s[tag=1] at @s run tp @s ~ ~0.2 ~-0.2
 execute if entity @s[tag=2] at @s run tp @s ~ ~0.2 ~0.2
 execute at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=OnDock]
-execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass]
+execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=!SpotFake6]
+execute at @s run particle dust 0 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=SpotFake6]
 #fade 0
 execute if entity @s[tag=S6] at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=Exposed6,scores={fakeexpose6=..200}]
 
@@ -31,7 +33,8 @@ execute if entity @s[tag=S6] at @s run particle dust 1.275 1.085 1.085 1.2 ~0.5 
 execute if entity @s[tag=1] at @s run tp @s ~ ~0.2 ~-0.2
 execute if entity @s[tag=2] at @s run tp @s ~ ~0.2 ~0.2
 execute at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=OnDock]
-execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass]
+execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=!SpotFake6]
+execute at @s run particle dust 0 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=SpotFake6]
 #fade 0
 execute if entity @s[tag=S6] at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=Exposed6,scores={fakeexpose6=..200}]
 
@@ -47,7 +50,8 @@ execute if entity @s[tag=S6] at @s run particle dust 1.275 1.085 1.085 1.2 ~0.5 
 execute if entity @s[tag=1] at @s run tp @s ~ ~0.2 ~-0.2
 execute if entity @s[tag=2] at @s run tp @s ~ ~0.2 ~0.2
 execute at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=OnDock]
-execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass]
+execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=!SpotFake6]
+execute at @s run particle dust 0 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=SpotFake6]
 #fade 0
 execute if entity @s[tag=S6] at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=Exposed6,scores={fakeexpose6=..200}]
 
@@ -63,7 +67,8 @@ execute if entity @s[tag=S6] at @s run particle dust 1.275 1.085 1.085 1.2 ~0.5 
 execute if entity @s[tag=1] at @s run tp @s ~ ~0.2 ~-0.2
 execute if entity @s[tag=2] at @s run tp @s ~ ~0.2 ~0.2
 execute at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=OnDock]
-execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass]
+execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=!SpotFake6]
+execute at @s run particle dust 0 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=SpotFake6]
 #fade 0
 execute if entity @s[tag=S6] at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=Exposed6,scores={fakeexpose6=..200}]
 
@@ -79,7 +84,8 @@ execute if entity @s[tag=S6] at @s run particle dust 1.275 1.085 1.085 1.2 ~0.5 
 execute if entity @s[tag=1] at @s run tp @s ~ ~0.2 ~-0.2
 execute if entity @s[tag=2] at @s run tp @s ~ ~0.2 ~0.2
 execute at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=OnDock]
-execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass]
+execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=!SpotFake6]
+execute at @s run particle dust 0 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=SpotFake6]
 #fade 0
 execute if entity @s[tag=S6] at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=Exposed6,scores={fakeexpose6=..200}]
 
@@ -95,7 +101,8 @@ execute if entity @s[tag=S6] at @s run particle dust 1.275 1.085 1.085 1.2 ~0.5 
 execute if entity @s[tag=1] at @s run tp @s ~ ~0.2 ~-0.2
 execute if entity @s[tag=2] at @s run tp @s ~ ~0.2 ~0.2
 execute at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=OnDock]
-execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass]
+execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=!SpotFake6]
+execute at @s run particle dust 0 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=SpotFake6]
 #fade 0
 execute if entity @s[tag=S6] at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=Exposed6,scores={fakeexpose6=..200}]
 
@@ -111,7 +118,8 @@ execute if entity @s[tag=S6] at @s run particle dust 1.275 1.085 1.085 1.2 ~0.5 
 execute if entity @s[tag=1] at @s run tp @s ~ ~0.2 ~-0.2
 execute if entity @s[tag=2] at @s run tp @s ~ ~0.2 ~0.2
 execute at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=OnDock]
-execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass]
+execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=!SpotFake6]
+execute at @s run particle dust 0 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=SpotFake6]
 #fade 0
 execute if entity @s[tag=S6] at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=Exposed6,scores={fakeexpose6=..200}]
 
@@ -127,7 +135,8 @@ execute if entity @s[tag=S6] at @s run particle dust 1.275 1.085 1.085 1.2 ~0.5 
 execute if entity @s[tag=1] at @s run tp @s ~ ~0.2 ~-0.2
 execute if entity @s[tag=2] at @s run tp @s ~ ~0.2 ~0.2
 execute at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=OnDock]
-execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass]
+execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=!SpotFake6]
+execute at @s run particle dust 0 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=SpotFake6]
 #fade 0
 execute if entity @s[tag=S6] at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=Exposed6,scores={fakeexpose6=..200}]
 
@@ -143,7 +152,8 @@ execute if entity @s[tag=S6] at @s run particle dust 1.275 1.085 1.085 1.2 ~0.5 
 execute if entity @s[tag=1] at @s run tp @s ~ ~0.2 ~-0.2
 execute if entity @s[tag=2] at @s run tp @s ~ ~0.2 ~0.2
 execute at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=OnDock]
-execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass]
+execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=!SpotFake6]
+execute at @s run particle dust 0 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=SpotFake6]
 #fade 0
 execute if entity @s[tag=S6] at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=Exposed6,scores={fakeexpose6=..200}]
 
@@ -159,7 +169,8 @@ execute if entity @s[tag=S6] at @s run particle dust 1.275 1.085 1.085 1.2 ~0.5 
 execute if entity @s[tag=1] at @s run tp @s ~ ~0.2 ~-0.2
 execute if entity @s[tag=2] at @s run tp @s ~ ~0.2 ~0.2
 execute at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=OnDock]
-execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass]
+execute at @s run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=!SpotFake6]
+execute at @s run particle dust 0 1 0 0.5 ~ ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=UsingSpyglass,tag=SpotFake6]
 #fade 0
 execute if entity @s[tag=S6] at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 1 force @a[tag=InTower,tag=Exposed6,scores={fakeexpose6=..200}]
 
