@@ -154,18 +154,18 @@ bossbar set orangeship players @a[team=!Lobby]
 execute as @a run trigger readyup set 0
 
 execute as @a[scores={death=1..}] run function cannons:despawnplayerc
-execute as @a[scores={death=1..},team=!Lobby,team=!Spectator] run function game:givegear
-execute as @a[scores={death=1..},team=!Lobby,team=!Spectator] run gamemode adventure @s[gamemode=!spectator]
+execute as @a[scores={death=1..},team=!Lobby,team=!Spectator,team=!Developer] run function game:givegear
+execute as @a[scores={death=1..},team=!Lobby,team=!Spectator,team=!Developer] run gamemode adventure @s[gamemode=!spectator]
 tp @a[team=Orange,scores={death=1..}] 88 -26 55 90 0
 tp @a[team=Purple,scores={death=1..}] 52 -26 -55 -90 0
 tag @a[scores={death=1..}] remove onboatregen
 tag @a[scores={death=1..}] add loaded
-scoreboard players add @a[team=!Lobby,team=!Spectator,scores={death=1..}] MVPdeath 1
+scoreboard players add @a[team=!Lobby,team=!Spectator,team=!Developer,scores={death=1..}] MVPdeath 1
 scoreboard players reset @a[scores={death=1..}] death
 
-effect give @a[team=!Lobby,team=!Spectator,scores={kill=1..,gappleTimer=0}] regeneration 4 2 true
-scoreboard players add @a[team=!Lobby,team=!Spectator,scores={kill=1..}] MVPkill 1
-execute as @a[team=!Lobby,team=!Spectator,scores={kill=1..}] run advancement grant @s only tutorial:zzzunlockables/killplayer
+effect give @a[team=!Lobby,team=!Spectator,team=!Developer,scores={kill=1..,gappleTimer=0}] regeneration 4 2 true
+scoreboard players add @a[team=!Lobby,team=!Spectator,team=!Developer,scores={kill=1..}] MVPkill 1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,scores={kill=1..}] run advancement grant @s only tutorial:zzzunlockables/killplayer
 execute as @a[team=Orange,scores={kill=1..}] run scoreboard players add $OrangeKills BalanceScore 1
 execute as @a[team=Purple,scores={kill=1..}] run scoreboard players add $PurpleKills BalanceScore 1
 execute as @a[scores={kill=1..},limit=1,sort=random] run function balancing:pvpskillcheck
@@ -187,17 +187,17 @@ execute unless score $gamestate CmdData matches 3.. if score $OrangeHP CmdData m
 
 execute unless score $gamestate CmdData matches 3.. if score $WinningTeam CmdData matches 1.. run scoreboard players set $gamestate CmdData 3
 #timer
-execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..0 if score $PurpleHP CmdData < $OrangeHP CmdData run scoreboard players set $WinningTeam CmdData 1
-execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..0 if score $OrangeHP CmdData < $PurpleHP CmdData run scoreboard players set $WinningTeam CmdData 2
-execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..0 if score $OrangeHP CmdData = $PurpleHP CmdData run scoreboard players set $WinningTeam CmdData 0
-execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..0 if score $PurpleHP CmdData < $OrangeHP CmdData run bossbar set purpleship name ["",{"text":"Purple: ","color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"text":"Orange: ","color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
-execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..0 if score $OrangeHP CmdData < $PurpleHP CmdData run bossbar set purpleship name ["",{"text":"Purple: ","color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"text":"Orange: ","color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
-execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..0 if score $OrangeHP CmdData = $PurpleHP CmdData run bossbar set purpleship name ["",{"text":"Purple: ","color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"text":"Orange: ","color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
-execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..0 if score $PurpleHP CmdData < $OrangeHP CmdData run scoreboard players set $gamestate CmdData 3
-execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..0 if score $OrangeHP CmdData < $PurpleHP CmdData run scoreboard players set $gamestate CmdData 3
-execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..0 if score $OrangeHP CmdData = $PurpleHP CmdData run scoreboard players set $gamestate CmdData 3
+execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..19 if score $PurpleHP CmdData < $OrangeHP CmdData run scoreboard players set $WinningTeam CmdData 1
+execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..19 if score $OrangeHP CmdData < $PurpleHP CmdData run scoreboard players set $WinningTeam CmdData 2
+execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..19 if score $OrangeHP CmdData = $PurpleHP CmdData run scoreboard players set $WinningTeam CmdData 0
+execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..19 if score $PurpleHP CmdData < $OrangeHP CmdData run bossbar set purpleship name ["",{"text":"Purple: ","color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"text":"Orange: ","color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
+execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..19 if score $OrangeHP CmdData < $PurpleHP CmdData run bossbar set purpleship name ["",{"text":"Purple: ","color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"text":"Orange: ","color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
+execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..19 if score $OrangeHP CmdData = $PurpleHP CmdData run bossbar set purpleship name ["",{"text":"Purple: ","color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"text":"Orange: ","color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
+execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..19 if score $PurpleHP CmdData < $OrangeHP CmdData run scoreboard players set $gamestate CmdData 3
+execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..19 if score $OrangeHP CmdData < $PurpleHP CmdData run scoreboard players set $gamestate CmdData 3
+execute unless score $gamestate CmdData matches 3.. if score $ticks CmdData matches ..19 if score $OrangeHP CmdData = $PurpleHP CmdData run scoreboard players set $gamestate CmdData 3
 
-execute as @e[type=wandering_trader,tag=Trader] at @s run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,team=!Lobby,team=!Spectator,distance=..10]
+execute as @e[type=wandering_trader,tag=Trader] at @s run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer,distance=..10]
 
 #passive regen + gapple timer
 scoreboard players add @a gappleTimer 0

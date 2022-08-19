@@ -19,12 +19,12 @@ execute as @e[type=armor_stand,tag=GasAS] at @s run particle minecraft:soul ~ ~ 
 execute as @e[type=armor_stand,tag=GasAS] at @s run tp @s ~ ~0.002 ~
 execute as @e[type=marker,tag=GasCloud] at @s run tp @s ~ ~0.002 ~
 
-execute as @e[type=marker,tag=GasCloud] at @s run effect give @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator] poison 6 100 true
-execute as @e[type=marker,tag=GasCloud] at @s run effect give @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator] nausea 7 3 true
+execute as @e[type=marker,tag=GasCloud] at @s run effect give @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] poison 6 100 true
+execute as @e[type=marker,tag=GasCloud] at @s run effect give @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] nausea 7 3 true
 
 
-execute as @e[type=armor_stand,tag=GasBubble] at @s run effect give @a[distance=..2,team=!Lobby,team=!Spectator] poison 6 100 true
-execute as @e[type=armor_stand,tag=Bubble] at @s run effect give @a[distance=..2,team=!Lobby,team=!Spectator] nausea 7 3 true
+execute as @e[type=armor_stand,tag=GasBubble] at @s run effect give @a[distance=..2,team=!Lobby,team=!Spectator,team=!Developer] poison 6 100 true
+execute as @e[type=armor_stand,tag=Bubble] at @s run effect give @a[distance=..2,team=!Lobby,team=!Spectator,team=!Developer] nausea 7 3 true
 
 execute as @e[type=marker,tag=GasCloud,scores={CmdData=243}] at @s run data merge entity @e[type=armor_stand,tag=GasAS,limit=1,sort=nearest,distance=..1] {Small:1b}
 execute as @e[type=marker,tag=GasCloud,scores={CmdData=250..}] at @s run kill @e[type=armor_stand,tag=GasAS,limit=1,sort=nearest,distance=..1]

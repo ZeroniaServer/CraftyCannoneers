@@ -1,5 +1,5 @@
-execute unless score $gamestate CmdData matches 1 run scoreboard players enable @a[team=!Lobby,team=!Spectator] readyup
-execute if score $gamestate CmdData matches 1 as @a[team=!Lobby,team=!Spectator] run trigger readyup set 0
+execute unless score $gamestate CmdData matches 1 run scoreboard players enable @a[team=!Lobby,team=!Spectator,team=!Developer] readyup
+execute if score $gamestate CmdData matches 1 as @a[team=!Lobby,team=!Spectator,team=!Developer] run trigger readyup set 0
 
 execute as @a[team=Orange] unless score @s readyup matches 0 unless score $OrangeReady CmdData matches 1 at @s run playsound readyup master @s ~ ~ ~ 1 0
 execute as @a[team=Orange] unless score @s readyup matches 0 unless score $OrangeReady CmdData matches 1 run title @a[tag=!inParkour] actionbar ["",{"selector":"@s","bold":true},{"text":" marked ","color":"aqua"},{"text":"Orange","color":"gold","bold":true},{"text":" team as ","color":"aqua"},{"text":"Ready!","color":"green","bold":true,"underlined":true}]
@@ -25,7 +25,7 @@ execute if score $PurpleReady CmdData matches 2.. run scoreboard players set $Pu
 execute as @a[team=Purple] unless score @s readyup matches 0 if score $PurpleReady CmdData matches 1 run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","text":"Purple: "},{"color":"#55FF55","text":"✔","bold":true}],"text":""}'}
 execute as @a[team=Purple] unless score @s readyup matches 0 if score $PurpleReady CmdData matches 0 run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","text":"Purple: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
 
-execute as @a[team=!Lobby,team=!Spectator] unless score @s readyup matches 0 run scoreboard players reset @s readyup
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer] unless score @s readyup matches 0 run scoreboard players reset @s readyup
 execute as @a[team=!Purple,team=!Orange] run trigger readyup set 0
 tag @a[team=!Purple,team=!Orange,tag=ClickedReady] remove ClickedReady
 

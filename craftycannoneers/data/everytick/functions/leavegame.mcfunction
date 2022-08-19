@@ -5,7 +5,7 @@ execute as @a[scores={LeftGame=1..}] run tag @s add LeaveGame
 
 scoreboard players enable @a[team=!Lobby] leavegame
 scoreboard players reset @a[team=Lobby] leavegame
-execute as @a[team=!Lobby,team=!Spectator] unless score @s leavegame matches 0 run tellraw @a ["",{"selector":"@s"},{"text":" left their team!","color":"dark_aqua"}]
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer] unless score @s leavegame matches 0 run tellraw @a ["",{"selector":"@s"},{"text":" left their team!","color":"dark_aqua"}]
 execute as @a[team=Spectator] unless score @s leavegame matches 0 run tellraw @a ["",{"selector":"@s","color":"dark_gray"},{"text":" is no longer spectating the game.","color":"gray"}]
 execute as @a[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveGame
 
@@ -23,7 +23,7 @@ execute as @a[tag=LeaveGame] at @s run clear @s
 execute as @a[tag=LeaveGame] run function lobby:easteregg/buttonreset
 execute as @a[tag=LeaveGame] run function lobby:items
 execute as @a[tag=LeaveGame] at @s run effect clear @s
-execute as @a[tag=LeaveGame] at @s run gamemode adventure @s
+execute as @a[tag=LeaveGame] at @s run gamemode adventure
 execute as @a[tag=LeaveGame] run attribute @s minecraft:generic.luck base set 0.0
 execute as @a[tag=LeaveGame] run recipe take @s *
 scoreboard players add @a[tag=LeaveGame,scores={LeftGame=1..}] msgdelay 1
@@ -40,6 +40,7 @@ execute as @a[scores={LeftGame=1..}] run scoreboard players reset @s LeftGame
 execute as @a[tag=LeaveGame] at @s run team join Lobby @s
 tag @a[tag=LeaveGame] remove onboatregen
 tag @a[tag=LeaveGame] remove loaded
+tag @a[tag=LeaveGame] remove InPlayerCB
 execute as @a[tag=LeaveGame] run scoreboard players reset @s loverocks
 execute as @a[tag=LeaveGame,advancements={tutorial:zzzunlockables/rocks={50=false}}] run advancement revoke @s only tutorial:zzzunlockables/rocks
 

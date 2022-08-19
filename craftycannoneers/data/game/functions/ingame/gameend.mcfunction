@@ -6,9 +6,9 @@ tag @e[type=marker,tag=joinpad] add Locked
 scoreboard players add $EndTime CmdData 1
 
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1..10 run title @a title {"text":"It's a tie!","color":"gray"}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1..10 run title @a[team=!Lobby,team=!Spectator] subtitle {"text":"You had one job...","color":"dark_gray"}
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1..10 run title @a[team=!Lobby,team=!Spectator,team=!Developer] subtitle {"text":"You had one job...","color":"dark_gray"}
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1..10 run title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"dark_gray"}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a[team=!Lobby,team=!Spectator] at @s run playsound minecraft:entity.wither.hurt master @s ~ ~ ~ 1 0
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a[team=!Lobby,team=!Spectator,team=!Developer] at @s run playsound minecraft:entity.wither.hurt master @s ~ ~ ~ 1 0
 
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1..10 run title @a title {"text":"Orange Team Won!","color":"gold"}
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1..10 run title @a[team=Orange] subtitle {"text":"Well played!","color":"green"}
@@ -35,17 +35,17 @@ execute if score $WinningTeam CmdData matches 2 run particle minecraft:large_smo
 execute if score $EndTime CmdData matches 1 run function game:mvpstats/check
 execute if score $EndTime CmdData matches 1 run scoreboard players remove @a[team=Purple,scores={GamesPlayed=1..}] GamesPlayed 1
 execute if score $EndTime CmdData matches 1 run scoreboard players remove @a[team=Orange,scores={GamesPlayed=1..}] GamesPlayed 1
-execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] resistance 1000000 100 true
-execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] instant_health 1000000 100 true
-execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] regeneration 1000000 100 true
+execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator,team=!Developer] resistance 1000000 100 true
+execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator,team=!Developer] instant_health 1000000 100 true
+execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator,team=!Developer] regeneration 1000000 100 true
 execute if score $EndTime CmdData matches 1.. if score $WinningTeam CmdData matches 1 run effect give @a[team=Purple] weakness 1000000 100 true
 execute if score $EndTime CmdData matches 1.. if score $WinningTeam CmdData matches 2 run effect give @a[team=Orange] weakness 1000000 100 true
-execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] fire_resistance 1000000 100 true
-execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator] conduit_power 1000000 100 true
+execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator,team=!Developer] fire_resistance 1000000 100 true
+execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator,team=!Developer] conduit_power 1000000 100 true
 execute if score $EndTime CmdData matches 1.. run gamerule fallDamage false
 
-execute if score $EndTime CmdData matches 150 run gamemode spectator @a[team=!Lobby,team=!Spectator]
-execute if score $EndTime CmdData matches 150 run effect clear @a[team=!Lobby,team=!Spectator]
+execute if score $EndTime CmdData matches 150 as @a[team=!Lobby,team=!Spectator,team=!Developer] run gamemode spectator
+execute if score $EndTime CmdData matches 150 run effect clear @a[team=!Lobby,team=!Spectator,team=!Developer]
 execute if score $EndTime CmdData matches 250.. run function game:forcestop
 
 #> Firework purple

@@ -6,6 +6,7 @@ advancement grant @a[tag=PlayerCannon] only tutorial:zzzunlockables/playercannon
 
 execute as @a[tag=PlayerCannon,gamemode=!spectator] run gamemode spectator @s
 spectate @s @a[tag=PlayerCannon,limit=1,sort=nearest]
+tag @a[tag=PlayerCannon] add InPlayerCB
 
 execute as @a[tag=PlayerCannon,team=Purple] at @s run item replace entity @e[type=armor_stand,tag=PlayerCannonball,limit=1,sort=nearest] armor.head with diamond_hoe{CustomModelData:57}
 execute as @a[tag=PlayerCannon,team=Purple] at @s run team join Purple @e[type=slime,tag=PCannonballname,limit=1,sort=nearest]

@@ -9,6 +9,7 @@ scoreboard players operation $OrangeHP CmdData = $ShipHP CmdData
 
 scoreboard players operation $ticks CmdData = $TimeLimit CmdData
 scoreboard players operation $ticks CmdData *= $1200 CmdData
+scoreboard players add $ticks CmdData 20
 
 function lobby:customizer/lockboxdamage
 scoreboard players set $CombinedDamage CmdData 0

@@ -24,5 +24,5 @@ execute as @e[type=slime,tag=BlastSlime,tag=!HasName] run data modify entity @s 
 data remove storage craftycannoneers:temp CustomName
 tag @e[type=slime,tag=BlastSlime,tag=!HasName] add HasName
 
-tag @a[team=!Spectator,team=!Lobby,distance=..6] add UtilKilled
+tag @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..6] add UtilKilled
 execute store result score @a[tag=UtilKilled,distance=..6] KillerUUID run scoreboard players get @s playerUUID

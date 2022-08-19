@@ -81,7 +81,7 @@ execute as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run tag @a[distan
 
 #> Join Spectator
 execute as @e[type=marker,tag=JoinpadSpec,tag=!Locked] at @s run tag @a[team=Lobby,limit=1,sort=random,distance=..1.2] add JoinSpec
-execute as @a[tag=JoinSpec] at @s run gamemode spectator @s
+execute as @a[tag=JoinSpec] at @s run gamemode spectator
 execute as @a[tag=JoinSpec] at @s run team join Spectator @s
 execute as @a[tag=JoinSpec] at @s run tp @s @s
 execute as @a[tag=JoinSpec] at @s run tp @s 70 18 0

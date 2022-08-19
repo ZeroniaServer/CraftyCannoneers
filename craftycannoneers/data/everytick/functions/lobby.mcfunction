@@ -9,7 +9,7 @@ spawnpoint @a[team=Lobby] -55 -21 0 -90
 effect give @e[type=minecraft:villager] minecraft:invisibility 1000000 100 true
 effect give @e[type=slime] invisibility 1000000 100 true
 
-function debug:forcedmodes
+execute unless score $forcedmodes CmdData matches 0 run function debug:forcedmodes
 function lobby:parkour/parkour
 function lobby:rock/rock
 function lobby:eastereggs

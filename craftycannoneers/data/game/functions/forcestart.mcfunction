@@ -16,7 +16,7 @@ scoreboard players set $PVPbal BalanceScore 0
 
 tag @a remove ClickedReady
 title @a title {"text":"Game Started!","color":"dark_aqua"}
-title @a[team=!Lobby,team=!Spectator] subtitle {"text":"Destroy the enemy ship!","color":"aqua"}
+title @a[team=!Lobby,team=!Spectator,team=!Developer] subtitle {"text":"Destroy the enemy ship!","color":"aqua"}
 title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"aqua"}
 scoreboard players set $Tip CmdData 0
 function tutorial:newset

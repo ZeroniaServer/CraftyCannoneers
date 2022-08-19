@@ -21,10 +21,10 @@ tag @e[type=armor_stand,tag=BoatAS,tag=New] remove New
 execute as @e[type=boat,tag=Sailing] unless score @s click matches 7.. run scoreboard players add @s click 1
 execute as @e[type=boat,tag=Sailing] if score @s click matches 7.. run tag @s add DismountCheck
 
-execute unless entity @e[type=boat,tag=BoatBoat,tag=1,tag=Sailing] positioned 109 -31 0 unless entity @e[type=boat,tag=BoatBoat,tag=1,distance=..8] as @e[type=boat,tag=BoatBoat,tag=1] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..12] run tag @e[type=boat,tag=BoatBoat,tag=1] add Sinking
-execute unless entity @e[type=boat,tag=BoatBoat,tag=2,tag=Sailing] positioned 31 -31 0 unless entity @e[type=boat,tag=BoatBoat,tag=2,distance=..8] as @e[type=boat,tag=BoatBoat,tag=2] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..12] run tag @e[type=boat,tag=BoatBoat,tag=2] add Sinking
-execute unless entity @e[type=boat,tag=BoatBoat,tag=3,tag=Sailing] positioned 83 -31 12 unless entity @e[type=boat,tag=BoatBoat,tag=3,distance=..8] as @e[type=boat,tag=BoatBoat,tag=3] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..12] run tag @e[type=boat,tag=BoatBoat,tag=3] add Sinking
-execute unless entity @e[type=boat,tag=BoatBoat,tag=4,tag=Sailing] positioned 57 -31 -12 unless entity @e[type=boat,tag=BoatBoat,tag=4,distance=..8] as @e[type=boat,tag=BoatBoat,tag=4] at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..12] run tag @e[type=boat,tag=BoatBoat,tag=4] add Sinking
+execute unless entity @e[type=boat,tag=BoatBoat,tag=1,tag=Sailing] positioned 109 -31 0 unless entity @e[type=boat,tag=BoatBoat,tag=1,distance=..8] as @e[type=boat,tag=BoatBoat,tag=1] at @s unless entity @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..12] run tag @e[type=boat,tag=BoatBoat,tag=1] add Sinking
+execute unless entity @e[type=boat,tag=BoatBoat,tag=2,tag=Sailing] positioned 31 -31 0 unless entity @e[type=boat,tag=BoatBoat,tag=2,distance=..8] as @e[type=boat,tag=BoatBoat,tag=2] at @s unless entity @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..12] run tag @e[type=boat,tag=BoatBoat,tag=2] add Sinking
+execute unless entity @e[type=boat,tag=BoatBoat,tag=3,tag=Sailing] positioned 83 -31 12 unless entity @e[type=boat,tag=BoatBoat,tag=3,distance=..8] as @e[type=boat,tag=BoatBoat,tag=3] at @s unless entity @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..12] run tag @e[type=boat,tag=BoatBoat,tag=3] add Sinking
+execute unless entity @e[type=boat,tag=BoatBoat,tag=4,tag=Sailing] positioned 57 -31 -12 unless entity @e[type=boat,tag=BoatBoat,tag=4,distance=..8] as @e[type=boat,tag=BoatBoat,tag=4] at @s unless entity @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..12] run tag @e[type=boat,tag=BoatBoat,tag=4] add Sinking
 
 scoreboard players add @e[type=boat,tag=BoatBoat,tag=Sinking] CmdData 1
 execute as @e[type=boat,tag=BoatBoat,tag=Sinking,scores={CmdData=1}] at @s run particle minecraft:bubble_column_up ~ ~ ~ 0.8 0.2 0.8 0.1 10 force
@@ -70,10 +70,10 @@ execute positioned 51 -31 17 unless block 51 -31 17 lily_pad unless entity @e[ty
 execute positioned 81 -36.8 -17 run particle minecraft:bubble_column_up 81 -36.8 -17 1.4 0 0 0.2 5 force @a[distance=..16]
 execute positioned 58 -36.8 17 run particle minecraft:bubble_column_up 58 -36.8 17 1.4 0 0 0.2 5 force @a[distance=..16]
 
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s run tag @s add InBubble
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1,tag=!InBubble] at @s run scoreboard players set @s bubblewarn 1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s run tag @s add InBubble
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2,tag=!InBubble] at @s run scoreboard players set @s bubblewarn 1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble1] at @s run tag @s add InBubble
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble1,tag=!InBubble] at @s run scoreboard players set @s bubblewarn 1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble2] at @s run tag @s add InBubble
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble2,tag=!InBubble] at @s run scoreboard players set @s bubblewarn 1
 
 scoreboard players add @a[tag=InBubble] bubblewarn 1
 scoreboard players add @a[tag=!InBubble,scores={bubblewarn=1..}] bubblewarn 1
@@ -85,21 +85,21 @@ scoreboard players reset @a[tag=!InBubble,scores={bubblewarn=60..}] bubblewarn
 tag @a[tag=InBubble,scores={bubblewarn=30..}] remove InBubble
 tag @a remove InBubble
 
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble1] at @s if block ~ ~ ~0.1 water run tp @s ~ ~ ~0.1
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble2] at @s if block ~ ~ ~-0.1 water run tp @s ~ ~ ~-0.1
