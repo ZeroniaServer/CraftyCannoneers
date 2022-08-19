@@ -17,13 +17,13 @@ function tutorial:shiptimer
 scoreboard players set $runwatchtower CmdData 0
 execute if entity @a[team=Lobby,predicate=tutorial:watchtower] run scoreboard players set $runwatchtower CmdData 1
 execute if entity @a[team=Lobby,tag=InTower] run scoreboard players set $runwatchtower CmdData 1
-execute if score $runwatchtower CmdData matches 1 run function tutorial:watchtower
 
-#> X Particles
 scoreboard players set $runxparticle CmdData 0
 execute if score $runcannon CmdData matches 1 run scoreboard players set $runxparticle CmdData 1
 execute if score $runwatchtower CmdData matches 1 run scoreboard players set $runxparticle CmdData 1
-execute if score $runxparticle CmdData matches 1 run function tutorial:xparticle
+execute if score $runxparticle CmdData matches 1 as @e[type=marker,tag=FXParticle,tag=!WeakpointDamaged] at @s run function tutorial:xparticle
+
+execute if score $runwatchtower CmdData matches 1 run function tutorial:watchtower
 
 #> Treasure Pit
 scoreboard players set $runtreasure CmdData 0
