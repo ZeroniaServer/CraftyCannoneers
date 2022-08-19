@@ -14,6 +14,9 @@ function lobby:rock/rock
 function lobby:eastereggs
 function everytick:nofall
 
+scoreboard players add @a[scores={msgdelay=1..20}] msgdelay 1
+execute as @a[scores={msgdelay=21..}] run scoreboard players reset @s msgdelay
+
 execute as @a[tag=!hasMoved,scores={jump=1..}] run tag @s add hasMoved
 execute as @a[tag=!hasMoved,scores={walk=30..}] run tag @s add hasMoved
 execute as @a[tag=!hasMoved,scores={sprint=50..}] run tag @s add hasMoved
@@ -33,6 +36,10 @@ execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run tellraw @s ["","\n",
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run tellraw @s ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"text":"Thank you for using the resource pack!","color":"aqua","italic":true}]}]
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run tag @s add firstJoined
 execute as @a store result score @s playerUUID run data get entity @s UUID[0]
+
+execute if score $gamestate CmdData matches 0.. as @a[team=Lobby,tag=hasMoved,tag=firstJoined,tag=!msgReceived] run tellraw @s ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true,"extra":["\n\n",{"nbt":"ReadyToPlay","storage":"craftycannoneers:messages","interpret":true}]},{"nbt":"ReadyToPlay","storage":"craftycannoneers:messages","interpret":true}]}]
+execute unless score $gamestate CmdData matches 0.. as @a[team=Lobby,tag=hasMoved,tag=firstJoined,tag=!msgReceived] run tellraw @s ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true,"extra":["\n\n",{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]
+tag @a[team=Lobby,tag=hasMoved,tag=firstJoined] add msgReceived
 
 #XP
 xp set @a 0 levels

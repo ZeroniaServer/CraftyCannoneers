@@ -26,7 +26,6 @@ scoreboard objectives add CalcAir2 dummy
 scoreboard objectives add modisigns trigger
 scoreboard objectives add moditimer dummy
 scoreboard objectives add leavegame trigger
-scoreboard objectives remove startgame
 scoreboard objectives add CannonTutorial dummy
 scoreboard objectives add ChestTutorial dummy
 scoreboard objectives add playerUUID dummy
@@ -83,9 +82,7 @@ scoreboard objectives add fakeexpose4 dummy
 scoreboard objectives add fakeexpose5 dummy
 scoreboard objectives add fakeexpose6 dummy
 scoreboard objectives add fakeexpose7 dummy
-
-scoreboard objectives remove notifyobjective
-scoreboard objectives remove objectivecount
+scoreboard objectives add msgdelay dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
@@ -99,7 +96,6 @@ scoreboard objectives add bestParkourSecs dummy
 scoreboard objectives add bestParkourDeci dummy
 scoreboard objectives add bestParkourDeci2 dummy
 scoreboard objectives add bestParkourTime dummy
-scoreboard objectives remove Falling
 scoreboard objectives add Falling minecraft.custom:minecraft.time_since_death
 scoreboard objectives add GamesPlayed dummy
 scoreboard objectives add toggleTips trigger
@@ -211,3 +207,5 @@ scoreboard players set -1 const -1
 
 #> Messages
 data modify storage craftycannoneers:messages ResourcePack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":"true"},{"text":"] ","color":"dark_gray"},{"text":"We strongly recommend you to ","color":"gray"},{"text":"use the resource pack","bold":true,"color":"red"},{"text":". ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=1wI7hVR29bKCXJLBafZqpY9xSVL-Ahoc0"}}]'
+data modify storage craftycannoneers:messages SettingsMap set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":"true"},{"text":"] ","color":"dark_gray"},{"text":"Please confirm settings at the ","color":"gray"},{"text":"Settings Map","color":"aqua","bold":true},{"text":"!","color":"gray"}]'
+data modify storage craftycannoneers:messages ReadyToPlay set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":"true"},{"text":"] ","color":"dark_gray"},{"text":"The game is ","color":"gray"},{"text":"ready to play","color":"green","bold":true},{"text":"!","color":"gray"}]'

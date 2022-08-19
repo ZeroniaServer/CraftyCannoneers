@@ -28,7 +28,9 @@ execute as @a[team=] run effect give @s jump_boost 2 128 true
 execute as @a[tag=LeaveGame] at @s run gamemode adventure @s
 execute as @a[tag=LeaveGame] run attribute @s minecraft:generic.luck base set 0.0
 execute as @a[tag=LeaveGame] run recipe take @s *
-execute as @a[tag=LeaveGame,scores={LeftGame=1..},tag=firstJoined] run tellraw @s ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"text":"Ahoy, matey! Thank you for using the resource pack!","color":"aqua","italic":true}]}]
+scoreboard players add @a[tag=LeaveGame,scores={LeftGame=1..}] msgdelay 1
+tag @a[tag=LeaveGame,scores={LeftGame=1..}] remove hasMoved
+tag @a[tag=LeaveGame,scores={LeftGame=1..}] remove msgReceived
 tag @a[tag=LeaveGame,advancements={tutorial:objectives/combat=false}] add NeedsTutorial
 tag @a[tag=LeaveGame,advancements={tutorial:objectives/cannon=false}] add NeedsTutorial
 tag @a[tag=LeaveGame,advancements={tutorial:objectives/treasure=false}] add NeedsTutorial
