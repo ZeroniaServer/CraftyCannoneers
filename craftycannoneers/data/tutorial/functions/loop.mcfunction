@@ -11,18 +11,23 @@ scoreboard players set $runcannon CmdData 0
 execute if entity @a[team=Lobby,predicate=tutorial:cannondock] run scoreboard players set $runcannon CmdData 1
 execute if entity @a[team=Lobby,tag=OnDock] run scoreboard players set $runcannon CmdData 1
 execute if score $runcannon CmdData matches 1 run function tutorial:cannondock
-function tutorial:shiptimer
+
+#> Ship Timer
+execute if score $shipstatus CmdData matches 1 unless entity @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/tutorial] run function tutorial:shiptimer
+execute unless entity @a[tag=OnDock] if score $shipstatus CmdData matches 1 if score $shiptimer CmdData matches 1.. run function tutorial:restoreship
+execute unless entity @a[predicate=game:tutorialbounds] as @e[type=armor_stand,tag=CannonDisp,tag=Tutorial,scores={eyeclick=1..}] run scoreboard players set @s eyeclick 120
+execute as @e[type=marker,tag=ShipRestore] at @s run function tutorial:restoreloop
 
 #> Watchtower
 scoreboard players set $runwatchtower CmdData 0
 execute if entity @a[team=Lobby,predicate=tutorial:watchtower] run scoreboard players set $runwatchtower CmdData 1
 execute if entity @a[team=Lobby,tag=InTower] run scoreboard players set $runwatchtower CmdData 1
 
+#> X Particles
 scoreboard players set $runxparticle CmdData 0
 execute if score $runcannon CmdData matches 1 run scoreboard players set $runxparticle CmdData 1
 execute if score $runwatchtower CmdData matches 1 run scoreboard players set $runxparticle CmdData 1
 execute if score $runxparticle CmdData matches 1 as @e[type=marker,tag=FXParticle,tag=!WeakpointDamaged] at @s run function tutorial:xparticle
-
 execute if score $runwatchtower CmdData matches 1 run function tutorial:watchtower
 
 #> Treasure Pit
