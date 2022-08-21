@@ -29,7 +29,7 @@ execute as @a[team=Lobby,predicate=!tutorial:combatarea,predicate=!tutorial:comb
 execute as @a[team=Lobby,predicate=!tutorial:combatarea,predicate=!tutorial:combatarea2,tag=InCombat] run function lobby:items
 execute as @a[team=Lobby,predicate=!tutorial:combatarea,predicate=!tutorial:combatarea2,tag=InCombat] run tag @s remove InCombat
 
-execute as @e[type=trident] at @s unless predicate tutorial:combatarea unless predicate tutorial:combatarea2 run function tutorial:returnharpoon
+execute as @e[type=trident,predicate=!tutorial:combatarea,predicate=!tutorial:combatarea2] run function tutorial:returnharpoon
 execute as @e[type=trident,nbt={inGround:1b}] run function tutorial:returnharpoon
 
-function tutorial:itemframes
+execute as @e[type=item_frame,tag=TutorialWeapon] at @s run function tutorial:itemframes

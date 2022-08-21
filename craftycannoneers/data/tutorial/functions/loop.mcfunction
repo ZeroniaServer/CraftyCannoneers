@@ -4,7 +4,7 @@ execute if entity @a[team=Lobby,predicate=tutorial:combatarea] run scoreboard pl
 execute if entity @a[team=Lobby,predicate=tutorial:combatarea2] run scoreboard players set $runcombat CmdData 1
 execute if entity @a[team=Lobby,tag=InCombat] run scoreboard players set $runcombat CmdData 1
 execute if score $runcombat CmdData matches 1 run function tutorial:combatarea
-function tutorial:trainingdummies/functionality
+function tutorial:trainingdummies/main
 
 #> Cannon Dock
 scoreboard players set $runcannon CmdData 0
