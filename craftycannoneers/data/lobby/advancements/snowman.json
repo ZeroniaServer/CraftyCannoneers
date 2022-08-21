@@ -11,6 +11,6 @@
       }
     },
     "rewards": {
-      "function": "lobby:easteregg/snowman"
+      "function": "lobby:easteregg/snowman/click"
     }
   }

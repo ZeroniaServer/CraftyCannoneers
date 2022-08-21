@@ -11,6 +11,6 @@
       }
     },
     "rewards": {
-      "function": "lobby:easteregg/parrot"
+      "function": "lobby:easteregg/parrot/click"
     }
   }
