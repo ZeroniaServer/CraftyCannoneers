@@ -1,23 +1,8 @@
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
-summon slime ~ ~-33 ~ {NoAI:1b,Invulnerable:1b,Silent:1b,Attributes:[{Name:"generic.attack_damage",Base:0f}],Tags:["BlastSlime"],Size:16,NoAI:0b,NoGravity:1b,Invulnerable:1b}
+function weapons:bomb/summon4slime
+function weapons:bomb/summon4slime
+function weapons:bomb/summon4slime
+function weapons:bomb/summon4slime
+function weapons:bomb/summon4slime
 
 data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
 execute as @e[type=slime,tag=BlastSlime,tag=!HasName] run data modify entity @s CustomName set from storage craftycannoneers:temp CustomName

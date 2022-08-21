@@ -100,20 +100,6 @@ scoreboard objectives add Falling minecraft.custom:minecraft.time_since_death
 scoreboard objectives add GamesPlayed dummy
 scoreboard objectives add toggleTips trigger
 
-#> Lobby entities
-execute unless entity @e[type=marker,tag=parkourStart] run summon marker -73 -22 -1 {Tags:["parkourStart"]}
-execute unless entity @e[type=marker,tag=parkourEnd] run summon marker -71 2 -4 {Tags:["parkourEnd"]}
-
-#> Bossbars
-bossbar add lobbybar "Lobbybar"
-bossbar add purpleshiphp ""
-bossbar add orangeship ""
-
-bossbar set lobbybar name {"text":"Please confirm game settings at the Settings Map!","color":"aqua"}
-bossbar set lobbybar max 1
-bossbar set lobbybar value 1
-bossbar set lobbybar color blue
-
 #> Teams
 team add Lobby
 team add Orange

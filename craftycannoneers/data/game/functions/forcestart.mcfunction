@@ -32,7 +32,9 @@ tag @a remove DeathMVP
 tag @a remove CannonMVP
 
 bossbar add purpleship ""
+bossbar add purpleship2 ""
 bossbar add orangeship ""
+bossbar add orangeship2 ""
 
 execute as @a[team=Purple] run function game:givegear
 execute as @a[team=Orange] run function game:givegear

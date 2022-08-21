@@ -99,20 +99,24 @@ fill 66 -30 -50 66 -30 -49 creeper_head
 setblock 57 -23 -52 end_stone_brick_wall[up=true]
 fill 57 -22 -51 57 -22 -50 creeper_head
 
-bossbar set purpleship name ["",{"text":"Purple: ","color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"text":"Orange: ","color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
-
 #> Bossbars
-execute store result bossbar purpleship max run scoreboard players get $ShipHP CmdData
-execute store result bossbar orangeship max run scoreboard players get $ShipHP CmdData
+bossbar set purpleship name ["",{"text":"Purple: ","color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"text":"Orange: ","color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
+bossbar set orangeship2 name ["",{"text":"Orange: ","color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"text":"Purple: ","color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
 
-execute store result bossbar purpleship value run scoreboard players get $PurpleHP CmdData
-execute store result bossbar orangeship value run scoreboard players get $OrangeHP CmdData
+execute store result bossbar purpleship max run scoreboard players get $ShipHP CmdData
+execute store result bossbar purpleship2 max run scoreboard players get $ShipHP CmdData
+execute store result bossbar orangeship max run scoreboard players get $ShipHP CmdData
+execute store result bossbar orangeship2 max run scoreboard players get $ShipHP CmdData
 
 execute unless score $DamagePurple CmdData matches 1.. run bossbar set purpleship color purple
+execute unless score $DamagePurple CmdData matches 1.. run bossbar set purpleship2 color purple
 execute unless score $DamageOrange CmdData matches 1.. run bossbar set orangeship color yellow
+execute unless score $DamageOrange CmdData matches 1.. run bossbar set orangeship2 color yellow
 
 execute if score $DamagePurple CmdData matches 1.. run bossbar set purpleship color white
+execute if score $DamagePurple CmdData matches 1.. run bossbar set purpleship2 color white
 execute if score $DamageOrange CmdData matches 1.. run bossbar set orangeship color white
+execute if score $DamageOrange CmdData matches 1.. run bossbar set orangeship2 color white
 
 execute if score $DamagePurple CmdData matches 1.. if score $PurpleHP CmdData matches 1.. run scoreboard players remove $PurpleHP CmdData 1
 execute if score $DamagePurple CmdData matches 1.. if score $PurpleHP CmdData matches 1.. run scoreboard players add $CombinedDamage CmdData 1
@@ -120,8 +124,7 @@ execute if score $DamagePurple CmdData matches 1.. run scoreboard players remove
 execute if score $DamageOrange CmdData matches 1.. if score $OrangeHP CmdData matches 1.. run scoreboard players remove $OrangeHP CmdData 1
 execute if score $DamageOrange CmdData matches 1.. if score $OrangeHP CmdData matches 1.. run scoreboard players add $CombinedDamage CmdData 1
 execute if score $DamageOrange CmdData matches 1.. run scoreboard players remove $DamageOrange CmdData 1
-execute store result bossbar purpleship value run scoreboard players get $PurpleHP CmdData
-execute store result bossbar orangeship value run scoreboard players get $OrangeHP CmdData
+function game:updatebossbars
 
 execute if score $DamagePurple CmdData matches 1.. if score $PurpleHP CmdData matches 1.. run scoreboard players remove $PurpleHP CmdData 1
 execute if score $DamagePurple CmdData matches 1.. if score $PurpleHP CmdData matches 1.. run scoreboard players add $CombinedDamage CmdData 1
@@ -129,8 +132,7 @@ execute if score $DamagePurple CmdData matches 1.. run scoreboard players remove
 execute if score $DamageOrange CmdData matches 1.. if score $OrangeHP CmdData matches 1.. run scoreboard players remove $OrangeHP CmdData 1
 execute if score $DamageOrange CmdData matches 1.. if score $OrangeHP CmdData matches 1.. run scoreboard players add $CombinedDamage CmdData 1
 execute if score $DamageOrange CmdData matches 1.. run scoreboard players remove $DamageOrange CmdData 1
-execute store result bossbar purpleship value run scoreboard players get $PurpleHP CmdData
-execute store result bossbar orangeship value run scoreboard players get $OrangeHP CmdData
+function game:updatebossbars
 
 execute if score $DamagePurple CmdData matches 1.. if score $PurpleHP CmdData matches 1.. run scoreboard players remove $PurpleHP CmdData 1
 execute if score $DamagePurple CmdData matches 1.. if score $PurpleHP CmdData matches 1.. run scoreboard players add $CombinedDamage CmdData 1
@@ -138,8 +140,7 @@ execute if score $DamagePurple CmdData matches 1.. run scoreboard players remove
 execute if score $DamageOrange CmdData matches 1.. if score $OrangeHP CmdData matches 1.. run scoreboard players remove $OrangeHP CmdData 1
 execute if score $DamageOrange CmdData matches 1.. if score $OrangeHP CmdData matches 1.. run scoreboard players add $CombinedDamage CmdData 1
 execute if score $DamageOrange CmdData matches 1.. run scoreboard players remove $DamageOrange CmdData 1
-execute store result bossbar purpleship value run scoreboard players get $PurpleHP CmdData
-execute store result bossbar orangeship value run scoreboard players get $OrangeHP CmdData
+function game:updatebossbars
 
 execute if score $DamagePurple CmdData matches 1.. if score $PurpleHP CmdData matches 1.. run scoreboard players remove $PurpleHP CmdData 1
 execute if score $DamagePurple CmdData matches 1.. if score $PurpleHP CmdData matches 1.. run scoreboard players add $CombinedDamage CmdData 1
@@ -147,11 +148,12 @@ execute if score $DamagePurple CmdData matches 1.. run scoreboard players remove
 execute if score $DamageOrange CmdData matches 1.. if score $OrangeHP CmdData matches 1.. run scoreboard players remove $OrangeHP CmdData 1
 execute if score $DamageOrange CmdData matches 1.. if score $OrangeHP CmdData matches 1.. run scoreboard players add $CombinedDamage CmdData 1
 execute if score $DamageOrange CmdData matches 1.. run scoreboard players remove $DamageOrange CmdData 1
-execute store result bossbar purpleship value run scoreboard players get $PurpleHP CmdData
-execute store result bossbar orangeship value run scoreboard players get $OrangeHP CmdData
+function game:updatebossbars
 
-bossbar set purpleship players @a[team=!Lobby]
-bossbar set orangeship players @a[team=!Lobby]
+bossbar set purpleship players @a[team=!Lobby,team=!Orange]
+bossbar set orangeship players @a[team=!Lobby,team=!Orange]
+bossbar set orangeship2 players @a[team=Orange]
+bossbar set purpleship2 players @a[team=Orange]
 
 execute as @a run trigger readyup set 0
 
