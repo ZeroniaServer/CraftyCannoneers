@@ -12,6 +12,7 @@ effect give @e[type=slime] invisibility 1000000 100 true
 execute unless score $forcedmodes CmdData matches 0 run function debug:forcedmodes
 function lobby:parkour/parkour
 function lobby:rock/rock
+function lobby:joinpads
 function lobby:eastereggs
 function everytick:nofall
 

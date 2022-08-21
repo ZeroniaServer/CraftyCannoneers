@@ -1,4 +1,5 @@
 #> This function runs every tick. Use this as the main function to call other functions that should run every tick.
+function everytick:particles
 function everytick:lobby
 function everytick:leavegame
 function everytick:nodrop
@@ -103,7 +104,6 @@ execute as @e[type=armor_stand,tag=StuffyDeco] at @s run particle minecraft:ench
 execute if score $gamestate CmdData matches 3 run function game:ingame/gameend
 execute if score $gamestate CmdData matches 2 run function game:ingame
 function chests:openchest
-function lobby:joinpads
 function lobby:cbdisplays
 scoreboard players reset @a[scores={eyeclick=1..}] eyeclick
 

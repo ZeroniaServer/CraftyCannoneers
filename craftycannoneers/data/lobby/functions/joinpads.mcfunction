@@ -1,10 +1,8 @@
-scoreboard players add @e[type=marker,tag=joinpad] CmdData 1
-execute as @e[type=marker,tag=joinpad,tag=Locked,scores={CmdData=1}] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
-execute if score $InOrange CmdData > $InPurple CmdData as @e[type=marker,tag=JoinpadOrange,scores={CmdData=1}] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
-execute if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange,scores={CmdData=1}] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
-execute if score $InPurple CmdData > $InOrange CmdData as @e[type=marker,tag=JoinpadPurple,scores={CmdData=1}] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
-execute if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple,scores={CmdData=1}] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
-scoreboard players reset @e[type=marker,tag=joinpad,scores={CmdData=80..}] CmdData
+execute if score $barrier CmdData matches 0 as @e[type=marker,tag=joinpad,tag=Locked] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
+execute if score $barrier CmdData matches 0 if score $InOrange CmdData > $InPurple CmdData as @e[type=marker,tag=JoinpadOrange] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
+execute if score $barrier CmdData matches 0 if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
+execute if score $barrier CmdData matches 0 if score $InPurple CmdData > $InOrange CmdData as @e[type=marker,tag=JoinpadPurple] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
+execute if score $barrier CmdData matches 0 if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 1 force @a[team=Lobby]
 
 execute unless score $InOrange CmdData > $InPurple CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run particle falling_dust orange_concrete ~ ~1 ~ 0.7 0.3 0.7 0 1 force @a[team=Lobby]
 execute unless score $InPurple CmdData > $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0.7 0.3 0.7 0 1 force @a[team=Lobby]

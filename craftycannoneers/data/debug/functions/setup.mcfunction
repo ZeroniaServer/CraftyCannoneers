@@ -207,6 +207,10 @@ scoreboard objectives add const dummy
 scoreboard players set 2 const 2
 scoreboard players set -1 const -1
 
+#> Particles
+scoreboard players set $dust CmdData -1
+scoreboard players set $barrier CmdData -1
+
 #> Messages
 data modify storage craftycannoneers:messages ResourcePack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":"true"},{"text":"] ","color":"dark_gray"},{"text":"We strongly recommend you to ","color":"gray"},{"text":"use the resource pack","bold":true,"color":"red"},{"text":". ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=1wI7hVR29bKCXJLBafZqpY9xSVL-Ahoc0"}}]'
 data modify storage craftycannoneers:messages SettingsMap set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":"true"},{"text":"] ","color":"dark_gray"},{"text":"Please confirm settings at the ","color":"gray"},{"text":"Settings Map","color":"aqua","bold":true},{"text":"!","color":"gray"}]'

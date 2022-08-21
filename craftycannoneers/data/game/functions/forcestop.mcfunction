@@ -11,7 +11,8 @@ tellraw @a ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craf
 tag @a[team=!Lobby] add LeaveGame
 scoreboard players set $WinningTeam CmdData 0
 scoreboard players set $EndTime CmdData 0
-
+scoreboard players set $barrier CmdData -1
+scoreboard players set $dust CmdData -1
 
 gamerule fallDamage false
 
