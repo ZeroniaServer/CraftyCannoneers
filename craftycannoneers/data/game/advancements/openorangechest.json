@@ -11,6 +11,6 @@
     }
   },
   "rewards": {
-    "function": "game:openorangechest"
+    "function": "game:teamchest/orange/open"
   }
 }

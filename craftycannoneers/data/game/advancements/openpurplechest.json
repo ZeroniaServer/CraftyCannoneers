@@ -11,6 +11,6 @@
     }
   },
   "rewards": {
-    "function": "game:openpurplechest"
+    "function": "game:teamchest/purple/open"
   }
 }

@@ -26,8 +26,8 @@ execute as @a[team=Purple,tag=HoldHorn,scores={horntime=34..}] at @s run effect 
 execute as @a[team=Purple,tag=HoldHorn,scores={horntime=34..}] at @s run effect give @a[team=Purple,distance=20.1..] strength 16 0 true
 execute as @a[team=Purple,tag=HoldHorn,scores={horntime=34..}] at @s run effect give @a[team=Purple] regeneration 1 4 true
 execute as @a[team=Purple,tag=HoldHorn,scores={horntime=34..}] at @s run effect give @a[team=Purple] haste 12 1 true
-execute as @a[team=Purple,tag=HoldHorn,scores={horntime=34..}] as @a[team=Purple] at @s run particle note ~ ~1 ~ 0.4 0.6 0.4 0.1 15 normal
-execute as @a[team=Purple,tag=HoldHorn,scores={horntime=34..}] as @a[team=Purple] at @s run particle note ^ ^1 ^0.6 0.3 0.3 0.3 0.1 10 normal @s
+execute as @a[team=Purple,tag=HoldHorn,scores={horntime=34..}] as @a[team=Purple] at @s run particle note ~ ~1 ~ 0.4 0.6 0.4 0.1 15 force
+execute as @a[team=Purple,tag=HoldHorn,scores={horntime=34..}] as @a[team=Purple] at @s run particle note ^ ^1 ^0.6 0.3 0.3 0.3 0.1 10 force @s
 execute as @a[team=Purple,tag=HoldHorn,scores={horntime=34..}] as @a[team=Purple] at @s run playsound minecraft:block.note_block.flute master @s ~ ~ ~ 1 0
 
 execute as @a[team=Orange,tag=HoldHorn,scores={horntime=34..}] at @s run effect give @a[team=Orange,distance=0.001..7] strength 28 1 true
@@ -36,8 +36,8 @@ execute as @a[team=Orange,tag=HoldHorn,scores={horntime=34..}] at @s run effect 
 execute as @a[team=Orange,tag=HoldHorn,scores={horntime=34..}] at @s run effect give @a[team=Orange,distance=20.1..] strength 16 0 true
 execute as @a[team=Orange,tag=HoldHorn,scores={horntime=34..}] at @s run effect give @a[team=Orange] regeneration 1 4 true
 execute as @a[team=Orange,tag=HoldHorn,scores={horntime=34..}] at @s run effect give @a[team=Orange] haste 12 1 true
-execute as @a[team=Orange,tag=HoldHorn,scores={horntime=34..}] as @a[team=Orange] at @s run particle note ~ ~1 ~ 0.4 0.6 0.4 0.1 15 normal
-execute as @a[team=Orange,tag=HoldHorn,scores={horntime=34..}] as @a[team=Orange] at @s run particle note ^ ^1 ^0.6 0.3 0.3 0.3 0.1 10 normal @s
+execute as @a[team=Orange,tag=HoldHorn,scores={horntime=34..}] as @a[team=Orange] at @s run particle note ~ ~1 ~ 0.4 0.6 0.4 0.1 15 force
+execute as @a[team=Orange,tag=HoldHorn,scores={horntime=34..}] as @a[team=Orange] at @s run particle note ^ ^1 ^0.6 0.3 0.3 0.3 0.1 10 force @s
 execute as @a[team=Orange,tag=HoldHorn,scores={horntime=34..}] as @a[team=Orange] at @s run playsound minecraft:block.note_block.flute master @s ~ ~ ~ 1 0
 
 execute as @a[tag=HoldHorn,scores={horntime=34..}] at @s run effect give @s strength 20 0 true
