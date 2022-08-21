@@ -103,7 +103,7 @@ scoreboard objectives add toggleTips trigger
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
 bossbar set lobbybar name {"text":"Please confirm game settings at the Settings Map!","color":"aqua"}
-bossbar set lobbybar max 2
+bossbar set lobbybar max 10
 bossbar set lobbybar color blue
 
 #> Teams

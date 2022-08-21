@@ -1,5 +1,6 @@
 bossbar set lobbybar color green
 bossbar set lobbybar name {"text":"A game is currently in progress!","bold":true,"color":"green"}
+bossbar set lobbybar value 10
 
 function game:ingame/chestspawning
 #TODO OPTIMIZE
@@ -179,8 +180,8 @@ execute unless score $TimeLimit CmdData matches 42069.. run function game:ingame
 
 #> Game end criteria
 #players leave
-execute unless score $gamestate CmdData matches 3.. unless entity @a[team=Purple] unless entity @a[team=Orange] if entity @e[type=armor_stand,tag=ConfirmIcon] run tellraw @a {"text":"No players remaining. The previous game has been canceled.","color":"red"}
-execute unless score $gamestate CmdData matches 3.. unless entity @a[team=Purple] unless entity @a[team=Orange] if entity @e[type=armor_stand,tag=ConfirmIcon] run function game:forcestop
+# execute unless score $gamestate CmdData matches 3.. unless entity @a[team=Purple] unless entity @a[team=Orange] if entity @e[type=armor_stand,tag=ConfirmIcon] run tellraw @a {"text":"No players remaining. The previous game has been canceled.","color":"red"}
+# execute unless score $gamestate CmdData matches 3.. unless entity @a[team=Purple] unless entity @a[team=Orange] if entity @e[type=armor_stand,tag=ConfirmIcon] run function game:forcestop
 
 #shiphp
 execute unless score $gamestate CmdData matches 3.. if score $PurpleHP CmdData matches ..0 run scoreboard players set $WinningTeam CmdData 1

@@ -24,7 +24,7 @@ bossbar remove purpleship3
 bossbar remove orangeship
 bossbar remove orangeship2
 
-bossbar set lobbybar value 2
+bossbar set lobbybar value 10
 
 scoreboard players reset $DamageOrange CmdData
 scoreboard players reset $DamagePurple CmdData

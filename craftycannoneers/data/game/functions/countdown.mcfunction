@@ -1,6 +1,10 @@
 execute if score $countSec CmdData matches 1 run data merge block -44 -28 0 {Text1:'{"text":""}',Text2:'{"text":"Countdown","color":"#55FF55","bold":true}',Text3:'{"text":"Started","color":"#55FF55","bold":true}',Text4:'{"text":""}'}
 
 scoreboard players add $countSec CmdData 1
+
+bossbar set lobbybar max 10
+execute store result bossbar lobbybar value run scoreboard players get $Countdown CmdData
+
 execute unless score $Countdown CmdData matches 10 if score $countSec CmdData matches 10 as @a at @s run playsound minecraft:block.note_block.hat master @s ~ ~ ~ 0.5 1.1
 execute if score $countSec CmdData matches 20.. as @a at @s run playsound minecraft:block.note_block.hat master @s ~ ~ ~ 1 0.9
 execute if score $Countdown CmdData matches 2..4 if score $countSec CmdData matches 20 as @a at @s run playsound minecraft:block.note_block.hat master @s ~ ~ ~ 1 0.7

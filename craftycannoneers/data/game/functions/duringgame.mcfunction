@@ -10,9 +10,8 @@ fill 69 -29 60 67 -29 60 spruce_slab[type=top]
 fill 71 -29 -60 73 -29 -60 spruce_slab[type=top]
 
 #> Bossbars
-bossbar set purpleship players @a[team=!Lobby,team=!Spectator,team=!Orange]
 bossbar set purpleship3 players @a[team=Spectator]
+bossbar set purpleship players @a[team=!Lobby,team=!Spectator,team=!Orange]
 bossbar set orangeship players @a[team=!Lobby,team=!Orange]
 bossbar set orangeship2 players @a[team=Orange]
 bossbar set purpleship2 players @a[team=Orange]
-
