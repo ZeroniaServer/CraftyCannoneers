@@ -3,11 +3,11 @@ summon armor_stand ~ ~ ~ {Tags:["cannon","Tutorial","GPDispL","GPHolder","NoID"]
 summon armor_stand ~ ~ ~ {Tags:["cannon","Tutorial","GPDispR","GPHolder","NoID"],Marker:1b,Invulnerable:1b,Invisible:1b,NoGravity:1b}
 scoreboard players set @e[type=#game:cannon,tag=cannon,tag=Tutorial] CmdData 0
 
-execute as @e[type=#game:cannon,tag=cannon,tag=Tutorial] at @s run tp @s ~ ~ ~ 90 0
-
 summon villager ~0.3 ~0.5 ~ {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-10000000,Tags:["CannonVMain","cannon","Tutorial","NoID"]}
 summon villager ~0.5 ~0.5 ~-0.5 {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-10000000,Tags:["CannonVRight","cannon","Tutorial","NoID"]}
 summon villager ~0.5 ~0.5 ~0.5 {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-10000000,Tags:["CannonVLeft","cannon","Tutorial","NoID"]}
+
+execute as @e[type=#game:cannon,tag=cannon,tag=Tutorial] at @s run tp @s ~ ~ ~ 90 0
 
 team join NoName @e[type=villager,tag=cannon]
 

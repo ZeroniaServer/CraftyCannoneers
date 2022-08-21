@@ -7,14 +7,10 @@ execute at @s[scores={cannonshot=30,CmdData=8}] run scoreboard players set @s ca
 execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonshot=30,CmdData=8}] if score @s playerUUID matches 0 run scoreboard players reset @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] gpdisp_time
 execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonshot=30,CmdData=8}] if score @s playerUUID matches 0 run scoreboard players reset @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] gpdisp_time
 execute at @s[scores={cannonshot=5}] run playsound cannonprime master @a ~ ~ ~ 0.4 1.7
-execute at @s[tag=!Orange,scores={cannonshot=2}] at @e[type=villager,tag=CannonVLeft,limit=1,sort=nearest,distance=..2] run particle soul_fire_flame ^ ^0.5 ^-0.2 .02 0.05 .02 .003 4 normal
-execute at @s[tag=!Orange,scores={cannonshot=2}] at @e[type=villager,tag=CannonVRight,limit=1,sort=nearest,distance=..2] run particle soul_fire_flame ^ ^0.5 ^-0.2 .02 0.05 .02 .003 4 normal
-execute at @s[tag=!Orange,scores={cannonshot=5..25}] at @e[type=villager,tag=CannonVLeft,limit=1,sort=nearest,distance=..2] run particle flame ^ ^0.7 ^-0.2 .02 0.1 .02 .003 2 normal
-execute at @s[tag=!Orange,scores={cannonshot=5..25}] at @e[type=villager,tag=CannonVRight,limit=1,sort=nearest,distance=..2] run particle flame ^ ^0.7 ^-0.2 .02 0.1 .02 .003 2 normal
-execute at @s[tag=Orange,scores={cannonshot=2}] at @e[type=villager,tag=CannonVLeft,limit=1,sort=nearest,distance=..2] run particle soul_fire_flame ^ ^0.5 ^0.2 .02 0.05 .02 .003 4 normal
-execute at @s[tag=Orange,scores={cannonshot=2}] at @e[type=villager,tag=CannonVRight,limit=1,sort=nearest,distance=..2] run particle soul_fire_flame ^ ^0.5 ^0.2 .02 0.05 .02 .003 4 normal
-execute at @s[tag=Orange,scores={cannonshot=5..25}] at @e[type=villager,tag=CannonVLeft,limit=1,sort=nearest,distance=..2] run particle flame ^ ^0.7 ^0.2 .02 0.1 .02 .003 2 normal
-execute at @s[tag=Orange,scores={cannonshot=5..25}] at @e[type=villager,tag=CannonVRight,limit=1,sort=nearest,distance=..2] run particle flame ^ ^0.7 ^0.2 .02 0.1 .02 .003 2 normal
+execute at @s[scores={cannonshot=2}] at @e[type=villager,tag=CannonVLeft,limit=1,sort=nearest,distance=..2] run particle soul_fire_flame ^ ^0.5 ^-0.2 .02 0.05 .02 .003 4 normal
+execute at @s[scores={cannonshot=2}] at @e[type=villager,tag=CannonVRight,limit=1,sort=nearest,distance=..2] run particle soul_fire_flame ^ ^0.5 ^-0.2 .02 0.05 .02 .003 4 normal
+execute at @s[scores={cannonshot=5..25}] at @e[type=villager,tag=CannonVLeft,limit=1,sort=nearest,distance=..2] run particle flame ^ ^0.7 ^-0.2 .02 0.1 .02 .003 2 normal
+execute at @s[scores={cannonshot=5..25}] at @e[type=villager,tag=CannonVRight,limit=1,sort=nearest,distance=..2] run particle flame ^ ^0.7 ^-0.2 .02 0.1 .02 .003 2 normal
 execute at @s[scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] run particle explosion ^ ^2.1 ^2 0.1 0.1 0.1 0.1 3 force
 execute at @s[scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] run particle flame ^ ^2.1 ^2 0.1 0.1 0.1 0.3 6 force
 execute at @s[scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] run particle minecraft:campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force
