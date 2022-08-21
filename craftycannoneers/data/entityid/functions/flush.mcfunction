@@ -33,3 +33,4 @@ scoreboard players reset * entityid.29
 scoreboard players reset * entityid.30
 scoreboard players reset * entityid.31
 scoreboard players reset * entityidset
+scoreboard players set #loaded entityid 1
