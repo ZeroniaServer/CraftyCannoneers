@@ -2,4 +2,4 @@ tellraw @s ["\n",{"text":"==============","color":"gray"},"\n",{"text":"YZEROgam
 playsound clickcredits master @s ~ ~ ~ 1 1.4
 advancement revoke @s only lobby:yzero
 advancement grant @s only tutorial:zzzunlockables/credits
-execute at @e[type=armor_stand,tag=YZERODeco] run particle dust 0 1 0 1 ~ ~1 ~ 0.2 0.5 0.2 0.1 40 force @s
+execute at @e[type=armor_stand,tag=YZERODeco] run particle dust 0 1 0 1 ~ ~1 ~ 0.2 0.5 0.2 0.1 40 normal @s

@@ -58,17 +58,17 @@ execute positioned -279 -11 -15 as @a[scores={WeakpointTutorial=1..},distance=8.
 
 ##Tutorial chest particles
 #Common
-execute as @e[type=armor_stand,tag=CChestFakeC] at @s run particle falling_dust light_gray_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=3}]
-execute as @e[type=armor_stand,tag=CChestFakeC] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=3}]
+execute as @e[type=armor_stand,tag=CChestFakeC] at @s run particle falling_dust light_gray_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 normal @a[team=Lobby,scores={ChestTutorial=3}]
+execute as @e[type=armor_stand,tag=CChestFakeC] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0 0 0 0.1 1 normal @a[team=Lobby,scores={ChestTutorial=3}]
 #Uncommon
-execute as @e[type=armor_stand,tag=UCChestFakeC] at @s run particle falling_dust light_blue_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=4}]
-execute as @e[type=armor_stand,tag=UCChestFakeC] at @s run particle falling_dust light_blue_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=4}]
+execute as @e[type=armor_stand,tag=UCChestFakeC] at @s run particle falling_dust light_blue_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 normal @a[team=Lobby,scores={ChestTutorial=4}]
+execute as @e[type=armor_stand,tag=UCChestFakeC] at @s run particle falling_dust light_blue_concrete ~ ~1 ~ 0 0 0 0.1 1 normal @a[team=Lobby,scores={ChestTutorial=4}]
 #Rare
-execute as @e[type=armor_stand,tag=RChestFakeC] at @s run particle falling_dust purple_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=5}]
-execute as @e[type=armor_stand,tag=RChestFakeC] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=5}]
+execute as @e[type=armor_stand,tag=RChestFakeC] at @s run particle falling_dust purple_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 normal @a[team=Lobby,scores={ChestTutorial=5}]
+execute as @e[type=armor_stand,tag=RChestFakeC] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 normal @a[team=Lobby,scores={ChestTutorial=5}]
 #Locked
-execute as @e[type=armor_stand,tag=LChestFakeC] at @s run particle falling_dust red_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a[team=Lobby,scores={ChestTutorial=6}]
-execute as @e[type=armor_stand,tag=LChestFakeC] at @s run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,scores={ChestTutorial=6}]
+execute as @e[type=armor_stand,tag=LChestFakeC] at @s run particle falling_dust red_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 normal @a[team=Lobby,scores={ChestTutorial=6}]
+execute as @e[type=armor_stand,tag=LChestFakeC] at @s run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 normal @a[team=Lobby,scores={ChestTutorial=6}]
 
 
 

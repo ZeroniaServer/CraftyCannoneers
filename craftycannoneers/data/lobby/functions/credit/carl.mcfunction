@@ -2,4 +2,4 @@ tellraw @s ["\n",{"text":"==============","color":"gray"},"\n",{"text":"Carl510"
 playsound clickcredits master @s ~ ~ ~ 1 1.4
 advancement revoke @s only lobby:carl
 advancement grant @s only tutorial:zzzunlockables/credits
-execute at @e[type=armor_stand,tag=CarlDeco] run particle dust 0 0.3 1 1 ~ ~1 ~ 0.2 0.5 0.2 0.1 40 force @s
+execute at @e[type=armor_stand,tag=CarlDeco] run particle dust 0 0.3 1 1 ~ ~1 ~ 0.2 0.5 0.2 0.1 40 normal @s

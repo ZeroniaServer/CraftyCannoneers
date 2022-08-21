@@ -10,7 +10,7 @@ execute as @a[team=Lobby,tag=startParkour] run item replace entity @s hotbar.5 w
 execute as @a[team=Lobby,tag=startParkour] run tellraw @s [{"text":"Parkour Run Started!","color":"dark_green","bold":true}]
 execute as @a[team=Lobby,tag=startParkour] at @s run playsound parkourstart master @s ~ ~ ~ 1 1.3
 execute as @a[team=Lobby,tag=startParkour] at @s run playsound parkourstart2 master @s ~ ~ ~ 1 1
-execute as @a[team=Lobby,tag=startParkour] at @s run particle firework ~ ~1 ~ 0 0 0 0.1 100 force @s
+execute as @a[team=Lobby,tag=startParkour] at @s run particle firework ~ ~1 ~ 0 0 0 0.1 100 normal @s
 execute as @a[team=Lobby,tag=startParkour] run tag @s add inParkour
 
 ##End parkour
@@ -47,7 +47,7 @@ tag @a[team=Lobby,tag=QuitParkour] remove QuitParkour
 execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound parkourfinish master @s ~ ~ ~ 1 1.1
 execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound parkourfinish2 master @s ~ ~ ~ 1 1
 execute as @a[team=Lobby,tag=finishedParkour] at @s run playsound parkourfinish3 master @s ~ ~ ~ 1 1.3
-execute as @a[team=Lobby,tag=finishedParkour] at @s run particle firework ~ ~1 ~ 0 0 0 0.1 100 force @s
+execute as @a[team=Lobby,tag=finishedParkour] at @s run particle firework ~ ~1 ~ 0 0 0 0.1 100 normal @s
 execute as @a[team=Lobby,tag=finishedParkour] run function game:clearinventory
 execute as @a[team=Lobby,tag=finishedParkour] run function lobby:items
 

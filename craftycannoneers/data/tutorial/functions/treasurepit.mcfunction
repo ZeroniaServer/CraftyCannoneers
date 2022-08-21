@@ -30,21 +30,21 @@ execute as @e[type=#game:chest,tag=fakechest,scores={CmdData=..10}] at @s run tp
 
 #> Particles
 #Common
-execute as @e[type=armor_stand,tag=CChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
-execute as @e[type=armor_stand,tag=CChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=7..12]
-execute as @e[type=armor_stand,tag=CChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=13..]
+execute as @e[type=armor_stand,tag=CChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 normal @a[team=Lobby,distance=..7]
+execute as @e[type=armor_stand,tag=CChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0 0 0 0.1 1 normal @a[team=Lobby,distance=7..12]
+execute as @e[type=armor_stand,tag=CChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~2 ~ 0 0 0 0.1 1 normal @a[team=Lobby,distance=13..]
 #Uncommon
-execute as @e[type=armor_stand,tag=UCChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
-execute as @e[type=armor_stand,tag=UCChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=7..12]
-execute as @e[type=armor_stand,tag=UCChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=13..]
+execute as @e[type=armor_stand,tag=UCChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 normal @a[team=Lobby,distance=..7]
+execute as @e[type=armor_stand,tag=UCChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~1 ~ 0 0 0 0.1 1 normal @a[team=Lobby,distance=7..12]
+execute as @e[type=armor_stand,tag=UCChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~2 ~ 0 0 0 0.1 1 normal @a[team=Lobby,distance=13..]
 #Rare
-execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
-execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=7..12]
-execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=13..]
+execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 normal @a[team=Lobby,distance=..7]
+execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 normal @a[team=Lobby,distance=7..12]
+execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~2 ~ 0 0 0 0.1 1 normal @a[team=Lobby,distance=13..]
 #Locked
-execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
-execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=7..12]
-execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=13..]
+execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 normal @a[team=Lobby,distance=..7]
+execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 normal @a[team=Lobby,distance=7..12]
+execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~2 ~ 0 0 0 0.1 1 normal @a[team=Lobby,distance=13..]
 
 #Common
 execute as @e[type=hopper_minecart,tag=CChestFake,tag=!Opened] at @s if data entity @s Items run item replace entity @e[type=armor_stand,tag=CChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:20}

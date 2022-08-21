@@ -67,8 +67,8 @@ execute positioned 51 -31 17 unless block 51 -31 17 lily_pad unless entity @e[ty
 
 
 #> Cave entrances
-execute positioned 81 -36.8 -17 run particle minecraft:bubble_column_up 81 -36.8 -17 1.4 0 0 0.2 5 force @a[distance=..16]
-execute positioned 58 -36.8 17 run particle minecraft:bubble_column_up 58 -36.8 17 1.4 0 0 0.2 5 force @a[distance=..16]
+execute positioned 81 -36.8 -17 run particle minecraft:bubble_column_up 81 -36.8 -17 1.4 0 0 0.2 5 normal @a[distance=..16]
+execute positioned 58 -36.8 17 run particle minecraft:bubble_column_up 58 -36.8 17 1.4 0 0 0.2 5 normal @a[distance=..16]
 
 execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble1] at @s run tag @s add InBubble
 execute as @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:bubble1,tag=!InBubble] at @s run scoreboard players set @s bubblewarn 1

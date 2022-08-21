@@ -8,21 +8,21 @@ execute as @e[type=armor_stand,tag=NewChest,scores={CmdData=1}] at @s run playso
 
 #> Particles
 #Common
-execute as @e[type=armor_stand,tag=CChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
-execute as @e[type=armor_stand,tag=CChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Lobby,team=!Spectator,team=!Developer,distance=7..12]
-execute as @e[type=armor_stand,tag=CChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Lobby,team=!Spectator,team=!Developer,distance=13..]
+execute as @e[type=armor_stand,tag=CChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..7]
+execute as @e[type=armor_stand,tag=CChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0 0 0 0.1 1 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=7..12]
+execute as @e[type=armor_stand,tag=CChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~2 ~ 0 0 0 0.1 1 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=13..]
 #Uncommon
-execute as @e[type=armor_stand,tag=UCChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
-execute as @e[type=armor_stand,tag=UCChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Lobby,team=!Spectator,team=!Developer,distance=7..12]
-execute as @e[type=armor_stand,tag=UCChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Lobby,team=!Spectator,team=!Developer,distance=13..]
+execute as @e[type=armor_stand,tag=UCChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..7]
+execute as @e[type=armor_stand,tag=UCChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~1 ~ 0 0 0 0.1 1 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=7..12]
+execute as @e[type=armor_stand,tag=UCChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~2 ~ 0 0 0 0.1 1 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=13..]
 #Rare
-execute as @e[type=armor_stand,tag=RChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
-execute as @e[type=armor_stand,tag=RChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Lobby,team=!Spectator,team=!Developer,distance=7..12]
-execute as @e[type=armor_stand,tag=RChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Lobby,team=!Spectator,team=!Developer,distance=13..]
+execute as @e[type=armor_stand,tag=RChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..7]
+execute as @e[type=armor_stand,tag=RChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=7..12]
+execute as @e[type=armor_stand,tag=RChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~2 ~ 0 0 0 0.1 1 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=13..]
 #Locked
-execute as @e[type=armor_stand,tag=LChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
-execute as @e[type=armor_stand,tag=LChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Lobby,team=!Spectator,team=!Developer,distance=7..12]
-execute as @e[type=armor_stand,tag=LChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Lobby,team=!Spectator,team=!Developer,distance=13..]
+execute as @e[type=armor_stand,tag=LChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..7]
+execute as @e[type=armor_stand,tag=LChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=7..12]
+execute as @e[type=armor_stand,tag=LChestAS,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~2 ~ 0 0 0 0.1 1 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=13..]
 
 
 #Common
