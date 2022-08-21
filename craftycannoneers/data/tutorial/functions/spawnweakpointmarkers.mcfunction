@@ -9,3 +9,4 @@ execute if entity @s[tag=S5] run tag @e[type=marker,tag=FakeWeakpoint,tag=new] a
 execute if entity @s[tag=S6] run tag @e[type=marker,tag=FakeWeakpoint,tag=new] add S6
 execute if entity @s[tag=S7] run tag @e[type=marker,tag=FakeWeakpoint,tag=new] add S7
 tag @e[type=marker,tag=FakeWeakpoint,tag=new] remove new
+execute positioned ~-5 ~ ~ run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 cave_air replace air

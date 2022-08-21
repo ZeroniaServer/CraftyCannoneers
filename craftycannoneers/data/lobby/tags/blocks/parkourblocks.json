@@ -41,6 +41,10 @@
 		"minecraft:potted_cactus",
 		"minecraft:cave_vines",
 		"minecraft:cave_vines_plant",
-		"minecraft:light_weighted_pressure_plate"
+		"minecraft:light_weighted_pressure_plate",
+		"minecraft:dark_oak_button",
+		"minecraft:dark_oak_sign",
+		"minecraft:dark_oak_wall_sign",
+		"minecraft:andesite_wall"
 	]
 }

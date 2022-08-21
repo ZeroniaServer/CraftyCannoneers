@@ -18,5 +18,5 @@ execute if entity @s[tag=Orange] if score $DamageOrange CmdData >= $OrangeHP Cmd
 execute if entity @s[tag=Orange] if score $DamageOrange CmdData >= $OrangeHP CmdData as @a[team=Purple] if score @s playerUUID = $tempuuid playerUUID run advancement grant @s only tutorial:zzzunlockables/battleship
 execute if entity @s[tag=Orange] if score $DamageOrange CmdData >= $OrangeHP CmdData run scoreboard players reset $tempuuid
 
-execute unless entity @s[scores={CmdData=50..}] at @s run function cannons:extinguishloop
+execute unless entity @s[scores={CmdData=50..}] at @s run function cannons:firering/extinguishloop
 kill @s[scores={CmdData=50..}]

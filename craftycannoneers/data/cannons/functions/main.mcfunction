@@ -10,11 +10,11 @@ execute as @e[type=marker,tag=LightFlash] at @s run function cannons:lightflash
 #> Shoot
 execute as @e[type=armor_stand,tag=cannonball] at @s run function cannons:shoot
 
-#> Fire Ring - TODO OPTIMIZE
-function cannons:firering
+#> Fire Ring
+function cannons:firering/main
 
 #> Gas - TODO OPTIMIZE
-function cannons:gas
+function cannons:gas/main
 
 #> Weakpoints - TODO OPTIMIZE
 function game:shipweakpoint/spot

@@ -11,6 +11,6 @@ execute as @e[type=marker,tag=FireRemover,tag=!HasUUID] at @s run data modify en
 tag @e[type=marker,tag=FireRemover,tag=!HasUUID] add HasUUID
 tag @s remove self
 
-execute as @e[type=marker,tag=FireRemover] at @s run function cannons:extinguishloop
+execute as @e[type=marker,tag=FireRemover] at @s run function cannons:firering/extinguishloop
 execute if entity @s[predicate=!cannons:safezones/tutorial] run gamerule doFireTick true
 execute if entity @s[predicate=cannons:safezones/tutorial] unless score $gamestate CmdData matches 2.. run gamerule doFireTick true

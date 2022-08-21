@@ -110,4 +110,5 @@ tag @s add Hit1
 
 execute as @e[type=marker,tag=ImpactMarker] at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper
 
+execute if entity @s[tag=Hit2,tag=ChainCannonball] run kill @e[type=armor_stand,tag=ChainAnchor,limit=1,sort=nearest]
 kill @s[tag=Hit2]
