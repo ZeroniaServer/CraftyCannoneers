@@ -22,13 +22,13 @@ function cannons:hitmarkers
 tag @a[tag=UtilKilled] remove UtilKilled
 tag @a[tag=GoldKilled] remove GoldKilled
 
-#Weapons - TODO OPTIMIZE
-function weapons:bomb/throw
-function weapons:bomb/functionality
-
-#Chests - TODO OPTIMIZE
-function chests:loop
-function chests:lockedchest
+# #Weapons - TODO OPTIMIZE
+# function weapons:bomb/throw
+# function weapons:bomb/functionality
+#
+# #Chests - TODO OPTIMIZE
+# function chests:loop
+# function chests:lockedchest
 
 #Player related functions
 function game:shields
