@@ -2,11 +2,13 @@ bossbar set lobbybar color green
 bossbar set lobbybar name {"text":"A game is currently in progress!","bold":true,"color":"green"}
 
 function game:ingame/chestspawning
+#TODO OPTIMIZE
 function game:ingame/boat
 function game:ingame/harpoon
 function game:ingame/boardingaxe
 function tutorial:notify
 function tutorial:showtip
+#TODO OPTIMIZE
 function game:ingame/bell
 function game:ingame/raidhorn
 function game:ingame/playerstuck
@@ -206,7 +208,7 @@ scoreboard players reset @a eatGapple
 scoreboard players add @a[scores={gappleTimer=1..100}] gappleTimer 1
 scoreboard players set @a[scores={gappleTimer=101..}] gappleTimer 0
 
-#team chests
+#> Team Chests - TODO OPTIMIZE + MOVE TO OWN FUNCTION
 fill 69 -29 60 67 -29 60 spruce_slab[type=top]
 fill 71 -29 -60 73 -29 -60 spruce_slab[type=top]
 
