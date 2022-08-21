@@ -8,3 +8,11 @@ execute as @e[type=chest_minecart,tag=orangeteamchest,limit=1] at @s positioned 
 execute as @e[type=chest_minecart,tag=purpleteamchest,limit=1] at @s positioned 72.50 -28 -59.50 rotated 0 0 run function game:teamchest/purple/main
 fill 69 -29 60 67 -29 60 spruce_slab[type=top]
 fill 71 -29 -60 73 -29 -60 spruce_slab[type=top]
+
+#> Bossbars
+bossbar set purpleship players @a[team=!Lobby,team=!Spectator,team=!Orange]
+bossbar set purpleship3 players @a[team=Spectator]
+bossbar set orangeship players @a[team=!Lobby,team=!Orange]
+bossbar set orangeship2 players @a[team=Orange]
+bossbar set purpleship2 players @a[team=Orange]
+

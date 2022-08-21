@@ -18,8 +18,13 @@ scoreboard players set $dust2 CmdData -1
 
 gamerule fallDamage false
 
-bossbar remove minecraft:purpleship
-bossbar remove minecraft:orangeship
+bossbar remove purpleship
+bossbar remove purpleship2
+bossbar remove purpleship3
+bossbar remove orangeship
+bossbar remove orangeship2
+
+bossbar set lobbybar value 2
 
 scoreboard players reset $DamageOrange CmdData
 scoreboard players reset $DamagePurple CmdData

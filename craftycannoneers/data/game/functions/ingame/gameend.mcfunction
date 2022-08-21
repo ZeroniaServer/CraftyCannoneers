@@ -1,6 +1,3 @@
-bossbar set purpleship players @a[team=!Lobby]
-bossbar set orangeship players @a[team=!Lobby]
-
 tag @e[type=marker,tag=joinpad] add Locked
 
 scoreboard players add $EndTime CmdData 1

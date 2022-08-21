@@ -8,9 +8,13 @@ execute unless score $InOrange CmdData > $InPurple CmdData unless score $InOrang
 execute unless score $InPurple CmdData > $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0.7 0.3 0.7 0 1 normal @a[team=Lobby]
 execute as @e[type=marker,tag=JoinpadSpec,tag=!Locked] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0.7 0.3 0.7 0 1 normal @a[team=Lobby]
 
+execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar value 0
 execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar name ["",{"text":"Awaiting ","color":"aqua"},{"text":"Purple","bold":true,"color":"dark_purple"},{"text":" and ","color":"aqua"},{"text":"Orange","bold":true,"color":"gold"},{"text":" players...","color":"aqua"}]
+execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar value 1
 execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar name ["",{"text":"Awaiting ","color":"aqua"},{"text":"Orange","bold":true,"color":"gold"},{"text":" players...","color":"aqua"}]
+execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar value 1
 execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar name ["",{"text":"Awaiting ","color":"aqua"},{"text":"Purple","bold":true,"color":"dark_purple"},{"text":" players...","color":"aqua"}]
+execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar value 2
 execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar name {"text":"Waiting for teams to ready up...","color":"aqua"}
 execute unless score $gamestate CmdData matches 2.. unless score $Countdown CmdData matches 1.. run bossbar set lobbybar color blue
 

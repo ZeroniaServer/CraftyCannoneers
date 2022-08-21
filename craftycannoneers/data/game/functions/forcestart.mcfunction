@@ -33,6 +33,7 @@ tag @a remove CannonMVP
 
 bossbar add purpleship ""
 bossbar add purpleship2 ""
+bossbar add purpleship3 ""
 bossbar add orangeship ""
 bossbar add orangeship2 ""
 
