@@ -1,3 +1,6 @@
+#> Throwing
+function weapons:bomb/throw
+
 #> Functionality
 execute as @e[type=armor_stand,tag=Bomb] at @s run function weapons:bomb/functionality
 
