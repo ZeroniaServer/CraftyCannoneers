@@ -5,7 +5,7 @@ execute if score $dust2 CmdData matches 0 at @s run particle dust 0 1 0 0.5 ~ ~ 
 execute if score $dust6 CmdData matches 0 at @s run particle dust 1 0 0 2 ~0.5 ~ ~ 0 0 0 0 0 force @a[tag=InTower,tag=Exposed3,scores={fakeexpose3=..200}]
 
 #fade 1
-execute if score $dust3 CmdData matches 0 at @s run particle dust 1 0.35 0.35 1.6 ~0.5 ~ ~ 0 0 0 0 0 force @a[tag=InTower,tag=Exposed3,scores={fakeexpose3=200..240}]
+execute if score $dust5 CmdData matches 0 at @s run particle dust 1 0.35 0.35 1.6 ~0.5 ~ ~ 0 0 0 0 0 force @a[tag=InTower,tag=Exposed3,scores={fakeexpose3=200..240}]
 
 #fade 2
 execute if score $dust3 CmdData matches 0 at @s run particle dust 1 0.63 0.63 1.3 ~0.5 ~ ~ 0 0 0 0 0 force @a[tag=InTower,tag=Exposed3,scores={fakeexpose3=240..270}]
