@@ -208,7 +208,9 @@ scoreboard players set 2 const 2
 scoreboard players set -1 const -1
 
 #> Particles
-scoreboard players set $dust CmdData -1
+scoreboard players set $dust6 CmdData -1
+scoreboard players set $dust3 CmdData -1
+scoreboard players set $dust2 CmdData -1
 scoreboard players set $barrier CmdData -1
 
 #> Messages

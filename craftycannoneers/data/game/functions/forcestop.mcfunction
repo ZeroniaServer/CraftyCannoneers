@@ -12,7 +12,9 @@ tag @a[team=!Lobby] add LeaveGame
 scoreboard players set $WinningTeam CmdData 0
 scoreboard players set $EndTime CmdData 0
 scoreboard players set $barrier CmdData -1
-scoreboard players set $dust CmdData -1
+scoreboard players set $dust6 CmdData -1
+scoreboard players set $dust3 CmdData -1
+scoreboard players set $dust2 CmdData -1
 
 gamerule fallDamage false
 
