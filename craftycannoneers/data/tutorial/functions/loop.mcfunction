@@ -26,8 +26,16 @@ execute if entity @a[team=Lobby,tag=InTower] run scoreboard players set $runwatc
 #> X Particles
 scoreboard players set $runxparticle CmdData 0
 execute if score $runcannon CmdData matches 1 run scoreboard players set $runxparticle CmdData 1
-execute if score $runwatchtower CmdData matches 1 run scoreboard players set $runxparticle CmdData 1
+execute if entity @a[team=Lobby,tag=UsingSpyglass,tag=InTower] run scoreboard players set $runxparticle CmdData 1
+execute if entity @a[team=Lobby,tag=Exposed1,tag=InTower] run scoreboard players set $runxparticle CmdData 1
+execute if entity @a[team=Lobby,tag=Exposed2,tag=InTower] run scoreboard players set $runxparticle CmdData 1
+execute if entity @a[team=Lobby,tag=Exposed3,tag=InTower] run scoreboard players set $runxparticle CmdData 1
+execute if entity @a[team=Lobby,tag=Exposed4,tag=InTower] run scoreboard players set $runxparticle CmdData 1
+execute if entity @a[team=Lobby,tag=Exposed5,tag=InTower] run scoreboard players set $runxparticle CmdData 1
+execute if entity @a[team=Lobby,tag=Exposed6,tag=InTower] run scoreboard players set $runxparticle CmdData 1
+execute if entity @a[team=Lobby,tag=Exposed7,tag=InTower] run scoreboard players set $runxparticle CmdData 1
 execute if score $runxparticle CmdData matches 1 as @e[type=marker,tag=FXParticle,tag=!WeakpointDamaged] at @s run function tutorial:xparticle
+
 execute if score $runwatchtower CmdData matches 1 run function tutorial:watchtower
 
 #> Treasure Pit
