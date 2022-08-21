@@ -17,8 +17,6 @@ execute as @e[type=armor_stand,tag=GasIgnite,scores={death=5}] at @s run particl
 execute as @e[type=armor_stand,tag=GasIgnite] at @s run particle flame ~ ~0.6 ~ 0 0 0 0.1 1 force
 kill @e[type=armor_stand,tag=GasIgnite,scores={death=15..}]
 
-execute as @e[type=marker,tag=RingOfFire] at @s if entity @e[type=marker,tag=GasCloud,distance=..5] run kill @s
-execute as @e[type=marker,tag=RingOfFire] at @s if entity @e[type=armor_stand,tag=GasBubble,distance=..5] run kill @s
 execute as @e[type=marker,tag=RingOfFire,scores={CmdData=1}] at @s run playsound minecraft:fireshot master @a ~ ~ ~ 1 0.6
 execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,scores={CmdData=1}] at @s run tag @e[type=armor_stand,tag=CannonDisp,tag=!OnFire,distance=..6,limit=2,sort=nearest] add OnFire
 execute as @e[type=marker,tag=RingOfFire,predicate=!cannons:safezones/island,scores={CmdData=1}] at @s run scoreboard players reset @e[type=armor_stand,tag=CannonDisp,tag=OnFire,distance=..6,sort=nearest] firetime
