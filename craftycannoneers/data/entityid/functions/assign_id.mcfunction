@@ -1,4 +1,4 @@
-tag @s add entityidset
+scoreboard players set @s entityidset 1
 # Assign a new id to the entity
 execute store result score @s entityid run scoreboard players add $highest entityid 1
 
