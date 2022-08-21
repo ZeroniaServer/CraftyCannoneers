@@ -45,9 +45,7 @@ scoreboard players reset @a[team=!Lobby,team=!Spectator,team=!Developer,scores={
 
 #Cannons
 execute if score #loaded entityid matches 1 run function entityid:real_tick
-function cannons:load
-function cannons:shoot
-function cannons:cannonclaim
+function cannons:main
 function cannons:hitmarkers
 tag @a[tag=UtilKilled] remove UtilKilled
 tag @a[tag=GoldKilled] remove GoldKilled

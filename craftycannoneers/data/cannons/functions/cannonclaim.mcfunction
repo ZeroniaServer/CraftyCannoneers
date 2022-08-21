@@ -1,25 +1,28 @@
-execute as @e[type=armor_stand,tag=CannonDisp] unless score @s playerUUID matches 0 run scoreboard players add @s cannonclaim 1
-execute as @e[type=armor_stand,tag=CannonDisp,tag=OnFire,scores={cannonclaim=1..120}] run scoreboard players set @s cannonclaim 125
+#> Claim timer
+execute unless score @s playerUUID matches 0 run scoreboard players add @s cannonclaim 1
 
-#add nametag
-scoreboard players reset @e[type=armor_stand,tag=CannonDisp,tag=Tutorial,scores={cannonclaim=1..}] eyeclick
-execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=3}] at @s run function cannons:setcannonname
+#> Unclaim if on fire
+scoreboard players set @s[tag=OnFire,scores={cannonclaim=1..120}] cannonclaim 125
 
-execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=120..}] at @s run kill @e[type=area_effect_cloud,tag=CannonNametag,limit=1,sort=nearest,distance=..3]
-execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=120..}] at @s run kill @e[type=area_effect_cloud,tag=GPDispText,limit=2,sort=nearest,distance=..3]
-execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=120..}] run scoreboard players set @s playerUUID 0
-execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=120..}] at @s if score @s playerUUID matches 0 run scoreboard players reset @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] gpdisp_time
-execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=120..}] at @s if score @s playerUUID matches 0 run scoreboard players reset @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] gpdisp_time
-execute as @e[type=armor_stand,tag=CannonDisp,tag=Tutorial,scores={cannonclaim=120..}] at @s if score @s playerUUID matches 0 run scoreboard players set @s eyeclick 0
-execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=120..}] if score @s playerUUID matches 0 run scoreboard players reset @s cannonclaim
+#> Add nametag
+execute at @s[scores={cannonclaim=3}] run function cannons:setcannonname
 
-# forgets gunpowder after 6 seconds in tutorial area
-scoreboard players add @e[type=armor_stand,tag=CannonDisp,tag=Tutorial,scores={eyeclick=0..}] eyeclick 1
-execute as @e[type=armor_stand,tag=CannonDisp,tag=Tutorial,scores={eyeclick=120..}] at @s if score @s playerUUID matches 0 run scoreboard players set @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] CmdData 0
-execute as @e[type=armor_stand,tag=CannonDisp,tag=Tutorial,scores={eyeclick=120..}] at @s if score @s playerUUID matches 0 run scoreboard players set @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] CmdData 0
-execute as @e[type=armor_stand,tag=CannonDisp,tag=Tutorial,scores={eyeclick=120..}] at @s if score @s playerUUID matches 0 run item replace entity @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] armor.head with air
-execute as @e[type=armor_stand,tag=CannonDisp,tag=Tutorial,scores={eyeclick=120..}] at @s if score @s playerUUID matches 0 run item replace entity @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] armor.head with air
-scoreboard players reset @e[type=armor_stand,tag=CannonDisp,tag=Tutorial,scores={eyeclick=120..}] eyeclick
+#> Unclaim time
+execute at @s[scores={cannonclaim=120..}] run kill @e[type=area_effect_cloud,tag=CannonNametag,limit=1,sort=nearest,distance=..3]
+execute at @s[scores={cannonclaim=120..}] run kill @e[type=area_effect_cloud,tag=GPDispText,limit=2,sort=nearest,distance=..3]
+scoreboard players set @s[scores={cannonclaim=120..}] playerUUID 0
+execute at @s[scores={cannonclaim=120..,playerUUID=0}] run scoreboard players reset @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] gpdisp_time
+execute at @s[scores={cannonclaim=120..,playerUUID=0}] run scoreboard players reset @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] gpdisp_time
+scoreboard players reset @s[scores={cannonclaim=120..,playerUUID=0}] cannonclaim
 
-#> Unclaim for distance/leave game
-execute as @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=1..120}] run function cannons:hasowner
+#> Reset gunpowder after 6 seconds in Cannon Dock
+scoreboard players reset @s[tag=Tutorial,scores={cannonclaim=1..}] eyeclick
+scoreboard players add @s[tag=Tutorial,scores={eyeclick=0..}] eyeclick 1
+execute at @s[tag=Tutorial,scores={eyeclick=120..,playerUUID=0}] run scoreboard players set @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] CmdData 0
+execute at @s[tag=Tutorial,scores={eyeclick=120..,playerUUID=0}] run scoreboard players set @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] CmdData 0
+execute at @s[tag=Tutorial,scores={eyeclick=120..,playerUUID=0}] run item replace entity @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] armor.head with air
+execute at @s[tag=Tutorial,scores={eyeclick=120..,playerUUID=0}] run item replace entity @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] armor.head with air
+scoreboard players reset @s[tag=Tutorial,scores={eyeclick=120..}] eyeclick
+
+#> Check for owner existing + being within range
+execute at @s[scores={cannonclaim=1..120}] run function cannons:hasowner

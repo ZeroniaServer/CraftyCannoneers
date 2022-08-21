@@ -1,11 +1,16 @@
-scoreboard players add @e[type=marker,tag=ImpactMarker] CmdData 1
+scoreboard players operation @s[tag=!HasUUID] playerUUID = @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] playerUUID
+data modify entity @s[tag=!HasUUID] CustomName set from entity @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] CustomName
+tag @s[tag=!HasUUID] add HasUUID
+execute at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper
 
-execute as @e[type=marker,tag=ImpactMarker,tag=HitWeakpointOrange,tag=!WeakpointAnnounced] at @s run function cannons:hitweakpointorange
-execute as @e[type=marker,tag=ImpactMarker,tag=HitWeakpointPurple,tag=!WeakpointAnnounced] at @s run function cannons:hitweakpointpurple
-execute as @e[type=marker,tag=ImpactMarker,tag=HitWeakpointFake,tag=!WeakpointAnnounced] at @s run function cannons:hitweakpointfake
+scoreboard players add @s CmdData 1
 
-execute as @e[type=marker,tag=ImpactMarker,scores={CmdData=3}] at @s unless entity @s[predicate=cannons:safezones/island] unless entity @s[predicate=cannons:safezones/tutorial] run function cannons:lightfill2
-execute as @e[type=marker,tag=ImpactMarker,scores={CmdData=3}] at @s unless entity @s[predicate=cannons:safezones/island] unless entity @s[predicate=cannons:safezones/tutorial] run function cannons:afterdamage
-execute as @e[type=marker,tag=ImpactMarker,scores={CmdData=3}] at @s unless entity @s[predicate=cannons:safezones/island] if entity @s[predicate=cannons:safezones/tutorial] run function cannons:afterdamagetutorial
+execute at @s if entity @s[tag=HitWeakpointOrange,tag=!WeakpointAnnounced] run function cannons:hitweakpointorange
+execute at @s if entity @s[tag=HitWeakpointPurple,tag=!WeakpointAnnounced] run function cannons:hitweakpointpurple
+execute at @s if entity @s[tag=HitWeakpointFake,tag=!WeakpointAnnounced] run function cannons:hitweakpointfake
 
-kill @e[type=marker,tag=ImpactMarker,scores={CmdData=3..}]
+execute at @s[scores={CmdData=3}] unless entity @s[predicate=cannons:safezones/island] unless entity @s[predicate=cannons:safezones/tutorial] run function cannons:lightfill2
+execute at @s[scores={CmdData=3}] unless entity @s[predicate=cannons:safezones/island] unless entity @s[predicate=cannons:safezones/tutorial] run function cannons:afterdamage
+execute at @s[scores={CmdData=3}] unless entity @s[predicate=cannons:safezones/island] if entity @s[predicate=cannons:safezones/tutorial] run function cannons:afterdamagetutorial
+
+kill @s[scores={CmdData=3..}]

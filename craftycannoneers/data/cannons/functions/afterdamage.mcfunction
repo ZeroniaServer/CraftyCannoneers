@@ -1,6 +1,7 @@
 function cannons:airfill
 
 scoreboard players operation @s CalcAir2 -= @s CalcAir1
+
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] run scoreboard players operation $DamagePurple CmdData += @s CalcAir2
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] run scoreboard players operation $DamagePurple CmdData += @s CalcAir2
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple,tag=!cluster] run scoreboard players add $DamagePurple CmdData 14

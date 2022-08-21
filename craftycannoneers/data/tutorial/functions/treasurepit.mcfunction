@@ -1,19 +1,19 @@
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run clear @s
+execute as @a[team=Lobby,gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run clear @s
 
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run function lobby:hats
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run item replace entity @s hotbar.4 with ender_eye{NoDrop:1b,CustomModelData:1,Key:1b,display:{Name:'[{"text":"Skeleton Key","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Use this key to unlock ","italic":false,"color":"white"}]','[{"text":"any kind of locked Chests!","italic":false,"color":"white"},{"text":"","italic":false,"color":"dark_purple"}]']}}
+execute as @a[team=Lobby,gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run function lobby:hats
+execute as @a[team=Lobby,gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run item replace entity @s hotbar.4 with ender_eye{NoDrop:1b,CustomModelData:1,Key:1b,display:{Name:'[{"text":"Skeleton Key","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Use this key to unlock ","italic":false,"color":"white"}]','[{"text":"any kind of locked Chests!","italic":false,"color":"white"},{"text":"","italic":false,"color":"dark_purple"}]']}}
 
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] at @s run playsound ding master @s ~ ~ ~ 1 0.6
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run title @s title {"text":"Treasure Pit","color":"aqua"}
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run title @s subtitle {"text":"(Learn about Treasure Chests)","color":"yellow"}
+execute as @a[team=Lobby,gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] at @s run playsound ding master @s ~ ~ ~ 1 0.6
+execute as @a[team=Lobby,gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run title @s title {"text":"Treasure Pit","color":"aqua"}
+execute as @a[team=Lobby,gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run title @s subtitle {"text":"(Learn about Treasure Chests)","color":"yellow"}
 
-execute as @a[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run tag @s add InPit
+execute as @a[team=Lobby,gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run tag @s add InPit
 
-execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run title @s title {"text":" "}
-execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run title @s subtitle {"text":" "}
-execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run clear @s
-execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run function lobby:items
-execute as @a[predicate=!tutorial:treasurepit,tag=InPit] run tag @s remove InPit
+execute as @a[team=Lobby,predicate=!tutorial:treasurepit,tag=InPit] run title @s title {"text":" "}
+execute as @a[team=Lobby,predicate=!tutorial:treasurepit,tag=InPit] run title @s subtitle {"text":" "}
+execute as @a[team=Lobby,predicate=!tutorial:treasurepit,tag=InPit] run clear @s
+execute as @a[team=Lobby,predicate=!tutorial:treasurepit,tag=InPit] run function lobby:items
+execute as @a[team=Lobby,predicate=!tutorial:treasurepit,tag=InPit] run tag @s remove InPit
 
 #> Spawn fake treasures
 execute positioned -235 -28 -19 if entity @a[team=Lobby,distance=..10] unless entity @e[type=armor_stand,tag=CChestFakeC] run summon armor_stand -238 -29.05 -20 {PersistenceRequired:1b,Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Marker:1b,Invisible:1b,Tags:["fakechest","CChestFakeC","NewFake"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:19}}],Passengers:[{id:"hopper_minecart",PersistenceRequired:1b,LootTable:"tutorial:common_treasure",CustomDisplayTile:1b,DisplayState:{Name:"minecraft:air"},Invulnerable:1b,Silent:1b,Enabled:0b,CustomName:'{"text":"Common Treasure Chest","color":"dark_gray","bold":"true","underlined":"true"}',NoAI:1b,Tags:["CChestFake","fakechest"]}]}
@@ -31,20 +31,20 @@ execute as @e[type=#game:chest,tag=fakechest,scores={CmdData=..10}] at @s run tp
 #> Particles
 #Common
 execute as @e[type=armor_stand,tag=CChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
-execute as @e[type=armor_stand,tag=CChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=7..12]
-execute as @e[type=armor_stand,tag=CChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=13..]
+execute as @e[type=armor_stand,tag=CChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=7..12]
+execute as @e[type=armor_stand,tag=CChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_gray_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=13..]
 #Uncommon
 execute as @e[type=armor_stand,tag=UCChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
-execute as @e[type=armor_stand,tag=UCChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=7..12]
-execute as @e[type=armor_stand,tag=UCChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=13..]
+execute as @e[type=armor_stand,tag=UCChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=7..12]
+execute as @e[type=armor_stand,tag=UCChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust light_blue_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=13..]
 #Rare
 execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
-execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=7..12]
-execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=13..]
+execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=7..12]
+execute as @e[type=armor_stand,tag=RChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust purple_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=13..]
 #Locked
 execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 force @a
-execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=7..12]
-execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=!Spectator,team=Lobby,distance=13..]
+execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=7..12]
+execute as @e[type=armor_stand,tag=LChestFakeC,tag=!Looted,scores={CmdData=31..}] at @s run particle falling_dust red_concrete ~ ~2 ~ 0 0 0 0.1 1 force @a[team=Lobby,distance=13..]
 
 #Common
 execute as @e[type=hopper_minecart,tag=CChestFake,tag=!Opened] at @s if data entity @s Items run item replace entity @e[type=armor_stand,tag=CChestFakeC,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:20}
