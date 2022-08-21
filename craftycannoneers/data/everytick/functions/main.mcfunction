@@ -24,7 +24,7 @@ tag @a[tag=GoldKilled] remove GoldKilled
 
 #Weapons - TODO OPTIMIZE
 function weapons:bomb/throw
-function weapons:bomb/functionality
+function weapons:bomb/main
 
 #Chests - TODO OPTIMIZE
 function chests:loop

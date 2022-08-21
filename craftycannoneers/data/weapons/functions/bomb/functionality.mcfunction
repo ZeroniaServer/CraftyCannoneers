@@ -1,37 +1,11 @@
+#> General
+tag @s[nbt={OnGround:1b},scores={CmdData=3..}] add Kaboom
+scoreboard players add @s CmdData 1
+execute at @s run particle flame ~ ~0.5 ~ 0 0 0 .02 1 force
+execute at @s run playsound blastbombfuse master @a ~ ~ ~ 0.5 1
 
-execute as @e[type=armor_stand,tag=Bomb,nbt={OnGround:1b},scores={CmdData=3..}] at @s run tag @s add Kaboom
-scoreboard players add @e[type=armor_stand,tag=Bomb,tag=Kaboom] BombDelay 1
-scoreboard players add @e[type=armor_stand,tag=Bomb] CmdData 1
-execute as @e[type=armor_stand,tag=Bomb] at @s run particle flame ~ ~0.5 ~ 0 0 0 .02 1 force
-execute as @e[type=armor_stand,tag=Bomb] at @s run playsound minecraft:blastbombfuse master @a ~ ~ ~ 0.5 1
-execute as @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=6..}] at @s run playsound minecraft:blastbombexplode master @a ~ ~ ~ 1.5 1.3
-execute as @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=6..}] at @s run particle explosion ~ ~ ~ 1 1 1 0.1 7 force
-execute as @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=6..}] at @s run particle item ender_eye{CustomModelData:2} ~ ~ ~ 0.1 0.1 0.1 0.1 10 force
+#> Water kill
+execute as @e[type=armor_stand,tag=Bomb] at @s if block ~ ~ ~ water run function weapons:bomb/waterkill
 
-execute as @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=4}] run data merge entity @s {Marker:1b,NoGravity:1b}
-
-execute as @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=4}] at @s as @a[tag=!Blasted,gamemode=!spectator,distance=..5] at @s run summon area_effect_cloud ~ ~155 ~ {Tags:["BlastAEC"],Particle:"block air",Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:0.1f,Duration:1,Effects:[{Id:25,Amplifier:100,Duration:2,ShowParticles:0b}]}
-execute as @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=4}] at @s as @a[tag=!Blasted,gamemode=!spectator,distance=..5] run tag @s add Blasted
-
-scoreboard players add @a[tag=Blasted] blasttime 1
-tag @a[tag=Blasted,scores={blasttime=6..}] remove Blasted
-execute as @a[tag=!Blasted,scores={blasttime=1..}] run scoreboard players reset @s blasttime
-
-execute as @e[type=armor_stand,tag=Bomb] at @s if block ~ ~ ~ water run particle splash ~ ~1 ~ 0.1 0.2 0.1 0.1 20 force
-execute as @e[type=armor_stand,tag=Bomb] at @s if block ~ ~ ~ water run particle item ender_eye{CustomModelData:2} ~ ~1 ~ 0.1 0.1 0.1 0.1 10 force
-execute as @e[type=armor_stand,tag=Bomb] at @s if block ~ ~ ~ water run playsound minecraft:entity.generic.splash master @a ~ ~ ~ 1 2
-execute as @e[type=armor_stand,tag=Bomb] at @s if block ~ ~ ~ water run kill @s
-
-execute as @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=5}] at @s run function weapons:bomb/summonslime
-team join Collide @e[type=slime,tag=BlastSlime]
-effect give @e[type=area_effect_cloud,tag=BlastAEC] invisibility 1000000 100 true
-execute as @e[type=slime,tag=BlastSlime] run scoreboard players add @s CmdData 1
-execute as @e[type=area_effect_cloud,tag=BlastAEC] run scoreboard players add @s CmdData 1
-execute as @e[type=area_effect_cloud,tag=BlastAEC,scores={CmdData=1}] at @s run tp @s ~ ~-155 ~
-execute as @e[type=slime,tag=BlastSlime,scores={CmdData=1}] at @s run tp @s ~ ~33 ~
-execute as @e[type=slime,tag=BlastSlime,scores={CmdData=1}] at @s run data merge entity @s {NoAI:0b,Attributes:[{Name:"generic.attack_damage",Base:4f}]}
-execute as @e[type=slime,tag=BlastSlime,scores={CmdData=6..}] at @s run data merge entity @s {Size:0}
-execute as @e[type=slime,tag=BlastSlime,scores={CmdData=6..}] at @s run tp @s ~ ~-500 ~
-execute as @e[type=slime,tag=BlastSlime,scores={CmdData=6..}] at @s run kill @s
-
-kill @e[type=armor_stand,tag=Bomb,tag=Kaboom,scores={BombDelay=6..}]
+#> Kaboom
+execute at @s[tag=Kaboom] run function weapons:bomb/kaboom
