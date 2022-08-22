@@ -135,6 +135,7 @@ function game:trackdamage
 
 execute as @a run trigger readyup set 0
 
+execute as @a[scores={death=1..}] run tag @s remove NoRegen
 execute as @a[scores={death=1..}] run function cannons:despawnplayerc
 execute as @a[scores={death=1..},team=!Lobby,team=!Spectator,team=!Developer] run function game:givegear
 execute as @a[scores={death=1..},team=!Lobby,team=!Spectator,team=!Developer] run gamemode adventure @s[gamemode=!spectator]
