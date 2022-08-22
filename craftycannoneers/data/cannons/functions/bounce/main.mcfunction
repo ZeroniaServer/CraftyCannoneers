@@ -1,5 +1,5 @@
 #> Functionality
-execute as @e[type=armor_stand,tag=BouncyCannonball,scores={bouncedelay=1}] at @s run function cannons:bounce/functionality
+execute as @e[type=armor_stand,tag=BouncyCannonball,scores={bouncedelay=1}] at @s run function cannons:bounce/blast
 
 #> Blast entities
 execute as @e[type=slime,tag=BounceSlime] at @s run function cannons:bounce/slime
