@@ -22,6 +22,8 @@ function game:shipweakpoint/spot
 #> Damage Calculation
 execute as @e[type=marker,tag=ImpactMarker] at @s run function cannons:damagecalc
 
+#> Weakpoint Respawning
+
 #> Global
 tag @a remove HoldCB
 tag @a remove HoldFB
