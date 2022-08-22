@@ -3,7 +3,6 @@ execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] as @a[team=Purple] 
 execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] as @a[team=Purple] if score @s playerUUID = $tempuuid playerUUID run tellraw @a[team=Orange] ["","\n",{"selector":"@s"},{"text":" destroyed one of our weakpoints!","color":"red"},"\n"]
 execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] as @a[team=Purple] if score @s playerUUID = $tempuuid playerUUID run scoreboard players reset @s HitmarkerTimer
 execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] as @a[team=Purple] if score @s playerUUID = $tempuuid playerUUID run scoreboard players set @s HitmarkerType 1
-execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] as @a[team=Purple] if score @s playerUUID = $tempuuid playerUUID run say shdhhsh
 execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] as @a[team=Purple] if score @s playerUUID = $tempuuid playerUUID run scoreboard players add @s MVPdamage 85
 execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] run scoreboard players add $CritOrange CmdData 85
 execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] run scoreboard players add $DamageOrange CmdData 85
