@@ -1,0 +1,17 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:entity_killed_player",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:slime",
+            "nbt": "{Tags:[\"BounceSlime\"]}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "cannons:bounceblast/utilkillcheck"
+    }
+  }
+  
