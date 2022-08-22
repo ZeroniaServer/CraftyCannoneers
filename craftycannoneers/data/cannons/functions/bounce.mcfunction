@@ -17,7 +17,7 @@ execute if entity @e[type=marker,tag=BounceRNG,scores={RNGscore=9}] at @s run tp
 kill @e[type=marker,tag=BounceRNG]
 
 scoreboard players add @s drag 4
-scoreboard players set @s gravity -300
+scoreboard players set @s gravity -350
 particle minecraft:sweep_attack ~ ~ ~ 1 0.1 1 0 8 force
 particle minecraft:cloud ~ ~ ~ 1 0.2 1 0.05 12 force
 
@@ -40,6 +40,8 @@ execute as @e[type=area_effect_cloud,tag=bouncydamage,tag=!HasName] run data mod
 data remove storage craftycannoneers:temp CustomName
 tag @e[type=area_effect_cloud,tag=bouncydamage,tag=!HasName] add HasName
 tag @a[tag=BouncyDamaged] remove BouncyDamaged
+
+scoreboard players set @s bouncedelay 1
 
 #explosion
 execute if entity @s[tag=!InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}

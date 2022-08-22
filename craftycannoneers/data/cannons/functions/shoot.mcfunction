@@ -1,6 +1,8 @@
 scoreboard players add @s[tag=Hit1] doublehit 1
 scoreboard players add @s CmdData 1
 
+scoreboard players add @s[tag=bouncing,scores={bouncedelay=1..}] bouncedelay 1
+
 execute at @s[tag=CannonballCluster,tag=!clusteracc] run function cannons:clusteraccuracy
 scoreboard players set @s[tag=CannonballCluster] doublehit 69
 
@@ -26,7 +28,7 @@ execute at @s[tag=GoldenCannonball,scores={CmdData=4..}] run particle dust_color
 execute at @s[tag=!TracerCannonball,tag=!CannonballCluster,tag=!ChainCannonball,tag=!GoldenCannonball,tag=!bouncing,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force
 execute at @s[tag=!TracerCannonball,tag=CannonballCluster,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force
 
-execute at @s[tag=!CannonballCluster,tag=!GoldenCannonball,tag=!ChainCannonball,scores={CmdData=4..}] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 4 force
+execute at @s[tag=!CannonballCluster,tag=!GoldenCannonball,tag=!ChainCannonball,scores={CmdData=4..}] unless entity @s[tag=bouncing] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 4 force
 execute at @s[tag=ChainCannonball,scores={CmdData=4..}] rotated as @e[type=armor_stand,tag=ChainAnchor,limit=1,sort=nearest] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 4 force
 execute at @s[tag=GoldenCannonball,scores={CmdData=4..}] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 2 force
 execute at @s[tag=CannonballCluster,scores={CmdData=4..}] run particle smoke ^ ^2 ^-8.5 0 0 0 0.1 2 force
