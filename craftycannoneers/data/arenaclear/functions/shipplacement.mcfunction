@@ -3,6 +3,9 @@ place template orangeship_1 52 -37 44
 place template orangeship_2 36 -37 44
 place template orangeship_3 65 11 54
 
+fill 50 -31 62 90 -36 48 sponge replace #game:sponge_replace
+fill 50 -31 62 90 -36 48 air replace #game:sponge
+
 fill 56 -27 50 56 -26 50 ladder[facing=north]
 fill 56 -27 60 56 -26 60 ladder[facing=south]
 fill 42 -19 46 96 6 64 moving_piston replace barrier
@@ -40,6 +43,9 @@ setblock 78 -25 59 dark_oak_door[facing=east,half=upper,hinge=right,open=true] d
 place template purpleship_1 57 -37 -66
 place template purpleship_2 41 -37 -66
 place template purpleship_3 65 11 -56
+
+fill 50 -31 -62 90 -36 -48 sponge replace #game:sponge_replace
+fill 50 -31 -62 90 -36 -48 air replace #game:sponge
 
 fill 84 -27 -50 84 -26 -50 ladder[facing=south]
 fill 84 -27 -60 84 -26 -60 ladder[facing=north]
