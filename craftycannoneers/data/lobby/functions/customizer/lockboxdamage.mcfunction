@@ -1,3 +1,5 @@
+scoreboard players set $lockboxspawn CmdData 1000
+
 scoreboard players operation $lockboxspawn CmdData = $ShipHP CmdData
 scoreboard players operation $lockboxspawn CmdData /= $3 CmdData
 
