@@ -75,3 +75,4 @@ execute as @e[type=armor_stand,tag=LChestFakeC] at @s run particle falling_dust 
 scoreboard players reset @a[team=Lobby] MVPkill
 scoreboard players reset @a[team=Lobby] MVPdeath
 scoreboard players reset @a[team=Lobby] MVPcannon
+scoreboard players reset @a[team=Lobby] MVPdamage
