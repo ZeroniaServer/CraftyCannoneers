@@ -12,6 +12,7 @@ execute as @e[type=marker,tag=SelectedWeakP,tag=Orange] at @s unless block ~ ~ ~
 
 team join NoName @e[type=slime,tag=Weakpoint]
 
-execute unless entity @e[type=marker,tag=WeakpointLoc,tag=Orange] run tellraw @a[team=Purple] {"text":"All ship weakpoints destroyed!","color":"dark_aqua"}
+execute unless entity @e[type=marker,tag=WeakpointLoc,tag=Orange] run tellraw @a[team=Purple] ["","\n",{"text":"All enemy ship weakpoints have been destroyed!","color":"aqua"},"\n"]
+execute unless entity @e[type=marker,tag=WeakpointLoc,tag=Orange] run tellraw @a[team=Orange] ["","\n",{"text":"All of our ship weakpoints have been destroyed!","color":"red"},"\n"]
 
 kill @e[type=marker,tag=SelectedWeakP]
