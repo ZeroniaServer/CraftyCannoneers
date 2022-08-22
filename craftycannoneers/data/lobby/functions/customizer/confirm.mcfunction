@@ -1,4 +1,4 @@
-fill -54 -24 9 -55 -23 9 air
+fill -53 -24 9 -55 -22 9 air
 
 scoreboard players reset @a modisigns
 scoreboard players reset @a moditimer

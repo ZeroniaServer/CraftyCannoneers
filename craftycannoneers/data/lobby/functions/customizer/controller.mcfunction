@@ -1,4 +1,4 @@
-execute positioned -54.5 -25 8 unless entity @a[distance=..4] run particle dust 0 1 1 1 -54.1 -22.8 9.8 0.6 0.6 0 0 2 force
+execute positioned -54.5 -25 8 unless entity @a[distance=..4] run particle dust 0 1 1 1 -53.6 -22.2 9.8 0.8 0.8 0 0 2 force
 
 execute positioned -54.5 -25 8 run tag @a[distance=..4] add NearModboard
 execute positioned -54.5 -25 8 run scoreboard players enable @a[distance=..4,tag=NearModboard] modisigns
