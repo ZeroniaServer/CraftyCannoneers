@@ -47,7 +47,7 @@ execute as @e[type=marker,tag=GasExplode,predicate=cannons:ships/purple] at @s r
 execute as @e[type=marker,tag=GasExplode,predicate=cannons:ships/purple] at @s run scoreboard players add $CritPurple CmdData 15
 execute as @e[type=marker,tag=GasExplode,predicate=cannons:ships/orange] at @s run scoreboard players add $DamageOrange CmdData 15
 execute as @e[type=marker,tag=GasExplode,predicate=cannons:ships/orange] at @s run scoreboard players add $CritOrange CmdData 15
-execute as @e[type=marker,tag=GasExplode] at @s run function cannons:gasexplodehitmarker
+execute as @e[type=marker,tag=GasExplode] at @s run function cannons:gas/hitmarker
 execute as @e[type=marker,tag=GasExplode] at @s run summon minecraft:lightning_bolt ~ ~300000 ~
 execute as @e[type=marker,tag=GasExplode] at @s run playsound gasexplode master @a ~ ~ ~ 4 1
 execute as @e[type=marker,tag=GasExplode] at @s run playsound gasexplode_distant master @a[distance=15..] ~ ~ ~ 8 1
