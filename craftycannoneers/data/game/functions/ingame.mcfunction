@@ -111,22 +111,30 @@ execute store result bossbar purpleship3 max run scoreboard players get $ShipHP 
 execute store result bossbar orangeship max run scoreboard players get $ShipHP CmdData
 execute store result bossbar orangeship2 max run scoreboard players get $ShipHP CmdData
 
-execute unless score $DamagePurple CmdData matches 1.. run bossbar set purpleship color purple
-execute unless score $DamagePurple CmdData matches 1.. run bossbar set purpleship2 color purple
-execute unless score $DamagePurple CmdData matches 1.. run bossbar set purpleship3 color purple
-execute unless score $DamageOrange CmdData matches 1.. run bossbar set orangeship color yellow
-execute unless score $DamageOrange CmdData matches 1.. run bossbar set orangeship2 color yellow
+execute unless score $DamagePurple CmdData matches 1.. unless score $CritPurple CmdData matches 1.. run bossbar set purpleship color purple
+execute unless score $DamagePurple CmdData matches 1.. unless score $CritPurple CmdData matches 1.. run bossbar set purpleship2 color purple
+execute unless score $DamagePurple CmdData matches 1.. unless score $CritPurple CmdData matches 1.. run bossbar set purpleship3 color purple
+execute unless score $DamageOrange CmdData matches 1.. unless score $CritOrange CmdData matches 1.. run bossbar set orangeship color yellow
+execute unless score $DamageOrange CmdData matches 1.. unless score $CritOrange CmdData matches 1.. run bossbar set orangeship2 color yellow
 
-execute if score $DamagePurple CmdData matches 1.. run bossbar set purpleship color white
-execute if score $DamagePurple CmdData matches 1.. run bossbar set purpleship2 color white
-execute if score $DamagePurple CmdData matches 1.. run bossbar set purpleship3 color white
-execute if score $DamageOrange CmdData matches 1.. run bossbar set orangeship color white
-execute if score $DamageOrange CmdData matches 1.. run bossbar set orangeship2 color white
+execute if score $DamagePurple CmdData matches 1.. unless score $CritPurple CmdData matches 1.. run bossbar set purpleship color white
+execute if score $DamagePurple CmdData matches 1.. unless score $CritPurple CmdData matches 1.. run bossbar set purpleship2 color white
+execute if score $DamagePurple CmdData matches 1.. unless score $CritPurple CmdData matches 1.. run bossbar set purpleship3 color white
+execute if score $DamageOrange CmdData matches 1.. unless score $CritOrange CmdData matches 1.. run bossbar set orangeship color white
+execute if score $DamageOrange CmdData matches 1.. unless score $CritOrange CmdData matches 1.. run bossbar set orangeship2 color white
+
+execute if score $CritPurple CmdData matches 1.. run bossbar set purpleship color red
+execute if score $CritPurple CmdData matches 1.. run bossbar set purpleship2 color red
+execute if score $CritPurple CmdData matches 1.. run bossbar set purpleship3 color red
+execute if score $CritOrange CmdData matches 1.. run bossbar set orangeship color red
+execute if score $CritOrange CmdData matches 1.. run bossbar set orangeship2 color red
 
 execute if score $DamagePurple CmdData matches 1.. if score $PurpleHP CmdData matches 1.. run scoreboard players remove $PurpleHP CmdData 1
+execute if score $CritPurple CmdData matches 1.. run scoreboard players remove $CritPurple CmdData 1
 execute if score $DamagePurple CmdData matches 1.. if score $PurpleHP CmdData matches 1.. run scoreboard players add $CombinedDamage CmdData 1
 execute if score $DamagePurple CmdData matches 1.. run scoreboard players remove $DamagePurple CmdData 1
 execute if score $DamageOrange CmdData matches 1.. if score $OrangeHP CmdData matches 1.. run scoreboard players remove $OrangeHP CmdData 1
+execute if score $CritOrange CmdData matches 1.. run scoreboard players remove $CritOrange CmdData 1
 execute if score $DamageOrange CmdData matches 1.. if score $OrangeHP CmdData matches 1.. run scoreboard players add $CombinedDamage CmdData 1
 execute if score $DamageOrange CmdData matches 1.. run scoreboard players remove $DamageOrange CmdData 1
 function game:updatebossbars
