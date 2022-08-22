@@ -5,6 +5,7 @@ execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] as @a[team=Orange] 
 execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] as @a[team=Orange] if score @s playerUUID = $tempuuid playerUUID run scoreboard players set @s HitmarkerType 1
 execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] as @a[team=Orange] if score @s playerUUID = $tempuuid playerUUID run scoreboard players add @s MVPdamage 85
 execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] run scoreboard players add $CritPurple 85
+execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] run scoreboard players add $DamagePurple 85
 execute if entity @s[tag=!HitSpotted,tag=!WeakpointAnnounced] as @a[team=Orange] if score @s playerUUID = $tempuuid playerUUID run tellraw @a[team=Orange] ["","\n",{"selector":"@s"},{"text":" destroyed an ","color":"aqua"},{"text":"unexposed","underlined":true,"color":"red"},{"text":" weakpoint! No bonus damage dealt.","color":"aqua"},"\n"]
 tag @s add WeakpointAnnounced
 tag @e[type=marker,tag=ImpactMarker,distance=0.1..1] add WeakpointAnnounced
