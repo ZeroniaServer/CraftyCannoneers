@@ -1,3 +1,6 @@
+#> Teleport in place
+execute unless entity @a[team=Purple,distance=..6] run tp @s ~ ~ ~ ~ ~
+
 #> Close
 execute if entity @s[tag=Opened] unless entity @a[team=Purple,distance=..6] unless entity @a[team=Orange,distance=..5] run function game:teamchest/orange/close
 
