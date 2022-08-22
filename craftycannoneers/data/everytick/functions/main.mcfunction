@@ -19,6 +19,7 @@ execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run
 execute if score #loaded entityid matches 1 run function entityid:real_tick
 function cannons:main
 function cannons:hitmarkers
+function cannons:bounce/main
 tag @a[tag=UtilKilled] remove UtilKilled
 tag @a[tag=GoldKilled] remove GoldKilled
 

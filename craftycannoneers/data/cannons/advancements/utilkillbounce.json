@@ -11,7 +11,7 @@
       }
     },
     "rewards": {
-      "function": "cannons:bounceblast/utilkillcheck"
+      "function": "cannons:bounce/utilkillcheck"
     }
   }
   

@@ -60,13 +60,13 @@ scoreboard players add @a[team=Lobby,tag=Exposed5] fakeexpose5 1
 scoreboard players add @a[team=Lobby,tag=Exposed6] fakeexpose6 1
 scoreboard players add @a[team=Lobby,tag=Exposed7] fakeexpose7 1
 
-tag @a[team=Lobby,tag=Exposed1,scores={fakeexpose1=500..}] remove Exposed1
-tag @a[team=Lobby,tag=Exposed2,scores={fakeexpose2=500..}] remove Exposed2
-tag @a[team=Lobby,tag=Exposed3,scores={fakeexpose3=500..}] remove Exposed3
-tag @a[team=Lobby,tag=Exposed4,scores={fakeexpose4=500..}] remove Exposed4
-tag @a[team=Lobby,tag=Exposed5,scores={fakeexpose5=500..}] remove Exposed5
-tag @a[team=Lobby,tag=Exposed6,scores={fakeexpose6=500..}] remove Exposed6
-tag @a[team=Lobby,tag=Exposed7,scores={fakeexpose7=500..}] remove Exposed7
+tag @a[team=Lobby,tag=Exposed1,scores={fakeexpose1=220..}] remove Exposed1
+tag @a[team=Lobby,tag=Exposed2,scores={fakeexpose2=220..}] remove Exposed2
+tag @a[team=Lobby,tag=Exposed3,scores={fakeexpose3=220..}] remove Exposed3
+tag @a[team=Lobby,tag=Exposed4,scores={fakeexpose4=220..}] remove Exposed4
+tag @a[team=Lobby,tag=Exposed5,scores={fakeexpose5=220..}] remove Exposed5
+tag @a[team=Lobby,tag=Exposed6,scores={fakeexpose6=220..}] remove Exposed6
+tag @a[team=Lobby,tag=Exposed7,scores={fakeexpose7=220..}] remove Exposed7
 
 tag @a[team=Lobby,tag=!InTower] remove Exposed1
 tag @a[team=Lobby,tag=!InTower] remove Exposed2

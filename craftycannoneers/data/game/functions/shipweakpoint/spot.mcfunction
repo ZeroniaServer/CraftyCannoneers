@@ -40,9 +40,14 @@ execute as @a[tag=SeeWeakpoint,scores={spotting=46..50}] run title @s subtitle [
 execute as @a[tag=SeeWeakpoint,scores={spotting=51..55}] run title @s subtitle ["",{"text":"Spotting... ","color":"dark_aqua"},{"text":"[ ","color":"gray"},{"text":"||||||||||","bold":true,"color":"green"},{"text":" ]","color":"gray"}]
 
 #Un-spot over-time
-scoreboard players add @e[type=slime,tag=Spotted] spotting 1
-execute as @e[type=slime,tag=Spotted,scores={spotting=500..}] run tag @s remove Spotted
-execute as @e[type=slime,tag=!Spotted,scores={spotting=500..}] run scoreboard players reset @s spotting
+
+execute as @e[type=slime,tag=Orange,tag=Spotted,scores={spotting=100..}] if entity @e[type=#game:cannon,tag=Orange,tag=!OnFire,scores={cannonclaim=1..}] run scoreboard players set @s spotting 99
+execute as @e[type=slime,tag=Purple,tag=Spotted,scores={spotting=100..}] if entity @e[type=#game:cannon,tag=Purple,tag=!OnFire,scores={cannonclaim=1..}] run scoreboard players set @s spotting 99
+
+execute as @e[type=slime,tag=Orange,tag=Spotted] unless entity @e[type=#game:cannon,tag=Orange,tag=!OnFire,scores={cannonclaim=1..}] run scoreboard players add @s spotting 1
+execute as @e[type=slime,tag=Purple,tag=Spotted] unless entity @e[type=#game:cannon,tag=Purple,tag=!OnFire,scores={cannonclaim=1..}] run scoreboard players add @s spotting 1
+execute as @e[type=slime,tag=Spotted,scores={spotting=220..}] run tag @s remove Spotted
+execute as @e[type=slime,tag=!Spotted,scores={spotting=220..}] run scoreboard players reset @s spotting
 
 execute as @e[type=slime,tag=Spotted,tag=Purple] if entity @a[team=Purple,tag=SeeWeakpoint] run scoreboard players set @s spotting 0
 execute as @e[type=slime,tag=Spotted,tag=Orange] if entity @a[team=Orange,tag=SeeWeakpoint] run scoreboard players set @s spotting 0
