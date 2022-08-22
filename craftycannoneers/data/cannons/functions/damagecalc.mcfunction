@@ -1,7 +1,6 @@
 scoreboard players operation @s[tag=!HasUUID] playerUUID = @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] playerUUID
 data modify entity @s[tag=!HasUUID] CustomName set from entity @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] CustomName
 tag @s[tag=!HasUUID] add HasUUID
-execute at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper
 
 scoreboard players add @s CmdData 1
 

@@ -7,8 +7,7 @@ function game:ingame/chestspawning
 function game:ingame/boat
 function game:ingame/harpoon
 function game:ingame/boardingaxe
-function tutorial:notify
-function tutorial:showtip
+function tutorial:tips/showtip
 #TODO OPTIMIZE
 function game:ingame/bell
 function game:ingame/raidhorn
