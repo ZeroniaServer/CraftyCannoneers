@@ -20,17 +20,31 @@ execute as @e[type=armor_stand,tag=GasAS] at @s run tp @s ~ ~0.002 ~
 execute as @e[type=marker,tag=GasCloud] at @s run tp @s ~ ~0.002 ~
 
 execute as @e[type=marker,tag=GasCloud] at @s run effect give @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] poison 6 100 true
-execute as @e[type=marker,tag=GasCloud] at @s run effect give @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] nausea 7 3 true
+execute as @e[type=marker,tag=GasCloud] at @s run effect give @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] nausea 10 3 true
+execute as @e[type=marker,tag=GasCloud] at @s run effect give @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] blindness 2 0 true
+execute as @e[type=marker,tag=GasCloud] at @s run tag @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] add NoRegen
+execute as @e[type=marker,tag=GasCloud] at @s run effect clear @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] regeneration
+execute as @e[type=marker,tag=GasCloud] at @s run scoreboard players reset @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] NoRegenTimer
 
-
-execute as @e[type=armor_stand,tag=GasBubble] at @s run effect give @a[distance=..2,team=!Lobby,team=!Spectator,team=!Developer] poison 6 100 true
-execute as @e[type=armor_stand,tag=Bubble] at @s run effect give @a[distance=..2,team=!Lobby,team=!Spectator,team=!Developer] nausea 7 3 true
+execute as @e[type=armor_stand,tag=GasBubble] at @s run effect give @a[distance=..3,team=!Lobby,team=!Spectator,team=!Developer] poison 6 100 true
+execute as @e[type=armor_stand,tag=GasBubble] at @s run effect give @a[distance=..3,team=!Lobby,team=!Spectator,team=!Developer] nausea 10 3 true
+execute as @e[type=armor_stand,tag=GasBubble] at @s run effect give @a[distance=..3,team=!Lobby,team=!Spectator,team=!Developer] blindness 2 0 true
+execute as @e[type=armor_stand,tag=GasBubble] at @s run effect clear @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] regeneration
+execute as @e[type=armor_stand,tag=GasBubble] at @s run tag @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] add NoRegen
+execute as @e[type=armor_stand,tag=GasBubble] at @s run scoreboard players reset @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] NoRegenTimer
 
 execute as @e[type=marker,tag=GasCloud,scores={CmdData=243}] at @s run data merge entity @e[type=armor_stand,tag=GasAS,limit=1,sort=nearest,distance=..1] {Small:1b}
 execute as @e[type=marker,tag=GasCloud,scores={CmdData=250..}] at @s run kill @e[type=armor_stand,tag=GasAS,limit=1,sort=nearest,distance=..1]
 execute as @e[type=marker,tag=GasCloud,scores={CmdData=250..}] at @s run kill @s
 
 execute as @e[type=armor_stand,tag=GasAS] at @s unless entity @e[type=marker,tag=GasCloud,distance=..1] run kill @s
+
+#> No Natural Regeneration timer
+tag @a[team=!Purple,team=!Orange] remove NoRegen
+scoreboard players add @a[tag=NoRegen] NoRegenTimer 1
+effect clear @a[tag=NoRegen] regeneration
+tag @a[tag=NoRegen,scores={NoRegenTimer=120..}] remove NoRegen
+scoreboard players reset @a[tag=!NoRegen,scores={NoRegenTimer=1..}] NoRegenTimer
 
 #> Hot Cannonball interaction
 execute as @e[type=marker,tag=GasExplode] at @s run kill @e[type=armor_stand,tag=GasAS,distance=..1,limit=1,sort=nearest]

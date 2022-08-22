@@ -85,6 +85,8 @@ scoreboard objectives add fakeexpose7 dummy
 scoreboard objectives add msgdelay dummy
 scoreboard objectives add bouncedelay dummy
 scoreboard objectives add MVPdamage dummy
+scoreboard objectives add ChaseUUID dummy
+scoreboard objectives add NoRegenTimer dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy

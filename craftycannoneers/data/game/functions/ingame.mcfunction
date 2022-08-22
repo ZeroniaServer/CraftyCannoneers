@@ -18,8 +18,8 @@ execute unless entity @e[type=slime,tag=Weakpoint,tag=Orange] if entity @e[type=
 execute unless entity @e[type=slime,tag=Weakpoint,tag=Purple] if entity @e[type=marker,tag=WeakpointLoc,tag=Orange] run function game:shipweakpoint/spawnneworange
 
 #> Boat specific effects
-execute as @a[team=Orange,predicate=game:onorange,tag=!onboatregen] run effect give @s regeneration 1000000 1 true
-execute as @a[team=Purple,predicate=game:onpurple,tag=!onboatregen] run effect give @s regeneration 1000000 1 true
+execute as @a[team=Orange,predicate=game:onorange,tag=!onboatregen,tag=!NoRegen] run effect give @s regeneration 1000000 1 true
+execute as @a[team=Purple,predicate=game:onpurple,tag=!onboatregen,tag=!NoRegen] run effect give @s regeneration 1000000 1 true
 execute as @a[team=Orange,predicate=game:onorange,tag=!onboatregen] run tag @s add onboatregen
 execute as @a[team=Purple,predicate=game:onpurple,tag=!onboatregen] run tag @s add onboatregen
 execute as @a[team=Orange,predicate=!game:onorange,tag=onboatregen] run effect clear @s regeneration
@@ -27,8 +27,8 @@ execute as @a[team=Purple,predicate=!game:onpurple,tag=onboatregen] run effect c
 execute as @a[team=Orange,predicate=!game:onorange,tag=onboatregen] run tag @s remove onboatregen
 execute as @a[team=Purple,predicate=!game:onpurple,tag=onboatregen] run tag @s remove onboatregen
 
-execute as @a[team=Orange,predicate=game:onorange,predicate=!game:hasregen] run effect give @s regeneration 1000000 1 true
-execute as @a[team=Purple,predicate=game:onpurple,predicate=!game:hasregen] run effect give @s regeneration 1000000 1 true
+execute as @a[team=Orange,predicate=game:onorange,predicate=!game:hasregen,tag=!NoRegen] run effect give @s regeneration 1000000 1 true
+execute as @a[team=Purple,predicate=game:onpurple,predicate=!game:hasregen,tag=!NoRegen] run effect give @s regeneration 1000000 1 true
 
 execute as @a[team=Orange,predicate=game:onpurple,tag=!EnemyMSG] run advancement grant @s only tutorial:zzzunlockables/intruder
 execute as @a[team=Orange,predicate=game:onpurple,tag=!EnemyMSG] run title @s title {"text":" ","color":"red"}
