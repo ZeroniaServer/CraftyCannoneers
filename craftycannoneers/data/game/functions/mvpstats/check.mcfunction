@@ -22,3 +22,4 @@ function game:mvpstats/announce
 scoreboard players reset @a MVPkill
 scoreboard players reset @a MVPdeath
 scoreboard players reset @a MVPcannon
+scoreboard players reset @a MVPdamage

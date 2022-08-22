@@ -17,7 +17,7 @@ execute if entity @e[type=marker,tag=BounceRNG,scores={RNGscore=9}] at @s run tp
 kill @e[type=marker,tag=BounceRNG]
 
 scoreboard players add @s drag 4
-scoreboard players set @s gravity -350
+scoreboard players set @s gravity -250
 particle minecraft:sweep_attack ~ ~ ~ 1 0.1 1 0 8 force
 particle minecraft:cloud ~ ~ ~ 1 0.2 1 0.05 12 force
 
@@ -34,6 +34,11 @@ scoreboard players set @s bouncedelay 1
 #explosion
 execute if entity @s[tag=!InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}
 execute if entity @s[tag=InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
+execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run playsound cannonball master @a ~ ~ ~ 4 1.2
+execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1.2
+execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a
+execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run particle flash ~ ~ ~ 0 0 0 0 5 force @a
+execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a
 execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run tag @s add Hit2
 
 execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] playerUUID
@@ -41,8 +46,6 @@ execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run data modify e
 tag @e[type=marker,tag=ImpactMarker,tag=!HasUUID] add HasUUID
 
 execute if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] run tag @s add Hit2
-execute if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] run playsound cannonball master @a ~ ~ ~ 4 1.2
-execute if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1.2
 kill @e[type=marker,tag=ExplodeRNG]
 
 
