@@ -11,7 +11,7 @@ execute as @a[team=!Lobby,team=!Spectator,team=!Developer,scores={CmdData=0}] ru
 scoreboard players reset @a CmdData
 
 #> Cannon MVP
-execute as @a[team=!Lobby,team=!Spectator,team=!Developer,scores={MVPcannon=1..}] run scoreboard players operation @s CmdData = @s MVPcannon
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,scores={MVPcannon=1..}] run scoreboard players operation @s CmdData = @s MVPdamage
 function game:mvpstats/pogger_calculation
 execute as @a[team=!Lobby,team=!Spectator,team=!Developer,scores={CmdData=0}] run tag @s add CannonMVP
 scoreboard players reset @a CmdData
