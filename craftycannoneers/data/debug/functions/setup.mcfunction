@@ -13,6 +13,7 @@ gamerule doLimitedCrafting true
 gamerule doMobSpawning false
 gamerule doMobLoot true
 gamerule naturalRegeneration false
+gamerule sendCommandFeedback false
 execute unless score $gamestate CmdData matches 2 run gamerule fallDamage false
 
 #> Scoreboards
