@@ -17,7 +17,7 @@ function cannons:firering/main
 function cannons:gas/main
 
 #> Weakpoints - TODO OPTIMIZE
-execute if score $gamestate CmdData matches 2.. run function game:shipweakpoint/spot
+function game:shipweakpoint/spot
 
 #> Damage Calculation
 execute as @e[type=marker,tag=ImpactMarker] at @s run function cannons:damagecalc
