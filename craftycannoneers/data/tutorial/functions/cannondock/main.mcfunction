@@ -1,0 +1,1 @@
+execute as @a[team=Lobby] run function tutorial:cannondock/players

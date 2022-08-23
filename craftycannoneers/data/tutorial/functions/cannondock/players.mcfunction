@@ -1,0 +1,2 @@
+execute at @s[gamemode=!spectator,predicate=tutorial:cannondock,tag=!OnDock] run function tutorial:cannondock/enter
+execute at @s[predicate=!tutorial:cannondock,tag=OnDock] run function tutorial:cannondock/exit

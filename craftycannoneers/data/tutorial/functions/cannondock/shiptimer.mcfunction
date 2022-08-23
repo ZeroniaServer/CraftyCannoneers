@@ -1,7 +1,7 @@
 #> Ship restoring
-execute if score $fakeweakpointhit CmdData matches 7 run function tutorial:restoreship
+execute if score $fakeweakpointhit CmdData matches 7 run function tutorial:cannondock/restoreship
 execute if score $shiptimer CmdData matches 1..1199 run scoreboard players add $shiptimer CmdData 1
-execute if score $shiptimer CmdData matches 1200 run function tutorial:restoreship
+execute if score $shiptimer CmdData matches 1200 run function tutorial:cannondock/restoreship
 
 execute if score $shiptimer CmdData matches 600 run title @a[team=Lobby,tag=OnDock] actionbar ["",{"text":"The Training Ship will repair itself in ","color":"aqua"},{"text":"30","bold":true,"color":"blue"},{"text":" seconds!","color":"aqua"}]
 execute if score $shiptimer CmdData matches 1000 run title @a[team=Lobby,tag=OnDock] actionbar ["",{"text":"The Training Ship will repair itself in ","color":"aqua"},{"text":"10","bold":true,"color":"blue"},{"text":" seconds!","color":"aqua"}]

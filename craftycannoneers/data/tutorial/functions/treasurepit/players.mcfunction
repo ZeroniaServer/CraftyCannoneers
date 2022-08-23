@@ -1,0 +1,2 @@
+execute at @s[gamemode=!spectator,predicate=tutorial:treasurepit,tag=!InPit] run function tutorial:treasurepit/enter
+execute at @s[predicate=!tutorial:treasurepit,tag=InPit] run function tutorial:treasurepit/exit
