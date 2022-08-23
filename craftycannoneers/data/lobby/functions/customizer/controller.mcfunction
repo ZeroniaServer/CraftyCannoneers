@@ -10,7 +10,7 @@ execute unless entity @a[tag=ModiOwner] run bossbar set lobbybar name {"text":"P
 execute if entity @a[tag=ModiOwner] run bossbar set lobbybar name ["",{"selector":"@a[tag=ModiOwner]","bold":true},{"text":" is in control of game settings!","color":"aqua"}]
 bossbar set lobbybar color blue
 
-execute unless entity @a[tag=ModiOwner] as @a[scores={modisigns=3384..},limit=1] at @s run playsound minecraft:entity.villager.work_cartographer master @a ~ ~ ~ 1 1
+execute unless entity @a[tag=ModiOwner] as @a[scores={modisigns=3384..},limit=1] at @s run playsound entity.villager.work_cartographer master @a ~ ~ ~ 1 1
 execute unless entity @a[tag=ModiOwner] as @a[scores={modisigns=3384..},limit=1] run tag @s add ModiOwner
 
 effect give @a[tag=ModiOwner] glowing 1 100 true

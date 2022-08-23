@@ -15,7 +15,6 @@ function cannons:firering/main
 
 #> Gas - TODO OPTIMIZE
 function cannons:gas/main
-execute as @e[tag=GasBubble] run function cannons:gas/chase
 
 #> Weakpoints - TODO OPTIMIZE
 function game:shipweakpoint/spot

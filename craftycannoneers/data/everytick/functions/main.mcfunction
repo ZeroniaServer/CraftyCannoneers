@@ -9,10 +9,10 @@ function everytick:arrowkill
 #Lobby water
 execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force
 execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run particle falling_water ~ ~ ~ 0.2 0.4 0.1 0.2 150 force
-execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run particle minecraft:bubble_column_up ~ ~ ~ 0.4 0.2 0.4 0.1 20 force
-execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run playsound minecraft:entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 0
-execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run playsound minecraft:entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 1.4
-execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run playsound minecraft:block.bubble_column.whirlpool_ambient master @a[distance=1..] ~ ~ ~ 1 1.2
+execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run particle bubble_column_up ~ ~ ~ 0.4 0.2 0.4 0.1 20 force
+execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run playsound entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 0
+execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run playsound entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 1.4
+execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run playsound block.bubble_column.whirlpool_ambient master @a[distance=1..] ~ ~ ~ 1 1.2
 execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run tag @s add LeaveGame
 
 #Cannons
@@ -67,9 +67,9 @@ execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=hideTips,tag=tempHideT
 tag @a remove tempHideTips
 scoreboard players reset @a[scores={toggleTips=1..}] toggleTips
 
-execute as @e[type=armor_stand,tag=YZERODeco] at @s run particle minecraft:enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2
-execute as @e[type=armor_stand,tag=EvtemaDeco] at @s run particle minecraft:enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2
-execute as @e[type=armor_stand,tag=StuffyDeco] at @s run particle minecraft:enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2
+execute as @e[type=armor_stand,tag=YZERODeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2
+execute as @e[type=armor_stand,tag=EvtemaDeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2
+execute as @e[type=armor_stand,tag=StuffyDeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2
 
 #Ingame
 execute if score $gamestate CmdData matches 3 run function game:ingame/gameend

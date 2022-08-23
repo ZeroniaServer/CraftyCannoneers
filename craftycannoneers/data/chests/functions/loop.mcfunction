@@ -96,8 +96,8 @@ execute as @e[type=#game:chest,tag=Looted,scores={CmdData=171}] at @s run kill @
 execute as @e[type=#game:chest,tag=Looted,scores={CmdData=171..220}] at @s run tp @s ~ ~-0.033 ~
 execute as @e[type=#game:chest,tag=Looted,scores={CmdData=171..200}] at @s run particle block sand ~ ~ ~ 0 0 0 0.1 5 force
 execute as @e[type=#game:chest,tag=Looted,scores={CmdData=171..200}] at @s run particle block dirt ~ ~ ~ 0 0 0 0.1 5 force
-execute as @e[type=#game:chest,tag=Looted,scores={CmdData=171..200}] at @s run playsound minecraft:block.composter.fill master @a ~ ~ ~ 1 1.6
-execute as @e[type=#game:chest,tag=Looted,scores={CmdData=200}] at @s run playsound minecraft:block.composter.fill_success master @a ~ ~ ~ 1 1.7
+execute as @e[type=#game:chest,tag=Looted,scores={CmdData=171..200}] at @s run playsound block.composter.fill master @a ~ ~ ~ 1 1.6
+execute as @e[type=#game:chest,tag=Looted,scores={CmdData=200}] at @s run playsound block.composter.fill_success master @a ~ ~ ~ 1 1.7
 execute as @e[type=#game:chest,tag=Looted,scores={CmdData=220..}] at @s run tp @s 0 -1000 0
 execute as @e[type=#game:chest,tag=Looted,scores={CmdData=220..}] at @s run kill @s
 
