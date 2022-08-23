@@ -23,6 +23,8 @@ scoreboard objectives add gravity dummy
 scoreboard objectives add doublehit dummy
 scoreboard objectives add CalcAir1 dummy
 scoreboard objectives add CalcAir2 dummy
+scoreboard objectives add CalcSail1 dummy
+scoreboard objectives add CalcSail2 dummy
 scoreboard objectives add modisigns trigger
 scoreboard objectives add moditimer dummy
 scoreboard objectives add leavegame trigger
