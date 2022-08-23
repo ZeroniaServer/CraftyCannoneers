@@ -13,7 +13,7 @@ execute as @e[type=armor_stand,tag=cannonball] at @s run function cannons:shoot
 #> Fire Ring
 function cannons:firering/main
 
-#> Gas - TODO OPTIMIZE
+#> Gas
 function cannons:gas/main
 
 #> Weakpoints - TODO OPTIMIZE
@@ -21,8 +21,6 @@ function game:shipweakpoint/spot
 
 #> Damage Calculation
 execute as @e[type=marker,tag=ImpactMarker] at @s run function cannons:damagecalc
-
-#> Weakpoint Respawning
 
 #> Global
 tag @a remove HoldCB
