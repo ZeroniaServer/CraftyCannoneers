@@ -24,7 +24,14 @@ function tutorial:tips/showtip
 execute as @e[type=armor_stand,tag=ShipBell] run function game:ingame/bell
 
 #> Setblocks for indestructible ship blocks
-function game:ingame/setblocks
+function game:ingame/indestructible
+
+#> Setblocks for lilypads
+function game:ingame/lilypads
+
+#> Cave entrances
+execute positioned 81 -36.8 -17 run particle bubble_column_up 81 -36.8 -17 1.4 0 0 0.2 5 normal @a[team=!Lobby,distance=..16]
+execute positioned 58 -36.8 17 run particle bubble_column_up 58 -36.8 17 1.4 0 0 0.2 5 normal @a[team=!Lobby,distance=..16]
 
 #> Spawn new weakpoints if the old ones die for some reason (failsafe)
 execute unless entity @e[type=slime,tag=Weakpoint,tag=Orange] if entity @e[type=marker,tag=WeakpointLoc,tag=Purple] run function game:shipweakpoint/spawnnewpurple

@@ -25,3 +25,6 @@ execute if entity @s[scores={death=1..}] run function game:ingame/death
 
 #> Chest balancing
 function balancing:chestluck
+
+#> Bubble columns
+function game:bubbles/main
