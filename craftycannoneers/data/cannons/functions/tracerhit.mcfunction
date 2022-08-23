@@ -7,6 +7,7 @@ particle dust 0 1 0.3 5 ~ ~ ~ 1 1 1 0 40 force @a[tag=CurrentTracer2]
 particle block_marker lime_concrete ~ ~1 ~ 1 0.5 1 0 20 force @a[tag=CurrentTracer2]
 
 loot give @a[tag=CurrentTracer2] loot weapons:tracer
+execute as @a[tag=CurrentTracer2] at @s run playsound entity.item.pickup player @s ~ ~ ~ 0.25 2
 
 kill @s
 

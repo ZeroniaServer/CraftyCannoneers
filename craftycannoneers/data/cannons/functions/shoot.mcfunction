@@ -48,14 +48,21 @@ execute at @s[predicate=cannons:safezones/ocean] run playsound entity.player.spl
 execute at @s[predicate=cannons:safezones/ocean] run playsound entity.player.splash.high_speed master @a ~ ~ ~ 2 1.4
 execute at @s[predicate=cannons:safezones/ocean] run playsound block.bubble_column.whirlpool_ambient master @a ~ ~ ~ 2 1.2
 kill @s[predicate=cannons:safezones/ocean]
-execute at @s[tag=!PlayerCannonball,tag=!TracerCannonball] if block ~ ~ ~ #game:nonsolids run function cannons:explode
-execute at @s[tag=!PlayerCannonball,tag=!TracerCannonball] unless block ~ ~-1 ~ air run function cannons:explode
-execute at @s[tag=!PlayerCannonball,tag=!TracerCannonball] unless block ^ ^ ^2 air run function cannons:explode
-execute at @s[tag=PlayerCannonball,tag=!Hit] if block ~ ~ ~ #game:nonsolids run function cannons:ejectplayer
-execute at @s[tag=PlayerCannonball,tag=!Hit] unless block ~ ~-1 ~ air run function cannons:ejectplayer
-execute at @s[tag=PlayerCannonball,tag=!Hit] unless block ^ ^ ^2 air run function cannons:ejectplayer
-execute at @s[tag=TracerCannonball] if block ~ ~ ~ #game:nonsolids run function cannons:tracerhit
-execute at @s[tag=TracerCannonball] unless block ~ ~-1 ~ air run function cannons:tracerhit
-execute at @s[tag=TracerCannonball] unless block ^ ^ ^2 air run function cannons:tracerhit
+
+#> Landing conditions
+execute store result score $temp x run data get entity @s Motion[0]
+execute store result score $temp z run data get entity @s Motion[2]
+execute if score $temp x matches 0 if score $temp z matches 0 run scoreboard players set $landed CmdData 1
+scoreboard players reset $temp x
+scoreboard players reset $temp z
+execute unless score $landed CmdData matches 1 at @s if block ~ ~ ~ #game:nonsolids run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s unless block ~ ~-1 ~ air run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=!ChainCannonball] unless block ^ ^ ^2 air run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball] rotated as @e[type=armor_stand,tag=ChainAnchor,limit=1,sort=nearest] unless block ^ ^ ^2 air run scoreboard players set $landed CmdData 1
+
+execute if score $landed CmdData matches 1 at @s[tag=!PlayerCannonball,tag=!TracerCannonball] run function cannons:explode
+execute if score $landed CmdData matches 1 at @s[tag=PlayerCannonball,tag=!Hit] run function cannons:ejectplayer
+execute if score $landed CmdData matches 1 at @s[tag=TracerCannonball] run function cannons:tracerhit
+scoreboard players reset $landed CmdData
 
 scoreboard players add @s[tag=BouncyCannonball,tag=Hit1,scores={gravity=..1000}] gravity 60
