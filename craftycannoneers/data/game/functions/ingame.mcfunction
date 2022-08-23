@@ -3,14 +3,19 @@ bossbar set lobbybar color green
 bossbar set lobbybar name {"text":"A game is currently in progress!","bold":true,"color":"green"}
 bossbar set lobbybar value 10
 
-#> Chest spawning
-function game:ingame/chestspawning
+#> Chests - TODO OPTIMIZE
+function chests:spawning
+function chests:loop
+function chests:lockedchest
 
 #> Player functions
 execute as @a[team=!Lobby,team=!Spectator,team=!Developer] run function game:ingame/players
 
 #> Boats - TODO OPTIMIZE
 function game:ingame/boat
+
+#> Blast Bombs
+function weapons:bomb/main
 
 #> Tips
 function tutorial:tips/showtip

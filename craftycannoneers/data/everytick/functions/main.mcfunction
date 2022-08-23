@@ -23,18 +23,12 @@ function cannons:bounce/main
 tag @a[tag=UtilKilled] remove UtilKilled
 tag @a[tag=GoldKilled] remove GoldKilled
 
-#Weapons
-function weapons:bomb/main
-
-#Chests - TODO OPTIMIZE
-function chests:loop
-function chests:lockedchest
-
 #Player related functions
 function game:shields
 
-#Game related functions or commands
+#Kill entities
 kill @e[type=falling_block]
+kill @e[type=experience_orb]
 
 #Game settings
 execute if score $gamestate CmdData matches -1 run function lobby:customizer/controller
@@ -99,5 +93,3 @@ execute if score $gamestate CmdData matches 2.. run bossbar set lobbybar players
 execute unless score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a
 execute if score $gamestate CmdData matches 3 run bossbar set lobbybar color red
 execute if score $gamestate CmdData matches 3 run bossbar set lobbybar name {"text":"A game is currently ending!","bold":true,"color":"red"}
-
-execute as @e[type=experience_orb] run kill @s
