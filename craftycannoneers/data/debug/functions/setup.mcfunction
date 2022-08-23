@@ -165,6 +165,7 @@ fill -39 -22 -18 -38 -22 -18 creeper_head
 fill -39 -23 -18 -38 -23 -18 barrier
 setblock -40 -23 -18 end_stone_brick_wall
 execute positioned -55 -23 9 run tag @e[type=glow_item_frame,limit=1,sort=nearest] add MapEntity
+execute as @e[type=glow_item_frame,tag=MapEntity] run data merge entity @s {Silent:1b}
 
 #> Entity ID
 scoreboard objectives add entityid dummy
