@@ -41,6 +41,7 @@ execute as @a[tag=LeaveGame] at @s run team join Lobby @s
 tag @a[tag=LeaveGame] remove onboatregen
 tag @a[tag=LeaveGame] remove loaded
 tag @a[tag=LeaveGame] remove InPlayerCB
+tag @a[tag=LeaveGame] remove EnemyMSG
 execute as @a[tag=LeaveGame] run scoreboard players reset @s loverocks
 execute as @a[tag=LeaveGame,advancements={tutorial:zzzunlockables/rocks={50=false}}] run advancement revoke @s only tutorial:zzzunlockables/rocks
 

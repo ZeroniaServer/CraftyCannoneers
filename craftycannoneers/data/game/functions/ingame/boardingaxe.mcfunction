@@ -1,9 +1,9 @@
 #boarding axe knockback
-execute as @a[team=Orange,predicate=game:onpurple,predicate=game:boardingaxe_mainhand,predicate=!game:kb_main] run item modify entity @s weapon.mainhand game:kb
-execute as @a[team=Orange,predicate=!game:onpurple,predicate=game:boardingaxe_mainhand,predicate=game:kb_main] run item modify entity @s weapon.mainhand game:nokb
-execute as @a[team=Orange,predicate=game:onpurple,predicate=game:boardingaxe_offhand,predicate=!game:kb_offhand] run item modify entity @s weapon.offhand game:kb
-execute as @a[team=Orange,predicate=!game:onpurple,predicate=game:boardingaxe_offhand,predicate=game:kb_offhand] run item modify entity @s weapon.offhand game:nokb
-execute as @a[team=Purple,predicate=game:onorange,predicate=game:boardingaxe_mainhand,predicate=!game:kb_main] run item modify entity @s weapon.mainhand game:kb
-execute as @a[team=Purple,predicate=!game:onorange,predicate=game:boardingaxe_mainhand,predicate=game:kb_main] run item modify entity @s weapon.mainhand game:nokb
-execute as @a[team=Purple,predicate=game:onorange,predicate=game:boardingaxe_offhand,predicate=!game:kb_offhand] run item modify entity @s weapon.offhand game:kb
-execute as @a[team=Purple,predicate=!game:onorange,predicate=game:boardingaxe_offhand,predicate=game:kb_offhand] run item modify entity @s weapon.offhand game:nokb
+item modify entity @s[team=Orange,predicate=game:onpurple,predicate=game:boardingaxe_mainhand,predicate=!game:kb_main] weapon.mainhand game:kb
+item modify entity @s[team=Orange,predicate=!game:onpurple,predicate=game:boardingaxe_mainhand,predicate=game:kb_main] weapon.mainhand game:nokb
+item modify entity @s[team=Orange,predicate=game:onpurple,predicate=game:boardingaxe_offhand,predicate=!game:kb_offhand] weapon.offhand game:kb
+item modify entity @s[team=Orange,predicate=!game:onpurple,predicate=game:boardingaxe_offhand,predicate=game:kb_offhand] weapon.offhand game:nokb
+item modify entity @s[team=Purple,predicate=game:onorange,predicate=game:boardingaxe_mainhand,predicate=!game:kb_main] weapon.mainhand game:kb
+item modify entity @s[team=Purple,predicate=!game:onorange,predicate=game:boardingaxe_mainhand,predicate=game:kb_main] weapon.mainhand game:nokb
+item modify entity @s[team=Purple,predicate=game:onorange,predicate=game:boardingaxe_offhand,predicate=!game:kb_offhand] weapon.offhand game:kb
+item modify entity @s[team=Purple,predicate=!game:onorange,predicate=game:boardingaxe_offhand,predicate=game:kb_offhand] weapon.offhand game:nokb
