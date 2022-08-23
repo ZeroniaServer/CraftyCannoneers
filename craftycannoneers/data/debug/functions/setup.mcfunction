@@ -2,8 +2,8 @@
 forceload add -17 63 -112 -64
 forceload add 11 89 129 -89
 forceload add -235 -19 -235 -19
-forceload add -1406 -20 -1383 -85
 forceload add -385 -17 -416 -96
+forceload remove -1406 -20 -1383 -85
 
 #> Gamerules
 gamerule mobGriefing true
