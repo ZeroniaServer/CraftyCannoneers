@@ -29,7 +29,6 @@ execute at @s[tag=!TracerCannonball,tag=!CannonballCluster,tag=!ChainCannonball,
 execute at @s[tag=!TracerCannonball,tag=CannonballCluster,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force
 
 execute at @s[tag=!CannonballCluster,tag=!GoldenCannonball,tag=!ChainCannonball,scores={CmdData=4..}] unless entity @s[tag=bouncing] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 4 force
-execute at @s[tag=ChainCannonball,scores={CmdData=4..}] rotated as @e[type=armor_stand,tag=ChainAnchor,limit=1,sort=nearest] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 4 force
 execute at @s[tag=GoldenCannonball,scores={CmdData=4..}] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 2 force
 execute at @s[tag=CannonballCluster,scores={CmdData=4..}] run particle smoke ^ ^2 ^-8.5 0 0 0 0.1 2 force
 
