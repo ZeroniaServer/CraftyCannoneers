@@ -42,6 +42,7 @@ tag @s[tag=LeaveGame] remove onboatregen
 tag @s[tag=LeaveGame] remove loaded
 tag @s[tag=LeaveGame] remove InPlayerCB
 tag @s[tag=LeaveGame] remove EnemyMSG
+execute if entity @s[tag=LeaveGame] run function game:boat/removetags
 scoreboard players reset @s[tag=LeaveGame] loverocks
 advancement revoke @s[tag=LeaveGame,advancements={tutorial:zzzunlockables/rocks={50=false}}] only tutorial:zzzunlockables/rocks
 

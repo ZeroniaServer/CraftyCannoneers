@@ -4,7 +4,7 @@ function game:ingame/boardingaxe
 #> Raid Horn
 function game:raidhorn/main
 
-#> Ship Effects
+#> Ship effects
 function game:ingame/shipeffects
 
 #> Harpoon

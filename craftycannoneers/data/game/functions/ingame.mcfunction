@@ -11,8 +11,8 @@ function chests:lockedchest
 #> Player functions
 execute as @a[team=!Lobby,team=!Spectator,team=!Developer] run function game:ingame/players
 
-#> Boats - TODO OPTIMIZE
-function game:ingame/boat
+#> Boats
+function game:boat/main
 
 #> Blast Bombs
 function weapons:bomb/main
