@@ -1,6 +1,8 @@
 scoreboard players set $shipstatus CmdData 0
 scoreboard players set $shiptimer CmdData 0
-kill @e[type=marker,tag=ShipRestore]
-summon marker -1385 -36 -21 {Tags:["ShipRestore"],PersistenceRequired:1b}
+
+place template minecraft:training_flag -389 11 -55
+place template minecraft:training_ship1 -400 -37 -83
+place template minecraft:training_ship2 -400 -37 -35
 
 title @a[tag=OnDock] actionbar {"text":"Training Ship repaired!","color":"green"}
