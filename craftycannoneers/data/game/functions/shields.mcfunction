@@ -1,8 +1,9 @@
-execute as @a[tag=!ShieldBlocking,predicate=game:shield_blocking_mainhand] run item modify entity @s weapon.mainhand game:unblockshield
-execute as @a[tag=!ShieldBlocking,predicate=!game:shield_blocking_mainhand] if entity @s[predicate=game:shield_blocking_offhand] run item modify entity @s weapon.offhand game:unblockshield
-execute as @a[tag=ShieldBlocking,predicate=game:shield_blocking_offhand] if entity @s[predicate=game:shield_mainhand] run item modify entity @s weapon.mainhand game:unblockshield
+item modify entity @s[tag=!ShieldBlocking,predicate=game:shield_blocking_mainhand] weapon.mainhand game:unblockshield
+item modify entity @s[tag=!ShieldBlocking,predicate=!game:shield_blocking_mainhand,predicate=game:shield_blocking_offhand] weapon.offhand game:unblockshield
+item modify entity @s[tag=ShieldBlocking,predicate=game:shield_blocking_offhand,predicate=game:shield_mainhand] weapon.mainhand game:unblockshield
 
-execute as @a[tag=ShieldBlocking,predicate=game:shield_blocking_mainhand] if entity @s[predicate=shield_offhand] run item modify entity @s weapon.offhand game:unblockshield
-execute as @a[tag=ShieldBlocking,predicate=game:shield_mainhand] if entity @s[predicate=game:shield_blocking_offhand] run item modify entity @s weapon.mainhand game:unblockshield
-execute as @a[tag=ShieldBlocking,predicate=game:shield_blocking_mainhand] if entity @s[predicate=game:shield_blocking_offhand] run item modify entity @s weapon.mainhand game:unblockshield
-tag @a[tag=ShieldBlocking] remove ShieldBlocking
+item modify entity @s[tag=ShieldBlocking,predicate=game:shield_blocking_mainhand,predicate=shield_offhand] weapon.offhand game:unblockshield
+item modify entity @s[tag=ShieldBlocking,predicate=game:shield_mainhand,predicate=game:shield_blocking_offhand] weapon.mainhand game:unblockshield
+item modify entity @s[tag=ShieldBlocking,predicate=game:shield_blocking_mainhand,predicate=game:shield_blocking_offhand] weapon.mainhand game:unblockshield
+
+tag @s[tag=ShieldBlocking] remove ShieldBlocking

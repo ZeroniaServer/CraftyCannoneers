@@ -5,5 +5,5 @@ execute as @e[type=armor_stand,tag=seagull,tag=4] at @s at @e[type=marker,tag=se
 
 execute as @e[type=marker,tag=seagull] at @s run tp @s ~ ~ ~ ~2 ~
 
-execute as @a[team=Spectator] at @s as @e[type=marker,tag=seagullSpawner,distance=..20,limit=1,sort=nearest] at @s as @e[type=armor_stand,tag=seagull,distance=..12] at @s run particle end_rod ~ ~ ~ 0 0 0 0 0 normal @a[team=Spectator,distance=..20]
-execute as @a[team=Spectator] at @s as @e[type=marker,tag=seagullSpawner,distance=..20,limit=1,sort=nearest] at @s run particle dust 0 1 3 2 ~ ~ ~ 1 1 1 0.1 10 normal @a[team=Spectator,distance=..20]
+execute as @a[team=Spectator] at @s at @e[type=marker,tag=seagullSpawner,distance=..20,limit=1,sort=nearest] at @e[type=armor_stand,tag=seagull,distance=..12] run particle end_rod ~ ~ ~ 0 0 0 0 0 normal @s[distance=..20]
+execute as @a[team=Spectator] at @s at @e[type=marker,tag=seagullSpawner,distance=..20,limit=1,sort=nearest] run particle dust 0 1 3 2 ~ ~ ~ 1 1 1 0.1 10 normal @s[distance=..20]

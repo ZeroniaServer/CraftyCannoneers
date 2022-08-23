@@ -1,77 +1,51 @@
 #> This function runs every tick. Use this as the main function to call other functions that should run every tick.
 function everytick:particles
 function everytick:lobby
-function everytick:leavegame
+execute as @a at @s run function everytick:leavegame
 function everytick:nodrop
 function everytick:seagull
 function everytick:arrowkill
 
-#Lobby water
-execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force
-execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run particle falling_water ~ ~ ~ 0.2 0.4 0.1 0.2 150 force
-execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run particle bubble_column_up ~ ~ ~ 0.4 0.2 0.4 0.1 20 force
-execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run playsound entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 0
-execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run playsound entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 1.4
-execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run playsound block.bubble_column.whirlpool_ambient master @a[distance=1..] ~ ~ ~ 1 1.2
-execute as @a[team=Lobby,predicate=!game:inlobby] at @s if block ~ ~ ~ water run tag @s add LeaveGame
-
-#Cannons
+#> EntityID
 execute if score #loaded entityid matches 1 run function entityid:real_tick
+
+#> Cannons
 function cannons:main
-function cannons:hitmarkers
 function cannons:bounce/main
-tag @a[tag=UtilKilled] remove UtilKilled
-tag @a[tag=GoldKilled] remove GoldKilled
 
-#Player related functions
-function game:shields
+#> Player related functions
+execute as @a at @s run function everytick:players
 
-#Kill entities
+#> Kill entities
 kill @e[type=falling_block]
 kill @e[type=experience_orb]
 
-#Game settings
+#> Game settings
 execute if score $gamestate CmdData matches -1 run function lobby:customizer/controller
 execute unless score $gamestate CmdData matches -1 run tag @a remove NearModboard
 
-#Easter Eggs
+#> Easter Eggs
 function lobby:easteregg/loop
 
-#Training Island
+#> Training Island
 execute if entity @a[team=Lobby,predicate=game:tutorialbounds] run function tutorial:loop
 execute as @e[type=marker,tag=TutorialWarp] at @s run function tutorial:warppads/main
-execute as @a[team=Lobby] at @s unless entity @e[type=marker,tag=TutorialWarp,distance=..1.2] run tag @s remove Warped
 
-#Toggle tips
-execute as @a unless score @s GamesPlayed matches 0..3 run scoreboard players set @s GamesPlayed 3
+#> Credits particles
+execute as @e[type=armor_stand,tag=YZERODeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby]
+execute as @e[type=armor_stand,tag=EvtemaDeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby]
+execute as @e[type=armor_stand,tag=StuffyDeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby]
 
-scoreboard players enable @a toggleTips
-execute as @a[scores={toggleTips=1..,GamesPlayed=2..}] run tellraw @s [{"text":"You cannot do this until you play ","color":"red"},{"score":{"name":"@s","objective":"GamesPlayed"},"color":"red"},{"text":" more games."}]
-execute as @a[scores={toggleTips=1..,GamesPlayed=1}] run tellraw @s [{"text":"You cannot do this until you play 1 more game.","color":"red"}]
-scoreboard players reset @a[scores={toggleTips=1..,GamesPlayed=1..}]
-
-execute as @a[scores={toggleTips=1..},tag=hideTips] run tag @s add tempHideTips
-
-execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=!hideTips] run tellraw @s [{"text":"You have disabled ingame tips. You can re-enable them using your Lobby Book.","color":"red"}]
-execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=!hideTips] run tag @s add hideTips
-
-execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=hideTips,tag=tempHideTips] run tellraw @s [{"text":"You have enabled ingame tips. You can disable them using your Lobby Book.","color":"green"}]
-execute as @a[scores={toggleTips=1..,GamesPlayed=..0},tag=hideTips,tag=tempHideTips] run tag @s remove hideTips
-
-tag @a remove tempHideTips
-scoreboard players reset @a[scores={toggleTips=1..}] toggleTips
-
-execute as @e[type=armor_stand,tag=YZERODeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2
-execute as @e[type=armor_stand,tag=EvtemaDeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2
-execute as @e[type=armor_stand,tag=StuffyDeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2
-
-#Ingame
+#> Ingame
 execute if score $gamestate CmdData matches 3 run function game:ingame/gameend
 execute if score $gamestate CmdData matches 2 run function game:ingame
 execute if score $gamestate CmdData matches 2.. run function game:duringgame
 
 function chests:openchest
-function lobby:cbdisplays
+
+#> Cannonball displays
+execute as @e[type=armor_stand,tag=CannonballDeco] run function lobby:cbdisplays/main
+
 scoreboard players reset @a[scores={eyeclick=1..}] eyeclick
 
 execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange] run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
@@ -88,7 +62,7 @@ execute if score $gamestate CmdData matches 1 run function game:countdown
 execute if score $gamestate CmdData matches 0 run scoreboard players set $Countdown CmdData 0
 execute store success score $toggle CmdData if score $toggle CmdData matches 0
 
-#Bossbars
+#> Bossbars
 execute if score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a[team=Lobby]
 execute unless score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a
 execute if score $gamestate CmdData matches 3 run bossbar set lobbybar color red
