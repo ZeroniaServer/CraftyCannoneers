@@ -21,9 +21,6 @@ execute as @e[type=armor_stand,tag=ShipBell] run function game:ingame/bell
 #> Setblocks for indestructible ship blocks
 function game:ingame/setblocks
 
-#> Chest balancing
-function balancing:chestluck
-
 #> Spawn new weakpoints if the old ones die for some reason (failsafe)
 execute unless entity @e[type=slime,tag=Weakpoint,tag=Orange] if entity @e[type=marker,tag=WeakpointLoc,tag=Purple] run function game:shipweakpoint/spawnnewpurple
 execute unless entity @e[type=slime,tag=Weakpoint,tag=Purple] if entity @e[type=marker,tag=WeakpointLoc,tag=Orange] run function game:shipweakpoint/spawnneworange

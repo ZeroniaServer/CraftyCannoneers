@@ -22,3 +22,6 @@ execute if entity @s[scores={kill=1..}] run function game:ingame/kill
 
 #> Death
 execute if entity @s[scores={death=1..}] run function game:ingame/death
+
+#> Chest balancing
+function balancing:chestluck
