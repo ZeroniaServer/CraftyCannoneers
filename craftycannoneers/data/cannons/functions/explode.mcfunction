@@ -71,14 +71,14 @@ tag @e[type=marker,tag=ImpactMarker,tag=!HasUUID] add HasUUID
 
 
 
-execute if entity @s[tag=!Hit1,tag=!BouncyCannonball,predicate=cannons:ships/orange] at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
-execute if entity @s[tag=!Hit1,tag=!BouncyCannonball,predicate=cannons:ships/purple] at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
-execute if entity @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},predicate=cannons:ships/orange] at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
-execute if entity @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},predicate=cannons:ships/purple] at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
-execute if entity @s[tag=!Hit1,tag=!BouncyCannonball,tag=!CannonballCluster] at @s run playsound cannonball master @a ~ ~ ~ 4 1
-execute if entity @s[tag=!Hit1,tag=!BouncyCannonball,tag=!CannonballCluster] at @s run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1
-execute if entity @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run playsound cannonball master @a ~ ~ ~ 4 1.2
-execute if entity @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1.2
+execute if entity @s[tag=!Hit1,tag=!BouncyCannonball,tag=!ChainCannonball,predicate=cannons:ships/orange] at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
+execute if entity @s[tag=!Hit1,tag=!BouncyCannonball,tag=!ChainCannonball,predicate=cannons:ships/purple] at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
+execute if entity @s[tag=Hit1,tag=!BouncyCannonball,tag=!ChainCannonball,scores={doublehit=4..},predicate=cannons:ships/orange] at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
+execute if entity @s[tag=Hit1,tag=!BouncyCannonball,tag=!ChainCannonball,scores={doublehit=4..},predicate=cannons:ships/purple] at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
+execute if entity @s[tag=!Hit1,tag=!BouncyCannonball,tag=!ChainCannonball,tag=!CannonballCluster] at @s run playsound cannonball master @a ~ ~ ~ 4 1
+execute if entity @s[tag=!Hit1,tag=!BouncyCannonball,tag=!ChainCannonball,tag=!CannonballCluster] at @s run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1
+execute if entity @s[tag=Hit1,tag=!BouncyCannonball,tag=!ChainCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run playsound cannonball master @a ~ ~ ~ 4 1.2
+execute if entity @s[tag=Hit1,tag=!BouncyCannonball,tag=!ChainCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1.2
 execute if entity @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a
 execute if entity @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run particle flash ~ ~ ~ 0 0 0 0 5 force @a
 execute if entity @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a
