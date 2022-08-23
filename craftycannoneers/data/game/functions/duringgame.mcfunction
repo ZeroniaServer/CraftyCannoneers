@@ -26,6 +26,11 @@ execute store result bossbar purpleship3 max run scoreboard players get $ShipHP 
 execute store result bossbar orangeship max run scoreboard players get $ShipHP CmdData
 execute store result bossbar orangeship2 max run scoreboard players get $ShipHP CmdData
 
+execute if score $gamestate CmdData matches 3 run scoreboard players reset $DamagePurple CmdData
+execute if score $gamestate CmdData matches 3 run scoreboard players reset $DamageOrange CmdData
+execute if score $gamestate CmdData matches 3 run scoreboard players reset $CritPurple CmdData
+execute if score $gamestate CmdData matches 3 run scoreboard players reset $CritOrange CmdData
+
 execute unless score $DamagePurple CmdData matches 1.. unless score $CritPurple CmdData matches 1.. run bossbar set purpleship color purple
 execute unless score $DamagePurple CmdData matches 1.. unless score $CritPurple CmdData matches 1.. run bossbar set purpleship2 color purple
 execute unless score $DamagePurple CmdData matches 1.. unless score $CritPurple CmdData matches 1.. run bossbar set purpleship3 color purple
