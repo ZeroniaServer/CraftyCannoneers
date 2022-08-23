@@ -22,13 +22,5 @@ function game:shipweakpoint/spot
 #> Damage Calculation
 execute as @e[type=marker,tag=ImpactMarker] at @s run function cannons:damagecalc
 
-#> Global
-tag @a remove HoldCB
-tag @a remove HoldFB
-tag @a remove HoldCBC
-tag @a remove HoldGCB
-tag @a remove HoldCCB
-tag @a remove HoldBCB
-tag @a remove HoldPCB
-tag @a remove HoldTCB
-tag @a remove HoldGOCB
+#> Remove hold tags
+execute as @a run function cannons:removeholdtags
