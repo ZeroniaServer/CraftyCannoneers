@@ -31,6 +31,7 @@ execute unless entity @e[type=slime,tag=Weakpoint,tag=Purple] if entity @e[type=
 #> Disable readyup trigger
 execute as @a run trigger readyup set 0
 
+#> Ingame timer
 execute unless score $TimeLimit CmdData matches 42069.. run function game:ingame/timer
 
 #> Game end criteria
