@@ -36,17 +36,12 @@ execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:sh
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/purple] as @a[team=Orange] if score @s playerUUID = $hitmarkuuid playerUUID unless score @s HitmarkerType matches 2 run scoreboard players set @s HitmarkerType 1
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/purple] run scoreboard players reset $hitmarkuuid playerUUID
 
-execute if entity @s[tag=ChainImpact,predicate=cannons:ships/orange] unless score @s CalcSail1 matches 1.. at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
 execute if entity @s[tag=ChainImpact,predicate=cannons:ships/purple] unless score @s CalcSail1 matches 1.. at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
-execute if entity @s[tag=ChainImpact,scores={doublehit=4..},predicate=cannons:ships/orange] unless score @s CalcSail1 matches 1.. at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
 execute if entity @s[tag=ChainImpact,scores={doublehit=4..},predicate=cannons:ships/purple] unless score @s CalcSail1 matches 1.. at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
-execute if entity @s[tag=ChainImpact,predicate=cannons:ships/orange] if score @s CalcSail1 matches 1.. at @s run playsound ripsail master @a ~ ~ ~ 3 1
 execute if entity @s[tag=ChainImpact,predicate=cannons:ships/purple] if score @s CalcSail1 matches 1.. at @s run playsound ripsail master @a ~ ~ ~ 3 1
-execute if entity @s[tag=ChainImpact,scores={doublehit=4..},predicate=cannons:ships/orange] if score @s CalcSail1 matches 1.. at @s run playsound ripsail master @a ~ ~ ~ 3 0.9
 execute if entity @s[tag=ChainImpact,scores={doublehit=4..},predicate=cannons:ships/purple] if score @s CalcSail1 matches 1.. at @s run playsound ripsail master @a ~ ~ ~ 3 0.9
 execute if entity @s[tag=ChainImpact] at @s unless score @s CalcSail1 matches 1.. run playsound cannonball master @a ~ ~ ~ 4 1
 execute if entity @s[tag=ChainImpact] at @s unless score @s CalcSail1 matches 1.. run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1
-
 
 scoreboard players reset $CurrentDamage CmdData
 
@@ -82,6 +77,11 @@ execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:sh
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/orange] at @s as @a[team=Purple] if score @s playerUUID = $hitmarkuuid playerUUID unless score @s HitmarkerType matches 2 run scoreboard players reset @s HitmarkerTimer
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/orange] at @s as @a[team=Purple] if score @s playerUUID = $hitmarkuuid playerUUID unless score @s HitmarkerType matches 2 run scoreboard players set @s HitmarkerType 1
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/orange] at @s run scoreboard players reset $hitmarkuuid playerUUID
+
+execute if entity @s[tag=ChainImpact,predicate=cannons:ships/orange] unless score @s CalcSail1 matches 1.. at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
+execute if entity @s[tag=ChainImpact,scores={doublehit=4..},predicate=cannons:ships/orange] unless score @s CalcSail1 matches 1.. at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
+execute if entity @s[tag=ChainImpact,predicate=cannons:ships/orange] if score @s CalcSail1 matches 1.. at @s run playsound ripsail master @a ~ ~ ~ 3 1
+execute if entity @s[tag=ChainImpact,scores={doublehit=4..},predicate=cannons:ships/orange] if score @s CalcSail1 matches 1.. at @s run playsound ripsail master @a ~ ~ ~ 3 0.9
 
 scoreboard players reset $CurrentDamage CmdData
 
