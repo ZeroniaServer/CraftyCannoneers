@@ -9,7 +9,7 @@ particle block_marker lime_concrete ~ ~1 ~ 1 0.5 1 0 20 force @a[tag=CurrentTrac
 loot give @a[tag=CurrentTracer2] loot weapons:tracer
 execute as @a[tag=CurrentTracer2] at @s run playsound entity.item.pickup player @s ~ ~ ~ 0.25 2
 
-kill @s
-
 tag @a remove CurrentTracer2
 scoreboard players reset $currentTracer2 playerUUID
+
+kill @s
