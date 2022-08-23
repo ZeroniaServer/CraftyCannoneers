@@ -18,8 +18,8 @@ kill @e[type=marker,tag=BounceRNG]
 
 scoreboard players add @s drag 4
 scoreboard players set @s gravity -250
-particle minecraft:sweep_attack ~ ~ ~ 1 0.1 1 0 8 force
-particle minecraft:cloud ~ ~ ~ 1 0.2 1 0.05 12 force
+particle sweep_attack ~ ~ ~ 1 0.1 1 0 8 force
+particle cloud ~ ~ ~ 1 0.2 1 0.05 12 force
 
 execute at @s run playsound bounce master @a ~ ~ ~ 2 1
 

@@ -1,6 +1,6 @@
 scoreboard players add @s death 1
 
-execute at @s[scores={death=6}] run playsound minecraft:block.fire.ambient master @a ~ ~ ~ 1 2
+execute at @s[scores={death=6}] run playsound block.fire.ambient master @a ~ ~ ~ 1 2
 execute at @s run particle flame ~ ~0.7 ~ 0.3 0.3 0.3 0.1 2 force
 execute at @s if score @s playerUUID matches -2147483648.. run scoreboard players operation @e[type=armor_stand,tag=GasBubble,tag=!GasIgnite,distance=..6] playerUUID = @s playerUUID
 execute at @s run tag @e[type=armor_stand,tag=GasBubble,tag=!GasIgnite,distance=..6] add GasIgnite

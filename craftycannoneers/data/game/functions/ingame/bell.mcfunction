@@ -10,13 +10,13 @@ execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=300,bellring=..11}] 
 execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=301,bellring=..11}] at @s run data merge entity @s {Pose:{Head:[0f,0f,0f]}}
 execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=302,bellring=..11}] at @s run data merge entity @s {Pose:{Head:[0f,0f,3f]}}
 execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=303,bellring=..11}] at @s run data merge entity @s {Pose:{Head:[0f,0f,0f]}}
-execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=300,bellring=..11}] at @s run playsound minecraft:shipbell master @a ~ ~ ~ 2 1
-execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=300,bellring=..11}] at @s run playsound minecraft:shipbell_distant master @a[distance=20..] ~ ~ ~ 6 1
+execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=300,bellring=..11}] at @s run playsound shipbell master @a ~ ~ ~ 2 1
+execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=300,bellring=..11}] at @s run playsound shipbell_distant master @a[distance=20..] ~ ~ ~ 6 1
 
 execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=300,bellring=15..}] at @s run scoreboard players set @s bellring 12
 
-execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=300,bellring=12}] at @s run playsound minecraft:shipbell_echo master @a ~ ~ ~ 6 1
-execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=300,bellring=12..}] at @s run playsound minecraft:shipbell_resonate master @a ~ ~ ~ 5 1
+execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=300,bellring=12}] at @s run playsound shipbell_echo master @a ~ ~ ~ 6 1
+execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=300,bellring=12..}] at @s run playsound shipbell_resonate master @a ~ ~ ~ 5 1
 execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=300,bellring=12..}] at @s run data merge entity @s {Pose:{Head:[2f,0f,-2f]}}
 execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=305,bellring=12..}] at @s run data merge entity @s {Pose:{Head:[-2f,0f,0f]}}
 execute as @e[type=armor_stand,tag=ShipBell,scores={CmdData=310,bellring=12..}] at @s run data merge entity @s {Pose:{Head:[0f,0f,2f]}}

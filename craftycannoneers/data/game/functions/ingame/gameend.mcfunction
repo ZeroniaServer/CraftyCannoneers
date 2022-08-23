@@ -5,29 +5,29 @@ scoreboard players add $EndTime CmdData 1
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1..10 run title @a title {"text":"It's a tie!","color":"gray"}
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1..10 run title @a[team=!Lobby,team=!Spectator,team=!Developer] subtitle {"text":"You had one job...","color":"dark_gray"}
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1..10 run title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"dark_gray"}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a[team=!Lobby,team=!Spectator,team=!Developer] at @s run playsound minecraft:entity.wither.hurt master @s ~ ~ ~ 1 0
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a[team=!Lobby,team=!Spectator,team=!Developer] at @s run playsound entity.wither.hurt master @s ~ ~ ~ 1 0
 
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1..10 run title @a title {"text":"Orange Team Won!","color":"gold"}
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1..10 run title @a[team=Orange] subtitle {"text":"Well played!","color":"green"}
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1..10 run title @a[team=Purple] subtitle {"text":"Better luck next time...","color":"red"}
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1..10 run title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"dark_gray"}
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a[team=Orange] at @s run playsound wingame master @s ~ ~ ~ 1 1.3
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a[team=Purple] at @s run playsound minecraft:entity.wither.spawn master @s ~ ~ ~ 1 2
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a[team=Purple] at @s run playsound entity.wither.spawn master @s ~ ~ ~ 1 2
 
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1..10 run title @a title {"text":"Purple Team Won!","color":"dark_purple"}
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1..10 run title @a[team=Purple] subtitle {"text":"Well played!","color":"green"}
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1..10 run title @a[team=Orange] subtitle {"text":"Better luck next time...","color":"red"}
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1..10 run title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"dark_gray"}
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Purple] at @s run playsound wingame master @s ~ ~ ~ 1 1.3
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Orange] at @s run playsound minecraft:entity.wither.spawn master @s ~ ~ ~ 1 2
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Orange] at @s run playsound entity.wither.spawn master @s ~ ~ ~ 1 2
 
 #Explosion animation
-execute if score $WinningTeam CmdData matches 1 run particle minecraft:explosion 72 -28 -55 12 12 4 0.1 10 force
-execute if score $WinningTeam CmdData matches 1 run particle minecraft:lava 72 -28 -55 12 12 4 0.1 12 force
-execute if score $WinningTeam CmdData matches 1 run particle minecraft:large_smoke 72 -28 -55 12 12 4 0.1 8 force
-execute if score $WinningTeam CmdData matches 2 run particle minecraft:explosion 68 -28 55 12 12 4 0.1 10 force
-execute if score $WinningTeam CmdData matches 2 run particle minecraft:lava 68 -28 55 12 12 4 0.1 12 force
-execute if score $WinningTeam CmdData matches 2 run particle minecraft:large_smoke 68 -28 55 12 12 4 0.1 8 force
+execute if score $WinningTeam CmdData matches 1 run particle explosion 72 -28 -55 12 12 4 0.1 10 force
+execute if score $WinningTeam CmdData matches 1 run particle lava 72 -28 -55 12 12 4 0.1 12 force
+execute if score $WinningTeam CmdData matches 1 run particle large_smoke 72 -28 -55 12 12 4 0.1 8 force
+execute if score $WinningTeam CmdData matches 2 run particle explosion 68 -28 55 12 12 4 0.1 10 force
+execute if score $WinningTeam CmdData matches 2 run particle lava 68 -28 55 12 12 4 0.1 12 force
+execute if score $WinningTeam CmdData matches 2 run particle large_smoke 68 -28 55 12 12 4 0.1 8 force
 
 execute if score $EndTime CmdData matches 1 run function game:mvpstats/check
 execute if score $EndTime CmdData matches 1 run scoreboard players remove @a[team=Purple,scores={GamesPlayed=1..}] GamesPlayed 1
@@ -79,9 +79,9 @@ execute as @e[type=#game:cannon,tag=cannon,tag=Firework,predicate=cannons:ships/
 
 execute as @e[type=#game:cannon,tag=cannon,tag=Firework,tag=!Firework2] at @s run particle explosion ^ ^1.1 ^2 0.1 0.1 0.1 0.1 3 force
 execute as @e[type=#game:cannon,tag=cannon,tag=Firework,tag=!Firework2] at @s run particle flame ^ ^1.1 ^2 0.1 0.1 0.1 0.3 6 force
-execute as @e[type=#game:cannon,tag=cannon,tag=Firework,tag=!Firework2] at @s run particle minecraft:campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force
+execute as @e[type=#game:cannon,tag=cannon,tag=Firework,tag=!Firework2] at @s run particle campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force
 execute as @e[type=#game:cannon,tag=cannon,tag=Firework,tag=!Firework2] at @s run particle lava ^ ^1.1 ^2 0.1 0.1 0.1 0.02 10 force
-execute as @e[type=#game:cannon,tag=cannon,tag=Firework,tag=!Firework2] at @s run playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 6 0.8
+execute as @e[type=#game:cannon,tag=cannon,tag=Firework,tag=!Firework2] at @s run playsound entity.firework_rocket.launch master @a ~ ~ ~ 6 0.8
 execute as @e[type=#game:cannon,tag=cannon,tag=Firework,tag=!Firework2] at @s run playsound cannonshot master @a ~ ~ ~ 6 1.6
 execute as @e[type=#game:cannon,tag=cannon,tag=Firework,tag=!Firework2] at @s run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1.6
 execute as @e[type=#game:cannon,tag=cannon,tag=Firework,tag=!Firework2] at @s run tag @s add Firework2
@@ -115,7 +115,7 @@ execute as @e[type=armor_stand,tag=EndFirework,tag=new3] at @s run function game
 execute as @e[type=armor_stand,tag=EndFirework,tag=new3] run tag @s remove new3
 
 scoreboard players add @e[type=armor_stand,tag=EndFirework] CmdData 1
-execute as @e[type=armor_stand,tag=EndFirework] at @s run particle minecraft:firework ~ ~ ~ 0 0 0 0.1 2 force
+execute as @e[type=armor_stand,tag=EndFirework] at @s run particle firework ~ ~ ~ 0 0 0 0.1 2 force
 execute as @e[type=armor_stand,tag=EndFirework,scores={CmdData=1..10}] at @s run tp @s ^ ^0.4 ^1.5
 execute as @e[type=armor_stand,tag=EndFirework,scores={CmdData=11..20}] at @s run tp @s ^ ^0.8 ^1.5
 execute as @e[type=armor_stand,tag=EndFirework,scores={CmdData=21..}] at @s run tp @s ^ ^1.4 ^1

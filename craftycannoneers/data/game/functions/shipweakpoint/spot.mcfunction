@@ -6,10 +6,10 @@ execute unless entity @e[type=slime,tag=Spotted,tag=Orange] run scoreboard playe
 title @a[tag=!SeeWeakpoint,scores={spotting=1..}] title {"text":" ","color":"white"}
 title @a[tag=!SeeWeakpoint,scores={spotting=1..}] subtitle {"text":" ","color":"white"}
 scoreboard players reset @a[tag=!SeeWeakpoint,scores={spotting=1..}] spotting
-execute as @a[tag=SeeWeakpoint,scores={spotting=1}] at @s run playsound minecraft:item.spyglass.use master @s ~ ~ ~ 1 0.6
-execute as @a[tag=SeeWeakpoint,scores={spotting=3}] at @s run playsound minecraft:item.spyglass.use master @s ~ ~ ~ 1 0.7
-execute as @a[tag=SeeWeakpoint,scores={spotting=5}] at @s run playsound minecraft:item.spyglass.use master @s ~ ~ ~ 1 1.3
-execute as @a[tag=SeeWeakpoint,scores={spotting=10..55}] at @s run playsound minecraft:item.spyglass.stop_using master @s ~ ~ ~ 1 2
+execute as @a[tag=SeeWeakpoint,scores={spotting=1}] at @s run playsound item.spyglass.use master @s ~ ~ ~ 1 0.6
+execute as @a[tag=SeeWeakpoint,scores={spotting=3}] at @s run playsound item.spyglass.use master @s ~ ~ ~ 1 0.7
+execute as @a[tag=SeeWeakpoint,scores={spotting=5}] at @s run playsound item.spyglass.use master @s ~ ~ ~ 1 1.3
+execute as @a[tag=SeeWeakpoint,scores={spotting=10..55}] at @s run playsound item.spyglass.stop_using master @s ~ ~ ~ 1 2
 execute as @a[team=Purple,tag=SeeWeakpoint,scores={spotting=55},limit=1,sort=random] run execute as @a[team=Purple] at @s run playsound weakpointspot master @s ~ ~ ~ 0.4 1.4
 execute as @a[team=Purple,tag=SeeWeakpoint,scores={spotting=55},limit=1,sort=random] run tellraw @a[team=Purple] ["","\n",{"text":"Ship weakpoint exposed by ","color":"aqua"},{"selector":"@s"},"\n"]
 execute as @a[team=Orange,tag=SeeWeakpoint,scores={spotting=55},limit=1,sort=random] run execute as @a[team=Orange] at @s run playsound weakpointspot master @s ~ ~ ~ 0.4 1.4

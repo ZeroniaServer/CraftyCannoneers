@@ -13,7 +13,7 @@ execute at @s[scores={cannonshot=5..25}] at @e[type=villager,tag=CannonVLeft,lim
 execute at @s[scores={cannonshot=5..25}] at @e[type=villager,tag=CannonVRight,limit=1,sort=nearest,distance=..2] run particle flame ^ ^0.7 ^-0.2 .02 0.1 .02 .003 2 normal
 execute at @s[scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] run particle explosion ^ ^2.1 ^2 0.1 0.1 0.1 0.1 3 force
 execute at @s[scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] run particle flame ^ ^2.1 ^2 0.1 0.1 0.1 0.3 6 force
-execute at @s[scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] run particle minecraft:campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force
+execute at @s[scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] run particle campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force
 execute at @s[scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] run particle lava ^ ^2.1 ^2 0.1 0.1 0.1 0.02 10 force
 execute at @s[scores={cannonshot=28}] unless entity @s[scores={CmdData=8}] run item replace entity @s armor.head with diamond_hoe{CustomModelData:62}
 execute at @s[scores={cannonshot=29}] unless entity @s[scores={CmdData=8}] run item replace entity @s armor.head with diamond_hoe{CustomModelData:63}
@@ -79,7 +79,7 @@ execute at @s[tag=Purple,scores={cannonshot=30..,CmdData=7}] run summon armor_st
 #Tracer Cannonball
 execute at @s[scores={cannonshot=30..,CmdData=8}] run particle explosion ^ ^2.1 ^2 0.1 0.1 0.1 0.1 3 force @a[tag=HoldTCB]
 execute at @s[scores={cannonshot=30..,CmdData=8}] run particle flame ^ ^2.1 ^2 0.1 0.1 0.1 0.3 6 force @a[tag=HoldTCB]
-execute at @s[scores={cannonshot=30..,CmdData=8}] run particle minecraft:campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
+execute at @s[scores={cannonshot=30..,CmdData=8}] run particle campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
 execute at @s[scores={cannonshot=30..,CmdData=8}] run particle lava ^ ^2.1 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
 execute at @s[scores={cannonshot=30..,CmdData=8}] run playsound cannonshot master @a[tag=HoldTCB] ~ ~ ~ 0.7 2
 execute at @s[scores={cannonshot=30..,CmdData=8}] run summon armor_stand ~ ~1 ~ {Tags:["cannonball","TracerCannonball","NewCannonball"],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b}

@@ -39,10 +39,10 @@ execute as @a[team=Lobby,tag=SpotFake5,scores={spotfakewp=55}] run tag @s add Ex
 execute as @a[team=Lobby,tag=SpotFake6,scores={spotfakewp=55}] run tag @s add Exposed6
 execute as @a[team=Lobby,tag=SpotFake7,scores={spotfakewp=55}] run tag @s add Exposed7
 
-execute as @a[team=Lobby,tag=SpotFake,scores={spotfakewp=1}] at @s run playsound minecraft:item.spyglass.use master @s ~ ~ ~ 1 0.6
-execute as @a[team=Lobby,tag=SpotFake,scores={spotfakewp=3}] at @s run playsound minecraft:item.spyglass.use master @s ~ ~ ~ 1 0.7
-execute as @a[team=Lobby,tag=SpotFake,scores={spotfakewp=5}] at @s run playsound minecraft:item.spyglass.use master @s ~ ~ ~ 1 1.3
-execute as @a[team=Lobby,tag=SpotFake,scores={spotfakewp=10..55}] at @s run playsound minecraft:item.spyglass.stop_using master @s ~ ~ ~ 1 2
+execute as @a[team=Lobby,tag=SpotFake,scores={spotfakewp=1}] at @s run playsound item.spyglass.use master @s ~ ~ ~ 1 0.6
+execute as @a[team=Lobby,tag=SpotFake,scores={spotfakewp=3}] at @s run playsound item.spyglass.use master @s ~ ~ ~ 1 0.7
+execute as @a[team=Lobby,tag=SpotFake,scores={spotfakewp=5}] at @s run playsound item.spyglass.use master @s ~ ~ ~ 1 1.3
+execute as @a[team=Lobby,tag=SpotFake,scores={spotfakewp=10..55}] at @s run playsound item.spyglass.stop_using master @s ~ ~ ~ 1 2
 execute as @a[team=Lobby,tag=SpotFake,scores={spotfakewp=55}] at @s run playsound weakpointspot master @s ~ ~ ~ 0.4 1.4
 execute as @a[team=Lobby,tag=SpotFake,scores={spotfakewp=55..}] run title @s title {"text":" ","color":"white"}
 execute as @a[team=Lobby,tag=SpotFake,scores={spotfakewp=55..}] run tag @s remove SpotFake

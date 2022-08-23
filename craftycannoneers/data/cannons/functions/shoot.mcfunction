@@ -36,17 +36,17 @@ execute at @s[tag=CannonballCluster,scores={CmdData=4..}] run particle smoke ^ ^
 execute at @s[tag=HotCannonball,scores={CmdData=4..}] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 1 force
 execute at @s[tag=HotCannonball,scores={CmdData=4..}] run particle flame ^ ^2 ^-8.5 0.2 0.2 0.2 0.1 12 force
 execute at @s[tag=GasCannonball,scores={CmdData=4..}] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 1 force
-execute at @s[tag=GasCannonball,scores={CmdData=4..}] run particle minecraft:soul ^ ^2 ^-8.5 0 0 0 0.02 2 force
-execute at @s[tag=PlayerCannonball,scores={CmdData=4..}] run particle minecraft:cloud ^ ^2 ^-8.5 0 0 0 0.02 1 force
+execute at @s[tag=GasCannonball,scores={CmdData=4..}] run particle soul ^ ^2 ^-8.5 0 0 0 0.02 2 force
+execute at @s[tag=PlayerCannonball,scores={CmdData=4..}] run particle cloud ^ ^2 ^-8.5 0 0 0 0.02 1 force
 execute at @s[tag=TracerCannonball,scores={CmdData=4..}] run function cannons:tracerparticle
 
 execute at @s[predicate=cannons:safezones/ocean] run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force
 
 execute at @s[predicate=cannons:safezones/ocean] run particle falling_water ~ ~1 ~ 0.2 0.4 0.1 0.2 150 force
-execute at @s[predicate=cannons:safezones/ocean] run particle minecraft:bubble_column_up ~ ~-1 ~ 0.4 0.2 0.4 0.1 20 force
-execute at @s[predicate=cannons:safezones/ocean] run playsound minecraft:entity.player.splash.high_speed master @a ~ ~ ~ 2 0
-execute at @s[predicate=cannons:safezones/ocean] run playsound minecraft:entity.player.splash.high_speed master @a ~ ~ ~ 2 1.4
-execute at @s[predicate=cannons:safezones/ocean] run playsound minecraft:block.bubble_column.whirlpool_ambient master @a ~ ~ ~ 2 1.2
+execute at @s[predicate=cannons:safezones/ocean] run particle bubble_column_up ~ ~-1 ~ 0.4 0.2 0.4 0.1 20 force
+execute at @s[predicate=cannons:safezones/ocean] run playsound entity.player.splash.high_speed master @a ~ ~ ~ 2 0
+execute at @s[predicate=cannons:safezones/ocean] run playsound entity.player.splash.high_speed master @a ~ ~ ~ 2 1.4
+execute at @s[predicate=cannons:safezones/ocean] run playsound block.bubble_column.whirlpool_ambient master @a ~ ~ ~ 2 1.2
 kill @s[predicate=cannons:safezones/ocean]
 execute at @s[tag=!PlayerCannonball,tag=!TracerCannonball] if block ~ ~ ~ #game:nonsolids run function cannons:explode
 execute at @s[tag=!PlayerCannonball,tag=!TracerCannonball] unless block ~ ~-1 ~ air run function cannons:explode

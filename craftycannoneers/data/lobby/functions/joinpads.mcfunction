@@ -1,8 +1,8 @@
-execute if score $barrier CmdData matches 0 as @e[type=marker,tag=joinpad,tag=Locked] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 0 normal @a[team=Lobby]
-execute if score $barrier CmdData matches 0 if score $InOrange CmdData > $InPurple CmdData as @e[type=marker,tag=JoinpadOrange] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 0 normal @a[team=Lobby]
-execute if score $barrier CmdData matches 0 if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 0 normal @a[team=Lobby]
-execute if score $barrier CmdData matches 0 if score $InPurple CmdData > $InOrange CmdData as @e[type=marker,tag=JoinpadPurple] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 0 normal @a[team=Lobby]
-execute if score $barrier CmdData matches 0 if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple] at @s run particle minecraft:block_marker barrier ~ ~1 ~ 0 0 0 0 0 normal @a[team=Lobby]
+execute if score $barrier CmdData matches 0 as @e[type=marker,tag=joinpad,tag=Locked] at @s run particle block_marker barrier ~ ~1 ~ 0 0 0 0 0 normal @a[team=Lobby]
+execute if score $barrier CmdData matches 0 if score $InOrange CmdData > $InPurple CmdData as @e[type=marker,tag=JoinpadOrange] at @s run particle block_marker barrier ~ ~1 ~ 0 0 0 0 0 normal @a[team=Lobby]
+execute if score $barrier CmdData matches 0 if score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange] at @s run particle block_marker barrier ~ ~1 ~ 0 0 0 0 0 normal @a[team=Lobby]
+execute if score $barrier CmdData matches 0 if score $InPurple CmdData > $InOrange CmdData as @e[type=marker,tag=JoinpadPurple] at @s run particle block_marker barrier ~ ~1 ~ 0 0 0 0 0 normal @a[team=Lobby]
+execute if score $barrier CmdData matches 0 if score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple] at @s run particle block_marker barrier ~ ~1 ~ 0 0 0 0 0 normal @a[team=Lobby]
 
 execute unless score $InOrange CmdData > $InPurple CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadOrange,tag=!Locked] at @s run particle falling_dust orange_concrete ~ ~1 ~ 0.7 0.3 0.7 0 1 normal @a[team=Lobby]
 execute unless score $InPurple CmdData > $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData as @e[type=marker,tag=JoinpadPurple,tag=!Locked] at @s run particle falling_dust purple_concrete ~ ~1 ~ 0.7 0.3 0.7 0 1 normal @a[team=Lobby]
@@ -36,7 +36,7 @@ execute as @a[tag=JoinPurple] at @s run tp @s @s
 execute as @a[tag=JoinPurple] run title @s times 0 50 15
 execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] at @s run tp @s -46 -28.5 -2 0 0
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] at @s run tp @s 52 -26 -55 -90 0
-execute as @a[tag=JoinPurple] at @s run playsound minecraft:block.beehive.enter master @a ~ ~ ~ 1 1
+execute as @a[tag=JoinPurple] at @s run playsound block.beehive.enter master @a ~ ~ ~ 1 1
 execute as @a[tag=JoinPurple] run team join Purple @s
 execute as @a[tag=JoinPurple] run tag @s add loaded
 execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinPurple] run function game:givelobbygear
@@ -63,7 +63,7 @@ execute as @a[tag=JoinOrange] at @s run tp @s @s
 execute as @a[tag=JoinOrange] run title @s times 0 50 15
 execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] at @s run tp @s -46 -28.5 2 -180 0
 execute if score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] at @s run tp @s 88 -26 55 90 0
-execute as @a[tag=JoinOrange] at @s run playsound minecraft:block.beehive.enter master @a ~ ~ ~ 1 1
+execute as @a[tag=JoinOrange] at @s run playsound block.beehive.enter master @a ~ ~ ~ 1 1
 execute as @a[tag=JoinOrange] run team join Orange @s
 execute as @a[tag=JoinOrange] run tag @s add loaded
 execute unless score $gamestate CmdData matches 2.. as @a[tag=JoinOrange] run function game:givelobbygear
