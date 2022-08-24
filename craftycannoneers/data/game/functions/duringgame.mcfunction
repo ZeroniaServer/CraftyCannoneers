@@ -53,9 +53,8 @@ function game:trackdamage
 function game:trackdamage
 function game:trackdamage
 
-#> Chests - TODO OPTIMIZE
-function chests:loop
-function chests:lockedchest
+#> Chests
+function chests:main
 
 #> Boats
 function game:boat/main

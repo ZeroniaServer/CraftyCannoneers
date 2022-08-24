@@ -1,3 +1,3 @@
 function tutorial:treasurepit/looted
-tp @s 0 -1000 0
+data remove entity @s Items
 kill @s

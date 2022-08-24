@@ -9,6 +9,7 @@ kill @e[type=armor_stand,tag=ChestTutorial]
 tp @e[type=slime,tag=FakeWeakpoint] ~ ~-200 ~
 kill @e[type=slime,tag=FakeWeakpoint]
 kill @e[type=marker,tag=FakeWeakpoint]
+
 fill -40 -23 -18 -38 -22 -18 air
 execute as @e[type=area_effect_cloud,name="Tutorial Area"] run data merge entity @s {CustomName:'{"text":"Training Island","bold":true,"color":"aqua"}'}
 execute as @e[type=area_effect_cloud,name="(interact with objects to learn about their purpose)"] run data merge entity @s {CustomName:'{"text":"(a special island used to learn about the game\'s mechanics)","italic":true,"color":"yellow"}'}
@@ -100,3 +101,7 @@ summon wandering_trader -283 -24 -42 {Rotation:[-90.0f,0.0f],Invulnerable:1b,NoG
 summon wandering_trader -242 -26 -22 {Rotation:[90.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","ChestTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:generic.movement_speed,Base:0}],PersistenceRequired:1b}
 summon wandering_trader -260 -27 -56 {Rotation:[0.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","CombatTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:generic.movement_speed,Base:0}],PersistenceRequired:1b}
 summon wandering_trader -279 -11 -15 {Rotation:[-180.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","WeakpointTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:generic.movement_speed,Base:0}],PersistenceRequired:1b}
+
+tp @e[type=#game:chest,tag=fakechest] 0 -1000 0
+kill @e[type=#game:chest,tag=fakechest]
+function tutorial:treasurepit/main
