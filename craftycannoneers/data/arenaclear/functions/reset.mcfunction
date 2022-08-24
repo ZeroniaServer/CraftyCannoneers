@@ -22,6 +22,7 @@ kill @e[type=armor_stand,tag=GasAS,predicate=!cannons:ships/tutorial]
 kill @e[type=bat,predicate=!cannons:ships/tutorial]
 kill @e[type=area_effect_cloud,tag=GPDispText,tag=!Tutorial]
 kill @e[type=area_effect_cloud,tag=CannonNametag,tag=!Tutorial]
+kill @e[type=marker,tag=RingOfFire,predicate=!cannons:ships/tutorial]
 
 function arenaclear:boatvehicles
 function arenaclear:shipplacement
