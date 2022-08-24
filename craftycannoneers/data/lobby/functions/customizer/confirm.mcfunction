@@ -28,4 +28,4 @@ item replace entity @e[type=glow_item_frame,tag=MapEntity,limit=1] container.0 w
 tag @e[type=marker,tag=joinpad] remove Locked
 scoreboard players reset @e[type=marker,tag=joinpad] CmdData
 
-function arenaclear:fullreset
+function arenaclear:reset

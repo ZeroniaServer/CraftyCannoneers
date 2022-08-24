@@ -1,3 +1,6 @@
+#> Arena water
+function game:ingame/water
+
 #> Boarding Axe
 function game:ingame/boardingaxe
 

@@ -1,13 +1,12 @@
-#> Arena water
-execute as @a[team=!Lobby,team=!Spectator,team=!Developer] at @s run function game:ingame/water
-scoreboard players reset @a[scores={drowning=80..}] drowning
-scoreboard players reset @a[team=!Purple,team=!Orange,scores={drowning=1..}] drowning
-
 #> Team Chests
 execute as @e[type=chest_minecart,tag=orangeteamchest,limit=1] at @s positioned 68.50 -28 60.50 rotated 0 0 run function game:teamchest/orange/main
 execute as @e[type=chest_minecart,tag=purpleteamchest,limit=1] at @s positioned 72.50 -28 -59.50 rotated 0 0 run function game:teamchest/purple/main
 fill 69 -29 60 67 -29 60 spruce_slab[type=top]
 fill 71 -29 -60 73 -29 -60 spruce_slab[type=top]
+
+#> Player functions
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer] at @s run function game:ingame/players
+scoreboard players reset @a[team=!Purple,team=!Orange,scores={drowning=1..}] drowning
 
 #> Bossbars
 bossbar set purpleship3 players @a[team=Spectator]
@@ -53,3 +52,26 @@ function game:trackdamage
 function game:trackdamage
 function game:trackdamage
 function game:trackdamage
+
+#> Chests - TODO OPTIMIZE
+function chests:loop
+function chests:lockedchest
+
+#> Boats
+function game:boat/main
+
+#> Blast Bombs
+function weapons:bomb/main
+
+#> Setblocks for indestructible ship blocks
+function game:ingame/indestructible
+
+#> Setblocks for lilypads
+function game:ingame/lilypads
+
+#> Cave entrances
+execute positioned 81 -36.8 -17 run particle bubble_column_up 81 -36.8 -17 1.4 0 0 0.2 5 normal @a[team=!Lobby,distance=..16]
+execute positioned 58 -36.8 17 run particle bubble_column_up 58 -36.8 17 1.4 0 0 0.2 5 normal @a[team=!Lobby,distance=..16]
+
+#> Traders
+execute as @e[type=wandering_trader,tag=Trader] at @s run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer,distance=..10]

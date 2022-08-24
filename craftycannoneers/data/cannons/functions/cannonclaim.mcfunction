@@ -18,10 +18,7 @@ scoreboard players reset @s[scores={cannonclaim=120..,playerUUID=0}] cannonclaim
 #> Reset gunpowder after 6 seconds in Cannon Dock
 scoreboard players reset @s[tag=Tutorial,scores={cannonclaim=1..}] eyeclick
 scoreboard players add @s[tag=Tutorial,scores={eyeclick=0..}] eyeclick 1
-execute at @s[tag=Tutorial,scores={eyeclick=120..,playerUUID=0}] run scoreboard players set @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] CmdData 0
-execute at @s[tag=Tutorial,scores={eyeclick=120..,playerUUID=0}] run scoreboard players set @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] CmdData 0
-execute at @s[tag=Tutorial,scores={eyeclick=120..,playerUUID=0}] run item replace entity @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] armor.head with air
-execute at @s[tag=Tutorial,scores={eyeclick=120..,playerUUID=0}] run item replace entity @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] armor.head with air
+execute at @s[tag=Tutorial,scores={eyeclick=120..,playerUUID=0}] run function cannons:resetgunpowder
 scoreboard players reset @s[tag=Tutorial,scores={eyeclick=120..}] eyeclick
 
 #> Check for owner existing + being within range

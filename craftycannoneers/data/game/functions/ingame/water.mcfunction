@@ -23,3 +23,4 @@ execute at @s[scores={drowning=80..}] run title @s subtitle {"text":" ","color":
 title @s[scores={drowning=1..},predicate=game:inarena] title {"text":" ","color":"dark_red"}
 title @s[scores={drowning=1..},predicate=game:inarena] subtitle {"text":" ","color":"dark_red"}
 scoreboard players reset @s[scores={drowning=1..},predicate=game:inarena] drowning
+scoreboard players reset @s[scores={drowning=80..}] drowning
