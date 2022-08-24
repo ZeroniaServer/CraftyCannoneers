@@ -32,7 +32,7 @@ execute as @a[tag=hasMoved] run scoreboard players reset @s crouch
 execute as @a[team=] run tag @s add LeaveGame
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] at @s run playsound ding master @s ~ ~-1 ~ 1 1.2
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run title @s title ["",{"text":"Crafty ","bold":true,"color":"dark_purple"},{"text":"Cannoneers","bold":true,"color":"gold"}]
-execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run title @s subtitle ["",{"text":"V0.7.0 ","color":"aqua"},{"text":"Made by ","color":"gray"},{"text":"Zeronia","color":"green"},{"text":"!","color":"gray"}]
+execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run title @s subtitle ["",{"text":"V0.8.0 ","color":"aqua"},{"text":"Made by ","color":"gray"},{"text":"Zeronia","color":"green"},{"text":"!","color":"gray"}]
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run scoreboard players set @s GamesPlayed 10
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run tellraw @s ["","\n",{"text":"Welcome aboard! ","bold":true,"color":"dark_green"},"\n",{"text":"It seems like you're new to ","color":"green"},{"text":"Crafty ","bold":true,"color":"dark_purple"},{"text":"Cannoneers","bold":true,"color":"gold"},{"text":"!","color":"green"},"\n",{"text":"We highly recommend you to check out the ","color":"green"},{"text":"Training Island","bold":true,"color":"aqua"},{"text":" before playing the actual game!","color":"green"},"\n",{"text":"You can go there by using the blue warp pad on the left side of the Lobby.","italic":true,"color":"dark_green"},"\n"]
 execute as @a[team=Lobby,tag=hasMoved,tag=!firstJoined] run tag @s add firstJoined
