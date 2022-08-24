@@ -16,3 +16,6 @@ item replace entity @e[type=armor_stand,tag=ConfirmIcon] armor.head with diamond
 item replace entity @e[type=armor_stand,tag=DefaultsIcon] armor.head with diamond_hoe{CustomModelData:38}
 
 item replace entity @e[type=glow_item_frame,tag=MapEntity,limit=1] container.0 with diamond_hoe{CustomModelData:76}
+
+execute as @e[type=#game:chest,type=!armor_stand,tag=chest] run data remove entity @s Items
+execute as @e[type=#game:chest,type=!armor_stand,tag=chest] run data merge entity @s {LootTable:"chests:empty"}
