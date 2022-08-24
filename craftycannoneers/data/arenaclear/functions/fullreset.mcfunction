@@ -17,7 +17,6 @@ tp @e[type=#game:chest,tag=chest] 0 -1000 0
 kill @e[type=#game:chest,tag=chest]
 kill @e[type=area_effect_cloud,tag=ChestNotif]
 kill @e[type=item]
-kill @e[type=#game:boat,tag=Boat]
 kill @e[type=armor_stand,tag=EndFirework]
 kill @e[type=arrow]
 kill @e[type=trident]
