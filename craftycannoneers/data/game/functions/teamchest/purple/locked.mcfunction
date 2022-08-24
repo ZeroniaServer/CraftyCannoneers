@@ -3,5 +3,3 @@ tag @s[tag=Opened] remove Opened
 
 #> Complete lock
 execute if entity @s[tag=!PlayedSound] run function game:teamchest/purple/lock
-
-tp @s ~ -60 ~ ~ ~

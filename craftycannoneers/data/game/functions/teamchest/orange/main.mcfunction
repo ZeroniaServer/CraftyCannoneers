@@ -1,5 +1,5 @@
-#> Teleport in place
-execute unless entity @a[team=Purple,distance=..6] run tp @s ~ ~ ~ ~ ~
+#> Teleport chest minecart in place
+execute unless entity @a[team=Purple,distance=..6] run tp @e[type=chest_minecart,tag=orangeteamchest] ~ ~ ~ ~ ~
 
 #> Close
 execute if entity @s[tag=Opened] unless entity @a[team=Purple,distance=..6] unless entity @a[team=Orange,distance=..5] run function game:teamchest/orange/close
@@ -13,6 +13,3 @@ execute if entity @e[type=armor_stand,tag=orangechestdisplay,tag=Unlocked] run f
 #> Restore
 execute if entity @e[type=armor_stand,tag=orangechestdisplay,tag=!Unlocked] if entity @s[tag=PlayedSound] unless entity @a[team=Purple,distance=..6] run function game:teamchest/orange/restore
 execute if entity @s[tag=!PlayedSound2] unless entity @a[team=Purple,distance=..6] run tag @e[type=armor_stand,tag=orangechestdisplay,tag=Unlocked] remove Unlocked
-
-#> Force update position
-execute store result entity @s Air short 1 run scoreboard players get $toggle CmdData

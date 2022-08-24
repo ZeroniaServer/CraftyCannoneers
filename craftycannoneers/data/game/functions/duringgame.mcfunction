@@ -1,6 +1,6 @@
 #> Team Chests
-execute as @e[type=chest_minecart,tag=orangeteamchest,limit=1] at @s positioned 68.50 -28 60.50 rotated 0 0 run function game:teamchest/orange/main
-execute as @e[type=chest_minecart,tag=purpleteamchest,limit=1] at @s positioned 72.50 -28 -59.50 rotated 0 0 run function game:teamchest/purple/main
+execute as @e[type=marker,tag=orangeteamchest,limit=1] at @s positioned 68.50 -28 60.50 rotated -90 0 run function game:teamchest/orange/main
+execute as @e[type=marker,tag=purpleteamchest,limit=1] at @s positioned 72.50 -28 -59.50 rotated -90 0 run function game:teamchest/purple/main
 fill 69 -29 60 67 -29 60 spruce_slab[type=top]
 fill 71 -29 -60 73 -29 -60 spruce_slab[type=top]
 
