@@ -21,6 +21,6 @@
       }
     },
     "rewards": {
-      "function": "game:seeorangeweakpoint"
+      "function": "game:shipweakpoint/seeorangeweakpoint"
     }
   }

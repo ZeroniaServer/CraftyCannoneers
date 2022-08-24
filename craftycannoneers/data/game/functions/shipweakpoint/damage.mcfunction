@@ -1,19 +1,20 @@
-execute as @e[type=slime,tag=!inship,tag=Purple,tag=!WeakpointDamaged] at @s if block ~ ~1 ~7 air run function game:shipweakpoint/respawn
-execute as @e[type=slime,tag=!inship,tag=Orange,tag=!WeakpointDamaged] at @s if block ~ ~1 ~-7 air run function game:shipweakpoint/respawn
+execute at @s[tag=Purple] if block ~ ~1 ~7 air run tag @s add respawn
+execute at @s[tag=Orange] if block ~ ~1 ~-7 air run tag @s add respawn
 
-execute as @e[type=slime,tag=!inship,tag=Purple,tag=!WeakpointDamaged] at @s if block ~1 ~1 ~7 air run function game:shipweakpoint/respawn
-execute as @e[type=slime,tag=!inship,tag=Orange,tag=!WeakpointDamaged] at @s if block ~1 ~1 ~-7 air run function game:shipweakpoint/respawn
+execute at @s[tag=Purple] if block ~1 ~1 ~7 air run tag @s add respawn
+execute at @s[tag=Orange] if block ~1 ~1 ~-7 air run tag @s add respawn
 
-execute as @e[type=slime,tag=!inship,tag=Purple,tag=!WeakpointDamaged] at @s if block ~-1 ~1 ~7 air run function game:shipweakpoint/respawn
-execute as @e[type=slime,tag=!inship,tag=Orange,tag=!WeakpointDamaged] at @s if block ~-1 ~1 ~-7 air run function game:shipweakpoint/respawn
+execute at @s[tag=Purple] if block ~-1 ~1 ~7 air run tag @s add respawn
+execute at @s[tag=Orange] if block ~-1 ~1 ~-7 air run tag @s add respawn
 
-execute as @e[type=slime,tag=!inship,tag=Purple,tag=!WeakpointDamaged] at @s if block ~ ~2 ~7 air run function game:shipweakpoint/respawn
-execute as @e[type=slime,tag=!inship,tag=Orange,tag=!WeakpointDamaged] at @s if block ~ ~2 ~-7 air run function game:shipweakpoint/respawn
+execute at @s[tag=Purple] if block ~ ~2 ~7 air run tag @s add respawn
+execute at @s[tag=Orange] if block ~ ~2 ~-7 air run tag @s add respawn
 
-execute as @e[type=slime,tag=!inship,tag=Purple,tag=!WeakpointDamaged] at @s if block ~ ~ ~7 air run function game:shipweakpoint/respawn
-execute as @e[type=slime,tag=!inship,tag=Orange,tag=!WeakpointDamaged] at @s if block ~ ~ ~-7 air run function game:shipweakpoint/respawn
+execute at @s[tag=Purple] if block ~ ~ ~7 air run tag @s add respawn
+execute at @s[tag=Orange] if block ~ ~ ~-7 air run tag @s add respawn
 
-execute as @e[type=slime,tag=!inship,tag=Purple,tag=!WeakpointDamaged] at @s if entity @e[type=marker,tag=ImpactMarker,distance=..7] run function game:shipweakpoint/respawn
-execute as @e[type=slime,tag=!inship,tag=Orange,tag=!WeakpointDamaged] at @s if entity @e[type=marker,tag=ImpactMarker,distance=..7] run function game:shipweakpoint/respawn
+execute at @s[tag=Purple] if entity @e[type=marker,tag=ImpactMarker,distance=..7] run tag @s add respawn
+execute at @s[tag=Orange] if entity @e[type=marker,tag=ImpactMarker,distance=..7] run tag @s add respawn
 
-execute as @e[type=marker,tag=FakePointMarker,tag=!WeakpointDamaged] at @s positioned ~-5 ~ ~ if entity @e[type=marker,tag=ImpactMarker,distance=..3] run function game:shipweakpoint/fakerespawn
+execute at @s[tag=respawn] run function game:shipweakpoint/respawn
+tag @s[tag=respawn] remove respawn

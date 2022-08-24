@@ -1,6 +1,7 @@
 execute at @s[gamemode=!spectator,predicate=tutorial:watchtower,tag=!InTower] run function tutorial:watchtower/enter
 execute at @s[predicate=!tutorial:watchtower,tag=InTower] run function tutorial:watchtower/exit
 
+#> Spot fake
 execute at @s[tag=SpotFake] run function tutorial:watchtower/spotfake
 
 title @s[tag=!SpotFake,scores={spotfakewp=1..}] title {"text":""}
@@ -34,7 +35,7 @@ scoreboard players reset @s[tag=!Exposed5,scores={fakeexpose5=1..}] fakeexpose5
 scoreboard players reset @s[tag=!Exposed6,scores={fakeexpose6=1..}] fakeexpose6
 scoreboard players reset @s[tag=!Exposed7,scores={fakeexpose7=1..}] fakeexpose7
 
-tag @s remove UsingSpyglass
+tag @s[tag=UsingSpyglass] remove UsingSpyglass
 tag @s[tag=SpotFake] remove SpotFake
 tag @s[tag=SpotFake1] remove SpotFake1
 tag @s[tag=SpotFake2] remove SpotFake2

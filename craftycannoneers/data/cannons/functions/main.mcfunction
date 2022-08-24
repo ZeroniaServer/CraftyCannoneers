@@ -16,8 +16,8 @@ function cannons:firering/main
 #> Gas
 function cannons:gas/main
 
-#> Weakpoints - TODO OPTIMIZE
-function game:shipweakpoint/spot
+#> Weakpoints
+function game:shipweakpoint/main
 
 #> Damage Calculation
 execute as @e[type=marker,tag=ImpactMarker] at @s run function cannons:damagecalc
