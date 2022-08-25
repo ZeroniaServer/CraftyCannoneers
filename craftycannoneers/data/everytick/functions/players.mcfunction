@@ -13,13 +13,13 @@ execute as @s[team=] run tag @s add LeaveGame
 
 #> Message delay
 scoreboard players add @s msgdelay 0
-scoreboard players add @s[scores={msgdelay=..59}] msgdelay 1
+scoreboard players add @s[scores={msgdelay=..119}] msgdelay 1
 
 #> Movement detection
-execute as @s[tag=!hasMoved,scores={jump=1..,msgdelay=60..}] run tag @s add hasMoved
-execute as @s[tag=!hasMoved,scores={walk=30..,msgdelay=60..}] run tag @s add hasMoved
-execute as @s[tag=!hasMoved,scores={sprint=50..,msgdelay=60..}] run tag @s add hasMoved
-execute as @s[tag=!hasMoved,scores={crouch=30..,msgdelay=60..}] run tag @s add hasMoved
+execute as @s[tag=!hasMoved,scores={jump=1..,msgdelay=120..}] run tag @s add hasMoved
+execute as @s[tag=!hasMoved,scores={walk=30..,msgdelay=120..}] run tag @s add hasMoved
+execute as @s[tag=!hasMoved,scores={sprint=50..,msgdelay=120..}] run tag @s add hasMoved
+execute as @s[tag=!hasMoved,scores={crouch=30..,msgdelay=120..}] run tag @s add hasMoved
 execute if entity @s[tag=hasMoved] run function everytick:hasmoved
 
 #> Leave game
