@@ -1,4 +1,4 @@
-##Utility function -- updates parkour leaderboard with new player/time
+##Updates parkour leaderboard with new player/time
 tag @s[tag=finishedParkour] add templeader
 execute if entity @s[tag=templeader] store result score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime run scoreboard players get @s finalParkourTime
 execute if entity @s[tag=templeader] run data modify block -74 -24 1 Text1 set value '[{"selector":"@p[tag=templeader]","color":"yellow"}]'

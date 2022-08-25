@@ -1,3 +1,4 @@
+data remove entity @s LeftOwner
 scoreboard players add $highest rockID 1
 summon marker ~ ~ ~ {Tags:["rocktracker"]}
 scoreboard players operation @e[type=marker,tag=rocktracker,tag=!init,limit=1,sort=nearest] rockID = $highest rockID

@@ -1,5 +1,5 @@
 #> General
-tag @s[nbt={OnGround:1b},scores={CmdData=3..}] add Kaboom
+tag @s[scores={CmdData=3..},nbt={OnGround:1b}] add Kaboom
 scoreboard players add @s CmdData 1
 execute at @s run particle flame ~ ~0.5 ~ 0 0 0 .02 1 force
 execute at @s run playsound blastbombfuse master @a ~ ~ ~ 0.5 1

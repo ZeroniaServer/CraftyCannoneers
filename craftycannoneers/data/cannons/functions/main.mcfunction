@@ -16,6 +16,9 @@ function cannons:firering/main
 #> Gas
 function cannons:gas/main
 
+#> Bounce
+function cannons:bounce/main
+
 #> Weakpoints
 function game:shipweakpoint/main
 

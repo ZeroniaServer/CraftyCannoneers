@@ -85,7 +85,7 @@ scoreboard objectives add fakeexpose4 dummy
 scoreboard objectives add fakeexpose5 dummy
 scoreboard objectives add fakeexpose6 dummy
 scoreboard objectives add fakeexpose7 dummy
-scoreboard objectives add msgdelay dummy
+scoreboard objectives remove msgdelay
 scoreboard objectives add bouncedelay dummy
 scoreboard objectives add MVPdamage dummy
 scoreboard objectives add ChaseUUID dummy

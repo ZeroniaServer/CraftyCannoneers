@@ -18,28 +18,28 @@ execute if entity @s[tag=CannonVRight] run tag @p[tag=clicker] add FillRight
 execute if entity @s[tag=CannonVMain,tag=Charged] run tag @p[tag=clicker] add FillCB
 
 #> Tag for holding gunpowder
-tag @p[tag=clicker,tag=FillLeft,nbt={SelectedItem:{id:"minecraft:gunpowder"}}] add HoldGP
-tag @p[tag=clicker,tag=FillRight,nbt={SelectedItem:{id:"minecraft:gunpowder"}}] add HoldGP
+tag @p[tag=clicker,tag=FillLeft,predicate=cannons:holdgp] add HoldGP
+tag @p[tag=clicker,tag=FillRight,predicate=cannons:holdgp] add HoldGP
 
 #> Tag for holding cannonballs
 #Normal
-tag @p[tag=clicker,tag=FillCB,nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:1b}}}] add HoldCB
+tag @p[tag=clicker,tag=FillCB,predicate=cannons:holdcb] add HoldCB
 #Hot
-tag @p[tag=clicker,tag=FillCB,nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:2b}}}] add HoldFB
+tag @p[tag=clicker,tag=FillCB,predicate=cannons:holdfb] add HoldFB
 #Cluster
-tag @p[tag=clicker,tag=FillCB,nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:3b}}}] add HoldCBC
+tag @p[tag=clicker,tag=FillCB,predicate=cannons:holdcbc] add HoldCBC
 #Gas
-tag @p[tag=clicker,tag=FillCB,nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:4b}}}] add HoldGCB
+tag @p[tag=clicker,tag=FillCB,predicate=cannons:holdgcb] add HoldGCB
 #Chain
-tag @p[tag=clicker,tag=FillCB,nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:5b}}}] add HoldCCB
+tag @p[tag=clicker,tag=FillCB,predicate=cannons:holdccb] add HoldCCB
 #Bouncy
-tag @p[tag=clicker,tag=FillCB,nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:6b}}}] add HoldBCB
+tag @p[tag=clicker,tag=FillCB,predicate=cannons:holdbcb] add HoldBCB
 #Player
-tag @p[tag=clicker,tag=FillCB,nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:7b}}}] add HoldPCB
+tag @p[tag=clicker,tag=FillCB,predicate=cannons:holdpcb] add HoldPCB
 #Tracer
-tag @p[tag=clicker,tag=FillCB,nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:8b}}}] add HoldTCB
+tag @p[tag=clicker,tag=FillCB,predicate=cannons:holdtcb] add HoldTCB
 #Golden
-tag @p[tag=clicker,tag=FillCB,nbt={SelectedItem:{id:"minecraft:diamond_hoe",tag:{Cannonball:9b}}}] add HoldGOCB
+tag @p[tag=clicker,tag=FillCB,predicate=cannons:holdgocb] add HoldGOCB
 
 #> Cannon Claim tag
 execute at @s as @p[tag=clicker,tag=FillCB] run function cannons:checkowner

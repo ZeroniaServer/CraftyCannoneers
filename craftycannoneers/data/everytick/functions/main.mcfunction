@@ -1,24 +1,38 @@
 #> This function runs every tick. Use this as the main function to call other functions that should run every tick.
-function everytick:particles
-function everytick:lobby
-execute as @a at @s run function everytick:leavegame
-function everytick:nodrop
-function everytick:seagull
-function everytick:arrowkill
-
-#> EntityID
-execute if score #loaded entityid matches 1 run function entityid:real_tick
-
-#> Cannons
-function cannons:main
-function cannons:bounce/main
 
 #> Player related functions
 execute as @a at @s run function everytick:players
 
-#> Kill entities
+#> Particle timers
+function everytick:particles
+
+#> No drop
+execute as @e[type=item] if entity @s[nbt={Item:{tag:{NoDrop:1b}}}] run function everytick:nodropprocess
+
+#> Seagulls
+execute as @e[type=armor_stand,tag=seagull] at @s run function everytick:seagull
+execute as @e[type=marker,tag=seagull] at @s run tp @s ~ ~ ~ ~2 ~
+
+#> Cannons
+function cannons:main
+
+#> Entity effects
+execute if score #loaded entityid matches 1 run function entityid:real_tick
+effect give @e[type=villager] invisibility 1000000 100 true
+effect give @e[type=slime] invisibility 1000000 100 true
 kill @e[type=falling_block]
 kill @e[type=experience_orb]
+execute as @e[type=arrow] at @s run function everytick:arrowkill
+
+#> Reset Parkour high score if necessary - TODO remove?
+execute if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches ..0 run tellraw @a [{"text":"An error has occurred, so the Parkour leaderboard has been reset. If you see this message, ","color":"red"},{"text":"please report!","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"text":"Report on the Zeronia Discord Server","color":"white"}]}}]
+execute if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches ..0 run function lobby:parkour/resethighscore
+
+#> Rocks
+execute as @e[type=marker,tag=rocktracker] at @s run function lobby:rock/tp
+
+#> Joinpads - TODO OPTIMIZE
+function lobby:joinpads
 
 #> Game settings
 execute if score $gamestate CmdData matches -1 run function lobby:customizer/controller
@@ -37,17 +51,18 @@ execute as @e[type=armor_stand,tag=EvtemaDeco] at @s run particle enchant ~ ~0.1
 execute as @e[type=armor_stand,tag=StuffyDeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby]
 
 #> Ingame
-execute if score $gamestate CmdData matches 3 run function game:ingame/gameend
+execute if score $gamestate CmdData matches 3 run function game:gameend
 execute if score $gamestate CmdData matches 2 run function game:ingame
 execute if score $gamestate CmdData matches 2.. run function game:duringgame
 
+#> Opening chests - TODO OPTIMIZE
 function chests:openchest
+scoreboard players reset @a[scores={eyeclick=1..}] eyeclick
 
 #> Cannonball displays
 execute as @e[type=armor_stand,tag=CannonballDeco] run function lobby:cbdisplays/main
 
-scoreboard players reset @a[scores={eyeclick=1..}] eyeclick
-
+#> Ready Up + Countdown
 execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange] run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
 execute if score $gamestate CmdData matches 0..1 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange] run scoreboard players set $OrangeReady CmdData 0
 
@@ -60,6 +75,8 @@ execute if score $gamestate CmdData matches 2.. run scoreboard players set $Purp
 execute if score $gamestate CmdData matches 0 run function game:startgame
 execute if score $gamestate CmdData matches 1 run function game:countdown
 execute if score $gamestate CmdData matches 0 run scoreboard players set $Countdown CmdData 0
+
+#> Toggle score
 execute store success score $toggle CmdData if score $toggle CmdData matches 0
 
 #> Bossbars
