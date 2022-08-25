@@ -39,6 +39,7 @@ execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={
 execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a
 execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run particle flash ~ ~ ~ 0 0 0 0 5 force @a
 execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a
+execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run function cannons:bounce/killslime
 execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run tag @s add Hit2
 
 execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] playerUUID
