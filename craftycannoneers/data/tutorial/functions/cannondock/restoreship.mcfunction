@@ -5,6 +5,6 @@ place template minecraft:training_flag -389 11 -55
 place template minecraft:training_ship1 -400 -37 -83
 place template minecraft:training_ship2 -400 -37 -35
 
-schedule function tutorial:cannondock/restoreweakpoints 5s replace
+function tutorial:cannondock/restoreweakpoints
 
 title @a[tag=OnDock] actionbar {"text":"Training Ship repaired!","color":"green"}
