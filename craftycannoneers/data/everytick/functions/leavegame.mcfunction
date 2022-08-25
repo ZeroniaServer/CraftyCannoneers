@@ -13,6 +13,24 @@ execute if entity @s[team=!Lobby] unless score @s leavegame matches 0 run tag @s
 execute if entity @s[team=Purple,nbt=!{Inventory:[{Slot:103b,id:"minecraft:diamond_hoe",Count:1b}]}] run trigger leavegame
 execute if entity @s[team=Orange,nbt=!{Inventory:[{Slot:103b,id:"minecraft:diamond_hoe",Count:1b}]}] run trigger leavegame
 
+#Unready by leaving
+execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple,tag=ClickedReady] run title @a actionbar ["",{"text":"Purple","color":"dark_purple","bold":true},{"text":" team has been marked as ","color":"aqua"},{"text":"Not Ready.","color":"red","bold":true,"underlined":true}]
+execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple,tag=ClickedReady] run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","text":"Purple: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
+execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple,tag=ClickedReady] run scoreboard players set $PurpleReady CmdData 0
+
+execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange,tag=ClickedReady] run title @a actionbar ["",{"text":"Orange","color":"gold","bold":true},{"text":" team has been marked as ","color":"aqua"},{"text":"Not Ready.","color":"red","bold":true,"underlined":true}]
+execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange,tag=ClickedReady] run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
+execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange,tag=ClickedReady] run scoreboard players set $OrangeReady CmdData 0
+
+execute if entity @s[team=Purple,tag=LeaveGame,tag=ClickedReady] unless entity @a[team=Purple,tag=!LeaveGame,tag=ClickedReady] if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 run title @a actionbar ["",{"text":"Purple","color":"dark_purple","bold":true},{"text":" team has been marked as ","color":"aqua"},{"text":"Not Ready.","color":"red","bold":true,"underlined":true}]
+execute if entity @s[team=Purple,tag=LeaveGame,tag=ClickedReady] unless entity @a[team=Purple,tag=!LeaveGame,tag=ClickedReady] if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","text":"Purple: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
+execute if entity @s[team=Purple,tag=LeaveGame,tag=ClickedReady] unless entity @a[team=Purple,tag=!LeaveGame,tag=ClickedReady] if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 run scoreboard players set $PurpleReady CmdData 0
+
+execute if entity @s[team=Orange,tag=LeaveGame,tag=ClickedReady] unless entity @a[team=Orange,tag=!LeaveGame,tag=ClickedReady] if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 run title @a actionbar ["",{"text":"Orange","color":"gold","bold":true},{"text":" team has been marked as ","color":"aqua"},{"text":"Not Ready.","color":"red","bold":true,"underlined":true}]
+execute if entity @s[team=Orange,tag=LeaveGame,tag=ClickedReady] unless entity @a[team=Orange,tag=!LeaveGame,tag=ClickedReady] if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
+execute if entity @s[team=Orange,tag=LeaveGame,tag=ClickedReady] unless entity @a[team=Orange,tag=!LeaveGame,tag=ClickedReady] if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 run scoreboard players set $OrangeReady CmdData 0
+
+
 title @s[tag=LeaveGame] times 0 50 15
 execute at @s[tag=LeaveGame] run tp @s @s
 execute if entity @s[tag=LeaveGame,predicate=!game:tutorialbounds] run tp @s -55 -21 0 -90 0
