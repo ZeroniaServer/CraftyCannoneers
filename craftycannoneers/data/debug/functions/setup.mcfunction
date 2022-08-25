@@ -136,7 +136,7 @@ team modify Purple collisionRule pushOwnTeam
 team modify Orange collisionRule pushOwnTeam
 team modify Spectator collisionRule never
 team modify NoName collisionRule never
-team modify Collide collisionRule always
+team modify Collide collisionRule pushOwnTeam
 team modify NoName nametagVisibility never
 
 #> Static scores
