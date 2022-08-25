@@ -11,11 +11,15 @@ spawnpoint @s[team=Lobby] -55 -21 0 -90
 execute as @a store result score @s playerUUID run data get entity @s UUID[0]
 execute as @s[team=] run tag @s add LeaveGame
 
+#> Message delay
+scoreboard players add @s msgdelay 0
+scoreboard players add @s[scores={msgdelay=..59}] msgdelay 1
+
 #> Movement detection
-execute as @s[tag=!hasMoved,scores={jump=1..}] run tag @s add hasMoved
-execute as @s[tag=!hasMoved,scores={walk=30..}] run tag @s add hasMoved
-execute as @s[tag=!hasMoved,scores={sprint=50..}] run tag @s add hasMoved
-execute as @s[tag=!hasMoved,scores={crouch=30..}] run tag @s add hasMoved
+execute as @s[tag=!hasMoved,scores={jump=1..,msgdelay=60..}] run tag @s add hasMoved
+execute as @s[tag=!hasMoved,scores={walk=30..,msgdelay=60..}] run tag @s add hasMoved
+execute as @s[tag=!hasMoved,scores={sprint=50..,msgdelay=60..}] run tag @s add hasMoved
+execute as @s[tag=!hasMoved,scores={crouch=30..,msgdelay=60..}] run tag @s add hasMoved
 execute if entity @s[tag=hasMoved] run function everytick:hasmoved
 
 #> Leave game

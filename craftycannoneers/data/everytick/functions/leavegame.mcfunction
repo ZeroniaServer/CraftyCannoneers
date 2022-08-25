@@ -35,10 +35,10 @@ attribute @s[tag=LeaveGame] minecraft:generic.luck base set 0.0
 recipe take @s[tag=LeaveGame] *
 tag @s[tag=LeaveGame,scores={LeftGame=1..}] remove hasMoved
 tag @s[tag=LeaveGame,scores={LeftGame=1..}] remove msgReceived
-tag @s[tag=LeaveGame,advancements={tutorial:objectives/combat=false}] add NeedsTutorial
-tag @s[tag=LeaveGame,advancements={tutorial:objectives/cannon=false}] add NeedsTutorial
-tag @s[tag=LeaveGame,advancements={tutorial:objectives/treasure=false}] add NeedsTutorial
-tag @s[tag=LeaveGame,advancements={tutorial:objectives/watchtower=false}] add NeedsTutorial
+tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/combat=false}] add NeedsTutorial
+tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/cannon=false}] add NeedsTutorial
+tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/treasure=false}] add NeedsTutorial
+tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/watchtower=false}] add NeedsTutorial
 execute if entity @s[tag=NeedsTutorial,tag=!hideTips,scores={LeftGame=1..}] run tellraw @s ["","\n",{"text":"It seems like you're new to ","color":"green"},{"text":"Crafty ","bold":true,"color":"dark_purple"},{"text":"Cannoneers","bold":true,"color":"gold"},{"text":"!","color":"green"},"\n",{"text":"We highly recommend you to check out the ","color":"green"},{"text":"Training Island","bold":true,"color":"aqua"},{"text":" before playing the actual game!","color":"green"},"\n",{"text":"You can go there by using the blue warp pad on the left side of the Lobby.","italic":true,"color":"dark_green"},"\n"]
 tag @s[tag=NeedsTutorial] remove NeedsTutorial
 execute if entity @s[tag=LeaveGame] unless entity @s[team=] unless score @s LeftGame matches 1.. at @s run playsound block.beehive.exit master @s ~ ~ ~ 1 1
