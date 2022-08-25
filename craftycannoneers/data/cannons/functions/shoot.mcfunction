@@ -58,6 +58,7 @@ execute unless score $landed CmdData matches 1 at @s if block ~ ~ ~ #game:nonsol
 execute unless score $landed CmdData matches 1 at @s unless block ~ ~-1 ~ air run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s[tag=!ChainCannonball] unless block ^ ^ ^2 air run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..}] rotated as @e[type=armor_stand,tag=ChainAnchor,limit=1,sort=nearest] unless block ^ ^ ^2 air run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[predicate=cannons:pasttraining] run scoreboard players set $landed CmdData 1
 
 execute if score $landed CmdData matches 1 at @s[tag=!PlayerCannonball,tag=!TracerCannonball] run function cannons:explode
 execute if score $landed CmdData matches 1 at @s[tag=PlayerCannonball,tag=!Hit] run function cannons:ejectplayer
