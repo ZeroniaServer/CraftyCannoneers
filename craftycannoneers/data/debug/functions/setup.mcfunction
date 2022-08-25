@@ -155,6 +155,7 @@ setblock -74 -24 1 air
 setblock -74 -24 1 oak_wall_sign
 
 #> Other lobby blocks
+fill -40 -23 -18 -38 -22 -18 air
 execute positioned -55 -23 9 run tag @e[type=glow_item_frame,limit=1,sort=nearest] add MapEntity
 execute as @e[type=glow_item_frame,tag=MapEntity] run data merge entity @s {Silent:1b}
 
