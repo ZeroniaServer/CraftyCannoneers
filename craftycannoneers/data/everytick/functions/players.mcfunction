@@ -34,6 +34,9 @@ execute if entity @s[team=!Spectator] run function game:shields
 #> Hitmarkers
 execute if entity @s[team=!Spectator] run function cannons:hitmarkers
 
+#> Open chests
+function chests:openchest
+
 #> Lobby water
 execute at @s[team=Lobby,predicate=!game:inlobby] if block ~ ~ ~ water run function lobby:water
 

@@ -55,8 +55,7 @@ execute if score $gamestate CmdData matches 3 run function game:gameend
 execute if score $gamestate CmdData matches 2 run function game:ingame
 execute if score $gamestate CmdData matches 2.. run function game:duringgame
 
-#> Opening chests - TODO OPTIMIZE
-function chests:openchest
+#> Reset eyeclick
 scoreboard players reset @a[scores={eyeclick=1..}] eyeclick
 
 #> Cannonball displays
