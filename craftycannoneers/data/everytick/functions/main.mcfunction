@@ -34,9 +34,8 @@ execute as @e[type=marker,tag=rocktracker] at @s run function lobby:rock/tp
 #> Joinpads
 function lobby:joinpads/main
 
-#> Game settings - TODO OPTIMIZE
-execute if score $gamestate CmdData matches -1 run function lobby:customizer/controller
-execute unless score $gamestate CmdData matches -1 run tag @a remove NearModboard
+#> Game settings
+execute if score $gamestate CmdData matches -1 if entity @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds] run function lobby:customizer/controller
 
 #> Easter Eggs
 function lobby:easteregg/loop
@@ -46,9 +45,9 @@ execute if entity @a[team=Lobby,predicate=game:tutorialbounds] run function tuto
 execute as @e[type=marker,tag=TutorialWarp] at @s run function tutorial:warppads/main
 
 #> Credits particles
-execute as @e[type=armor_stand,tag=YZERODeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby]
-execute as @e[type=armor_stand,tag=EvtemaDeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby]
-execute as @e[type=armor_stand,tag=StuffyDeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby]
+execute as @e[type=armor_stand,tag=YZERODeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
+execute as @e[type=armor_stand,tag=EvtemaDeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
+execute as @e[type=armor_stand,tag=StuffyDeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
 
 #> Ingame
 execute if score $gamestate CmdData matches 3 run function game:gameend

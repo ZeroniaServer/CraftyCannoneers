@@ -28,6 +28,9 @@ execute at @s[team=Lobby] run function lobby:joinpads/jointeams
 execute at @s[team=Spectator] run function everytick:spectator
 tag @s[team=!Spectator,tag=NewSpec] remove NewSpec
 
+#> Game settings
+execute unless score $gamestate CmdData matches -1 run tag @s remove NearModboard
+
 #> No fall
 function everytick:nofall
 
