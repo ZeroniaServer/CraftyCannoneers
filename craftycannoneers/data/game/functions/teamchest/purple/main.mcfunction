@@ -1,3 +1,6 @@
+#> Prevent putting in default items
+execute as @e[type=chest_minecart,tag=purpleteamchest] run function chests:preventitems
+
 #> Teleport in place
 execute unless entity @a[team=Orange,distance=..6] run tp @e[type=chest_minecart,tag=purpleteamchest] ~ ~ ~ ~ ~
 
