@@ -17,7 +17,7 @@ scoreboard players reset @s[scores={cannonclaim=120..,playerUUID=0}] cannonclaim
 
 #> Reset gunpowder after 6 seconds in Cannon Dock
 scoreboard players reset @s[tag=Tutorial,scores={cannonclaim=1..}] eyeclick
-scoreboard players add @s[tag=Tutorial,scores={eyeclick=0..}] eyeclick 1
+scoreboard players add @s[tag=Tutorial,scores={playerUUID=0}] eyeclick 1
 execute at @s[tag=Tutorial,scores={eyeclick=120..,playerUUID=0}] run function cannons:resetgunpowder
 scoreboard players reset @s[tag=Tutorial,scores={eyeclick=120..}] eyeclick
 
