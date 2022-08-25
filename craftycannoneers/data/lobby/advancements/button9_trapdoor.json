@@ -28,6 +28,6 @@
     }
   },
   "rewards": {
-    "function": "lobby:easteregg/button/trapdoor/9"
+    "function": "lobby:easteregg/rocket/trapdoor/9"
   }
 }

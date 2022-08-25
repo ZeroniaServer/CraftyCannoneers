@@ -21,7 +21,7 @@ execute if entity @s[tag=Tip20] run tellraw @a[tag=!hideTips] ["",{"text":"<","c
 execute if entity @s[tag=Tip21] run tellraw @a[tag=!hideTips] ["",{"text":"<","color":"aqua"},{"text":"TIP!","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"text":"Chain Cannonballs and Cannonball Clusters are a bit less accurate than the other Cannonball types.","color":"gray"}]
 
 execute as @a[tag=!hideTips,scores={GamesPlayed=2..}] run tellraw @s ["",{"text":"(Play ","color":"dark_aqua"},{"score":{"name":"@s","objective":"GamesPlayed"},"color":"dark_aqua"},{"text":" more games to be able to hide tips.)","color":"dark_aqua"}]
-tellraw @a[tag=!hideTips,scores={GamesPlayed=1}] ["",{"text":"(Play 1 more game to be able to hide tips.","color":"dark_aqua"}]
+tellraw @a[tag=!hideTips,scores={GamesPlayed=1}] ["",{"text":"(Play 1 more game to be able to hide tips.)","color":"dark_aqua"}]
 tellraw @a[tag=!hideTips,scores={GamesPlayed=..0}] ["",{"text":"(Click ","color":"dark_aqua"},{"text":"[HERE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger toggleTips"},"hoverEvent":{"action":"show_text","contents":["Click to disable tips!"]}},{"text":" to disable tips!)","color":"dark_aqua"}]
 
 execute unless entity @s[tag=TipSet,tag=!Selected] run function tutorial:tips/newset

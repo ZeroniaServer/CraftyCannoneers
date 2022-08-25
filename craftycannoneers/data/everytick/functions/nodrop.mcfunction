@@ -1,5 +1,8 @@
 ##Processes individual items for the purpose of preventing item dropping
 ##Thanks to Cloud Wolf for the tip!
+kill @s[nbt={Item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:18}}}]
+kill @s[nbt={Item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:17}}}]
+
 data modify entity @s[tag=!processed] Owner set from entity @s Thrower
 data merge entity @s[tag=!processed] {PickupDelay:0s}
 execute store result score @s[tag=!processed] playerUUID run data get entity @s Thrower[0]

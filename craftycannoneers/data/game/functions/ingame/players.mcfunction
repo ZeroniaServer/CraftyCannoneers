@@ -8,7 +8,7 @@ function game:ingame/boardingaxe
 function game:raidhorn/main
 
 #> Ship effects
-function game:ingame/shipeffects
+execute unless score $gamestate CmdData matches 3 run function game:ingame/shipeffects
 
 #> Harpoon
 function game:ingame/harpoon

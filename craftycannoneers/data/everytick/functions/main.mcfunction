@@ -7,7 +7,7 @@ execute as @a at @s run function everytick:players
 function everytick:particles
 
 #> No drop
-execute as @e[type=item] if entity @s[nbt={Item:{tag:{NoDrop:1b}}}] run function everytick:nodropprocess
+execute as @e[type=item] if entity @s[nbt={Item:{tag:{NoDrop:1b}}}] run function everytick:nodrop
 
 #> Seagulls
 execute as @e[type=armor_stand,tag=seagull] at @s run function everytick:seagull
