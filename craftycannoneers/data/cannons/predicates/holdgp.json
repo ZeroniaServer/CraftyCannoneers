@@ -1,31 +1,13 @@
 {
-  "condition": "minecraft:alternative",
-  "terms": [
-    {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "equipment": {
-          "mainhand": {
-            "items": [
-              "minecraft:gunpowder"
-            ]
-          }
-        }
-      }
-    },
-    {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "equipment": {
-          "offhand": {
-            "items": [
-              "minecraft:gunpowder"
-            ]
-          }
-        }
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "items": [
+          "minecraft:gunpowder"
+        ]
       }
     }
-  ]
+  }
 }
