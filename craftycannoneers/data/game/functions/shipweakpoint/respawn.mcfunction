@@ -5,3 +5,4 @@ execute if entity @s[tag=Orange] run tag @e[type=marker,tag=ImpactMarker,limit=1
 execute if entity @s[tag=Orange,tag=Spotted] run tag @e[type=marker,tag=ImpactMarker,limit=1,sort=nearest] add HitSpotted
 
 tag @s add WeakpointDamaged
+tag @s remove respawn
