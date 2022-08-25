@@ -31,10 +31,10 @@ execute if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestPar
 #> Rocks
 execute as @e[type=marker,tag=rocktracker] at @s run function lobby:rock/tp
 
-#> Joinpads - TODO OPTIMIZE
-function lobby:joinpads
+#> Joinpads
+function lobby:joinpads/main
 
-#> Game settings
+#> Game settings - TODO OPTIMIZE
 execute if score $gamestate CmdData matches -1 run function lobby:customizer/controller
 execute unless score $gamestate CmdData matches -1 run tag @a remove NearModboard
 

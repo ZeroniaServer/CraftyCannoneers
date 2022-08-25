@@ -21,6 +21,13 @@ execute if entity @s[tag=hasMoved] run function everytick:hasmoved
 #> Leave game
 function everytick:leavegame
 
+#> Join teams
+execute at @s[team=Lobby] run function lobby:joinpads/jointeams
+
+#> Spectator
+execute at @s[team=Spectator] run function everytick:spectator
+tag @s[team=!Spectator,tag=NewSpec] remove NewSpec
+
 #> No fall
 function everytick:nofall
 
