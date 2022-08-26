@@ -82,6 +82,9 @@ execute if entity @s[tag=Hit1,tag=!BouncyCannonball,tag=!ChainCannonball,scores=
 execute if entity @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a
 execute if entity @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run particle flash ~ ~ ~ 0 0 0 0 5 force @a
 execute if entity @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=!CannonballCluster] at @s run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a
+execute if entity @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=CannonballCluster] at @s run particle explosion ~ ~ ~ 0.4 0.3 0.4 0.1 4 force @a
+execute if entity @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=CannonballCluster] at @s run particle flash ~ ~ ~ 0 0 0 0 1 force @a
+execute if entity @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..},tag=CannonballCluster] at @s run particle lava ~ ~ ~ 0.4 0.3 0.4 0.1 4 force @a
 tag @s[tag=Hit1,tag=!BouncyCannonball,scores={doublehit=4..}] add Hit2
 
 execute if entity @s[tag=!Hit1,tag=BouncyCannonball] at @s run playsound bounce master @a ~ ~ ~ 2 0.8
