@@ -1,4 +1,5 @@
 kill @e[type=armor_stand,tag=chestdisplay]
+tp @e[type=chest_minecart,tag=teamchest] 0 -1000 0
 kill @e[type=chest_minecart,tag=teamchest]
 kill @e[type=marker,tag=teamchest]
 
