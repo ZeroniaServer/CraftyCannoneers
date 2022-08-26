@@ -50,10 +50,13 @@ kill @s[predicate=cannons:safezones/ocean]
 
 #> Landing conditions
 execute store result score $temp x run data get entity @s Motion[0]
+execute store result score $temp y run data get entity @s Motion[1]
 execute store result score $temp z run data get entity @s Motion[2]
-execute if score $temp x matches 0 if score $temp z matches 0 run scoreboard players set $landed CmdData 1
+execute if score $temp x matches -1..0 if score $temp y matches -1..0 if score $temp z matches -1..0 run scoreboard players set $landed CmdData 1
 scoreboard players reset $temp x
+scoreboard players reset $temp y
 scoreboard players reset $temp z
+
 execute unless score $landed CmdData matches 1 at @s if block ~ ~ ~ #game:nonsolids run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s unless block ~ ~-1 ~ air run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s[tag=!ChainCannonball] unless block ^ ^ ^2 air run scoreboard players set $landed CmdData 1
