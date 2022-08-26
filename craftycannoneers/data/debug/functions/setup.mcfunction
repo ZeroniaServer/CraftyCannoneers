@@ -108,6 +108,18 @@ scoreboard objectives add bestParkourTime dummy
 scoreboard objectives add Falling minecraft.custom:minecraft.time_since_death
 scoreboard objectives add GamesPlayed dummy
 scoreboard objectives add toggleTips trigger
+scoreboard objectives add x dummy
+scoreboard objectives add y dummy
+scoreboard objectives add z dummy
+scoreboard objectives add dx dummy
+scoreboard objectives add dy dummy
+scoreboard objectives add dz dummy
+scoreboard objectives add x2 dummy
+scoreboard objectives add y2 dummy
+scoreboard objectives add z2 dummy
+scoreboard objectives add dx2 dummy
+scoreboard objectives add dy2 dummy
+scoreboard objectives add dz2 dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"

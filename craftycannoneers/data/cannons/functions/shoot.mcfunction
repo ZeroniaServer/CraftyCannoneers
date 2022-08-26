@@ -21,34 +21,36 @@ execute at @s[tag=!CannonballShot,tag=PlayerCannonball] run function cannons:pla
 execute at @s[tag=CannonballShot] run function cannons:drag
 execute store result entity @s Air double 1 run scoreboard players get $toggle CmdData
 
-execute at @s[tag=ChainCannonball,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^1 0.1 0.1 0.1 0.01 3 force
-execute at @s[tag=ChainCannonball,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^-1 0.1 0.1 0.1 0.01 3 force
-execute at @s[tag=GoldenCannonball,scores={CmdData=4..}] run particle dust_color_transition 1 0.835 0 1.4 1 0.667 0 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force
+execute at @s[tag=ChainCannonball,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^1 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=ChainCannonball,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^-1 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=GoldenCannonball,scores={CmdData=4..}] run particle dust_color_transition 1 0.835 0 1.4 1 0.667 0 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
 
-execute at @s[tag=!TracerCannonball,tag=!CannonballCluster,tag=!ChainCannonball,tag=!GoldenCannonball,tag=!bouncing,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force
-execute at @s[tag=!TracerCannonball,tag=CannonballCluster,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force
+execute at @s[tag=!TracerCannonball,tag=!CannonballCluster,tag=!ChainCannonball,tag=!GoldenCannonball,tag=!bouncing,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=!TracerCannonball,tag=CannonballCluster,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
 
-execute at @s[tag=!CannonballCluster,tag=!GoldenCannonball,tag=!ChainCannonball,scores={CmdData=4..}] unless entity @s[tag=bouncing] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 4 force
-execute at @s[tag=GoldenCannonball,scores={CmdData=4..}] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 2 force
-execute at @s[tag=CannonballCluster,scores={CmdData=4..}] run particle smoke ^ ^2 ^-8.5 0 0 0 0.1 2 force
+execute at @s[tag=!CannonballCluster,tag=!GoldenCannonball,tag=!ChainCannonball,scores={CmdData=4..}] unless entity @s[tag=bouncing] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 4 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=GoldenCannonball,scores={CmdData=4..}] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 2 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=CannonballCluster,scores={CmdData=4..}] run particle smoke ^ ^2 ^-8.5 0 0 0 0.1 2 force @a[predicate=cannons:seeparticles]
 
-execute at @s[tag=HotCannonball,scores={CmdData=4..}] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 1 force
-execute at @s[tag=HotCannonball,scores={CmdData=4..}] run particle flame ^ ^2 ^-8.5 0.2 0.2 0.2 0.1 12 force
-execute at @s[tag=GasCannonball,scores={CmdData=4..}] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 1 force
-execute at @s[tag=GasCannonball,scores={CmdData=4..}] run particle soul ^ ^2 ^-8.5 0 0 0 0.02 2 force
-execute at @s[tag=PlayerCannonball,scores={CmdData=4..}] run particle cloud ^ ^2 ^-8.5 0 0 0 0.02 1 force
+execute at @s[tag=HotCannonball,scores={CmdData=4..}] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 1 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=HotCannonball,scores={CmdData=4..}] run particle flame ^ ^2 ^-8.5 0.2 0.2 0.2 0.1 12 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=GasCannonball,scores={CmdData=4..}] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 1 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=GasCannonball,scores={CmdData=4..}] run particle soul ^ ^2 ^-8.5 0 0 0 0.02 2 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=PlayerCannonball,scores={CmdData=4..}] run particle cloud ^ ^2 ^-8.5 0 0 0 0.02 1 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=TracerCannonball,scores={CmdData=4..}] run function cannons:tracerparticle
 
 #> Landing conditions
-execute store result score $temp x run data get entity @s Motion[0]
-execute store result score $temp y run data get entity @s Motion[1]
-execute store result score $temp z run data get entity @s Motion[2]
-execute if score $temp x matches -1..0 if score $temp y matches -1..0 if score $temp z matches -1..0 run scoreboard players set $landed CmdData 1
-scoreboard players reset $temp x
-scoreboard players reset $temp y
-scoreboard players reset $temp z
+execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball] if block ~ ~-1 ~ water run function cannons:waterkill
 
-execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=!PlayerCannonball] at @s if block ~ ~-1 ~ water run function cannons:waterkill
+execute store result score @s dx2 run scoreboard players get @s x2
+execute store result score @s dy2 run scoreboard players get @s y2
+execute store result score @s dz2 run scoreboard players get @s z2
+
+execute store result score @s x2 run data get entity @s Pos[0] 10000
+execute store result score @s y2 run data get entity @s Pos[1] 10000
+execute store result score @s z2 run data get entity @s Pos[2] 10000
+
+execute if score @s x2 = @s dx2 if score @s y2 = @s dy2 if score @s z2 = @s dz2 run scoreboard players set $landed CmdData 1
 
 execute unless score $landed CmdData matches 1 at @s if block ~ ~ ~ #game:nonsolids run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s unless block ~ ~-1 ~ #cannons:cannonball_passable run scoreboard players set $landed CmdData 1

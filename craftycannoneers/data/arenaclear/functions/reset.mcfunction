@@ -8,9 +8,6 @@ tp @e[type=#game:weakpoint,tag=Weakpoint] 0 -1000 0
 kill @e[type=#game:weakpoint,tag=Weakpoint]
 kill @e[type=marker,tag=WeakpointLoc]
 kill @e[type=marker,tag=LockSpawn]
-kill @e[type=armor_stand,tag=chestdisplay]
-kill @e[type=chest_minecart,tag=teamchest]
-kill @e[type=marker,tag=teamchest]
 tp @e[type=#game:chest,tag=chest] 0 -1000 0
 kill @e[type=#game:chest,tag=chest]
 kill @e[type=area_effect_cloud,tag=ChestNotif]
@@ -27,5 +24,6 @@ kill @e[type=marker,tag=RingOfFire,predicate=!cannons:ships/tutorial]
 
 function arenaclear:boatvehicles
 function arenaclear:shipplacement
+function arenaclear:teamchests
 
 function game:setreadysign
