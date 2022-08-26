@@ -21,6 +21,10 @@ function cannons:bounce/main
 
 #> Weakpoints
 function game:shipweakpoint/main
+execute if score $OrangeWPDelay CmdData matches 1.. run scoreboard players add $OrangeWPDelay CmdData 1
+execute if score $OrangeWPDelay CmdData matches 20.. run scoreboard players reset $OrangeWPDelay CmdData
+execute if score $PurpleWPDelay CmdData matches 1.. run scoreboard players add $PurpleWPDelay CmdData 1
+execute if score $PurpleWPDelay CmdData matches 20.. run scoreboard players reset $PurpleWPDelay CmdData
 
 #> Damage Calculation
 execute as @e[type=marker,tag=ImpactMarker] at @s run function cannons:damagecalc

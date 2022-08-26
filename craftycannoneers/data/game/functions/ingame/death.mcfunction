@@ -2,6 +2,8 @@ tag @s remove NoRegen
 function cannons:despawnplayerc
 function game:givegear
 gamemode adventure @s[gamemode=!spectator]
+title @s title {"text":""}
+title @s subtitle {"text":""}
 tp @s[team=Orange] 88 -26 55 90 0
 tp @s[team=Purple] 52 -26 -55 -90 0
 tag @s remove onboatregen
