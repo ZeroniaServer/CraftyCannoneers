@@ -91,6 +91,7 @@ scoreboard objectives add MVPdamage dummy
 scoreboard objectives add ChaseUUID dummy
 scoreboard objectives add NoRegenTimer dummy
 scoreboard objectives add bounceID dummy
+scoreboard objectives add CriticalDamage dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
