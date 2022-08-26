@@ -29,9 +29,11 @@ execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] run s
 
 #Chain effect
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/purple] run scoreboard players operation $hitmarkuuid playerUUID = @s playerUUID
-execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/purple] run scoreboard players add $DamagePurple CmdData 7
+execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/purple] run scoreboard players add $DamagePurple CmdData 12
+execute if entity @s[tag=ChainImpact,scores={CalcSail1=..10},predicate=cannons:ships/abovesails,predicate=cannons:ships/purple] run scoreboard players add $DamagePurple CmdData 8
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/purple] run scoreboard players operation $CritPurple CmdData += $DamagePurple CmdData
-execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/purple] as @a[team=Orange] if score @s playerUUID = $hitmarkuuid playerUUID run scoreboard players add @s MVPdamage 7
+execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/purple] as @a[team=Orange] if score @s playerUUID = $hitmarkuuid playerUUID run scoreboard players add @s MVPdamage 12
+execute if entity @s[tag=ChainImpact,scores={CalcSail1=..10},predicate=cannons:ships/abovesails,predicate=cannons:ships/purple] as @a[team=Orange] if score @s playerUUID = $hitmarkuuid playerUUID run scoreboard players add @s MVPdamage 8
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/purple] as @a[team=Orange] if score @s playerUUID = $hitmarkuuid playerUUID unless score @s HitmarkerType matches 2 run scoreboard players reset @s HitmarkerTimer
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/purple] as @a[team=Orange] if score @s playerUUID = $hitmarkuuid playerUUID unless score @s HitmarkerType matches 2 run scoreboard players set @s HitmarkerType 1
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/purple] run scoreboard players reset $hitmarkuuid playerUUID
@@ -71,9 +73,11 @@ execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] run s
 
 #Chain effect
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/orange] at @s run scoreboard players operation $hitmarkuuid playerUUID = @s playerUUID
-execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/orange] at @s run scoreboard players add $DamageOrange CmdData 7
+execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/orange] at @s run scoreboard players add $DamageOrange CmdData 12
+execute if entity @s[tag=ChainImpact,scores={CalcSail1=..10},predicate=cannons:ships/abovesails,predicate=cannons:ships/orange] at @s run scoreboard players add $DamageOrange CmdData 8
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/orange] at @s run scoreboard players operation $CritOrange CmdData += $DamageOrange CmdData
-execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/orange] at @s as @a[team=Purple] if score @s playerUUID = $hitmarkuuid playerUUID run scoreboard players add @s MVPdamage 7
+execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/orange] at @s as @a[team=Purple] if score @s playerUUID = $hitmarkuuid playerUUID run scoreboard players add @s MVPdamage 12
+execute if entity @s[tag=ChainImpact,scores={CalcSail1=..10},predicate=cannons:ships/abovesails,predicate=cannons:ships/orange] at @s as @a[team=Purple] if score @s playerUUID = $hitmarkuuid playerUUID run scoreboard players add @s MVPdamage 8
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/orange] at @s as @a[team=Purple] if score @s playerUUID = $hitmarkuuid playerUUID unless score @s HitmarkerType matches 2 run scoreboard players reset @s HitmarkerTimer
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/orange] at @s as @a[team=Purple] if score @s playerUUID = $hitmarkuuid playerUUID unless score @s HitmarkerType matches 2 run scoreboard players set @s HitmarkerType 1
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/orange] at @s run scoreboard players reset $hitmarkuuid playerUUID
