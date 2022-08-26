@@ -4,6 +4,7 @@
       "minecraft:water",
       "minecraft:gray_carpet",
       "minecraft:spruce_trapdoor",
+      "minecraft:spruce_slab",
       "minecraft:fern",
       "minecraft:oak_button",
       "minecraft:dead_bush",
@@ -12,6 +13,8 @@
       "minecraft:lily_pad",
       "minecraft:polished_blackstone_button",
       "minecraft:blue_orchid",
-      "minecraft:jungle_button"
+      "minecraft:jungle_button",
+      "minecraft:spruce_wall_sign",
+      "minecraft:dark_oak_wall_sign"
     ]
   }

@@ -54,6 +54,13 @@ execute if score @s x2 = @s dx2 if score @s y2 = @s dy2 if score @s z2 = @s dz2 
 
 execute unless score $landed CmdData matches 1 at @s if block ~ ~ ~ #game:nonsolids run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s unless block ~ ~-1 ~ #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s if block ~ ~-0.5 ~ spruce_slab[type=bottom] run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s if block ~ ~-1 ~ spruce_slab[type=top] run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s if block ~ ~-1 ~ spruce_slab[type=double] run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s if block ~ ~ ~ spruce_slab[type=top] run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s if block ~ ~ ~ spruce_slab[type=double] run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s if block ~ ~-0.0625 ~ gray_carpet run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s if block ~ ~-0.1875 ~ spruce_trapdoor[half=bottom] run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s[tag=!ChainCannonball,tag=!InWater] unless block ^ ^ ^2 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] rotated as @e[type=armor_stand,tag=ChainAnchor,limit=1,sort=nearest] unless block ~ ~ ~ #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] rotated as @e[type=armor_stand,tag=ChainAnchor,limit=1,sort=nearest] unless block ^ ^ ^3 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1

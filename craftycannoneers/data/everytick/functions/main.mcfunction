@@ -15,6 +15,8 @@ execute as @e[type=marker,tag=seagull] at @s run tp @s ~ ~ ~ ~2 ~
 
 #> Cannons
 function cannons:main
+execute if score $kill CmdData matches 1 run say kill
+scoreboard players reset $kill CmdData
 
 #> Entity effects
 execute if score #loaded entityid matches 1 run function entityid:real_tick

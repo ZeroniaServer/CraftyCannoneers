@@ -1,3 +1,5 @@
+say summon
+
 #> Summon 20 slimes
 function cannons:bounce/summon4slime
 function cannons:bounce/summon4slime

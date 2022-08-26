@@ -151,6 +151,7 @@ team modify Spectator collisionRule never
 team modify NoName collisionRule never
 team modify Collide collisionRule pushOwnTeam
 team modify NoName nametagVisibility never
+team modify Collide nametagVisibility never
 
 #> Static scores
 scoreboard players set $3 CmdData 3
