@@ -40,15 +40,17 @@ execute at @s[tag=PlayerCannonball,scores={CmdData=4..}] run particle cloud ^ ^2
 execute at @s[tag=TracerCannonball,scores={CmdData=4..}] run function cannons:tracerparticle
 
 #> Landing conditions
-execute store result score $temp x run data get entity @s Motion[0]
-execute store result score $temp y run data get entity @s Motion[1]
-execute store result score $temp z run data get entity @s Motion[2]
-execute if score $temp x matches -1..0 if score $temp y matches -1..0 if score $temp z matches -1..0 run scoreboard players set $landed CmdData 1
-scoreboard players reset $temp x
-scoreboard players reset $temp y
-scoreboard players reset $temp z
+execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball] if block ~ ~-1 ~ water run function cannons:waterkill
 
-execute as @e[type=armor_stand,tag=cannonball,tag=!TracerCannonball,tag=!PlayerCannonball] at @s if block ~ ~-1 ~ water run function cannons:waterkill
+execute store result score @s dx2 run scoreboard players get @s x2
+execute store result score @s dy2 run scoreboard players get @s y2
+execute store result score @s dz2 run scoreboard players get @s z2
+
+execute store result score @s x2 run data get entity @s Pos[0] 10000
+execute store result score @s y2 run data get entity @s Pos[1] 10000
+execute store result score @s z2 run data get entity @s Pos[2] 10000
+
+execute if score @s x2 = @s dx2 if score @s y2 = @s dy2 if score @s z2 = @s dz2 run scoreboard players set $landed CmdData 1
 
 execute unless score $landed CmdData matches 1 at @s if block ~ ~ ~ #game:nonsolids run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s unless block ~ ~-1 ~ air run scoreboard players set $landed CmdData 1
