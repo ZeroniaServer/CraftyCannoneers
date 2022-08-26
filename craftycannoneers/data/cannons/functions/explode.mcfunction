@@ -91,7 +91,8 @@ execute if entity @s[tag=!Hit1,tag=BouncyCannonball] at @s run playsound bounce 
 execute if entity @s[tag=!Hit1,tag=BouncyCannonball] at @s run tp @s @s
 
 execute if entity @s[tag=Hit1,tag=BouncyCannonball,scores={doublehit=..3}] at @s run tag @s add bouncing
-execute if entity @s[tag=bouncing] unless score @s bouncedelay matches 2.. at @s run function cannons:bounce
+execute if entity @s[tag=bouncing] unless score @s bouncedelay matches 2.. at @s unless block ~ ~-1 ~ #cannons:cannonball_passable run function cannons:bounce
+execute if entity @s[tag=bouncing] unless score @s bouncedelay matches 2.. at @s unless block ~ ~ ~ #cannons:cannonball_passable run function cannons:bounce
 execute if entity @s[tag=bouncing] if score @s bouncedelay matches 12.. at @s run scoreboard players reset @s bouncedelay
 execute if entity @s[tag=Hit1,tag=BouncyCannonball,scores={doublehit=4..}] at @s run scoreboard players reset @s doublehit
 tag @s add Hit1

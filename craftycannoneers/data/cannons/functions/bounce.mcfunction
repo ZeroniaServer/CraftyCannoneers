@@ -23,7 +23,7 @@ particle cloud ~ ~ ~ 1 0.2 1 0.05 12 force
 
 execute at @s run playsound bounce master @a ~ ~ ~ 2 1
 
-execute if score @s bounce matches 7.. run summon marker ~ ~ ~ {Tags:["ExplodeRNG"]}
+execute if score @s bounce matches 7.. at @s run summon marker ~ ~ ~ {Tags:["ExplodeRNG"]}
 execute if score @s bounce matches 7.. run scoreboard players set @e[type=marker,tag=ExplodeRNG] RNGmax 100
 execute if score @s bounce matches 7.. as @e[type=marker,tag=ExplodeRNG] store result score @s RNGscore run data get entity @s UUID[0]
 execute if score @s bounce matches 7.. as @e[type=marker,tag=ExplodeRNG] run scoreboard players operation @s RNGscore %= @s RNGmax
@@ -32,8 +32,8 @@ scoreboard players add @s bounce 1
 scoreboard players set @s bouncedelay 1
 
 #explosion
-execute if entity @s[tag=!InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}
-execute if entity @s[tag=InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
+execute if entity @s[tag=!InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ~ ~1 ~ {Tags:["ImpactMarker","Power3"]}
+execute if entity @s[tag=InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ~ ~1 ~ {Tags:["ImpactMarker","Power1"]}
 execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run playsound cannonball master @a ~ ~ ~ 4 1.2
 execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1.2
 execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a
