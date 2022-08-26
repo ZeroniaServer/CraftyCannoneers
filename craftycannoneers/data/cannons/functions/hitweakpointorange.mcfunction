@@ -4,8 +4,7 @@ execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] as @a[team=Orange] 
 execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] as @a[team=Orange] if score @s playerUUID = $tempuuid playerUUID run scoreboard players reset @s HitmarkerTimer
 execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] as @a[team=Orange] if score @s playerUUID = $tempuuid playerUUID run scoreboard players set @s HitmarkerType 1
 execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] as @a[team=Orange] if score @s playerUUID = $tempuuid playerUUID run scoreboard players add @s MVPdamage 85
-execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] run scoreboard players add $CritPurple CmdData 85
-execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] run scoreboard players add $DamagePurple CmdData 85
+execute if entity @s[tag=HitSpotted,tag=!WeakpointAnnounced] run scoreboard players add @s CriticalDamage 85
 execute if entity @s[tag=!HitSpotted,tag=!WeakpointAnnounced] as @a[team=Orange] if score @s playerUUID = $tempuuid playerUUID run tellraw @a[team=Orange] ["","\n",{"selector":"@s"},{"text":" destroyed an ","color":"aqua"},{"text":"unexposed","underlined":true,"color":"red"},{"text":" Weakpoint! No bonus damage dealt.","color":"aqua"},"\n"]
 function game:shipweakpoint/spawnnewpurple
 tag @s add WeakpointAnnounced

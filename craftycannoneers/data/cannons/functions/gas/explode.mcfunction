@@ -10,9 +10,9 @@ particle large_smoke ~ ~ ~ 2 2 2 0.7 200 force
 particle lava ~ ~ ~ 1 1 1 1 60 force
 particle explosion_emitter ~ ~ ~ 1.5 1 1.5 1 5 force
 execute at @s[predicate=cannons:ships/purple] run scoreboard players add $DamagePurple CmdData 15
-execute at @s[predicate=cannons:ships/purple] run scoreboard players add $CritPurple CmdData 15
+execute at @s[predicate=cannons:ships/purple] run scoreboard players add $CritPurple CmdData 100
 execute at @s[predicate=cannons:ships/orange] run scoreboard players add $DamageOrange CmdData 15
-execute at @s[predicate=cannons:ships/orange] run scoreboard players add $CritOrange CmdData 15
+execute at @s[predicate=cannons:ships/orange] run scoreboard players add $CritOrange CmdData 100
 function cannons:gas/hitmarker
 summon minecraft:lightning_bolt ~ ~300000 ~
 playsound gasexplode master @a ~ ~ ~ 4 1
