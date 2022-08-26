@@ -7,7 +7,7 @@ execute at @s[scores={BombDelay=4}] as @a[tag=!Blasted,gamemode=!spectator,dista
 execute at @s[scores={BombDelay=4}] as @a[tag=!Blasted,gamemode=!spectator,distance=..5] run tag @s add Blasted
 
 #> Summon slimes
-execute at @s[scores={BombDelay=5}] run function weapons:bomb/summonslime
+execute at @s[scores={BombDelay=5}] if entity @a[gamemode=!spectator,distance=..8.25] run function weapons:bomb/summonslime
 
 #> Explode
 execute at @s[scores={BombDelay=6..}] run function weapons:bomb/explode
