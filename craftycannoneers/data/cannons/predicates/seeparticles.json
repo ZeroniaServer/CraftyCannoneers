@@ -1,0 +1,30 @@
+{
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:inverted",
+      "term": {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "team": "Lobby"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "team": "Lobby",
+        "location": {
+          "position": {
+            "x": {
+              "min": -350,
+              "max": 180
+            }
+          }
+        }
+      }
+    }
+  ]
+}
