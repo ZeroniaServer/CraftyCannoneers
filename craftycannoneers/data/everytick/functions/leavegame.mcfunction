@@ -3,6 +3,9 @@ tag @s[scores={LeftGame=1..}] remove DeathMVP
 tag @s[scores={LeftGame=1..}] remove CannonMVP
 tag @s[scores={LeftGame=1..}] add LeaveGame
 
+execute as @a[tag=firstJoined,scores={LeftGame=1..}] at @s if score $gamestate CmdData matches 0 unless entity @a[distance=0.001..] run function lobby:customizer/defaults
+execute as @a[tag=firstJoined,scores={LeftGame=1..}] at @s if score $gamestate CmdData matches 0 unless entity @a[distance=0.001..] run function game:forcestop
+
 scoreboard players enable @s[team=!Lobby] leavegame
 scoreboard players reset @s[team=Lobby] leavegame
 execute if entity @s[team=!Lobby,team=!Spectator,team=!Developer] unless score @s leavegame matches 0 run tellraw @a ["",{"selector":"@s"},{"text":" left their team!","color":"dark_aqua"}]
