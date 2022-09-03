@@ -3,8 +3,8 @@ tag @s[scores={LeftGame=1..}] remove DeathMVP
 tag @s[scores={LeftGame=1..}] remove CannonMVP
 tag @s[scores={LeftGame=1..}] add LeaveGame
 
-execute as @a[tag=firstJoined,scores={LeftGame=1..}] at @s if score $gamestate CmdData matches 0 unless entity @a[distance=0.001..] run function lobby:customizer/defaults
-execute as @a[tag=firstJoined,scores={LeftGame=1..}] at @s if score $gamestate CmdData matches 0 unless entity @a[distance=0.001..] run function game:forcestop
+execute as @a[tag=firstJoined,scores={LeftGame=1..}] at @s if score $gamestate CmdData matches 0 unless entity @a[distance=0.0001..] run function lobby:customizer/defaults
+execute as @a[tag=firstJoined,scores={LeftGame=1..}] at @s if score $gamestate CmdData matches 0 unless entity @a[distance=0.0001..] run function game:forcestop
 
 scoreboard players enable @s[team=!Lobby] leavegame
 scoreboard players reset @s[team=Lobby] leavegame
