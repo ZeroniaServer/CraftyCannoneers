@@ -21,6 +21,7 @@ kill @e[type=bat,predicate=!cannons:ships/tutorial]
 kill @e[type=area_effect_cloud,tag=GPDispText,tag=!Tutorial]
 kill @e[type=area_effect_cloud,tag=CannonNametag,tag=!Tutorial]
 kill @e[type=marker,tag=RingOfFire,predicate=!cannons:ships/tutorial]
+kill @e[type=villager,tag=LChestVillager]
 
 function arenaclear:boatvehicles
 function arenaclear:shipplacement

@@ -9,6 +9,7 @@ kill @e[type=armor_stand,tag=ChestTutorial]
 tp @e[type=slime,tag=FakeWeakpoint] ~ ~-200 ~
 kill @e[type=slime,tag=FakeWeakpoint]
 kill @e[type=marker,tag=FakeWeakpoint]
+kill @e[type=villager,tag=LChestFakeVillager]
 
 fill -40 -23 -18 -38 -22 -18 air
 execute as @e[type=area_effect_cloud,name="Tutorial Area"] run data merge entity @s {CustomName:'{"text":"Training Island","bold":true,"color":"aqua"}'}
