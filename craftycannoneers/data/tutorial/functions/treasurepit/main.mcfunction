@@ -12,5 +12,5 @@ execute if entity @a[team=Lobby,predicate=game:tutorialbounds] unless entity @e[
 execute as @e[type=#game:chest,tag=fakechest] run function tutorial:treasurepit/chests
 
 #> Locked Chest notifications
-execute as @e[type=armor_stand,tag=LChestFakeC] at @s if entity @a[predicate=chests:key,distance=..7] run tp @e[type=villager,tag=LChestFakeVillager] ~ -33 ~
+execute as @e[type=armor_stand,tag=LChestFakeC] at @s if entity @a[predicate=chests:key,distance=..7] run tp @e[type=villager,tag=LChestFakeVillager] ~ 69 ~
 execute as @e[type=armor_stand,tag=LChestFakeC] at @s unless entity @a[predicate=chests:key,distance=..7] run tp @e[type=villager,tag=LChestFakeVillager] @s
