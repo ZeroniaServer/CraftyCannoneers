@@ -19,6 +19,7 @@ function cannons:main
 #> Entity effects
 execute if score #loaded entityid matches 1 run function entityid:real_tick
 effect give @e[type=villager] invisibility 1000000 100 true
+effect give @e[type=villager] water_breathing 1000000 100 true
 effect give @e[type=slime] invisibility 1000000 100 true
 kill @e[type=falling_block]
 kill @e[type=experience_orb]
