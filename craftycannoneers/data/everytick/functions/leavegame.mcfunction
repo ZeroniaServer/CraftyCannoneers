@@ -3,6 +3,9 @@ tag @s[scores={LeftGame=1..}] remove DeathMVP
 tag @s[scores={LeftGame=1..}] remove CannonMVP
 tag @s[scores={LeftGame=1..}] add LeaveGame
 
+title @a[scores={LeftGame=1..}] title {"text":" ","color":"white"}
+title @a[scores={LeftGame=1..}] subtitle {"text":" ","color":"white"}
+
 execute as @a[tag=firstJoined,scores={LeftGame=1..}] at @s if score $gamestate CmdData matches 0 unless entity @a[distance=0.0001..] run function lobby:customizer/defaults
 execute as @a[tag=firstJoined,scores={LeftGame=1..}] at @s if score $gamestate CmdData matches 0 unless entity @a[distance=0.0001..] run function game:forcestop
 
