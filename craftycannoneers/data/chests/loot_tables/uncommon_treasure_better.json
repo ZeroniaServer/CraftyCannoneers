@@ -178,7 +178,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:1,Key:1b,display:{Name:'[{\"text\":\"Skeleton Key\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Use this key to unlock \",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"any kind of locked Chests!\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]']}}"
+              "tag": "{CustomModelData:1,Key:1b,display:{Name:'[{\"text\":\"Skeleton Key\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Use this key to unlock \",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"any locked Chests!\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]']}}"
             },
             {
               "function": "minecraft:set_count",

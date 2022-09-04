@@ -1,2 +1,2 @@
-tellraw @s ["",{"text":"This is a ","color":"red"},{"text":"Locked Treasure Chest","underlined":true,"color":"dark_red"},{"text":"! You need a ","color":"red"},{"text":"Skeleton Key","color":"dark_aqua"},{"text":" in order to unlock it!","color":"red"}]
+tellraw @s ["",{"text":"This is a ","color":"red"},{"text":"Skeleton Chest","underlined":true,"color":"dark_red"},{"text":"! You need a ","color":"red"},{"text":"Skeleton Key","color":"dark_aqua"},{"text":" in order to unlock it!","color":"red"}]
 advancement revoke @s only chests:notifylock
