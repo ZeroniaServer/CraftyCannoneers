@@ -8,8 +8,8 @@ effect give @s[team=Lobby,tag=!InCombat] weakness 1000000 255 true
 xp set @s 0 levels
 xp set @s 0 points
 spawnpoint @s[team=Lobby] -55 -21 0 -90
-execute as @a store result score @s playerUUID run data get entity @s UUID[0]
-execute as @s[team=] run tag @s add LeaveGame
+execute unless score @s playerUUID matches -2147483648.. store result score @s playerUUID run data get entity @s UUID[0]
+tag @s[team=] add LeaveGame
 
 #> Message delay
 scoreboard players add @s msgdelay 0

@@ -14,5 +14,17 @@ execute if entity @a[team=!Spectator,predicate=game:matches_uuid] at @a[team=!Sp
 execute if entity @a[team=!Spectator,predicate=game:matches_uuid] at @s run tp @s @s
 execute store result entity @s Air short 1 run scoreboard players get $toggle CmdData
 
+execute if score $gamestate CmdData matches 2.. run scoreboard players add @s[nbt={Item:{id:"minecraft:iron_sword"}}] CmdData 1
+execute if score $gamestate CmdData matches 2.. run scoreboard players add @s[nbt={Item:{id:"minecraft:crossbow"}}] CmdData 1
+execute if score $gamestate CmdData matches 2.. run scoreboard players add @s[nbt={Item:{id:"minecraft:spyglass"}}] CmdData 1
+execute if score $gamestate CmdData matches 2.. run scoreboard players add @s[nbt={Item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:60}}}] CmdData 1
+
+execute if score $gamestate CmdData matches 2.. if entity @s[scores={CmdData=100..},nbt={Item:{id:"minecraft:iron_sword"}}] run tag @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid] add NeedsCutlass
+execute if score $gamestate CmdData matches 2.. if entity @s[scores={CmdData=100..},nbt={Item:{id:"minecraft:crossbow"}}] run tag @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid] add NeedsCrossbow
+execute if score $gamestate CmdData matches 2.. if entity @s[scores={CmdData=100..},nbt={Item:{id:"minecraft:spyglass"}}] run tag @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid] add NeedsSpyglass
+execute if score $gamestate CmdData matches 2.. if entity @s[scores={CmdData=100..},nbt={Item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:60}}}] run tag @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid] add NeedsTracer
+
 scoreboard players reset $tempuuid playerUUID
 tag @s[tag=!processed] add processed
+
+execute if entity @s[scores={CmdData=100..}] run kill @s
