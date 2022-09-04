@@ -14,4 +14,3 @@ tag @s remove NeedsSpyglass
 tag @s remove NeedsTracer
 scoreboard players add @s MVPdeath 1
 scoreboard players reset @s death
-tag @s add
