@@ -3,11 +3,11 @@ tag @s[scores={LeftGame=1..}] remove DeathMVP
 tag @s[scores={LeftGame=1..}] remove CannonMVP
 tag @s[scores={LeftGame=1..}] add LeaveGame
 
-title @a[scores={LeftGame=1..}] title {"text":" ","color":"white"}
-title @a[scores={LeftGame=1..}] subtitle {"text":" ","color":"white"}
+title @s[scores={LeftGame=1..}] title {"text":" ","color":"white"}
+title @s[scores={LeftGame=1..}] subtitle {"text":" ","color":"white"}
 
-execute as @a[tag=firstJoined,scores={LeftGame=1..}] at @s if score $gamestate CmdData matches 0 unless entity @a[distance=0.0001..] run function lobby:customizer/defaults
-execute as @a[tag=firstJoined,scores={LeftGame=1..}] at @s if score $gamestate CmdData matches 0 unless entity @a[distance=0.0001..] run function game:forcestop
+#Join reset
+execute if entity @s[scores={LeftGame=1..}] if score $gamestate CmdData matches 0 unless entity @a[distance=0.0001..] run function everytick:joinreset
 
 scoreboard players enable @s[team=!Lobby] leavegame
 scoreboard players reset @s[team=Lobby] leavegame
