@@ -24,6 +24,11 @@ execute if score $gamestate CmdData matches 2.. if entity @s[scores={CmdData=100
 execute if score $gamestate CmdData matches 2.. if entity @s[scores={CmdData=100..},nbt={Item:{id:"minecraft:spyglass"}}] run tag @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid] add NeedsSpyglass
 execute if score $gamestate CmdData matches 2.. if entity @s[scores={CmdData=100..},nbt={Item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:60}}}] run tag @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid] add NeedsTracer
 
+execute if score $gamestate CmdData matches 2.. if entity @s[scores={CmdData=..99},nbt={Item:{id:"minecraft:iron_sword"}}] if entity @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid,scores={death=1..}] run kill @s
+execute if score $gamestate CmdData matches 2.. if entity @s[scores={CmdData=..99},nbt={Item:{id:"minecraft:crossbow"}}] if entity @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid,scores={death=1..}] run kill @s
+execute if score $gamestate CmdData matches 2.. if entity @s[scores={CmdData=..99},nbt={Item:{id:"minecraft:spyglass"}}] if entity @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid,scores={death=1..}] run kill @s
+execute if score $gamestate CmdData matches 2.. if entity @s[scores={CmdData=..99},nbt={Item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:60}}}] if entity @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid,scores={death=1..}] run kill @s
+
 scoreboard players reset $tempuuid playerUUID
 tag @s[tag=!processed] add processed
 
