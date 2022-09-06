@@ -8,7 +8,7 @@ scoreboard players reset $ForceCountdown CmdData
 scoreboard players set $gamestate CmdData -1
 
 tag @e[type=marker,tag=joinpad] add Locked
-kill @e[type=item]
+kill @e[type=item,predicate=game:inarena]
 
 item replace entity @e[type=armor_stand,tag=TimeIcon] armor.head with diamond_hoe{CustomModelData:35}
 item replace entity @e[type=armor_stand,tag=HPIcon] armor.head with diamond_hoe{CustomModelData:36}
