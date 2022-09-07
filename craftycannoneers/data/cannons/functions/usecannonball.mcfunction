@@ -36,7 +36,7 @@ execute if entity @s[tag=FillCB,tag=HoldBCB,team=!Lobby] unless entity @e[type=a
 execute if entity @s[team=!Lobby,tag=FillCB,tag=HoldBCB] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedBCB
 execute if entity @s[tag=FillCB,tag=HoldBCB] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
 execute if entity @s[tag=FillCB,tag=HoldBCB] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 6
-scoreboard players add @s[team=!Lobby,tag=FillCB,tag=HoldBCB,tag=UsedBCB] 1
+scoreboard players add @s[team=!Lobby,tag=FillCB,tag=HoldBCB,tag=UsedBCB] MVPcannon 1
 #Player
 execute if entity @s[tag=FillCB,tag=HoldPCB,team=!Lobby] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run item replace entity @s weapon.mainhand with air
 execute if entity @s[team=!Lobby,tag=FillCB,tag=HoldPCB] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..3] run tag @s add UsedPCB
