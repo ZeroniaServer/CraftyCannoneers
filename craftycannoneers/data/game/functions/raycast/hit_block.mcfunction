@@ -1,0 +1,1 @@
+scoreboard players set #hit raycast 1

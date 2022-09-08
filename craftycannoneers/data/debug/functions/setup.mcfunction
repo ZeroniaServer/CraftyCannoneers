@@ -93,6 +93,7 @@ scoreboard objectives add NoRegenTimer dummy
 scoreboard objectives add bounceID dummy
 scoreboard objectives add CriticalDamage dummy
 scoreboard objectives add invCount dummy
+scoreboard objectives add raycast dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
