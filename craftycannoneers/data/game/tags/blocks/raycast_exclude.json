@@ -9,6 +9,9 @@
     "minecraft:end_stone_brick_wall",
     "minecraft:spruce_fence",
     "minecraft:spruce_fence_gate",
-    "#game:nonsolids"
+    "minecraft:ladder",
+    "#game:nonsolids",
+    "#minecraft:signs",
+    "#minecraft:buttons"
   ]
 }

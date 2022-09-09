@@ -1,4 +1,4 @@
-tellraw @s ["","\n",{"text":"Ship weakpoint exposed by ","color":"aqua"},{"selector":"@s"},"\n"]
+tellraw @s ["","\n",{"text":"Ship Weakpoint exposed by ","color":"aqua"},{"selector":"@s"},"\n"]
 
 tag @s[tag=SpotFake1] add Exposed1
 tag @s[tag=SpotFake2] add Exposed2
