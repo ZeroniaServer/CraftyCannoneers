@@ -1,5 +1,6 @@
 #> Raycast
-execute if score $gamestate CmdData matches 2 as @a[team=!Lobby,team=!Spectator,team=!Developer,tag=UsingSpyglass,gamemode=!spectator] at @s anchored eyes positioned ^ ^ ^ anchored feet run function game:raycast/start_ray
+execute if score $gamestate CmdData matches 2 as @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,gamemode=!spectator] at @s anchored eyes positioned ^ ^ ^ anchored feet unless entity @e[type=slime,tag=Weakpoint,tag=Orange,distance=..101] run function game:raycast/start_ray
+execute if score $gamestate CmdData matches 2 as @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,gamemode=!spectator] at @s anchored eyes positioned ^ ^ ^ anchored feet unless entity @e[type=slime,tag=Weakpoint,tag=Purple,distance=..101] run function game:raycast/start_ray
 
 #> X particles
 execute if score $gamestate CmdData matches 2 as @e[type=marker,tag=XParticle] at @s run function game:shipweakpoint/xparticle

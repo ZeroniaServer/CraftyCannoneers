@@ -6,6 +6,9 @@
     "minecraft:void_air",
     "minecraft:creeper_head",
     "minecraft:barrier",
-    "minecraft:end_stone_brick_wall"
+    "minecraft:end_stone_brick_wall",
+    "minecraft:spruce_fence",
+    "minecraft:spruce_fence_gate",
+    "#game:nonsolids"
   ]
 }
