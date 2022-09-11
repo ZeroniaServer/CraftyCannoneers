@@ -31,13 +31,13 @@ summon slime -382 -10 -54 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S6"],In
 summon slime -382 -14 -37 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S7"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
 execute as @e[type=slime,tag=FakeWeakpoint] at @s run function tutorial:spawnweakpointmarkers
 
-execute as @e[type=slime,tag=S1] at @s run tp @s ~7 ~1.5 ~1
-execute as @e[type=slime,tag=S2] at @s run tp @s ~7 ~1.5 ~1.5
-execute as @e[type=slime,tag=S3] at @s run tp @s ~7 ~1.5 ~2.5
-execute as @e[type=slime,tag=S4] at @s run tp @s ~9 ~1.5 ~4
-execute as @e[type=slime,tag=S5] at @s run tp @s ~10 ~1 ~4
-execute as @e[type=slime,tag=S6] at @s run tp @s ~18 ~ ~7
-execute as @e[type=slime,tag=S7] at @s run tp @s ~20 ~1 ~4
+# execute as @e[type=slime,tag=S1] at @s run tp @s ~7 ~1.5 ~1
+# execute as @e[type=slime,tag=S2] at @s run tp @s ~7 ~1.5 ~1.5
+# execute as @e[type=slime,tag=S3] at @s run tp @s ~7 ~1.5 ~2.5
+# execute as @e[type=slime,tag=S4] at @s run tp @s ~9 ~1.5 ~4
+# execute as @e[type=slime,tag=S5] at @s run tp @s ~10 ~1 ~4
+# execute as @e[type=slime,tag=S6] at @s run tp @s ~18 ~ ~7
+# execute as @e[type=slime,tag=S7] at @s run tp @s ~20 ~1 ~4
 
 forceload add -413 -379 -95 -15
 
