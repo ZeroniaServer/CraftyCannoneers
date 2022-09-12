@@ -26,5 +26,5 @@ tellraw @a[tag=!hideTips,scores={GamesPlayed=..0}] ["",{"text":"(Click ","color"
 
 scoreboard players set $Tip CmdData 0
 
-execute unless entity @s[tag=TipSet,tag=!Selected] run function tutorial:tips/newset
+execute unless entity @e[type=marker,tag=TipSet] run function tutorial:tips/newset
 kill @s
