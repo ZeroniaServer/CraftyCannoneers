@@ -1,3 +1,4 @@
+scoreboard players set $CombinedDamage CmdData 0
 scoreboard players set $lockboxspawn CmdData 1000
 
 scoreboard players operation $lockboxspawn CmdData = $ShipHP CmdData

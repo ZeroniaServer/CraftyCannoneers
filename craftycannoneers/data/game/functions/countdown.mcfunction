@@ -13,8 +13,6 @@ execute if score $Countdown CmdData matches 1 if score $countSec CmdData matches
 execute if score $Countdown CmdData matches 1 if score $countSec CmdData matches 10 as @a at @s run playsound block.note_block.hat master @s ~ ~ ~ 1 0.7
 execute if score $Countdown CmdData matches 1 if score $countSec CmdData matches 20 as @a at @s run playsound block.note_block.hat master @s ~ ~ ~ 1 0.7
 execute if score $Countdown CmdData matches ..0 run function game:forcestart
-execute if score $Countdown CmdData matches ..0 run function lobby:customizer/lockboxdamage
-execute if score $Countdown CmdData matches ..0 run scoreboard players set $CombinedDamage CmdData 0
 
 execute if score $countSec CmdData matches 20.. run scoreboard players remove $Countdown CmdData 1
 

@@ -26,6 +26,7 @@ function tutorial:newset
 
 
 execute if score $ShipHP CmdData matches 42069.. run function game:autohp
+function lobby:customizer/lockboxdamage
 
 tag @a remove KillMVP
 tag @a remove DeathMVP
