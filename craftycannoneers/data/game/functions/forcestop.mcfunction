@@ -38,3 +38,5 @@ tp @e[type=marker,tag=WeakpointLoc] 0 -1000 0
 kill @e[type=marker,tag=WeakpointLoc]
 tp @e[type=slime,tag=Weakpoint] 0 -1000 0
 kill @e[type=#game:weakpoint,tag=Weakpoint]
+
+scoreboard players set $WasAuto CmdData 0

@@ -5,3 +5,5 @@ execute if score $InOrange CmdData = $InPurple CmdData as @a[team=Purple] run sc
 
 scoreboard players operation $PurpleHP CmdData = $ShipHP CmdData
 scoreboard players operation $OrangeHP CmdData = $ShipHP CmdData
+
+scoreboard players set $WasAuto CmdData 1

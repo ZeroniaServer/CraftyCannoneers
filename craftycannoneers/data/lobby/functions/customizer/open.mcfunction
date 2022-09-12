@@ -1,3 +1,7 @@
+#> Set hp to auto if the previous game was autohp
+execute if score $WasAuto CmdData matches 1 run scoreboard players set $ShipHP CmdData 42069
+scoreboard players set $WasAuto CmdData 0
+
 fill -54 -24 9 -55 -23 9 air
 setblock -53 -24 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"red",Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 6497"}}',Text2:'{"text":""}',Text3:'{"text":""}',Text4:'{"text":"Restore Defaults","color":"#FF0003"}'}
 setblock -55 -24 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"green",Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 5732"}}',Text2:'{"text":""}',Text3:'{"text":""}',Text4:'{"text":"Confirm Settings","color":"#00FF38"}'}
