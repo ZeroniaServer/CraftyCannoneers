@@ -1,3 +1,4 @@
+forceload add 0 0
 kill @e[type=marker,tag=TipSet]
 
 summon marker 0 0 0 {Tags:["TipSet","Tip1"]}
