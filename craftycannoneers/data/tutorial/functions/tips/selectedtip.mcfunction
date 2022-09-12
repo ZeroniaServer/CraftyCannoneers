@@ -24,7 +24,7 @@ execute as @a[tag=!hideTips,scores={GamesPlayed=2..}] run tellraw @s ["",{"text"
 tellraw @a[tag=!hideTips,scores={GamesPlayed=1}] ["",{"text":"(Play 1 more game to be able to hide tips.)","color":"dark_aqua"}]
 tellraw @a[tag=!hideTips,scores={GamesPlayed=..0}] ["",{"text":"(Click ","color":"dark_aqua"},{"text":"[HERE]","color":"green","clickEvent":{"action":"run_command","value":"/trigger toggleTips"},"hoverEvent":{"action":"show_text","contents":["Click to disable tips!"]}},{"text":" to disable tips!)","color":"dark_aqua"}]
 
-scoreboard players reset $Tip CmdData
+scoreboard players set $Tip CmdData 0
 
 execute unless entity @s[tag=TipSet,tag=!Selected] run function tutorial:tips/newset
 kill @s

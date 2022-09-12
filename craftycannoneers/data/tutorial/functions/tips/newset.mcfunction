@@ -22,3 +22,5 @@ summon marker 0 0 0 {Tags:["TipSet","Tip18"]}
 summon marker 0 0 0 {Tags:["TipSet","Tip19"]}
 summon marker 0 0 0 {Tags:["TipSet","Tip20"]}
 summon marker 0 0 0 {Tags:["TipSet","Tip21"]}
+
+scoreboard players set $Tip CmdData 0
