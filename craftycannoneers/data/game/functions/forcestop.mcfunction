@@ -30,6 +30,8 @@ scoreboard players reset $DamageOrange CmdData
 scoreboard players reset $DamagePurple CmdData
 scoreboard players reset $CritOrange CmdData
 scoreboard players reset $CritPurple CmdData
+scoreboard players reset $OrangeWP CmdData
+scoreboard players reset $PurpleWP CmdData
 
 execute unless score $ShipHP CmdData matches 1000 unless score $ShipHP CmdData matches 1250 unless score $ShipHP CmdData matches 1500 unless score $ShipHP CmdData matches 2000 run scoreboard players set $ShipHP CmdData 42069
 function lobby:customizer/updatesigns

@@ -7,7 +7,7 @@ execute unless score $OrangeWPDelay CmdData matches 1.. if entity @s[type=slime,
 tp @e[type=slime,tag=Weakpoint,tag=Orange] 0 -1000 0
 kill @e[type=#game:weakpoint,tag=Weakpoint,tag=Orange]
 
-tag @e[type=marker,tag=WeakpointLoc,tag=Purple] remove SelectedWeakP
+scoreboard players add $OrangeWP CmdData 1
 
 tag @e[type=marker,tag=WeakpointLoc,tag=Purple,sort=random,limit=1] add SelectedWeakP
 
@@ -17,7 +17,7 @@ execute as @e[type=marker,tag=SelectedWeakP,tag=Purple] at @s unless block ~ ~ ~
 
 team join NoName @e[type=slime,tag=Weakpoint]
 
-execute unless entity @e[type=marker,tag=WeakpointLoc,tag=Purple] run tellraw @a[team=Orange] ["","\n",{"text":"All enemy Weakpoints have been destroyed!","color":"aqua"},"\n"]
-execute unless entity @e[type=marker,tag=WeakpointLoc,tag=Purple] run tellraw @a[team=Purple] ["","\n",{"text":"All of your Weakpoints have been destroyed!","color":"red"},"\n"]
+execute if score $OrangeWP CmdData matches 6.. run tellraw @a[team=Orange] ["",{"text":"All enemy Weakpoints have been destroyed!","color":"aqua"},"\n"]
+execute if score $OrangeWP CmdData matches 6.. run tellraw @a[team=Purple] ["",{"text":"All of your Weakpoints have been destroyed!","color":"red"},"\n"]
 
 kill @e[type=marker,tag=SelectedWeakP]
