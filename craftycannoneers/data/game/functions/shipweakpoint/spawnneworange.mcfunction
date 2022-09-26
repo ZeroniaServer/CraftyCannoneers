@@ -17,7 +17,7 @@ execute as @e[type=marker,tag=SelectedWeakP,tag=Orange] at @s unless block ~ ~ ~
 
 team join NoName @e[type=slime,tag=Weakpoint]
 
-execute if score $PurpleWP CmdData matches 7.. run tellraw @a[team=Purple] ["",{"text":"All enemy Weakpoints have been destroyed!","color":"aqua"},"\n"]
-execute if score $PurpleWP CmdData matches 7.. run tellraw @a[team=Orange] ["",{"text":"All of your Weakpoints have been destroyed!","color":"red"},"\n"]
+execute if score $PurpleWP CmdData matches 6.. run tellraw @a[team=Purple] ["",{"text":"All enemy Weakpoints have been destroyed!","color":"aqua"},"\n"]
+execute if score $PurpleWP CmdData matches 6.. run tellraw @a[team=Orange] ["",{"text":"All of your Weakpoints have been destroyed!","color":"red"},"\n"]
 
 kill @e[type=marker,tag=SelectedWeakP]
