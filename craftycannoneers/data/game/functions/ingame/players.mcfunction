@@ -16,6 +16,12 @@ function game:ingame/harpoon
 #> Player stuck
 function game:ingame/playerstuck
 
+#> Arrows to shoot score
+scoreboard players add @s shotArrows 0
+scoreboard players set @s arrowsToShoot 5
+scoreboard players operation @s arrowsToShoot -= @s shotArrows
+execute if score @s arrowsToShoot matches ..-1 run scoreboard players set @s arrowsToShoot 0
+
 #> Spawnpoints
 spawnpoint @s[team=Orange] 88 -26 55 90
 spawnpoint @s[team=Purple] 52 -26 -55 -90

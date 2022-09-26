@@ -13,4 +13,5 @@ tag @s remove NeedsCrossbow
 tag @s remove NeedsSpyglass
 tag @s remove NeedsTracer
 scoreboard players add @s MVPdeath 1
+scoreboard players set @s shotArrows 0
 scoreboard players reset @s death
