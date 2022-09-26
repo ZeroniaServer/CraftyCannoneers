@@ -17,6 +17,7 @@ function game:ingame/harpoon
 function game:ingame/playerstuck
 
 #> Arrows to shoot score
+tag @s remove arrowcounted
 scoreboard players add @s shotArrows 0
 scoreboard players set @s arrowsToShoot 5
 scoreboard players operation @s arrowsToShoot -= @s shotArrows
