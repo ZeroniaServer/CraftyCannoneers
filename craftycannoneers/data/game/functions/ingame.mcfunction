@@ -13,8 +13,8 @@ function tutorial:tips/showtip
 execute as @e[type=armor_stand,tag=ShipBell] run function game:ingame/bell
 
 #> Spawn new weakpoints if the old ones die for some reason (failsafe)
-execute as @e[type=slime,tag=Weakpoint,tag=Orange,tag=WeakpointDamaged] unless score $OrangeWP CmdData matches 7.. run function game:shipweakpoint/spawnnewpurple
-execute as @e[type=slime,tag=Weakpoint,tag=Purple,tag=WeakpointDamaged] unless score $PurpleWP CmdData matches 7.. run function game:shipweakpoint/spawnneworange
+execute as @e[type=slime,tag=Weakpoint,tag=Orange,tag=WeakpointDamaged] unless score $OrangeWP CmdData matches 6.. run function game:shipweakpoint/spawnnewpurple
+execute as @e[type=slime,tag=Weakpoint,tag=Purple,tag=WeakpointDamaged] unless score $PurpleWP CmdData matches 6.. run function game:shipweakpoint/spawnneworange
 
 #> Disable readyup trigger
 execute as @a run trigger readyup set 0
