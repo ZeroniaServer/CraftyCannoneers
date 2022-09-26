@@ -23,6 +23,7 @@ kill @e[type=area_effect_cloud,tag=CannonNametag,tag=!Tutorial]
 kill @e[type=marker,tag=RingOfFire,predicate=!cannons:ships/tutorial]
 kill @e[type=villager,tag=LChestVillager]
 
+function arenaclear:fakeairclear
 function arenaclear:boatvehicles
 function arenaclear:shipplacement
 function arenaclear:teamchests
