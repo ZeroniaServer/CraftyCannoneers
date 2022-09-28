@@ -68,6 +68,9 @@ function game:ingame/indestructible
 #> Setblocks for lilypads
 function game:ingame/lilypads
 
+#> Anti-arrowdupe (team chests)
+function antidupe:loop
+
 #> Cave entrances
 execute positioned 81 -36.8 -17 run particle bubble_column_up 81 -36.8 -17 1.4 0 0 0.2 5 normal @a[team=!Lobby,distance=..16]
 execute positioned 58 -36.8 17 run particle bubble_column_up 58 -36.8 17 1.4 0 0 0.2 5 normal @a[team=!Lobby,distance=..16]

@@ -1,0 +1,8 @@
+execute store result score $orange1 hasArrows run data get entity @e[type=chest_minecart,tag=orangeteamchest,limit=1] Items[{id:"minecraft:arrow"}].Count
+execute store result score $purple1 hasArrows run data get entity @e[type=chest_minecart,tag=purpleteamchest,limit=1] Items[{id:"minecraft:arrow"}].Count
+
+execute if score $orange1 hasArrows > $orange2 hasArrows as @e[type=chest_minecart,tag=orangeteamchest] at @s as @a[team=Orange,distance=..9] at @s if score @s hasArrows < @s arrowsToShoot run function antidupe:returnarrows
+execute if score $purple1 hasArrows > $purple2 hasArrows as @e[type=chest_minecart,tag=purpleteamchest] at @s as @a[team=Purple,distance=..9] at @s if score @s hasArrows < @s arrowsToShoot run function antidupe:returnarrows
+
+execute unless score $orange1 hasArrows = $orange2 hasArrows store result score $orange2 hasArrows run scoreboard players get $orange1 hasArrows
+execute unless score $purple1 hasArrows = $purple2 hasArrows store result score $purple2 hasArrows run scoreboard players get $purple1 hasArrows
