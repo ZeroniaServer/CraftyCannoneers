@@ -1,4 +1,4 @@
-clear @s
+function tutorial:enterarea
 
 item replace entity @s hotbar.0 with gunpowder{NoDrop:1b,display:{Name:'[{"text":"Gunpowder","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Used to change the power of a cannon shot.","italic":false,"color":"white"}]']}} 1
 item replace entity @s hotbar.1 with diamond_hoe{HideFlags:127,NoDrop:1b,Unbreakable:1b,CustomModelData:60,Cannonball:8b,display:{Name:'[{"text":"Tracer Cannonball","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Using this Cannonball does not","italic":false,"color":"white"}]','[{"text":"consume any Gunpowder in a Cannon.","italic":false,"color":"white"},{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"Leaves behind a visible trail","italic":false,"color":"#66ff99"}]','[{"text":"which is only apparent to its user.","italic":false,"color":"#66ff99"}]']}}
@@ -10,9 +10,6 @@ item replace entity @s hotbar.6 with diamond_hoe{HideFlags:127,NoDrop:1b,CustomM
 item replace entity @s hotbar.7 with diamond_hoe{HideFlags:127,NoDrop:1b,CustomModelData:55,Cannonball:6b,Unbreakable:1b,display:{Name:'[{"text":"Bouncy Cannonball","italic":false,"color":"dark_aqua"}]',Lore:['[{"text":"Bounces around on any surface","italic":false,"color":"white"}]','[{"text":"before exploding.","italic":false,"color":"white"},{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"Every time it bounces it deals","italic":false,"color":"aqua"}]','[{"text":"damage to surrounding players.","italic":false,"color":"aqua"}]']}}
 item replace entity @s hotbar.8 with diamond_hoe{HideFlags:127,NoDrop:1b,CustomModelData:73,Unbreakable:1b,Cannonball:9b,display:{Name:'[{"text":"Golden Cannonball","color":"gold","italic":false}]',Lore:['[{"text":"Only found in Skeleton Chests!","italic":false,"color":"dark_red","underlined":true},{"text":"","italic":false,"color":"dark_purple","underlined":false}]','[{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"The most fancy type of cannonball!","italic":false,"color":"white"},{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"","italic":false,"color":"dark_purple"}]','[{"text":"The Golden Cannonball gives Gold to","italic":false,"color":"aqua"}]','[{"text":"their users when they damage ships","italic":false,"color":"aqua"}]','[{"text":"or kill enemies with them.","italic":false,"color":"aqua"}]']}}
 
-function lobby:hats
-
-playsound ding master @s ~ ~ ~ 1 0.6
 title @s title {"text":"Cannon Dock","color":"aqua"}
 title @s subtitle {"text":"(Learn how to shoot Cannons)","color":"yellow"}
 
