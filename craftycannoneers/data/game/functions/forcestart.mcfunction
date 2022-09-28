@@ -72,3 +72,9 @@ execute as @e[type=marker,tag=WeakpointLoc] at @s run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 
 
 function game:shipweakpoint/spawnnewpurple
 function game:shipweakpoint/spawnneworange
+
+scoreboard players set $orange1 hasArrows 0
+scoreboard players set $orange2 hasArrows 0
+
+scoreboard players set $purple1 hasArrows 0
+scoreboard players set $purple2 hasArrows 0

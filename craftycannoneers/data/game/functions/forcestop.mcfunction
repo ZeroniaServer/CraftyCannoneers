@@ -42,3 +42,9 @@ tp @e[type=slime,tag=Weakpoint] 0 -1000 0
 kill @e[type=#game:weakpoint,tag=Weakpoint]
 
 scoreboard players set $WasAuto CmdData 0
+
+scoreboard players set $orange1 hasArrows 0
+scoreboard players set $orange2 hasArrows 0
+
+scoreboard players set $purple1 hasArrows 0
+scoreboard players set $purple2 hasArrows 0
