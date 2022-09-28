@@ -55,6 +55,10 @@ execute if entity @s[team=!Spectator] run function cannons:hitmarkers
 #> Open chests
 function chests:openchest
 
+#> Arrow dropping
+execute if score @s[team=!Lobby,team=!Spectator] dropArrow matches 1.. run function game:ingame/arrowcount
+scoreboard players reset @s dropArrow
+
 #> Lobby water
 execute at @s[team=Lobby,predicate=!game:inlobby] if block ~ ~ ~ water run function lobby:water
 
