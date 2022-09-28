@@ -59,6 +59,9 @@ function chests:openchest
 execute if score @s[team=!Lobby,team=!Spectator] dropArrow matches 1.. run function game:ingame/arrowcount
 scoreboard players reset @s dropArrow
 
+#> Use crossbow score
+scoreboard players remove @s[scores={useCrossbow=1..}] useCrossbow 1
+
 #> Lobby water
 execute at @s[team=Lobby,predicate=!game:inlobby] if block ~ ~ ~ water run function lobby:water
 

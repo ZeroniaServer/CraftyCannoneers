@@ -98,6 +98,7 @@ scoreboard objectives add shotArrows minecraft.used:minecraft.crossbow
 scoreboard objectives add arrowsToShoot dummy
 scoreboard objectives add hasArrows dummy
 scoreboard objectives add dropArrow minecraft.dropped:minecraft.arrow
+scoreboard objectives add useCrossbow dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy

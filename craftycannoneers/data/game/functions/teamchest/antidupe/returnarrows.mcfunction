@@ -5,8 +5,7 @@ execute unless score @s hasArrows > @s arrowsToShoot run data modify storage cra
 execute unless score @s[team=Orange] hasArrows > @s arrowsToShoot run data modify storage craftycannoneers:chest Items append from entity @e[type=chest_minecart,tag=orangeteamchest,distance=..7,limit=1] Items[{id:"minecraft:arrow"}]
 execute unless score @s[team=Purple] hasArrows > @s arrowsToShoot run data modify storage craftycannoneers:chest Items append from entity @e[type=chest_minecart,tag=purpleteamchest,distance=..7,limit=1] Items[{id:"minecraft:arrow"}]
 execute unless score @s hasArrows > @s arrowsToShoot store result storage craftycannoneers:chest Items[-1].Count byte 0.99999 run data get storage craftycannoneers:chest Items[-1].Count
-execute unless score @s[team=Orange] hasArrows > @s arrowsToShoot run data modify entity @e[type=minecraft:chest_minecart,tag=orangeteamchest,distance=..7,limit=1] Items append from storage craftycannoneers:chest Items[-1]
-execute unless score @s[team=Purple] hasArrows > @s arrowsToShoot run data modify entity @e[type=minecraft:chest_minecart,tag=purpleteamchest,distance=..7,limit=1] Items append from storage craftycannoneers:chest Items[-1]
+execute unless score @s[team=Orange] hasArrows > @s arrowsToShoot run data modify entity @e[type=chest_minecart,tag=orangeteamchest,distance=..7,limit=1] Items append from storage craftycannoneers:chest Items[-1]
+execute unless score @s[team=Purple] hasArrows > @s arrowsToShoot run data modify entity @e[type=chest_minecart,tag=purpleteamchest,distance=..7,limit=1] Items append from storage craftycannoneers:chest Items[-1]
 execute unless score @s hasArrows > @s arrowsToShoot run data remove storage craftycannoneers:chest Items
-execute if score @s hasArrows < @s arrowsToShoot run function antidupe:returnarrows
-function game:ingame/arrowcount
+execute if score @s hasArrows < @s arrowsToShoot run function game:teamchest/antidupe/returnarrows
