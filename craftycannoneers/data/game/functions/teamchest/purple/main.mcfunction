@@ -1,5 +1,5 @@
 #> Prevent putting in default items
-execute as @e[type=chest_minecart,tag=purpleteamchest] run function chests:preventitems
+execute if entity @s[tag=Opened] as @e[type=chest_minecart,tag=purpleteamchest] run function game:teamchest/antidupe/main
 
 #> Teleport in place
 execute unless entity @a[team=Orange,distance=..6] run tp @e[type=chest_minecart,tag=purpleteamchest] ~ ~ ~ ~ ~

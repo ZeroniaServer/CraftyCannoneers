@@ -62,6 +62,7 @@ tag @s[tag=LeaveGame] remove NeedsTracer
 execute if entity @s[tag=LeaveGame] run function game:boat/removetags
 scoreboard players reset @s[tag=LeaveGame] loverocks
 advancement revoke @s[tag=LeaveGame,advancements={tutorial:zzzunlockables/rocks={50=false}}] only tutorial:zzzunlockables/rocks
+scoreboard players reset @s[tag=LeaveGame] shotArrows
 
 tellraw @s[tag=LeaveGame,tag=inParkour] [{"text":"You left the game, so your Parkour run was canceled.","color":"red"}]
 tag @s[tag=LeaveGame,tag=inParkour] remove inParkour
