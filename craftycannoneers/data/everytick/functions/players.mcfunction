@@ -57,6 +57,7 @@ function chests:openchest
 
 #> Arrow dropping
 execute if score @s[team=!Lobby,team=!Spectator] dropArrow matches 1.. run function game:ingame/arrowcount
+scoreboard players set @s[scores={dropArrow=1..}] useCrossbow 3
 scoreboard players reset @s dropArrow
 
 #> Use crossbow score

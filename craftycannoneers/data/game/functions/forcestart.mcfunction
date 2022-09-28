@@ -78,3 +78,6 @@ scoreboard players set $orange2 hasArrows 0
 
 scoreboard players set $purple1 hasArrows 0
 scoreboard players set $purple2 hasArrows 0
+
+scoreboard players add @a[team=Orange] hasArrows 1
+scoreboard players add @a[team=Purple] hasArrows 1

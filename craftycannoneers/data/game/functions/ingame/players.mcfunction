@@ -16,7 +16,9 @@ function game:ingame/harpoon
 #> Player stuck
 function game:ingame/playerstuck
 
-#> Arrows to shoot score
+#> Arrow scoreboards
+execute if score @s[tag=!arrowcounted] dropArrow matches 1.. run function game:ingame/arrowcount
+scoreboard players reset @s dropArrow
 tag @s remove arrowcounted
 scoreboard players add @s shotArrows 0
 scoreboard players set @s arrowsToShoot 5
