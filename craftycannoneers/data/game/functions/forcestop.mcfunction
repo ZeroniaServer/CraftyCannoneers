@@ -43,8 +43,5 @@ kill @e[type=#game:weakpoint,tag=Weakpoint]
 
 scoreboard players set $WasAuto CmdData 0
 
-scoreboard players set $orange1 hasArrows 0
-scoreboard players set $orange2 hasArrows 0
-
-scoreboard players set $purple1 hasArrows 0
-scoreboard players set $purple2 hasArrows 0
+scoreboard players set $orange hasArrows 0
+scoreboard players set $purple hasArrows 0
