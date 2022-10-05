@@ -41,6 +41,7 @@ summon marker 90 -24 50 {Tags:["WeakpointLoc","Orange","left"]}
 summon marker 85 -30 49 {Tags:["WeakpointLoc","Orange","left"]}
 summon marker 84 -27 49 {Tags:["WeakpointLoc","Orange","left"]}
 summon marker 88 -19 51 {Tags:["WeakpointLoc","Orange","left"]}
+summon marker 83 -12 53 {Tags:["WeakpointLoc","Orange","left"]}
 kill @e[type=marker,tag=WeakpointLoc,tag=Orange,tag=left,limit=5,sort=random]
 
 #> Orange - Middle
