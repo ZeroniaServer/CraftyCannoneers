@@ -146,7 +146,7 @@ team modify Lobby color blue
 team modify Developer color dark_green
 team modify Orange color gold
 team modify Purple color dark_purple
-team modify Spectator color gray
+team modify Spectator color dark_gray
 team modify Lobby friendlyFire false
 team modify Orange friendlyFire false
 team modify Purple friendlyFire false
