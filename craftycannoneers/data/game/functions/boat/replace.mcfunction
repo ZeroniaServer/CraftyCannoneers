@@ -1,5 +1,5 @@
 #> Summon new boat with correct rotation if dismounting
-execute at @s[tag=DismountCheck,tag=!Sinking] run function game:boat/rotate/pick
+execute at @s[tag=DismountCheck,tag=!Sinking] run function game:boat/rotate
 
 #> Place new boat if sinking
 execute at @s[tag=1,tag=Sinking] run summon boat 109 -30 0 {Invulnerable:1b,Tags:["Boat","BoatBoat","1"],Passengers:[{id:"minecraft:armor_stand",Tags:["Boat","BoatAS","New","1"],Marker:1b,Invulnerable:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:black_banner",Count:1b,tag:{BlockEntityTag:{Patterns:[{Pattern:sku,Color:0}]}}}]}]}
