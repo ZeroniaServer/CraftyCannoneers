@@ -14,6 +14,14 @@ gamerule doMobSpawning false
 gamerule doMobLoot true
 gamerule naturalRegeneration false
 gamerule sendCommandFeedback false
+gamerule logAdminCommands false
+gamerule disableRaids true
+gamerule doWardenSpawning false
+gamerule doInsomnia false
+gamerule doPatrolSpawning false
+gamerule announceAdvancements false
+gamerule doTraderSpawning false
+gamerule spectatorsGenerateChunks false
 execute unless score $gamestate CmdData matches 2 run gamerule fallDamage false
 
 #> Scoreboards
