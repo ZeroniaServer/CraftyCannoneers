@@ -22,9 +22,6 @@ execute if entity @s[team=Orange,nbt=!{Inventory:[{Slot:103b,id:"minecraft:diamo
 #Unready by leaving
 execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple,tag=ClickedReady] run function game:readyteams/unreadyleavepurple
 execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange,tag=ClickedReady] run function game:readyteams/unreadyleaveorange
-execute if entity @s[team=Purple,tag=LeaveGame,tag=ClickedReady] unless entity @a[team=Purple,tag=!LeaveGame,tag=ClickedReady] if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 run function game:leaveteams/unreadyleavepurple
-execute if entity @s[team=Orange,tag=LeaveGame,tag=ClickedReady] unless entity @a[team=Orange,tag=!LeaveGame,tag=ClickedReady] if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 run function game:leaveteams/unreadyleaveorange
-
 
 title @s[tag=LeaveGame] times 0 50 15
 execute at @s[tag=LeaveGame] run tp @s @s
