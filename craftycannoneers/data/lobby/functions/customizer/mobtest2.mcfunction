@@ -4,5 +4,5 @@ execute unless entity @e[type=creeper,tag=mobtest,limit=1] as @a[tag=ModiOwner,l
 execute unless entity @e[type=creeper,tag=mobtest,limit=1] run tellraw @a[tag=ModiOwner,limit=1] ["",{"text":"\n[","color":"dark_gray"},{"text":"!","color":"red","bold":"true"},{"text":"] ","color":"dark_gray"},{"text":"This server does not allow hostile mobs to spawn. Please enable this in server properties before changing settings!","color":"gray"}]
 
 kill @e[type=creeper,tag=mobtest,limit=1]
-scoreboard players set $mobtest CmdData 0
+tag @a remove mobtesting
 scoreboard players reset @a[tag=ModiOwner,limit=1] modisigns
