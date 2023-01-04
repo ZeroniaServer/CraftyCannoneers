@@ -50,7 +50,7 @@ execute store result score @s x2 run data get entity @s Pos[0] 10000
 execute store result score @s y2 run data get entity @s Pos[1] 10000
 execute store result score @s z2 run data get entity @s Pos[2] 10000
 
-execute if score @s x2 = @s dx2 if score @s y2 = @s dy2 if score @s z2 = @s dz2 run scoreboard players set $landed CmdData 1
+execute if score @s CmdData matches 3.. if score @s x2 = @s dx2 if score @s y2 = @s dy2 if score @s z2 = @s dz2 run scoreboard players set $landed CmdData 1
 
 execute unless score $landed CmdData matches 1 at @s[predicate=!game:inarena,predicate=!cannons:safezones/tutorial] run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s if block ~ ~ ~ #game:nonsolids run scoreboard players set $landed CmdData 1

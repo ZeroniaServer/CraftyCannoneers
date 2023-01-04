@@ -7,7 +7,6 @@ execute unless score $OrangeWPDelay CmdData matches 1.. if entity @s[tag=HitSpot
 execute unless score $OrangeWPDelay CmdData matches 1.. if entity @s[tag=!HitSpotted,tag=!WeakpointAnnounced] run tellraw @a[team=Orange] ["","\n",{"text":"Enemy Weakpoint destroyed!","italic":true,"color":"green"},"\n",{"selector":"@s","color":"dark_aqua"},{"text":" destroyed an ","color":"dark_aqua"},{"text":"unexposed","underlined":true,"color":"red"},{"text":" Weakpoint. No bonus damage dealt.","color":"dark_aqua"},"\n"]
 execute unless score $PurpleWPDelay CmdData matches 1.. run function game:shipweakpoint/spawnnewpurple
 tag @s add WeakpointAnnounced
-scoreboard players set $OrangeWPDelay CmdData 1
 tag @e[type=marker,tag=ImpactMarker,distance=0.1..1] add WeakpointAnnounced
 tag @s remove HitWeakpointOrange
 scoreboard players reset $tempuuid playerUUID

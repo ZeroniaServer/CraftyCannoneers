@@ -56,7 +56,7 @@ scoreboard players reset @a loverocks
 advancement revoke @a[advancements={tutorial:zzzunlockables/rocks={50=false}}] only tutorial:zzzunlockables/rocks
 
 #> Weakpoints
-function game:placeweakpoints
+function game:shipweakpoint/placeweakpoints
 
 kill @e[type=marker,tag=LockSpawn]
 summon marker 54 -36 4 {Tags:["LockSpawn"]}
