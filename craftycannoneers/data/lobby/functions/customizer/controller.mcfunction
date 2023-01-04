@@ -23,4 +23,4 @@ execute as @a[tag=ModiOwner,limit=1] run function lobby:customizer/modiowner
 
 #> Reset
 scoreboard players reset @a[tag=!ModiOwner,scores={moditimer=1..}] moditimer
-execute as @a unless score @s modisigns matches 0 run scoreboard players reset @s modisigns
+# execute as @a unless score @s modisigns matches 0 run scoreboard players reset @s modisigns
