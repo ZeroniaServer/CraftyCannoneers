@@ -1,13 +1,18 @@
 #> Claim timer
 execute unless score @s playerUUID matches 0 run scoreboard players add @s cannonclaim 1
 
+#> Set accuracy on claim
+execute if entity @s[scores={cannonclaim=1}] run function cannons:accuracy/randomaccuracy
+
 #> Unclaim if on fire
+execute if entity @s[tag=OnFire,scores={cannonclaim=1..120}] run function cannons:accuracy/randomaccuracy
 scoreboard players set @s[tag=OnFire,scores={cannonclaim=1..120}] cannonclaim 125
 
 #> Add nametag
 execute at @s[scores={cannonclaim=3}] run function cannons:setcannonname
 
 #> Unclaim time
+execute at @s[scores={cannonclaim=120..}] run function cannons:accuracy/randomaccuracy
 execute at @s[scores={cannonclaim=120..}] run kill @e[type=area_effect_cloud,tag=CannonNametag,limit=1,sort=nearest,distance=..3]
 execute at @s[scores={cannonclaim=120..}] run kill @e[type=area_effect_cloud,tag=GPDispText,limit=2,sort=nearest,distance=..3]
 scoreboard players set @s[scores={cannonclaim=120..}] playerUUID 0
