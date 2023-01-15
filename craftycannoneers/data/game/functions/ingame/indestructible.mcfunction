@@ -15,6 +15,8 @@ execute unless block 76 -29 -51 dark_oak_slab[type=top] run setblock 76 -29 -51 
 execute unless block 68 -29 -51 dark_oak_slab[type=top] run setblock 68 -29 -51 dark_oak_slab[type=top]
 execute unless block 68 -32 -50 dark_oak_slab[type=top] run setblock 68 -32 -50 dark_oak_slab[type=top]
 execute unless block 76 -32 -50 dark_oak_slab[type=top] run setblock 76 -32 -50 dark_oak_slab[type=top]
+execute unless block 85 -24 52 minecraft:spruce_slab[type=top] run setblock 85 -24 52 minecraft:spruce_slab[type=top]
+execute unless block 55 -24 -52 minecraft:spruce_slab[type=top] run setblock 55 -24 -52 spruce_slab[type=top]
 
 execute unless block 70 -28 51 end_stone_brick_wall[up=true] run setblock 70 -28 51 end_stone_brick_wall[up=true]
 fill 70 -27 50 70 -27 49 creeper_head
