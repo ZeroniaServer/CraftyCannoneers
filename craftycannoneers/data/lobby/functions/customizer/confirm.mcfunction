@@ -11,8 +11,8 @@ scoreboard players operation $ticks CmdData = $TimeLimit CmdData
 scoreboard players operation $ticks CmdData *= $1200 CmdData
 scoreboard players add $ticks CmdData 20
 
-title @a title {"text":"Settings Confirmed!","underlined":true,"color":"dark_green"}
-title @a subtitle {"text":"The game is ready to play!","color":"green"}
+title @a title {"translate":"customizer.confirmed","underlined":true,"color":"dark_green"}
+title @a subtitle {"translate":"customizer.ready","color":"green"}
 execute as @a at @s run playsound confirmsettings master @s ~ ~ ~ 1 1.5
 execute as @a run function lobby:customizer/gameinfo
 

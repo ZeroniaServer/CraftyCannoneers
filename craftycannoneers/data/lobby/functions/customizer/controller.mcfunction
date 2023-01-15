@@ -10,8 +10,8 @@ execute positioned -54.5 -25 8 run scoreboard players reset @a[distance=4..,tag=
 execute positioned -54.5 -25 8 run tag @a[distance=4..,tag=NearModboard] remove NearModboard
 
 #> Bossbar
-execute unless entity @a[tag=ModiOwner] run bossbar set lobbybar name {"text":"Please confirm game settings at the Settings Map!","color":"aqua"}
-execute if entity @a[tag=ModiOwner] run bossbar set lobbybar name ["",{"selector":"@a[tag=ModiOwner,limit=1]","bold":true},{"text":" is in control of game settings!","color":"aqua"}]
+execute unless entity @a[tag=ModiOwner] run bossbar set lobbybar name {"translate":"bossbar.settings_map","color":"aqua"}
+execute if entity @a[tag=ModiOwner] run bossbar set lobbybar name ["",{"selector":"@a[tag=ModiOwner,limit=1]","bold":true},{"translate":"bossbar.map_owner","color":"aqua"}]
 bossbar set lobbybar color blue
 
 #> Pick owner

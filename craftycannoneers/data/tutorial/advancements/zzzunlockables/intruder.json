@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Intruder Alert!",
+            "translate": "achievement.intruder",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Board the enemy team's ship.",
+            "translate": "achievement.intruder.description",
             "color": "white"
         },
         "icon": {

@@ -1,11 +1,11 @@
 {
     "display": {
         "title": {
-            "text": "Bonus Goals",
+            "translate": "achievement.bonus_goals",
             "color": "aqua"
         },
         "description": {
-            "text": "Optional objectives that you can just complete for the fun of it.",
+            "translate": "achievement.bonus_goals.description",
             "color": "white"
         },
         "icon": {

@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "You Sunk My Battleship!",
+            "translate": "achievement.battleship",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Fire the winning shot.",
+            "translate": "achievement.battleship.description",
             "color": "white"
         },
         "icon": {

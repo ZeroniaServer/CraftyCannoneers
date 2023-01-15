@@ -2,11 +2,11 @@
   "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
   "display": {
     "title": {
-      "text": "The Craftiest Cannoneer...",
+      "translate": "achievement.cannoneer",
       "color": "dark_aqua"
     },
     "description": {
-      "text": "Use all of the different Cannonball types ingame. (All time)",
+      "text": "achievement.cannoneer.description",
       "color": "white"
     },
     "icon": {

@@ -1,11 +1,11 @@
 {
     "display": {
         "title": {
-            "text": "Training Island",
+            "translate": "tutorial.training_island",
             "color": "green"
         },
         "description": {
-            "text": "Learn about the game on the Training Island!",
+            "translate": "achievement.training_island.description",
             "color": "white"
         },
         "icon": {

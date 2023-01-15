@@ -1,6 +1,6 @@
-execute unless score $PurpleWPDelay CmdData matches 1.. if entity @s[type=slime,tag=Spotted] run tellraw @a[team=Purple] ["","\n",{"text":"Enemy Weakpoint destroyed!","italic":true,"color":"green"},"\n",{"text":"Something destroyed an ","color":"dark_aqua"},{"text":"exposed","underlined":true,"color":"dark_green"},{"text":" Weakpoint.","color":"dark_aqua"},"\n"]
-execute unless score $PurpleWPDelay CmdData matches 1.. if entity @s[type=slime,tag=Spotted] run tellraw @a[team=Orange] ["","\n",{"text":"Something destroyed of your ship's Weakpoints!","color":"red"},"\n"]
-execute unless score $PurpleWPDelay CmdData matches 1.. if entity @s[type=slime,tag=!Spotted] run tellraw @a[team=Purple] ["","\n",{"text":"Enemy Weakpoint destroyed!","italic":true,"color":"green"},"\n",{"text":"Something destroyed an ","color":"dark_aqua"},{"text":"unexposed","underlined":true,"color":"red"},{"text":" Weakpoint. No bonus damage dealt.","color":"dark_aqua"},"\n"]
+execute unless score $PurpleWPDelay CmdData matches 1.. if entity @s[type=slime,tag=Spotted] run tellraw @a[team=Purple] ["","\n",{"translate":"weakpoint.destroyed.enemy","italic":true,"color":"green"},"\n",{"translate":"weakpoint.destroyed.something","color":"dark_aqua"},{"translate":"weakpoint.destroyed.an","color":"dark_aqua"},{"translate":"weakpoint.destroyed.exposed","underlined":true,"color":"dark_green"},{"translate":"weakpoint.destroyed.weakpoint","color":"dark_aqua"},"\n"]
+execute unless score $PurpleWPDelay CmdData matches 1.. if entity @s[type=slime,tag=Spotted] run tellraw @a[team=Orange] ["","\n",{"translate":"weakpoint.destroyed.something_own","color":"red"},"\n"]
+execute unless score $PurpleWPDelay CmdData matches 1.. if entity @s[type=slime,tag=!Spotted] run tellraw @a[team=Purple] ["","\n",{"translate":"weakpoint.destroyed.enemy","italic":true,"color":"green"},"\n",{"translate":"weakpoint.destroyed.something","color":"dark_aqua"},{"translate":"weakpoint.destroyed.an","color":"dark_aqua"},{"translate":"weakpoint.destroyed.unexposed","underlined":true,"color":"red"},{"translate":"weakpoint.destroyed.weakpoint","color":"dark_aqua"},{"translate":"weakpoint.destroyed.no_bonus","color":"dark_aqua"},"\n"]
 execute unless score $PurpleWPDelay CmdData matches 1.. if entity @s[type=slime,tag=Spotted] run scoreboard players add $DamageOrange CmdData 85
 execute unless score $PurpleWPDelay CmdData matches 1.. if entity @s[type=slime,tag=Spotted] run scoreboard players add $CritOrange CmdData 87
 scoreboard players set $PurpleWPDelay CmdData 1
@@ -25,7 +25,7 @@ execute as @e[type=marker,tag=SelectedWeakP,tag=Orange] at @s run summon marker 
 
 team join NoName @e[type=slime,tag=Weakpoint]
 
-execute if score $PurpleWP CmdData matches 6.. run tellraw @a[team=Purple] ["",{"text":"All enemy Weakpoints have been destroyed!","color":"aqua"},"\n"]
-execute if score $PurpleWP CmdData matches 6.. run tellraw @a[team=Orange] ["",{"text":"All of your Weakpoints have been destroyed!","color":"red"},"\n"]
+execute if score $PurpleWP CmdData matches 6.. run tellraw @a[team=Purple] ["",{"translate":"weakpoint.destroyed.all_enemy","color":"aqua"},"\n"]
+execute if score $PurpleWP CmdData matches 6.. run tellraw @a[team=Orange] ["",{"translate":"weakpoint.destroyed.all_own","color":"red"},"\n"]
 
 kill @e[type=marker,tag=SelectedWeakP]

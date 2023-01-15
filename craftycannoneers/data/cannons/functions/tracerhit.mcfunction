@@ -10,7 +10,7 @@ particle block_marker lime_concrete ~ ~ ~ 0 0.5 0.5 0 20 force @a[predicate=game
 particle block_marker green_concrete ~ ~ ~ 0.5 0 0 0 5 force @a[predicate=game:tutorialbounds,tag=CurrentTracer2]
 
 tag @a[tag=CurrentTracer2,scores={invCount=36..}] add NeedsTracer
-loot give @a[tag=CurrentTracer2,tag=!NeedsTracer] loot weapons:tracer
+loot give @a[tag=CurrentTracer2,tag=!NeedsTracer] loot cannons:tracer
 execute as @a[tag=CurrentTracer2,tag=!NeedsTracer] at @s run playsound entity.item.pickup player @s ~ ~ ~ 0.25 2
 
 tag @a remove CurrentTracer2

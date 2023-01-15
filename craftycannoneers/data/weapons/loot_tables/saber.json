@@ -11,7 +11,7 @@
       "functions": [
         {
           "function": "minecraft:set_nbt",
-          "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Saber\",\"italic\":false,\"color\":\"dark_aqua\"}]'},HideFlags:5}"
+          "tag": "{Unbreakable:1b,display:{Name:'[{\"translate\":\"item.saber\",\"italic\":false,\"color\":\"dark_aqua\"}]'},HideFlags:5}"
         },
         {
           "function": "minecraft:set_nbt",

@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Easter Egg [1/5]",
+            "translate": "achievement.parrot",
             "color": "green"
         },
         "description": {
-            "text": "Pet the parrot 50 times in a row...",
+            "translate": "achievement.parrot.description",
             "color": "white"
         },
         "icon": {

@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Roll the Credits!",
+            "translate": "achievement.credits",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Interact with the Lobby's Credit armor stands.",
+            "translate": "achievement.credits.description",
             "color": "white"
         },
         "icon": {

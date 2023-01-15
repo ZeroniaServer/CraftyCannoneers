@@ -1,12 +1,15 @@
 [
-  {
-    "function": "minecraft:set_enchantments",
-    "enchantments": {
-      "minecraft:knockback": 1
+    {
+        "function": "minecraft:set_enchantments",
+        "enchantments": {
+            "minecraft:knockback": 1
+        }
+    },
+    {
+        "function": "minecraft:set_name",
+        "name": {
+            "translate": "item.boarding_axe",
+            "color": "green"
+        }
     }
-  },
-  {
-    "function": "minecraft:set_nbt",
-    "tag": "{HideFlags:127,display:{Name:'[{\"text\":\"Boarding Axe\",\"italic\":false,\"color\":\"green\"}]',Lore:['[{\"text\":\"Gets Knockback when boarding\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"the Enemy Ship!\",\"italic\":false,\"color\":\"white\"}]']}}"
-  }
 ]

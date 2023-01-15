@@ -15,15 +15,11 @@ scoreboard players set $KillThreshold BalanceScore 0
 scoreboard players set $PVPbal BalanceScore 0
 
 tag @a remove ClickedReady
-title @a title {"text":"Game Started!","color":"dark_aqua"}
-title @a[team=!Lobby,team=!Spectator,team=!Developer] subtitle {"text":"Destroy the enemy ship!","color":"aqua"}
+title @a title {"translate":"game.started","color":"dark_aqua"}
+title @a[team=!Lobby,team=!Spectator,team=!Developer] subtitle {"translate":"game.start_splash","color":"aqua"}
 title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"aqua"}
 scoreboard players set $Tip CmdData 0
 function tutorial:newset
-
-# tellraw @a[team=Purple] ["",{"text":"You can take off your ","color":"aqua","italic":true},{"text":"Pirate Hat","bold":true,"color":"dark_purple"},{"text":" to leave the game!","color":"aqua","italic":true}]
-# tellraw @a[team=Orange] ["",{"text":"You can take off your ","color":"aqua","italic":true},{"text":"Pirate Hat","bold":true,"color":"gold"},{"text":" to leave the game!","color":"aqua","italic":true}]
-
 
 execute if score $ShipHP CmdData matches 42069.. run function game:autohp
 function lobby:customizer/lockboxdamage

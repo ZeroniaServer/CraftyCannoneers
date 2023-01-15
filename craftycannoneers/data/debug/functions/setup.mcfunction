@@ -138,7 +138,7 @@ scoreboard objectives add dz2 dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
-bossbar set lobbybar name {"text":"Please confirm game settings at the Settings Map!","color":"aqua"}
+bossbar set lobbybar name {"translate":"bossbar.confirm","color":"aqua"}
 bossbar set lobbybar max 10
 bossbar set lobbybar color blue
 
@@ -178,9 +178,9 @@ scoreboard players set $60 CmdData 60
 
 #> Signs
 setblock -49 -28 -3 air
-setblock -49 -28 -3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}',Text4:'{"text":""}'}
+setblock -49 -28 -3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","translate":"game.click_here"}',Text3:'{"extra":[{"color":"#55FFFF","translate":"game.leave"},{"color":"#00CCCC","translate":"game.your_team"}],"text":""}',Text4:'{"text":""}'}
 setblock -49 -28 3 air
-setblock -49 -28 3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}',Text4:'{"text":""}'}
+setblock -49 -28 3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","translate":"game.click_here"}',Text3:'{"extra":[{"color":"#55FFFF","translate":"game.leave"},{"color":"#00CCCC","translate":"game.your_team"}],"text":""}',Text4:'{"text":""}'}
 setblock -74 -24 1 air
 setblock -74 -24 1 oak_wall_sign
 
@@ -237,8 +237,8 @@ scoreboard players set $barrier CmdData -1
 
 #> Messages
 data modify storage craftycannoneers:messages ResourcePack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":"true"},{"text":"] ","color":"dark_gray"},{"text":"We strongly recommend you to ","color":"gray"},{"text":"use the resource pack","bold":true,"color":"red"},{"text":". ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=1wI7hVR29bKCXJLBafZqpY9xSVL-Ahoc0"}}]'
-data modify storage craftycannoneers:messages SettingsMap set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":"true"},{"text":"] ","color":"dark_gray"},{"text":"Please confirm settings at the ","color":"gray"},{"text":"Settings Map","color":"aqua","bold":true},{"text":"!","color":"gray"}]'
-data modify storage craftycannoneers:messages ReadyToPlay set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":"true"},{"text":"] ","color":"dark_gray"},{"text":"The game is ","color":"gray"},{"text":"ready to play","color":"green","bold":true},{"text":"!","color":"gray"}]'
+data modify storage craftycannoneers:messages SettingsMap set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":"true"},{"text":"] ","color":"dark_gray"},{"translate":"chat.confirm","color":"gray"},{"translate":"chat.settings_map","color":"aqua","bold":true},{"text":"!","color":"gray"}]'
+data modify storage craftycannoneers:messages ReadyToPlay set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":"true"},{"text":"] ","color":"dark_gray"},{"translate":"chat.the_game","color":"gray"},{"translate":"chat.ready_to_play","color":"green","bold":true},{"text":"!","color":"gray"}]'
 
 #> World Updates
 function version:check

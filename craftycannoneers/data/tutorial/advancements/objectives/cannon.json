@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Cannon Dock",
+            "translate": "tutorial.cannon_dock",
             "color": "green"
         },
         "description": {
-            "text": "Talk to the Pirate Teacher at the Cannon Dock.",
+            "translate": "achievement.cannon_dock.description",
             "color": "white"
         },
         "icon": {

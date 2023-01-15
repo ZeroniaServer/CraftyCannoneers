@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "The Better Pirate",
+            "text": "achievement.better_pirate",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Kill an enemy player.",
+            "text": "achievement.better_pirate.description",
             "color": "white"
         },
         "icon": {

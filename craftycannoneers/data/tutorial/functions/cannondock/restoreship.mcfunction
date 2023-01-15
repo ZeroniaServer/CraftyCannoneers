@@ -7,4 +7,4 @@ place template minecraft:training_ship2 -400 -37 -35
 
 function tutorial:cannondock/restoreweakpoints
 
-title @a[tag=OnDock] actionbar {"text":"Training Ship repaired!","color":"green"}
+title @a[tag=OnDock] actionbar {"translate":"tutorial.ship_timer.repaired","color":"green"}

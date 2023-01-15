@@ -1,11 +1,11 @@
 {
     "display": {
         "title": {
-            "text": "Easter Egg Hunter",
+            "translate": "achievement.easter_egg",
             "color": "aqua"
         },
         "description": {
-            "text": "You found all the Easter Eggs!",
+            "translate": "achievement.easter_egg.description",
             "color": "white"
         },
         "icon": {

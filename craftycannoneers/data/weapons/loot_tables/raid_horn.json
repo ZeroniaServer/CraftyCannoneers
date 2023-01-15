@@ -11,7 +11,7 @@
       "functions": [
         {
           "function": "minecraft:set_nbt",
-          "tag": "{instrument:\"minecraft:ponder_goat_horn\",Unbreakable:1b,Horn:1,display:{Name:'[{\"text\":\"Raid Horn\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Use this horn to temporarily\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"give your entire crew a buff.\",\"italic\":false,\"color\":\"white\"}]']},HideFlags:127}"
+          "tag": "{instrument:\"minecraft:ponder_goat_horn\",Unbreakable:1b,Horn:1,display:{Name:'[{\"translate\":\"item.raid_horn\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.raid_horn.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.raid_horn.lore.2\",\"italic\":false,\"color\":\"white\"}]']},HideFlags:127}"
         }
       ]
     }

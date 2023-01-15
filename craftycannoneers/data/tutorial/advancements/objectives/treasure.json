@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Treasure Pit",
+            "translate": "tutorial.treasure_pit",
             "color": "green"
         },
         "description": {
-            "text": "Talk to the Pirate Teacher at the Treasure Pit.",
+            "translate": "achievement.treasure_pit.description",
             "color": "white"
         },
         "icon": {

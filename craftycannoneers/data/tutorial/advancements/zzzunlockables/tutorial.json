@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Interesting...",
+            "translate": "achievement.tutorial",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Visit the Training Island.",
+            "translate": "achievement.tutorial.description",
             "color": "white"
         },
         "icon": {

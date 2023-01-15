@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Special Delivery!",
+            "translate": "achievement.special_delivery",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Use a Player Cannonball.",
+            "translate": "achievement.special_delivery.description",
             "color": "white"
         },
         "icon": {

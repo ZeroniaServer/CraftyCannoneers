@@ -11,7 +11,7 @@
       "functions": [
         {
           "function": "minecraft:set_nbt",
-          "tag": "{CustomModelData:1,Blocking:0,Damage:316,display:{Name:'[{\"text\":\"Shield\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+          "tag": "{CustomModelData:1,Blocking:0,Damage:316,display:{Name:'[{\"translate\":\"item.minecraft.shield\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
         },
         {
           "function": "minecraft:set_nbt",
