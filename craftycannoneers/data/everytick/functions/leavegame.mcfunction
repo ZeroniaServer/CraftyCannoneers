@@ -22,6 +22,9 @@ execute if entity @s[team=Orange,nbt=!{Inventory:[{Slot:103b,id:"minecraft:diamo
 #Unready by leaving
 execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple,tag=ClickedReady] run function game:readyteams/unreadyleavepurple
 execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange,tag=ClickedReady] run function game:readyteams/unreadyleaveorange
+execute if entity @s[team=Purple,tag=LeaveGame,tag=ClickedReady] unless entity @a[team=Purple,tag=!LeaveGame,tag=ClickedReady] if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 run function game:leaveteams/unreadyleavepurple
+execute if entity @s[team=Orange,tag=LeaveGame,tag=ClickedReady] unless entity @a[team=Orange,tag=!LeaveGame,tag=ClickedReady] if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 run function game:leaveteams/unreadyleaveorange
+
 
 title @s[tag=LeaveGame] times 0 50 15
 execute at @s[tag=LeaveGame] run tp @s @s
@@ -56,6 +59,8 @@ tag @s[tag=LeaveGame] remove NeedsCutlass
 tag @s[tag=LeaveGame] remove NeedsCrossbow
 tag @s[tag=LeaveGame] remove NeedsSpyglass
 tag @s[tag=LeaveGame] remove NeedsTracer
+tag @s[tag=LeaveGame] remove mobtesting
+tag @s[tag=LeaveGame] remove ModiOwner
 execute if entity @s[tag=LeaveGame] run function game:boat/removetags
 scoreboard players reset @s[tag=LeaveGame] loverocks
 advancement revoke @s[tag=LeaveGame,advancements={tutorial:zzzunlockables/rocks={50=false}}] only tutorial:zzzunlockables/rocks
