@@ -183,6 +183,8 @@ setblock -49 -28 3 air
 setblock -49 -28 3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","translate":"game.click_here"}',Text3:'{"extra":[{"color":"#55FFFF","translate":"game.leave"},{"color":"#00CCCC","translate":"game.your_team"}],"text":""}',Text4:'{"text":""}'}
 setblock -74 -24 1 air
 setblock -74 -24 1 oak_wall_sign
+setblock -260 -24 -59 air
+setblock -260 -24 -59 jungle_wall_sign[facing=south,waterlogged=false]{Color:"black",GlowingText:1b,Text1:'{"text":""}',Text2:'{"translate":"tutorial.combat_area.weapons_sign.1"}',Text3:'{"translate":"tutorial.combat_area.weapons_sign.2"}',Text4:'{"text":""}'}
 
 #> Other lobby blocks
 fill -40 -23 -18 -38 -22 -18 air
