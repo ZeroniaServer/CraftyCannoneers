@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{display:{Name:'[{\"translate\":\"item.minecraft.arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+        }
+      ]
+    }
+  ]
+}

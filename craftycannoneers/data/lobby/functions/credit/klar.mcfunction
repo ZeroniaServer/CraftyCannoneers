@@ -1,4 +1,4 @@
-tellraw @s ["\n","\n","\n","\n",{"text":"==============","color":"gray"},"\n",{"text":"Klariaon","color":"gold"},"\n",{"text":"Builder","underlined":true,"color":"yellow"},"\n",{"text":"==============","color":"gray"},"\n"]
+tellraw @s ["\n","\n","\n","\n",{"text":"==============","color":"gray"},"\n",{"text":"Klariaon","color":"gold"},"\n",{"translate":"credits.builder","underlined":true,"color":"yellow"},"\n",{"text":"==============","color":"gray"},"\n"]
 playsound clickcredits master @s ~ ~ ~ 1 1.4
 advancement revoke @s only lobby:klar
 advancement grant @s only tutorial:zzzunlockables/credits

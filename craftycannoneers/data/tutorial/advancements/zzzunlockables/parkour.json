@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Parkour Pro",
+            "translate": "achievement.parkour",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Complete the Lobby Parkour course.",
+            "translate": "achievement.parkour.description",
             "color": "white"
         },
         "icon": {

@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_nugget"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{display:{Name:'[{\"translate\":\"item.gold\",\"italic\":false,\"color\":\"gold\"}]',Lore:['[{\"translate\":\"item.gold.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.gold.lore.2\",\"italic\":false,\"color\":\"white\"}]']}}"
+        }
+      ]
+    }
+  ]
+}

@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Combat Area",
+            "translate": "tutorial.combat_area",
             "color": "green"
         },
         "description": {
-            "text": "Talk to the Pirate Teacher at the Combat Area.",
+            "translate": "achievement.combat_area.description",
             "color": "white"
         },
         "icon": {

@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Easter Egg [4/5]",
+            "translate": "achievement.goldy",
             "color": "green"
         },
         "description": {
-            "text": "Somewhere, Goldy smiles on you...",
+            "translate": "achievement.goldy.description",
             "color": "white"
         },
         "icon": {

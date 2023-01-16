@@ -26,7 +26,7 @@ kill @e[type=experience_orb]
 execute as @e[type=arrow] at @s run function everytick:arrowkill
 
 #> Reset Parkour high score if necessary - TODO remove?
-execute if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches ..0 run tellraw @a [{"text":"An error has occurred, so the Parkour leaderboard has been reset. If you see this message, ","color":"red"},{"text":"please report!","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"text":"Report on the Zeronia Discord Server","color":"white"}]}}]
+execute if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches ..0 run tellraw @a [{"translate":"parkour.error","color":"red"},{"translate":"parkour.error.report","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"translate":"parkour.error.discord","color":"white"}]}}]
 execute if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches ..0 run function lobby:parkour/resethighscore
 
 #> Rocks
@@ -62,10 +62,10 @@ scoreboard players reset @a[scores={eyeclick=1..}] eyeclick
 execute as @e[type=armor_stand,tag=CannonballDeco] run function lobby:cbdisplays/main
 
 #> Ready Up + Countdown
-execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange] run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","text":"Orange: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
+execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange] run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","translate":"game.orange"},{"color":"gold","text":": "},{"color":"red","text":"❌","bold":true}],"text":""}'}
 execute if score $gamestate CmdData matches 0..1 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange] run scoreboard players set $OrangeReady CmdData 0
 
-execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple] run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","text":"Purple: "},{"color":"red","text":"❌","bold":true}],"text":""}'}
+execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple] run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","translate":"game.purple"},{"color":"dark_purple","text":": "},{"color":"red","text":"❌","bold":true}],"text":""}'}
 execute if score $gamestate CmdData matches 0..1 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple] run scoreboard players set $PurpleReady CmdData 0
 
 execute if score $gamestate CmdData matches 2.. run scoreboard players set $OrangeReady CmdData 0
@@ -82,4 +82,7 @@ execute store success score $toggle CmdData if score $toggle CmdData matches 0
 execute if score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a[team=Lobby]
 execute unless score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a
 execute if score $gamestate CmdData matches 3 run bossbar set lobbybar color red
-execute if score $gamestate CmdData matches 3 run bossbar set lobbybar name {"text":"A game is currently ending!","bold":true,"color":"red"}
+execute if score $gamestate CmdData matches 3 run bossbar set lobbybar name {"translate":"game.ending","bold":true,"color":"red"}
+
+#> Resolve signs
+function everytick:resolvesigns

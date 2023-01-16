@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Watchtower",
+            "translate": "tutorial.watchtower",
             "color": "green"
         },
         "description": {
-            "text": "Talk to the Pirate Teacher at the Watchtower.",
+            "translate": "achievement.watchtower.description",
             "color": "white"
         },
         "icon": {

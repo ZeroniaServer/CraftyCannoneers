@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "This Is A Robbery!",
+            "translate": "achievement.robbery",
             "color": "dark_aqua"
         },
         "description": {
-            "text": "Unlock the enemy team's Team Chest using a Skeleton Key.",
+            "translate": "achievement.robbery.description",
             "color": "white"
         },
         "icon": {

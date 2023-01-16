@@ -11,7 +11,7 @@
       "functions": [
         {
           "function": "minecraft:set_nbt",
-          "tag": "{CustomModelData:2,Bomb:1b,display:{Name:'[{\"text\":\"Blast Bomb\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Throwable weapon which deals\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"a massive amount of knockback.\",\"italic\":false,\"color\":\"white\"}]']}}"
+          "tag": "{CustomModelData:2,Bomb:1b,display:{Name:'[{\"translate\":\"item.blast_bomb\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.blast_bomb.lore.1,\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.blast_bomb.lore.2\",\"italic\":false,\"color\":\"white\"}]']}}"
         }
       ]
     }

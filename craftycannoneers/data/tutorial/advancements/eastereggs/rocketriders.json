@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Easter Egg [5/5]",
+            "translate": "achievement.rocket_riders",
             "color": "green"
         },
         "description": {
-            "text": "Just 3 Rocket Riders, flying into the atmosphere... Sort of...",
+            "translate": "achievement.rocket_riders.description",
             "color": "white"
         },
         "icon": {

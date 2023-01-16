@@ -4,13 +4,9 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:arrow",
+          "type": "minecraft:loot_table",
+          "name": "weapons:arrow",
           "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'[{\"text\":\"Arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
-            },
             {
               "function": "minecraft:set_count",
               "count": {

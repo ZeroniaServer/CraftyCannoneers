@@ -2,11 +2,11 @@
     "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
     "display": {
         "title": {
-            "text": "Easter Egg [3/5]",
+            "translate": "achievement.planetary_pirates",
             "color": "green"
         },
         "description": {
-            "text": "A space helmet and a weapon that seems to be inspired by Meteor Miner technology. Looks like these pirates want to go to space...",
+            "translate": "achievement.planetary_pirates.description",
             "color": "white"
         },
         "icon": {

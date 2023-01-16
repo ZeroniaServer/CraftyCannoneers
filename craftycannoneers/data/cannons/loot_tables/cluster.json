@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_hoe"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{HideFlags:127,CustomModelData:29,Cannonball:3b,Unbreakable:1b,display:{Name:'[{\"translate\":\"cannonball.cluster\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"cannonball.cluster.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"cannonball.cluster.lore.2\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"translate\":\"cannonball.cluster.lore.3\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"cannonball.cluster.lore.4\",\"italic\":false,\"color\":\"aqua\"}]']}}"
+        }
+      ]
+    }
+  ]
+}

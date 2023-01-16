@@ -1,4 +1,4 @@
-tellraw @s ["\n",{"text":"==============","color":"gray"},"\n",{"text":"Carl510","color":"dark_aqua"},"\n",{"text":"Builder/Logo Designer","underlined":true,"color":"yellow"},"\n","\n",{"text":"Click here to visit socials:","italic":true,"color":"dark_gray"},"\n",{"text":"> Twitter","bold":true,"color":"dark_aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/Carloski557"}},"\n",{"text":"==============","color":"gray"},"\n"]
+tellraw @s ["\n",{"text":"==============","color":"gray"},"\n",{"text":"Carl510","color":"dark_aqua"},"\n",{"translate":"credits.builder","underlined":true,"color":"yellow"},{"text":"/","underlined":true,"color":"yellow"},{"translate":"credits.logo_designer","underlined":true,"color":"yellow"},"\n","\n",{"translate":"credits.socials","italic":true,"color":"dark_gray"},"\n",{"text":"> Twitter","bold":true,"color":"dark_aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/Carloski557"}},"\n",{"text":"==============","color":"gray"},"\n"]
 playsound clickcredits master @s ~ ~ ~ 1 1.4
 advancement revoke @s only lobby:carl
 advancement grant @s only tutorial:zzzunlockables/credits

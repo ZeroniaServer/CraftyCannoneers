@@ -1,6 +1,6 @@
 #> Hot Cannonball interaction
 kill @e[type=armor_stand,tag=GasAS,distance=..1,limit=1,sort=nearest]
-summon marker ~ ~ ~ {Tags:["ImpactMarker","GasPower"],CustomName:'{"text":"a Gas Explosion"}'}
+summon marker ~ ~ ~ {Tags:["ImpactMarker","GasPower"],CustomName:'{"translate":"gas_explosion"}'}
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=GasPower,limit=1,sort=nearest] playerUUID = @s playerUUID
 execute as @e[type=marker,tag=ImpactMarker,tag=GasPower] at @s unless entity @s[scores={CmdData=1..}] run function cannons:namecannonball
 execute as @e[type=marker,tag=ImpactMarker,tag=GasPower] at @s unless entity @s[scores={CmdData=1..}] run function cannons:spawncreeper

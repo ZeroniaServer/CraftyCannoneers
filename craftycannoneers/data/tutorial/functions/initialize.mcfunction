@@ -80,16 +80,16 @@ kill @e[type=marker,tag=TutorialWarp]
 kill @e[type=area_effect_cloud,tag=TutorialWarp]
 summon marker -42 -22 -21 {Tags:["TutorialWarp","ToIsland"]}
 summon marker -264 -21 -21 {Tags:["TutorialWarp","FromIsland"]}
-summon area_effect_cloud -42 -21 -21 {Tags:["TutorialWarp","ToIsland"],CustomName:'{"text":"Warp to Training Island","color":"aqua","bold":"true"}',CustomNameVisible:1b,Duration:2000000000}
-summon area_effect_cloud -264 -20 -21 {Tags:["TutorialWarp","FromIsland"],CustomName:'{"text":"Back to Lobby","color":"aqua","bold":"true"}',CustomNameVisible:1b,Duration:2000000000}
+summon area_effect_cloud -42 -21 -21 {Tags:["TutorialWarp","ToIsland"],CustomName:'{"translate":"tutorial.warp.to_island","color":"aqua","bold":true}',CustomNameVisible:1b,Duration:2000000000}
+summon area_effect_cloud -264 -20 -21 {Tags:["TutorialWarp","FromIsland"],CustomName:'{"translate":"tutorial.warp.from_island","color":"aqua","bold":true}',CustomNameVisible:1b,Duration:2000000000}
 
 function tutorial:restoreship
 
 #> Teachers
-summon wandering_trader -283 -24 -42 {Rotation:[-90.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","CannonTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:generic.movement_speed,Base:0}],PersistenceRequired:1b}
-summon wandering_trader -242 -26 -22 {Rotation:[90.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","ChestTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:generic.movement_speed,Base:0}],PersistenceRequired:1b}
-summon wandering_trader -260 -27 -56 {Rotation:[0.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","CombatTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:generic.movement_speed,Base:0}],PersistenceRequired:1b}
-summon wandering_trader -279 -11 -15 {Rotation:[-180.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","WeakpointTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:generic.movement_speed,Base:0}],PersistenceRequired:1b}
+summon wandering_trader -283 -24 -42 {Rotation:[-90.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","CannonTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:"generic.movement_speed",Base:0}],PersistenceRequired:1b}
+summon wandering_trader -242 -26 -22 {Rotation:[90.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","ChestTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:"generic.movement_speed",Base:0}],PersistenceRequired:1b}
+summon wandering_trader -260 -27 -56 {Rotation:[0.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","CombatTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:"generic.movement_speed",Base:0}],PersistenceRequired:1b}
+summon wandering_trader -279 -11 -15 {Rotation:[-180.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","WeakpointTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:"generic.movement_speed",Base:0}],PersistenceRequired:1b}
 
 tp @e[type=#game:chest,tag=fakechest] 0 -1000 0
 kill @e[type=#game:chest,tag=fakechest]

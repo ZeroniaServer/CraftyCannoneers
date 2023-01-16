@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_hoe"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{HideFlags:127,CustomModelData:16,Unbreakable:1b,Cannonball:1b,display:{Name:'[{\"translate\":\"cannonball.normal\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"cannonball.normal.lore\",\"italic\":false,\"color\":\"white\"}]']}}"
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 function tutorial:enterarea
 
-title @s title {"text":"Combat Area","color":"aqua"}
-title @s subtitle {"text":"(Try out some weapons)","color":"yellow"}
+title @s title {"translate":"tutorial.combat_area","color":"aqua"}
+title @s subtitle {"translate":"tutorial.combat_area.description","color":"yellow"}
 
 effect clear @s weakness
 

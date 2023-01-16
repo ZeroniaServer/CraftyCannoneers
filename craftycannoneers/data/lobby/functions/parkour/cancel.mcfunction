@@ -1,7 +1,7 @@
 tag @s remove inParkour
 execute positioned -71 -21 -1 if entity @s[distance=10..] at @s run tp @s @s
 execute positioned -71 -21 -1 if entity @s[distance=10..] at @s run tp @s -71 -21 -1 90 0
-execute positioned -71 -21 -1 unless entity @s[distance=10..] run tellraw @s {"text":"Parkour Run Canceled.","color":"red","bold":true}
+execute positioned -71 -21 -1 unless entity @s[distance=10..] run tellraw @s {"translate":"parkour.canceled","color":"red","bold":true}
 execute positioned -71 -21 -1 unless entity @s[distance=10..] run function game:clearinventory
 execute positioned -71 -21 -1 unless entity @s[distance=10..] run function lobby:items
 execute at @s run playsound parkourcancel master @s ~ ~ ~ 1 1.2

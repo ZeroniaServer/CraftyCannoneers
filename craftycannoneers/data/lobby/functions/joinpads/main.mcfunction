@@ -1,12 +1,12 @@
 #> Bossbar
 execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar value 0
-execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar name ["",{"text":"Awaiting ","color":"aqua"},{"text":"Purple","bold":true,"color":"dark_purple"},{"text":" and ","color":"aqua"},{"text":"Orange","bold":true,"color":"gold"},{"text":" players...","color":"aqua"}]
+execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar name ["",{"translate":"game.awaiting","color":"aqua"},{"translate":"game.purple","bold":true,"color":"dark_purple"},{"translate":"game.and","color":"aqua"},{"translate":"game.orange","bold":true,"color":"gold"},{"translate":"game.players","color":"aqua"}]
 execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar value 5
-execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar name ["",{"text":"Awaiting ","color":"aqua"},{"text":"Orange","bold":true,"color":"gold"},{"text":" players...","color":"aqua"}]
+execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] unless entity @a[team=Orange] run bossbar set lobbybar name ["",{"translate":"game.awaiting","color":"aqua"},{"translate":"game.orange","bold":true,"color":"gold"},{"translate":"game.players","color":"aqua"}]
 execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar value 5
-execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar name ["",{"text":"Awaiting ","color":"aqua"},{"text":"Purple","bold":true,"color":"dark_purple"},{"text":" players...","color":"aqua"}]
+execute if score $gamestate CmdData matches 0 unless entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar name ["",{"translate":"game.awaiting","color":"aqua"},{"translate":"game.purple","bold":true,"color":"dark_purple"},{"translate":"game.players","color":"aqua"}]
 execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar value 10
-execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar name {"text":"Waiting for teams to ready up...","color":"aqua"}
+execute if score $gamestate CmdData matches 0 if entity @a[team=Purple] if entity @a[team=Orange] run bossbar set lobbybar name {"translate":"game.waiting_ready","color":"aqua"}
 execute unless score $gamestate CmdData matches 2.. unless score $Countdown CmdData matches 1.. run bossbar set lobbybar color blue
 
 #> Team balancing

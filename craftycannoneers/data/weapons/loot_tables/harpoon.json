@@ -11,11 +11,11 @@
       "functions": [
         {
           "function": "minecraft:set_nbt",
-          "tag": "{Unbreakable:1b,Harpoon:1,display:{Name:'[{\"text\":\"Harpoon\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"You can use this weapon to\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"dash forward once every\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"time you enter the water.\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]']},HideFlags:5}"
+          "tag": "{Unbreakable:1b,Harpoon:1,display:{Name:'[{\"translate\":\"item.minecraft.trident\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.harpoon.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.harpoon.lore.2\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.harpoon.lore.3\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]']},HideFlags:5}"
         },
         {
           "function": "minecraft:set_nbt",
-          "tag": "{NoDrop:1b}",
+          "tag": "{NoDrop:1b,Damage:250}",
           "conditions": [
             {
               "condition": "minecraft:entity_properties",

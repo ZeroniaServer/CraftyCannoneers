@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{NoDrop:1b,display:{Name:'[{\"text\":\"Rock.\",\"italic\":false,\"bold\":true,\"color\":\"red\"}]',Lore:['[{\"text\":\"Throw at player to insta-kill!\",\"italic\":false,\"color\":\"dark_red\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"Okay, not really... It just\",\"italic\":false,\"color\":\"gray\"}]','[{\"text\":\"gives you something to do\",\"italic\":false,\"color\":\"gray\"}]','[{\"text\":\"while you wait for the game\",\"italic\":false,\"color\":\"gray\"}]','[{\"text\":\"to start!\",\"italic\":false,\"color\":\"gray\"}]']}}"
+              "tag": "{NoDrop:1b,display:{Name:'[{\"translate\":\"item.rock\",\"italic\":false,\"bold\":true,\"color\":\"red\"}]',Lore:['[{\"translate\":\"item.rock.lore.1\",\"italic\":false,\"color\":\"dark_red\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"translate\":\"item.rock.lore.2\",\"italic\":false,\"color\":\"gray\"}]','[{\"translate\":\"item.rock.lore.3\",\"italic\":false,\"color\":\"gray\"}]','[{\"translate\":\"item.rock.lore.4\",\"italic\":false,\"color\":\"gray\"}]','[{\"translate\":\"item.rock.lore.5\",\"italic\":false,\"color\":\"gray\"}]']}}"
             }
           ]
         }

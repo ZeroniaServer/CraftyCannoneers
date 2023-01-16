@@ -2,11 +2,11 @@
   "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
   "display": {
     "title": {
-      "text": "I LOVE ROCKS!!1!1",
+      "translate": "achievement.love_rocks",
       "color": "dark_aqua"
     },
     "description": {
-      "text": "While waiting for the game to start, throw 50 Rocks in one sitting.",
+      "translate": "achievement.love_rocks.description",
       "color": "white"
     },
     "icon": {
