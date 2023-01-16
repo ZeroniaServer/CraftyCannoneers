@@ -58,6 +58,7 @@ tag @s[tag=LeaveGame] remove NeedsSpyglass
 tag @s[tag=LeaveGame] remove NeedsTracer
 tag @s[tag=LeaveGame] remove mobtesting
 tag @s[tag=LeaveGame] remove ModiOwner
+execute if entity @s[tag=LeaveGame] run function lobby:easteregg/rocket/reset
 execute if entity @s[tag=LeaveGame] run function game:boat/removetags
 scoreboard players reset @s[tag=LeaveGame] loverocks
 advancement revoke @s[tag=LeaveGame,advancements={tutorial:zzzunlockables/rocks={50=false}}] only tutorial:zzzunlockables/rocks
