@@ -138,7 +138,7 @@ scoreboard objectives add dz2 dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
-bossbar set lobbybar name {"translate":"bossbar.confirm","color":"aqua"}
+bossbar set lobbybar name [{"translate":"chat.confirm","color":"aqua"},{"translate":"chat.settings_map","color":"aqua"}]
 bossbar set lobbybar max 10
 bossbar set lobbybar color blue
 
