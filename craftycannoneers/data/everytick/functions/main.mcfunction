@@ -83,3 +83,6 @@ execute if score $gamestate CmdData matches 2.. run bossbar set lobbybar players
 execute unless score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a
 execute if score $gamestate CmdData matches 3 run bossbar set lobbybar color red
 execute if score $gamestate CmdData matches 3 run bossbar set lobbybar name {"translate":"game.ending","bold":true,"color":"red"}
+
+#> Resolve signs
+function everytick:resolvesigns
