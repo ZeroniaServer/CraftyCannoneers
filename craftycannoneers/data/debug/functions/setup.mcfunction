@@ -176,7 +176,7 @@ scoreboard players set $20 CmdData 20
 scoreboard players set $2 CmdData 2
 scoreboard players set $60 CmdData 60
 
-#> Signs
+#> Signs - TODO MOVE TO 1.1.0 UPDATE
 setblock -49 -28 -3 air
 setblock -49 -28 -3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","translate":"game.click_here"}',Text3:'{"extra":[{"color":"#55FFFF","translate":"game.leave"},{"color":"#00CCCC","translate":"game.your_team"}],"text":""}',Text4:'{"text":""}'}
 setblock -49 -28 3 air
@@ -185,11 +185,24 @@ setblock -74 -24 1 air
 setblock -74 -24 1 oak_wall_sign
 setblock -260 -24 -59 air
 setblock -260 -24 -59 jungle_wall_sign[facing=south,waterlogged=false]{Color:"black",GlowingText:1b,Text1:'{"text":""}',Text2:'{"translate":"tutorial.combat_area.weapons_sign.1"}',Text3:'{"translate":"tutorial.combat_area.weapons_sign.2"}',Text4:'{"text":""}'}
+setblock -58 -24 0 air
+setblock -58 -24 0 spruce_wall_sign[facing=west,waterlogged=false]{Color:"black",GlowingText:1b,Text1:'{"text":""}',Text2:'{"translate":"lobby.jail_sign.1"}',Text3:'{"translate":"lobby.jail_sign.2"}',Text4:'{"text":""}'}
 
 #> Other lobby blocks
 fill -40 -23 -18 -38 -22 -18 air
 execute positioned -55 -23 9 run tag @e[type=glow_item_frame,limit=1,sort=nearest] add MapEntity
 execute as @e[type=glow_item_frame,tag=MapEntity] run data merge entity @s {Silent:1b}
+
+#> Lobby labels - TODO MOVE TO 1.1.0 UPDATE FUNCTION
+data merge entity @e[type=area_effect_cloud,tag=TutorialWarp,tag=ToIsland,limit=1] {CustomName:'{"translate":"tutorial.warp.to_island","color":"aqua","bold":true}'}
+data merge entity @e[type=area_effect_cloud,tag=TutorialWarp,tag=FromIsland,limit=1] {CustomName:'{"translate":"tutorial.warp.from_island","color":"aqua","bold":true}'}
+kill @e[type=area_effect_cloud,tag=Basic,tag=TutorialText]
+summon area_effect_cloud -46.5 -20.5 -14.5 {Tags:["LobbyText","TutorialText"],RadiusPerTick:0.0f,Particle:"minecraft:entity_effect",Duration:2000000000,CustomNameVisible:1b,Radius:0.0f,CustomName:'{"bold":true,"color":"aqua","translate":"tutorial.training_island"}',RadiusOnUse:0.0f}
+summon area_effect_cloud -46.5 -20.8 -14.5 {Tags:["LobbyText","TutorialText2"],RadiusPerTick:0.0f,Particle:"minecraft:entity_effect",Duration:2000000000,CustomNameVisible:1b,Radius:0.0f,CustomName:'{"italic":true,"color":"yellow","translate":"lobby.label.tutorial"}',RadiusOnUse:0.0f}
+data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=ParkourText,limit=1] {CustomName:'{"translate":"lobby.label.parkour.1","color":"aqua","bold":true}'}
+data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=ParkourText2,limit=1] {CustomName:'{"translate":"lobby.label.parkour.2","color":"yellow","italic":true}'}
+data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=Madeby,limit=1] {CustomName:'{"color":"gray","extra":[{"color":"green","text":"Zeronia"}],"translate":"lobby.label.credits.1"}'}
+data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=Clickon,limit=1] {CustomName:'{"italic":true,"color":"yellow","translate":"lobby.label.credits.2"}'}
 
 #> Entity ID
 scoreboard objectives add entityid dummy
