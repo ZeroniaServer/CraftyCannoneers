@@ -5,3 +5,4 @@ execute if score $TimeLimit CmdData matches 15 run scoreboard players set $TimeL
 execute if score $TimeLimit CmdData matches 10 run scoreboard players set $TimeLimit CmdData 15
 execute if score $TimeLimit CmdData matches 9 run scoreboard players set $TimeLimit CmdData 10
 function lobby:customizer/updatesigns
+scoreboard players reset @a[tag=ModiOwner] moditimer

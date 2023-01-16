@@ -5,3 +5,4 @@ execute if score $ShipHP CmdData matches 1250 run scoreboard players set $ShipHP
 execute if score $ShipHP CmdData matches 1000 run scoreboard players set $ShipHP CmdData 1250
 execute if score $ShipHP CmdData matches 999 run scoreboard players set $ShipHP CmdData 1000
 function lobby:customizer/updatesigns
+scoreboard players reset @a[tag=ModiOwner] moditimer
