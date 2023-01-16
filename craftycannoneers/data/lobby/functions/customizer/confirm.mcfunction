@@ -1,3 +1,4 @@
+scoreboard players set $ModiMapActive CmdData 0
 fill -53 -24 9 -55 -22 9 air
 
 scoreboard players reset @a modisigns
