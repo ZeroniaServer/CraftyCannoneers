@@ -11,7 +11,7 @@
       "functions": [
         {
           "function": "minecraft:set_nbt",
-          "tag": "{Damage:2020,AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:-3.5,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,13259,12629,-26518]},{AttributeName:\"generic.attack_damage\",Amount:12.0,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,13359,12629,-26718]}],display:{Name:'[{\"text\":\"item.mace\",\"italic\":false,\"color\":\"dark_aqua\"}]'},HideFlags:5}"
+          "tag": "{Damage:2020,AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:-3.5,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,13259,12629,-26518]},{AttributeName:\"generic.attack_damage\",Amount:12.0,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,13359,12629,-26718]}],display:{Name:'[{\"translate\":\"item.mace\",\"italic\":false,\"color\":\"dark_aqua\"}]'},HideFlags:5}"
         },
         {
           "function": "minecraft:set_nbt",
