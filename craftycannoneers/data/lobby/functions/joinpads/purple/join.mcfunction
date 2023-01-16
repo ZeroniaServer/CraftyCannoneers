@@ -1,5 +1,5 @@
 execute unless score $gamestate CmdData matches 2.. run tellraw @a ["",{"selector":"@s","color":"blue"},{"translate":"game.joined","color":"dark_aqua"},{"translate":"game.purple","color":"dark_purple"},{"translate":"game.team","color":"dark_aqua"},{"text":"!","color":"dark_aqua"}]
-execute if score $gamestate CmdData matches 2.. run tellraw @a ["",{"selector":"@s","color":"blue"},{"translate":"game.joined","color":"dark_aqua"},{"translate":"game.purple","color":"dark_purple"},{"text":"game.team","color":"dark_aqua"},{"text":"! "},{"text":"game.late","color":"dark_aqua"}]
+execute if score $gamestate CmdData matches 2.. run tellraw @a ["",{"selector":"@s","color":"blue"},{"translate":"game.joined","color":"dark_aqua"},{"translate":"game.purple","color":"dark_purple"},{"translate":"game.team","color":"dark_aqua"},{"text":"! "},{"translate":"game.late","color":"dark_aqua"}]
 execute if score $gamestate CmdData matches 2.. run tellraw @s ["",{"translate":"game.take_off","color":"aqua","italic":true},{"translate":"armor.hat","bold":true,"color":"dark_purple"},{"translate":"game.to_leave","color":"aqua","italic":true}]
 execute at @s run tp @s @s
 title @s times 0 50 15

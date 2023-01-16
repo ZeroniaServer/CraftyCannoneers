@@ -3,7 +3,7 @@ function arenaclear:traders
 function arenaclear:cannons
 function entityid:flush
 fill -53 -24 9 -55 -22 9 air
-tellraw @a [{"text":"Successfully applied updates from Crafty Cannoneers v1.1.0","color":"green"}]
+tellraw @a [{"translate":"game.applied_updates","color":"green"},{"translate":"game.crafty","color":"green"},{"translate":"game.cannoneers","color":"green"},{"text":" v1.1.0","color":"green"}]
 scoreboard players set $WorldVersion CmdData 1100
 tp @e[type=armor_stand,tag=ConfirmIcon] -54 -23.5 9
 
