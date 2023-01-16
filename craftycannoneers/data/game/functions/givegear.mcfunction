@@ -16,8 +16,10 @@ item replace entity @s[team=Purple] armor.feet with leather_boots{AttributeModif
 loot replace entity @s hotbar.0 loot weapons:cutlass
 loot replace entity @s hotbar.1 loot weapons:crossbow_loaded
 loot replace entity @s hotbar.2 loot weapons:spyglass
-item replace entity @s hotbar.7 with arrow{display:{Name:'[{"text":"Arrow","italic":false,"color":"dark_aqua"}]'}} 4
-loot replace entity @s hotbar.8 loot weapons:tracer
+
+execute if score $NoTracers CmdData matches 0 run loot replace entity @s hotbar.7 loot weapons:arrows
+execute if score $NoTracers CmdData matches 1 run loot replace entity @s hotbar.8 loot weapons:arrows
+execute unless score $NoTracers CmdData matches 1 run loot replace entity @s hotbar.8 loot weapons:tracer
 
 effect give @s instant_health 1 100 true
 effect give @s resistance 6 100 true

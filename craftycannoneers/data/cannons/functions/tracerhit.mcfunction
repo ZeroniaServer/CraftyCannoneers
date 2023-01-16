@@ -7,8 +7,8 @@ particle dust 0 1 0.3 5 ~ ~ ~ 1 1 1 0 40 force @a[tag=CurrentTracer2]
 particle block_marker lime_concrete ~ ~1 ~ 1 0.5 1 0 20 force @a[tag=CurrentTracer2]
 
 tag @a[tag=CurrentTracer2,scores={invCount=36..}] add NeedsTracer
-loot give @a[tag=CurrentTracer2,tag=!NeedsTracer] loot weapons:tracer
-execute as @a[tag=CurrentTracer2,tag=!NeedsTracer] at @s run playsound entity.item.pickup player @s ~ ~ ~ 0.25 2
+execute unless score $NoTracers CmdData matches 1 run loot give @a[tag=CurrentTracer2,tag=!NeedsTracer] loot cannons:tracer
+execute unless score $NoTracers CmdData matches 1 run as @a[tag=CurrentTracer2,tag=!NeedsTracer] at @s run playsound entity.item.pickup player @s ~ ~ ~ 0.25 2
 
 tag @a remove CurrentTracer2
 scoreboard players reset $currentTracer2 playerUUID
