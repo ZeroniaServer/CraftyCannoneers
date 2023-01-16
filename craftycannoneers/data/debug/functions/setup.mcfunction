@@ -251,9 +251,9 @@ scoreboard players set $dust2 CmdData -1
 scoreboard players set $barrier CmdData -1
 
 #> Messages
-data modify storage craftycannoneers:messages ResourcePack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":"true"},{"text":"] ","color":"dark_gray"},{"text":"We strongly recommend you to ","color":"gray"},{"text":"use the resource pack","bold":true,"color":"red"},{"text":". ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=1wI7hVR29bKCXJLBafZqpY9xSVL-Ahoc0"}}]'
-data modify storage craftycannoneers:messages SettingsMap set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":"true"},{"text":"] ","color":"dark_gray"},{"translate":"chat.confirm","color":"gray"},{"translate":"chat.settings_map","color":"aqua","bold":true},{"text":"!","color":"gray"}]'
-data modify storage craftycannoneers:messages ReadyToPlay set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":"true"},{"text":"] ","color":"dark_gray"},{"translate":"chat.the_game","color":"gray"},{"translate":"chat.ready_to_play","color":"green","bold":true},{"text":"!","color":"gray"}]'
+data modify storage craftycannoneers:messages ResourcePack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"We strongly recommend you to ","color":"gray"},{"text":"use the resource pack","bold":true,"color":"red"},{"text":". ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=1wI7hVR29bKCXJLBafZqpY9xSVL-Ahoc0"}}]'
+data modify storage craftycannoneers:messages SettingsMap set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"chat.confirm","color":"gray"},{"translate":"chat.settings_map","color":"aqua","bold":true},{"text":"!","color":"gray"}]'
+data modify storage craftycannoneers:messages ReadyToPlay set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"chat.the_game","color":"gray"},{"translate":"chat.ready_to_play","color":"green","bold":true},{"text":"!","color":"gray"}]'
 
 #> World Updates
 function version:check

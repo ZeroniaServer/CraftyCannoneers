@@ -1,3 +1,3 @@
-summon chest_minecart 68.50 -28 60.50 {NoGravity:1b,Silent:1b,Invulnerable:1b,Rotation:[-90.0f, 0.0f],CustomDisplayTile:1b,Tags:["teamchest","orangeteamchest"],CustomName:'{"translate":"teamchest.orange","color":"gold","bold":"true","underlined":"true"}',DisplayState:{Name:"minecraft:air"}}
+summon chest_minecart 68.50 -28 60.50 {NoGravity:1b,Silent:1b,Invulnerable:1b,Rotation:[-90.0f, 0.0f],CustomDisplayTile:1b,Tags:["teamchest","orangeteamchest"],CustomName:'{"translate":"teamchest.orange","color":"gold","bold":true,"underlined":true}',DisplayState:{Name:"minecraft:air"}}
 data modify entity @e[type=chest_minecart,tag=orangeteamchest,limit=1] Items set from storage craftycannoneers:orangeteamchest Items
 data remove storage craftycannoneers:orangeteamchest Items
