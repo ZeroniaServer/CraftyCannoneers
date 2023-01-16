@@ -1,4 +1,4 @@
-tellraw @s[tag=firstParkour] [{"text":"parkour.personal_best","color":"green","italic":true}]
+tellraw @s[tag=firstParkour] [{"translate":"parkour.personal_best","color":"green","italic":true}]
 scoreboard players operation @s bestParkourMins = @s parkourMins
 scoreboard players operation @s bestParkourSecs = @s parkourSecs
 scoreboard players operation @s bestParkourDeci = @s parkourDeci
