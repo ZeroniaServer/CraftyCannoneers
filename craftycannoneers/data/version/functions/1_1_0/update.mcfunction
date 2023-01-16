@@ -11,6 +11,7 @@ tp @e[type=armor_stand,tag=ConfirmIcon] -54 -23.5 9
 #icons
 summon minecraft:armor_stand -55 -23.5 9 {Tags:["LobbyEntity","ModiIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
 summon minecraft:armor_stand -54 -23.5 9 {Tags:["LobbyEntity","ModifModiIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
+summon minecraft:armor_stand -53 -21.4 9 {Tags:["LobbyEntity","NoTracersIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
 #scores
 scoreboard players set $NoTracers CmdData 0
 scoreboard players set $Sharks CmdData 0
