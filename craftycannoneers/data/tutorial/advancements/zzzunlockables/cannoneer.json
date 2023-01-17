@@ -6,7 +6,7 @@
       "color": "dark_aqua"
     },
     "description": {
-      "text": "achievement.cannoneer.description",
+      "translate": "achievement.cannoneer.description",
       "color": "white"
     },
     "icon": {

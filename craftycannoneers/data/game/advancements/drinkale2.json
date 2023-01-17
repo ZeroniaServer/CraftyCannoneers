@@ -1,19 +1,19 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:inventory_changed",
-        "conditions": {
-          "items": [
-            {
-              "items": [
-                "minecraft:glass_bottle"
-              ]
-            }
-          ]
-        }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:glass_bottle"
+            ]
+          }
+        ]
       }
-    },
-    "rewards": {
-      "function": "game:clearbottle"
     }
+  },
+  "rewards": {
+    "function": "game:clearbottle"
   }
+}

@@ -2,8 +2,7 @@
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
-      "conditions": {
-      }
+      "conditions": {}
     }
   },
   "rewards": {

@@ -11,7 +11,7 @@ particle block_marker green_concrete ~ ~ ~ 0.5 0 0 0 5 force @a[predicate=game:t
 
 tag @a[tag=CurrentTracer2,scores={invCount=36..}] add NeedsTracer
 execute unless score $NoTracers CmdData matches 1 run loot give @a[tag=CurrentTracer2,tag=!NeedsTracer] loot cannons:tracer
-execute unless score $NoTracers CmdData matches 1 run as @a[tag=CurrentTracer2,tag=!NeedsTracer] at @s run playsound entity.item.pickup player @s ~ ~ ~ 0.25 2
+execute unless score $NoTracers CmdData matches 1 as @a[tag=CurrentTracer2,tag=!NeedsTracer] at @s run playsound entity.item.pickup player @s ~ ~ ~ 0.25 2
 
 tag @a remove CurrentTracer2
 scoreboard players reset $currentTracer2 playerUUID
