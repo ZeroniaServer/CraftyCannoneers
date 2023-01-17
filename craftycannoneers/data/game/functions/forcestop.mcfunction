@@ -7,7 +7,7 @@ tag @a[team=!Lobby,team=!Spectator,team=!Developer,advancements={tutorial:object
 execute unless score $TimeLimit CmdData matches 42069.. run title @a[tag=!inParkour] actionbar [""]
 execute as @a[team=!Lobby,team=!Spectator,team=!Developer,tag=NeedsTutorial,tag=!hideTips] run tellraw @s ["","\n",{"translate":"chat.new_here","color":"green"},{"translate":"game.crafty","bold":true,"color":"dark_purple"},{"translate":"game.cannoneers","bold":true,"color":"gold"},{"text":"!","color":"green"},"\n",{"translate":"chat.recommend","color":"green"},{"translate":"tutorial.training_island","bold":true,"color":"aqua"},{"translate":"chat.to_learn","color":"green"},"\n",{"translate":"chat.warp_pad","italic":true,"color":"dark_green"},"\n"]
 tag @a[tag=NeedsTutorial] remove NeedsTutorial
-tellraw @a[tag=!JoinReset] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true,"extra":["\n\n",{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]
+tellraw @a[tag=!JoinReset] ["",{"translate":"%1$s%9376642$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true,"extra":["\n\n",{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]
 tag @a[team=!Lobby] add LeaveGame
 scoreboard players set $WinningTeam CmdData 0
 scoreboard players set $EndTime CmdData 0
