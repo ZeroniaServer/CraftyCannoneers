@@ -1,59 +1,55 @@
 {
-  "type": "minecraft:entity",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
+    "type": "minecraft:entity",
+    "pools": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:gold_nugget",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'[{\"translate\":\"item.gold\",\"italic\":false,\"color\":\"gold\"}]',Lore:['[{\"translate\":\"item.gold.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.lore.gold.2\",\"italic\":false,\"color\":\"white\"}]']}}"
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 5,
-                "max": 8
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "nbt": "{Tags:[\"onboatregen\"]}"
-                }
-              }
-            },
-            {
-              "condition": "minecraft:alternative",
-              "terms": [
+            "rolls": 1,
+            "entries": [
                 {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "team": "Purple"
-                  }
-                },
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "team": "Orange"
-                  }
+                    "type": "minecraft:loot_table",
+                    "name": "weapons:gold",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "min": 5,
+                                "max": 8
+                            }
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:inverted",
+                            "term": {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "nbt": "{Tags:[\"onboatregen\"]}"
+                                }
+                            }
+                        },
+                        {
+                            "condition": "minecraft:alternative",
+                            "terms": [
+                                {
+                                    "condition": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "team": "Purple"
+                                    }
+                                },
+                                {
+                                    "condition": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "team": "Orange"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
