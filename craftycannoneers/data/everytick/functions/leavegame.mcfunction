@@ -13,6 +13,7 @@ scoreboard players enable @s[team=!Lobby] leavegame
 scoreboard players reset @s[team=Lobby] leavegame
 execute if entity @s[team=!Lobby,team=!Spectator,team=!Developer] unless score @s leavegame matches 0 run tellraw @a ["",{"selector":"@s"},{"translate":"game.left_team","color":"dark_aqua"}]
 execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run tellraw @a ["",{"selector":"@s","color":"dark_gray"},{"translate":"game.left_spectator","color":"gray"}]
+execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run title @s actionbar ""
 execute if entity @s[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveGame
 
 #Pirate Hat game leaving
