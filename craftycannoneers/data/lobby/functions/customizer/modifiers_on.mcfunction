@@ -8,7 +8,7 @@ fill -53 -24 9 -55 -22 9 air
 item replace entity @e[type=armor_stand,tag=LobbyEntity] armor.head with air
 
 item replace entity @e[type=armor_stand,tag=ModifModiIcon] armor.head with diamond_hoe{CustomModelData:83}
-setblock -54 -24 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"light_blue",Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 9153"}}',Text2:'{"text":""}',Text3:'{"text":""}',Text4:'{"text":"Settings","color":"#33ccff"}'}
+setblock -54 -24 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"light_blue",Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 9153"}}',Text2:'{"text":""}',Text3:'{"text":""}',Text4:'{"translate":"customizer.settings","color":"#33ccff"}'}
 
 
 item replace entity @e[type=armor_stand,tag=NoTracersIcon] armor.head with diamond_hoe{CustomModelData:84}
