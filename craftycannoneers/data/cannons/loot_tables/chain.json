@@ -11,7 +11,7 @@
       "functions": [
         {
           "function": "minecraft:set_nbt",
-          "tag": "{HideFlags:127,NoDrop:1b,CustomModelData:32,Cannonball:5b,Unbreakable:1b,display:{Name:'[{\"translate\":\"cannonball.chain\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"cannonball.chain.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"cannonball.chain.lore.2,\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"cannonball.chain.lore.3\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"translate\":\"cannonball.chain.lore.4\",\"italic\":false,\"color\":\"aqua\"}]']}}"
+          "tag": "{HideFlags:127,NoDrop:1b,CustomModelData:32,Cannonball:5b,Unbreakable:1b,display:{Name:'[{\"translate\":\"cannonball.chain\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"cannonball.chain.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"cannonball.chain.lore.2\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"cannonball.chain.lore.3\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"translate\":\"cannonball.chain.lore.4\",\"italic\":false,\"color\":\"aqua\"}]']}}"
         }
       ]
     }
