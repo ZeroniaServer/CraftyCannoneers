@@ -1,5 +1,8 @@
 #> This function runs every tick. Use this as the main function to call other functions that should run every tick.
 
+#> World Updates
+execute if entity @a run function version:check
+
 #> Player related functions
 execute as @a at @s run function everytick:players
 
