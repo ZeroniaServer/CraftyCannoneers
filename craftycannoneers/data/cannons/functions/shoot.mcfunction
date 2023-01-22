@@ -7,7 +7,7 @@ execute at @s[tag=CannonballCluster,tag=!AccuracySet] run function cannons:setac
 execute at @s[tag=CannonballCluster,tag=!0,tag=!clusteracc] run function cannons:clusteraccuracy
 scoreboard players set @s[tag=CannonballCluster] doublehit 69
 
-execute at @s[tag=ChainCannonball,tag=chainacc] run tp @s ~ ~ ~ ~20 ~
+execute at @s[tag=ChainCannonball,tag=AccuracySet] run tp @s ~ ~ ~ ~20 ~
 execute at @s[tag=ChainCannonball,tag=!AccuracySet] run function cannons:setaccuracy
 execute at @s[tag=ChainCannonball,tag=!AccuracySet] run function cannons:chainaccuracy
 execute at @s[tag=PlayerCannonball,tag=!AccuracySet] run function cannons:setaccuracy
