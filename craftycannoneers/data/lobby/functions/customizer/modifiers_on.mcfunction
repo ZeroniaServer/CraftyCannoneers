@@ -18,7 +18,7 @@ item replace entity @e[type=armor_stand,tag=SharksIcon] armor.head with diamond_
 setblock -54 -22 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"light_blue",Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 59636"}}',Text2:'{"text":""}',Text3:'{"translate":"modifier.sharks","color":"#33ccff"}'}
 
 item replace entity @e[type=armor_stand,tag=SeaStormsIcon] armor.head with diamond_hoe{CustomModelData:86}
-setblock -55 -22 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"light_blue",Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 71845"}}',Text2:'{"text":""}',Text3:'{"translate":"modifier.seastorms","color":"#33ccff"}'}
+setblock -55 -22 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"light_blue",Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 71845"}}',Text2:'{"text":""}',Text3:'{"translate":"modifier.sea_storms","color":"#33ccff"}'}
 
 
 function lobby:customizer/updatemodifiersigns
