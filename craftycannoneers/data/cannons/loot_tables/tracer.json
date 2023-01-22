@@ -11,7 +11,7 @@
       "functions": [
         {
           "function": "minecraft:set_nbt",
-          "tag": "{HideFlags:127,NoDrop:1b,Unbreakable:1b,CustomModelData:60,Cannonball:8b,display:{Name:'[{\"translate\":\"cannonball.tracer\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"cannonball.tracer.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"cannonball.tracer.lore.2\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"translate\":\"cannonball.tracer.lore.3,\",\"italic\":false,\"color\":\"#66ff99\"}]','[{\"translate\":\"cannonball.tracer.lore.4\",\"italic\":false,\"color\":\"#66ff99\"}]']}}"
+          "tag": "{HideFlags:127,NoDrop:1b,Unbreakable:1b,CustomModelData:60,Cannonball:8b,display:{Name:'[{\"translate\":\"cannonball.tracer\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"cannonball.tracer.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"cannonball.tracer.lore.2\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"translate\":\"cannonball.tracer.lore.3\",\"italic\":false,\"color\":\"#66ff99\"}]','[{\"translate\":\"cannonball.tracer.lore.4\",\"italic\":false,\"color\":\"#66ff99\"}]']}}"
         }
       ]
     }

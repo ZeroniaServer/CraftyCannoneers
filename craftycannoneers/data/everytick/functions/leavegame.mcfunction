@@ -13,6 +13,7 @@ scoreboard players enable @s[team=!Lobby] leavegame
 scoreboard players reset @s[team=Lobby] leavegame
 execute if entity @s[team=!Lobby,team=!Spectator,team=!Developer] unless score @s leavegame matches 0 run tellraw @a ["",{"selector":"@s"},{"translate":"game.left_team","color":"dark_aqua"}]
 execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run tellraw @a ["",{"selector":"@s","color":"dark_gray"},{"translate":"game.left_spectator","color":"gray"}]
+execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run title @s actionbar ""
 execute if entity @s[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveGame
 
 #Pirate Hat game leaving
@@ -43,7 +44,7 @@ tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/combat=fa
 tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/cannon=false}] add NeedsTutorial
 tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/treasure=false}] add NeedsTutorial
 tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/watchtower=false}] add NeedsTutorial
-execute if entity @s[tag=NeedsTutorial,tag=!hideTips,scores={LeftGame=1..}] run tellraw @s ["","\n",{"translate":"chat.new_here","color":"green"},{"translate":"game.crafty","bold":true,"color":"dark_purple"},{"translate":"game.cannoneers","bold":true,"color":"gold"},{"text":"!","color":"green"},"\n",{"translate":"chat.recommend","color":"green"},{"translate":"tutorial.training_island","bold":true,"color":"aqua"},{"translate":"chat.to_learn","color":"green"},"\n",{"translate":"chat.warp_pad","italic":true,"color":"dark_green"},"\n"]
+execute if entity @s[tag=NeedsTutorial,tag=!hideTips,scores={LeftGame=1..}] run tellraw @s ["","\n",{"translate":"chat.new_here","color":"green"},{"translate":"game.crafty","bold":true,"color":"dark_purple"},{"translate":"game.cannoneers","bold":true,"color":"gold"},{"text":"!","color":"green"},"\n",{"translate":"chat.recommend","color":"green"},{"translate":"tutorial.training_island","bold":true,"color":"aqua"},{"translate":"chat.before_playing","color":"green"},"\n",{"translate":"chat.warp_pad","italic":true,"color":"dark_green"},"\n"]
 tag @s[tag=NeedsTutorial] remove NeedsTutorial
 execute if entity @s[tag=LeaveGame] unless entity @s[team=] unless score @s LeftGame matches 1.. at @s run playsound block.beehive.exit master @s ~ ~ ~ 1 1
 scoreboard players reset @s[scores={LeftGame=1..}] LeftGame
