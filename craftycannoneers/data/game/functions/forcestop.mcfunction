@@ -1,3 +1,4 @@
+function lobby:customizer/modifiers_off
 function lobby:customizer/open
 scoreboard players set @e[type=marker,tag=joinpad] CmdData 0
 tag @a[team=!Lobby,team=!Spectator,team=!Developer,advancements={tutorial:objectives/combat=false}] add NeedsTutorial
