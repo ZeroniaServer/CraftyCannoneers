@@ -16,6 +16,7 @@ summon minecraft:armor_stand -54 -21.4 9 {Tags:["LobbyEntity","SharksIcon","Modi
 summon minecraft:armor_stand -55 -21.4 9 {Tags:["LobbyEntity","SeaStormsIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
 
 #scores
+scoreboard objectives add PCBCooldown dummy
 scoreboard players set $NoTracers CmdData 0
 scoreboard players set $Sharks CmdData 0
 scoreboard players set $Storms CmdData 0
