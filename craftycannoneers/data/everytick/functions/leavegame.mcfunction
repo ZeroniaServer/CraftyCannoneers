@@ -27,6 +27,7 @@ execute if entity @s[team=Orange,tag=LeaveGame,tag=ClickedReady] unless entity @
 
 
 title @s[tag=LeaveGame] times 0 50 15
+team join Lobby @s[tag=LeaveGame]
 execute at @s[tag=LeaveGame] run tp @s @s
 execute if entity @s[tag=LeaveGame,predicate=!game:tutorialbounds] run tp @s -55 -21 0 -90 0
 execute if entity @s[tag=LeaveGame,predicate=game:tutorialbounds] unless score @s LeftGame matches 1.. run tp @s -264 -20 -21 -90 0
@@ -50,7 +51,6 @@ execute if entity @s[tag=NeedsTutorial,tag=!hideTips,scores={LeftGame=1..}] run 
 tag @s[tag=NeedsTutorial] remove NeedsTutorial
 execute if entity @s[tag=LeaveGame] unless entity @s[team=] unless score @s LeftGame matches 1.. at @s run playsound block.beehive.exit master @s ~ ~ ~ 1 1
 scoreboard players reset @s[scores={LeftGame=1..}] LeftGame
-team join Lobby @s[tag=LeaveGame]
 tag @s[tag=LeaveGame] remove onboatregen
 tag @s[tag=LeaveGame] remove loaded
 tag @s[tag=LeaveGame] remove InPlayerCB
