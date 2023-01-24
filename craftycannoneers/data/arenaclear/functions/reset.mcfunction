@@ -3,6 +3,7 @@ scoreboard players set $current CannonID 0
 execute as @e[type=marker,tag=LightFlash] at @s run fill ~ ~ ~ ~ ~ ~ air replace light
 kill @e[type=marker,tag=LightFlash]
 execute as @e[type=armor_stand,tag=CannonDisp,tag=!Tutorial] at @s run function cannons:resetgunpowder
+tag @e[type=villager,tag=CannonVMain,tag=Charged,tag=!Tutorial] remove Charged
 kill @e[type=armor_stand,tag=cannonball,predicate=!cannons:safezones/tutorial]
 tp @e[type=#game:weakpoint,tag=Weakpoint] 0 -1000 0
 kill @e[type=#game:weakpoint,tag=Weakpoint]

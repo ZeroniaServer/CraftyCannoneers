@@ -19,6 +19,9 @@ function cannons:gas/main
 #> Bounce
 function cannons:bounce/main
 
+#> Player Cannonball Cooldown
+function cannons:pcbcooldown
+
 #> Weakpoints
 function game:shipweakpoint/main
 execute if score $OrangeWPDelay CmdData matches 1.. run scoreboard players add $OrangeWPDelay CmdData 1

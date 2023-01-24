@@ -42,6 +42,8 @@ execute at @s[tag=TracerCannonball,scores={CmdData=4..}] run function cannons:tr
 #> Landing conditions
 execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball] if block ~ ~-1 ~ water run function cannons:waterkill
 
+execute at @s[tag=PlayerCannonball] if block ~ ~-1 ~ water run scoreboard players set $landed CmdData 1
+
 execute store result score @s dx2 run scoreboard players get @s x2
 execute store result score @s dy2 run scoreboard players get @s y2
 execute store result score @s dz2 run scoreboard players get @s z2
