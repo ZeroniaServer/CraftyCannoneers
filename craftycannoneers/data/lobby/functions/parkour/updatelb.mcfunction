@@ -18,3 +18,8 @@ item replace entity @s[tag=templeader] armor.head with diamond_hoe{NoDrop:1b,Cus
 
 execute if entity @s[tag=templeader] run tellraw @a[team=!Purple,team=!Orange] ["",{"selector":"@s"},{"text":" now holds the Parkour Record!","color":"dark_green"}]
 tag @s remove templeader
+
+#> Save parkour data into storage
+data modify storage craftycannoneers:parkour Head set from entity @e[type=armor_stand,tag=ParkourAS,limit=1] ArmorItems[3]
+data modify storage craftycannoneers:parkour Name set from entity @e[type=armor_stand,tag=ParkourAS,limit=1] CustomName
+data modify storage craftycannoneers:parkour Time set from entity @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] CustomName

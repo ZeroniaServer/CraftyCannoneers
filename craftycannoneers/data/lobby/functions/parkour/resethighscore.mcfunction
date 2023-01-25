@@ -10,4 +10,8 @@ item replace entity @e[type=armor_stand,tag=ParkourAS] armor.head with player_he
 execute as @e[type=armor_stand,tag=ParkourAS] run data merge entity @s {CustomName:'{"text":"???","color":"yellow"}'}
 execute as @e[type=area_effect_cloud,tag=ParkourRecordAEC] run data merge entity @s {CustomName:'{"text":"00:00:00","color":"green"}'}
 
+data remove storage craftycannoneers:parkour Head
+data remove storage craftycannoneers:parkour Name
+data remove storage craftycannoneers:parkour Time
+
 setblock -74 -24 1 minecraft:oak_wall_sign
