@@ -17,6 +17,7 @@ summon minecraft:armor_stand -55 -21.4 9 {Tags:["LobbyEntity","SeaStormsIcon","M
 
 #scores
 scoreboard objectives add PCBCooldown dummy
+scoreboard objectives add WPNotify dummy
 scoreboard players set $NoTracers CmdData 0
 scoreboard players set $Sharks CmdData 0
 scoreboard players set $Storms CmdData 0
