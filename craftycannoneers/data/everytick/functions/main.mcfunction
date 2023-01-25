@@ -85,3 +85,7 @@ execute if score $gamestate CmdData matches 3 run bossbar set lobbybar name {"tr
 
 #> Resolve signs
 function everytick:resolvesigns
+
+#> Failsafe for reset scoreboards
+execute unless score $gamestate CmdData matches -1.. run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"An error has occurred, so the game has been reset to defaults. If you see this message, ","color":"gray"},{"text":"please report!","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"text":"Report on the Zeronia Discord Server","color":"white"}]}}]
+execute unless score $gamestate CmdData matches -1.. run function debug:preparerelease
