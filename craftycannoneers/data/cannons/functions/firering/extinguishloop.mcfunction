@@ -8,18 +8,18 @@ scoreboard players reset @s CalcAir2
 execute at @s run tp @s ~ ~1 ~
 scoreboard players add @s CmdData 1
 
-execute if entity @s[tag=Purple] if score $DamagePurple CmdData >= $PurpleHP CmdData unless score $AnnouncedLast CmdData matches 1 run tellraw @a ["",{"translate":"ship.purple","color":"dark_purple"},{"translate":"ship.sunk_by","color":"aqua"},{"selector":"@s","color":"aqua"},{"text":"!","color":"aqua"}]
-execute if entity @s[tag=Purple] if score $DamagePurple CmdData >= $PurpleHP CmdData unless score $AnnouncedLast CmdData matches 1 run scoreboard players set $AnnouncedLast CmdData 1
+execute if score $gamestate CmdData matches 2 if entity @s[tag=Purple] if score $DamagePurple CmdData >= $PurpleHP CmdData unless score $AnnouncedLast CmdData matches 1 run tellraw @a ["",{"translate":"ship.purple","color":"dark_purple"},{"translate":"ship.sunk_by","color":"aqua"},{"selector":"@s","color":"aqua"},{"text":"!","color":"aqua"}]
+execute if score $gamestate CmdData matches 2 if entity @s[tag=Purple] if score $DamagePurple CmdData >= $PurpleHP CmdData unless score $AnnouncedLast CmdData matches 1 run scoreboard players set $AnnouncedLast CmdData 1
 execute if entity @s[tag=Purple] run scoreboard players operation $tempuuid playerUUID = @s playerUUID
 execute if entity @s[tag=Purple] as @a[team=Orange] if score @s playerUUID = $tempuuid playerUUID run scoreboard players operation @s MVPdamage += $CurrentDamage CmdData
-execute if entity @s[tag=Purple] if score $DamagePurple CmdData >= $PurpleHP CmdData as @a[team=Orange] if score @s playerUUID = $tempuuid playerUUID run advancement grant @s only tutorial:zzzunlockables/battleship
+execute if score $gamestate CmdData matches 2 if entity @s[tag=Purple] if score $DamagePurple CmdData >= $PurpleHP CmdData as @a[team=Orange] if score @s playerUUID = $tempuuid playerUUID run advancement grant @s only tutorial:zzzunlockables/battleship
 execute if entity @s[tag=Purple] if score $DamagePurple CmdData >= $PurpleHP CmdData run scoreboard players reset $tempuuid playerUUID
 
-execute if entity @s[tag=Orange] if score $DamageOrange CmdData >= $OrangeHP CmdData unless score $AnnouncedLast CmdData matches 1 run tellraw @a ["",{"translate":"ship.orange","color":"gold"},{"translate":"ship.sunk_by","color":"aqua"},{"selector":"@s","color":"aqua"},{"text":"!","color":"aqua"}]
-execute if entity @s[tag=Orange] if score $DamageOrange CmdData >= $OrangeHP CmdData unless score $AnnouncedLast CmdData matches 1 run scoreboard players set $AnnouncedLast CmdData 1
+execute if score $gamestate CmdData matches 2 if score $gamestate CmdData matches 2 if entity @s[tag=Orange] if score $DamageOrange CmdData >= $OrangeHP CmdData unless score $AnnouncedLast CmdData matches 1 run tellraw @a ["",{"translate":"ship.orange","color":"gold"},{"translate":"ship.sunk_by","color":"aqua"},{"selector":"@s","color":"aqua"},{"text":"!","color":"aqua"}]
+execute if score $gamestate CmdData matches 2 if score $gamestate CmdData matches 2 if entity @s[tag=Orange] if score $DamageOrange CmdData >= $OrangeHP CmdData unless score $AnnouncedLast CmdData matches 1 run scoreboard players set $AnnouncedLast CmdData 1
 execute if entity @s[tag=Orange] run scoreboard players operation $tempuuid playerUUID = @s playerUUID
 execute if entity @s[tag=Orange] as @a[team=Purple] if score @s playerUUID = $tempuuid playerUUID run scoreboard players operation @s MVPdamage += $CurrentDamage CmdData
-execute if entity @s[tag=Orange] if score $DamageOrange CmdData >= $OrangeHP CmdData as @a[team=Purple] if score @s playerUUID = $tempuuid playerUUID run advancement grant @s only tutorial:zzzunlockables/battleship
+execute if score $gamestate CmdData matches 2 if entity @s[tag=Orange] if score $DamageOrange CmdData >= $OrangeHP CmdData as @a[team=Purple] if score @s playerUUID = $tempuuid playerUUID run advancement grant @s only tutorial:zzzunlockables/battleship
 execute if entity @s[tag=Orange] if score $DamageOrange CmdData >= $OrangeHP CmdData run scoreboard players reset $tempuuid playerUUID
 
 scoreboard players reset $CurrentDamage CmdData

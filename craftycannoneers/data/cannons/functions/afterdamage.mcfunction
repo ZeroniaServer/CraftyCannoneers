@@ -41,9 +41,9 @@ execute if entity @s[scores={CalcAir2=0..,CriticalDamage=1..},predicate=cannons:
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] run scoreboard players operation $DamagePurple CmdData += $CurrentDamage CmdData
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] as @a[team=Orange] if score @s playerUUID = $hitmarkuuid playerUUID run scoreboard players operation @s MVPdamage += $CurrentDamage CmdData
 
-execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] if score $DamagePurple CmdData >= $PurpleHP CmdData unless score $AnnouncedLast CmdData matches 1 run tellraw @a ["",{"translate":"ship.purple","color":"dark_purple"},{"translate":"ship.sunk_by","color":"aqua"},{"selector":"@s","color":"aqua"},{"text":"!","color":"aqua"}]
-execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] if score $DamagePurple CmdData >= $PurpleHP CmdData unless score $AnnouncedLast CmdData matches 1 run scoreboard players set $AnnouncedLast CmdData 1
-execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] if score $DamagePurple CmdData >= $PurpleHP CmdData as @a[team=Orange] if score @s playerUUID = $hitmarkuuid playerUUID run advancement grant @s only tutorial:zzzunlockables/battleship
+execute if score $gamestate CmdData matches 2 if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] if score $DamagePurple CmdData >= $PurpleHP CmdData unless score $AnnouncedLast CmdData matches 1 run tellraw @a ["",{"translate":"ship.purple","color":"dark_purple"},{"translate":"ship.sunk_by","color":"aqua"},{"selector":"@s","color":"aqua"},{"text":"!","color":"aqua"}]
+execute if score $gamestate CmdData matches 2 if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] if score $DamagePurple CmdData >= $PurpleHP CmdData unless score $AnnouncedLast CmdData matches 1 run scoreboard players set $AnnouncedLast CmdData 1
+execute if score $gamestate CmdData matches 2 if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] if score $DamagePurple CmdData >= $PurpleHP CmdData as @a[team=Orange] if score @s playerUUID = $hitmarkuuid playerUUID run advancement grant @s only tutorial:zzzunlockables/battleship
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] run scoreboard players reset $hitmarkuuid playerUUID
 scoreboard players reset $CurrentDamage CmdData
 
@@ -82,10 +82,10 @@ execute if entity @s[scores={CalcAir2=0..,CriticalDamage=1..},predicate=cannons:
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] run scoreboard players operation $DamageOrange CmdData += $CurrentDamage CmdData
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] as @a[team=Purple] if score @s playerUUID = $hitmarkuuid playerUUID run scoreboard players operation @s MVPdamage += $CurrentDamage CmdData
 
-execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] if score $DamageOrange CmdData >= $OrangeHP CmdData unless score $AnnouncedLast CmdData matches 1 run tellraw @a ["",{"translate":"ship.orange","color":"gold"},{"translate":"ship.sunk_by","color":"aqua"},{"selector":"@s","color":"aqua"},{"text":"!","color":"aqua"}]
-execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] if score $DamageOrange CmdData >= $OrangeHP CmdData unless score $AnnouncedLast CmdData matches 1 run scoreboard players set $AnnouncedLast CmdData 1
-execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] if score $DamageOrange CmdData >= $OrangeHP CmdData run scoreboard players operation $tempuuid playerUUID = @s playerUUID
-execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] if score $DamageOrange CmdData >= $OrangeHP CmdData as @a[team=Purple] if score @s playerUUID = $tempuuid playerUUID run advancement grant @s only tutorial:zzzunlockables/battleship
+execute if score $gamestate CmdData matches 2 if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] if score $DamageOrange CmdData >= $OrangeHP CmdData unless score $AnnouncedLast CmdData matches 1 run tellraw @a ["",{"translate":"ship.orange","color":"gold"},{"translate":"ship.sunk_by","color":"aqua"},{"selector":"@s","color":"aqua"},{"text":"!","color":"aqua"}]
+execute if score $gamestate CmdData matches 2 if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] if score $DamageOrange CmdData >= $OrangeHP CmdData unless score $AnnouncedLast CmdData matches 1 run scoreboard players set $AnnouncedLast CmdData 1
+execute if score $gamestate CmdData matches 2 if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] if score $DamageOrange CmdData >= $OrangeHP CmdData run scoreboard players operation $tempuuid playerUUID = @s playerUUID
+execute if score $gamestate CmdData matches 2 if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] if score $DamageOrange CmdData >= $OrangeHP CmdData as @a[team=Purple] if score @s playerUUID = $tempuuid playerUUID run advancement grant @s only tutorial:zzzunlockables/battleship
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] run scoreboard players reset $hitmarkuuid playerUUID
 scoreboard players reset $CurrentDamage CmdData
 
