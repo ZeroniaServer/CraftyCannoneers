@@ -24,9 +24,9 @@ execute at @s if entity @s[predicate=cannons:safezones/orange/5] run tag @s add 
 execute if entity @s[tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run tag @e[type=armor_stand,tag=GasBubble,tag=!GasIgnite,distance=..6] add GasIgnite
 execute if entity @s[tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run summon marker ^ ^-2 ^3 {Tags:["RingOfFire"]}
 execute if entity @s[tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run scoreboard players operation @e[type=armor_stand,tag=GasBubble,tag=!GasIgnite,distance=..6] playerUUID = @s playerUUID
-execute as @e[type=marker,tag=RingOfFire,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=HotCannonball,limit=1,sort=nearest,distance=..4] playerUUID
-execute as @e[type=marker,tag=RingOfFire,tag=!HasUUID] at @s run data modify entity @s CustomName set from entity @e[type=armor_stand,tag=HotCannonball,limit=1,sort=nearest,distance=..4] CustomName
-tag @e[type=marker,tag=RingOfFire,tag=!HasUUID] add HasUUID
+scoreboard players operation @e[type=marker,tag=RingOfFire,tag=!HasUUID,limit=1] playerUUID = @s playerUUID
+data modify entity @e[type=marker,tag=RingOfFire,tag=!HasUUID,limit=1] CustomName set from entity @s CustomName
+tag @e[type=marker,tag=RingOfFire,tag=!HasUUID,limit=1] add HasUUID
 
 #GAS EFFECT
 execute if entity @s[tag=Hit1,tag=GasCannonball] at @s run summon marker ^ ^-2 ^3 {Tags:["GasCloud"]}
@@ -64,12 +64,11 @@ execute if entity @s[tag=!InSafezone,tag=!Hit1,tag=ChainCannonball] at @s run su
 execute if entity @s[tag=!InSafezone,tag=Hit1,tag=ChainCannonball,scores={doublehit=4..}] at @s run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2","Hit1"]}
 execute if entity @s[tag=!InSafezone,tag=Hit1,tag=ChainCannonball,scores={doublehit=4..}] at @s run summon marker ^ ^ ^-1 {Tags:["ImpactMarker","Power2","Hit1"]}
 
-
-execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] playerUUID
-execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run data modify entity @s CustomName set from entity @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] CustomName
+scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] playerUUID = @s playerUUID
+tag @s add currentCannonball
+execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] run data modify entity @s CustomName set from entity @e[type=armor_stand,tag=currentCannonball,limit=1] CustomName
+tag @s remove currentCannonball
 tag @e[type=marker,tag=ImpactMarker,tag=!HasUUID] add HasUUID
-
-
 
 execute if entity @s[tag=!Hit1,tag=!BouncyCannonball,tag=!ChainCannonball,predicate=cannons:ships/orange] at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
 execute if entity @s[tag=!Hit1,tag=!BouncyCannonball,tag=!ChainCannonball,predicate=cannons:ships/purple] at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
