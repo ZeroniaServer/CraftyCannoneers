@@ -1,3 +1,5 @@
-execute as @a[team=Purple,distance=..9] if score @s arrowsToShoot matches 1.. run function game:ingame/arrowcount
-execute as @a[team=Purple,distance=..9] if score @s arrowsToShoot matches 1.. if entity @s[tag=loaded] run scoreboard players remove @s arrowsToShoot 1
-execute as @a[team=Purple,distance=..9] if score @s arrowsToShoot matches 1.. unless score @s useCrossbow matches 1.. if score @s hasArrows < @s arrowsToShoot if score $purple hasArrows >= @s arrowsToShoot run function game:teamchest/antidupe/returnarrows
+execute if score @s arrowsToShoot matches 1.. run function game:ingame/arrowcount
+scoreboard players operation $temp arrowsToShoot = @s arrowsToShoot
+scoreboard players operation $temp arrowsToShoot -= @s hasArrows
+execute unless score @s useCrossbow matches 1.. if score @s arrowsToShoot matches 1.. if score @s hasArrows < @s arrowsToShoot if score $orange hasArrows >= $temp arrowsToShoot unless score $purple hasArrows matches 0 run function game:teamchest/antidupe/returnarrows
+scoreboard players reset $temp arrowsToShoot
