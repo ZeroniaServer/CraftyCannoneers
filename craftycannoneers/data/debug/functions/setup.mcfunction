@@ -100,7 +100,6 @@ scoreboard objectives add ChaseUUID dummy
 scoreboard objectives add NoRegenTimer dummy
 scoreboard objectives add bounceID dummy
 scoreboard objectives add CriticalDamage dummy
-scoreboard objectives add invCount dummy
 scoreboard objectives add raycast dummy
 scoreboard objectives add shotArrows minecraft.used:minecraft.crossbow
 scoreboard objectives add arrowsToShoot dummy

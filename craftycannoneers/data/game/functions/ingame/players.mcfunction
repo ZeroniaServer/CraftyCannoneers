@@ -32,10 +32,10 @@ spawnpoint @s[team=Orange] 88 -26 55 90
 spawnpoint @s[team=Purple] 52 -26 -55 -90
 
 #> Give back items
-execute at @s[tag=NeedsCutlass,scores={invCount=..35}] run function game:giveback/cutlass
-execute at @s[tag=NeedsCrossbow,scores={invCount=..35}] run function game:giveback/crossbow
-execute at @s[tag=NeedsSpyglass,scores={invCount=..35}] run function game:giveback/spyglass
-execute at @s[tag=NeedsTracer,scores={invCount=..35}] run function game:giveback/tracer
+execute at @s[tag=NeedsCutlass,tag=!fullinv] run function game:giveback/cutlass
+execute at @s[tag=NeedsCrossbow,tag=!fullinv] run function game:giveback/crossbow
+execute at @s[tag=NeedsSpyglass,tag=!fullinv] run function game:giveback/spyglass
+execute at @s[tag=NeedsTracer,tag=!fullinv] run function game:giveback/tracer
 
 #> Kill
 execute if entity @s[scores={kill=1..}] run function game:ingame/kill

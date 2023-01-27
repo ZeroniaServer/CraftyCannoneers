@@ -3,6 +3,11 @@
         "rock": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
+                "slots": {
+                    "occupied": {
+                        "min": 36
+                    }
+                },
                 "items": [
                     {
                         "items": [
@@ -12,14 +17,32 @@
                 ]
             }
         },
-        "requirement": {
-            "trigger": "minecraft:inventory_changed"
+        "full": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "slots": {
+                    "occupied": {
+                        "min": 40
+                    }
+                }
+            }
+        },
+        "unfull": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "slots": {
+                    "occupied": {
+                        "max": 39
+                    }
+                }
+            }
         }
     },
     "requirements": [
         [
             "rock",
-            "requirement"
+            "full",
+            "unfull"
         ]
     ],
     "rewards": {

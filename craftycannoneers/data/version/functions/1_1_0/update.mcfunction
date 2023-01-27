@@ -52,5 +52,7 @@ setblock -65 -12 -39 air
 setblock -63 -8 -39 air
 setblock -60 -5 -39 air
 
+scoreboard objectives remove fullInv
+
 function game:forcestop
 function lobby:customizer/open

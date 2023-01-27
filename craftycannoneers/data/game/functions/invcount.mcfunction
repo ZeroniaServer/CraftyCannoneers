@@ -1,11 +1,8 @@
 execute if entity @s[advancements={game:invcount={rock=true}}] run function lobby:rock/clearrock
+
+execute if entity @s[advancements={game:invcount={full=true}}] run tag @s add fullinv
+execute if entity @s[advancements={game:invcount={unfull=true}}] run tag @s remove fullinv
+
+execute unless entity @s[advancements={game:invcount={rock=true}}] if score $gamestate CmdData matches 2.. run function game:ingame/arrowcount
+
 advancement revoke @s[advancements={game:invcount=true}] only game:invcount
-
-execute if score $gamestate CmdData matches 2.. store result score @s invCount if data entity @s Inventory[]
-#Doesn't count armor
-execute if score $gamestate CmdData matches 2.. run scoreboard players remove @s[predicate=!game:no_helmet] invCount 1
-execute if score $gamestate CmdData matches 2.. run scoreboard players remove @s[predicate=!game:no_chestplate] invCount 1
-execute if score $gamestate CmdData matches 2.. run scoreboard players remove @s[predicate=!game:no_leggings] invCount 1
-execute if score $gamestate CmdData matches 2.. run scoreboard players remove @s[predicate=!game:no_boots] invCount 1
-
-execute if score $gamestate CmdData matches 2.. run function game:ingame/arrowcount
