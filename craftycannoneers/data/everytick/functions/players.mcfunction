@@ -57,14 +57,6 @@ execute if entity @s[team=!Spectator] run function cannons:hitmarkers
 #> Open chests
 function chests:openchest
 
-#> Arrow dropping
-execute if score @s[team=!Lobby,team=!Spectator] dropArrow matches 1.. run function game:ingame/arrowcount
-scoreboard players set @s[scores={dropArrow=1..}] useCrossbow 3
-scoreboard players reset @s dropArrow
-
-#> Use crossbow score
-scoreboard players remove @s[scores={useCrossbow=1..}] useCrossbow 1
-
 #> Lobby water
 execute at @s[team=Lobby,predicate=!game:inlobby] if block ~ ~ ~ water run function lobby:water
 
@@ -93,7 +85,6 @@ tag @s[team=!Lobby,tag=inParkour] remove inParkour
 
 #> Rocks
 execute at @s[scores={throwsb=1..}] run function lobby:rock/spawn
-advancement revoke @s[advancements={lobby:clearrock=true}] only lobby:clearrock
 
 #> Easter Eggs
 advancement grant @s[advancements={tutorial:eastereggs/parrot=true,tutorial:eastereggs/snowman=true,tutorial:eastereggs/planetary=true,tutorial:eastereggs/goldy=true,tutorial:eastereggs/rocketriders=true,tutorial:eastereggs/end=false}] only tutorial:eastereggs/end

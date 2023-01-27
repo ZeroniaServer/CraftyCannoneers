@@ -18,12 +18,14 @@ function game:ingame/playerstuck
 
 #> Arrow scoreboards
 execute if score @s[tag=!arrowcounted] dropArrow matches 1.. run function game:ingame/arrowcount
+scoreboard players set @s[scores={dropArrow=1..}] useCrossbow 3
 scoreboard players reset @s dropArrow
 tag @s remove arrowcounted
 scoreboard players add @s shotArrows 0
 scoreboard players set @s arrowsToShoot 5
 scoreboard players operation @s arrowsToShoot -= @s shotArrows
 execute if score @s arrowsToShoot matches ..-1 run scoreboard players set @s arrowsToShoot 0
+scoreboard players remove @s[scores={useCrossbow=1..}] useCrossbow 1
 
 #> Spawnpoints
 spawnpoint @s[team=Orange] 88 -26 55 90

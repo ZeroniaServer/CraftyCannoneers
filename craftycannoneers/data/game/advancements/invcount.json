@@ -1,10 +1,28 @@
 {
-  "criteria": {
-    "requirement": {
-      "trigger": "minecraft:inventory_changed"
+    "criteria": {
+        "rock": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:snowball"
+                        ]
+                    }
+                ]
+            }
+        },
+        "requirement": {
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "requirements": [
+        [
+            "rock",
+            "requirement"
+        ]
+    ],
+    "rewards": {
+        "function": "game:invcount"
     }
-  },
-  "rewards": {
-    "function": "game:invcount"
-  }
 }
