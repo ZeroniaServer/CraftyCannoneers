@@ -3,11 +3,6 @@
         "rock": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
-                "slots": {
-                    "occupied": {
-                        "min": 36
-                    }
-                },
                 "items": [
                     {
                         "items": [
@@ -36,16 +31,23 @@
                     }
                 }
             }
+        },
+        "impossible": {
+            "trigger": "minecraft:impossible"
         }
     },
     "requirements": [
         [
-            "rock",
-            "full",
+            "impossible"
+        ],
+        [
+            "rock"
+        ],
+        [
+            "full"
+        ],
+        [
             "unfull"
         ]
-    ],
-    "rewards": {
-        "function": "game:invcount"
-    }
+    ]
 }

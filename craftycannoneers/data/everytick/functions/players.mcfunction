@@ -57,6 +57,9 @@ execute if entity @s[team=!Spectator] run function cannons:hitmarkers
 #> Open chests
 function chests:openchest
 
+#> Inventory counting
+execute unless entity @s[advancements={game:invcount={rock=false,full=false,unfull=false}}] run function game:invcount
+
 #> Lobby water
 execute at @s[team=Lobby,predicate=!game:inlobby] if block ~ ~ ~ water run function lobby:water
 
