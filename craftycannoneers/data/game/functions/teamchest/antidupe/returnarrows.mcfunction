@@ -1,5 +1,4 @@
 scoreboard players add @s hasArrows 1
-tellraw @a [{"score":{"name":"@s","objective":"hasArrows"}}," ",{"score":{"name":"@s","objective":"arrowsToShoot"}}]
 execute if score @s hasArrows > @s arrowsToShoot unless entity @s[nbt={Inventory:[{id:"minecraft:crossbow",tag:{ChargedProjectiles:[{}]}}]}] run loot give @s loot weapons:arrow_one
 execute unless score @s hasArrows > @s arrowsToShoot run loot give @s loot weapons:arrow_one
 execute unless score @s hasArrows > @s arrowsToShoot run data modify storage craftycannoneers:chest Items set value []
