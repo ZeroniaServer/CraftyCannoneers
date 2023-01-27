@@ -1,5 +1,5 @@
 scoreboard players add @s hasArrows 1
-execute if score @s hasArrows > @s arrowsToShoot unless entity @s[nbt={Inventory:[{id:"minecraft:crossbow",tag:{ChargedProjectiles:[{}]}}]}] run loot give @s loot weapons:arrow_one
+execute if score @s hasArrows > @s arrowsToShoot unless entity @s[tag=loaded] run loot give @s loot weapons:arrow_one
 execute unless score @s hasArrows > @s arrowsToShoot run loot give @s loot weapons:arrow_one
 execute unless score @s hasArrows > @s arrowsToShoot run data modify storage craftycannoneers:chest Items set value []
 execute unless score @s[team=Orange] hasArrows > @s arrowsToShoot run data modify storage craftycannoneers:chest Items append from entity @e[type=chest_minecart,tag=orangeteamchest,distance=..7,limit=1] Items[{id:"minecraft:arrow"}]
