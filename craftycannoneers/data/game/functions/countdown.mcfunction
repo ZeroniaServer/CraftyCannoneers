@@ -18,8 +18,8 @@ execute if score $countSec CmdData matches 20.. run scoreboard players remove $C
 
 execute if score $countSec CmdData matches 20.. run scoreboard players reset $countSec CmdData
 
-execute if score $Countdown CmdData matches 2.. run bossbar set lobbybar name ["",{"translate":"game.countdown.starts_in","bold":true,"color":"green"},{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"dark_green"},{"translate":"game.countdown.seconds","bold":true,"color":"green"}]
-execute if score $Countdown CmdData matches 1 run bossbar set lobbybar name ["",{"translate":"game.countdown.starts_in","bold":true,"color":"green"},{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"dark_green"},{"translate":"game.countdown.second","bold":true,"color":"green"}]
+execute if score $Countdown CmdData matches 2.. run bossbar set lobbybar name ["",{"translate":"game.countdown.seconds","bold":true,"color":"green","with":[{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"dark_green"}]}]
+execute if score $Countdown CmdData matches 1 run bossbar set lobbybar name ["",{"translate":"game.countdown.second","bold":true,"color":"green","with":[{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"dark_green"}]}]
 execute if score $Countdown CmdData matches 0.. run bossbar set lobbybar color green
 
 execute unless score $ForceCountdown CmdData matches 1.. unless entity @a[team=Purple] run tellraw @a {"translate":"game.countdown.canceled","color":"red"}

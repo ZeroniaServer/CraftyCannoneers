@@ -1,3 +1,3 @@
-title @a actionbar ["",{"translate":"game.purple","color":"dark_purple","bold":true},{"translate":"game.marked_ready.3","color":"aqua"},{"translate":"game.marked_ready.not","color":"red","bold":true,"underlined":true}]
+title @a actionbar ["",{"translate":"game.marked_ready.has_been","color":"aqua","with":[{"translate":"game.purple","color":"dark_purple","bold":true},{"translate":"game.team","color":"aqua"},{"translate":"game.marked_ready.not","color":"red","bold":true,"underlined":true}]}]
 data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","translate":"game.purple"},{"color":"dark_purple","text":": "},{"color":"red","text":"❌","bold":true}],"text":""}'}
 scoreboard players set $PurpleReady CmdData 0

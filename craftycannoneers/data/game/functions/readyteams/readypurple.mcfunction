@@ -1,5 +1,5 @@
 playsound readyup master @s ~ ~ ~ 1 0
-title @a[tag=!inParkour,team=!Spectator] actionbar ["",{"selector":"@s","bold":true},{"translate":"game.marked_ready.1","color":"aqua"},{"translate":"game.purple","color":"dark_purple","bold":true},{"translate":"game.marked_ready.2","color":"aqua"},{"translate":"game.marked_ready.ready","color":"green","bold":true,"underlined":true}]
+title @a[tag=!inParkour,team=!Spectator] actionbar ["",{"translate":"game.marked_ready","color":"aqua","with":[{"selector":"@s","bold":true},{"translate":"game.purple","color":"dark_purple","bold":true},{"translate":"game.team","color":"aqua"},{"translate":"game.marked_ready.ready","color":"green","bold":true,"underlined":true}]}]
 tag @a[team=Purple,tag=ClickedReady] remove ClickedReady
 tag @s add ClickedReady
 scoreboard players add $PurpleReady CmdData 1

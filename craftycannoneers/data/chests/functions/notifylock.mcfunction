@@ -1,2 +1,2 @@
-tellraw @s ["",{"translate":"chest.skeleton.this_is","color":"red"},{"translate":"chest.skeleton","underlined":true,"color":"dark_red"},{"text":"! ","color":"red"},{"translate":"chest.skeleton.you_need","color":"red"},{"translate":"item.skeleton_key","color":"dark_aqua"},{"translate":"chest.skeleton.to_open","color":"red"}]
+tellraw @s ["",{"translate":"chest.skeleton.warn","color":"red","with":[{"translate":"chest.skeleton","underlined":true,"color":"dark_red"},{"translate":"item.skeleton_key","color":"dark_aqua"}]}]
 advancement revoke @s only chests:notifylock

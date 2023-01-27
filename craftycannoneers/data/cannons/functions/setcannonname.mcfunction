@@ -1,7 +1,7 @@
 scoreboard players operation $nametag playerUUID = @s playerUUID
 setblock ~ 200 ~ crimson_sign
 execute as @a if score @s playerUUID = $nametag playerUUID run tag @s add SetCannonName
-data merge block ~ 200 ~ {Text1:'["",{"selector":"@a[limit=1,tag=SetCannonName]"},{"translate":"cannon.possessive","color":"#FFFFFF"}]'}
+data merge block ~ 200 ~ {Text1:'["",{"translate":"cannon.possessive","color":"#FFFFFF","with":[{"selector":"@a[limit=1,tag=SetCannonName]"}]}]'}
 execute unless entity @a[limit=1,tag=SetCannonName,team=Lobby] unless entity @e[type=area_effect_cloud,tag=CannonNametag,tag=!New,distance=..2] run summon area_effect_cloud ~ ~1.2 ~ {Duration:2000000000,Tags:["CannonNametag","New"],CustomNameVisible:1b,Particle:"block air"}
 execute if entity @a[limit=1,tag=SetCannonName,team=Lobby] unless entity @e[type=area_effect_cloud,tag=CannonNametag,tag=!New,distance=..2] run summon area_effect_cloud ~ ~1.2 ~ {Duration:2000000000,Tags:["CannonNametag","New","Tutorial"],CustomNameVisible:1b,Particle:"block air"}
 data modify entity @e[type=area_effect_cloud,tag=CannonNametag,tag=New,limit=1,sort=nearest] CustomName set from block ~ 200 ~ Text1

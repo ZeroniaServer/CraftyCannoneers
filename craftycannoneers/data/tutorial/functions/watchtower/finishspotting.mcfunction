@@ -1,4 +1,4 @@
-tellraw @s ["","\n",{"translate":"weakpoint.exposed_by","color":"aqua"},{"selector":"@s"},"\n"]
+tellraw @s ["","\n",{"translate":"weakpoint.exposed_by","color":"aqua","with":[{"selector":"@s"}]},"\n"]
 
 tag @s[tag=SpotFake1] add Exposed1
 tag @s[tag=SpotFake2] add Exposed2

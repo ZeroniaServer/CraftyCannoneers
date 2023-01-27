@@ -3,7 +3,7 @@ function arenaclear:traders
 function arenaclear:cannons
 function entityid:flush
 fill -53 -24 9 -55 -22 9 air
-tellraw @a [{"translate":"game.applied_updates","color":"green"},{"translate":"game.crafty","color":"green"},{"translate":"game.cannoneers","color":"green"},{"text":" v1.1.0","color":"green"}]
+tellraw @a [{"translate":"game.applied_updates","color":"green","with":[{"translate":"game.name","with":[{"translate":"game.crafty"},{"translate":"game.cannoneers"}]},{"text":"v1.1.0","color":"green"}]}]
 scoreboard players set $WorldVersion CmdData 1100
 tp @e[type=armor_stand,tag=ConfirmIcon] -54 -23.5 9
 
@@ -24,9 +24,9 @@ scoreboard players set $Storms CmdData 0
 
 #> Lobby signs
 setblock -49 -28 -3 air
-setblock -49 -28 -3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","translate":"game.click_here"}',Text3:'{"extra":[{"color":"#55FFFF","translate":"game.leave"},{"color":"#00CCCC","translate":"game.your_team"}],"text":""}',Text4:'{"text":""}'}
+setblock -49 -28 -3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","translate":"game.click_here"}',Text3:'{"translate":"game.your_team","color":"#00CCCC","with":[{"color":"#55FFFF","translate":"game.leave"}]}',Text4:'{"text":""}'}
 setblock -49 -28 3 air
-setblock -49 -28 3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","translate":"game.click_here"}',Text3:'{"extra":[{"color":"#55FFFF","translate":"game.leave"},{"color":"#00CCCC","translate":"game.your_team"}],"text":""}',Text4:'{"text":""}'}
+setblock -49 -28 3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","translate":"game.click_here"}',Text3:'{"translate":"game.your_team","color":"#00CCCC","with":[{"color":"#55FFFF","translate":"game.leave"}]}',Text4:'{"text":""}'}
 setblock -74 -24 1 air
 setblock -74 -24 1 oak_wall_sign
 setblock -260 -24 -59 air
@@ -43,7 +43,7 @@ summon area_effect_cloud -46.5 -20.5 -14.5 {Tags:["LobbyText","TutorialText"],Ra
 summon area_effect_cloud -46.5 -20.8 -14.5 {Tags:["LobbyText","TutorialText2"],RadiusPerTick:0.0f,Particle:"minecraft:entity_effect",Duration:2000000000,CustomNameVisible:1b,Radius:0.0f,CustomName:'{"italic":true,"color":"yellow","translate":"lobby.label.tutorial"}',RadiusOnUse:0.0f}
 data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=ParkourText,limit=1] {CustomName:'{"translate":"lobby.label.parkour.1","color":"aqua","bold":true}'}
 data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=ParkourText2,limit=1] {CustomName:'{"translate":"lobby.label.parkour.2","color":"yellow","italic":true}'}
-data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=Madeby,limit=1] {CustomName:'{"color":"gray","extra":[{"color":"green","text":"Zeronia"}],"translate":"lobby.label.credits.1"}'}
+data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=Madeby,limit=1] {CustomName:'{"color":"gray","translate":"lobby.label.credits.1","with":[{"color":"green","translate":"zeronia"}]}'}
 data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=Clickon,limit=1] {CustomName:'{"italic":true,"color":"yellow","translate":"lobby.label.credits.2"}'}
 
 #> No more floating buttons

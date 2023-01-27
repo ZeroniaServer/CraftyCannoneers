@@ -16,7 +16,7 @@ execute if entity @s[tag=templeader] run loot replace entity @e[type=armor_stand
 execute if entity @s[tag=templeader] run item replace entity @a[predicate=lobby:hasparkourhat,tag=!templeader] armor.head with diamond_hoe{CustomModelData:39,Unbreakable:1b,display:{Name:'[{"translate":"armor.hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"translate":"ahoy","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:"binding_curse",lvl:1}],HideFlags:7}
 item replace entity @s[tag=templeader] armor.head with diamond_hoe{NoDrop:1b,CustomModelData:61,Unbreakable:1b,display:{Name:'[{"translate":"armor.hat.parkour","italic":false,"color":"red"}]',Lore:['[{"text":"","italic":false}]','[{"translate":"ahoy","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:"minecraft:binding_curse",lvl:1}],HideFlags:7}
 
-execute if entity @s[tag=templeader] run tellraw @a[team=!Purple,team=!Orange] ["",{"selector":"@s"},{"translate":"parkour.new_record","color":"dark_green"}]
+execute if entity @s[tag=templeader] run tellraw @a[team=!Purple,team=!Orange] ["",{"translate":"parkour.new_record","color":"dark_green","with":[{"selector":"@s"}]}]
 tag @s remove templeader
 
 #> Save parkour data into storage

@@ -10,8 +10,8 @@ execute positioned -54.5 -25 8 run scoreboard players reset @a[distance=4..,tag=
 execute positioned -54.5 -25 8 run tag @a[distance=4..,tag=NearModboard] remove NearModboard
 
 #> Bossbar
-execute unless entity @a[tag=ModiOwner] run bossbar set lobbybar name [{"translate":"chat.confirm","color":"aqua"},{"translate":"chat.settings_map","color":"aqua"},{"text":"!","color":"aqua"}]
-execute if entity @a[tag=ModiOwner] run bossbar set lobbybar name ["",{"selector":"@a[tag=ModiOwner,limit=1]","bold":true},{"translate":"customizer.map_owner","color":"aqua"}]
+execute unless entity @a[tag=ModiOwner] run bossbar set lobbybar name [{"translate":"chat.confirm","color":"aqua","with":[{"translate":"chat.settings_map","color":"aqua"}]}]
+execute if entity @a[tag=ModiOwner] run bossbar set lobbybar name ["",{"translate":"customizer.map_owner","color":"aqua","with":[{"selector":"@a[tag=ModiOwner,limit=1]","bold":true}]}]
 bossbar set lobbybar color blue
 
 #> Pick owner

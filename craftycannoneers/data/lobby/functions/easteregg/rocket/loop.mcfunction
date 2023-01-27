@@ -33,7 +33,7 @@ execute at @s[scores={CmdData=102}] run item replace entity @s armor.head with a
 execute at @s[scores={CmdData=102}] run summon item ~ ~ ~ {Tags:["RRHeadItem"],Item:{id:"player_head",Count:1b,tag:{SkullOwner:YZEROgame}},PickupDelay:2000,Motion:[0.0d,0.1d,0.15d]}
 execute at @s[scores={CmdData=102}] run summon item ~ ~ ~ {Tags:["RRHeadItem"],Item:{id:"player_head",Count:1b,tag:{SkullOwner:Evtema3}},PickupDelay:2000,Motion:[0.1d,0.3d,0.1d]}
 execute at @s[scores={CmdData=102}] run summon item ~ ~ ~ {Tags:["RRHeadItem"],Item:{id:"player_head",Count:1b,tag:{SkullOwner:Chronos22}},PickupDelay:2000,Motion:[0.15d,0.2d,0.0d]}
-execute at @s[scores={CmdData=102}] run summon area_effect_cloud -57 -18 -21 {Tags:["RRText"],Duration:80,CustomNameVisible:1b,CustomName:'["",{"translate":"easter_egg.launch.should_try","color":"white"},{"translate":"easter_egg.launch.rocket","bold":true,"color":"blue"},{"translate":"easter_egg.launch.riders","bold":true,"color":"gold"},{"text":"! ;)","color":"white"}]'}
+execute at @s[scores={CmdData=102}] run summon area_effect_cloud -57 -18 -21 {Tags:["RRText"],Duration:80,CustomNameVisible:1b,CustomName:'["",{"translate":"easter_egg.launch.should_try","color":"white","with":[{"translate":"easter_egg.launch.rocket","bold":true,"color":"blue"},{"translate":"easter_egg.launch.riders","bold":true,"color":"gold"}]}]'}
 kill @s[scores={CmdData=185..}]
 execute at @s[scores={CmdData=..105}] run tp @s ~ ~0.15 ~
 execute at @s[scores={CmdData=..5}] run tp @s ~ ~0.6 ~

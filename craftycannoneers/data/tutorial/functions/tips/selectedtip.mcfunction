@@ -20,9 +20,9 @@ execute if entity @s[tag=Tip19] run tellraw @a[tag=!hideTips] ["",{"text":"<","c
 execute if entity @s[tag=Tip20] run tellraw @a[tag=!hideTips] ["",{"text":"<","color":"aqua"},{"translate":"tip.tip","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"translate":"tip.20","color":"gray"}]
 execute if entity @s[tag=Tip21] run tellraw @a[tag=!hideTips] ["",{"text":"<","color":"aqua"},{"translate":"tip.tip","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"translate":"tip.21","color":"gray"}]
 
-execute as @a[tag=!hideTips,scores={GamesPlayed=2..}] run tellraw @s ["",{"translate":"tip.note.1","color":"dark_aqua","with":[{"score":{"name":"@s","objective":"GamesPlayed"},"color":"dark_aqua"}]}]
-tellraw @a[tag=!hideTips,scores={GamesPlayed=1}] ["",{"translate":"tip.note.2","color":"dark_aqua"}]
-tellraw @a[tag=!hideTips,scores={GamesPlayed=..0}] ["",{"translate":"tip.note.3","color":"dark_aqua"},{"translate":"tip.here","color":"green","clickEvent":{"action":"run_command","value":"/trigger toggleTips"},"hoverEvent":{"action":"show_text","contents":[{"translate":"tip.here.hover"}]}},{"translate":"tip.note.4","color":"dark_aqua"}]
+execute as @a[tag=!hideTips,scores={GamesPlayed=2..}] run tellraw @s ["",{"translate":"tip.games","color":"dark_aqua","with":[{"score":{"name":"@s","objective":"GamesPlayed"},"color":"dark_aqua"}]}]
+tellraw @a[tag=!hideTips,scores={GamesPlayed=1}] ["",{"translate":"tip.game","color":"dark_aqua"}]
+tellraw @a[tag=!hideTips,scores={GamesPlayed=..0}] ["",{"translate":"tip.click","color":"dark_aqua","with":[{"translate":"tip.here","color":"green","clickEvent":{"action":"run_command","value":"/trigger toggleTips"},"hoverEvent":{"action":"show_text","contents":[{"translate":"tip.here.hover"}]}}]}]
 
 scoreboard players set $Tip CmdData 0
 
