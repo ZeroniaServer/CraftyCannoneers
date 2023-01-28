@@ -46,7 +46,7 @@ spawnpoint @a[team=Orange] 88 -26 55 90
 tp @a[team=Purple] 52 -26 -55 -90 0
 spawnpoint @a[team=Purple] 52 -26 -55 -90
 
-function arenaclear:villagertrades
+execute as @e[type=wandering_trader,tag=Trader] run function arenaclear:villagertrades
 
 execute as @a at @s run playsound entity.generic.explode master @s ~ ~ ~ 100 1.2
 
