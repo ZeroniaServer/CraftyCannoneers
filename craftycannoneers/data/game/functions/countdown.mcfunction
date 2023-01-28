@@ -8,8 +8,6 @@ execute store result bossbar lobbybar value run scoreboard players get $Countdow
 execute unless score $Countdown CmdData matches 10 if score $countSec CmdData matches 10 as @a at @s run playsound block.note_block.hat master @s ~ ~ ~ 0.5 1.1
 execute if score $countSec CmdData matches 20.. as @a at @s run playsound block.note_block.hat master @s ~ ~ ~ 1 0.9
 execute if score $Countdown CmdData matches 2..4 if score $countSec CmdData matches 20 as @a at @s run playsound block.note_block.hat master @s ~ ~ ~ 1 0.7
-execute if score $Countdown CmdData matches 2..4 if score $countSec CmdData matches 20 as @a at @s run playsound block.note_block.hat master @s ~ ~ ~ 1 0.7
-execute if score $Countdown CmdData matches 1 if score $countSec CmdData matches 1 as @a at @s run playsound block.note_block.hat master @s ~ ~ ~ 1 0.7
 execute if score $Countdown CmdData matches 1 if score $countSec CmdData matches 10 as @a at @s run playsound block.note_block.hat master @s ~ ~ ~ 1 0.7
 execute if score $Countdown CmdData matches 1 if score $countSec CmdData matches 20 as @a at @s run playsound block.note_block.hat master @s ~ ~ ~ 1 0.7
 execute if score $Countdown CmdData matches ..0 run function game:forcestart

@@ -9,5 +9,5 @@ execute at @s[predicate=!cannons:safezones/tutorial,scores={CmdData=5..}] run ga
 execute at @s[predicate=!cannons:safezones/tutorial,scores={CmdData=155}] run gamerule doFireTick false
 execute at @s[predicate=cannons:safezones/tutorial,scores={CmdData=5..}] unless score $gamestate CmdData matches 2.. run gamerule doFireTick true
 execute at @s[predicate=cannons:safezones/tutorial,scores={CmdData=155}] unless score $gamestate CmdData matches 2.. run gamerule doFireTick false
-execute at @s[scores={CmdData=505}] run function cannons:firering/extinguishfire
-kill @s[scores={CmdData=505..}]
+execute at @s[scores={CmdData=305}] run function cannons:firering/extinguishfire
+kill @s[scores={CmdData=305..}]

@@ -23,6 +23,8 @@ execute at @s if entity @s[predicate=cannons:safezones/orange/5] run tag @s add 
 #FIREBALL EFFECT
 execute if entity @s[tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run tag @e[type=armor_stand,tag=GasBubble,tag=!GasIgnite,distance=..6] add GasIgnite
 execute if entity @s[tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run summon marker ^ ^-2 ^3 {Tags:["RingOfFire"]}
+execute if entity @s[tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s if predicate game:onpurple run scoreboard players add $PFireCount CmdData 1
+execute if entity @s[tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s if predicate game:onpurple run scoreboard players add $OFireCount CmdData 1
 execute if entity @s[tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run scoreboard players operation @e[type=armor_stand,tag=GasBubble,tag=!GasIgnite,distance=..6] playerUUID = @s playerUUID
 scoreboard players operation @e[type=marker,tag=RingOfFire,tag=!HasUUID,limit=1] playerUUID = @s playerUUID
 data modify entity @e[type=marker,tag=RingOfFire,tag=!HasUUID,limit=1] CustomName set from entity @s CustomName
@@ -99,9 +101,10 @@ execute if entity @s[tag=bouncing] unless score @s bouncedelay matches 2.. at @s
 execute if entity @s[tag=bouncing] unless score @s bouncedelay matches 2.. at @s if block ~ ~ ~ spruce_slab[type=top] run scoreboard players set $bounce CmdData 1
 execute if entity @s[tag=bouncing] unless score @s bouncedelay matches 2.. at @s if block ~ ~-0.0625 ~ gray_carpet run scoreboard players set $bounce CmdData 1
 execute if entity @s[tag=bouncing] unless score @s bouncedelay matches 2.. at @s if block ~ ~-0.1875 ~ spruce_trapdoor[half=bottom] run scoreboard players set $bounce CmdData 1
+execute at @s[tag=bouncing] if score $bounce CmdData matches 1 run function cannons:bounce/randomdirection
 execute at @s[tag=bouncing] if score $bounce CmdData matches 1 run function cannons:bounce
 scoreboard players reset $bounce CmdData
-execute if entity @s[tag=bouncing] if score @s bouncedelay matches 12.. at @s run scoreboard players reset @s bouncedelay
+execute if entity @s[tag=bouncing] if score @s bouncedelay matches 16.. at @s run scoreboard players reset @s bouncedelay
 execute if entity @s[tag=Hit1,tag=BouncyCannonball,scores={doublehit=4..}] at @s run scoreboard players reset @s doublehit
 tag @s add Hit1
 
