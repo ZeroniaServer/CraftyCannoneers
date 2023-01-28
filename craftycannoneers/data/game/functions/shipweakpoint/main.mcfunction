@@ -13,11 +13,12 @@ execute if score $gamestate CmdData matches 2 if score $RemainWPOrange CmdData m
 execute if score $gamestate CmdData matches 2 if score $RemainWPOrange CmdData matches ..0 as @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] run title @s subtitle ["",{"translate":"weakpoint.plural","color":"red"},{"text":": ","color":"red"},{"score":{"name":"$RemainWPOrange","objective":"CmdData"},"color":"dark_red"}]
 execute if score $gamestate CmdData matches 2 if score $RemainWPPurple CmdData matches 1.. as @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] run title @s subtitle ["",{"translate":"weakpoint.plural","color":"green"},{"text":": ","color":"green"},{"score":{"name":"$RemainWPPurple","objective":"CmdData"},"color":"dark_green"}]
 execute if score $gamestate CmdData matches 2 if score $RemainWPPurple CmdData matches ..0 as @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] run title @s subtitle ["",{"translate":"weakpoint.plural","color":"red"},{"text":": ","color":"red"},{"score":{"name":"$RemainWPPurple","objective":"CmdData"},"color":"dark_red"}]
+
 execute if score $gamestate CmdData matches 2 as @a[tag=UsingSpyglass,scores={WPNotify=40}] run title @s title {"text":" "}
 execute if score $gamestate CmdData matches 2 as @a[tag=UsingSpyglass,scores={WPNotify=40}] run title @s subtitle {"text":" "}
 execute as @a[tag=!UsingSpyglass,tag=!SeeWeakpoint,scores={WPNotify=1..}] run title @s title {"text":" "}
 execute as @a[tag=!UsingSpyglass,tag=!SeeWeakpoint,scores={WPNotify=1..}] run title @s subtitle {"text":" "}
-scoreboard players reset @a[tag=!UsingSpyglass,scores={WPNotify=1..}] WPNotify
+scoreboard players reset @a[tag=!UsingSpyglass,scores={WPNotify=-1000..}] WPNotify
 #> X particles
 execute if score $gamestate CmdData matches 2 as @e[type=marker,tag=XParticle] at @s run function game:shipweakpoint/xparticle
 

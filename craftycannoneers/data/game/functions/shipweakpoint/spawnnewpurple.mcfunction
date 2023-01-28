@@ -25,6 +25,7 @@ execute as @e[type=marker,tag=SelectedWeakP,tag=Purple] at @s run summon marker 
 
 team join NoName @e[type=slime,tag=Weakpoint]
 
+scoreboard players set @a[team=Orange,scores={WPNotify=-1000..}] WPNotify -20
 execute if score $OrangeWP CmdData matches 6.. run tellraw @a[team=Orange] ["",{"translate":"weakpoint.destroyed.all_enemy","color":"aqua"},"\n"]
 execute if score $OrangeWP CmdData matches 6.. run tellraw @a[team=Purple] ["",{"translate":"weakpoint.destroyed.all_own","color":"red"},"\n"]
 
