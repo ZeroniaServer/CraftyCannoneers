@@ -1,5 +1,6 @@
 ##Processes individual items for the purpose of preventing item dropping
 ##Thanks to Cloud Wolf for the tip!
+kill @s[nbt={Item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:91}}}]
 kill @s[nbt={Item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:18}}}]
 kill @s[nbt={Item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:17}}}]
 
