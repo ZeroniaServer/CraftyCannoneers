@@ -1,6 +1,10 @@
 #> EXAMPLE TRADE
 #data modify entity @s Offers.Recipes append value {buy:{id:gold_nugget,Count:20,tag:{display:{Name:'[{"translate":"item.gold","italic":false,"color":"gold"}]',Lore:['[{"translate":"item.gold.lore.1","italic":false,"color":"white"}]','[{"translate":"item.gold.lore.2","italic":false,"color":"white"}]']}}},buyB:{},sell:{id:diamond_hoe,Count:1,tag:{CustomModelData:16,display:{}}},rewardExp:0b,maxUses:9999999}
 
+#> ACTUAL TRADES
+#Remove old trades
+data remove entity @s Offers.Recipes
+
 #Cannonball Trade
 data modify entity @s Offers.Recipes append value {buy:{id:gold_nugget,Count:8,tag:{display:{Name:'[{"translate":"item.gold","italic":false,"color":"gold"}]',Lore:['[{"translate":"item.gold.lore.1","italic":false,"color":"white"}]','[{"translate":"item.gold.lore.2","italic":false,"color":"white"}]']}}},buyB:{},sell:{id:diamond_hoe,Count:1,tag:{Unbreakable:1b,HideFlags:127,CustomModelData:16,Cannonball:1b,display:{Name:'[{"translate":"cannonball.normal","italic":false,"color":"dark_aqua"}]',Lore:['[{"translate":"cannonball.normal.lore","italic":false,"color":"white"}]']}}},rewardExp:0b,maxUses:9999999}
 
