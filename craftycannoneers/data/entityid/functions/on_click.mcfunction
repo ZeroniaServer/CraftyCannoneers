@@ -38,6 +38,8 @@ tag @a[limit=1,tag=clicker,tag=FillCB,predicate=cannons:holdbcb] add HoldBCB
 tag @a[limit=1,tag=clicker,tag=FillCB,predicate=cannons:holdpcb] add HoldPCB
 #Tracer
 tag @a[limit=1,tag=clicker,tag=FillCB,predicate=cannons:holdtcb] add HoldTCB
+#Tracer (Red)
+tag @a[limit=1,tag=clicker,tag=FillCB,predicate=cannons:holdtcb_red] add RedTCB
 #Golden
 tag @a[limit=1,tag=clicker,tag=FillCB,predicate=cannons:holdgocb] add HoldGOCB
 
