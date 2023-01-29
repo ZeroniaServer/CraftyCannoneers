@@ -1,6 +1,7 @@
 kill @e[type=armor_stand,tag=ModifierIcons]
 function arenaclear:traders
 function arenaclear:cannons
+function tutorial:cannondock/resetcannons
 function entityid:flush
 fill -53 -24 9 -55 -22 9 air
 tellraw @a [{"translate":"game.applied_updates","color":"green","with":[{"translate":"game.name","with":[{"translate":"game.crafty"},{"translate":"game.cannoneers"}]},{"text":"v1.1.0","color":"green"}]}]

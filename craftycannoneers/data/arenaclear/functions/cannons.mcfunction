@@ -1,4 +1,5 @@
-kill @e[type=#game:cannon,tag=cannon,tag=!Tutorial]
+execute as @e[type=#game:cannon,tag=cannon,tag=!Tutorial] at @s run function arenaclear:kill
+kill @e[type=marker,tag=villager,tag=!Tutorial]
 
 execute positioned 70 -28 -50 run function cannons:spawnpurple
 execute positioned 74 -28 -50 run function cannons:spawnpurple

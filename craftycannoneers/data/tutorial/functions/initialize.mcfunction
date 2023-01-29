@@ -1,22 +1,11 @@
-tp @e[type=#game:cannon,tag=cannon,tag=Tutorial] ~ ~-200 ~
-kill @e[type=#game:cannon,tag=cannon,tag=Tutorial]
 function tutorial:trainingdummies/despawnall
-tp @e[type=wandering_trader,tag=Teacher] ~ ~-200 ~
-kill @e[type=wandering_trader,tag=Teacher]
+execute as @e[type=wandering_trader,tag=Teacher] at @s run function arenaclear:kill
 kill @e[type=area_effect_cloud,tag=CannonText]
-tp @e[type=slime,tag=FakeWeakpoint] ~ ~-200 ~
-kill @e[type=slime,tag=FakeWeakpoint]
+execute as @e[type=slime,tag=FakeWeakpoint] at @s run function arenaclear:kill
 kill @e[type=marker,tag=FakeWeakpoint]
-tp @e[type=villager,tag=LChestFakeVillager] ~ ~-200 ~
-kill @e[type=villager,tag=LChestFakeVillager]
+execute as @e[type=villager,tag=LChestFakeVillager] at @s run function arenaclear:kill
 
-execute positioned -283 -24 -26 run function cannons:spawntutorial
-execute positioned -283 -24 -37 run function cannons:spawntutorial
-execute positioned -283 -24 -48 run function cannons:spawntutorial
-execute positioned -282 -19 -62 run function cannons:spawntutorial
-execute positioned -282 -19 -70 run function cannons:spawntutorial
-execute positioned -283 -24 -70 run function cannons:spawntutorial
-execute positioned -283 -24 -62 run function cannons:spawntutorial
+function tutorial:cannondock/resetcannons
 
 summon slime -378 -26 -33 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S1"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
 summon slime -377 -26 -40 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S2"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}

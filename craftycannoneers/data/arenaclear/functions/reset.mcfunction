@@ -1,5 +1,3 @@
-scoreboard players set $current CannonID 0
-
 execute as @e[type=marker,tag=LightFlash] at @s run fill ~ ~ ~ ~ ~ ~ air replace light
 kill @e[type=marker,tag=LightFlash]
 execute as @e[type=armor_stand,tag=CannonDisp,tag=!Tutorial] at @s run function cannons:resetgunpowder
