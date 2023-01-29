@@ -7,7 +7,7 @@ scoreboard players set @s gravity -250
 particle sweep_attack ~ ~ ~ 1 0.1 1 0 8 force
 particle cloud ~ ~ ~ 1 0.2 1 0.05 12 force
 
-execute at @s run playsound bounce master @a ~ ~ ~ 2 1
+execute at @s run function cannons:bounce/sound
 
 execute if score @s bounce matches 7.. at @s run summon marker ~ ~ ~ {Tags:["ExplodeRNG"]}
 execute if score @s bounce matches 7.. run scoreboard players set @e[type=marker,tag=ExplodeRNG] RNGmax 100
