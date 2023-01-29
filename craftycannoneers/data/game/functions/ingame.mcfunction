@@ -24,3 +24,6 @@ execute unless score $TimeLimit CmdData matches 42069.. run function game:ingame
 
 #> Game end criteria
 execute unless score $gamestate CmdData matches 3.. run function game:ingame/endcriteria
+
+#> Modifier loops
+execute if score $Storms CmdData matches 1 run function game:modifiers/seastorms/loop

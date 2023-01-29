@@ -1,0 +1,1 @@
+execute as @a[team=!Lobby,team=!Spectator,limit=1,nbt={OnGround:1b},sort=random,predicate=cannons:safezones/island] at @s run summon marker ~ ~ ~ {Tags:["LightningMarker","StormEntity"]}
