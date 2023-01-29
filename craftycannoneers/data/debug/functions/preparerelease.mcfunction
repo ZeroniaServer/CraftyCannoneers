@@ -7,3 +7,4 @@ function entityid:flush
 function tutorial:initialize
 function tutorial:tips/newset
 function debug:setup
+function debug:setcustomizerboard
