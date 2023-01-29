@@ -1,6 +1,6 @@
 execute at @s store result score @s CalcAir2 run fill ~200 ~ ~ ~ ~ ~100 air replace fire
 execute if entity @s[tag=Purple] run scoreboard players operation @s CalcAir2 /= $PFireCount CmdData
-execute if entity @s[tag=Orange] run scoreboard players operation @s CalcAir2 /= $PFireCount CmdData
+execute if entity @s[tag=Orange] run scoreboard players operation @s CalcAir2 /= $OFireCount CmdData
 execute if entity @s[tag=Purple,scores={CalcAir2=1..}] run scoreboard players operation $DamagePurple CmdData += @s CalcAir2
 execute if entity @s[tag=Orange,scores={CalcAir2=1..}] run scoreboard players operation $DamageOrange CmdData += @s CalcAir2
 execute if entity @s[tag=Purple,scores={CalcAir2=1..}] run scoreboard players operation $CurrentDamage CmdData += @s CalcAir2
