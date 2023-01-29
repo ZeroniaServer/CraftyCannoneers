@@ -10,7 +10,12 @@ execute if predicate game:boat/inboat run scoreboard players set $harpoon CmdDat
 execute if predicate game:inwater unless predicate game:boat/inboat run scoreboard players set $harpoon CmdData 1
 
 #> Call inventory-wide harpoon replacement function
-execute if score $harpoon CmdData matches 0..1 unless score @s harpoonstate = $harpoon CmdData run function game:harpoon/replace
+execute if score $harpoon CmdData matches 0..1 unless score @s harpoonstate = $harpoon CmdData run scoreboard players set $runreplace CmdData 1
+execute unless score $runreplace CmdData matches 1 if score $harpoon CmdData matches 0 if data entity @s Inventory[{tag:{Harpoon:2}}] run scoreboard players set $runreplace CmdData 1
+execute unless score $runreplace CmdData matches 1 if score $harpoon CmdData matches 0 if data entity @s Inventory[{tag:{Harpoon:3}}] run scoreboard players set $runreplace CmdData 1
+execute unless score $runreplace CmdData matches 1 if score $harpoon CmdData matches 1 if data entity @s Inventory[{tag:{Harpoon:1}}] run scoreboard players set $runreplace CmdData 1
+execute if score $runreplace CmdData matches 1 run function game:harpoon/replace
+scoreboard players reset $runreplace CmdData
 scoreboard players operation @s harpoonstate = $harpoon CmdData
 
 #> When you've used an active harpoon, replace it with an inactive harpoon (no riptide and no durability)
