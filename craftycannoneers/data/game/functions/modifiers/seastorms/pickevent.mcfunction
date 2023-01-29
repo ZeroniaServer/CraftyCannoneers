@@ -9,5 +9,3 @@ execute as @e[type=marker,tag=StormEventPicker,scores={RNGscore=1}] run function
 kill @e[type=marker,tag=StormEventPicker]
 
 scoreboard players set $StormTime CmdData 91
-
-say event picked
