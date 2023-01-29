@@ -76,3 +76,5 @@ scoreboard players set $purple hasArrows 0
 
 scoreboard players add @a[team=Orange] hasArrows 1
 scoreboard players add @a[team=Purple] hasArrows 1
+
+execute unless entity @e[type=marker,tag=RingOfFire,predicate=cannons:safezones/tutorial] run gamerule doFireTick false
