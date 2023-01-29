@@ -6,8 +6,6 @@ execute if entity @s[tag=Orange,scores={CalcAir2=1..}] run scoreboard players op
 execute if entity @s[tag=Purple,scores={CalcAir2=1..}] run scoreboard players operation $CurrentDamage CmdData += @s CalcAir2
 execute if entity @s[tag=Orange,scores={CalcAir2=1..}] run scoreboard players operation $CurrentDamage CmdData += @s CalcAir2
 scoreboard players reset @s CalcAir2
-scoreboard players set $PFireCount CmdData 0
-scoreboard players set $OFireCount CmdData 0
 execute at @s run tp @s ~ ~1 ~
 scoreboard players add @s CmdData 1
 
@@ -28,4 +26,6 @@ execute if entity @s[tag=Orange] if score $DamageOrange CmdData >= $OrangeHP Cmd
 scoreboard players reset $CurrentDamage CmdData
 
 execute unless entity @s[scores={CmdData=50..}] at @s run function cannons:firering/extinguishloop
+execute if entity @s[scores={CmdData=50..}] run scoreboard players set $PFireCount CmdData 0
+execute if entity @s[scores={CmdData=50..}] run scoreboard players set $OFireCount CmdData 0
 kill @s[scores={CmdData=50..}]
