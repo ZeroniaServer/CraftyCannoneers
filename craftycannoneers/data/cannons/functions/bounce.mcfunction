@@ -1,6 +1,5 @@
-#>TODO: ADD SELECTORS TO THESE!!!
-execute at @s if entity @a[distance=..12] run function cannons:bounce/towardsplayer
-execute at @s unless entity @a[distance=..12] run function cannons:bounce/randomdirection
+execute at @s if entity @a[team=!Lobby,team=!Spectator,distance=..20] run function cannons:bounce/towardsplayer
+execute at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..20] run function cannons:bounce/randomdirection
 
 
 scoreboard players add @s drag 4

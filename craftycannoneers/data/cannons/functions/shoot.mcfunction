@@ -7,7 +7,7 @@ execute at @s[tag=CannonballCluster,tag=!AccuracySet] run function cannons:setac
 execute at @s[tag=CannonballCluster,tag=!0,tag=!clusteracc] run function cannons:clusteraccuracy
 scoreboard players set @s[tag=CannonballCluster] doublehit 69
 
-execute at @s[tag=ChainCannonball,tag=AccuracySet] run tp @s ~ ~ ~ ~20 ~
+execute at @s[tag=ChainCannonball,tag=AccuracySet] run tp @s ~ ~ ~ ~40 ~
 execute at @s[tag=ChainCannonball,tag=!AccuracySet] run function cannons:setaccuracy
 execute at @s[tag=ChainCannonball,tag=!AccuracySet] run function cannons:chainaccuracy
 execute at @s[tag=PlayerCannonball,tag=!AccuracySet] run function cannons:setaccuracy
@@ -21,6 +21,7 @@ execute at @s run function cannons:cannonballrotation
 execute at @s[tag=!CannonballShot,tag=!PlayerCannonball] run function cannons:cannonballtick
 execute at @s[tag=!CannonballShot,tag=PlayerCannonball] run function cannons:playercannonballtick
 execute at @s[tag=CannonballShot] run function cannons:drag
+execute at @s[tag=BouncyCannonball,tag=Hit1] run function cannons:bounce/bouncedrag
 execute store result entity @s Air double 1 run scoreboard players get $toggle CmdData
 
 execute at @s[tag=ChainCannonball,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^1 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
