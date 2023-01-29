@@ -121,6 +121,32 @@ setblock 64 300 -16 lightning_rod[facing=south]
 setblock 80 300 -16 lightning_rod[facing=south]
 setblock 96 300 -16 lightning_rod[facing=south]
 setblock 80 300 -32 lightning_rod[facing=south]
+setblock 93 300 -12 lightning_rod[facing=south]
+setblock 95 300 -12 lightning_rod[facing=south]
+setblock 47 300 12 lightning_rod[facing=south]
+setblock 45 300 12 lightning_rod[facing=south]
+
+#Purple Ship
+setblock 32 300 -64 lightning_rod[facing=south]
+setblock 48 300 -64 lightning_rod[facing=south]
+setblock 64 300 -64 lightning_rod[facing=south]
+setblock 80 300 -64 lightning_rod[facing=south]
+setblock 96 300 -64 lightning_rod[facing=south]
+setblock 48 300 -48 lightning_rod[facing=south]
+setblock 64 300 -48 lightning_rod[facing=south]
+setblock 80 300 -48 lightning_rod[facing=south]
+setblock 64 300 -80 lightning_rod[facing=south]
+
+#Orange Ship
+setblock 32 300 48 lightning_rod[facing=south]
+setblock 48 300 48 lightning_rod[facing=south]
+setblock 64 300 48 lightning_rod[facing=south]
+setblock 80 300 48 lightning_rod[facing=south]
+setblock 96 300 48 lightning_rod[facing=south]
+setblock 48 300 32 lightning_rod[facing=south]
+setblock 64 300 32 lightning_rod[facing=south]
+setblock 80 300 32 lightning_rod[facing=south]
+setblock 64 300 64 lightning_rod[facing=south]
 
 #Outer Islands
 setblock -16 300 256 lightning_rod[facing=south]
