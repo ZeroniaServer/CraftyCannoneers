@@ -24,9 +24,16 @@ execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] as @a[tag=UtilK
 execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] run tag @a[tag=UtilKilled,tag=!damaged,distance=..5] add damaged
 execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] as @a[tag=UtilKilled,tag=!damaged,distance=..6] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:0b,Duration:1,ShowParticles:0b}]}
 execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] run tag @a remove damaged
-#> TODO REDUCE THESE @YZERO
-execute if entity @s[tag=GoldImpact] as @a[tag=UtilKilled,distance=..6] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:3b,Duration:1,ShowParticles:0b}]}
-execute if entity @s[tag=GasPower] as @a[tag=UtilKilled,distance=..6] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:3b,Duration:1,ShowParticles:0b}]}
+
+# gold don't instakill players on their own ships
+execute if entity @s[tag=GoldImpact] as @a[tag=UtilKilled,distance=..6] unless entity @s[predicate=game:onorange,team=Orange] unless entity @s[predicate=game:onpurple,team=Purple] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:3b,Duration:1,ShowParticles:0b}]}
+execute if entity @s[tag=GoldImpact] as @a[tag=UtilKilled,distance=..6] if entity @s[predicate=game:onorange,team=Orange] run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:2b,Duration:1,ShowParticles:0b}]}
+execute if entity @s[tag=GoldImpact] as @a[tag=UtilKilled,distance=..6] if entity @s[predicate=game:onpurple,team=Purple] run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:2b,Duration:1,ShowParticles:0b}]}
+
+# gas explosions don't instakill players on their own ships
+execute if entity @s[tag=GasPower] as @a[tag=UtilKilled,distance=..6] unless entity @s[predicate=game:onorange,team=Orange] unless entity @s[predicate=game:onpurple,team=Purple] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:3b,Duration:1,ShowParticles:0b}]}
+execute if entity @s[tag=GasPower] as @a[tag=UtilKilled,distance=..6] if entity @s[predicate=game:onorange,team=Orange] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:2b,Duration:1,ShowParticles:0b}]}
+execute if entity @s[tag=GasPower] as @a[tag=UtilKilled,distance=..6] if entity @s[predicate=game:onpurple,team=Purple] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:2b,Duration:1,ShowParticles:0b}]}
 
 # clusters don't instakill players on their own ships
 execute if entity @s[tag=cluster] as @a[tag=UtilKilled,distance=..6] unless entity @s[predicate=game:onorange,team=Orange] unless entity @s[predicate=game:onpurple,team=Purple] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:3b,Duration:1,ShowParticles:0b}]}
