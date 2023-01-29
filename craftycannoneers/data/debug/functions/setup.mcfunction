@@ -108,6 +108,9 @@ scoreboard objectives add dropArrow minecraft.dropped:minecraft.arrow
 scoreboard objectives add useCrossbow dummy
 scoreboard objectives add PCBCooldown dummy
 scoreboard objectives add WPNotify dummy
+scoreboard objectives add harpoonstate dummy
+scoreboard objectives add harpoonstate2 dummy
+scoreboard objectives add climb minecraft.custom:minecraft.climb_one_cm
 
 #> Parkour
 scoreboard objectives add parkourMins dummy

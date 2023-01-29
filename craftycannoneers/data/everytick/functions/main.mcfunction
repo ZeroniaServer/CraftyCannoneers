@@ -54,8 +54,9 @@ execute if score $gamestate CmdData matches 3 run function game:gameend
 execute if score $gamestate CmdData matches 2 run function game:ingame
 execute if score $gamestate CmdData matches 2.. run function game:duringgame
 
-#> Reset eyeclick
+#> Reset eyeclick/climb
 scoreboard players reset @a[scores={eyeclick=1..}] eyeclick
+scoreboard players reset @a[scores={climb=1..}] climb
 
 #> Cannonball displays
 execute as @e[type=armor_stand,tag=CannonballDeco] run function lobby:cbdisplays/main

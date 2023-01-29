@@ -11,7 +11,7 @@ function game:raidhorn/main
 execute unless score $gamestate CmdData matches 3 run function game:ingame/shipeffects
 
 #> Harpoon
-function game:ingame/harpoon
+execute if data entity @s Inventory[{id:"minecraft:trident"}] run function game:ingame/harpoon
 
 #> Player stuck
 function game:ingame/playerstuck

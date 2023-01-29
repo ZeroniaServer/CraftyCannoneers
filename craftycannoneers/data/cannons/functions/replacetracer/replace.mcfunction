@@ -26,4 +26,4 @@ data remove storage craftycannoneers:inventory Items[]
 data remove storage craftycannoneers:inventory Tracer
 scoreboard players reset $foundtracer CmdData
 setblock 0 300 0 air
-# function inventory:clear
+function inventory:clear
