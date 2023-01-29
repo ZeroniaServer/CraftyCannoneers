@@ -12,6 +12,19 @@
         {
           "function": "minecraft:set_nbt",
           "tag": "{HideFlags:127,CustomModelData:22,Cannonball:2b,Unbreakable:1b,display:{Name:'[{\"translate\":\"cannonball.hot\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"cannonball.hot.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"cannonball.hot.lore.2\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"cannonball.hot.lore.3\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"translate\":\"cannonball.hot.lore.4\",\"italic\":false,\"color\":\"aqua\"}]','[{\"translate\":\"cannonball.hot.lore.5\",\"italic\":false,\"color\":\"aqua\"}]']}}"
+        },
+        {
+            "function": "minecraft:set_nbt",
+            "tag": "{NoDrop:1b}",
+            "conditions": [
+                {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "team": "Lobby"
+                    }
+                }
+            ]
         }
       ]
     }

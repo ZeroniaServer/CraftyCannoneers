@@ -12,6 +12,19 @@
         {
           "function": "minecraft:set_nbt",
           "tag": "{HideFlags:127,CustomModelData:73,Unbreakable:1b,Cannonball:9b,display:{Name:'[{\"translate\":\"cannonball.golden\",\"color\":\"gold\",\"italic\":false}]',Lore:['[{\"translate\":\"cannonball.golden.lore.1\",\"italic\":false,\"color\":\"dark_red\",\"underlined\":true},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\",\"underlined\":false}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"translate\":\"cannonball.golden.lore.2\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"translate\":\"cannonball.golden.lore.3\",\"italic\":false,\"color\":\"aqua\"}]','[{\"translate\":\"cannonball.golden.lore.4\",\"italic\":false,\"color\":\"aqua\"}]','[{\"translate\":\"cannonball.golden.lore.5\",\"italic\":false,\"color\":\"aqua\"}]']}}"
+        },
+        {
+            "function": "minecraft:set_nbt",
+            "tag": "{NoDrop:1b}",
+            "conditions": [
+                {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "team": "Lobby"
+                    }
+                }
+            ]
         }
       ]
     }
