@@ -109,7 +109,7 @@ scoreboard objectives add useCrossbow dummy
 scoreboard objectives add PCBCooldown dummy
 scoreboard objectives add WPNotify dummy
 scoreboard objectives add harpoonstate dummy
-scoreboard objectives add harpoonstate2 dummy
+scoreboard objectives add boardstate dummy
 scoreboard objectives add climb minecraft.custom:minecraft.climb_one_cm
 
 #> Parkour

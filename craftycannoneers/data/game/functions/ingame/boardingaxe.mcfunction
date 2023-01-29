@@ -1,9 +1,7 @@
-#boarding axe knockback
-item modify entity @s[team=Orange,predicate=game:onpurple,predicate=game:boardingaxe_mainhand,predicate=!game:kb_main] weapon.mainhand game:kb
-item modify entity @s[team=Orange,predicate=!game:onpurple,predicate=game:boardingaxe_mainhand,predicate=game:kb_main] weapon.mainhand game:nokb
-item modify entity @s[team=Orange,predicate=game:onpurple,predicate=game:boardingaxe_offhand,predicate=!game:kb_offhand] weapon.offhand game:kb
-item modify entity @s[team=Orange,predicate=!game:onpurple,predicate=game:boardingaxe_offhand,predicate=game:kb_offhand] weapon.offhand game:nokb
-item modify entity @s[team=Purple,predicate=game:onorange,predicate=game:boardingaxe_mainhand,predicate=!game:kb_main] weapon.mainhand game:kb
-item modify entity @s[team=Purple,predicate=!game:onorange,predicate=game:boardingaxe_mainhand,predicate=game:kb_main] weapon.mainhand game:nokb
-item modify entity @s[team=Purple,predicate=game:onorange,predicate=game:boardingaxe_offhand,predicate=!game:kb_offhand] weapon.offhand game:kb
-item modify entity @s[team=Purple,predicate=!game:onorange,predicate=game:boardingaxe_offhand,predicate=game:kb_offhand] weapon.offhand game:nokb
+#> Boarding Axe gains/loses knockback depending on if player boards/leaves enemy ship
+scoreboard players set $boarding CmdData 0
+execute if entity @s[team=Orange,predicate=game:onpurple] run scoreboard players set $boarding CmdData 1
+execute if entity @s[team=Purple,predicate=game:onorange] run scoreboard players set $boarding CmdData 1
+execute unless score @s boardstate = $boarding CmdData run function game:boardingaxe/replace
+scoreboard players operation @s boardstate = $boarding CmdData
+scoreboard players reset $boarding CmdData

@@ -2,7 +2,7 @@
 function game:ingame/water
 
 #> Boarding Axe
-function game:ingame/boardingaxe
+execute if data entity @s Inventory[{id:"minecraft:stone_axe"}] run function game:ingame/boardingaxe
 
 #> Raid Horn
 function game:raidhorn/main
@@ -12,6 +12,7 @@ execute unless score $gamestate CmdData matches 3 run function game:ingame/shipe
 
 #> Harpoon
 execute if data entity @s Inventory[{id:"minecraft:trident"}] run function game:ingame/harpoon
+scoreboard players reset @s[scores={useharpoon=1..}] useharpoon
 
 #> Player stuck
 function game:ingame/playerstuck
