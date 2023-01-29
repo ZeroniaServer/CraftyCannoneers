@@ -9,8 +9,9 @@ particle block_marker green_concrete ~ ~ ~ 0 0 0.5 0 5 force @a[predicate=!game:
 particle block_marker lime_concrete ~ ~ ~ 0 0.5 0.5 0 20 force @a[predicate=game:tutorialbounds,tag=CurrentTracer2]
 particle block_marker green_concrete ~ ~ ~ 0.5 0 0 0 5 force @a[predicate=game:tutorialbounds,tag=CurrentTracer2]
 
-tag @a[tag=CurrentTracer2,tag=fullinv] add NeedsTracer
-execute unless score $NoTracers CmdData matches 1 as @a[tag=CurrentTracer2] unless entity @s[team=Lobby,tag=!OnDock] run function cannons:replacetracer/replace
+tag @a[tag=CurrentTracer2,tag=fullinv,limit=1] add NeedsTracer
+execute unless score $NoTracers CmdData matches 1 as @a[tag=CurrentTracer2,limit=1] unless entity @s[team=Lobby,tag=!OnDock] run function cannons:replacetracer/replace
+execute if score $NoTracers CmdData matches 1 as @a[team=Lobby,tag=CurrentTracer2,tag=OnDock,limit=1] run function cannons:replacetracer/replace
 
 tag @a remove CurrentTracer2
 scoreboard players reset $currentTracer2 playerUUID
