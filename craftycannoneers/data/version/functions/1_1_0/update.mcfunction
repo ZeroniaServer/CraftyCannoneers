@@ -2,6 +2,9 @@ kill @e[type=armor_stand,tag=ModifierIcons]
 function arenaclear:traders
 function arenaclear:cannons
 function tutorial:cannondock/resetcannons
+forceload add -413 -379 -260 -15
+forceload add -260 -379 -130 -15
+forceload add -130 -379 -95 -15
 function entityid:flush
 fill -53 -24 9 -55 -22 9 air
 tellraw @a [{"translate":"game.applied_updates","color":"green","with":[{"translate":"game.name","with":[{"translate":"game.crafty"},{"translate":"game.cannoneers"}]},{"text":"v1.1.0","color":"green"}]}]

@@ -16,7 +16,9 @@ summon slime -382 -10 -54 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S6"],In
 summon slime -382 -14 -37 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S7"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b}
 execute as @e[type=slime,tag=FakeWeakpoint] at @s run function tutorial:spawnweakpointmarkers
 
-forceload add -413 -379 -95 -15
+forceload add -413 -379 -260 -15
+forceload add -260 -379 -130 -15
+forceload add -130 -379 -95 -15
 
 setblock -282 -24 -26 end_stone_brick_wall
 fill -283 -24 -26 -284 -24 -26 barrier
