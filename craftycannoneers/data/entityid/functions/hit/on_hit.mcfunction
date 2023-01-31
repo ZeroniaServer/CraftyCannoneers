@@ -1,0 +1,1 @@
+execute at @s[type=husk,tag=TDZombie] run function tutorial:trainingdummies/hurtdetection

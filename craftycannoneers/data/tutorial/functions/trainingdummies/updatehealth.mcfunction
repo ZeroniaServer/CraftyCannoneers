@@ -1,3 +1,4 @@
+scoreboard players add @s CmdData 1
 execute at @s[scores={CmdData=19}] run data merge entity @e[type=area_effect_cloud,tag=NameTag,distance=..2,limit=1,sort=nearest] {CustomName:'["",{"text":"❤ ","color":"red"},{"text":"19","color":"green"},{"text":"/","color":"gray"},{"text":"20","color":"dark_green"}]'}
 execute at @s[scores={CmdData=18}] run data merge entity @e[type=area_effect_cloud,tag=NameTag,distance=..2,limit=1,sort=nearest] {CustomName:'["",{"text":"❤ ","color":"red"},{"text":"18","color":"green"},{"text":"/","color":"gray"},{"text":"20","color":"dark_green"}]'}
 execute at @s[scores={CmdData=17}] run data merge entity @e[type=area_effect_cloud,tag=NameTag,distance=..2,limit=1,sort=nearest] {CustomName:'["",{"text":"❤ ","color":"red"},{"text":"17","color":"green"},{"text":"/","color":"gray"},{"text":"20","color":"dark_green"}]'}
@@ -17,4 +18,3 @@ execute at @s[scores={CmdData=4}] run data merge entity @e[type=area_effect_clou
 execute at @s[scores={CmdData=3}] run data merge entity @e[type=area_effect_cloud,tag=NameTag,distance=..2,limit=1,sort=nearest] {CustomName:'["",{"text":"❤ ","color":"red"},{"text":"03","color":"red"},{"text":"/","color":"gray"},{"text":"20","color":"dark_green"}]'}
 execute at @s[scores={CmdData=2}] run data merge entity @e[type=area_effect_cloud,tag=NameTag,distance=..2,limit=1,sort=nearest] {CustomName:'["",{"text":"❤ ","color":"red"},{"text":"02","color":"red"},{"text":"/","color":"gray"},{"text":"20","color":"dark_green"}]'}
 execute at @s[scores={CmdData=1}] run data merge entity @e[type=area_effect_cloud,tag=NameTag,distance=..2,limit=1,sort=nearest] {CustomName:'["",{"text":"❤ ","color":"red"},{"text":"01","color":"red"},{"text":"/","color":"gray"},{"text":"20","color":"dark_green"}]'}
-tag @s remove DummyHurt

@@ -1063,6 +1063,6 @@
     ]
   ],
   "rewards": {
-    "function": "entityid:test_click"
+    "function": "entityid:click/test_click"
   }
 }
