@@ -2,10 +2,10 @@
 execute as @e[type=armor_stand,tag=BoatAS] at @s run function game:boat/banner
 
 #> Tag player in boat
-tag @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat1] add inBoat1
-tag @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat2] add inBoat2
-tag @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat3] add inBoat3
-tag @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat4] add inBoat4
+tag @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat1,limit=1] add inBoat1
+tag @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat2,limit=1] add inBoat2
+tag @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat3,limit=1] add inBoat3
+tag @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat4,limit=1] add inBoat4
 execute as @a unless entity @s[team=!Lobby,team=!Spectator,team=!Developer] run function game:boat/removetags
 
 #> Boat
