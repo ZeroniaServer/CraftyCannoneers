@@ -22,7 +22,7 @@ execute if score $foundtracer CmdData matches 1.. run function inventory:load
 execute unless score $foundtracer CmdData matches 1.. run function cannons:replacetracer/givenew
 
 #> Cleanup
-data remove storage craftycannoneers:inventory Items[]
+data remove storage craftycannoneers:inventory Items
 data remove storage craftycannoneers:inventory Tracer
 scoreboard players reset $foundtracer CmdData
 setblock 0 300 0 air

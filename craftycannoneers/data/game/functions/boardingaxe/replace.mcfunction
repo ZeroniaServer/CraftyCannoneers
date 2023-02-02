@@ -20,7 +20,7 @@ function game:boardingaxe/bottom
 function inventory:load
 
 #> Cleanup
-data remove storage craftycannoneers:inventory Items[]
+data remove storage craftycannoneers:inventory Items
 data remove storage craftycannoneers:inventory BoardingAxe
 setblock 0 300 0 air
 scoreboard players reset $foundaxe CmdData

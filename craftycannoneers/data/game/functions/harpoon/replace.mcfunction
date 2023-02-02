@@ -20,7 +20,7 @@ function game:harpoon/bottom
 function inventory:load
 
 #> Cleanup
-data remove storage craftycannoneers:inventory Items[]
+data remove storage craftycannoneers:inventory Items
 data remove storage craftycannoneers:inventory Harpoon
 setblock 0 300 0 air
 scoreboard players reset $foundharpoon CmdData

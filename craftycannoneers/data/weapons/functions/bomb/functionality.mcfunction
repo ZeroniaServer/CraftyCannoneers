@@ -13,6 +13,8 @@ execute as @e[type=armor_stand,tag=Bomb,tag=WaterKill,scores={CmdData=1}] at @s 
 execute as @e[type=armor_stand,tag=Bomb,tag=WaterKill,scores={CmdData=2}] at @s run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.8 1.6
 execute as @e[type=armor_stand,tag=Bomb,tag=WaterKill,scores={CmdData=30..}] at @s run function weapons:bomb/waterkill
 
+#> Air toggle
+execute store result entity @s Air short 1 run scoreboard players get $toggle CmdData
 
 #> Kaboom
 execute at @s[tag=Kaboom] run function weapons:bomb/kaboom
