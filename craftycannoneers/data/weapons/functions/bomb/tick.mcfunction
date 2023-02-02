@@ -1,5 +1,5 @@
 execute at @s run tp @s ~ ~1.62 ~
-execute at @s run tp @s ^ ^ ^1
+execute at @s if block ^ ^ ^1 #cannons:cannonball_passable run tp @s ^ ^ ^1
 
 data modify storage craftycannoneers:blastbomb Pos set from entity @s Pos
 execute store result score @s x run data get storage craftycannoneers:blastbomb Pos[0] 1000000
