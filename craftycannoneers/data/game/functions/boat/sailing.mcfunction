@@ -1,4 +1,4 @@
-#> 7 tick delay before checking for dismounts (prevents automatic dismounting)
+#> Prevent automatic dismounting via 7 tick delay
 execute unless score @s click matches 7.. run scoreboard players add @s click 1
 execute if score @s click matches 7.. run tag @s add DismountCheck
 
