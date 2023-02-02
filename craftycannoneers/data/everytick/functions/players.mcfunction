@@ -31,8 +31,46 @@ function everytick:leavegame
 #> If player has moved
 execute if entity @s[tag=hasMoved] run function everytick:hasmoved
 
+#> Servermode team join
+#Orange
+execute if score $servermode CmdData matches 1 run scoreboard players enable @s joinorange
+execute unless score $servermode CmdData matches 1 run trigger joinorange set 0
+
+execute unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 unless score $InOrange CmdData > $InPurple CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData run tag @s[team=!Orange,scores={joinorange=1..}] add JoinOrange
+execute unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 if score $InOrange CmdData >= $MaxTeamSize CmdData if entity @s[team=!Orange,scores={joinorange=1..},tag=!tryJoinOrange] run function lobby:joinpads/orange/full
+execute unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 if score $InOrange CmdData > $InPurple CmdData if entity @s[team=!Orange,scores={joinorange=1..},tag=!tryJoinOrange] run function lobby:joinpads/orange/imbalanced
+
+execute unless score $gamestate CmdData matches 0..2 if entity @s[scores={joinorange=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
+execute if entity @s[team=Orange,scores={joinorange=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_joined","color":"red"}]
+
+scoreboard players reset @s[scores={joinorange=1..}] joinorange
+
+#Purple
+execute if score $servermode CmdData matches 1 run scoreboard players enable @s joinpurple
+execute unless score $servermode CmdData matches 1 run trigger joinpurple set 0
+
+execute unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 unless score $InPurple CmdData > $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData run tag @s[team=!Purple,scores={joinpurple=1..}] add JoinPurple
+execute unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 if score $InPurple CmdData >= $MaxTeamSize CmdData if entity @s[team=!Purple,scores={joinpurple=1..},tag=!tryJoinPurple] run function lobby:joinpads/purple/full
+execute unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 if score $InPurple CmdData > $InOrange CmdData if entity @s[team=!Purple,scores={joinpurple=1..},tag=!tryJoinPurple] run function lobby:joinpads/purple/imbalanced
+
+execute unless score $gamestate CmdData matches 0..2 if entity @s[scores={joinpurple=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
+execute if entity @s[team=Purple,scores={joinpurple=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_joined","color":"red"}]
+
+scoreboard players reset @s[scores={joinpurple=1..}] joinpurple
+
+#Spectator
+execute if score $servermode CmdData matches 1 run scoreboard players enable @s spectate
+execute unless score $servermode CmdData matches 1 run trigger spectate set 0
+
+execute unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 run tag @s[team=!Spectator,scores={spectate=1..}] add JoinSpec
+
+execute unless score $gamestate CmdData matches 0..2 if entity @s[scores={spectate=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_spectate","color":"red"}]
+execute if entity @s[team=Spectator,scores={spectate=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_spectating","color":"red"}]
+
+scoreboard players reset @s[scores={spectate=1..}] spectate
+
 #> Join teams
-execute at @s[team=Lobby] run function lobby:joinpads/jointeams
+function lobby:joinpads/jointeams
 
 #> Spectator
 execute at @s[team=Spectator] run function everytick:spectator
