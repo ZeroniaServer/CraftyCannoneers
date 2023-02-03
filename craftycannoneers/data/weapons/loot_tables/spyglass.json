@@ -11,7 +11,7 @@
       "functions": [
         {
           "function": "minecraft:set_nbt",
-          "tag": "{NoDrop:1b,display:{Name:'[{\"translate\":\"item.spyglass\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.spyglass.lore.1\",\"italic\":false,\"color\":\"aqua\"}]','[{\"translate\":\"item.spyglass.lore.2\",\"italic\":false,\"color\":\"aqua\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]']}}"
+          "tag": "{HideFlags:7,NoDrop:1b,Enchantments:[{id:\"vanishing_curse\",lvl:1}],display:{Name:'[{\"translate\":\"item.spyglass\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.spyglass.lore.1\",\"italic\":false,\"color\":\"aqua\"}]','[{\"translate\":\"item.spyglass.lore.2\",\"italic\":false,\"color\":\"aqua\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]']}}"
         }
       ]
     }

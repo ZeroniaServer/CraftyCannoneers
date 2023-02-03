@@ -3,11 +3,11 @@ fill -53 -24 9 -55 -22 9 air
 
 item replace entity @e[type=glow_item_frame,tag=MapEntity,limit=1] container.0 with diamond_hoe{CustomModelData:76}
 
-item replace entity @e[type=armor_stand,tag=TimeIcon] armor.head with diamond_hoe{CustomModelData:35}
-item replace entity @e[type=armor_stand,tag=HPIcon] armor.head with diamond_hoe{CustomModelData:36}
-item replace entity @e[type=armor_stand,tag=ConfirmIcon] armor.head with diamond_hoe{CustomModelData:37}
-item replace entity @e[type=armor_stand,tag=DefaultsIcon] armor.head with diamond_hoe{CustomModelData:38}
-item replace entity @e[type=armor_stand,tag=ModiIcon] armor.head with diamond_hoe{CustomModelData:83}
+item replace entity @e[type=armor_stand,tag=TimeIcon,limit=1] armor.head with diamond_hoe{CustomModelData:35}
+item replace entity @e[type=armor_stand,tag=HPIcon,limit=1] armor.head with diamond_hoe{CustomModelData:36}
+item replace entity @e[type=armor_stand,tag=ConfirmIcon,limit=1] armor.head with diamond_hoe{CustomModelData:37}
+item replace entity @e[type=armor_stand,tag=DefaultsIcon,limit=1] armor.head with diamond_hoe{CustomModelData:38}
+item replace entity @e[type=armor_stand,tag=ModiIcon,limit=1] armor.head with diamond_hoe{CustomModelData:83}
 
 fill -54 -24 9 -55 -23 9 air
 setblock -53 -24 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"red",Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 6497"}}',Text2:'{"text":""}',Text3:'{"text":""}',Text4:'{"translate":"customizer.restore_default","color":"#FF0003"}'}

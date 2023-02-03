@@ -11,7 +11,7 @@
       "functions": [
         {
           "function": "minecraft:set_nbt",
-          "tag": "{NoDrop:1b,Unbreakable:1b,display:{Name:'[{\"translate\":\"item.cutlass\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+          "tag": "{HideFlags:7,NoDrop:1b,Enchantments:[{id:\"vanishing_curse\",lvl:1}],Unbreakable:1b,display:{Name:'[{\"translate\":\"item.cutlass\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
         }
       ]
     }

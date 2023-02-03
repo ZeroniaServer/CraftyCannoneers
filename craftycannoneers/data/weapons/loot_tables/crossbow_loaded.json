@@ -11,7 +11,7 @@
       "functions": [
         {
           "function": "minecraft:set_nbt",
-          "tag": "{NoDrop:1b,Unbreakable:1b,display:{Name:'[{\"translate\":\"item.crossbow\",\"italic\":false,\"color\":\"dark_aqua\"}]'},Enchantments:[{id:\"quick_charge\",lvl:2}],HideFlags:7,Charged:1b,ChargedProjectiles:[{id:\"minecraft:arrow\",Count:1b,tag:{display:{Name:'[{\"translate\":\"item.minecraft.arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}}]}"
+          "tag": "{NoDrop:1b,Unbreakable:1b,display:{Name:'[{\"translate\":\"item.crossbow\",\"italic\":false,\"color\":\"dark_aqua\"}]'},Enchantments:[{id:\"quick_charge\",lvl:2},{id:\"vanishing_curse\",lvl:1}],HideFlags:7,Charged:1b,ChargedProjectiles:[{id:\"minecraft:arrow\",Count:1b,tag:{display:{Name:'[{\"translate\":\"item.minecraft.arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}}]}"
         }
       ]
     }
