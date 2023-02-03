@@ -1,6 +1,7 @@
 function game:forcestop
 tag @a add LeaveGame
 scoreboard players reset * CannonID
+scoreboard players reset * playerUUID
 scoreboard players add $current CannonID 0
 function arenaclear:fullreset
 function lobby:customizer/defaults
@@ -11,4 +12,4 @@ function tutorial:tips/newset
 function debug:setup
 function debug:setcustomizerboard
 function debug:noservermode
-scoreboard players set $forcedmodes CmdData 0
+scoreboard players set $forcedmodes CmdData 1
