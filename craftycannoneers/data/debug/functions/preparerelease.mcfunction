@@ -10,3 +10,5 @@ function tutorial:initialize
 function tutorial:tips/newset
 function debug:setup
 function debug:setcustomizerboard
+function debug:noservermode
+scoreboard players set $forcedmodes CmdData 0
