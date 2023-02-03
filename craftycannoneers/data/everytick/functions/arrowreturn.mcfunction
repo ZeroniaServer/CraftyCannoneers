@@ -1,4 +1,6 @@
 execute store result score @s[tag=!arrowProcessed] playerUUID run data get entity @s Thrower[0]
+# execute unless data entity @s Thrower[0] store result score @s[tag=!arrowProcessed] playerUUID run data get entity @s Owner[0]
+# tellraw @a [{"score":{"name":"@s","objective":"playerUUID"}}]
 scoreboard players operation $tempuuid playerUUID = @s playerUUID
 
 execute as @a[team=!Lobby,team=!Spectator,predicate=game:matches_uuid,tag=!fullinv] if score @s arrowsToShoot matches 1.. if score @s hasArrows < @s arrowsToShoot run tag @s add arrowActionable

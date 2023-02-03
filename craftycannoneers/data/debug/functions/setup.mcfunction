@@ -6,7 +6,8 @@ forceload add -385 -17 -416 -96
 
 #> Gamerules
 gamerule mobGriefing true
-gamerule keepInventory true
+execute unless score $gamestate CmdData matches 2 run gamerule keepInventory true
+execute if score $gamestate CmdData matches 2 unless score $GraveRobbers CmdData matches 1 run gamerule keepInventory true
 gamerule doImmediateRespawn true
 gamerule doLimitedCrafting true
 gamerule doMobSpawning false
@@ -111,6 +112,8 @@ scoreboard objectives add WPNotify dummy
 scoreboard objectives add harpoonstate dummy
 scoreboard objectives add boardstate dummy
 scoreboard objectives add climb minecraft.custom:minecraft.climb_one_cm
+scoreboard objectives add remainderArrows dummy
+scoreboard objectives add respawn dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy

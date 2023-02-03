@@ -21,8 +21,8 @@ execute if entity @s[team=Lobby,scores={leavegame=1..}] unless score @s leavegam
 scoreboard players reset @s[scores={leavegame=1..}] leavegame
 
 #Pirate Hat game leaving
-execute if entity @s[team=Purple,nbt=!{Inventory:[{Slot:103b,id:"minecraft:diamond_hoe",Count:1b}]}] run trigger leavegame
-execute if entity @s[team=Orange,nbt=!{Inventory:[{Slot:103b,id:"minecraft:diamond_hoe",Count:1b}]}] run trigger leavegame
+execute if entity @s[team=Purple,predicate=!game:has_hat] unless score @s death matches 1.. unless score @s respawn matches 1.. run trigger leavegame
+execute if entity @s[team=Orange,predicate=!game:has_hat] unless score @s death matches 1.. unless score @s respawn matches 1.. run trigger leavegame
 
 #Unready by leaving
 execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple,tag=ClickedReady] run function game:readyteams/unreadyleavepurple
@@ -64,6 +64,7 @@ tag @s[tag=LeaveGame] remove NeedsTracer
 tag @s[tag=LeaveGame] remove mobtesting
 tag @s[tag=LeaveGame] remove ModiOwner
 tag @s[tag=LeaveGame] remove lowerteam
+scoreboard players reset @s[tag=LeaveGame] respawn
 execute if entity @s[tag=LeaveGame] run function lobby:easteregg/rocket/reset
 execute if entity @s[tag=LeaveGame] run function game:boat/removetags
 scoreboard players reset @s[tag=LeaveGame] loverocks

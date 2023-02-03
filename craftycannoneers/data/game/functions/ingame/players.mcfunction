@@ -26,6 +26,9 @@ scoreboard players add @s shotArrows 0
 scoreboard players set @s arrowsToShoot 5
 scoreboard players operation @s arrowsToShoot -= @s shotArrows
 execute if score @s arrowsToShoot matches ..-1 run scoreboard players set @s arrowsToShoot 0
+scoreboard players operation @s remainderArrows = @s hasArrows
+scoreboard players operation @s remainderArrows -= @s arrowsToShoot
+scoreboard players remove @s[tag=loaded,scores={arrowsToShoot=0}] remainderArrows 1
 scoreboard players remove @s[scores={useCrossbow=1..}] useCrossbow 1
 
 #> Spawnpoints
@@ -42,7 +45,9 @@ execute at @s[tag=NeedsTracer,tag=!fullinv] run function game:giveback/tracer
 execute if entity @s[scores={kill=1..}] run function game:ingame/kill
 
 #> Death
+scoreboard players add @s[scores={respawn=1..}] respawn 1
 execute if entity @s[scores={death=1..}] run function game:ingame/death
+scoreboard players reset @s[scores={respawn=30..}]
 
 #> Chest balancing
 function balancing:chestluck
