@@ -117,21 +117,20 @@ execute at @s[tag=Orange,scores={cannonshot=30..,CmdData=9}] run summon armor_st
 execute at @s[tag=!Purple,tag=!Orange,scores={cannonshot=30..,CmdData=9}] run summon armor_stand ~ ~1 ~ {Tags:["cannonball","GoldenCannonball","NewCannonball"],Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:73}}]}
 
 #Global
-scoreboard players operation @e[type=armor_stand,tag=NewCannonball,limit=1] playerUUID = @s playerUUID
-execute as @e[type=armor_stand,tag=NewCannonball,limit=1] at @s run function cannons:namecannonball
+scoreboard players operation @e[type=armor_stand,tag=NewCannonball] playerUUID = @s playerUUID
+execute as @e[type=armor_stand,tag=NewCannonball] at @s run function cannons:namecannonball
+tag @e[type=armor_stand,tag=NewCannonball] remove NewCannonball
 
-execute at @s[scores={cannonshot=30..}] run tp @e[type=armor_stand,tag=cannonball,tag=NewCannonball,limit=1] @s
-execute at @s[scores={cannonshot=30..}] store result score @e[type=armor_stand,tag=NewCannonball,limit=1] PowerL run scoreboard players get @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
-execute at @s[scores={cannonshot=30..}] store result score @e[type=armor_stand,tag=NewCannonball,limit=1] PowerR run scoreboard players get @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData
-execute at @s[scores={cannonshot=30..}] store result score @e[type=armor_stand,tag=NewCannonball,limit=1] PowerM run scoreboard players operation @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData += @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
-execute at @s[scores={cannonshot=30..}] store result score @e[type=armor_stand,tag=NewCannonball,limit=1] PowerV run scoreboard players operation @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData += @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
+execute at @s[scores={cannonshot=30..}] run tp @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..1] @s
+execute at @s[scores={cannonshot=30..}] store result score @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..1] PowerL run scoreboard players get @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
+execute at @s[scores={cannonshot=30..}] store result score @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..1] PowerR run scoreboard players get @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData
+execute at @s[scores={cannonshot=30..}] store result score @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..1] PowerM run scoreboard players operation @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData += @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
+execute at @s[scores={cannonshot=30..}] store result score @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..1] PowerV run scoreboard players operation @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData += @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
 
 execute at @s[scores={cannonshot=30..,CmdData=8}] run scoreboard players operation @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData -= @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
 execute at @s[scores={cannonshot=30..,CmdData=8}] run scoreboard players operation @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..2] CmdData -= @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData
 
-execute at @s[scores={cannonshot=30..}] run tp @e[type=armor_stand,tag=cannonball,tag=NewCannonball,limit=1] ^ ^2 ^3.6
-
-tag @e[type=armor_stand,tag=NewCannonball,limit=1] remove NewCannonball
+execute at @s[scores={cannonshot=30..}] run tp @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..1] ^ ^2 ^3.6
 
 #> End Fire Cannon
 execute at @s[scores={cannonshot=30..}] unless score @s CmdData matches 8 run scoreboard players set @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] CmdData 0
