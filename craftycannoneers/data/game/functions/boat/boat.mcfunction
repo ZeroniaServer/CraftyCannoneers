@@ -5,7 +5,7 @@ execute at @s[tag=3,tag=!Sinking] if entity @a[team=!Lobby,team=!Spectator,team=
 execute at @s[tag=4,tag=!Sinking] if entity @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat4,limit=1] run tag @s add Sailing
 
 #> Idle teleport (prevents collision glitches)
-execute as @s[tag=!Sailing,tag=!Sinking] at @s run tp @s ~ -31.3 ~
+execute at @s[tag=!Sailing,tag=!Sinking] run tp @s ~ -31.3 ~
 
 #> Sailing
 execute at @s[tag=Sailing] run function game:boat/sailing

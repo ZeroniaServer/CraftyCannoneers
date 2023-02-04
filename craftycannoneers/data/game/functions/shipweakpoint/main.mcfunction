@@ -4,21 +4,22 @@ execute if score $gamestate CmdData matches 2 unless score $PurpleWP CmdData mat
 
 #> Notification
 scoreboard players add @a[tag=UsingSpyglass] WPNotify 1
-execute if score $gamestate CmdData matches 2 as @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] run scoreboard players set $RemainWPOrange CmdData 6
-execute if score $gamestate CmdData matches 2 as @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] run scoreboard players operation $RemainWPOrange CmdData -= $PurpleWP CmdData
-execute if score $gamestate CmdData matches 2 as @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] run scoreboard players set $RemainWPPurple CmdData 6
-execute if score $gamestate CmdData matches 2 as @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] run scoreboard players operation $RemainWPPurple CmdData -= $OrangeWP CmdData
-execute if score $gamestate CmdData matches 2 as @a[tag=UsingSpyglass,scores={WPNotify=1}] run title @s title {"text":" "}
-execute if score $gamestate CmdData matches 2 if score $RemainWPOrange CmdData matches 1.. as @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] run title @s subtitle ["",{"translate":"weakpoint.plural","color":"green"},{"text":": ","color":"green"},{"score":{"name":"$RemainWPOrange","objective":"CmdData"},"color":"dark_green"}]
-execute if score $gamestate CmdData matches 2 if score $RemainWPOrange CmdData matches ..0 as @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] run title @s subtitle ["",{"translate":"weakpoint.plural","color":"red"},{"text":": ","color":"red"},{"score":{"name":"$RemainWPOrange","objective":"CmdData"},"color":"dark_red"}]
-execute if score $gamestate CmdData matches 2 if score $RemainWPPurple CmdData matches 1.. as @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] run title @s subtitle ["",{"translate":"weakpoint.plural","color":"green"},{"text":": ","color":"green"},{"score":{"name":"$RemainWPPurple","objective":"CmdData"},"color":"dark_green"}]
-execute if score $gamestate CmdData matches 2 if score $RemainWPPurple CmdData matches ..0 as @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] run title @s subtitle ["",{"translate":"weakpoint.plural","color":"red"},{"text":": ","color":"red"},{"score":{"name":"$RemainWPPurple","objective":"CmdData"},"color":"dark_red"}]
+execute if score $gamestate CmdData matches 2 as @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1},limit=1] run scoreboard players set $RemainWPOrange CmdData 6
+execute if score $gamestate CmdData matches 2 as @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1},limit=1] run scoreboard players operation $RemainWPOrange CmdData -= $PurpleWP CmdData
+execute if score $gamestate CmdData matches 2 as @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1},limit=1] run scoreboard players set $RemainWPPurple CmdData 6
+execute if score $gamestate CmdData matches 2 as @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1},limit=1] run scoreboard players operation $RemainWPPurple CmdData -= $OrangeWP CmdData
+execute if score $gamestate CmdData matches 2 run title @a[tag=UsingSpyglass,scores={WPNotify=1}] title {"text":" "}
+execute if score $gamestate CmdData matches 2 if score $RemainWPOrange CmdData matches 1.. run title @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] subtitle ["",{"translate":"weakpoint.plural","color":"green"},{"text":": ","color":"green"},{"score":{"name":"$RemainWPOrange","objective":"CmdData"},"color":"dark_green"}]
+execute if score $gamestate CmdData matches 2 if score $RemainWPOrange CmdData matches ..0 run title @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] subtitle ["",{"translate":"weakpoint.plural","color":"red"},{"text":": ","color":"red"},{"score":{"name":"$RemainWPOrange","objective":"CmdData"},"color":"dark_red"}]
+execute if score $gamestate CmdData matches 2 if score $RemainWPPurple CmdData matches 1.. run title @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] subtitle ["",{"translate":"weakpoint.plural","color":"green"},{"text":": ","color":"green"},{"score":{"name":"$RemainWPPurple","objective":"CmdData"},"color":"dark_green"}]
+execute if score $gamestate CmdData matches 2 if score $RemainWPPurple CmdData matches ..0 run title @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] subtitle ["",{"translate":"weakpoint.plural","color":"red"},{"text":": ","color":"red"},{"score":{"name":"$RemainWPPurple","objective":"CmdData"},"color":"dark_red"}]
 
-execute if score $gamestate CmdData matches 2 as @a[tag=UsingSpyglass,scores={WPNotify=40}] run title @s title {"text":" "}
-execute if score $gamestate CmdData matches 2 as @a[tag=UsingSpyglass,scores={WPNotify=40}] run title @s subtitle {"text":" "}
-execute as @a[tag=!UsingSpyglass,tag=!SeeWeakpoint,scores={WPNotify=1..}] run title @s title {"text":" "}
-execute as @a[tag=!UsingSpyglass,tag=!SeeWeakpoint,scores={WPNotify=1..}] run title @s subtitle {"text":" "}
+execute if score $gamestate CmdData matches 2 run title @a[tag=UsingSpyglass,scores={WPNotify=40}] title {"text":" "}
+execute if score $gamestate CmdData matches 2 run title @a[tag=UsingSpyglass,scores={WPNotify=40}] subtitle {"text":" "}
+title @a[tag=!UsingSpyglass,tag=!SeeWeakpoint,scores={WPNotify=1..}] title {"text":" "}
+title @a[tag=!UsingSpyglass,tag=!SeeWeakpoint,scores={WPNotify=1..}] subtitle {"text":" "}
 scoreboard players reset @a[tag=!UsingSpyglass,scores={WPNotify=-1000..}] WPNotify
+
 #> X particles
 execute if score $gamestate CmdData matches 2 as @e[type=marker,tag=XParticle] at @s run function game:shipweakpoint/xparticle
 

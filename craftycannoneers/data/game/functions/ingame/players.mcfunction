@@ -42,7 +42,7 @@ execute at @s[tag=NeedsSpyglass,tag=!fullinv] run function game:giveback/spyglas
 execute at @s[tag=NeedsTracer,tag=!fullinv] run function game:giveback/tracer
 
 #> Kill
-execute if entity @s[scores={kill=1..}] run function game:ingame/kill
+execute if score @s kill matches 1.. run function game:ingame/kill
 
 #> Death
 scoreboard players add @s[scores={respawn=1..}] respawn 1

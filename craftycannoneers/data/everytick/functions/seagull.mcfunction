@@ -1,4 +1,4 @@
-execute at @s[tag=1] at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run tp @s ^ ^ ^6 facing entity @e[type=marker,tag=seagull,limit=1,sort=nearest]
-execute as @s[tag=2] at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run tp @s ^ ^2 ^-6 facing entity @e[type=marker,tag=seagull,limit=1,sort=nearest]
-execute as @s[tag=3] at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run tp @s ^6 ^-1 ^ facing entity @e[type=marker,tag=seagull,limit=1,sort=nearest]
-execute as @s[tag=4] at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run tp @s ^-6 ^ ^ facing entity @e[type=marker,tag=seagull,limit=1,sort=nearest]
+execute at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run tp @s[tag=1] ^ ^ ^6 facing entity @e[type=marker,tag=seagull,limit=1,sort=nearest]
+execute at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run tp @s[tag=2] ^ ^2 ^-6 facing entity @e[type=marker,tag=seagull,limit=1,sort=nearest]
+execute at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run tp @s[tag=3] ^6 ^-1 ^ facing entity @e[type=marker,tag=seagull,limit=1,sort=nearest]
+execute at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run tp @s[tag=4] ^-6 ^ ^ facing entity @e[type=marker,tag=seagull,limit=1,sort=nearest]

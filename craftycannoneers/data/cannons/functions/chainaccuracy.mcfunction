@@ -3,8 +3,8 @@ execute store result score @s RNGscore run data get entity @s UUID[0]
 execute store result score @s RNGscore run scoreboard players operation @s RNGscore %= @s RNGmax
 
 scoreboard players set $2 CmdData 2
-execute if entity @s[scores={RNGscore=1..5}] run tag @s add HLeft
-execute if entity @s[scores={RNGscore=6..10}] run tag @s add HRight
+tag @s[scores={RNGscore=1..5}] add HLeft
+tag @s[scores={RNGscore=6..10}] add HRight
 scoreboard players operation @s[tag=HRight] RNGscore /= $2 CmdData
 
 execute if entity @s[tag=HLeft] run scoreboard players operation @s AccurL += @s RNGscore

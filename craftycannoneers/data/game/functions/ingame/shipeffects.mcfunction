@@ -14,15 +14,15 @@ effect give @s[team=Purple,predicate=game:onpurple,predicate=!game:hasregen,tag=
 #> Enemy messages
 advancement grant @s[team=Orange,predicate=game:onpurple,tag=!EnemyMSG] only tutorial:zzzunlockables/intruder
 title @s[team=Orange,predicate=game:onpurple,tag=!EnemyMSG] title {"text":" ","color":"red"}
-execute if entity @s[team=Orange,predicate=game:onpurple,tag=!EnemyMSG,tag=!SeeWeakpoint] unless entity @s[scores={openchest=1..}] unless entity @s[scores={spotting=1..}] run title @s subtitle {"translate":"game.boarded","color":"dark_red"}
-execute if entity @s[team=Orange,predicate=game:onpurple,tag=!EnemyMSG,tag=!SeeWeakpoint] unless entity @s[scores={openchest=1..}] unless entity @s[scores={spotting=1..}] run tag @s add EnemyMSG
-execute as @s[team=Orange,tag=EnemyMSG,predicate=!game:onpurple] run tag @s remove EnemyMSG
+execute unless score @s openchest matches 1.. unless score @s spotting matches 1.. run title @s[team=Orange,predicate=game:onpurple,tag=!EnemyMSG,tag=!SeeWeakpoint] subtitle {"translate":"game.boarded","color":"dark_red"}
+execute unless score @s openchest matches 1.. unless score @s spotting matches 1.. run tag @s[team=Orange,predicate=game:onpurple,tag=!EnemyMSG,tag=!SeeWeakpoint] add EnemyMSG
+tag @s[team=Orange,tag=EnemyMSG,predicate=!game:onpurple] remove EnemyMSG
 
 advancement grant @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG] only tutorial:zzzunlockables/intruder
 title @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG] title {"text":" ","color":"red"}
-execute if entity @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG,tag=!SeeWeakpoint] unless entity @s[scores={openchest=1..}] unless entity @s[scores={spotting=1..}] run title @s subtitle {"translate":"game.boarded","color":"dark_red"}
-execute if entity @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG,tag=!SeeWeakpoint] unless entity @s[scores={openchest=1..}] unless entity @s[scores={spotting=1..}] run tag @s add EnemyMSG
-execute as @s[team=Purple,tag=EnemyMSG,predicate=!game:onorange] run tag @s remove EnemyMSG
+execute unless score @s openchest matches 1.. unless score @s spotting matches 1.. run title @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG,tag=!SeeWeakpoint] subtitle {"translate":"game.boarded","color":"dark_red"}
+execute unless score @s openchest matches 1.. unless score @s spotting matches 1.. run tag @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG,tag=!SeeWeakpoint] add EnemyMSG
+tag @s[team=Purple,tag=EnemyMSG,predicate=!game:onorange] remove EnemyMSG
 
 #> Weakness on enemy ship
 effect give @s[team=Orange,predicate=game:onpurple] weakness 1 0 true

@@ -1,5 +1,6 @@
 execute at @s if entity @a[team=!Lobby,team=!Spectator,distance=..20] run function cannons:bounce/towardsplayer
-execute at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..20] run function cannons:bounce/randomdirection
+execute at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..20] run summon marker ~ ~ ~ {Tags:["BounceRNG"]}
+execute at @s as @e[type=marker,tag=BounceRNG,limit=1] run function cannons:bounce/randomdirection
 
 
 scoreboard players add @s drag 4
@@ -7,44 +8,37 @@ scoreboard players set @s gravity -250
 particle sweep_attack ~ ~ ~ 1 0.1 1 0 8 force
 particle cloud ~ ~ ~ 1 0.2 1 0.05 12 force
 
-execute at @s run function cannons:bounce/sound
+execute at @s run summon marker ~ ~ ~ {Tags:["BounceSound"]}
+execute at @s as @e[type=marker,tag=BounceSound,limit=1] run function cannons:bounce/sound
 
+execute if score @s bounce matches 7.. run scoreboard players set $max RNGmax 100
 execute if score @s bounce matches 7.. at @s run summon marker ~ ~ ~ {Tags:["ExplodeRNG"]}
-execute if score @s bounce matches 7.. run scoreboard players set @e[type=marker,tag=ExplodeRNG] RNGmax 100
-execute if score @s bounce matches 7.. as @e[type=marker,tag=ExplodeRNG] store result score @s RNGscore run data get entity @s UUID[0]
-execute if score @s bounce matches 7.. as @e[type=marker,tag=ExplodeRNG] run scoreboard players operation @s RNGscore %= @s RNGmax
+execute if score @s bounce matches 7.. store result score $explode RNGscore run data get entity @e[type=marker,tag=ExplodeRNG,limit=1] UUID[0]
+kill @e[type=marker,tag=ExplodeRNG,limit=1]
+execute if score @s bounce matches 7.. run scoreboard players operation $explode RNGscore %= $max RNGmax
+scoreboard players reset $max RNGmax
+
 scoreboard players add @s bounce 1
 
 scoreboard players set @s bouncedelay 1
 
 #explosion
-execute if entity @s[tag=!InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ~ ~1 ~ {Tags:["ImpactMarker","Power3"]}
-execute if entity @s[tag=InSafezone,tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run summon marker ~ ~1 ~ {Tags:["ImpactMarker","Power1"]}
-execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run playsound cannonball master @a ~ ~ ~ 4 1.2
-execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1.2
-execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a
-execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run particle flash ~ ~ ~ 0 0 0 0 5 force @a
-execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a
-execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run function cannons:bounce/killslime
-execute if entity @s[tag=!Hit2] if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] at @s run tag @s add Hit2
+execute at @s[tag=!InSafezone,tag=!Hit2] if score $explode RNGscore matches 80.. run summon marker ~ ~1 ~ {Tags:["ImpactMarker","Power3"]}
+execute at @s[tag=InSafezone,tag=!Hit2] if score $explode RNGscore matches 80.. run summon marker ~ ~1 ~ {Tags:["ImpactMarker","Power1"]}
+execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run playsound cannonball master @a ~ ~ ~ 4 1.2
+execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1.2
+execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a
+execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run particle flash ~ ~ ~ 0 0 0 0 5 force @a
+execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a
+execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run function cannons:bounce/killslime
+execute if score $explode RNGscore matches 80.. run tag @s[tag=!Hit2] add Hit2
 
 execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] playerUUID
 execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run data modify entity @s CustomName set from entity @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] CustomName
 tag @e[type=marker,tag=ImpactMarker,tag=!HasUUID] add HasUUID
 
-execute if entity @e[type=marker,tag=ExplodeRNG,scores={RNGscore=80..}] run tag @s add Hit2
-kill @e[type=marker,tag=ExplodeRNG]
-
-
-
-
-
-
-
-
-
-
-
+execute if score $explode RNGscore matches 80.. run tag @s add Hit2
+scoreboard players reset $explode RNGscore
 
 data modify storage craftycannoneers:cannonball Pos set from entity @s Pos
 execute store result score @s x run data get storage craftycannoneers:cannonball Pos[0] 1000000

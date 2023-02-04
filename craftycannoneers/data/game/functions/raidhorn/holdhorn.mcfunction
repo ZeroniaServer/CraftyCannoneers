@@ -1,10 +1,10 @@
 scoreboard players add @s[scores={eyeclick=1..}] horntime 1
 
-execute if entity @s[scores={horntime=1..}] unless entity @s[scores={eyeclick=1..}] run title @s subtitle {"text":" ","color":"white"}
-execute if entity @s[scores={horntime=1..}] unless entity @s[scores={eyeclick=1..}] run scoreboard players reset @s horntime
+execute unless score @s eyeclick matches 1.. run title @s[scores={horntime=1..}] subtitle {"text":" ","color":"white"}
+execute unless score @s eyeclick matches 1.. run scoreboard players reset @s[scores={horntime=1..}] horntime
 
 #Titles are epic
-execute at @s[scores={horntime=1..34}] anchored eyes run particle note ^ ^ ^0.6 0.2 0.2 0.2 0.1 1 force @a[team=!Lobby]
+execute if score @s horntime matches 1..34 anchored eyes run particle note ^ ^ ^0.6 0.2 0.2 0.2 0.1 1 force @a[team=!Lobby]
 title @s[scores={horntime=1..34}] title {"text":" ","color":"white"}
 title @s[scores={horntime=1..3}] subtitle ["",{"translate":"game.start_raid","color":"dark_aqua"},{"text":"[ ","color":"gray"},{"text":"||||||||||","bold":true,"color":"red"},{"text":" ]","color":"gray"}]
 title @s[scores={horntime=4..6}] subtitle ["",{"translate":"game.start_raid","color":"dark_aqua"},{"text":"[ ","color":"gray"},{"text":"|","bold":true,"color":"green"},{"text":"|||||||||","bold":true,"color":"red"},{"text":" ]","color":"gray"}]
@@ -19,6 +19,6 @@ title @s[scores={horntime=28..30}] subtitle ["",{"translate":"game.start_raid","
 title @s[scores={horntime=31..33}] subtitle ["",{"translate":"game.start_raid","color":"dark_aqua"},{"text":"[ ","color":"gray"},{"text":"||||||||||","bold":true,"color":"green"},{"text":" ]","color":"gray"}]
 
 # Raid effects
-execute at @s[scores={horntime=34..}] run function game:raidhorn/effects
+execute if score @s horntime matches 34.. run function game:raidhorn/effects
 
 tag @s remove HoldHorn

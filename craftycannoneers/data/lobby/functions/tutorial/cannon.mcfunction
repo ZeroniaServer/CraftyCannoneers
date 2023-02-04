@@ -1,15 +1,15 @@
 tag @s remove TutorialCannon
 scoreboard players add @s CannonTutorial 1
-execute if entity @s[scores={CannonTutorial=8..}] run scoreboard players set @s CannonTutorial 1
+scoreboard players set @s[scores={CannonTutorial=8..}] CannonTutorial 1
 
-execute if entity @s[scores={CannonTutorial=7}] run advancement grant @s only tutorial:objectives/cannon
-execute if entity @s[scores={CannonTutorial=7}] run tellraw @s ["",{"text":"[✔] ","color":"gold"},{"translate":"teacher.cannon.7","color":"green"},"\n"]
-execute if entity @s[scores={CannonTutorial=6}] run tellraw @s ["",{"text":"[6/7] ","color":"gray"},{"translate":"teacher.cannon.6","color":"green"},"\n"]
-execute if entity @s[scores={CannonTutorial=5}] run tellraw @s ["",{"text":"[5/7] ","color":"gray"},{"translate":"teacher.cannon.5","color":"green"},"\n"]
-execute if entity @s[scores={CannonTutorial=4}] run tellraw @s ["",{"text":"[4/7] ","color":"gray"},{"translate":"teacher.cannon.4","color":"green"},"\n"]
-execute if entity @s[scores={CannonTutorial=3}] run tellraw @s ["",{"text":"[3/7] ","color":"gray"},{"translate":"teacher.cannon.3","color":"green"},"\n"]
-execute if entity @s[scores={CannonTutorial=2}] run tellraw @s ["",{"text":"[2/7] ","color":"gray"},{"translate":"teacher.cannon.2","color":"green"},"\n"]
-execute if entity @s[scores={CannonTutorial=1}] run tellraw @s ["",{"text":"[1/7] ","color":"gray"},{"translate":"teacher.cannon.1","color":"green"},"\n"]
+advancement grant @s[scores={CannonTutorial=7}] only tutorial:objectives/cannon
+tellraw @s[scores={CannonTutorial=7}] ["",{"text":"[✔] ","color":"gold"},{"translate":"teacher.cannon.7","color":"green"},"\n"]
+tellraw @s[scores={CannonTutorial=6}] ["",{"text":"[6/7] ","color":"gray"},{"translate":"teacher.cannon.6","color":"green"},"\n"]
+tellraw @s[scores={CannonTutorial=5}] ["",{"text":"[5/7] ","color":"gray"},{"translate":"teacher.cannon.5","color":"green"},"\n"]
+tellraw @s[scores={CannonTutorial=4}] ["",{"text":"[4/7] ","color":"gray"},{"translate":"teacher.cannon.4","color":"green"},"\n"]
+tellraw @s[scores={CannonTutorial=3}] ["",{"text":"[3/7] ","color":"gray"},{"translate":"teacher.cannon.3","color":"green"},"\n"]
+tellraw @s[scores={CannonTutorial=2}] ["",{"text":"[2/7] ","color":"gray"},{"translate":"teacher.cannon.2","color":"green"},"\n"]
+tellraw @s[scores={CannonTutorial=1}] ["",{"text":"[1/7] ","color":"gray"},{"translate":"teacher.cannon.1","color":"green"},"\n"]
 
 tag @s add TutorialCannon
 advancement revoke @s only lobby:cannontutorial

@@ -1,4 +1,4 @@
-execute as @s at @s run summon marker ~ ~ ~ {Tags:["RandomAccuracy"]}
+execute at @s run summon marker ~ ~ ~ {Tags:["RandomAccuracy"]}
 
 scoreboard players set @s drag 25
 scoreboard players set @s gravity 145

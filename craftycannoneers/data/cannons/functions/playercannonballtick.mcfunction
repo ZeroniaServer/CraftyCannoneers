@@ -3,20 +3,20 @@ execute store result score @s x run data get storage craftycannoneers:cannonball
 execute store result score @s y run data get storage craftycannoneers:cannonball Pos[1] 1000000
 execute store result score @s z run data get storage craftycannoneers:cannonball Pos[2] 1000000
 
-execute if entity @s[scores={PowerM=1}] at @s run tp @s ^ ^ ^0.0006
-execute if entity @s[scores={PowerM=2}] at @s run tp @s ^ ^ ^0.0007
-execute if entity @s[scores={PowerM=3}] at @s run tp @s ^ ^ ^0.0008
-execute if entity @s[scores={PowerM=4}] at @s run tp @s ^ ^ ^0.0009
-execute if entity @s[scores={PowerM=5}] at @s run tp @s ^ ^ ^0.0010
-execute if entity @s[scores={PowerM=6}] at @s run tp @s ^ ^ ^0.0011
-execute if entity @s[scores={PowerM=7}] at @s run tp @s ^ ^ ^0.0012
-execute if entity @s[scores={PowerM=8}] at @s run tp @s ^ ^ ^0.0013
-execute if entity @s[scores={PowerM=9}] at @s run tp @s ^ ^ ^0.0014
-execute if entity @s[scores={PowerM=10}] at @s run tp @s ^ ^ ^0.0015
-execute if entity @s[scores={PowerM=11}] at @s run tp @s ^ ^ ^0.0016
-execute if entity @s[scores={PowerM=12}] at @s run tp @s ^ ^ ^0.0017
-execute if entity @s[scores={PowerM=13}] at @s run tp @s ^ ^ ^0.0018
-execute if entity @s[scores={PowerM=14}] at @s run tp @s ^ ^ ^0.0019
+tp @s[scores={PowerM=1}] ^ ^ ^0.0006
+tp @s[scores={PowerM=2}] ^ ^ ^0.0007
+tp @s[scores={PowerM=3}] ^ ^ ^0.0008
+tp @s[scores={PowerM=4}] ^ ^ ^0.0009
+tp @s[scores={PowerM=5}] ^ ^ ^0.0010
+tp @s[scores={PowerM=6}] ^ ^ ^0.0011
+tp @s[scores={PowerM=7}] ^ ^ ^0.0012
+tp @s[scores={PowerM=8}] ^ ^ ^0.0013
+tp @s[scores={PowerM=9}] ^ ^ ^0.0014
+tp @s[scores={PowerM=10}] ^ ^ ^0.0015
+tp @s[scores={PowerM=11}] ^ ^ ^0.0016
+tp @s[scores={PowerM=12}] ^ ^ ^0.0017
+tp @s[scores={PowerM=13}] ^ ^ ^0.0018
+tp @s[scores={PowerM=14}] ^ ^ ^0.0019
 
 data modify storage craftycannoneers:cannonball Pos set from entity @s Pos
 execute store result score @s dx run data get storage craftycannoneers:cannonball Pos[0] 1000000

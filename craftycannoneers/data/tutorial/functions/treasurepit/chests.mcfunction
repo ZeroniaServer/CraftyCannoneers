@@ -3,7 +3,7 @@ scoreboard players add @s CmdData 0
 execute at @s[scores={CmdData=..9}] run function tutorial:treasurepit/rise
 
 #> Particles
-execute at @s[type=armor_stand,tag=!Looted,scores={CmdData=31..}] run function tutorial:treasurepit/particles
+execute if entity @s[type=armor_stand,tag=!Looted,scores={CmdData=31..}] run function tutorial:treasurepit/particles
 
 #> Open
 execute at @s[type=hopper_minecart,tag=fakechest,tag=!Opened] if data entity @s Items run function tutorial:treasurepit/open

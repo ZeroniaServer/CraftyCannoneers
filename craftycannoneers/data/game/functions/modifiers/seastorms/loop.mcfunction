@@ -12,4 +12,4 @@ execute as @e[type=marker,tag=StormEventPicker,limit=1] run function game:modifi
 
 #> Lightning
 execute as @e[type=lightning_bolt] at @s run function game:modifiers/seastorms/reallightning
-execute as @e[type=marker,tag=LightningMarker] run function game:modifiers/seastorms/marker
+execute as @e[type=marker,tag=LightningMarker] at @s run function game:modifiers/seastorms/marker

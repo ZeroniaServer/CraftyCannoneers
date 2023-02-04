@@ -2,7 +2,7 @@
 execute unless score @s playerUUID matches 0 run scoreboard players add @s cannonclaim 1
 
 #> Set accuracy on claim
-execute if entity @s[scores={cannonclaim=1}] run function cannons:accuracy/randomaccuracy
+execute if score @s cannonclaim matches 1 run function cannons:accuracy/randomaccuracy
 
 #> Unclaim if on fire
 execute if entity @s[tag=OnFire,scores={cannonclaim=1..120}] run function cannons:accuracy/randomaccuracy

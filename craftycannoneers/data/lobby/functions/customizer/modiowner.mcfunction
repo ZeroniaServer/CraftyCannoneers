@@ -12,5 +12,5 @@ execute if entity @s[scores={modisigns=71845},tag=!mobtesting] run function lobb
 
 scoreboard players add @s moditimer 1
 effect clear @s[scores={moditimer=70..}] glowing
-execute if entity @s[scores={moditimer=70..}] run tag @s remove ModiOwner
+tag @s[scores={moditimer=70..}] remove ModiOwner
 scoreboard players reset @s[scores={moditimer=70..}] moditimer
