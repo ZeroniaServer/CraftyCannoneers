@@ -24,7 +24,7 @@
                                 "type": "minecraft:score",
                                 "target": {
                                     "type": "minecraft:fixed",
-                                    "name": "$GraveRobbers"
+                                    "name": "$GraveRobbery"
                                 },
                                 "score": "CmdData"
                             },
@@ -54,7 +54,7 @@
                                     "type": "minecraft:score",
                                     "target": {
                                         "type": "minecraft:fixed",
-                                        "name": "$GraveRobbers"
+                                        "name": "$GraveRobbery"
                                     },
                                     "score": "CmdData"
                                 },

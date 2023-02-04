@@ -18,7 +18,7 @@ scoreboard players set $dust3 CmdData -1
 scoreboard players set $dust2 CmdData -1
 
 gamerule fallDamage false
-execute if score $GraveRobbers CmdData matches 1 run gamerule keepInventory true
+execute if score $GraveRobbery CmdData matches 1 run gamerule keepInventory true
 
 bossbar remove purpleship
 bossbar remove purpleship2

@@ -13,10 +13,10 @@ title @s[scores={spotfakewp=32..35}] subtitle ["",{"translate":"weakpoint.spotti
 title @s[scores={spotfakewp=36..39}] subtitle ["",{"translate":"weakpoint.spotting","color":"dark_aqua"},{"text":"[ ","color":"gray"},{"text":"|||||||||","bold":true,"color":"green"},{"text":"|","bold":true,"color":"red"},{"text":" ]","color":"gray"}]
 title @s[scores={spotfakewp=40..43}] subtitle ["",{"translate":"weakpoint.spotting","color":"dark_aqua"},{"text":"[ ","color":"gray"},{"text":"||||||||||","bold":true,"color":"green"},{"text":" ]","color":"gray"}]
 
-execute at @s[scores={spotfakewp=1}] run playsound item.spyglass.use master @s ~ ~ ~ 1 0.6
-execute at @s[scores={spotfakewp=3}] run playsound item.spyglass.use master @s ~ ~ ~ 1 0.7
-execute at @s[scores={spotfakewp=5}] run playsound item.spyglass.use master @s ~ ~ ~ 1 1.3
-execute at @s[scores={spotfakewp=10..43}] run playsound item.spyglass.stop_using master @s ~ ~ ~ 1 2
+execute if score @s spotfakewp matches 1 run playsound item.spyglass.use master @s ~ ~ ~ 1 0.6
+execute if score @s spotfakewp matches 3 run playsound item.spyglass.use master @s ~ ~ ~ 1 0.7
+execute if score @s spotfakewp matches 5 run playsound item.spyglass.use master @s ~ ~ ~ 1 1.3
+execute if score @s spotfakewp matches 10..43 run playsound item.spyglass.stop_using master @s ~ ~ ~ 1 2
 
 #> Finish spotting
-execute at @s[scores={spotfakewp=43}] run function tutorial:watchtower/finishspotting
+execute if score @s spotfakewp matches 43 run function tutorial:watchtower/finishspotting

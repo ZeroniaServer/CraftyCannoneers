@@ -7,7 +7,9 @@ title @s[scores={LeftGame=1..}] title {"text":" ","color":"white"}
 title @s[scores={LeftGame=1..}] subtitle {"text":" ","color":"white"}
 
 #Join reset
-execute if entity @s[scores={LeftGame=1..}] if score $gamestate CmdData matches 0 unless entity @a[distance=0.0001..] run function everytick:joinreset
+tag @s add self
+execute if score @s LeftGame matches 1.. if score $gamestate CmdData matches ..1 at @s unless entity @a[tag=!self] run function everytick:joinreset
+tag @s remove self
 
 execute unless score $servermode CmdData matches 1 run scoreboard players enable @s[team=!Lobby] leavegame
 execute unless score $servermode CmdData matches 1 run scoreboard players reset @s[team=Lobby] leavegame

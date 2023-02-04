@@ -7,7 +7,7 @@ forceload add -385 -17 -416 -96
 #> Gamerules
 gamerule mobGriefing true
 execute unless score $gamestate CmdData matches 2 run gamerule keepInventory true
-execute if score $gamestate CmdData matches 2 unless score $GraveRobbers CmdData matches 1 run gamerule keepInventory true
+execute if score $gamestate CmdData matches 2 unless score $GraveRobbery CmdData matches 1 run gamerule keepInventory true
 gamerule doImmediateRespawn true
 gamerule doLimitedCrafting true
 gamerule doMobSpawning false

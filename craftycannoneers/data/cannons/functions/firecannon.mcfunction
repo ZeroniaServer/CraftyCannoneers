@@ -11,14 +11,14 @@ execute at @s[scores={cannonshot=2}] at @e[type=villager,tag=CannonVLeft,limit=1
 execute at @s[scores={cannonshot=2}] at @e[type=villager,tag=CannonVRight,limit=1,sort=nearest,distance=..2] run particle soul_fire_flame ^ ^0.5 ^-0.2 .02 0.05 .02 .003 4 normal @a[predicate=cannons:seeparticles]
 execute at @s[scores={cannonshot=5..25}] at @e[type=villager,tag=CannonVLeft,limit=1,sort=nearest,distance=..2] run particle flame ^ ^0.7 ^-0.2 .02 0.1 .02 .003 2 normal @a[predicate=cannons:seeparticles]
 execute at @s[scores={cannonshot=5..25}] at @e[type=villager,tag=CannonVRight,limit=1,sort=nearest,distance=..2] run particle flame ^ ^0.7 ^-0.2 .02 0.1 .02 .003 2 normal @a[predicate=cannons:seeparticles]
-execute at @s[scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] run particle explosion ^ ^2.1 ^2 0.1 0.1 0.1 0.1 3 force @a[predicate=cannons:seeparticles]
-execute at @s[scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] run particle flame ^ ^2.1 ^2 0.1 0.1 0.1 0.3 6 force @a[predicate=cannons:seeparticles]
-execute at @s[scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] run particle campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force @a[predicate=cannons:seeparticles]
-execute at @s[scores={cannonshot=26}] unless entity @s[scores={CmdData=8}] run particle lava ^ ^2.1 ^2 0.1 0.1 0.1 0.02 10 force @a[predicate=cannons:seeparticles]
-execute at @s[scores={cannonshot=28}] unless entity @s[scores={CmdData=8}] run item replace entity @s armor.head with diamond_hoe{CustomModelData:62}
-execute at @s[scores={cannonshot=29}] unless entity @s[scores={CmdData=8}] run item replace entity @s armor.head with diamond_hoe{CustomModelData:63}
-execute at @s[scores={cannonshot=30}] unless entity @s[scores={CmdData=8}] run item replace entity @s armor.head with diamond_hoe{CustomModelData:1}
-execute at @s[scores={cannonshot=30}] unless entity @s[scores={CmdData=8}] run summon marker ^ ^2 ^4 {Tags:["LightFlash","cannon"]}
+execute at @s[scores={cannonshot=26}] unless score @s CmdData matches 8 run particle explosion ^ ^2.1 ^2 0.1 0.1 0.1 0.1 3 force @a[predicate=cannons:seeparticles]
+execute at @s[scores={cannonshot=26}] unless score @s CmdData matches 8 run particle flame ^ ^2.1 ^2 0.1 0.1 0.1 0.3 6 force @a[predicate=cannons:seeparticles]
+execute at @s[scores={cannonshot=26}] unless score @s CmdData matches 8 run particle campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force @a[predicate=cannons:seeparticles]
+execute at @s[scores={cannonshot=26}] unless score @s CmdData matches 8 run particle lava ^ ^2.1 ^2 0.1 0.1 0.1 0.02 10 force @a[predicate=cannons:seeparticles]
+execute at @s[scores={cannonshot=28}] unless score @s CmdData matches 8 run item replace entity @s armor.head with diamond_hoe{CustomModelData:62}
+execute at @s[scores={cannonshot=29}] unless score @s CmdData matches 8 run item replace entity @s armor.head with diamond_hoe{CustomModelData:63}
+execute at @s[scores={cannonshot=30}] unless score @s CmdData matches 8 run item replace entity @s armor.head with diamond_hoe{CustomModelData:1}
+execute at @s[scores={cannonshot=30}] unless score @s CmdData matches 8 run summon marker ^ ^2 ^4 {Tags:["LightFlash","cannon"]}
 
 #Normal Cannonball
 execute at @s[scores={cannonshot=30..,CmdData=1}] run playsound cannonshot master @a ~ ~ ~ 6 1
@@ -134,8 +134,8 @@ execute at @s[scores={cannonshot=30..}] run tp @e[type=armor_stand,tag=cannonbal
 tag @e[type=armor_stand,tag=NewCannonball,limit=1] remove NewCannonball
 
 #> End Fire Cannon
-execute at @s[scores={cannonshot=30..}] unless entity @s[scores={CmdData=8}] run scoreboard players set @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] CmdData 0
-execute at @s[scores={cannonshot=30..}] unless entity @s[scores={CmdData=8}] run scoreboard players set @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] CmdData 0
+execute at @s[scores={cannonshot=30..}] unless score @s CmdData matches 8 run scoreboard players set @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] CmdData 0
+execute at @s[scores={cannonshot=30..}] unless score @s CmdData matches 8 run scoreboard players set @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] CmdData 0
 execute at @s[scores={cannonshot=30..}] run function cannons:updategp
 scoreboard players set @s[scores={cannonshot=30..}] CmdData 0
 tag @s[scores={cannonshot=30..}] remove FireCannon
