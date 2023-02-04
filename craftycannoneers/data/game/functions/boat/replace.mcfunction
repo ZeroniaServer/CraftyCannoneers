@@ -8,10 +8,10 @@ execute at @s[tag=3,tag=Sinking] run summon boat 83 -30 12 {Invulnerable:1b,Tags
 execute at @s[tag=4,tag=Sinking] run summon boat 57 -30 -12 {Invulnerable:1b,Rotation:[180.0f,0.0f],Tags:["Boat","BoatBoat","4"],Passengers:[{id:"minecraft:armor_stand",Rotation:[180.0f,0.0f],Tags:["Boat","BoatAS","New","4"],Marker:1b,Invulnerable:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:black_banner",Count:1b,tag:{BlockEntityTag:{Patterns:[{Pattern:sku,Color:0}]}}}]}]}
 
 #> Teleport previous occupant up if dismounting
-execute at @s[tag=1,tag=DismountCheck,tag=!Sinking] as @a[tag=inBoat1,distance=..1] at @s run tp @s ~ ~1.6 ~
-execute at @s[tag=2,tag=DismountCheck,tag=!Sinking] as @a[tag=inBoat2,distance=..1] at @s run tp @s ~ ~1.6 ~
-execute at @s[tag=3,tag=DismountCheck,tag=!Sinking] as @a[tag=inBoat3,distance=..1] at @s run tp @s ~ ~1.6 ~
-execute at @s[tag=4,tag=DismountCheck,tag=!Sinking] as @a[tag=inBoat4,distance=..1] at @s run tp @s ~ ~1.6 ~
+execute at @s[tag=1,tag=DismountCheck,tag=!Sinking] as @a[tag=inBoat1,distance=..1] run function game:boat/dismounter
+execute at @s[tag=2,tag=DismountCheck,tag=!Sinking] as @a[tag=inBoat2,distance=..1] run function game:boat/dismounter
+execute at @s[tag=3,tag=DismountCheck,tag=!Sinking] as @a[tag=inBoat3,distance=..1] run function game:boat/dismounter
+execute at @s[tag=4,tag=DismountCheck,tag=!Sinking] as @a[tag=inBoat4,distance=..1] run function game:boat/dismounter
 
 #> Untag previous occupant
 execute if entity @s[tag=1] run tag @a[tag=inBoat1] remove inBoat1
