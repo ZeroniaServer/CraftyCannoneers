@@ -1,9 +1,9 @@
 execute store result score @s[tag=!arrowProcessed] playerUUID run data get entity @s Thrower[0]
 scoreboard players operation $tempuuid playerUUID = @s playerUUID
 
-execute as @a[team=!Lobby,team=!Spectator,predicate=game:matches_uuid,tag=!fullinv] if score @s arrowsToShoot matches 1.. if score @s hasArrows < @s arrowsToShoot run tag @s add arrowActionable
+execute as @a[team=!Lobby,team=!Spectator,predicate=game:matches_uuid,tag=!fullinv,limit=1] if score @s arrowsToShoot matches 1.. if score @s hasArrows < @s arrowsToShoot run tag @s add arrowActionable
 
-execute if entity @a[team=!Lobby,team=!Spectator,predicate=game:matches_uuid,tag=arrowActionable] store result score $arrowCount CmdData run data get entity @s Item.Count
+execute if entity @a[team=!Lobby,team=!Spectator,predicate=game:matches_uuid,tag=arrowActionable,limit=1] store result score $arrowCount CmdData run data get entity @s Item.Count
 execute unless entity @a[team=!Lobby,team=!Spectator,predicate=game:matches_uuid,tag=arrowActionable] run tag @s remove NoDropArrow
 
 execute as @a[team=!Lobby,team=!Spectator,predicate=game:matches_uuid,tag=arrowActionable] run scoreboard players operation $arrowDiff CmdData = @s arrowsToShoot

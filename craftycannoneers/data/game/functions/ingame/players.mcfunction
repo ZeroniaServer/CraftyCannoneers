@@ -15,7 +15,7 @@ execute if data entity @s Inventory[{id:"minecraft:trident"}] run function game:
 scoreboard players reset @s[scores={useharpoon=1..}] useharpoon
 
 #> Player stuck
-function game:ingame/playerstuck
+execute at @s run function game:ingame/playerstuck
 
 #> Arrow scoreboards
 execute if score @s[tag=!arrowcounted] dropArrow matches 1.. run function game:ingame/arrowcount

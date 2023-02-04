@@ -1,24 +1,14 @@
-execute if entity @s[tag=!Hit1] at @s unless entity @s[predicate=cannons:safezones/island] run fill ~ ~-1 ~ ~ ~-1 ~ air replace #game:shipblocks
-execute if entity @s[tag=!Hit1] at @s unless entity @s[predicate=cannons:safezones/island] run fill ^1 ^1 ^1 ^-1 ^-1 ^1 air replace #game:shipblocks
+execute at @s[tag=!Hit1,predicate=!cannons:safezones/island] run fill ~ ~-1 ~ ~ ~-1 ~ air replace #game:shipblocks
+execute at @s[tag=!Hit1,predicate=!cannons:safezones/island] run fill ^1 ^1 ^1 ^-1 ^-1 ^1 air replace #game:shipblocks
 
 execute at @s[tag=!BouncyCannonball,tag=!PlayerCannonball] run tp @s ^ ^ ^1
 #>Safezone check
 #Island
-execute at @s if entity @s[predicate=cannons:safezones/island] run tag @s add InSafezone
+tag @s[predicate=cannons:safezones/island] add InSafezone
 #Cannons
 execute at @s if entity @e[type=#game:cannon,tag=cannon,distance=..2] run tag @s add InSafezone
-#Purple
-execute at @s if entity @s[predicate=cannons:safezones/purple/1] run tag @s add InSafezone
-execute at @s if entity @s[predicate=cannons:safezones/purple/2] run tag @s add InSafezone
-execute at @s if entity @s[predicate=cannons:safezones/purple/3] run tag @s add InSafezone
-execute at @s if entity @s[predicate=cannons:safezones/purple/4] run tag @s add InSafezone
-execute at @s if entity @s[predicate=cannons:safezones/purple/5] run tag @s add InSafezone
-#Orange
-execute at @s if entity @s[predicate=cannons:safezones/orange/1] run tag @s add InSafezone
-execute at @s if entity @s[predicate=cannons:safezones/orange/2] run tag @s add InSafezone
-execute at @s if entity @s[predicate=cannons:safezones/orange/3] run tag @s add InSafezone
-execute at @s if entity @s[predicate=cannons:safezones/orange/4] run tag @s add InSafezone
-execute at @s if entity @s[predicate=cannons:safezones/orange/5] run tag @s add InSafezone
+#Ships
+tag @s[predicate=cannons:safezones/ships] add InSafezone
 
 #FIREBALL EFFECT
 execute if entity @s[tag=!Hit1,tag=HotCannonball] unless entity @s[scores={doublehit=1..}] at @s run tag @e[type=armor_stand,tag=GasBubble,tag=!GasIgnite,distance=..6] add GasIgnite

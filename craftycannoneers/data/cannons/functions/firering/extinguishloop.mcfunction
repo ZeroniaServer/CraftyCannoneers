@@ -1,6 +1,6 @@
 execute at @s store result score @s CalcAir2 run fill ~200 ~ ~ ~ ~ ~100 air replace fire
-execute if entity @s[tag=Purple] run scoreboard players operation @s CalcAir2 /= $PFireCount CmdData
-execute if entity @s[tag=Orange] run scoreboard players operation @s CalcAir2 /= $OFireCount CmdData
+scoreboard players operation @s[tag=Purple] CalcAir2 /= $PFireCount CmdData
+scoreboard players operation @s[tag=Orange] CalcAir2 /= $OFireCount CmdData
 execute if entity @s[tag=Purple,scores={CalcAir2=1..}] run scoreboard players operation $DamagePurple CmdData += @s CalcAir2
 execute if entity @s[tag=Orange,scores={CalcAir2=1..}] run scoreboard players operation $DamageOrange CmdData += @s CalcAir2
 execute if entity @s[tag=Purple,scores={CalcAir2=1..}] run scoreboard players operation $CurrentDamage CmdData += @s CalcAir2
@@ -25,7 +25,7 @@ execute if entity @s[tag=Orange] if score $DamageOrange CmdData >= $OrangeHP Cmd
 
 scoreboard players reset $CurrentDamage CmdData
 
-execute unless entity @s[scores={CmdData=50..}] at @s run function cannons:firering/extinguishloop
-execute if entity @s[scores={CmdData=50..}] run scoreboard players set $PFireCount CmdData 0
-execute if entity @s[scores={CmdData=50..}] run scoreboard players set $OFireCount CmdData 0
+execute unless score @s CmdData matches 50.. at @s run function cannons:firering/extinguishloop
+execute if score @s CmdData matches 50.. run scoreboard players set $PFireCount CmdData 0
+execute if score @s CmdData matches 50.. run scoreboard players set $OFireCount CmdData 0
 kill @s[scores={CmdData=50..}]

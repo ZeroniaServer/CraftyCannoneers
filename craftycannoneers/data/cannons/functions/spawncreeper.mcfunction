@@ -11,8 +11,8 @@ execute store result score @a[tag=UtilKilled,distance=..6] KillerUUID run scoreb
 execute as @e[type=creeper,tag=!HasUUID] run scoreboard players operation $current playerUUID = @s playerUUID
 tag @e[type=creeper,tag=!HasUUID] add HasUUID
 
-execute unless entity @s[predicate=cannons:safezones/island] unless entity @s[scores={CmdData=1..}] run function cannons:lightfill1
-execute unless entity @s[predicate=cannons:safezones/island] unless entity @s[predicate=cannons:safezones/tutorial] unless entity @s[scores={CmdData=1..}] run function cannons:airfill
+execute unless predicate cannons:safezones/island unless score @s CmdData matches 1.. run function cannons:lightfill1
+execute unless predicate cannons:safezones/island unless predicate cannons:safezones/tutorial unless score @s CmdData matches 1.. run function cannons:airfill
 
 scoreboard players set @s CmdData 1
 

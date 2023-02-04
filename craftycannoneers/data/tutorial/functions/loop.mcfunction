@@ -1,7 +1,6 @@
 #> Combat Area
 scoreboard players set $runcombat CmdData 0
 execute if entity @a[team=Lobby,predicate=tutorial:combatarea] run scoreboard players set $runcombat CmdData 1
-execute if entity @a[team=Lobby,predicate=tutorial:combatarea2] run scoreboard players set $runcombat CmdData 1
 execute if entity @a[team=Lobby,tag=InCombat] run scoreboard players set $runcombat CmdData 1
 execute if score $runcombat CmdData matches 1 run function tutorial:combatarea/main
 function tutorial:trainingdummies/main
