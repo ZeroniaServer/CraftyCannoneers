@@ -14,13 +14,13 @@ effect give @s[team=Purple,predicate=game:onpurple,predicate=!game:hasregen,tag=
 #> Enemy messages
 advancement grant @s[team=Orange,predicate=game:onpurple,tag=!EnemyMSG] only tutorial:zzzunlockables/intruder
 title @s[team=Orange,predicate=game:onpurple,tag=!EnemyMSG] title {"text":" ","color":"red"}
-execute unless score @s openchest matches 1.. unless score @s spotting matches 1.. run title @s[team=Orange,predicate=game:onpurple,tag=!EnemyMSG,tag=!SeeWeakpoint] subtitle {"translate":"game.boarded","color":"dark_red"}
+execute unless score @s openchest matches 1.. unless score @s spotting matches 1.. run title @s[team=Orange,predicate=game:onpurple,tag=!EnemyMSG,tag=!SeeWeakpoint,nbt={OnGround:1b}] subtitle {"translate":"game.boarded","color":"dark_red"}
 execute unless score @s openchest matches 1.. unless score @s spotting matches 1.. run tag @s[team=Orange,predicate=game:onpurple,tag=!EnemyMSG,tag=!SeeWeakpoint] add EnemyMSG
 tag @s[team=Orange,tag=EnemyMSG,predicate=!game:onpurple] remove EnemyMSG
 
 advancement grant @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG] only tutorial:zzzunlockables/intruder
 title @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG] title {"text":" ","color":"red"}
-execute unless score @s openchest matches 1.. unless score @s spotting matches 1.. run title @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG,tag=!SeeWeakpoint] subtitle {"translate":"game.boarded","color":"dark_red"}
+execute unless score @s openchest matches 1.. unless score @s spotting matches 1.. run title @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG,tag=!SeeWeakpoint,nbt={OnGround:1b}] subtitle {"translate":"game.boarded","color":"dark_red"}
 execute unless score @s openchest matches 1.. unless score @s spotting matches 1.. run tag @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG,tag=!SeeWeakpoint] add EnemyMSG
 tag @s[team=Purple,tag=EnemyMSG,predicate=!game:onorange] remove EnemyMSG
 
