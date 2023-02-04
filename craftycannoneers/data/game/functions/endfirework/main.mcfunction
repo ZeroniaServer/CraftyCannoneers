@@ -17,4 +17,4 @@ data merge entity @s[scores={CmdData=21}] {Pose:{Head:[303f,0f,0f]}}
 execute at @s[scores={CmdData=21,eyeclick=1..}] run scoreboard players operation @s CmdData += @s eyeclick
 
 #> Explode
-execute if entity @s[scores={CmdData=30..}] run function game:endfirework/explode
+execute if score @s CmdData matches 30.. run function game:endfirework/explode

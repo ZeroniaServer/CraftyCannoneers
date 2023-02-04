@@ -1,10 +1,10 @@
 scoreboard players add @s CmdData 1
 
 #> Kill if player dies
-execute if entity @s[scores={CmdData=..99}] if entity @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid,scores={death=1..}] run kill @s
+execute if score @s CmdData matches ..99 if entity @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid,scores={death=1..}] run kill @s
 
 #> Kill if player leaves game
-execute if entity @s[scores={CmdData=..99}] if entity @a[team=Lobby,predicate=game:matches_uuid] run kill @s
+execute if score @s CmdData matches ..99 if entity @a[team=Lobby,predicate=game:matches_uuid] run kill @s
 
 #> Tag player as needing item and kill self after 5 seconds
 execute if entity @s[scores={CmdData=100..},tag=Cutlass] run tag @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid] add NeedsCutlass

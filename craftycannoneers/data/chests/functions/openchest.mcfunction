@@ -60,8 +60,8 @@ execute at @s[team=Lobby,scores={openchest=1..}] unless entity @e[type=armor_sta
 execute at @s[team=Lobby,scores={openchest=1..}] unless entity @e[type=armor_stand,tag=LChestFakeC,tag=!Spawned,distance=..3] unless entity @e[type=armor_stand,tag=fakechestdisplay,tag=!Unlocked,distance=..3] run title @s subtitle {"text":" ","color":"dark_aqua"}
 execute at @s[team=Lobby,scores={openchest=1..}] unless entity @e[type=armor_stand,tag=LChestFakeC,tag=!Spawned,distance=..3] unless entity @e[type=armor_stand,tag=fakechestdisplay,tag=!Unlocked,distance=..3] run scoreboard players reset @s openchest
 
-execute if entity @s[scores={openchest=1..}] unless entity @s[scores={eyeclick=1..}] run title @s title {"text":" ","color":"dark_aqua"}
-execute if entity @s[scores={openchest=1..}] unless entity @s[scores={eyeclick=1..}] run title @s subtitle {"text":" ","color":"dark_aqua"}
-execute if entity @s[scores={openchest=1..}] unless entity @s[scores={eyeclick=1..}] run scoreboard players reset @s openchest
+execute if score @s openchest matches 1.. unless score @s eyeclick matches 1.. run title @s title {"text":" ","color":"dark_aqua"}
+execute if score @s openchest matches 1.. unless score @s eyeclick matches 1.. run title @s subtitle {"text":" ","color":"dark_aqua"}
+execute if score @s openchest matches 1.. unless score @s eyeclick matches 1.. run scoreboard players reset @s openchest
 
 tag @s[tag=HoldKey] remove HoldKey
