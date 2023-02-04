@@ -1,7 +1,5 @@
 execute at @s if entity @a[team=!Lobby,team=!Spectator,distance=..20] run function cannons:bounce/towardsplayer
-execute at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..20] run summon marker ~ ~ ~ {Tags:["BounceRNG"]}
-execute at @s as @e[type=marker,tag=BounceRNG,limit=1] run function cannons:bounce/randomdirection
-
+execute at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..20] run function cannons:bounce/randomdirection
 
 scoreboard players add @s drag 4
 scoreboard players set @s gravity -250
