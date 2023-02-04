@@ -81,7 +81,8 @@ execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores=
 execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] rotated as @e[type=armor_stand,tag=ChainAnchor,limit=1,sort=nearest] unless block ^ ^ ^-3 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 if predicate cannons:pasttraining run scoreboard players set $landed CmdData 1
 
-execute if score $landed CmdData matches 1 at @s[tag=!PlayerCannonball,tag=!TracerCannonball,tag=!InWater] run function cannons:explode
+execute if score $landed CmdData matches 1 at @s[tag=!PlayerCannonball,tag=!TracerCannonball,tag=!InWater] unless predicate cannons:pasttraining run function cannons:explode
+execute if score $landed CmdData matches 1 at @s[tag=!PlayerCannonball,tag=!TracerCannonball,tag=!InWater] if predicate cannons:pasttraining run kill @s
 execute if score $landed CmdData matches 1 at @s[tag=PlayerCannonball,tag=!Hit] run function cannons:ejectplayer
 execute if score $landed CmdData matches 1 at @s[tag=TracerCannonball] run function cannons:tracerhit
 scoreboard players reset $landed CmdData
