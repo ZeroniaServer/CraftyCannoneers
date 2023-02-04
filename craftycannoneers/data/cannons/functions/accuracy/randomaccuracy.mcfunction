@@ -1,24 +1,28 @@
-execute at @s run summon marker ~ ~ ~ {Tags:["RandomAccuracy"]}
+summon marker ~ ~ ~ {Tags:["RandomAccuracy"]}
 
 scoreboard players set @s drag 25
 scoreboard players set @s gravity 145
 
-scoreboard players set @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] drag 25
-scoreboard players set @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] gravity 145
+scoreboard players set $current drag 25
+scoreboard players set $current gravity 145
 
-scoreboard players set @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] RNGmax 5
-execute store result score @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] RNGscore run data get entity @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] UUID[0]
-execute store result score @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] RNGscore run scoreboard players operation @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] RNGscore %= @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] RNGmax
+scoreboard players set $current RNGmax 5
+execute store result score $current RNGscore run data get entity @e[type=marker,tag=RandomAccuracy,limit=1] UUID[0]
+scoreboard players operation $current RNGscore %= $current RNGmax
 
-scoreboard players operation @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] drag += @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] RNGscore
+scoreboard players operation $current drag += $current RNGscore
 
-scoreboard players set @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] RNGmax 5
-execute store result score @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] RNGscore run data get entity @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] UUID[1]
-execute store result score @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] RNGscore run scoreboard players operation @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] RNGscore %= @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] RNGmax
+scoreboard players set $current RNGmax 5
+execute store result score $current RNGscore run data get entity @e[type=marker,tag=RandomAccuracy,limit=1] UUID[1]
+kill @e[type=marker,tag=RandomAccuracy,limit=1]
+scoreboard players operation $current RNGscore %= $current RNGmax
+scoreboard players reset $current RNGmax
 
-scoreboard players operation @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] gravity -= @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] RNGscore
+scoreboard players operation $current gravity -= $current RNGscore
+scoreboard players reset $current RNGscore
 
-scoreboard players operation @s drag = @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] drag
-scoreboard players operation @s gravity = @e[type=marker,tag=RandomAccuracy,limit=1,sort=nearest] gravity
+scoreboard players operation @s drag = $current drag
+scoreboard players reset $current drag
 
-kill @e[type=marker,tag=RandomAccuracy]
+scoreboard players operation @s gravity = $current gravity
+scoreboard players reset $current gravity

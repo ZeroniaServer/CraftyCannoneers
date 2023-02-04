@@ -6,9 +6,10 @@ scoreboard players operation $lockboxspawn CmdData /= $3 CmdData
 
 #> add some spicy RNG to spawn required hp
 summon marker ~ ~ ~ {Tags:["LockHPRNG"]}
-scoreboard players set @e[type=marker,tag=LockHPRNG] RNGmax 120
-execute as @e[type=marker,tag=LockHPRNG] store result score @s RNGscore run data get entity @s UUID[0]
-execute as @e[type=marker,tag=LockHPRNG] run scoreboard players operation @s RNGscore %= @s RNGmax
-
-scoreboard players operation $lockboxspawn CmdData += @e[type=marker,limit=1,sort=random,tag=LockHPRNG] RNGscore
-kill @e[type=marker,tag=LockHPRNG]
+scoreboard players set $max RNGmax 120
+execute store result score $lockhp RNGscore run data get entity @e[type=marker,tag=LockHPRNG,limit=1] UUID[0]
+kill @e[type=marker,tag=LockHPRNG,limit=1]
+scoreboard players operation $lockhp RNGscore %= $max RNGmax
+scoreboard players reset $max RNGmax
+scoreboard players operation $lockboxspawn CmdData += $lockhp RNGscore
+scoreboard players reset $lockhp RNGscore
