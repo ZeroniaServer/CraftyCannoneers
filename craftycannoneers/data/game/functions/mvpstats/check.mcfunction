@@ -17,16 +17,14 @@ execute as @a[team=!Lobby,team=!Spectator,team=!Developer] if score @s MVPdamage
 # Calculate who did the most damage
 scoreboard players set $max MVPdamage 0
 scoreboard players operation $max MVPdamage > @a[team=!Lobby,team=!Spectator,team=!Developer,scores={MVPdamage=1..}] MVPdamage
-# execute as @a[team=!Lobby,team=!Spectator,team=!Developer] if score @s MVPdamage = $max MVPdamage unless score @s MVPdamage matches 0 run tag @s add DamageMVP
-execute as @a[team=!Lobby,team=!Spectator,team=!Developer] if score @s MVPdamage = $max MVPdamage unless score @s MVPdamage matches 0 run tag @s add CannonMVP
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer] if score @s MVPdamage = $max MVPdamage unless score @s MVPdamage matches 0 run tag @s add DamageMVP
 scoreboard players reset $max MVPdamage
 
-# Calculate who used the most cannonballs to factor into damage MVP (unsure if this is the move)
-# scoreboard players set $max MVPcannon 0
-# scoreboard players operation $max MVPcannon > @a[tag=DamageMVP] MVPcannon
-# execute as @a[tag=DamageMVP] if score @s MVPcannon = $max MVPcannon unless score @s MVPcannon matches 0 run tag @s add CannonMVP
-# scoreboard players reset $max MVPcannon
-# tag @a[tag=DamageMVP] remove DamageMVP
+# Calculate which damage MVP(s) used the least Cannonballs (tie resolution)
+execute store result score $count MVPdamage if entity @a[tag=DamageMVP]
+execute if score $count MVPdamage matches 1 as @a[tag=DamageMVP] run function game:mvpstats/damagemvp
+execute if score $count MVPdamage matches 2.. run function game:mvpstats/leastcannons
+scoreboard players reset $count MVPdamage
 
 function game:mvpstats/announce
 
