@@ -14,8 +14,6 @@ execute as @e[type=marker,tag=StormEventPicker,limit=1] run function game:modifi
 execute as @e[type=lightning_bolt] at @s run function game:modifiers/seastorms/reallightning
 execute as @e[type=marker,tag=LightningMarker] at @s run function game:modifiers/seastorms/marker
 
-
-
 #> Wind
 execute if score $WindDirection CmdData matches 0..1 run scoreboard players add $WindEffect CmdData 1
 # East
@@ -42,10 +40,6 @@ execute if score $WindEffect CmdData matches 201..202 run function game:modifier
 execute if score $WindEffect CmdData matches 221..222 run function game:modifiers/seastorms/spawnwindtrail
 execute if score $WindEffect CmdData matches 241..242 run function game:modifiers/seastorms/spawnwindtrail
 execute if score $WindEffect CmdData matches 261..262 run function game:modifiers/seastorms/spawnwindtrail
-execute if score $WindEffect CmdData matches 20..200 as @e[type=armor_stand,tag=cannonball,scores={CmdData=4..}] at @s run function game:modifiers/seastorms/cannonballinacc
+execute if score $WindEffect CmdData matches 20..200 as @e[type=armor_stand,tag=cannonball,scores={CmdData=4..}] run function game:modifiers/seastorms/cannonballinacc
 
-scoreboard players add @e[type=marker,tag=WindIndicator] CmdData 1
-execute as @e[type=marker,tag=WindIndicator,tag=East] at @s run tp @s ~3 ~ ~ 
-execute as @e[type=marker,tag=WindIndicator,tag=West] at @s run tp @s ~-3 ~ ~
-execute as @e[type=marker,tag=WindIndicator] at @s run particle minecraft:cloud ~ ~ ~ 2.2 0 0 0.05 2 force 
-kill @e[type=marker,tag=WindIndicator,scores={CmdData=46..}]
+execute as @e[type=marker,tag=WindIndicator] run function game:modifiers/seastorms/windeffects
