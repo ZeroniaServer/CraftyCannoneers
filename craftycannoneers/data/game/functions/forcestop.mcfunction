@@ -52,3 +52,4 @@ scoreboard players set $purple hasArrows 0
 #> Disable modifiers
 weather clear
 scoreboard players reset $StormTime CmdData
+scoreboard players reset $WindEffect CmdData
