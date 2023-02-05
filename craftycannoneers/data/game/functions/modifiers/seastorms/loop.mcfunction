@@ -13,3 +13,39 @@ execute as @e[type=marker,tag=StormEventPicker,limit=1] run function game:modifi
 #> Lightning
 execute as @e[type=lightning_bolt] at @s run function game:modifiers/seastorms/reallightning
 execute as @e[type=marker,tag=LightningMarker] at @s run function game:modifiers/seastorms/marker
+
+
+
+#> Wind
+execute if score $WindDirection CmdData matches 0..1 run scoreboard players add $WindEffect CmdData 1
+# East
+execute if score $WindDirection CmdData matches 0 if score $WindEffect CmdData matches 1 run playsound seastorm master @a 36 -12 0 7 1
+execute if score $WindDirection CmdData matches 0 if score $WindEffect CmdData matches 1 run playsound seastorm master @a 104 -12 0 5 1.6
+
+# West
+execute if score $WindDirection CmdData matches 1 if score $WindEffect CmdData matches 1 run playsound seastorm master @a 104 -12 0 7 1
+execute if score $WindDirection CmdData matches 1 if score $WindEffect CmdData matches 1 run playsound seastorm master @a 36 -12 0 5 1.6
+#Global
+execute if score $WindEffect CmdData matches 275.. run scoreboard players reset $WindDirection CmdData
+execute if score $WindEffect CmdData matches 275.. run scoreboard players reset $WindEffect CmdData
+execute if score $WindEffect CmdData matches 1..2 run function game:modifiers/seastorms/spawnwindtrail
+execute if score $WindEffect CmdData matches 21..22 run function game:modifiers/seastorms/spawnwindtrail
+execute if score $WindEffect CmdData matches 41..42 run function game:modifiers/seastorms/spawnwindtrail
+execute if score $WindEffect CmdData matches 61..62 run function game:modifiers/seastorms/spawnwindtrail
+execute if score $WindEffect CmdData matches 81..82 run function game:modifiers/seastorms/spawnwindtrail
+execute if score $WindEffect CmdData matches 101..102 run function game:modifiers/seastorms/spawnwindtrail
+execute if score $WindEffect CmdData matches 121..122 run function game:modifiers/seastorms/spawnwindtrail
+execute if score $WindEffect CmdData matches 141..142 run function game:modifiers/seastorms/spawnwindtrail
+execute if score $WindEffect CmdData matches 161..162 run function game:modifiers/seastorms/spawnwindtrail
+execute if score $WindEffect CmdData matches 181..182 run function game:modifiers/seastorms/spawnwindtrail
+execute if score $WindEffect CmdData matches 201..202 run function game:modifiers/seastorms/spawnwindtrail
+execute if score $WindEffect CmdData matches 221..222 run function game:modifiers/seastorms/spawnwindtrail
+execute if score $WindEffect CmdData matches 241..242 run function game:modifiers/seastorms/spawnwindtrail
+execute if score $WindEffect CmdData matches 261..262 run function game:modifiers/seastorms/spawnwindtrail
+execute if score $WindEffect CmdData matches 20..200 as @e[type=armor_stand,tag=cannonball,scores={CmdData=4..}] at @s run function game:modifiers/seastorms/cannonballinacc
+
+scoreboard players add @e[type=marker,tag=WindIndicator] CmdData 1
+execute as @e[type=marker,tag=WindIndicator,tag=East] at @s run tp @s ~3 ~ ~ 
+execute as @e[type=marker,tag=WindIndicator,tag=West] at @s run tp @s ~-3 ~ ~
+execute as @e[type=marker,tag=WindIndicator] at @s run particle minecraft:cloud ~ ~ ~ 2.2 0 0 0.05 2 force 
+kill @e[type=marker,tag=WindIndicator,scores={CmdData=46..}]
