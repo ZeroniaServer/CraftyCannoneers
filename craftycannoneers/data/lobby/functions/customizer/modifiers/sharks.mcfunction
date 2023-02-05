@@ -3,5 +3,5 @@ execute if score $Sharks CmdData matches 0 run tellraw @s ["","\n",{"translate":
 execute if score $Sharks CmdData matches 0 run scoreboard players set $Sharks CmdData 1
 execute if score $Sharks CmdData matches 2 run scoreboard players set $Sharks CmdData 0
 
-function lobby:customizer/updatemodifiersigns
+function lobby:customizer/modifiers/updatemodifiersigns
 scoreboard players reset @s moditimer

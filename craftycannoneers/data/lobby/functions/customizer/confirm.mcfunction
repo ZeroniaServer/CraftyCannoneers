@@ -15,7 +15,7 @@ scoreboard players add $ticks CmdData 20
 title @a title {"translate":"customizer.confirmed","underlined":true,"color":"dark_green"}
 title @a subtitle [{"translate":"chat.the_game","color":"green","with":[{"translate":"chat.ready_to_play","color":"green"}]}]
 execute as @a at @s run playsound confirmsettings master @s ~ ~ ~ 1 1.5
-execute as @a run function lobby:customizer/gameinfo
+function lobby:customizer/gameinfo
 
 scoreboard players set $gamestate CmdData 0
 

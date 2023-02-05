@@ -3,5 +3,5 @@ execute if score $NoTracers CmdData matches 0 run tellraw @s ["","\n",{"translat
 execute if score $NoTracers CmdData matches 0 run scoreboard players set $NoTracers CmdData 1
 execute if score $NoTracers CmdData matches 2 run scoreboard players set $NoTracers CmdData 0
 
-function lobby:customizer/updatemodifiersigns
+function lobby:customizer/modifiers/updatemodifiersigns
 scoreboard players reset @s moditimer

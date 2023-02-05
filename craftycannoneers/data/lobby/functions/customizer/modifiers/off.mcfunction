@@ -16,4 +16,5 @@ setblock -54 -24 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"light_blue"
 setblock -53 -22 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"orange",Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 7853"}}',Text2:'{"text":""}',Text3:'{"translate":"customizer.game_time","color":"#FFFB00"}'}
 setblock -55 -22 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"pink",Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 3384"}}',Text2:'{"text":""}',Text3:'{"translate":"customizer.ship_health","color":"#F8005B"}'}
 scoreboard players set $ModiMapActive CmdData 0
+
 function lobby:customizer/updatesigns
