@@ -9,9 +9,9 @@ kill @e[type=armor_stand,tag=GasBubble,predicate=cannons:ships/tutorial]
 kill @e[type=armor_stand,tag=GasAS,predicate=cannons:ships/tutorial]
 kill @e[type=bat,predicate=cannons:ships/tutorial]
 
-execute store success score $firering CmdData run kill @e[type=marker,tag=RingOfFire,predicate=cannons:ships/tutorial]
-execute if score $firering CmdData matches 1 unless entity @e[type=marker,tag=RingOfFire,limit=1] run gamerule doFireTick false
-scoreboard players reset $firering CmdData
+execute if entity @e[type=marker,tag=RingOfFire,predicate=cannons:ships/tutorial] unless entity @e[type=marker,tag=RingOfFire,limit=1] run gamerule doFireTick false
+execute if entity @e[type=marker,tag=RingOfFire,predicate=cannons:ships/tutorial] unless score $gamestate CmdData matches 2 run gamerule doFireTick false
+kill @e[type=marker,tag=RingOfFire,predicate=cannons:ships/tutorial]
 
 function tutorial:cannondock/restoreweakpoints
 
