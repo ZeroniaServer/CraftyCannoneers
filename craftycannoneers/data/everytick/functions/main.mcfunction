@@ -15,6 +15,9 @@ execute as @e[type=item] at @s run function everytick:items
 #> Seagulls
 execute as @e[type=armor_stand,tag=seagull] at @s run function everytick:seagull
 execute as @e[type=marker,tag=seagull] at @s run tp @s ~ ~ ~ ~2 ~
+execute as @e[type=marker,tag=seagull] at @s if score $WindEffect CmdData matches 10..60 run tp @s ~ ~ ~ ~1 ~
+execute as @e[type=marker,tag=seagull] at @s if score $WindEffect CmdData matches 61..240 run tp @s ~ ~ ~ ~3 ~
+execute as @e[type=marker,tag=seagull] at @s if score $WindEffect CmdData matches 241..260 run tp @s ~ ~ ~ ~1 ~
 
 #> Cannons
 function cannons:main
