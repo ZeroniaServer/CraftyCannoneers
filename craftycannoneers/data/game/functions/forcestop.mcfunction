@@ -49,7 +49,6 @@ scoreboard players set $WasAuto CmdData 0
 scoreboard players set $orange hasArrows 0
 scoreboard players set $purple hasArrows 0
 
-
 #> Disable modifiers
 weather clear
 scoreboard players reset $StormTime CmdData

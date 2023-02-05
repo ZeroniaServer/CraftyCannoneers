@@ -1,6 +1,6 @@
 scoreboard players add $StormTime CmdData 1
 
-execute if score $StormTime CmdData matches 1 run weather thunder
+execute if score $StormTime CmdData matches 1.. run weather thunder
 execute if score $StormTime CmdData matches 75 run summon lightning_bolt 70 -28 0 {Tags:["StormEntity"]}
 execute if score $StormTime CmdData matches 75 run summon lightning_bolt 70 -28 0 {Tags:["StormEntity"]}
 
