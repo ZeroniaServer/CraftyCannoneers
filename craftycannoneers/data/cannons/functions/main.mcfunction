@@ -16,6 +16,9 @@ function cannons:firering/main
 #> Gas
 function cannons:gas/main
 
+#> Controlled Creeper Blast
+execute as @e[type=creeper,tag=CannonballCreeper] run data merge entity @s {Fuse:0}
+
 #> Bounce
 function cannons:bounce/main
 

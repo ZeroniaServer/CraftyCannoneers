@@ -4,6 +4,7 @@ execute if score $gamestate CmdData matches 2.. run tellraw @s ["",{"translate":
 gamemode adventure @s
 team join Purple @s
 execute at @s run tp @s @s
+title @s clear
 title @s times 0 50 15
 execute unless score $gamestate CmdData matches 2.. run tp @s -46 -28.5 -2 0 0
 execute if score $gamestate CmdData matches 2.. run tp @s 52 -26 -55 -90 0
