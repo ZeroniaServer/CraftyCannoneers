@@ -1,0 +1,8 @@
+{
+    "values": [
+        "minecraft:cave_air",
+        "minecraft:light",
+        "minecraft:fire",
+        "minecraft:moving_piston"
+    ]
+}
