@@ -1,3 +1,5 @@
+tag @s[tag=IsStuck] add WasStuck
+
 execute if predicate cannons:ships/purple if block ~1 ~1 ~ #game:playerstuck if block ~-1 ~1 ~ #game:shipblocks if block ~ ~1 ~1 #game:shipblocks if block ~ ~1 ~-1 #game:shipblocks run tag @s add IsStuck
 execute if predicate cannons:ships/orange if block ~1 ~1 ~ #game:playerstuck if block ~-1 ~1 ~ #game:shipblocks if block ~ ~1 ~1 #game:shipblocks if block ~ ~1 ~-1 #game:shipblocks run tag @s add IsStuck
 
@@ -20,7 +22,6 @@ execute if block ~-1 ~ ~ #minecraft:stairs run tag @s[tag=IsStuck] remove IsStuc
 execute if block ~ ~ ~1 #minecraft:stairs run tag @s[tag=IsStuck] remove IsStuck
 execute if block ~ ~ ~-1 #minecraft:stairs run tag @s[tag=IsStuck] remove IsStuck
 
-effect clear @s[tag=!IsStuck,tag=!dismounter] jump_boost
+effect clear @s[tag=WasStuck,tag=!IsStuck] jump_boost
+tag @s remove WasStuck
 effect give @s[tag=IsStuck] jump_boost 1 3 true
-
-tag @s[tag=IsStuck] remove IsStuck

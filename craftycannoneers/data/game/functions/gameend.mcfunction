@@ -28,7 +28,6 @@ execute if score $WinningTeam CmdData matches 2 run particle lava 68 -28 55 12 1
 execute if score $WinningTeam CmdData matches 2 run particle large_smoke 68 -28 55 12 12 4 0.1 8 force
 
 execute if score $EndTime CmdData matches 1 run tag @e[type=marker,tag=joinpad] add Locked
-execute if score $EndTime CmdData matches 1 as @e[type=armor_stand,tag=CannonDisp,tag=OnFire] at @s run function cannons:firering/extinguishcannon
 execute if score $EndTime CmdData matches 1 run function game:mvpstats/check
 execute if score $EndTime CmdData matches 1 run scoreboard players remove @a[team=Purple,scores={GamesPlayed=1..}] GamesPlayed 1
 execute if score $EndTime CmdData matches 1 run scoreboard players remove @a[team=Orange,scores={GamesPlayed=1..}] GamesPlayed 1

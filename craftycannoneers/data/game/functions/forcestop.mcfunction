@@ -44,8 +44,6 @@ kill @e[type=marker,tag=WeakpointLoc]
 tp @e[type=slime,tag=Weakpoint] 0 -1000 0
 kill @e[type=#game:weakpoint,tag=Weakpoint]
 
-execute as @e[type=armor_stand,tag=CannonDisp,tag=OnFire] at @s run function cannons:firering/extinguishcannon
-
 scoreboard players set $WasAuto CmdData 0
 
 scoreboard players set $orange hasArrows 0

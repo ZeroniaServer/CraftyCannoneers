@@ -1,4 +1,6 @@
-execute at @s run fill ~200 ~ ~ ~ ~ ~100 air replace #game:fakeair
+execute at @s run fill ~200 ~ ~ ~ ~ ~100 air replace cave_air
+execute at @s run fill ~200 ~ ~ ~ ~ ~100 air replace light
+execute at @s run fill ~200 ~ ~ ~ ~ ~100 air replace fire
 execute at @s run tp @s ~ ~1 ~
 
 scoreboard players add @s CmdData 1

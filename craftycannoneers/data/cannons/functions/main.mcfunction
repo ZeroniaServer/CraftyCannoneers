@@ -29,9 +29,6 @@ execute if score $OrangeWPDelay CmdData matches 20.. run scoreboard players rese
 execute if score $PurpleWPDelay CmdData matches 1.. run scoreboard players add $PurpleWPDelay CmdData 1
 execute if score $PurpleWPDelay CmdData matches 20.. run scoreboard players reset $PurpleWPDelay CmdData
 
-#> Controlled Creeper Blast
-execute as @e[type=creeper,tag=CannonballCreeper] run data merge entity @s {Fuse:0}
-
 #> Damage Calculation
 execute as @e[type=marker,tag=ImpactMarker] at @s run function cannons:damagecalc
 

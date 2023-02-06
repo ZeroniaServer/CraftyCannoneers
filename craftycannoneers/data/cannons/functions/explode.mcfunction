@@ -1,8 +1,7 @@
-execute at @s[tag=!Hit1,predicate=!cannons:safezones/island] store result score @s CalcAir1 run fill ~ ~-1 ~ ~ ~-1 ~ air replace #game:shipblocks
-execute at @s[tag=!Hit1,predicate=!cannons:safezones/island] store result score @s CalcAir2 run fill ^1 ^1 ^1 ^-1 ^-1 ^1 air replace #game:shipblocks
+execute at @s[tag=!Hit1,predicate=!cannons:safezones/island] run fill ~ ~-1 ~ ~ ~-1 ~ air replace #game:shipblocks
+execute at @s[tag=!Hit1,predicate=!cannons:safezones/island] run fill ^1 ^1 ^1 ^-1 ^-1 ^1 air replace #game:shipblocks
 
 execute at @s[tag=!BouncyCannonball,tag=!PlayerCannonball] run tp @s ^ ^ ^1
-
 #>Safezone check
 #Island
 tag @s[predicate=cannons:safezones/island] add InSafezone
@@ -56,11 +55,6 @@ execute at @s[tag=!InSafezone,tag=!Hit1,tag=ChainCannonball] run summon marker ^
 
 execute at @s[tag=!InSafezone,tag=Hit1,tag=ChainCannonball,scores={doublehit=4..}] run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2","Hit1"]}
 execute at @s[tag=!InSafezone,tag=Hit1,tag=ChainCannonball,scores={doublehit=4..}] run summon marker ^ ^ ^-1 {Tags:["ImpactMarker","Power2","Hit1"]}
-
-# tellraw @a [{"score":{"name":"@s","objective":"CalcAir1"}},{"text":" "},{"score":{"name":"@s","objective":"CalcAir2"}}]
-# scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] click += @s CalcAir1
-# scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] click += @s CalcAir2
-# execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] run tellraw @a [{"text":"my extra air: "},{"score":{"name":"@s","objective":"click"}}]
 
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] playerUUID = @s playerUUID
 tag @s add currentCannonball

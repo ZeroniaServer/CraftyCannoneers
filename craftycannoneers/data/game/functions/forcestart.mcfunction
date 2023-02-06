@@ -67,7 +67,7 @@ summon marker 52 -30 11 {Tags:["LockSpawn"]}
 summon marker 69 -29 -2 {Tags:["LockSpawn"]}
 summon marker 71 -29 2 {Tags:["LockSpawn"]}
 
-# execute as @e[type=marker,tag=WeakpointLoc] at @s run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 cave_air replace air
+execute as @e[type=marker,tag=WeakpointLoc] at @s run fill ~2 ~2 ~2 ~-2 ~-2 ~-2 cave_air replace air
 
 function game:shipweakpoint/spawnnewpurple
 function game:shipweakpoint/spawnneworange
