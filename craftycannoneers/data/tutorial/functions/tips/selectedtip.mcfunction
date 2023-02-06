@@ -20,7 +20,8 @@ execute if entity @s[tag=Tip19] run tellraw @a[tag=!hideTips] ["",{"text":"<","c
 execute if entity @s[tag=Tip20] run tellraw @a[tag=!hideTips] ["",{"text":"<","color":"aqua"},{"translate":"tip.tip","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"translate":"tip.20","color":"gray"}]
 execute if entity @s[tag=Tip21] run tellraw @a[tag=!hideTips] ["",{"text":"<","color":"aqua"},{"translate":"tip.tip","bold":true,"color":"dark_aqua"},{"text":"> ","color":"aqua"},{"translate":"tip.21","color":"gray"}]
 
-execute as @a[tag=!hideTips,scores={GamesPlayed=2..}] run tellraw @s ["",{"translate":"tip.games","color":"dark_aqua","with":[{"score":{"name":"@s","objective":"GamesPlayed"},"color":"aqua","bold":true}]}]
+execute as @a[tag=!hideTips,scores={GamesPlayed=3..}] run tellraw @s ["",{"translate":"tip.games","color":"dark_aqua","with":[{"score":{"name":"@s","objective":"GamesPlayed"},"color":"aqua","bold":true}]}]
+execute as @a[tag=!hideTips,scores={GamesPlayed=2}] run tellraw @s ["",{"translate":"tip.dual_game","color":"dark_aqua","with":[{"score":{"name":"@s","objective":"GamesPlayed"},"color":"aqua","bold":true}]}]
 tellraw @a[tag=!hideTips,scores={GamesPlayed=1}] ["",{"translate":"tip.games","color":"dark_aqua","with":[{"score":{"name":"@s","objective":"GamesPlayed"},"color":"aqua","bold":true}]}]
 tellraw @a[tag=!hideTips,scores={GamesPlayed=..0}] ["",{"translate":"tip.click","color":"dark_aqua","with":[{"translate":"tip.here","color":"green","clickEvent":{"action":"run_command","value":"/trigger toggleTips"},"hoverEvent":{"action":"show_text","contents":[{"translate":"tip.here.hover"}]}}]}]
 
