@@ -3,7 +3,6 @@ scoreboard players operation @s CalcFire2 -= @s CalcAir1
 execute if score @s CalcFire2 matches 1.. run scoreboard players operation @s CalcAir2 += @s CalcFire2
 execute unless score @s CalcAir2 matches 0.. if score @s click matches 1.. run tag @s add failsafe
 scoreboard players operation @s[tag=failsafe] CalcAir2 = @s click
-execute if entity @s[tag=failsafe] run say lol rip
 scoreboard players operation @s CalcSail1 -= @s CalcSail2
 
 #> ORANGE
