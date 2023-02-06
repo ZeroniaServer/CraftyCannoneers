@@ -114,6 +114,8 @@ scoreboard objectives add boardstate dummy
 scoreboard objectives add climb minecraft.custom:minecraft.climb_one_cm
 scoreboard objectives add remainderArrows dummy
 scoreboard objectives add respawn dummy
+scoreboard objectives add CalcFire1 dummy
+scoreboard objectives add CalcFire2 dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy

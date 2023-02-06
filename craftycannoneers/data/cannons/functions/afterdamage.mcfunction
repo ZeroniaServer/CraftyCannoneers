@@ -1,6 +1,6 @@
-tellraw @a [{"score":{"name":"@s","objective":"CalcAir2"}},{"text":" - "},{"score":{"name":"@s","objective":"CalcAir1"}}]
-
 scoreboard players operation @s CalcAir2 -= @s CalcAir1
+scoreboard players operation @s CalcFire2 -= @s CalcAir1
+execute if score @s CalcFire2 matches 1.. run scoreboard players operation @s CalcAir2 += @s CalcFire2
 scoreboard players operation @s CalcSail1 -= @s CalcSail2
 
 #> ORANGE
