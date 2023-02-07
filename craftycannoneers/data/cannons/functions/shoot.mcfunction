@@ -1,6 +1,8 @@
 scoreboard players add @s[tag=Hit1] doublehit 1
 scoreboard players add @s CmdData 1
 
+execute if entity @s[tag=!TracerCannonball,scores={CmdData=3}] run function cannons:showcannonballs
+
 scoreboard players add @s[tag=bouncing,scores={bouncedelay=1..}] bouncedelay 1
 
 execute at @s[tag=CannonballCluster,tag=!AccuracySet] run function cannons:setaccuracy
@@ -40,7 +42,7 @@ execute at @s[tag=HotCannonball,scores={CmdData=4..}] run particle flame ^ ^2 ^-
 execute at @s[tag=GasCannonball,scores={CmdData=4..}] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 1 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=GasCannonball,scores={CmdData=4..}] run particle soul ^ ^2 ^-8.5 0 0 0 0.02 2 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=PlayerCannonball,scores={CmdData=4..}] run particle cloud ^ ^2 ^-8.5 0 0 0 0.02 1 force @a[predicate=cannons:seeparticles]
-execute at @s[tag=TracerCannonball,scores={CmdData=4..}] run function cannons:tracerparticle
+execute at @s[tag=TracerCannonball,scores={CmdData=1..}] run function cannons:tracerparticle
 
 #> Landing conditions
 execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball] if block ~ ~-1 ~ water run function cannons:waterkill
