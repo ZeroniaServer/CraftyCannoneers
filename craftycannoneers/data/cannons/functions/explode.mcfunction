@@ -1,7 +1,7 @@
 execute at @s[tag=!Hit1,predicate=!cannons:safezones/island] store result score @s CalcAir1 run fill ~ ~-1 ~ ~ ~-1 ~ air replace #game:shipblocks
 execute at @s[tag=!Hit1,predicate=!cannons:safezones/island] store result score @s CalcAir2 run fill ^1 ^1 ^1 ^-1 ^-1 ^1 air replace #game:shipblocks
 
-# execute at @s[tag=!BouncyCannonball,tag=!PlayerCannonball] run tp @s ^ ^ ^1
+execute at @s[tag=!BouncyCannonball,tag=!PlayerCannonball] run tp @s ^ ^ ^1
 #>Safezone check
 #Island
 tag @s[predicate=cannons:safezones/island] add InSafezone
@@ -13,7 +13,7 @@ tag @s[predicate=cannons:safezones/ships] add InSafezone
 #FIREBALL EFFECT
 execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. run scoreboard players operation @e[type=armor_stand,tag=GasBubble,tag=!GasIgnite,distance=..6] playerUUID = @s playerUUID
 execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. run tag @e[type=armor_stand,tag=GasBubble,tag=!GasIgnite,distance=..6] add GasIgnite
-execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. run summon marker ^ ^-2 ^ {Tags:["RingOfFire"]}
+execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. run summon marker ^ ^-2 ^3 {Tags:["RingOfFire"]}
 execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. if predicate game:onpurple run scoreboard players add $PFireCount CmdData 1
 execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. if predicate game:onpurple run scoreboard players add $OFireCount CmdData 1
 scoreboard players operation @e[type=marker,tag=RingOfFire,tag=!HasUUID,limit=1] playerUUID = @s playerUUID
@@ -21,33 +21,33 @@ data modify entity @e[type=marker,tag=RingOfFire,tag=!HasUUID,limit=1] CustomNam
 tag @e[type=marker,tag=RingOfFire,tag=!HasUUID,limit=1] add HasUUID
 
 #GAS EFFECT
-execute at @s[tag=Hit1,tag=GasCannonball] run summon marker ^ ^-2 ^ {Tags:["GasCloud"]}
+execute at @s[tag=Hit1,tag=GasCannonball] run summon marker ^ ^-2 ^3 {Tags:["GasCloud"]}
 
 #General Impact Marker
-execute at @s[tag=InSafezone,tag=!Hit1,tag=!CannonballCluster,tag=!GoldenCannonball] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power1"]}
-execute at @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=!CannonballCluster,tag=!BouncyCannonball,tag=!GoldenCannonball,tag=!GasCannonball] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power1","Hit1"]}
-execute at @s[tag=!InSafezone,tag=!Hit1,tag=!Cannonball,tag=!ChainCannonball,tag=!CannonballCluster,tag=!GoldenCannonball] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power3"]}
-execute at @s[tag=!InSafezone,tag=Hit1,tag=!Cannonball,tag=!ChainCannonball,scores={doublehit=4..},tag=!CannonballCluster,tag=!BouncyCannonball,tag=!GoldenCannonball,tag=!GasCannonball] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power2","Hit1"]}
+execute at @s[tag=InSafezone,tag=!Hit1,tag=!CannonballCluster,tag=!GoldenCannonball] run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1"]}
+execute at @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=!CannonballCluster,tag=!BouncyCannonball,tag=!GoldenCannonball,tag=!GasCannonball] run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power1","Hit1"]}
+execute at @s[tag=!InSafezone,tag=!Hit1,tag=!Cannonball,tag=!ChainCannonball,tag=!CannonballCluster,tag=!GoldenCannonball] run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power3"]}
+execute at @s[tag=!InSafezone,tag=Hit1,tag=!Cannonball,tag=!ChainCannonball,scores={doublehit=4..},tag=!CannonballCluster,tag=!BouncyCannonball,tag=!GoldenCannonball,tag=!GasCannonball] run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2","Hit1"]}
 
 #Normal Cannonball
-execute at @s[tag=!InSafezone,tag=!Hit1,tag=Cannonball] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power2"]}
-execute at @s[tag=!InSafezone,tag=Hit1,tag=Cannonball,scores={doublehit=4..},tag=!CannonballCluster,tag=!BouncyCannonball,tag=!GoldenCannonball,tag=!GasCannonball] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power1","Hit1"]}
+execute at @s[tag=!InSafezone,tag=!Hit1,tag=Cannonball] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power2"]}
+execute at @s[tag=!InSafezone,tag=Hit1,tag=Cannonball,scores={doublehit=4..},tag=!CannonballCluster,tag=!BouncyCannonball,tag=!GoldenCannonball,tag=!GasCannonball] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power1","Hit1"]}
 
 #Gas Cannonball (default Hit1)
-execute at @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=GasCannonball] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power1"]}
-execute at @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..},tag=GasCannonball] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power2"]}
+execute at @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=GasCannonball] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power1"]}
+execute at @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..},tag=GasCannonball] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power2"]}
 
 #Golden Cannonball
-execute at @s[tag=InSafezone,tag=!Hit1,tag=GoldenCannonball] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power1","GoldImpact"]}
-execute at @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=GoldenCannonball] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power1","Hit1","GoldImpact"]}
-execute at @s[tag=!InSafezone,tag=!Hit1,tag=GoldenCannonball] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power3","GoldImpact"]}
-execute at @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..},tag=GoldenCannonball] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power2","Hit1","GoldImpact"]}
+execute at @s[tag=InSafezone,tag=!Hit1,tag=GoldenCannonball] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power1","GoldImpact"]}
+execute at @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=GoldenCannonball] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power1","Hit1","GoldImpact"]}
+execute at @s[tag=!InSafezone,tag=!Hit1,tag=GoldenCannonball] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power3","GoldImpact"]}
+execute at @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..},tag=GoldenCannonball] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power2","Hit1","GoldImpact"]}
 
 #Cannonball Cluster
-execute at @s[tag=InSafezone,tag=!Hit1,tag=CannonballCluster] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power1","cluster"]}
-execute at @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=CannonballCluster] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power1","cluster"]}
-execute at @s[tag=!InSafezone,tag=!Hit1,tag=CannonballCluster] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power3","cluster"]}
-execute at @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..},tag=CannonballCluster] run summon marker ^ ^ ^ {Tags:["ImpactMarker","Power2","cluster"]}
+execute at @s[tag=InSafezone,tag=!Hit1,tag=CannonballCluster] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power1","cluster"]}
+execute at @s[tag=InSafezone,tag=Hit1,scores={doublehit=4..},tag=CannonballCluster] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power1","cluster"]}
+execute at @s[tag=!InSafezone,tag=!Hit1,tag=CannonballCluster] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power3","cluster"]}
+execute at @s[tag=!InSafezone,tag=Hit1,scores={doublehit=4..},tag=CannonballCluster] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power2","cluster"]}
 
 #Chain Cannonball
 execute at @s[tag=!InSafezone,tag=!Hit1,tag=ChainCannonball] run summon marker ^ ^ ^1 {Tags:["ImpactMarker","Power2","ChainImpact"]}
