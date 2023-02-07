@@ -4,7 +4,7 @@ scoreboard players set @s CmdData 1
 execute if entity @s[tag=Power1] run summon creeper ~ ~ ~ {Tags:["CannonballCreeper"],CustomName:'{"translate":"cannonball.generic"}',Fuse:1,Silent:1b,CustomNameVisible:0b,NoAI:1b,CanPickUpLoot:0b,DeathTime:19s,ExplosionRadius:-1}
 execute if entity @s[tag=Power2] run summon creeper ~ ~ ~ {Tags:["CannonballCreeper"],CustomName:'{"translate":"cannonball.generic"}',Fuse:1,Silent:1b,CustomNameVisible:0b,NoAI:1b,CanPickUpLoot:0b,DeathTime:19s,ExplosionRadius:1}
 execute if entity @s[tag=Power3] run summon creeper ~ ~ ~ {Tags:["CannonballCreeper"],CustomName:'{"translate":"cannonball.generic"}',Fuse:1,Silent:1b,CustomNameVisible:0b,NoAI:1b,CanPickUpLoot:0b,DeathTime:19s,ExplosionRadius:2}
-execute if entity @s[tag=GasPower,predicate=!cannons:safezones/island,predicate=!cannons:safezones/tutorial] run summon creeper ~ ~ ~ {Tags:["GasCreeper","CannonballCreeper"],CustomName:'{"translate":"gas_explosion"}',Fuse:1,Silent:1b,CustomNameVisible:0b,NoAI:1b,CanPickUpLoot:0b,DeathTime:19s,ExplosionRadius:2}
+execute if entity @s[tag=GasPower,predicate=!cannons:safezones/island,predicate=!cannons:safezones/tutorial] run summon creeper ~ ~ ~ {Tags:["GasCreeper","CannonballCreeper"],CustomName:'{"translate":"gas_explosion.generic"}',Fuse:1,Silent:1b,CustomNameVisible:0b,NoAI:1b,CanPickUpLoot:0b,DeathTime:19s,ExplosionRadius:2}
 team join NoName @e[type=creeper,tag=!hasUUID]
 scoreboard players operation @e[type=creeper,tag=!HasUUID,limit=1,sort=nearest,distance=..2] playerUUID = @s playerUUID
 data modify entity @e[type=creeper,tag=!HasUUID,limit=1,sort=nearest,distance=..2] CustomName set from entity @s CustomName
