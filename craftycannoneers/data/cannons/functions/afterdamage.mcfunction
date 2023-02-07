@@ -8,7 +8,7 @@ scoreboard players operation @s CalcSail1 -= @s CalcSail2
 #> ORANGE
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] run scoreboard players operation $CurrentDamage CmdData += @s CalcAir2
 # execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] run scoreboard players operation $CurrentDamage CmdData += @s CalcAir2
-execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple,tag=!cluster] run scoreboard players add $CurrentDamage CmdData 14
+execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple,tag=!cluster] run scoreboard players add $CurrentDamage CmdData 8
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/purple] run scoreboard players operation $hitmarkuuid playerUUID = @s playerUUID
 
 #mvp tracker - orange
@@ -52,7 +52,7 @@ scoreboard players reset $CurrentDamage CmdData
 #> PURPLE
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] run scoreboard players operation $CurrentDamage CmdData += @s CalcAir2
 # execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] run scoreboard players operation $CurrentDamage CmdData += @s CalcAir2
-execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange,tag=!cluster] run scoreboard players add $CurrentDamage CmdData 14
+execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange,tag=!cluster] run scoreboard players add $CurrentDamage CmdData 8
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] run scoreboard players operation $hitmarkuuid playerUUID = @s playerUUID
 
 #mvp tracker - purple
