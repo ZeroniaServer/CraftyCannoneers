@@ -13,10 +13,10 @@ function everytick:particles
 execute as @e[type=item] at @s run function everytick:items
 
 #> Seagulls
-execute as @e[type=armor_stand,tag=seagull] at @s run function everytick:seagull
+execute as @e[type=armor_stand,tag=seagull] at @s at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run function everytick:seagull
 execute as @e[type=marker,tag=seagull] at @s run function everytick:seagullspin
 
-#> Cannons
+#> Cannons - TODO OPTIMIZE
 function cannons:main
 
 #> Entity effects
@@ -43,12 +43,12 @@ function lobby:easteregg/loop
 
 #> Training Island
 execute if entity @a[team=Lobby,predicate=game:tutorialbounds] run function tutorial:loop
-execute as @e[type=marker,tag=TutorialWarp] at @s run function tutorial:warppads/main
+execute as @e[type=marker,tag=TutorialWarp,limit=2] at @s run function tutorial:warppads/main
 
 #> Credits particles
-execute as @e[type=armor_stand,tag=YZERODeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
-execute as @e[type=armor_stand,tag=EvtemaDeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
-execute as @e[type=armor_stand,tag=StuffyDeco] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
+execute as @e[type=armor_stand,tag=YZERODeco,limit=1] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
+execute as @e[type=armor_stand,tag=EvtemaDeco,limit=1] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
+execute as @e[type=armor_stand,tag=StuffyDeco,limit=1] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
 
 #> Ingame
 execute if score $gamestate CmdData matches 3 run function game:gameend

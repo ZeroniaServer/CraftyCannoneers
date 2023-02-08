@@ -5,28 +5,22 @@ execute unless score $PurpleWPDelay CmdData matches 1.. if entity @s[type=slime,
 execute unless score $PurpleWPDelay CmdData matches 1.. if entity @s[type=slime,tag=Spotted] run scoreboard players add $CritOrange CmdData 87
 scoreboard players set $PurpleWPDelay CmdData 1
 
-execute as @e[type=slime,tag=Weakpoint,tag=Purple] run function arenaclear:kill
-kill @e[type=marker,tag=Weakpoint,tag=Purple]
+execute as @e[type=slime,tag=Weakpoint,tag=Purple,limit=1] run function arenaclear:kill
+kill @e[type=marker,tag=Weakpoint,tag=Purple,limit=1]
 
 scoreboard players add $PurpleWP CmdData 1
 
-execute as @e[type=marker,tag=WeakpointLoc,tag=Orange] at @s if block ~ ~ ~ air run kill @s
-execute as @e[type=marker,tag=WeakpointLoc,tag=Orange] at @s if block ~ ~1 ~ air run kill @s
-execute as @e[type=marker,tag=WeakpointLoc,tag=Orange] at @s if block ~1 ~1 ~ air run kill @s
-execute as @e[type=marker,tag=WeakpointLoc,tag=Orange] at @s if block ~-1 ~1 ~ air run kill @s
-execute as @e[type=marker,tag=WeakpointLoc,tag=Orange] at @s if block ~ ~2 ~ air run kill @s
+execute as @e[type=marker,tag=WeakpointLoc,tag=Orange] at @s run function game:shipweakpoint/removeloc
 tag @e[type=marker,tag=WeakpointLoc,tag=Orange,sort=random,limit=1] add SelectedWeakP
 execute unless entity @e[type=marker,tag=SelectedWeakP,tag=Orange] unless score $PurpleWP CmdData matches 6.. run function game:shipweakpoint/placeneworange
 execute unless entity @e[type=marker,tag=SelectedWeakP,tag=Orange] run scoreboard players set $PurpleWP CmdData 6
 
-execute as @e[type=marker,tag=SelectedWeakP,tag=Orange] at @s run summon slime ~ ~ ~-2 {PersistenceRequired:1b,Tags:["Weakpoint","Purple"],Invulnerable:1b,Size:3,NoAI:1b,NoGravity:1b,Silent:1b}
-execute as @e[type=marker,tag=SelectedWeakP,tag=Orange] at @s run summon marker ~1 ~ ~-1 {Tags:["Weakpoint","XParticle","1","Purple"]}
-execute as @e[type=marker,tag=SelectedWeakP,tag=Orange] at @s run summon marker ~-1 ~ ~-1 {Tags:["Weakpoint","XParticle","2","Purple"]}
+execute as @e[type=marker,tag=SelectedWeakP,tag=Orange,limit=1] at @s run function game:shipweakpoint/summonorange
 
-team join NoName @e[type=slime,tag=Weakpoint]
+team join NoName @e[type=slime,tag=Weakpoint,tag=Purple,limit=1]
 
 scoreboard players set @a[team=Purple,scores={WPNotify=-1000..}] WPNotify -20
 execute if score $PurpleWP CmdData matches 6.. run tellraw @a[team=Purple] ["",{"translate":"weakpoint.destroyed.all_enemy","color":"aqua"},"\n"]
 execute if score $PurpleWP CmdData matches 6.. run tellraw @a[team=Orange] ["",{"translate":"weakpoint.destroyed.all_own","color":"red"},"\n"]
 
-kill @e[type=marker,tag=SelectedWeakP]
+kill @e[type=marker,tag=SelectedWeakP,limit=1]

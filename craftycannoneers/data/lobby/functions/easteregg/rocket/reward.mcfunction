@@ -1,6 +1,6 @@
-execute if entity @e[type=armor_stand,tag=RocketLaunch] run tellraw @s [{"translate":"easter_egg.launch.in_progress","color":"yellow"}]
-execute unless entity @e[type=armor_stand,tag=RocketLaunch] run tellraw @s [{"translate":"easter_egg.launch.takeoff","color":"yellow"}]
+execute if entity @e[type=armor_stand,tag=RocketLaunch,limit=1] run tellraw @s [{"translate":"easter_egg.launch.in_progress","color":"yellow"}]
+execute unless entity @e[type=armor_stand,tag=RocketLaunch,limit=1] run tellraw @s [{"translate":"easter_egg.launch.takeoff","color":"yellow"}]
 advancement grant @s only tutorial:eastereggs/rocketriders
-execute unless entity @e[type=armor_stand,tag=RocketLaunch] run summon armor_stand -58 -25 -21 {Tags:["RocketLaunch"],Marker:1b,NoGravity:1b,Invulnerable:1b,Invisible:1b,Silent:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:78}}]}
+execute unless entity @e[type=armor_stand,tag=RocketLaunch,limit=1] run summon armor_stand -58 -25 -21 {Tags:["RocketLaunch"],Marker:1b,NoGravity:1b,Invulnerable:1b,Invisible:1b,Silent:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:78}}]}
 
 function lobby:easteregg/rocket/reset
