@@ -11,5 +11,4 @@ execute at @s[tag=!Firework2] run playsound entity.firework_rocket.launch master
 execute at @s[tag=!Firework2] run playsound cannonshot master @a ~ ~ ~ 6 1.6
 execute at @s[tag=!Firework2] run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1.6
 tag @s[tag=!Firework2] add Firework2
-
 tag @s remove Firework

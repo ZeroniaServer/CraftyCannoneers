@@ -24,5 +24,8 @@ item replace entity @e[type=armor_stand,tag=ModiIcon,limit=1] armor.head with di
 
 item replace entity @e[type=glow_item_frame,tag=MapEntity,limit=1] container.0 with diamond_hoe{CustomModelData:76}
 
-execute as @e[type=#game:chest,tag=chest] run data remove entity @s[type=!armor_stand] Items
-execute as @e[type=#game:chest,tag=chest] run data merge entity @s[type=!armor_stand] {LootTable:"chests:empty"}
+execute as @e[type=hopper_minecart,tag=chest] run data remove entity @s Items
+execute as @e[type=hopper_minecart,tag=chest] run data merge entity @s {LootTable:"chests:empty"}
+
+execute as @e[type=chest_minecart,tag=chest] run data remove entity @s Items
+execute as @e[type=chest_minecart,tag=chest] run data merge entity @s {LootTable:"chests:empty"}

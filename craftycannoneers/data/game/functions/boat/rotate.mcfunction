@@ -362,8 +362,17 @@ execute if score @s eyeclick matches 177 run summon boat ~ -31.3 ~ {Rotation:[17
 execute if score @s eyeclick matches 178 run summon boat ~ -31.3 ~ {Rotation:[178.0f,0.0f],Invulnerable:1b,Tags:["Boat","BoatBoat","Rotate"],Passengers:[{id:"minecraft:armor_stand",Rotation:[178.0f,0.0f],Tags:["Boat","BoatAS","New","Rotate"],Marker:1b,Invulnerable:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:black_banner",Count:1b,tag:{BlockEntityTag:{Patterns:[{Pattern:sku,Color:0}]}}}]}]}
 execute if score @s eyeclick matches 179 run summon boat ~ -31.3 ~ {Rotation:[179.0f,0.0f],Invulnerable:1b,Tags:["Boat","BoatBoat","Rotate"],Passengers:[{id:"minecraft:armor_stand",Rotation:[179.0f,0.0f],Tags:["Boat","BoatAS","New","Rotate"],Marker:1b,Invulnerable:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:black_banner",Count:1b,tag:{BlockEntityTag:{Patterns:[{Pattern:sku,Color:0}]}}}]}]}
 
-execute if entity @s[tag=1] run tag @e[type=#game:boat,tag=Rotate,limit=2] add 1
-execute if entity @s[tag=2] run tag @e[type=#game:boat,tag=Rotate,limit=2] add 2
-execute if entity @s[tag=3] run tag @e[type=#game:boat,tag=Rotate,limit=2] add 3
-execute if entity @s[tag=4] run tag @e[type=#game:boat,tag=Rotate,limit=2] add 4
-tag @e[type=#game:boat,tag=Rotate,limit=2] remove Rotate
+execute if entity @s[tag=1] run tag @e[type=boat,tag=Rotate,limit=1] add 1
+execute if entity @s[tag=1] run tag @e[type=armor_stand,tag=Rotate,limit=1] add 1
+
+execute if entity @s[tag=2] run tag @e[type=boat,tag=Rotate,limit=1] add 2
+execute if entity @s[tag=2] run tag @e[type=armor_stand,tag=Rotate,limit=1] add 2
+
+execute if entity @s[tag=3] run tag @e[type=boat,tag=Rotate,limit=1] add 3
+execute if entity @s[tag=3] run tag @e[type=armor_stand,tag=Rotate,limit=1] add 3
+
+execute if entity @s[tag=4] run tag @e[type=boat,tag=Rotate,limit=1] add 4
+execute if entity @s[tag=4] run tag @e[type=armor_stand,tag=Rotate,limit=1] add 4
+
+tag @e[type=boat,tag=Rotate,limit=1] remove Rotate
+tag @e[type=armor_stand,tag=Rotate,limit=1] remove Rotate

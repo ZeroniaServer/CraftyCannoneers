@@ -67,9 +67,9 @@ execute if score $EndTime CmdData matches 110 if score $WinningTeam CmdData matc
 execute if score $EndTime CmdData matches 115 if score $WinningTeam CmdData matches 1 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
 execute if score $EndTime CmdData matches 120 if score $WinningTeam CmdData matches 1 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
 
-execute if score $EndTime CmdData matches 41 run tag @e[type=#game:cannon,tag=cannon,tag=Firework2] remove Firework2
-execute if score $EndTime CmdData matches 121 run tag @e[type=#game:cannon,tag=cannon,tag=Firework2] remove Firework2
+execute if score $EndTime CmdData matches 41 run tag @e[type=armor_stand,tag=cannon,tag=Firework2] remove Firework2
+execute if score $EndTime CmdData matches 121 run tag @e[type=armor_stand,tag=cannon,tag=Firework2] remove Firework2
 
 #> End fireworks
-execute as @e[type=#game:cannon,tag=cannon,tag=Firework] at @s run function game:endfirework/cannons
+execute as @e[type=armor_stand,tag=cannon,tag=Firework] at @s run function game:endfirework/cannons
 execute as @e[type=armor_stand,tag=EndFirework] at @s run function game:endfirework/main

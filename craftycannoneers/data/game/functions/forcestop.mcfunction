@@ -41,10 +41,9 @@ execute unless score $ShipHP CmdData matches 1000 unless score $ShipHP CmdData m
 function lobby:customizer/updatesigns
 scoreboard players reset @a[tag=ModiOwner] moditimer
 
-tp @e[type=marker,tag=WeakpointLoc] 0 -1000 0
 kill @e[type=marker,tag=WeakpointLoc]
-tp @e[type=slime,tag=Weakpoint] 0 -1000 0
-kill @e[type=#game:weakpoint,tag=Weakpoint]
+kill @e[type=marker,tag=Weakpoint]
+execute as @e[type=slime,tag=Weakpoint] run function arenaclear:kill
 
 execute as @e[type=armor_stand,tag=CannonDisp,tag=OnFire] at @s run function cannons:firering/extinguishcannon
 
@@ -53,7 +52,7 @@ scoreboard players set $WasAuto CmdData 0
 scoreboard players set $orange hasArrows 0
 scoreboard players set $purple hasArrows 0
 
-#> Disable modifiers
+#> Reset modifier effects
 weather clear
 scoreboard players reset $StormTime CmdData
 scoreboard players reset $WindEffect CmdData

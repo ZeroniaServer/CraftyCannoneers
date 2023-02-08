@@ -1,9 +1,8 @@
 scoreboard players set $OrangeWP CmdData -1
 scoreboard players set $PurpleWP CmdData -1
-tp @e[type=marker,tag=WeakpointLoc] 0 -1000 0
 kill @e[type=marker,tag=WeakpointLoc]
-tp @e[type=slime,tag=Weakpoint] 0 -1000 0
-kill @e[type=#game:weakpoint,tag=Weakpoint]
+kill @e[type=marker,tag=Weakpoint]
+execute as @e[type=slime,tag=Weakpoint] run function arenaclear:kill
 
 #> Purple - Left Side
 summon marker 50 -30 -50 {Tags:["WeakpointLoc","Purple","left"]}

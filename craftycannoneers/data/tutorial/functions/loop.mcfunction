@@ -41,8 +41,8 @@ execute if score $runwatchtower CmdData matches 1 run function tutorial:watchtow
 scoreboard players set $runtreasure CmdData 0
 execute if entity @a[team=Lobby,predicate=tutorial:treasurepit] run scoreboard players set $runtreasure CmdData 1
 execute if entity @a[team=Lobby,tag=InPit] run scoreboard players set $runtreasure CmdData 1
-execute if entity @e[type=#game:chest,tag=fakechest,tag=Looted] run scoreboard players set $runtreasure CmdData 1
-execute if entity @e[type=#game:chest,tag=fakechest,scores={CmdData=..9}] run scoreboard players set $runtreasure CmdData 1
+execute if entity @e[type=armor_stand,tag=fakechest,tag=Looted] run scoreboard players set $runtreasure CmdData 1
+execute if entity @e[type=armor_stand,tag=fakechest,scores={CmdData=..9}] run scoreboard players set $runtreasure CmdData 1
 execute if score $runtreasure CmdData matches 1 run function tutorial:treasurepit/main
 
 #> Pirate Teachers
