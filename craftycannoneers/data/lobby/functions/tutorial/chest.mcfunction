@@ -14,4 +14,3 @@ tellraw @s[scores={ChestTutorial=2}] ["",{"text":"[2/9] ","color":"gray"},{"tran
 tellraw @s[scores={ChestTutorial=1}] ["",{"text":"[1/9] ","color":"gray"},{"translate":"teacher.chest.1","color":"green"},"\n"]
 
 tag @s add TutorialChest
-advancement revoke @s only lobby:chesttutorial

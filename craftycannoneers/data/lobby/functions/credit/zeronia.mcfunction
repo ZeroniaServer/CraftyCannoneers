@@ -1,7 +1,6 @@
 tellraw @s ["\n",{"text":"============ ","color":"gray"},{"translate":"zeronia","color":"green"},{"text":" ============","color":"gray"},"\n",{"translate":"credits.zeronia","color":"yellow"},"\n",{"translate":"credits.discord","underlined":true,"color":"#7358FE","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"}},"\n","\n",{"translate":"credits.socials","color":"dark_gray"},"\n",{"text":"> PlanetMinecraft","bold":true,"color":"#6BC010","clickEvent":{"action":"open_url","value":"https://www.planetminecraft.com/member/zeroniaserver/"}},"\n",{"text":"> YouTube","bold":true,"color":"red","clickEvent":{"action":"open_url","value":"https://www.youtube.com/@Zeronia"}},"\n",{"text":"> Twitter","bold":true,"color":"dark_aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/ZeroniaServer"}},"\n",{"text":"================================","color":"gray"},"\n"]
 playsound clickcredits master @s ~ ~ ~ 1 1.8
 playsound clickzeronia master @s ~ ~ ~ 1 1
-advancement revoke @s only lobby:zeronia
 advancement grant @s only tutorial:zzzunlockables/credits
-execute at @e[type=villager,tag=ZeroniaCredit] run particle block command_block ~ ~ ~ 0.2 0.2 0.2 0.1 50 normal @s
-execute at @e[type=villager,tag=ZeroniaCredit] run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.1 10 normal @s
+execute at @e[type=villager,tag=ZeroniaCredit,limit=1] run particle block command_block ~ ~ ~ 0.2 0.2 0.2 0.1 50 normal @s
+execute at @e[type=villager,tag=ZeroniaCredit,limit=1] run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.1 10 normal @s

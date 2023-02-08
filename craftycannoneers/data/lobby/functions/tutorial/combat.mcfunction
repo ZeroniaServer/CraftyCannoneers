@@ -11,4 +11,3 @@ tellraw @s[scores={CombatTutorial=2}] ["",{"text":"[2/7] ","color":"gray"},{"tra
 tellraw @s[scores={CombatTutorial=1}] ["",{"text":"[1/7] ","color":"gray"},{"translate":"teacher.combat.1","color":"green"},"\n"]
 
 tag @s add TutorialCombat
-advancement revoke @s only lobby:combattutorial

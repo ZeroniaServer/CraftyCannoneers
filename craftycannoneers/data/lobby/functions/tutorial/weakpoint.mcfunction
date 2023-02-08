@@ -12,4 +12,3 @@ tellraw @s[scores={WeakpointTutorial=2}] ["",{"text":"[2/8] ","color":"gray"},{"
 tellraw @s[scores={WeakpointTutorial=1}] ["",{"text":"[1/8] ","color":"gray"},{"translate":"teacher.weakpoint.1","color":"green"},"\n"]
 
 tag @s add TutorialWeakpoint
-advancement revoke @s only lobby:weakpointtutorial

@@ -51,3 +51,24 @@ execute at @s if entity @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,dis
 execute at @s if entity @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..3,scores={CmdData=1..}] as @a[limit=1,tag=clicker,tag=FillRight,tag=!HoldGP] run function cannons:checkowner
 execute at @s run tag @a[limit=1,tag=clicker,tag=FillLeft,tag=!HoldGP] remove FillLeft
 execute at @s run tag @a[limit=1,tag=clicker,tag=FillRight,tag=!HoldGP] remove FillRight
+
+#> Easter Eggs
+execute at @s[tag=ParrotVillager] unless score $parrotpet CmdData matches 1.. as @a[limit=1,tag=clicker] run function lobby:easteregg/parrot
+execute if entity @s[tag=PlanetaryVillager] run advancement grant @a[limit=1,tag=clicker] only tutorial:eastereggs/planetary
+execute if entity @s[tag=Snowman] unless entity @e[type=armor_stand,tag=EasterEgg,tag=SnowmanDeco,limit=1] run summon armor_stand -85 -31 -31 {Rotation:[-45.0f,0.0f],Tags:["EasterEgg","SnowmanDeco"],Invulnerable:1b,Marker:1b,NoGravity:1b,Small:1b,ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1b,tag:{CustomModelData:66}}]}
+execute at @s[tag=GoldyVillager] as @a[limit=1,tag=clicker] run function lobby:easteregg/goldy
+
+#> Credits
+execute if entity @s[tag=BlockyCredit] as @a[limit=1,tag=clicker] at @s run function lobby:credit/blocky
+execute if entity @s[tag=CarlCredit] as @a[limit=1,tag=clicker] at @s run function lobby:credit/carl
+execute if entity @s[tag=EvtemaCredit] as @a[limit=1,tag=clicker] at @s run function lobby:credit/evtema
+execute if entity @s[tag=KlarCredit] as @a[limit=1,tag=clicker] at @s run function lobby:credit/klar
+execute if entity @s[tag=StuffyCredit] as @a[limit=1,tag=clicker] at @s run function lobby:credit/stuffy
+execute if entity @s[tag=YZEROCredit] as @a[limit=1,tag=clicker] at @s run function lobby:credit/yzero
+execute if entity @s[tag=ZeroniaCredit] as @a[limit=1,tag=clicker] at @s run function lobby:credit/zeronia
+
+#> Pirate Teachers
+execute if entity @s[tag=CannonTeacher] as @a[limit=1,tag=clicker] run function lobby:tutorial/cannon
+execute if entity @s[tag=ChestTeacher] as @a[limit=1,tag=clicker] run function lobby:tutorial/chest
+execute if entity @s[tag=CombatTeacher] as @a[limit=1,tag=clicker] run function lobby:tutorial/combat
+execute if entity @s[tag=WeakpointTeacher] as @a[limit=1,tag=clicker] run function lobby:tutorial/weakpoint

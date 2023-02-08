@@ -7,6 +7,6 @@ tellraw @s[scores={parrotpet=30}] {"translate":"easter_egg.parrot.4","italic":tr
 tellraw @s[scores={parrotpet=50}] {"translate":"easter_egg.parrot.5","italic":true,"color":"light_purple"}
 advancement grant @s[scores={parrotpet=50}] only tutorial:eastereggs/parrot
 
-execute at @e[type=armor_stand,tag=Parrot,limit=1] run playsound parrot master @a ~ ~ ~ 1 1
-execute at @e[type=armor_stand,tag=Parrot,limit=1] run particle heart ~ ~0.3 ~ 0.2 0.2 0.2 0.1 4 normal @a[team=Lobby]
-scoreboard players set @e[type=armor_stand,tag=Parrot] CmdData 1
+playsound parrot master @a ~ ~ ~ 1 1
+particle heart ~ ~0.3 ~ 0.2 0.2 0.2 0.1 4 normal @a[team=Lobby]
+scoreboard players set $parrotpet CmdData 1

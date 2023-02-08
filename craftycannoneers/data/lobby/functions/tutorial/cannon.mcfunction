@@ -12,4 +12,3 @@ tellraw @s[scores={CannonTutorial=2}] ["",{"text":"[2/7] ","color":"gray"},{"tra
 tellraw @s[scores={CannonTutorial=1}] ["",{"text":"[1/7] ","color":"gray"},{"translate":"teacher.cannon.1","color":"green"},"\n"]
 
 tag @s add TutorialCannon
-advancement revoke @s only lobby:cannontutorial

@@ -1,2 +1,0 @@
-advancement revoke @s only lobby:snowman
-execute unless entity @e[type=armor_stand,tag=EasterEgg,tag=SnowmanDeco] run summon armor_stand -85 -31 -31 {Rotation:[-45.0f,0.0f],Tags:["EasterEgg","SnowmanDeco"],Invulnerable:1b,Marker:1b,NoGravity:1b,Small:1b,ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1b,tag:{CustomModelData:66}}]}
