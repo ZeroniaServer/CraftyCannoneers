@@ -13,6 +13,8 @@ tellraw @a [{"translate":"game.applied_updates","color":"green","with":[{"transl
 scoreboard players set $WorldVersion CmdData 1100
 tp @e[type=armor_stand,tag=ConfirmIcon] -55 -23.5 9
 
+execute as @e[type=armor_stand,tag=TDAS] run function version:1_1_0/dummyrotate
+
 #> New modifier options stuff
 #icons
 summon minecraft:armor_stand -54 -23.5 9 {Tags:["LobbyEntity","ModiIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
