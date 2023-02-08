@@ -4,3 +4,6 @@ execute at @s[tag=FireCannon] run function cannons:firecannon
 
 #> Claim Cannon
 function cannons:cannonclaim
+
+#> Cannon on fire
+execute at @s[tag=OnFire] run function cannons:firering/cannononfire

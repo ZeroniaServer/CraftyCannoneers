@@ -11,7 +11,7 @@ execute as @e[type=marker,tag=LightFlash] at @s run function cannons:lightflash
 execute as @e[type=armor_stand,tag=cannonball] at @s run function cannons:shoot
 
 #> Fire Ring
-function cannons:firering/main
+execute as @e[type=marker,tag=RingOfFire] at @s run function cannons:firering/functionality
 
 #> Gas
 function cannons:gas/main
@@ -25,7 +25,7 @@ function cannons:bounce/main
 #> Player Cannonball Cooldown
 function cannons:pcbcooldown
 
-#> Weakpoints
+#> Weakpoints - TODO OPTIMIZE
 function game:shipweakpoint/main
 execute if score $OrangeWPDelay CmdData matches 1.. run scoreboard players add $OrangeWPDelay CmdData 1
 execute if score $OrangeWPDelay CmdData matches 20.. run scoreboard players reset $OrangeWPDelay CmdData

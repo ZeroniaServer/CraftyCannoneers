@@ -1,3 +1,5 @@
+execute at @s[tag=GasIgnite] at @s run function cannons:firering/ignitecloud
+
 scoreboard players add @s CmdData 1
 
 execute at @s[scores={CmdData=1}] run playsound gas master @a ~ ~ ~ 1 0.8

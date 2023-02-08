@@ -16,7 +16,7 @@ execute as @e[type=item] at @s run function everytick:items
 execute as @e[type=armor_stand,tag=seagull] at @s at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run function everytick:seagull
 execute as @e[type=marker,tag=seagull] at @s run function everytick:seagullspin
 
-#> Cannons - TODO OPTIMIZE
+#> Cannons
 function cannons:main
 
 #> Entity effects

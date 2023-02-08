@@ -1,3 +1,5 @@
+execute at @s[tag=GasIgnite] at @s run function cannons:firering/ignitebubble
+
 execute at @s[tag=New] run tp @s @e[type=bat,tag=GasBat,limit=1,sort=nearest,distance=..2]
 
 tag @s[tag=New] remove New
