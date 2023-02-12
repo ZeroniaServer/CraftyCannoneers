@@ -1,7 +1,7 @@
 #> TODO: EntityID magic for basically this entire function.
-execute unless score @s CmdData matches 10.. run clear @a[tag=clicker] gunpowder 1
-execute unless score @s CmdData matches 10.. run playsound gunpowder master @a ~ ~ ~ 0.6 2
-execute unless score @s CmdData matches 10.. run scoreboard players add @s CmdData 1
+execute if score @s CmdData matches 1.. run loot give @a[tag=clicker] loot weapons:gunpowder
+execute if score @s CmdData matches 1.. run playsound takegunpowder master @a ~ ~ ~ 0.6 2
+execute if score @s CmdData matches 1.. run scoreboard players remove @s CmdData 1
 
 tag @a[tag=clicker] remove clicker
 

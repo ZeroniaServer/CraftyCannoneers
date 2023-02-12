@@ -44,7 +44,8 @@ tag @a[limit=1,tag=clicker,tag=FillCB,predicate=cannons:holdtcb_red] add RedTCB
 tag @a[limit=1,tag=clicker,tag=FillCB,predicate=cannons:holdgocb] add HoldGOCB
 
 #> Blast Barrels
-execute at @s[tag=BlastBarrel] run say CLICKEDME
+execute at @s[tag=BlastBarrel] if entity @a[limit=1,tag=clicker,predicate=cannons:holdgp] as @e[type=armor_stand,tag=BlastBarrel,distance=..1,sort=nearest,limit=1] at @s run function weapons:barrel/fill
+execute at @s[tag=BlastBarrel] if entity @a[limit=1,tag=clicker,predicate=!cannons:holdgp] as @e[type=armor_stand,tag=BlastBarrel,distance=..1,sort=nearest,limit=1] at @s run function weapons:barrel/empty
 
 #> Cannon Claim tag
 execute at @s as @a[limit=1,tag=clicker,tag=FillCB] run function cannons:checkowner

@@ -4,8 +4,8 @@
     {
       "rolls": {
         "type": "minecraft:uniform",
-        "min": 4,
-        "max": 6
+        "min": 2,
+        "max": 3
       },
       "entries": [
         {
@@ -17,8 +17,8 @@
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
-                "min": 4,
-                "max": 5
+                "min": 8,
+                "max": 10
               }
             }
           ]
@@ -32,8 +32,8 @@
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
-                "min": 6,
-                "max": 8
+                "min": 12,
+                "max": 16
               }
             }
           ]
@@ -48,7 +48,7 @@
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
-                "max": 3
+                "max": 6
               }
             }
           ]
@@ -59,7 +59,7 @@
       "rolls": {
         "type": "minecraft:uniform",
         "min": 2,
-        "max": 3
+        "max": 4
       },
       "entries": [
         {
@@ -193,6 +193,21 @@
                 "type": "minecraft:uniform",
                 "min": 2,
                 "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 7,
+          "name": "weapons:barrel",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 1
               }
             }
           ]
