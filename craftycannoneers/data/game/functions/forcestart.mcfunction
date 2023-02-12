@@ -7,6 +7,7 @@ scoreboard players set $gamestate CmdData 2
 data merge block -44 -28 0 {Text1:'{"text":""}',Text2:'{"text":""}',Text3:'{"text":""}',Text4:'{"text":""}'}
 
 gamerule fallDamage true
+execute unless score $GraveRobbery CmdData matches 1 run gamerule keepInventory true
 execute if score $GraveRobbery CmdData matches 1 run gamerule keepInventory false
 
 #Balancing
@@ -79,3 +80,6 @@ scoreboard players add @a[team=Orange] hasArrows 1
 scoreboard players add @a[team=Purple] hasArrows 1
 
 execute unless entity @e[type=marker,tag=RingOfFire,predicate=cannons:safezones/tutorial] run gamerule doFireTick false
+
+#> Enable modifiers
+execute if score $Sharks CmdData matches 1 run function game:modifiers/sharks/spawnsharks

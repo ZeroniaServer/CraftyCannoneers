@@ -1,1 +1,0 @@
-summon drowned ~ ~ ~ {Attributes:[{Name:"generic.movementSpeed",Base:3.0f},{Name:"generic.attackDamage",Base:12.0}],IsBaby:1b,Tags:["SharkEntity"],Invulnerable:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:87,Unbreakable:1b}}]}
