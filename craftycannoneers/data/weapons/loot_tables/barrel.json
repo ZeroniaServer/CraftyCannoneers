@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:mooshroom_spawn_egg"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{CustomModelData:1,Barrel:1b,display:{Name:'[{\"translate\":\"item.blast_barrel\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.blast_barrel.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.blast_barrel.lore.2\",\"italic\":false,\"color\":\"white\"}]']},EntityTag:{id:\"minecraft:marker\",Tags:[\"BlastBarrelSpawn\",\"barrel\"]}}"
+        }
+      ]
+    }
+  ]
+}
