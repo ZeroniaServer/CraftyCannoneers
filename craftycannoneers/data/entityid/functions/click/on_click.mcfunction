@@ -43,6 +43,9 @@ tag @a[limit=1,tag=clicker,tag=FillCB,predicate=cannons:holdtcb_red] add RedTCB
 #Golden
 tag @a[limit=1,tag=clicker,tag=FillCB,predicate=cannons:holdgocb] add HoldGOCB
 
+#> Blast Barrels
+execute at @s[tag=BlastBarrel] run say CLICKEDME
+
 #> Cannon Claim tag
 execute at @s as @a[limit=1,tag=clicker,tag=FillCB] run function cannons:checkowner
 execute at @s as @a[limit=1,tag=clicker,tag=FillLeft,tag=HoldGP] run function cannons:checkowner

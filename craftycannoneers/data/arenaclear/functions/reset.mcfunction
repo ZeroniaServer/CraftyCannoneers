@@ -22,6 +22,10 @@ kill @e[type=area_effect_cloud,tag=GPDispText,tag=!Tutorial]
 kill @e[type=area_effect_cloud,tag=CannonNametag,tag=!Tutorial]
 kill @e[type=marker,tag=RingOfFire,predicate=!cannons:ships/tutorial]
 kill @e[type=villager,tag=LChestVillager]
+kill @e[type=marker,tag=lchest]
+kill @e[type=armor_stand,tag=BlastBarrel]
+execute as @e[type=villager,tag=BlastBarrel] run function arenaclear:kill
+kill @e[type=marker,tag=bbarrel]
 
 function arenaclear:fakeairclear
 function arenaclear:boatvehicles
