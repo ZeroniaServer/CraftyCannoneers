@@ -24,7 +24,7 @@ kill @e[type=marker,tag=RingOfFire,predicate=!cannons:ships/tutorial]
 kill @e[type=villager,tag=LChestVillager]
 kill @e[type=marker,tag=lchest]
 kill @e[type=armor_stand,tag=BlastBarrel]
-kill @e[type=villager,tag=BlastBarrel]
+execute as @e[type=villager,tag=BlastBarrel] run function arenaclear:kill
 kill @e[type=marker,tag=bbarrel]
 
 function arenaclear:fakeairclear
