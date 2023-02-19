@@ -59,11 +59,11 @@ function chests:main
 #> Boats
 function game:boat/main
 
-#> Blast Bombs
-function weapons:bomb/main
-
 #> Blast Barrels
 function weapons:barrel/main
+
+#> Blast Bombs
+function weapons:bomb/main
 
 #> Setblocks for indestructible ship blocks
 function game:ingame/indestructible

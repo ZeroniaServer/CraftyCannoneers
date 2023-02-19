@@ -25,6 +25,7 @@ item replace entity @s[scores={eyeclick=2}] armor.head with mooshroom_spawn_egg{
 item replace entity @s[scores={eyeclick=58}] armor.head with mooshroom_spawn_egg{CustomModelData:13}
 item replace entity @s[scores={eyeclick=60}] armor.head with mooshroom_spawn_egg{CustomModelData:14}
 
+execute at @s[scores={eyeclick=94}] run function weapons:barrel/levitate
 execute at @s[scores={eyeclick=95,CmdData=10}] run function weapons:barrel/tier3
 execute at @s[scores={eyeclick=95,CmdData=6..9}] run function weapons:barrel/tier2
 execute at @s[scores={eyeclick=95,CmdData=1..5}] run function weapons:barrel/tier1
