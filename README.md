@@ -8,3 +8,4 @@ Datapack for Crafty Cannoneers. Made by Zeronia.
 - [CloudWolf's datapack](https://www.youtube.com/watch?v=YZfCBBvOMN4) for finding entities from `player_hurt_entity` advancement
 - [Misode's generators](https://misode.github.io/)
 - [vdvman1's Raycasting Customizer](https://skylinerw.com/vdvman1/raycast/)
+- [AESTD Tag Library](https://github.com/Aeldrion/AESTD-tag-library)
