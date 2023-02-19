@@ -1,9 +1,6 @@
-#> TODO: EntityID magic for basically this entire function.
-execute if score @s CmdData matches 1.. run loot give @a[tag=clicker] loot weapons:gunpowder
+execute if score @s CmdData matches 1.. run loot give @a[tag=clicker,limit=1] loot weapons:gunpowder
 execute if score @s CmdData matches 1.. run playsound takegunpowder master @a ~ ~ ~ 0.6 2
 execute if score @s CmdData matches 1.. run scoreboard players remove @s CmdData 1
-
-tag @a[tag=clicker] remove clicker
 
 item replace entity @s[scores={CmdData=0}] armor.head with mooshroom_spawn_egg{CustomModelData:1}
 item replace entity @s[scores={CmdData=1}] armor.head with mooshroom_spawn_egg{CustomModelData:2}

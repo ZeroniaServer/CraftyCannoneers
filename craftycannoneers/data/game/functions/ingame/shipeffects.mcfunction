@@ -25,8 +25,10 @@ execute unless score @s openchest matches 1.. unless score @s spotting matches 1
 tag @s[team=Purple,tag=EnemyMSG,predicate=!game:onorange] remove EnemyMSG
 
 #> Weakness on enemy ship
-effect give @s[team=Orange,predicate=game:onpurple] weakness 1 0 true
-effect give @s[team=Purple,predicate=game:onorange] weakness 1 0 true
+effect give @s[team=Orange,predicate=game:onpurple,tag=!lookAtBarrel] weakness 1 0 true
+effect give @s[team=Purple,predicate=game:onorange,tag=!lookAtBarrel] weakness 1 0 true
+effect clear @s[team=Orange,predicate=game:onpurple,tag=lookAtBarrel] weakness
+effect clear @s[team=Purple,predicate=game:onorange,tag=lookAtBarrel] weakness
 
 #> Gapple timer
 scoreboard players add @s gappleTimer 0
