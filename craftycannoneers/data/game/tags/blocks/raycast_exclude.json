@@ -11,6 +11,7 @@
     "minecraft:ladder",
     "#game:nonsolids",
     "#minecraft:signs",
-    "#minecraft:buttons"
+    "#minecraft:buttons",
+    "minecraft:light"
   ]
 }

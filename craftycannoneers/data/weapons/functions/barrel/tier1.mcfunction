@@ -4,10 +4,10 @@ function weapons:barrel/summonslime
 # Explosive effects
 playsound blastbarrelexplode master @a ~ ~ ~ 5 1.6
 
-#> TODO: Intensify particles based on # of gunpowder
+#> Particles
 particle flash ~ ~1 ~ 0 0 0 0 1 force @a[team=!Lobby]
+particle dust 1 0 0 2 ~ ~1 ~ 1 1 1 0 30 force @a[team=!Lobby]
 particle cloud ~ ~1 ~ 1 1 1 0.3 10 force @a[team=!Lobby]
-#> TODO: Hide explosion particles for when blast barrel blows up on ship - use ImpactMarker framework
 particle explosion ~ ~ ~ 1 1 1 0.1 12 force @a[team=!Lobby]
 
 # Chain reaction

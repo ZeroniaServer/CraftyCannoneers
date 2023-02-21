@@ -1,0 +1,25 @@
+{
+    "replace": false,
+    "values": [
+      "minecraft:air",
+      "minecraft:cave_air",
+      "minecraft:creeper_head",
+      "minecraft:barrier",
+      "minecraft:end_stone_brick_wall",
+      "minecraft:spruce_fence",
+      "minecraft:spruce_fence_gate",
+      "minecraft:ladder",
+      "#game:nonsolids",
+      "#minecraft:signs",
+      "#minecraft:buttons",
+      "minecraft:light",
+      "minecraft:fern",
+      "minecraft:small_dripleaf",
+      "minecraft:cornflower",
+      "minecraft:dead_bush",
+      "minecraft:sea_pickle",
+      "minecraft:candle",
+      "minecraft:flower_pot",
+      "minecraft:skeleton_skull"
+    ]
+  }

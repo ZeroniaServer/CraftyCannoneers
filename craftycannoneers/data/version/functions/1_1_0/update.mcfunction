@@ -1,3 +1,6 @@
+execute as @e[type=armor_stand,tag=PirateHat,tag=!110HatPlacement] at @s run tp @s ~ ~0.17 ~
+tag @e[type=armor_stand,tag=PirateHat,tag=!110HatPlacement] add 110HatPlacement
+
 kill @e[type=armor_stand,tag=ModifierIcons]
 function arenaclear:traders
 function arenaclear:cannons
