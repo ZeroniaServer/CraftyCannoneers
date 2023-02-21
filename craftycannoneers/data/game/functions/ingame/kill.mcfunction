@@ -5,3 +5,4 @@ execute if entity @s[team=Orange] run scoreboard players add $OrangeKills Balanc
 execute if entity @s[team=Purple] run scoreboard players add $PurpleKills BalanceScore 1
 function balancing:pvpskillcheck
 scoreboard players reset @s kill
+function game:mvpstats/ingame_check

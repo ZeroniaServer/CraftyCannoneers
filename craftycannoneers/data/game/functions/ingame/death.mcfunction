@@ -17,3 +17,4 @@ scoreboard players set @s shotArrows 0
 scoreboard players reset @s death
 scoreboard players add @s hasArrows 1
 scoreboard players set @s respawn 1
+function game:mvpstats/ingame_check
