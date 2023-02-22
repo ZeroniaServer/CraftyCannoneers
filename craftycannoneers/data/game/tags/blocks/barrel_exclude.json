@@ -9,18 +9,15 @@
       "minecraft:spruce_fence",
       "minecraft:spruce_fence_gate",
       "minecraft:andesite_wall",
-      "minecraft:gray_carpet",
+      "#minecraft:wool_carpets",
       "minecraft:ladder",
       "#minecraft:signs",
       "#minecraft:buttons",
       "minecraft:light",
-      "minecraft:fern",
-      "minecraft:small_dripleaf",
-      "minecraft:cornflower",
-      "minecraft:dead_bush",
       "minecraft:sea_pickle",
       "minecraft:candle",
       "minecraft:flower_pot",
-      "minecraft:skeleton_skull"
+      "minecraft:skeleton_skull",
+      "minecraft:lily_pad"
     ]
   }

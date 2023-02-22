@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:fern",
+        "minecraft:small_dripleaf",
+        "minecraft:cornflower",
+        "minecraft:dead_bush"
+    ]
+}
