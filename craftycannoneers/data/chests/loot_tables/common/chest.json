@@ -1,0 +1,71 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 85,
+          "name": "chests:common/normal/resources",
+          "conditions": [
+              {
+                  "condition": "minecraft:inverted",
+                  "term": {
+                      "condition": "minecraft:entity_properties",
+                      "entity": "this",
+                      "predicate": {
+                          "nbt": "{Tags:[\"lowerteam\"]}"
+                      }
+                  }
+              }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 15,
+          "name": "chests:common/normal/other",
+          "conditions": [
+              {
+                  "condition": "minecraft:inverted",
+                  "term": {
+                      "condition": "minecraft:entity_properties",
+                      "entity": "this",
+                      "predicate": {
+                          "nbt": "{Tags:[\"lowerteam\"]}"
+                      }
+                  }
+              }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 85,
+          "name": "weapons:barrel",
+          "conditions": [
+            {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "nbt": "{Tags:[\"lowerteam\"]}"
+                }
+            }
+        ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 15,
+          "name": "weapons:barrel",
+          "conditions": [
+            {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "nbt": "{Tags:[\"lowerteam\"]}"
+                }
+            }
+        ]
+        }
+      ]
+    }
+  ]
+}
