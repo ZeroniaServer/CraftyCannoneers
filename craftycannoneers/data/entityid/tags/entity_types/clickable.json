@@ -2,6 +2,7 @@
   "values": [
     "minecraft:villager",
     "minecraft:wandering_trader",
-    "minecraft:item_frame"
+    "minecraft:item_frame",
+    "minecraft:hopper_minecart"
   ]
 }

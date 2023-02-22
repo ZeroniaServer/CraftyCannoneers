@@ -76,3 +76,6 @@ execute if entity @s[tag=CannonTeacher] as @a[limit=1,tag=clicker] run function 
 execute if entity @s[tag=ChestTeacher] as @a[limit=1,tag=clicker] run function lobby:tutorial/chest
 execute if entity @s[tag=CombatTeacher] as @a[limit=1,tag=clicker] run function lobby:tutorial/combat
 execute if entity @s[tag=WeakpointTeacher] as @a[limit=1,tag=clicker] run function lobby:tutorial/weakpoint
+
+#> Treasure Chests (Loot Loader)
+execute if entity @s[type=hopper_minecart,tag=!Opened] if entity @a[limit=1,tag=clicker,tag=lowerteam] run tag @s add lowerteam
