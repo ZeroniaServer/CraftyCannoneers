@@ -31,6 +31,7 @@ scoreboard players set $NoTracers CmdData 0
 scoreboard players set $Sharks CmdData 0
 scoreboard players set $Storms CmdData 0
 scoreboard players reset @e[type=armor_stand,tag=Parrot,limit=1] CmdData
+scoreboard objectives add LootLoader dummy
 
 #> Lobby signs
 setblock -49 -28 -3 air
