@@ -1,9 +1,9 @@
-scoreboard players add @s[tag=1] gravity 5
-scoreboard players add @s[tag=2] gravity 10
-scoreboard players add @s[tag=3] gravity 10
-scoreboard players add @s[tag=4] gravity 5
+scoreboard players add @s[tag=1] gravity 45
+scoreboard players add @s[tag=2] gravity 35
+scoreboard players add @s[tag=3] gravity 35
+scoreboard players add @s[tag=4] gravity 45
 
-scoreboard players set @s RNGmax 60
+scoreboard players set @s RNGmax 40
 execute store result score @s RNGscore run data get entity @s UUID[1]
 execute store result score @s RNGscore run scoreboard players operation @s RNGscore %= @s RNGmax
 

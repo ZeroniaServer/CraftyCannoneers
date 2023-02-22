@@ -13,9 +13,9 @@ execute if entity @s[tag=Trader] at @s run playsound trader_ambient master @a[li
 execute if entity @s[tag=Teacher] at @s run playsound teacher_ambient master @a[limit=1,tag=clicker] ~ ~ ~ 0.5
 
 #> Tags for interacting with cannons
-execute if entity @s[tag=CannonVLeft] run tag @a[limit=1,tag=clicker] add FillLeft
-execute if entity @s[tag=CannonVRight] run tag @a[limit=1,tag=clicker] add FillRight
-execute if entity @s[tag=CannonVMain,tag=Charged] run tag @a[limit=1,tag=clicker] add FillCB
+execute if entity @s[tag=CannonVLeft,tag=!GPLocked] run tag @a[limit=1,tag=clicker] add FillLeft
+execute if entity @s[tag=CannonVRight,tag=!GPLocked] run tag @a[limit=1,tag=clicker] add FillRight
+execute if entity @s[tag=CannonVMain,tag=Charged,tag=!GPLocked] run tag @a[limit=1,tag=clicker] add FillCB
 
 #> Tag for holding gunpowder
 tag @a[limit=1,tag=clicker,tag=FillLeft,predicate=cannons:holdgp] add HoldGP
