@@ -118,6 +118,7 @@ scoreboard objectives add respawn dummy
 scoreboard objectives add CalcFire1 dummy
 scoreboard objectives add CalcFire2 dummy
 scoreboard objectives add KillerUUIDreset dummy
+scoreboard objectives add spawnBarrel minecraft.used:minecraft.mooshroom_spawn_egg
 
 #> Parkour
 scoreboard objectives add parkourMins dummy

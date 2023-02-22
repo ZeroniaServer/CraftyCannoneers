@@ -14,5 +14,6 @@ execute unless entity @s[tag=illegal] if block ~ ~ ~ water run tag @s add illega
 execute unless entity @s[tag=illegal] if block ~ ~-1 ~ #minecraft:slabs[waterlogged=true] run tag @s add illegal
 execute unless entity @s[tag=illegal] if block ~ ~ ~ #minecraft:slabs[waterlogged=true] run tag @s add illegal
 execute unless entity @s[tag=illegal] if block ~ ~ ~ #minecraft:walls[waterlogged=true] run tag @s add illegal
+execute unless entity @s[tag=illegal] if block ~ ~ ~ minecraft:sea_pickle[waterlogged=true] run tag @s add illegal
 execute unless entity @s[tag=illegal] if block ~ ~ ~ #minecraft:wool_carpets align y run tp @s ~ ~0.1 ~
 execute unless entity @s[tag=illegal] if block ~ ~ ~ #minecraft:stairs align y run tp @s ~ ~1 ~

@@ -2934,10 +2934,6 @@
             "required": false
         },
         {
-            "id": "minecraft:water",
-            "required": false
-        },
-        {
             "id": "minecraft:weeping_vines",
             "required": false
         },
