@@ -1,8 +1,9 @@
-#> Barrel Illegal Placements
-execute as @s[type=armor_stand] unless block ~ ~ ~ #game:barrel_exclude run loot spawn ~ ~ ~ loot weapons:barrel
-execute as @s[type=villager] unless block ~ ~ ~ #game:barrel_exclude run tp @s ~ ~-200 ~
-execute unless block ~ ~ ~ #game:barrel_exclude run kill @s
-
-execute as @s[type=armor_stand] if block ~ ~-1 ~ #game:barrel_exclude run loot spawn ~ ~ ~ loot weapons:barrel
-execute as @s[type=villager] if block ~ ~-1 ~ #game:barrel_exclude run tp @s ~ ~-200 ~
-execute if block ~ ~-1 ~ #game:barrel_exclude run kill @s
+execute if entity @e[type=armor_stand,tag=BlastBarrel,distance=..1] run tag @s add illegal
+execute unless entity @s[tag=illegal] positioned ~ ~-1 ~ if entity @e[type=armor_stand,tag=BlastBarrel,distance=..1] run tag @s add illegal
+execute unless entity @s[tag=illegal] unless block ~ ~0.5 ~ #game:barrel_exclude unless block ~ ~0.5 ~ #minecraft:trapdoors[half=bottom] run tag @s add illegal
+execute unless entity @s[tag=illegal] if block ~ ~-0.5 ~ #game:barrel_exclude run tag @s add illegal
+execute unless entity @s[tag=illegal] if block ~ ~0.5 ~ #minecraft:fence_gates[open=false] run tag @s add illegal
+execute unless entity @s[tag=illegal] if block ~ ~0.5 ~ andesite_wall run tag @s add illegal
+execute unless entity @s[tag=illegal] if block ~ ~ ~ lantern run tag @s add illegal
+execute unless entity @s[tag=illegal] if block ~ ~-1.1875 ~ cobbled_deepslate_wall run tag @s add illegal
+execute unless entity @s[tag=illegal] if block ~ ~-0.5 ~ #minecraft:trapdoors[half=top,open=true] run tag @s add illegal
