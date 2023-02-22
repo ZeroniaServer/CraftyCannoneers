@@ -54,3 +54,8 @@ function balancing:chestluck
 
 #> Bubble columns
 function game:bubbles/main
+
+#> Reset KillerUUID
+execute if score @s KillerUUID = @s KillerUUID run scoreboard players add @s KillerUUIDreset 1
+scoreboard players reset @s[scores={KillerUUIDreset=10..}] KillerUUID
+scoreboard players reset @s[scores={KillerUUIDreset=10..}] KillerUUIDreset

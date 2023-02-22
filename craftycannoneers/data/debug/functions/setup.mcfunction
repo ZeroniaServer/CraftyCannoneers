@@ -117,6 +117,7 @@ scoreboard objectives add remainderArrows dummy
 scoreboard objectives add respawn dummy
 scoreboard objectives add CalcFire1 dummy
 scoreboard objectives add CalcFire2 dummy
+scoreboard objectives add KillerUUIDreset dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
