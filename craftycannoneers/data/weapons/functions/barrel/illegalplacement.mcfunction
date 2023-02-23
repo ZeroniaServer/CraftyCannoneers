@@ -11,6 +11,7 @@ execute unless entity @s[tag=illegal] if block ~ ~ ~ #game:barrel_plants run tag
 execute unless entity @s[tag=illegal] if block ~ ~-1 ~ #game:barrel_plants run tag @s add illegal
 execute unless entity @s[tag=illegal] if block ~ ~-1 ~ water run tag @s add illegal
 execute unless entity @s[tag=illegal] if block ~ ~ ~ water run tag @s add illegal
+execute unless entity @s[tag=illegal] if block ~ ~ ~ #minecraft:fences run tag @s add illegal
 execute unless entity @s[tag=illegal] if block ~ ~-1 ~ #minecraft:slabs[waterlogged=true] run tag @s add illegal
 execute unless entity @s[tag=illegal] if block ~ ~ ~ #minecraft:slabs[waterlogged=true] run tag @s add illegal
 execute unless entity @s[tag=illegal] if block ~ ~ ~ #minecraft:walls[waterlogged=true] run tag @s add illegal
