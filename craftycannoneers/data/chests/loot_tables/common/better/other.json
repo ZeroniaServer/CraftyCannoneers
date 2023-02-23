@@ -25,12 +25,12 @@
           },
           {
             "type": "minecraft:loot_table",
-            "weight": 1,
+            "weight": 2,
             "name": "weapons:golden_apple"
           },
           {
             "type": "minecraft:loot_table",
-            "weight": 2,
+            "weight": 3,
             "name": "weapons:bomb",
             "functions": [
               {

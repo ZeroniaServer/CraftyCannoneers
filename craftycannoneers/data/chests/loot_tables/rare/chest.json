@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "weight": 65,
+          "weight": 60,
           "name": "chests:rare/normal/resources",
           "conditions": [
               {
@@ -22,7 +22,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 35,
+          "weight": 40,
           "name": "chests:rare/normal/other",
           "conditions": [
               {
@@ -39,7 +39,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 65,
+          "weight": 60,
           "name": "chests:rare/better/resources",
           "conditions": [
             {
@@ -53,7 +53,7 @@
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 35,
+          "weight": 40,
           "name": "chests:rare/better/other",
           "conditions": [
             {

@@ -10,7 +10,7 @@
         "entries": [
           {
             "type": "minecraft:loot_table",
-            "weight": 2,
+            "weight": 1,
             "name": "cannons:normal",
             "functions": [
               {
@@ -30,7 +30,7 @@
           },
           {
             "type": "minecraft:loot_table",
-            "weight": 1,
+            "weight": 2,
             "name": "weapons:bomb",
             "functions": [
               {
@@ -45,7 +45,7 @@
           },
           {
             "type": "minecraft:loot_table",
-            "weight": 2,
+            "weight": 1,
             "name": "weapons:skeleton_key",
             "functions": [
               {

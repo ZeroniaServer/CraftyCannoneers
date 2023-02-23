@@ -40,7 +40,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 85,
-          "name": "weapons:barrel",
+          "name": "chests:common/better/resources",
           "conditions": [
             {
                 "condition": "minecraft:entity_properties",
@@ -54,7 +54,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 15,
-          "name": "weapons:barrel",
+          "name": "chests:common/better/other",
           "conditions": [
             {
                 "condition": "minecraft:entity_properties",
