@@ -1754,6 +1754,38 @@
             "required": false
         },
         {
+            "id": "minecraft:deepslate_brick_slab",
+            "required": false
+        },
+        {
+            "id": "minecraft:deepslate_bricks",
+            "required": false
+        },
+        {
+            "id": "minecraft:deepslate_tile_slab",
+            "required": false
+        },
+        {
+            "id": "minecraft:deepslate_tiles",
+            "required": false
+        },
+        {
+            "id": "minecraft:cobbled_deepslate_slab",
+            "required": false
+        },
+        {
+            "id": "minecraft:cobbled_deepslate",
+            "required": false
+        },
+        {
+            "id": "minecraft:polished_deepslate_slab",
+            "required": false
+        },
+        {
+            "id": "minecraft:polished_deepslate",
+            "required": false
+        },
+        {
             "id": "minecraft:detector_rail",
             "required": false
         },

@@ -1,5 +1,5 @@
 #> Blast slimes
-function weapons:barrel/summonslime
+execute if entity @a[gamemode=!spectator,distance=..8.25] run function weapons:barrel/summonslime
 
 # Explosive effects
 playsound blastbarrelexplode master @a ~ ~ ~ 5 1.6

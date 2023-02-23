@@ -1,19 +1,25 @@
 #> Blast slimes
-function weapons:barrel/summonslime
+execute if entity @a[gamemode=!spectator,distance=..8.25] run function weapons:barrel/summonslime
 
 # Explosive effects
 playsound blastbarrelexplode master @a ~ ~ ~ 5 1
+
+#> Cannonball Explosion
+tag @s remove canDamage
+execute if predicate cannons:ships/orange run tag @s add canDamage
+execute if predicate cannons:ships/purple run tag @s add canDamage
+execute if entity @s[tag=canDamage] run function weapons:barrel/summonimpact
 
 #> Particles
 particle flash ~ ~6 ~ 0 2 0 0 12 force @a[team=!Lobby]
 particle dust 1 0 0 2 ~ ~6 ~ 2 4 2 0 40 force @a[team=!Lobby]
 particle cloud ~ ~6 ~ 2 4 2 0.3 20 force @a[team=!Lobby]
-particle explosion ~ ~5 ~ 2 4 2 0.1 25 force @a[team=!Lobby]
+execute unless entity @s[tag=canDamage] run particle explosion ~ ~5 ~ 2 4 2 0.1 25 force @a[team=!Lobby]
 particle lava ~ ~5 ~ 2 4 2 0.1 30 force @a[team=!Lobby]
-summon marker ~ ~1 ~ {Tags:["BarrelMaxFX","BlastBarrel","North","EW"],Rotation:[90.0,0.0]}
-summon marker ~ ~1 ~ {Tags:["BarrelMaxFX","BlastBarrel","East","NS"],Rotation:[-90.0,0.0]}
-summon marker ~ ~1 ~ {Tags:["BarrelMaxFX","BlastBarrel","South","EW"],Rotation:[180.0,0.0]}
-summon marker ~ ~1 ~ {Tags:["BarrelMaxFX","BlastBarrel","West","NS"],Rotation:[0.0,0.0]}
+summon marker ~ ~1 ~ {Tags:["BarrelMaxFX","BlastBarrel","North","EW"],Rotation:[90.0f,0.0f]}
+summon marker ~ ~1 ~ {Tags:["BarrelMaxFX","BlastBarrel","East","NS"],Rotation:[-90.0f,0.0f]}
+summon marker ~ ~1 ~ {Tags:["BarrelMaxFX","BlastBarrel","South","EW"],Rotation:[180.0f,0.0f]}
+summon marker ~ ~1 ~ {Tags:["BarrelMaxFX","BlastBarrel","West","NS"],Rotation:[0.0f,0.0f]}
 
 # Chain reaction
 scoreboard players operation $tempuuid playerUUID = @s playerUUID
