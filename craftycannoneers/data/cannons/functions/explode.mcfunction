@@ -101,11 +101,6 @@ scoreboard players reset @s[tag=bouncing,scores={bouncedelay=16..}] bouncedelay
 scoreboard players reset @s[tag=Hit1,tag=BouncyCannonball,scores={doublehit=4..}] doublehit
 tag @s add Hit1
 
-# Chain reaction with Blast Barrels
-scoreboard players operation $tempuuid playerUUID = @s playerUUID
-execute as @e[type=villager,tag=BlastBarrel,distance=..5] at @s run function weapons:barrel/chainreact
-execute as @e[type=armor_stand,tag=BlastBarrel,scores={CmdData=1..},distance=..5] unless score @s eyeclick matches 1.. run scoreboard players set @s eyeclick 92
-
 execute as @e[type=marker,tag=ImpactMarker] at @s unless score @s CmdData matches 1.. run function cannons:spawncreeper
 
 execute at @s[tag=Hit2,tag=ChainCannonball] run kill @e[type=armor_stand,tag=ChainAnchor,limit=1,sort=nearest]
