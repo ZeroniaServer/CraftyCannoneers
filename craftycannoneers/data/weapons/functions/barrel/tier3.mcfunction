@@ -24,8 +24,8 @@ summon marker ~ ~1 ~ {Tags:["BarrelMaxFX","BlastBarrel","West","NS"],Rotation:[0
 # Chain reaction
 scoreboard players operation $tempuuid playerUUID = @s playerUUID
 tag @a[predicate=game:matches_uuid,limit=1] add hitter
-execute as @e[type=villager,tag=BlastBarrel,distance=..6] at @s run function weapons:barrel/punch
+execute as @e[type=villager,tag=BlastBarrel,distance=..7] at @s run function weapons:barrel/punch
 tag @a[tag=hitter,limit=1] remove hitter
-scoreboard players set @e[type=armor_stand,tag=BlastBarrel,distance=..7] eyeclick 92
+scoreboard players set @e[type=armor_stand,tag=BlastBarrel,scores={CmdData=1..},distance=..7] eyeclick 92
 
 kill @s
