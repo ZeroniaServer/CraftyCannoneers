@@ -61,9 +61,8 @@ execute at @s[tag=!InSafezone,tag=Hit1,tag=ChainCannonball,scores={doublehit=4..
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] click += @s CalcAir1
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] click += @s CalcAir2
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] playerUUID = @s playerUUID
-tag @s add currentCannonball
-execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] run data modify entity @s CustomName set from entity @e[type=armor_stand,tag=currentCannonball,limit=1] CustomName
-tag @s remove currentCannonball
+data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
+execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] run data modify entity @s CustomName set from storage craftycannoneers:temp CustomName
 tag @e[type=marker,tag=ImpactMarker,tag=!HasUUID] add HasUUID
 
 execute at @s[tag=!Hit1,tag=!BouncyCannonball,tag=!ChainCannonball,predicate=cannons:ships/orange] run playsound shipdamage2 master @a ~ ~ ~ 2 1
@@ -101,6 +100,11 @@ scoreboard players reset $bounce CmdData
 scoreboard players reset @s[tag=bouncing,scores={bouncedelay=16..}] bouncedelay
 scoreboard players reset @s[tag=Hit1,tag=BouncyCannonball,scores={doublehit=4..}] doublehit
 tag @s add Hit1
+
+# Chain reaction with Blast Barrels
+scoreboard players operation $tempuuid playerUUID = @s playerUUID
+execute as @e[type=villager,tag=BlastBarrel,distance=..5] at @s run function weapons:barrel/chainreact
+execute as @e[type=armor_stand,tag=BlastBarrel,scores={CmdData=1..},distance=..5] unless score @s eyeclick matches 1.. run scoreboard players set @s eyeclick 92
 
 execute as @e[type=marker,tag=ImpactMarker] at @s unless score @s CmdData matches 1.. run function cannons:spawncreeper
 

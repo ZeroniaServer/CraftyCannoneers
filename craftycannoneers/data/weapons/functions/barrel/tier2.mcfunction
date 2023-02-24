@@ -21,9 +21,8 @@ particle lava ~ ~ ~ 3 3 3 0.1 30 force @a[team=!Lobby]
 
 # Chain reaction
 scoreboard players operation $tempuuid playerUUID = @s playerUUID
-tag @a[predicate=game:matches_uuid,limit=1] add hitter
-execute as @e[type=villager,tag=BlastBarrel,distance=..6] at @s run function weapons:barrel/punch
-tag @a[tag=hitter,limit=1] remove hitter
+data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
+execute as @e[type=villager,tag=BlastBarrel,distance=..6] at @s run function weapons:barrel/chainreact
 execute as @e[type=armor_stand,tag=BlastBarrel,scores={CmdData=1..},distance=..6] unless score @s eyeclick matches 1.. run scoreboard players set @s eyeclick 92
 
 kill @s
