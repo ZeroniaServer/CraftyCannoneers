@@ -12,6 +12,19 @@
         {
           "function": "minecraft:set_nbt",
           "tag": "{CustomModelData:1,HideFlags:127,CanPlaceOn:[\"#game:barrel_placeable\"],Barrel:1b,display:{Name:'[{\"translate\":\"item.blast_barrel\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.blast_barrel.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.blast_barrel.lore.2\",\"italic\":false,\"color\":\"white\"}]']},EntityTag:{id:\"minecraft:marker\",Tags:[\"BlastBarrelSpawn\",\"barrel\"]}}"
+        },
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{CanPlaceOn:[\"\"]}",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
+            }
+          ]
         }
       ]
     }
