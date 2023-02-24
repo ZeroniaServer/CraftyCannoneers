@@ -26,7 +26,9 @@ execute unless entity @s[tag=illegal] if block ~ ~ ~ minecraft:sea_pickle[waterl
 #> Block-based adjustments
 execute unless entity @s[tag=illegal] if block ~ ~ ~ #minecraft:wool_carpets align y run tp @s ~ ~0.1 ~
 execute unless entity @s[tag=illegal] if block ~ ~ ~ #minecraft:stairs align y run tp @s ~ ~1 ~
-execute unless entity @s[tag=illegal] if block ~ ~-1 ~ #minecraft:slabs[type=bottom] align y run tp @s ~ ~-0.5 ~
+execute unless entity @s[tag=illegal] if block ~ ~-1 ~ #minecraft:slabs[type=bottom] if block ~ ~ ~ #minecraft:trapdoors[half=bottom,open=false] align y run tp @s ~ ~0.1625 ~
+execute unless entity @s[tag=illegal] if block ~ ~-1 ~ #minecraft:slabs[type=bottom] unless block ~ ~ ~ #minecraft:trapdoors[half=bottom,open=false] align y run tp @s ~ ~-0.5 ~
+
 
 #> Special case for slab 1-block gap
 execute if block ~ ~-1 ~ #minecraft:slabs[type=top] if block ~ ~-2 ~ #minecraft:slabs[type=bottom] run tp @s ~ ~-1.5 ~

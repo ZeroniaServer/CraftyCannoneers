@@ -11,7 +11,6 @@ particle explosion ~ ~ ~ 1 1 1 0.1 12 force @a[team=!Lobby]
 # Chain reaction
 scoreboard players operation $tempuuid playerUUID = @s playerUUID
 data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
-execute as @e[type=villager,tag=BlastBarrel,distance=..5] at @s run function weapons:barrel/chainreact
-execute as @e[type=armor_stand,tag=BlastBarrel,scores={CmdData=1..},distance=..5] unless score @s eyeclick matches 1.. run scoreboard players set @s eyeclick 92
+execute as @e[type=villager,tag=BlastBarrel,distance=..5] run function weapons:barrel/chainreact
 
 kill @s

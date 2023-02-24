@@ -22,8 +22,12 @@ tag @e[type=creeper,tag=!HasUUID] add HasUUID
 
 #> Blast barrel chain reaction
 scoreboard players operation $tempuuid playerUUID = @s playerUUID
-execute as @e[type=villager,tag=BlastBarrel,distance=..5] at @s run function weapons:barrel/chainreact
-execute as @e[type=armor_stand,tag=BlastBarrel,scores={CmdData=1..},distance=..5] unless score @s eyeclick matches 1.. run scoreboard players set @s eyeclick 92
+execute if entity @s[tag=Power1] as @e[type=villager,tag=BlastBarrel,distance=..5] run function weapons:barrel/chainreact
+execute if entity @s[tag=Power2] as @e[type=villager,tag=BlastBarrel,distance=..6] run function weapons:barrel/chainreact
+execute if entity @s[tag=Power3] as @e[type=villager,tag=BlastBarrel,distance=..7] run function weapons:barrel/chainreact
+execute if entity @s[tag=GasPower] as @e[type=villager,tag=BlastBarrel,distance=..7] run function weapons:barrel/chainreact
+execute if entity @s[tag=BlastBarrel1] as @e[type=villager,tag=BlastBarrel,distance=..6] run function weapons:barrel/chainreact
+execute if entity @s[tag=BlastBarrel2] as @e[type=villager,tag=BlastBarrel,distance=..7] run function weapons:barrel/chainreact
 
 execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] as @a[tag=UtilKilled,distance=..2] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:3b,Duration:1,ShowParticles:0b}]}
 execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] run tag @a[tag=UtilKilled,distance=..2] add damaged

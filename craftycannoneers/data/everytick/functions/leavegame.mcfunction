@@ -3,9 +3,6 @@ tag @s[scores={LeftGame=1..}] remove DeathMVP
 tag @s[scores={LeftGame=1..}] remove CannonMVP
 tag @s[scores={LeftGame=1..}] add LeaveGame
 
-title @s[scores={LeftGame=1..}] title {"text":" ","color":"white"}
-title @s[scores={LeftGame=1..}] subtitle {"text":" ","color":"white"}
-
 #Join reset
 tag @s add self
 execute if score @s LeftGame matches 1.. at @s unless entity @a[tag=!self] run function everytick:joinreset
@@ -18,7 +15,6 @@ execute if score $servermode CmdData matches 1 run scoreboard players enable @s 
 execute if entity @s[team=!Lobby,team=!Spectator,team=!Developer] unless score @s leavegame matches 0 run tellraw @a ["",{"translate":"game.left_team","color":"dark_aqua","with":[{"selector":"@s"}]}]
 execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run tellraw @a ["",{"translate":"game.left_spectator","color":"gray","with":[{"selector":"@s","color":"dark_gray"}]}]
 execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run title @s actionbar ""
-execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run title @s title ""
 execute if entity @s[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveGame
 execute if entity @s[team=Lobby,scores={leavegame=1..}] unless score @s leavegame matches 0 run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_leave","color":"red"}]
 scoreboard players reset @s[scores={leavegame=1..}] leavegame
@@ -75,6 +71,8 @@ advancement revoke @s[tag=LeaveGame,advancements={tutorial:zzzunlockables/rocks=
 scoreboard players reset @s[tag=LeaveGame] shotArrows
 scoreboard players reset @s[tag=LeaveGame] KillerUUID
 scoreboard players reset @s[tag=LeaveGame] KillerUUIDreset
+title @s[tag=LeaveGame] title ""
+title @s[tag=LeaveGame] subtitle ""
 
 tellraw @s[tag=LeaveGame,tag=inParkour] [{"translate":"parkour.left_canceled","color":"red"}]
 tag @s[tag=LeaveGame,tag=inParkour] remove inParkour
