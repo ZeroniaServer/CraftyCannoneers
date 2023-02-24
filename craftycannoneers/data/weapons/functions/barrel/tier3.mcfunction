@@ -1,16 +1,16 @@
-#> Blast slimes
-execute if entity @a[gamemode=!spectator,distance=..8.25] run function weapons:barrel/summonslime
-
-# Explosive effects
-playsound blastbarrelexplode master @a ~ ~ ~ 5 1
-
-#> Cannonball Explosion
+#> Ship Detection
 tag @s remove canDamage
 execute if predicate cannons:ships/orange run tag @s add canDamage
 execute if predicate cannons:ships/purple run tag @s add canDamage
+
+#> Blast slimes
+execute if entity @a[gamemode=!spectator,distance=..8.25] run function weapons:barrel/summonslime
+
+#> Cannonball Explosion
 execute if entity @s[tag=canDamage] run function weapons:barrel/summonimpact
 
-#> Particles
+#> Particles/sounds
+playsound blastbarrelexplode master @a ~ ~ ~ 5 1
 particle flash ~ ~6 ~ 0 2 0 0 12 force @a[team=!Lobby]
 particle dust 1 0 0 2 ~ ~6 ~ 2 4 2 0 40 force @a[team=!Lobby]
 particle cloud ~ ~6 ~ 2 4 2 0.3 20 force @a[team=!Lobby]

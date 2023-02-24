@@ -18,6 +18,7 @@ execute if score $servermode CmdData matches 1 run scoreboard players enable @s 
 execute if entity @s[team=!Lobby,team=!Spectator,team=!Developer] unless score @s leavegame matches 0 run tellraw @a ["",{"translate":"game.left_team","color":"dark_aqua","with":[{"selector":"@s"}]}]
 execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run tellraw @a ["",{"translate":"game.left_spectator","color":"gray","with":[{"selector":"@s","color":"dark_gray"}]}]
 execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run title @s actionbar ""
+execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run title @s title ""
 execute if entity @s[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveGame
 execute if entity @s[team=Lobby,scores={leavegame=1..}] unless score @s leavegame matches 0 run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_leave","color":"red"}]
 scoreboard players reset @s[scores={leavegame=1..}] leavegame

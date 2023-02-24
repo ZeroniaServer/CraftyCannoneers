@@ -1,10 +1,8 @@
 #> Blast slimes
 execute if entity @a[gamemode=!spectator,distance=..8.25] run function weapons:barrel/summonslime
 
-# Explosive effects
+#> Particles/sounds
 playsound blastbarrelexplode master @a ~ ~ ~ 5 1.6
-
-#> Particles
 particle flash ~ ~1 ~ 0 0 0 0 1 force @a[team=!Lobby]
 particle dust 1 0 0 2 ~ ~1 ~ 1 1 1 0 30 force @a[team=!Lobby]
 particle cloud ~ ~1 ~ 1 1 1 0.3 10 force @a[team=!Lobby]
