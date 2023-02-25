@@ -2,9 +2,18 @@
 
 #> World Updates
 execute if entity @a run function version:check
+execute if entity @a as @e[type=area_effect_cloud,tag=ParkourRecordAEC,scores={CmdData=1..},limit=1] store result entity @s Air short 1 run scoreboard players remove @s CmdData 1
+scoreboard players reset @e[type=area_effect_cloud,tag=ParkourRecordAEC,scores={CmdData=..0},limit=1] CmdData
 
 #> Player related functions
 execute as @a at @s run function everytick:players
+
+#> Restore Parkour high score if necessary
+execute if entity @a if entity @e[type=area_effect_cloud,tag=ParkourNameAEC,name="???",limit=1] if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. if data storage craftycannoneers:parkour Name run function lobby:parkour/restore
+
+#> Reset Parkour high score if necessary
+execute if entity @a unless score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.parkour","color":"gray","with":[{"translate":"error.report","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"text":"error.discord","color":"white"}]}}]},"\n"]
+execute if entity @a unless score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. run function lobby:parkour/resethighscore
 
 #> Particle timers
 function everytick:particles

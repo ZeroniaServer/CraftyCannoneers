@@ -206,5 +206,9 @@ setblock -400 300 -96 lightning_rod[facing=south]
 
 scoreboard objectives remove fullInv
 
+#> Move Parkour leaderboard text up
+execute as @e[type=armor_stand,tag=ParkourAS,limit=1] if data entity @s CustomName run function version:1_1_0/leaderboardfix1
+execute as @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] at @s unless entity @e[type=area_effect_cloud,tag=ParkourNameAEC,limit=1] run function version:1_1_0/leaderboardfix2
+
 function game:forcestop
 function lobby:customizer/open
