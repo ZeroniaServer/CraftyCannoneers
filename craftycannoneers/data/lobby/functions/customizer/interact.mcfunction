@@ -30,4 +30,8 @@ execute if score @s modisigns matches 59636 run function lobby:customizer/modifi
 #No Tracers
 execute if score @s modisigns matches 71845 run function lobby:customizer/modifiers/seastorms
 
+schedule clear lobby:customizer/modifiers/off
+schedule clear lobby:customizer/open
+schedule clear lobby:customizer/updatesigns
+
 execute at @s[tag=ModiOwner] run playsound ui.button.click master @s ~ ~ ~ 1 1
