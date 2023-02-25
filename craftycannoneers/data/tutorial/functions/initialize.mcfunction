@@ -58,14 +58,14 @@ execute positioned -250.5 -25.675 -59.5 rotated 0 0 run function tutorial:traini
 
 kill @e[type=item_frame,tag=TutorialWeapon]
 
-summon item_frame -261.50 -24.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-25,TileX:-262,Tags:["TutorialWeapon","Cutlass"]}
-summon item_frame -260.50 -24.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-25,TileX:-261,Tags:["TutorialWeapon","Saber"]}
-summon item_frame -259.50 -24.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-25,TileX:-260,Tags:["TutorialWeapon","BoardingAxe"]}
-summon item_frame -258.50 -24.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-25,TileX:-259,Tags:["TutorialWeapon","BattleAxe"]}
-summon item_frame -257.50 -24.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-25,TileX:-258,Tags:["TutorialWeapon","Mace"]}
-summon item_frame -260.50 -25.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-26,TileX:-261,Tags:["TutorialWeapon","Hook"]}
-summon item_frame -259.50 -25.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-26,TileX:-260,Tags:["TutorialWeapon","Crossbow"]}
-summon item_frame -258.50 -25.50 -58.97 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,TileZ:-59,TileY:-26,TileX:-259,Tags:["TutorialWeapon","Harpoon"]}
+summon item_frame -262 -25 -59 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,Tags:["TutorialWeapon","Cutlass"]}
+summon item_frame -261 -25 -59 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,Tags:["TutorialWeapon","Saber"]}
+summon item_frame -260 -25 -59 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,Tags:["TutorialWeapon","BoardingAxe"]}
+summon item_frame -259 -25 -59 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,Tags:["TutorialWeapon","BattleAxe"]}
+summon item_frame -258 -25 -59 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,Tags:["TutorialWeapon","Mace"]}
+summon item_frame -261 -26 -59 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,Tags:["TutorialWeapon","Hook"]}
+summon item_frame -260 -26 -59 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,Tags:["TutorialWeapon","Crossbow"]}
+summon item_frame -259 -26 -59 {Silent:1b,Invisible:1b,Invulnerable:1b,Fixed:0b,Facing:3b,Tags:["TutorialWeapon","Harpoon"]}
 
 kill @e[type=marker,tag=TutorialWarp]
 kill @e[type=area_effect_cloud,tag=TutorialWarp]
