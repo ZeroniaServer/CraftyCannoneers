@@ -210,5 +210,7 @@ scoreboard objectives remove fullInv
 execute as @e[type=armor_stand,tag=ParkourAS,limit=1] if data entity @s CustomName run function version:1_1_0/leaderboardfix1
 execute as @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] at @s unless entity @e[type=area_effect_cloud,tag=ParkourNameAEC,limit=1] run function version:1_1_0/leaderboardfix2
 
+kill @e[type=marker,tag=test]
+
 function game:forcestop
 function lobby:customizer/open
