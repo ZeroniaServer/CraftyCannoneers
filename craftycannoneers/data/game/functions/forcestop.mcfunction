@@ -56,4 +56,4 @@ scoreboard players set $purple hasArrows 0
 weather clear
 scoreboard players reset $StormTime CmdData
 scoreboard players reset $WindEffect CmdData
-kill @e[tag=SharkEntity]
+kill @e[type=drowned,tag=SharkEntity]

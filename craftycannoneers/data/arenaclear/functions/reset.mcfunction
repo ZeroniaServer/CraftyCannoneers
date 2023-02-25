@@ -3,6 +3,7 @@ kill @e[type=marker,tag=LightFlash]
 execute as @e[type=armor_stand,tag=CannonDisp,tag=!Tutorial] at @s run function cannons:resetgunpowder
 tag @e[type=villager,tag=CannonVMain,tag=Charged,tag=!Tutorial] remove Charged
 kill @e[type=armor_stand,tag=cannonball,predicate=!cannons:safezones/tutorial]
+kill @e[type=armor_stand,tag=ChainAnchor,predicate=!game:tutorialbounds]
 execute as @e[type=slime,tag=Weakpoint] run function arenaclear:kill
 kill @e[type=marker,tag=Weakpoint]
 kill @e[type=marker,tag=WeakpointLoc]
@@ -26,6 +27,8 @@ kill @e[type=marker,tag=lchest]
 kill @e[type=armor_stand,tag=BlastBarrel]
 execute as @e[type=villager,tag=BlastBarrel] run function arenaclear:kill
 kill @e[type=marker,tag=bbarrel]
+kill @e[type=marker,tag=StormEntity]
+execute as @e[type=drowned,tag=SharkEntity] run function arenaclear:kill
 
 function arenaclear:fakeairclear
 function arenaclear:boatvehicles

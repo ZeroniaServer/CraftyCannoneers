@@ -15,6 +15,9 @@ execute if entity @a if entity @e[type=area_effect_cloud,tag=ParkourNameAEC,name
 execute if entity @a unless score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.parkour","color":"gray","with":[{"translate":"error.report","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"text":"error.discord","color":"white"}]}}]},"\n"]
 execute if entity @a unless score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. run function lobby:parkour/resethighscore
 
+#> Slime killing (failsafe)
+execute as @e[type=slime] unless data entity @s Tags run kill @s
+
 #> Particle timers
 function everytick:particles
 
