@@ -3,6 +3,13 @@
 #> Player related functions
 execute as @a at @s run function everytick:players
 
+#> Restore Parkour high score if necessary
+execute if entity @a if entity @e[type=armor_stand,tag=ParkourAS,name="???",limit=1] if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. if data storage craftycannoneers:parkour Name run function lobby:parkour/restore
+
+#> Reset Parkour high score if necessary
+execute if entity @a unless score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"An error has occurred, so the Parkour leaderboard has been reset. If you see this message, ","color":"gray"},{"text":"please report!","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"text":"Report on the Zeronia Discord Server","color":"white"}]}}]
+execute if entity @a unless score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. run function lobby:parkour/resethighscore
+
 #> Particle timers
 function everytick:particles
 
