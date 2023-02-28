@@ -2,8 +2,6 @@
 
 #> World Updates
 execute if entity @a run function version:check
-execute if entity @a as @e[type=area_effect_cloud,tag=ParkourRecordAEC,scores={CmdData=1..},limit=1] store result entity @s Air short 1 run scoreboard players remove @s CmdData 1
-scoreboard players reset @e[type=area_effect_cloud,tag=ParkourRecordAEC,scores={CmdData=..0},limit=1] CmdData
 
 #> Player related functions
 execute as @a at @s run function everytick:players
