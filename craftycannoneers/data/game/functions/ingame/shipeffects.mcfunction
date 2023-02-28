@@ -3,7 +3,7 @@ effect give @s[team=Orange,predicate=game:onorange,tag=!onboatregen,tag=!NoRegen
 tag @s[team=Orange,predicate=game:onorange,tag=!onboatregen] add onboatregen
 effect clear @s[team=Orange,predicate=!game:onorange,tag=onboatregen] regeneration
 tag @s[team=Orange,predicate=!game:onorange,tag=onboatregen] remove onboatregen
-effect give @s[team=Orange,predicate=game:onorange,predicate=!game:hasregen,tag=!NoRegen] regeneration 1000000 1 true
+effect give @s[team=Orange,predicate=game:onorange,predicate=!game:hasregen,tag=!NoRegen] regeneration infinite 1 true
 
 effect give @s[team=Purple,predicate=game:onpurple,tag=!onboatregen,tag=!NoRegen] regeneration infinite 1 true
 tag @s[team=Purple,predicate=game:onpurple,tag=!onboatregen] add onboatregen
@@ -24,7 +24,7 @@ execute if entity @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG,tag=!SeeW
 execute if entity @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG,tag=!SeeWeakpoint] unless entity @s[scores={openchest=1..}] unless entity @s[scores={spotting=1..}] run tag @s add EnemyMSG
 execute as @s[team=Purple,tag=EnemyMSG,predicate=!game:onorange] run tag @s remove EnemyMSG
 
-#> Weakness on enemy ship
+#> Weakness on enemy ship - TODO make infinite
 effect give @s[team=Orange,predicate=game:onpurple] weakness 1 0 true
 effect give @s[team=Purple,predicate=game:onorange] weakness 1 0 true
 
