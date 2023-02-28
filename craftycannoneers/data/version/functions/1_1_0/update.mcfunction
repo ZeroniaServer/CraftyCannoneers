@@ -5,6 +5,7 @@ kill @e[type=armor_stand,tag=ModifierIcons]
 function arenaclear:traders
 function arenaclear:cannons
 function tutorial:cannondock/resetcannons
+function tutorial:resetteachers
 forceload add -413 -379 -260 -15
 forceload add -260 -379 -130 -15
 forceload add -130 -379 -95 -15
