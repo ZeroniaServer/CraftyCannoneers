@@ -1,10 +1,10 @@
 #> General effects
-effect give @s saturation 1000000 100 true
-effect give @s[team=Lobby] instant_health 1000000 100 true
-effect give @s[team=Lobby] resistance 1000000 100 true
-effect give @s[team=Lobby] fire_resistance 1000000 100 true
-effect give @s[team=Lobby] water_breathing 1000000 255 true
-effect give @s[team=Lobby,tag=!InCombat] weakness 1000000 255 true
+effect give @s saturation infinite 100 true
+effect give @s[team=Lobby] instant_health infinite 100 true
+effect give @s[team=Lobby] resistance infinite 100 true
+effect give @s[team=Lobby] fire_resistance infinite 100 true
+effect give @s[team=Lobby] water_breathing infinite 255 true
+effect give @s[team=Lobby,tag=!InCombat] weakness infinite 255 true
 xp set @s 0 levels
 xp set @s 0 points
 spawnpoint @s[team=Lobby] -55 -21 0 -90

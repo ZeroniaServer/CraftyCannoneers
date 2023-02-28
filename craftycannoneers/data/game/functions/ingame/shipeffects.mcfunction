@@ -1,15 +1,15 @@
 #> Ship regen
-effect give @s[team=Orange,predicate=game:onorange,tag=!onboatregen,tag=!NoRegen] regeneration 1000000 1 true
+effect give @s[team=Orange,predicate=game:onorange,tag=!onboatregen,tag=!NoRegen] regeneration infinite 1 true
 tag @s[team=Orange,predicate=game:onorange,tag=!onboatregen] add onboatregen
 effect clear @s[team=Orange,predicate=!game:onorange,tag=onboatregen] regeneration
 tag @s[team=Orange,predicate=!game:onorange,tag=onboatregen] remove onboatregen
 effect give @s[team=Orange,predicate=game:onorange,predicate=!game:hasregen,tag=!NoRegen] regeneration 1000000 1 true
 
-effect give @s[team=Purple,predicate=game:onpurple,tag=!onboatregen,tag=!NoRegen] regeneration 1000000 1 true
+effect give @s[team=Purple,predicate=game:onpurple,tag=!onboatregen,tag=!NoRegen] regeneration infinite 1 true
 tag @s[team=Purple,predicate=game:onpurple,tag=!onboatregen] add onboatregen
 effect clear @s[team=Purple,predicate=!game:onpurple,tag=onboatregen] regeneration
 tag @s[team=Purple,predicate=!game:onpurple,tag=onboatregen] remove onboatregen
-effect give @s[team=Purple,predicate=game:onpurple,predicate=!game:hasregen,tag=!NoRegen] regeneration 1000000 1 true
+effect give @s[team=Purple,predicate=game:onpurple,predicate=!game:hasregen,tag=!NoRegen] regeneration infinite 1 true
 
 #> Enemy messages
 advancement grant @s[team=Orange,predicate=game:onpurple,tag=!EnemyMSG] only tutorial:zzzunlockables/intruder

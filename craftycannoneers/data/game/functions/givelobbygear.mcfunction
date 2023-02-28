@@ -1,7 +1,7 @@
 effect clear @s
 clear @s
-effect give @s weakness 1000000 255 true
-effect give @s resistance 1000000 255 true
+effect give @s weakness infinite 255 true
+effect give @s resistance infinite 255 true
 
 item replace entity @a[nbt={Inventory:[{id:"minecraft:diamond_hoe",tag:{CustomModelData:61},Slot:103b}]}] armor.head with diamond_hoe{CustomModelData:39,Unbreakable:1b,display:{Name:'[{"text":"Pirate Hat","italic":false,"color":"white"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},Enchantments:[{id:binding_curse,lvl:1}],HideFlags:7}
 execute if score @s bestParkourTime = @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime run item replace entity @s armor.head with diamond_hoe{NoDrop:1b,CustomModelData:61,Unbreakable:1b,display:{Name:'[{"text":"Parkour Pirate Hat","italic":false,"color":"red"}]',Lore:['[{"text":"","italic":false}]','[{"text":"Ahoy!","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]']},HideFlags:7}

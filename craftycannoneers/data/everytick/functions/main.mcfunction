@@ -18,12 +18,16 @@ function cannons:main
 
 #> Entity effects
 execute if score #loaded entityid matches 1 run function entityid:real_tick
-effect give @e[type=villager] invisibility 1000000 100 true
-effect give @e[type=villager] water_breathing 1000000 100 true
-effect give @e[type=slime] invisibility 1000000 100 true
+effect give @e[type=villager] invisibility infinite 100 true
+effect give @e[type=villager] water_breathing infinite 100 true
+effect give @e[type=slime] invisibility infinite 100 true
 kill @e[type=falling_block]
 kill @e[type=experience_orb]
 execute as @e[type=arrow] at @s run function everytick:arrowkill
+
+#> Reset Parkour high score if necessary - TODO remove?
+execute if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches ..0 run tellraw @a [{"text":"An error has occurred, so the Parkour leaderboard has been reset. If you see this message, ","color":"red"},{"text":"please report!","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"text":"Report on the Zeronia Discord Server","color":"white"}]}}]
+execute if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches ..0 run function lobby:parkour/resethighscore
 
 #> Rocks
 execute as @e[type=marker,tag=rocktracker] at @s run function lobby:rock/tp
