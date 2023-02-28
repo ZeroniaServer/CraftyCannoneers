@@ -12,8 +12,6 @@ forceload add -399 -14 -427 -79
 forceload add -427 -25 -452 -85
 function entityid:flush
 fill -53 -24 9 -55 -22 9 air
-tellraw @a [{"translate":"game.applied_updates","color":"green","with":[{"translate":"game.name","with":[{"translate":"game.crafty"},{"translate":"game.cannoneers"}]},{"text":"v1.1.0","color":"green"}]}]
-scoreboard players set $WorldVersion CmdData 1100
 tp @e[type=armor_stand,tag=ConfirmIcon] -55 -23.5 9
 
 execute as @e[type=armor_stand,tag=TDAS] run function version:1_1_0/dummyrotate
@@ -214,3 +212,6 @@ kill @e[type=marker,tag=test]
 
 function game:forcestop
 function lobby:customizer/open
+
+tellraw @a [{"translate":"game.applied_updates","color":"green","with":[{"translate":"game.name","with":[{"translate":"game.crafty"},{"translate":"game.cannoneers"}]},{"text":"v1.1.0","color":"green"}]}]
+scoreboard players set $WorldVersion CmdData 1100
