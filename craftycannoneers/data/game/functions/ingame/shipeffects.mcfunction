@@ -1,15 +1,15 @@
 #> Ship regen
-effect give @s[team=Orange,predicate=game:onorange,tag=!onboatregen,tag=!NoRegen] regeneration 1000000 1 true
+effect give @s[team=Orange,predicate=game:onorange,tag=!onboatregen,tag=!NoRegen] regeneration infinite 1 true
 tag @s[team=Orange,predicate=game:onorange,tag=!onboatregen] add onboatregen
 effect clear @s[team=Orange,predicate=!game:onorange,tag=onboatregen] regeneration
 tag @s[team=Orange,predicate=!game:onorange,tag=onboatregen] remove onboatregen
-effect give @s[team=Orange,predicate=game:onorange,predicate=!game:hasregen,tag=!NoRegen] regeneration 1000000 1 true
+effect give @s[team=Orange,predicate=game:onorange,predicate=!game:hasregen,tag=!NoRegen] regeneration infinite 1 true
 
-effect give @s[team=Purple,predicate=game:onpurple,tag=!onboatregen,tag=!NoRegen] regeneration 1000000 1 true
+effect give @s[team=Purple,predicate=game:onpurple,tag=!onboatregen,tag=!NoRegen] regeneration infinite 1 true
 tag @s[team=Purple,predicate=game:onpurple,tag=!onboatregen] add onboatregen
 effect clear @s[team=Purple,predicate=!game:onpurple,tag=onboatregen] regeneration
 tag @s[team=Purple,predicate=!game:onpurple,tag=onboatregen] remove onboatregen
-effect give @s[team=Purple,predicate=game:onpurple,predicate=!game:hasregen,tag=!NoRegen] regeneration 1000000 1 true
+effect give @s[team=Purple,predicate=game:onpurple,predicate=!game:hasregen,tag=!NoRegen] regeneration infinite 1 true
 
 #> Enemy messages
 advancement grant @s[team=Orange,predicate=game:onpurple,tag=!EnemyMSG] only tutorial:zzzunlockables/intruder
@@ -24,7 +24,7 @@ execute unless score @s openchest matches 1.. unless score @s spotting matches 1
 execute unless score @s openchest matches 1.. unless score @s spotting matches 1.. run tag @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG,tag=!SeeWeakpoint] add EnemyMSG
 tag @s[team=Purple,tag=EnemyMSG,predicate=!game:onorange] remove EnemyMSG
 
-#> Weakness on enemy ship
+#> Weakness on enemy ship - TODO make this use infinite effects
 effect give @s[team=Orange,predicate=game:onpurple,tag=!lookAtBarrel] weakness 1 0 true
 effect give @s[team=Purple,predicate=game:onorange,tag=!lookAtBarrel] weakness 1 0 true
 effect clear @s[team=Orange,predicate=game:onpurple,tag=lookAtBarrel] weakness
