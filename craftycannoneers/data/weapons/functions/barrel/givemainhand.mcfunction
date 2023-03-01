@@ -24,7 +24,9 @@ scoreboard players add @s[tag=stackMainhand,tag=!fullStackMainhand] hasBarrels 1
 loot replace entity @s[tag=stackMainhand,tag=!fullStackMainhand] weapon.mainhand loot weapons:barrel_return
 
 #> If mainhand has barrel (previously a full stack), use shulker box trick to prevent animation
-execute if entity @s[tag=fullStackMainhand] run function weapons:barrel/replace/restorestack
+scoreboard players set @s[tag=fullStackMainhand] spawnBarrel 0
+loot replace entity @s[tag=fullStackMainhand] weapon.mainhand loot weapons:barrel_stack
+item modify entity @s[tag=fullStackMainhand] weapon.mainhand weapons:blank
 
 #> If all else fails, give a new barrel somewhere
 execute if entity @s[tag=!emptyMainhand,tag=!stackMainhand] run loot give @s loot weapons:barrel
