@@ -120,6 +120,7 @@ scoreboard objectives add CalcFire2 dummy
 scoreboard objectives add KillerUUIDreset dummy
 scoreboard objectives add spawnBarrel minecraft.used:minecraft.mooshroom_spawn_egg
 scoreboard objectives add LootLoader dummy
+scoreboard objectives add hasBarrels dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy

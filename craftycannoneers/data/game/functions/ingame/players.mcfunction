@@ -59,3 +59,10 @@ function game:bubbles/main
 execute if score @s KillerUUID = @s KillerUUID run scoreboard players add @s KillerUUIDreset 1
 scoreboard players reset @s[scores={KillerUUIDreset=10..}] KillerUUID
 scoreboard players reset @s[scores={KillerUUIDreset=10..}] KillerUUIDreset
+
+#> Barrel tags
+tag @a[tag=!barrelMainhand,predicate=weapons:barrel_mainhand] add barrelMainhand
+tag @a[tag=barrelMainhand,predicate=!weapons:barrel_mainhand] remove barrelMainhand
+tag @a[tag=!barrelOffhand,predicate=weapons:barrel_offhand] add barrelOffhand
+tag @a[tag=barrelOffhand,predicate=!weapons:barrel_offhand] remove barrelOffhand
+tag @a remove lookAtBarrel
