@@ -15,7 +15,9 @@ scoreboard players add @s[tag=stackOffhand,tag=!fullStackOffhand] hasBarrels 1
 loot replace entity @s[tag=stackOffhand,tag=!fullStackOffhand] weapon.offhand loot weapons:barrel_return
 
 #> If offhand has barrel (previously a full stack), use shulker box trick to prevent animation
-execute if entity @s[tag=fullStackOffhand] run function weapons:barrel/replace/restorestack
+scoreboard players set @s[tag=fullStackMainhand] spawnBarrel 0
+loot replace entity @s[tag=fullStackMainhand] weapon.offhand loot weapons:barrel_stack
+item modify entity @s[tag=fullStackMainhand] weapon.offhand weapons:blank
 
 #> If all else fails, give a new barrel somewhere
 execute if entity @s[tag=!emptyOffhand,tag=!stackOffhand] run loot give @s loot weapons:barrel
