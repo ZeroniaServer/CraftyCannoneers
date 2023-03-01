@@ -23,8 +23,8 @@ title @s[scores={openchest=17..18}] subtitle ["",{"translate":"chest.unlocking",
 title @s[scores={openchest=19..20}] subtitle ["",{"translate":"chest.unlocking","color":"dark_aqua"},{"text":" [","color":"gray"},{"text":"||||||||||","bold":true,"color":"green"},{"text":"]","color":"gray"}]
 execute at @s[scores={openchest=20}] anchored eyes run particle item ender_eye{CustomModelData:1} ^ ^ ^0.6 0 0 0 0.1 10
 title @s[scores={openchest=20}] subtitle {"text":" "}
-item modify entity @s[team=!Lobby,predicate=chests:key,scores={openchest=20..}] weapon.mainhand game:reducecount
-item modify entity @s[team=!Lobby,predicate=chests:key_offhand,scores={openchest=20..}] weapon.offhand game:reducecount
+item modify entity @s[team=!Lobby,predicate=chests:key,scores={openchest=20..},gamemode=!creative] weapon.mainhand game:reducecount
+item modify entity @s[team=!Lobby,predicate=chests:key_offhand,scores={openchest=20..},gamemode=!creative] weapon.offhand game:reducecount
 
 execute at @s[scores={openchest=1}] run playsound chestlock2 master @s ~ ~ ~ 0.5 1.3
 execute at @s[scores={openchest=5}] run playsound key_turn master @s ~ ~ ~ 0.5 1
