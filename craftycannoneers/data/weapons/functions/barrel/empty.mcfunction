@@ -1,4 +1,4 @@
-execute if score @s CmdData matches 1.. run loot give @a[tag=clicker,limit=1] loot weapons:gunpowder
+execute if score @s CmdData matches 1.. run loot give @a[tag=clicker,gamemode=!creative,limit=1] loot weapons:gunpowder
 execute if score @s CmdData matches 1.. run playsound takegunpowder master @a ~ ~ ~ 0.6 2
 execute if score @s CmdData matches 1.. run scoreboard players remove @s CmdData 1
 

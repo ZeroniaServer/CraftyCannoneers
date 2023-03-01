@@ -1,4 +1,3 @@
-
 #> Detecting cases
 execute if entity @s[predicate=weapons:empty_offhand] run tag @s add emptyOffhand
 execute if entity @s[predicate=weapons:barrel_offhand] run tag @s add stackOffhand
