@@ -1,0 +1,20 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "mainhand": {
+                "tag": "game:noninteractable"
+            },
+            "offhand": {
+                "items": [
+                    "minecraft:mooshroom_spawn_egg"
+                ],
+                "count": {
+                    "min": 63
+                },
+                "nbt": "{Barrel:1b}"
+            }
+        }
+    }
+}

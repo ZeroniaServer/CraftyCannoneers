@@ -25,6 +25,22 @@
               }
             }
           ]
+        },
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{Blank:1b}",
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "spawnBarrel": 0
+                }
+              }
+            }
+          ]
         }
       ]
     }

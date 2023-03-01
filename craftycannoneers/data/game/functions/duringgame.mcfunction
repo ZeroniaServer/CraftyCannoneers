@@ -4,6 +4,9 @@ execute as @e[type=marker,tag=purpleteamchest,limit=1] at @s positioned 72.50 -2
 fill 69 -29 60 67 -29 60 spruce_slab[type=top]
 fill 71 -29 -60 73 -29 -60 spruce_slab[type=top]
 
+#> Blast Barrels
+function weapons:barrel/main
+
 #> Player functions
 execute as @a[team=!Lobby,team=!Spectator,team=!Developer] at @s run function game:ingame/players
 scoreboard players reset @a[team=!Purple,team=!Orange,scores={drowning=1..}] drowning
@@ -58,9 +61,6 @@ function chests:main
 
 #> Boats
 function game:boat/main
-
-#> Blast Barrels
-function weapons:barrel/main
 
 #> Blast Bombs
 function weapons:bomb/main
