@@ -26,7 +26,7 @@ tag @s[tag=!hasMoved,scores={sprint=50..,msgdelay=160..}] add hasMoved
 tag @s[tag=!hasMoved,scores={crouch=30..,msgdelay=160..}] add hasMoved
 
 #> Leave game
-execute if entity @a run function everytick:leavegame
+function everytick:leavegame
 
 #> If player has moved
 execute if entity @s[tag=hasMoved] run function everytick:hasmoved
