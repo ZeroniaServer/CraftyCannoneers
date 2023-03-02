@@ -7,48 +7,48 @@ execute if score $load CmdData matches 20.. run function version:check
 execute as @a at @s run function everytick:players
 
 #> Restore Parkour high score if necessary
-execute if score $load CmdData matches 10.. if entity @e[type=area_effect_cloud,tag=ParkourNameAEC,name="???",limit=1] if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. if data storage craftycannoneers:parkour Name run function lobby:parkour/restore
+execute if score $load CmdData matches 10.. unless score $updating CmdData matches 1 if entity @e[type=area_effect_cloud,tag=ParkourNameAEC,name="???",limit=1] if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. if data storage craftycannoneers:parkour Name run function lobby:parkour/restore
 
 #> Reset Parkour high score if necessary
-execute if score $load CmdData matches 10.. unless score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.parkour","color":"gray","with":[{"translate":"error.report","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"text":"error.discord","color":"white"}]}}]},"\n"]
+execute if score $load CmdData matches 10.. unless score $updating CmdData matches 1 unless score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.parkour","color":"gray","with":[{"translate":"error.report","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"text":"error.discord","color":"white"}]}}]},"\n"]
 execute if score $load CmdData matches 10.. unless score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. run function lobby:parkour/resethighscore
 
 #> Slime killing (failsafe)
-execute if score $load CmdData matches 40.. as @e[type=slime] unless data entity @s Tags run kill @s
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=slime] unless data entity @s Tags run kill @s
 
 #> Particle timers
-execute if score $load CmdData matches 40.. run function everytick:particles
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function everytick:particles
 
 #> Item related functions
-execute if score $load CmdData matches 40.. as @e[type=item] at @s run function everytick:items
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=item] at @s run function everytick:items
 
 #> Seagulls
-execute if score $load CmdData matches 40.. as @e[type=armor_stand,tag=seagull] at @s at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run function everytick:seagull
-execute if score $load CmdData matches 40.. as @e[type=marker,tag=seagull] at @s run function everytick:seagullspin
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=armor_stand,tag=seagull] at @s at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run function everytick:seagull
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=marker,tag=seagull] at @s run function everytick:seagullspin
 
 #> Cannons
-execute if score $load CmdData matches 40.. run function cannons:main
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function cannons:main
 
 #> Entity effects
-execute if score $load CmdData matches 40.. as @e[type=witch] at @s run function everytick:witchfix
-execute if score $load CmdData matches 40.. if score #loaded entityid matches 1 run function entityid:real_tick
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=witch] at @s run function everytick:witchfix
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 if score #loaded entityid matches 1 run function entityid:real_tick
 execute if score $load CmdData matches 40.. run effect give @e[type=villager] invisibility infinite 100 true
 execute if score $load CmdData matches 40.. run effect give @e[type=villager] water_breathing infinite 100 true
-execute if score $load CmdData matches 40.. run tag @e[type=villager,predicate=game:isbaby] add baby
-execute if score $load CmdData matches 40.. as @e[type=villager,tag=baby,predicate=!game:isbaby] run data merge entity @s {Age:-2147483648}
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run tag @e[type=villager,predicate=game:isbaby] add baby
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=villager,tag=baby,predicate=!game:isbaby] run data merge entity @s {Age:-2147483648}
 execute if score $load CmdData matches 40.. run effect give @e[type=slime,tag=!PCannonballname] invisibility infinite 100 true
-execute if score $load CmdData matches 40.. run kill @e[type=falling_block]
-execute if score $load CmdData matches 40.. run kill @e[type=experience_orb]
-execute if score $load CmdData matches 40.. as @e[type=arrow] at @s run function everytick:arrowkill
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run kill @e[type=falling_block]
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run kill @e[type=experience_orb]
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=arrow] at @s run function everytick:arrowkill
 
 #> Rocks
-execute if score $load CmdData matches 40.. as @e[type=marker,tag=rocktracker] at @s run function lobby:rock/tp
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=marker,tag=rocktracker] at @s run function lobby:rock/tp
 
 #> Joinpads
-execute if score $load CmdData matches 10.. run function lobby:joinpads/main
+execute if score $load CmdData matches 10.. unless score $updating CmdData matches 1 run function lobby:joinpads/main
 
 #> Game settings
-execute if score $load CmdData matches 10.. if score $gamestate CmdData matches -1 if entity @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds] run function lobby:customizer/controller
+execute if score $load CmdData matches 10.. unless score $updating CmdData matches 1 if score $gamestate CmdData matches -1 if entity @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds] run function lobby:customizer/controller
 
 #> Easter Eggs
 execute if score $load CmdData matches 40.. run function lobby:easteregg/loop
@@ -72,7 +72,7 @@ scoreboard players reset @a[scores={eyeclick=1..}] eyeclick
 scoreboard players reset @a[scores={climb=1..}] climb
 
 #> Cannonball displays
-execute if score $load CmdData matches 40.. as @e[type=armor_stand,tag=CannonballDeco] run function lobby:cbdisplays/main
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=armor_stand,tag=CannonballDeco] run function lobby:cbdisplays/main
 
 #> Ready Up + Countdown
 execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange] run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","translate":"game.orange"},{"color":"gold","text":": "},{"color":"red","text":"❌","bold":true}],"text":""}'}
@@ -101,5 +101,5 @@ execute if score $gamestate CmdData matches 3 run bossbar set lobbybar name {"tr
 function everytick:resolvesigns
 
 #> Failsafe for reset scoreboards
-execute if score $load CmdData matches 40.. unless score $gamestate CmdData matches -1.. run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.game","color":"gray","with":[{"translate":"error.report","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"translate":"error.discord","color":"white"}]}}]},"\n"]
-execute if score $load CmdData matches 40.. unless score $gamestate CmdData matches -1.. run function debug:preparerelease
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 unless score $gamestate CmdData matches -1.. run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.game","color":"gray","with":[{"translate":"error.report","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"translate":"error.discord","color":"white"}]}}]},"\n"]
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 unless score $gamestate CmdData matches -1.. run function debug:preparerelease
