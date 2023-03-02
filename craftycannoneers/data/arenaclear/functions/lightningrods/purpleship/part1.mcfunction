@@ -1,0 +1,5 @@
+setblock 96 300 -64 lightning_rod[facing=south]
+setblock 48 300 -48 lightning_rod[facing=south]
+setblock 64 300 -48 lightning_rod[facing=south]
+setblock 80 300 -48 lightning_rod[facing=south]
+setblock 64 300 -80 lightning_rod[facing=south]

@@ -27,4 +27,6 @@ item replace entity @e[type=glow_item_frame,tag=MapEntity,limit=1] container.0 w
 tag @e[type=marker,tag=joinpad] remove Locked
 scoreboard players reset @e[type=marker,tag=joinpad] CmdData
 
+execute unless score $lightningRods CmdData matches 1 if score $Storms CmdData matches 1 run schedule function arenaclear:lightningrods 20t
+
 function arenaclear:reset
