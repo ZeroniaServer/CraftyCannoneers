@@ -27,8 +27,6 @@ execute unless score $gamestate CmdData matches 2 run gamerule fallDamage false
 difficulty hard
 
 #> Scoreboards
-scoreboard objectives add CmdData dummy
-scoreboard players set $load CmdData 0
 scoreboard objectives add RNGscore dummy
 scoreboard objectives add RNGmax dummy
 scoreboard objectives add drag dummy

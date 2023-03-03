@@ -1,4 +1,5 @@
 function tutorial:trainingdummies/despawnall
+execute as @e[type=wandering_trader,tag=Teacher] at @s run function arenaclear:kill
 kill @e[type=area_effect_cloud,tag=CannonText]
 execute as @e[type=slime,tag=FakeWeakpoint] at @s run function arenaclear:kill
 kill @e[type=marker,tag=FakeWeakpoint]
@@ -76,7 +77,10 @@ summon area_effect_cloud -264 -20 -21 {Tags:["TutorialWarp","FromIsland"],Custom
 function tutorial:restoreship
 
 #> Teachers
-function tutorial:resetteachers
+summon wandering_trader -283 -24 -42 {Rotation:[-90.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","CannonTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:"generic.movement_speed",Base:0}],PersistenceRequired:1b}
+summon wandering_trader -242 -26 -22 {Rotation:[90.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","ChestTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:"generic.movement_speed",Base:0}],PersistenceRequired:1b}
+summon wandering_trader -260 -27 -56 {Rotation:[0.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","CombatTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:"generic.movement_speed",Base:0}],PersistenceRequired:1b}
+summon wandering_trader -279 -11 -15 {Rotation:[-180.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","WeakpointTeacher"],Silent:1b,CustomName:'[{"translate":"space.-max"},{"text":"\\uE003"},{"translate":"space.-max"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:"generic.movement_speed",Base:0}],PersistenceRequired:1b}
 
 kill @e[type=armor_stand,tag=fakechest]
 execute as @e[type=hopper_minecart,tag=fakechest] run function arenaclear:kill

@@ -30,7 +30,7 @@ execute if entity @s[scores={parkourSecs=..9,parkourMins=10..}] run title @s act
 execute if entity @s[scores={parkourSecs=10..,parkourMins=10..}] run title @s actionbar ["",{"translate":"parkour.time","color":"dark_green","with":[[{"score":{"name":"@s","objective":"parkourMins"},"bold":true,"color":"green"},{"text":":","bold":true,"color":"green"},{"score":{"name":"@s","objective":"parkourSecs"},"bold":true,"color":"green"},{"text":".","bold":true,"color":"green"},{"score":{"name":"@s","objective":"parkourDeci"},"bold":true,"color":"green"},{"score":{"name":"@s","objective":"parkourDeci2"},"color":"green","bold":true}]]}]
 
 #> Invisible players within range
-execute if entity @a[tag=inParkour,distance=0.0001..8] run effect give @s invisibility infinite 255 true
+execute if entity @a[tag=inParkour,distance=0.0001..8] run effect give @s invisibility 1000000 255 true
 execute unless entity @a[tag=inParkour,distance=0.0001..8] run effect clear @s invisibility
 
 #> Exit parkour if you fall on the ground
