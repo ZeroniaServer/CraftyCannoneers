@@ -7,5 +7,8 @@ setblock -60 -5 -39 air
 #> Reset teachers (unicode fix)
 function tutorial:resetteachers
 
+#> Kill test marker (RIP)
+kill @e[type=marker,tag=test]
+
 tellraw @a [{"text":"Successfully applied updates from Crafty Cannoneers v1.0.4","color":"green"}]
 scoreboard players set $WorldVersion CmdData 1040
