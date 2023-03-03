@@ -7,5 +7,8 @@ setblock -60 -5 -39 air
 #> Reset teachers (unicode fix)
 function tutorial:resetteachers
 
+#> Kill test marker (RIP)
+kill @e[type=marker,tag=test]
+
 tellraw @a [{"translate":"game.applied_updates","color":"green","with":[{"translate":"game.name","with":[{"translate":"game.crafty"},{"translate":"game.cannoneers"}]},{"text":"v1.0.4","color":"green"}]}]
 scoreboard players set $WorldVersion CmdData 1040
