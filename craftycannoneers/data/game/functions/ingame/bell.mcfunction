@@ -13,18 +13,18 @@ execute at @s[scores={CmdData=300,bellring=15..}] run scoreboard players set @s 
 
 execute at @s[scores={CmdData=300,bellring=12}] run playsound shipbell_echo master @a ~ ~ ~ 6 1
 execute at @s[scores={CmdData=300,bellring=12..}] run playsound shipbell_resonate master @a ~ ~ ~ 5 1
-execute at @s[scores={CmdData=300,bellring=12..}] run data merge entity @s {Pose:{Head:[2f,0f,-2f]}}
-execute at @s[scores={CmdData=305,bellring=12..}] run data merge entity @s {Pose:{Head:[-2f,0f,0f]}}
-execute at @s[scores={CmdData=310,bellring=12..}] run data merge entity @s {Pose:{Head:[0f,0f,2f]}}
-execute at @s[scores={CmdData=315,bellring=12..}] run data merge entity @s {Pose:{Head:[2f,0f,0f]}}
-execute at @s[scores={CmdData=320,bellring=12..}] run data merge entity @s {Pose:{Head:[0f,0f,-2f]}}
-execute at @s[scores={CmdData=325,bellring=12..}] run data merge entity @s {Pose:{Head:[-2f,0f,0f]}}
-execute at @s[scores={CmdData=330,bellring=12..}] run data merge entity @s {Pose:{Head:[0f,0f,2f]}}
-execute at @s[scores={CmdData=335,bellring=12..}] run data merge entity @s {Pose:{Head:[-2f,0f,0f]}}
-execute at @s[scores={CmdData=340,bellring=12..}] run data merge entity @s {Pose:{Head:[2f,0f,-2f]}}
-execute at @s[scores={CmdData=345,bellring=12..}] run data merge entity @s {Pose:{Head:[2f,0f,0f]}}
-execute at @s[scores={CmdData=350,bellring=12..}] run data merge entity @s {Pose:{Head:[-2f,0f,2f]}}
-execute at @s[scores={CmdData=355,bellring=12..}] run data merge entity @s {Pose:{Head:[0f,0f,0f]}}
+data merge entity @s[scores={CmdData=300,bellring=12..}] {Pose:{Head:[2f,0f,-2f]}}
+data merge entity @s[scores={CmdData=305,bellring=12..}] {Pose:{Head:[-2f,0f,0f]}}
+data merge entity @s[scores={CmdData=310,bellring=12..}] {Pose:{Head:[0f,0f,2f]}}
+data merge entity @s[scores={CmdData=315,bellring=12..}] {Pose:{Head:[2f,0f,0f]}}
+data merge entity @s[scores={CmdData=320,bellring=12..}] {Pose:{Head:[0f,0f,-2f]}}
+data merge entity @s[scores={CmdData=325,bellring=12..}] {Pose:{Head:[-2f,0f,0f]}}
+data merge entity @s[scores={CmdData=330,bellring=12..}] {Pose:{Head:[0f,0f,2f]}}
+data merge entity @s[scores={CmdData=335,bellring=12..}] {Pose:{Head:[-2f,0f,0f]}}
+data merge entity @s[scores={CmdData=340,bellring=12..}] {Pose:{Head:[2f,0f,-2f]}}
+data merge entity @s[scores={CmdData=345,bellring=12..}] {Pose:{Head:[2f,0f,0f]}}
+data merge entity @s[scores={CmdData=350,bellring=12..}] {Pose:{Head:[-2f,0f,2f]}}
+data merge entity @s[scores={CmdData=355,bellring=12..}] {Pose:{Head:[0f,0f,0f]}}
 
 execute at @s[tag=Orange,scores={CmdData=300,bellring=12..}] run effect give @a[team=Purple,predicate=game:onorange] glowing 4 100 true
 execute at @s[tag=Purple,scores={CmdData=300,bellring=12..}] run effect give @a[team=Orange,predicate=game:onpurple] glowing 4 100 true
