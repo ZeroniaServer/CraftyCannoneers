@@ -12,7 +12,7 @@ setblock -260 -24 -59 jungle_wall_sign[facing=south,waterlogged=false]{Color:"bl
 setblock -58 -24 0 air
 setblock -58 -24 0 spruce_wall_sign[facing=west,waterlogged=false]{Color:"black",GlowingText:1b,Text1:'{"text":""}',Text2:'{"translate":"lobby.jail_sign.1"}',Text3:'{"translate":"lobby.jail_sign.2"}',Text4:'{"text":""}'}
 
-bossbar set updatebar name ["",{"text":"UPDATING TO 1.1.0 ","color":"green"},{"text":"[","color":"gray"},{"text":"3","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]
+bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"3","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
 bossbar set updatebar value 3
 
 schedule function version:1_1_0/part4 10t

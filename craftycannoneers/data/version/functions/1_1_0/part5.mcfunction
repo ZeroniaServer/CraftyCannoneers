@@ -27,7 +27,7 @@ execute as @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] at @s unless 
 
 kill @e[type=marker,tag=test]
 
-bossbar set updatebar name ["",{"text":"UPDATING TO 1.1.0 ","color":"green"},{"text":"[","color":"gray"},{"text":"5","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]
+bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"5","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
 bossbar set updatebar value 5
 
 schedule function version:1_1_0/part6 10t

@@ -18,7 +18,7 @@ scoreboard players set $Sharks CmdData 0
 scoreboard players set $Storms CmdData 0
 scoreboard players reset @e[type=armor_stand,tag=Parrot,limit=1] CmdData
 
-bossbar set updatebar name ["",{"text":"UPDATING TO 1.1.0 ","color":"green"},{"text":"[","color":"gray"},{"text":"6","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]
+bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"6","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
 bossbar set updatebar value 6
 
 function game:forcestop
