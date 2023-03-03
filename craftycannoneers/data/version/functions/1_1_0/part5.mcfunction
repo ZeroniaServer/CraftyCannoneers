@@ -13,12 +13,6 @@ data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=ParkourText2,limit
 data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=Madeby,limit=1] {CustomName:'{"color":"gray","translate":"lobby.label.credits.1","with":[{"color":"green","translate":"zeronia"}]}'}
 data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=Clickon,limit=1] {CustomName:'{"italic":true,"color":"yellow","translate":"lobby.label.credits.2"}'}
 
-#> No more floating buttons
-setblock -58 -3 -32 air
-setblock -65 -12 -39 air
-setblock -63 -8 -39 air
-setblock -60 -5 -39 air
-
 scoreboard objectives remove fullInv
 
 #> Move Parkour leaderboard text up
