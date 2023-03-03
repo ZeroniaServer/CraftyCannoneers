@@ -1,3 +1,5 @@
+function game:forcestop
+
 bossbar set lobbybar visible false
 bossbar add updatebar ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"0","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
 bossbar set updatebar color green
