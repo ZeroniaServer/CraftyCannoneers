@@ -7,6 +7,7 @@ title @s subtitle {"text":""}
 tp @s[team=Orange] 88 -26 55 90 0
 tp @s[team=Purple] 52 -26 -55 -90 0
 tag @s remove onboatregen
+tag @s remove onboatweakness
 tag @s add loaded
 tag @s remove NeedsCutlass
 tag @s remove NeedsCrossbow

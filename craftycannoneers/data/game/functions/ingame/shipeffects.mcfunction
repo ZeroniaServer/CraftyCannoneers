@@ -24,9 +24,18 @@ execute if entity @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG,tag=!SeeW
 execute if entity @s[team=Purple,predicate=game:onorange,tag=!EnemyMSG,tag=!SeeWeakpoint] unless entity @s[scores={openchest=1..}] unless entity @s[scores={spotting=1..}] run tag @s add EnemyMSG
 execute as @s[team=Purple,tag=EnemyMSG,predicate=!game:onorange] run tag @s remove EnemyMSG
 
-#> Weakness on enemy ship - TODO make infinite
-effect give @s[team=Orange,predicate=game:onpurple] weakness 1 0 true
-effect give @s[team=Purple,predicate=game:onorange] weakness 1 0 true
+#> Weakness on enemy ship
+effect give @s[team=Orange,predicate=game:onpurple,tag=!onboatweakness] weakness infinite 0 true
+tag @s[team=Orange,predicate=game:onpurple,tag=!onboatweakness] add onboatweakness
+
+effect give @s[team=Purple,predicate=game:onorange,tag=!onboatweakness] weakness infinite 0 true
+tag @s[team=Purple,predicate=game:onorange,tag=!onboatweakness] add onboatweakness
+
+effect clear @s[team=Orange,predicate=!game:onpurple,tag=onboatweakness] weakness
+tag @s[team=Orange,predicate=!game:onpurple,tag=onboatweakness] remove onboatweakness
+
+effect clear @s[team=Purple,predicate=!game:onorange,tag=onboatweakness] weakness
+tag @s[team=Purple,predicate=!game:onorange,tag=onboatweakness] remove onboatweakness
 
 #> Gapple timer
 scoreboard players add @s gappleTimer 0
