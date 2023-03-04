@@ -1,3 +1,3 @@
 title @a actionbar ["",{"translate":"game.marked_ready.has_been","color":"aqua","with":[{"translate":"game.orange","color":"gold","bold":true},{"translate":"game.team","color":"aqua"},{"translate":"game.marked_ready.not","color":"red","bold":true,"underlined":true}]}]
-data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","translate":"game.orange"},{"color":"gold","text":": "},{"color":"red","text":"❌","bold":true}],"text":""}'}
+function game:setreadysign
 scoreboard players set $OrangeReady CmdData 0
