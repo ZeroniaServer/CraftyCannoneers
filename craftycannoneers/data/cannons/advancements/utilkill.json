@@ -7,12 +7,14 @@
           "nbt": "{Health:0.0f}"
         },
         "damage": {
-          "tags": [
-            {
-                "id": "minecraft:magic",
+          "type": {
+            "tags": [
+              {
+                "id": "cannons:damage",
                 "expected": true
-            }
-          ]
+              }
+            ]
+          }
         }
       }
     }
