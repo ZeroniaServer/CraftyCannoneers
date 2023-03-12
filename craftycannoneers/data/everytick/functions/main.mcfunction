@@ -75,11 +75,9 @@ scoreboard players reset @a[scores={climb=1..}] climb
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=armor_stand,tag=CannonballDeco] run function lobby:cbdisplays/main
 
 #> Ready Up + Countdown
-execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange] run data merge block -44 -28 0 {Text3:'{"extra":[{"color":"gold","translate":"game.orange"},{"color":"gold","text":": "},{"color":"red","text":"❌","bold":true}],"text":""}'}
-execute if score $gamestate CmdData matches 0..1 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange] run scoreboard players set $OrangeReady CmdData 0
+execute if score $gamestate CmdData matches 0..1 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange] run function game:readyteams/unreadyemptyorange
 
-execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple] run data merge block -44 -28 0 {Text4:'{"extra":[{"color":"dark_purple","translate":"game.purple"},{"color":"dark_purple","text":": "},{"color":"red","text":"❌","bold":true}],"text":""}'}
-execute if score $gamestate CmdData matches 0..1 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple] run scoreboard players set $PurpleReady CmdData 0
+execute if score $gamestate CmdData matches 0..1 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple] run function game:readyteams/unreadyemptypurple
 
 execute if score $gamestate CmdData matches 2.. run scoreboard players set $OrangeReady CmdData 0
 execute if score $gamestate CmdData matches 2.. run scoreboard players set $PurpleReady CmdData 0
