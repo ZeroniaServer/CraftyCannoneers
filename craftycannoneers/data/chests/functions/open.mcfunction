@@ -12,7 +12,7 @@ execute at @s[tag=RChestHopper] run playsound block.chest.open master @a ~ ~ ~ 1
 
 #Locked
 execute at @s[tag=lockedchest] run item replace entity @e[type=armor_stand,tag=LChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:71}
-execute at @e[tag=lockedchest] run playsound block.chest.open master @a ~ ~ ~ 1 0.7
-execute at @e[tag=lockedchest] run playsound lockedtreasureopen master @a ~ ~ ~ 1 2
+execute at @s[tag=lockedchest] run playsound block.chest.open master @a ~ ~ ~ 1 0.7
+execute at @s[tag=lockedchest] run playsound lockedtreasureopen master @a ~ ~ ~ 1 2
 
 tag @s add Opened
