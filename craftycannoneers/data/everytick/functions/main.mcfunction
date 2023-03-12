@@ -36,7 +36,7 @@ execute if score $load CmdData matches 40.. run effect give @e[type=villager] in
 execute if score $load CmdData matches 40.. run effect give @e[type=villager] water_breathing infinite 100 true
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run tag @e[type=villager,predicate=game:isbaby] add baby
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=villager,tag=baby,predicate=!game:isbaby] run data merge entity @s {Age:-2147483648}
-execute if score $load CmdData matches 40.. run effect give @e[type=slime,tag=!PCannonballname] invisibility infinite 100 true
+execute if score $load CmdData matches 40.. run effect give @e[type=slime] invisibility infinite 100 true
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run kill @e[type=falling_block]
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run kill @e[type=experience_orb]
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=arrow] at @s run function everytick:arrowkill
