@@ -4,6 +4,9 @@ setblock -65 -12 -39 air
 setblock -63 -8 -39 air
 setblock -60 -5 -39 air
 
+#> Reset teachers (unicode fix)
+function tutorial:resetteachers
+
 #> Kill test marker (RIP)
 kill @e[type=marker,tag=test]
 
