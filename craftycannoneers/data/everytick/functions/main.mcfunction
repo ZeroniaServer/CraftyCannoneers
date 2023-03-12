@@ -20,6 +20,8 @@ function cannons:main
 execute if score #loaded entityid matches 1 run function entityid:real_tick
 effect give @e[type=villager] invisibility 1000000 100 true
 effect give @e[type=villager] water_breathing 1000000 100 true
+tag @e[type=villager,predicate=game:isbaby] add baby
+execute as @e[type=villager,tag=baby,predicate=!game:isbaby] run data merge entity @s {Age:-2147483648}
 effect give @e[type=slime] invisibility 1000000 100 true
 kill @e[type=falling_block]
 kill @e[type=experience_orb]
