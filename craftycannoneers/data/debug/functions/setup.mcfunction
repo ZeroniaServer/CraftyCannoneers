@@ -25,6 +25,8 @@ execute unless score $gamestate CmdData matches 2 run gamerule fallDamage false
 difficulty hard
 
 #> Scoreboards
+scoreboard objectives add CmdData dummy
+scoreboard players set $load CmdData 0
 scoreboard objectives add RNGscore dummy
 scoreboard objectives add RNGmax dummy
 scoreboard objectives add drag dummy
@@ -240,6 +242,3 @@ scoreboard players set $barrier CmdData -1
 data modify storage craftycannoneers:messages ResourcePack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":"true"},{"text":"] ","color":"dark_gray"},{"text":"We strongly recommend you to ","color":"gray"},{"text":"use the resource pack","bold":true,"color":"red"},{"text":". ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=1wI7hVR29bKCXJLBafZqpY9xSVL-Ahoc0"}}]'
 data modify storage craftycannoneers:messages SettingsMap set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":"true"},{"text":"] ","color":"dark_gray"},{"text":"Please confirm settings at the ","color":"gray"},{"text":"Settings Map","color":"aqua","bold":true},{"text":"!","color":"gray"}]'
 data modify storage craftycannoneers:messages ReadyToPlay set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":"true"},{"text":"] ","color":"dark_gray"},{"text":"The game is ","color":"gray"},{"text":"ready to play","color":"green","bold":true},{"text":"!","color":"gray"}]'
-
-#> World Updates
-function version:check
