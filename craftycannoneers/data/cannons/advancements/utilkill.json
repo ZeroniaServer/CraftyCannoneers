@@ -8,7 +8,12 @@
         },
         "damage": {
           "type": {
-            "is_magic": true
+            "tags": [
+              {
+                "id": "cannons:damage",
+                "expected": true
+              }
+            ]
           }
         }
       }

@@ -53,6 +53,10 @@ tag @s[tag=NeedsTutorial] remove NeedsTutorial
 execute if entity @s[tag=LeaveGame] unless entity @s[team=] unless score @s LeftGame matches 1.. at @s run playsound block.beehive.exit master @s ~ ~ ~ 1 1
 scoreboard players reset @s[scores={LeftGame=1..}] LeftGame
 tag @s[tag=LeaveGame] remove onboatregen
+tag @s[tag=LeaveGame] remove onboatweakness
+tag @s[tag=LeaveGame] remove lookAtBarrel
+tag @s[tag=LeaveGame] remove barrelMainhand
+tag @s[tag=LeaveGame] remove barrelOffhand
 tag @s[tag=LeaveGame] remove loaded
 tag @s[tag=LeaveGame] remove InPlayerCB
 tag @s[tag=LeaveGame] remove EnemyMSG

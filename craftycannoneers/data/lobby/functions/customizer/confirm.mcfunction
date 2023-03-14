@@ -3,6 +3,7 @@ fill -53 -24 9 -55 -22 9 air
 
 scoreboard players reset @a modisigns
 scoreboard players reset @a moditimer
+effect clear @a[tag=ModiOwner] glowing
 tag @a remove ModiOwner
 
 scoreboard players operation $PurpleHP CmdData = $ShipHP CmdData

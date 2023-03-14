@@ -1,4 +1,4 @@
-effect give @s glowing 1 100 true
+effect give @s glowing infinite 100 true
 
 execute if entity @s[scores={modisigns=7853},tag=!mobtesting] run function lobby:customizer/mobtest
 execute if entity @s[scores={modisigns=3384},tag=!mobtesting] run function lobby:customizer/mobtest
