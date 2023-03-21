@@ -9,8 +9,24 @@ bossbar set updatebar style notched_6
 
 forceload add -413 -379 -260 -15
 
+execute as @e[type=armor_stand,tag=KlarDeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add KlarHat
+execute as @e[type=armor_stand,tag=CarlDeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add CarlHat
+execute as @e[type=armor_stand,tag=YZERODeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add YZEROHat
+execute as @e[type=armor_stand,tag=EvtemaDeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add EvtemaHat
+execute as @e[type=armor_stand,tag=StuffyDeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add StuffyHat
+execute as @e[type=armor_stand,tag=BlockyDeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add BlockyHat
+execute as @e[type=armor_stand,tag=ParkourAS,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add ParkourHat
+
 execute as @e[type=armor_stand,tag=PirateHat,tag=!110HatPlacement] at @s run tp @s ~ ~0.17 ~
+execute as @e[type=armor_stand,tag=EvtemaHat,tag=!110HatPlacement,limit=1] at @s run tp @s ^ ^ ^0.06
+execute as @e[type=armor_stand,tag=StuffyHat,tag=!110HatPlacement,limit=1] at @s run tp @s ^ ^-0.06 ^-0.1
+execute as @e[type=armor_stand,tag=KlarHat,tag=!110HatPlacement,limit=1] at @s run tp @s ^ ^0.001 ^
+execute as @e[type=armor_stand,tag=BlockyHat,tag=!110HatPlacement,limit=1] at @s run tp @s ^ ^0.001 ^
+execute as @e[type=armor_stand,tag=ParkourHat,tag=!110HatPlacement,limit=1] at @s run tp @s ^ ^ ^0.04
+
 tag @e[type=armor_stand,tag=PirateHat,tag=!110HatPlacement] add 110HatPlacement
+
+execute as @e[type=armor_stand,tag=!NameUpdated] at @s run function version:1_1_0/creditsfix
 
 function arenaclear:traders
 
