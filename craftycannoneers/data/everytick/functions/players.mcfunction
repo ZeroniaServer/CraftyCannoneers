@@ -132,7 +132,7 @@ advancement grant @s[advancements={tutorial:eastereggs/parrot=true,tutorial:east
 execute at @s[scores={parrotpet=1..}] unless entity @e[type=armor_stand,tag=Parrot,distance=..7] run scoreboard players reset @s parrotpet
 
 #> Tutorial warps
-execute unless entity @e[type=marker,tag=TutorialWarp,distance=..1.2] run tag @s remove Warped
+execute unless entity @e[type=marker,tag=TutorialWarp,distance=..2] run tag @s remove Warped
 
 #> Toggle tips
 function everytick:toggletips
