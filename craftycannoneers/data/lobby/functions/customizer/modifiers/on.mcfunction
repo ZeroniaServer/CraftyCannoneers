@@ -23,3 +23,5 @@ setblock -55 -22 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"light_blue"
 function lobby:customizer/modifiers/updatemodifiersigns
 
 scoreboard players set $ModiMapActive CmdData 1
+
+schedule function lobby:customizer/lightupdate 1t append
