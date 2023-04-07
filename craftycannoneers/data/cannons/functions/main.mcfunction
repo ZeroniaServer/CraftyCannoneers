@@ -1,5 +1,5 @@
 #> Load Gunpowder
-execute as @e[type=armor_stand,tag=DisplayGP] at @s run function cannons:tryloadgunpowder
+execute as @e[type=armor_stand,tag=DisplayGP] at @s run function cannons:loadgunpowder
 
 #> Cannon Tick
 execute as @e[type=armor_stand,tag=CannonDisp] at @s run function cannons:cannontick
