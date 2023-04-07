@@ -27,19 +27,13 @@ execute if score $load CmdData matches 40.. unless score $updating CmdData match
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=marker,tag=seagull] at @s run function everytick:seagullspin
 
 #> Cannons
-execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function cannons:main
+scoreboard players set $runcannons CmdData 0
+execute if entity @a[team=Lobby,predicate=game:tutorialbounds] run scoreboard players set $runcannons CmdData 1
+execute if score $gamestate CmdData matches 2.. run scoreboard players set $runcannons CmdData 1
+execute if score $runcannons CmdData matches 1 if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function cannons:main
 
 #> Entity effects
-execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=witch] at @s run function everytick:witchfix
-execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 if score #loaded entityid matches 1 run function entityid:real_tick
-execute if score $load CmdData matches 40.. run effect give @e[type=villager] invisibility infinite 100 true
-execute if score $load CmdData matches 40.. run effect give @e[type=villager] water_breathing infinite 100 true
-execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run tag @e[type=villager,predicate=game:isbaby] add baby
-execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=villager,tag=baby,predicate=!game:isbaby] run data merge entity @s {Age:-2147483648}
-execute if score $load CmdData matches 40.. run effect give @e[type=slime,tag=!PCannonballname] invisibility infinite 100 true
-execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run kill @e[type=falling_block]
-execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run kill @e[type=experience_orb]
-execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=arrow] at @s run function everytick:arrowkill
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function everytick:entityeffects
 
 #> Rocks
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=marker,tag=rocktracker] at @s run function lobby:rock/tp
