@@ -40,7 +40,7 @@ execute if score $WindEffect CmdData matches 201..202 run function game:modifier
 execute if score $WindEffect CmdData matches 221..222 run function game:modifiers/seastorms/spawnwindtrail
 execute if score $WindEffect CmdData matches 241..242 run function game:modifiers/seastorms/spawnwindtrail
 execute if score $WindEffect CmdData matches 261..262 run function game:modifiers/seastorms/spawnwindtrail
-execute if score $WindEffect CmdData matches 20..200 as @e[type=armor_stand,tag=cannonball,scores={CmdData=4..},predicate=!cannons:safezones/tutorial] run function game:modifiers/seastorms/cannonballinacc
+execute if score $WindEffect CmdData matches 20..200 as @e[type=armor_stand,tag=cannonball,tag=!StrikeLightning,scores={CmdData=4..},predicate=!cannons:safezones/tutorial] run function game:modifiers/seastorms/cannonballinacc
 execute if score $WindEffect CmdData matches 20..200 as @e[type=armor_stand,tag=Bomb,predicate=!cannons:safezones/tutorial] run function game:modifiers/seastorms/cannonballinacc
 execute if score $WindEffect CmdData matches 20..200 as @e[type=arrow,predicate=!cannons:safezones/tutorial] run function game:modifiers/seastorms/cannonballinacc
 

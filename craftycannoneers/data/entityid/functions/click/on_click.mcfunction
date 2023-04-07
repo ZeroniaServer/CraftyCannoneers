@@ -42,6 +42,8 @@ tag @a[limit=1,tag=clicker,tag=FillCB,predicate=cannons:holdtcb] add HoldTCB
 tag @a[limit=1,tag=clicker,tag=FillCB,predicate=cannons:holdtcb_red] add RedTCB
 #Golden
 tag @a[limit=1,tag=clicker,tag=FillCB,predicate=cannons:holdgocb] add HoldGOCB
+#Copper
+tag @a[limit=1,tag=clicker,tag=FillCB,predicate=cannons:holdcocb] add HoldCOCB
 
 #> Blast Barrels
 execute at @s[tag=BlastBarrel] if entity @a[limit=1,tag=clicker,predicate=cannons:holdgp] as @e[type=armor_stand,tag=BlastBarrel,distance=..1,sort=nearest,limit=1] at @s run function weapons:barrel/fill

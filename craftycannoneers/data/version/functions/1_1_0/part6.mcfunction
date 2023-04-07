@@ -13,6 +13,7 @@ summon minecraft:armor_stand -55 -21.4 9 {Tags:["LobbyEntity","SeaStormsIcon","M
 fill -53 -24 9 -55 -22 9 air
 
 #scores
+scoreboard objectives add copperStrike dummy
 scoreboard players set $NoTracers CmdData 0
 scoreboard players set $Sharks CmdData 0
 scoreboard players set $Storms CmdData 0

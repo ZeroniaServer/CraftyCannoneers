@@ -138,6 +138,14 @@ execute at @s[tag=Purple,scores={cannonshot=30..,CmdData=9}] run summon armor_st
 execute at @s[tag=Orange,scores={cannonshot=30..,CmdData=9}] run summon armor_stand ~ ~1 ~ {Tags:["cannonball","GoldenCannonball","NewCannonball"],Rotation:[180.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b}
 execute at @s[tag=!Purple,tag=!Orange,scores={cannonshot=30..,CmdData=9}] run summon armor_stand ~ ~1 ~ {Tags:["cannonball","GoldenCannonball","NewCannonball"],Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b}
 
+#Copper Cannonball
+execute at @s[scores={cannonshot=30..,CmdData=10}] run playsound cannonshot master @a ~ ~ ~ 6 1.1
+execute at @s[scores={cannonshot=30..,CmdData=10}] run playsound shockshot master @a ~ ~ ~ 4 1
+execute at @s[scores={cannonshot=30..,CmdData=10}] run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1.1
+execute at @s[tag=Purple,scores={cannonshot=30..,CmdData=10}] run summon armor_stand ~ ~1 ~ {Tags:["cannonball","CopperCannonball","NewCannonball","Hit1"],Rotation:[0.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b}
+execute at @s[tag=Orange,scores={cannonshot=30..,CmdData=10}] run summon armor_stand ~ ~1 ~ {Tags:["cannonball","CopperCannonball","NewCannonball","Hit1"],Rotation:[180.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b}
+execute at @s[tag=!Purple,tag=!Orange,scores={cannonshot=30..,CmdData=10}] run summon armor_stand ~ ~1 ~ {Tags:["cannonball","CopperCannonball","NewCannonball"],Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b}
+
 #Global
 scoreboard players operation @e[type=armor_stand,tag=NewCannonball] playerUUID = @s playerUUID
 execute as @e[type=armor_stand,tag=NewCannonball] at @s run function cannons:namecannonball

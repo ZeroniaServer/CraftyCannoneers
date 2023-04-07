@@ -57,9 +57,15 @@ execute if entity @s[team=!Lobby,tag=FillCB,tag=HoldGOCB] unless entity @e[type=
 execute if entity @s[tag=FillCB,tag=HoldGOCB] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..1] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
 execute if entity @s[tag=FillCB,tag=HoldGOCB] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..1] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 9
 scoreboard players add @s[team=!Lobby,tag=FillCB,tag=HoldGOCB,tag=UsedGOCB] MVPcannon 1
+#Copper
+execute if entity @s[tag=FillCB,tag=HoldCOCB,team=!Lobby] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..1] run item replace entity @s[gamemode=!creative] weapon.mainhand with air
+execute if entity @s[team=!Lobby,tag=FillCB,tag=HoldCOCB] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..1] run tag @s add UsedCOCB
+execute if entity @s[tag=FillCB,tag=HoldCOCB] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..1] run scoreboard players operation @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
+execute if entity @s[tag=FillCB,tag=HoldCOCB] unless entity @e[type=armor_stand,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..1] run scoreboard players set @e[type=armor_stand,tag=CannonDisp,limit=1,sort=nearest,distance=..4] CmdData 10
+scoreboard players add @s[team=!Lobby,tag=FillCB,tag=HoldCOCB,tag=UsedCOCB] MVPcannon 1
 
 #> All cannonballs advancement
-advancement grant @s[tag=UsedCB,tag=UsedFB,tag=UsedCBC,tag=UsedGCB,tag=UsedCCB,tag=UsedBCB,tag=UsedPCB,tag=UsedTCB,tag=UsedGOCB] only tutorial:zzzunlockables/cannoneer
+advancement grant @s[tag=UsedCB,tag=UsedFB,tag=UsedCBC,tag=UsedGCB,tag=UsedCCB,tag=UsedBCB,tag=UsedPCB,tag=UsedTCB,tag=UsedGOCB,tag=UsedCOCB] only tutorial:zzzunlockables/cannoneer
 tag @s[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedCB
 tag @s[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedFB
 tag @s[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedCBC

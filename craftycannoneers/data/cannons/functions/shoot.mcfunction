@@ -30,10 +30,10 @@ execute at @s[tag=ChainCannonball,scores={CmdData=4..}] run particle dust_color_
 execute at @s[tag=ChainCannonball,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^-1 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=GoldenCannonball,scores={CmdData=4..}] run particle dust_color_transition 1 0.835 0 1.4 1 0.667 0 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
 
-execute at @s[tag=!TracerCannonball,tag=!CannonballCluster,tag=!ChainCannonball,tag=!GoldenCannonball,tag=!bouncing,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=!TracerCannonball,tag=!CannonballCluster,tag=!StrikeLightning,tag=!ChainCannonball,tag=!GoldenCannonball,tag=!bouncing,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=!TracerCannonball,tag=CannonballCluster,scores={CmdData=4..}] run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^2 ^-8.5 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
 
-execute at @s[tag=!CannonballCluster,tag=!GoldenCannonball,tag=!ChainCannonball,tag=!TracerCannonball,scores={CmdData=4..}] unless entity @s[tag=bouncing] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 4 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=!CannonballCluster,tag=!GoldenCannonball,tag=!StrikeLightning,tag=!ChainCannonball,tag=!TracerCannonball,scores={CmdData=4..}] unless entity @s[tag=bouncing] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 4 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=GoldenCannonball,scores={CmdData=4..}] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 2 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=CannonballCluster,scores={CmdData=4..}] run particle smoke ^ ^2 ^-8.5 0 0 0 0.1 2 force @a[predicate=cannons:seeparticles]
 
@@ -41,6 +41,8 @@ execute at @s[tag=HotCannonball,scores={CmdData=4..}] run particle large_smoke ^
 execute at @s[tag=HotCannonball,scores={CmdData=4..}] run particle flame ^ ^2 ^-8.5 0.2 0.2 0.2 0.1 12 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=GasCannonball,scores={CmdData=4..}] run particle large_smoke ^ ^2 ^-8.5 0 0 0 0.1 1 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=GasCannonball,scores={CmdData=4..}] run particle soul ^ ^2 ^-8.5 0 0 0 0.02 2 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=CopperCannonball,tag=!StrikeLightning,scores={CmdData=4..}] run particle electric_spark ^ ^2 ^-8.5 0.5 0.5 0.5 0.05 5 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=CopperCannonball,tag=!StrikeLightning,scores={CmdData=4..}] run particle firework ^ ^2 ^-8.5 0.5 0.5 0.5 0.02 1 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=PlayerCannonball,scores={CmdData=4..}] run particle cloud ^ ^2 ^-8.5 0 0 0 0.02 1 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=TracerCannonball,scores={CmdData=1..}] run function cannons:tracerparticle
 

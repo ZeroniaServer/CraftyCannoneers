@@ -1,4 +1,5 @@
 scoreboard players add @s CmdData 1
+scoreboard players set @s[scores={CmdData=..29},tag=Instant] CmdData 30
 execute if score @s CmdData matches 1 run function game:modifiers/seastorms/lightningcheck
 execute if score @s CmdData matches 1..30 run particle minecraft:electric_spark ~ ~ ~ 1 0 1 0.1 10 force @a[team=!Lobby]
 execute if score @s CmdData matches 30 run summon lightning_bolt ~ ~ ~ {Tags:["StormEntity"]}
