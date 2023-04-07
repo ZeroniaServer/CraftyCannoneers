@@ -1,0 +1,23 @@
+[
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "stepping_on": {
+                "block": {
+                    "tag": "game:shipblocks"
+                }
+            }
+        }
+    },
+    {
+        "condition": "minecraft:location_check",
+        "predicate": {
+            "position": {
+                "y": {
+                    "max": -36
+                }
+            }
+        }
+    }
+]
