@@ -30,3 +30,5 @@ scoreboard players set $updating CmdData 0
 
 bossbar remove updatebar
 bossbar set lobbybar visible true
+
+execute as @a at @s run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1 0.8
