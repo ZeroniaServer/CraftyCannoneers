@@ -41,7 +41,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'[{\"translate\":\"item.minecraft.golden_apple\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+              "tag": "{NoDrop:1b,display:{Name:'[{\"translate\":\"item.minecraft.golden_apple\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
             },
             {
               "function": "minecraft:set_count",

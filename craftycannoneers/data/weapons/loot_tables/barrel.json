@@ -15,7 +15,7 @@
         },
         {
           "function": "minecraft:set_nbt",
-          "tag": "{CanPlaceOn:[\"\"]}",
+          "tag": "{NoDrop:1b,CanPlaceOn:[\"\"]}",
           "conditions": [
             {
               "condition": "minecraft:entity_properties",
