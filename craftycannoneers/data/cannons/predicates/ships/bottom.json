@@ -14,9 +14,7 @@
         "condition": "minecraft:location_check",
         "predicate": {
             "position": {
-                "y": {
-                    "max": -36
-                }
+                "y": -36
             }
         }
     }
