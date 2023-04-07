@@ -69,3 +69,7 @@ tag @s[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedBCB
 tag @s[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedPCB
 tag @s[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedTCB
 tag @s[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedGOCB
+
+#> Display gunpowder count
+tag @e[type=armor_stand,tag=GPDispL,limit=1,sort=nearest,distance=..1] add DisplayGP
+tag @e[type=armor_stand,tag=GPDispR,limit=1,sort=nearest,distance=..1] add DisplayGP

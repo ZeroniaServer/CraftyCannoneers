@@ -1,5 +1,9 @@
 #> Display current gunpowder
-execute if entity @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=1..},distance=..2,limit=1] run scoreboard players add @s gpdisp_time 1
+execute unless score @s[tag=firstTickDisplay] gpdisp_time = @s gpdisp_time run tag @s remove DisplayGP
+execute if entity @e[type=armor_stand,tag=CannonDisp,scores={cannonclaim=1..},distance=..2,limit=1] run scoreboard players add @s[tag=DisplayGP] gpdisp_time 1
+scoreboard players add @s[tag=DisplayGP,tag=!firstTickDisplay] gpdisp_time 1
+tag @s[tag=DisplayGP,tag=!firstTickDisplay] add firstTickDisplay
+tag @s[tag=!DisplayGP,tag=firstTickDisplay] remove firstTickDisplay
 
 execute at @s[tag=GPDispL,scores={gpdisp_time=1}] run kill @e[type=area_effect_cloud,tag=GPDispText,distance=..3,limit=2]
 execute at @s[tag=GPDispL,scores={gpdisp_time=1}] at @e[type=villager,tag=CannonVLeft,tag=!Tutorial,limit=1,sort=nearest,distance=..2] run summon area_effect_cloud ~ ~0.2 ~ {Tags:["cannon","GPDispText","1"],Duration:2000000000,Particle:"block air"}
@@ -25,11 +29,7 @@ execute at @s[tag=GPDispR,scores={CmdData=5,gpdisp_time=2}] run data merge entit
 execute at @s[tag=GPDispR,scores={CmdData=6,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:"6",CustomNameVisible:1b}
 execute at @s[tag=GPDispR,scores={CmdData=7,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:"7",CustomNameVisible:1b}
 
-execute unless score @s[tag=firstTickDisplay] gpdisp_time = @s gpdisp_time run tag @s remove DisplayGP
-tag @s[tag=!firstTickDisplay] add firstTickDisplay
-
 execute at @s[scores={gpdisp_time=120..}] run kill @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2]
 execute at @s[scores={gpdisp_time=120..}] run kill @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2]
 tag @s[scores={gpdisp_time=120..}] remove DisplayGP
 scoreboard players reset @s[tag=!DisplayGP,scores={gpdisp_time=1..}] gpdisp_time
-tag @s[tag=!DisplayGP] remove firstTickDisplay
