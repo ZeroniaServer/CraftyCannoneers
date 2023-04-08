@@ -2,5 +2,5 @@ tellraw @s ["\n",{"text":"============ ","color":"gray"},{"translate":"zeronia",
 playsound clickcredits master @s ~ ~ ~ 1 1.8
 playsound clickzeronia master @s ~ ~ ~ 1 1
 advancement grant @s only tutorial:zzzunlockables/credits
-execute at @e[type=villager,tag=ZeroniaCredit,limit=1] run particle block command_block ~ ~ ~ 0.2 0.2 0.2 0.1 50 normal @s
-execute at @e[type=villager,tag=ZeroniaCredit,limit=1] run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.1 10 normal @s
+execute at @e[type=interaction,tag=ZeroniaCredit,limit=1] run particle block command_block ~ ~ ~ 0.2 0.2 0.2 0.1 50 normal @s
+execute at @e[type=interaction,tag=ZeroniaCredit,limit=1] run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.1 10 normal @s

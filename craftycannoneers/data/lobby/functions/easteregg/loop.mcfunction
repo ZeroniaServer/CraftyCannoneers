@@ -8,3 +8,7 @@ execute as @e[type=item,tag=RRHeadItem] at @s run function lobby:easteregg/rocke
 #> Pet the Parrot
 execute if score $parrotpet CmdData matches 1.. run scoreboard players add $parrotpet CmdData 1
 execute if score $parrotpet CmdData matches 20.. run scoreboard players reset $parrotpet CmdData
+
+#> Squish the Goldfish
+execute if score $goldypet CmdData matches 1.. run scoreboard players add $goldypet CmdData 1
+execute if score $goldypet CmdData matches 8.. run scoreboard players reset $goldypet CmdData

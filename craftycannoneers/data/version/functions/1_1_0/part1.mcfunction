@@ -26,7 +26,12 @@ execute as @e[type=armor_stand,tag=ParkourHat,tag=!110HatPlacement,limit=1] at @
 
 tag @e[type=armor_stand,tag=PirateHat,tag=!110HatPlacement] add 110HatPlacement
 
-execute as @e[type=armor_stand,tag=!NameUpdated] at @s run function version:1_1_0/creditsfix
+execute as @e[type=armor_stand,tag=KlarDeco,tag=!NameUpdated] at @s run function version:1_1_0/creditsfix
+execute as @e[type=armor_stand,tag=CarlDeco,tag=!NameUpdated] at @s run function version:1_1_0/creditsfix
+execute as @e[type=armor_stand,tag=YZERODeco,tag=!NameUpdated] at @s run function version:1_1_0/creditsfix
+execute as @e[type=armor_stand,tag=EvtemaDeco,tag=!NameUpdated] at @s run function version:1_1_0/creditsfix
+execute as @e[type=armor_stand,tag=StuffyDeco,tag=!NameUpdated] at @s run function version:1_1_0/creditsfix
+execute as @e[type=armor_stand,tag=BlockyDeco,tag=!NameUpdated] at @s run function version:1_1_0/creditsfix
 
 function arenaclear:traders
 

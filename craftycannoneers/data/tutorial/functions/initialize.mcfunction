@@ -2,7 +2,7 @@ function tutorial:trainingdummies/despawnall
 kill @e[type=area_effect_cloud,tag=CannonText]
 execute as @e[type=slime,tag=FakeWeakpoint] at @s run function arenaclear:kill
 kill @e[type=marker,tag=FakeWeakpoint]
-execute as @e[type=villager,tag=LChestFakeVillager] at @s run function arenaclear:kill
+kill @e[type=interaction,tag=LChestFake]
 
 function tutorial:cannondock/resetcannons
 

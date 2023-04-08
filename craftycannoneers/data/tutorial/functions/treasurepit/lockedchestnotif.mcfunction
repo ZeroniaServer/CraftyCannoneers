@@ -1,3 +1,3 @@
-execute if entity @a[predicate=chests:key,distance=..7,limit=1] run tp @e[type=villager,tag=LChestFakeVillager,limit=1] ~ 69 ~
-execute if entity @a[predicate=chests:key_offhand,distance=..7,limit=1] run tp @e[type=villager,tag=LChestFakeVillager,limit=1] ~ 69 ~
-execute unless entity @a[predicate=chests:key,distance=..7] unless entity @a[predicate=chests:key_offhand,distance=..7] run tp @e[type=villager,tag=LChestFakeVillager,limit=1] @s
+execute if entity @a[predicate=chests:key,distance=..7,limit=1] run tp @e[type=interaction,tag=LChestFake,limit=1] ~ 69 ~
+execute if entity @a[predicate=chests:key_offhand,distance=..7,limit=1] run tp @e[type=interaction,tag=LChestFake,limit=1] ~ 69 ~
+execute unless entity @a[predicate=chests:key,distance=..7] unless entity @a[predicate=chests:key_offhand,distance=..7] run tp @e[type=interaction,tag=LChestFake,limit=1] @s
