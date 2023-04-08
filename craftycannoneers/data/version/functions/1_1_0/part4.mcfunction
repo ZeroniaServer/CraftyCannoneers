@@ -3,6 +3,7 @@ function tutorial:cannondock/resetcannons
 
 kill @e[type=armor_stand,tag=fakechest]
 kill @e[type=villager,tag=LChestFakeVillager]
+kill @e[type=interaction,tag=LChestFake]
 execute as @e[type=hopper_minecart,tag=fakechest] run function arenaclear:kill
 execute as @e[type=chest_minecart,tag=fakechest] run function arenaclear:kill
 function tutorial:treasurepit/main
