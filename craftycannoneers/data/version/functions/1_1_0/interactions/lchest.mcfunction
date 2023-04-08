@@ -1,3 +1,3 @@
 summon interaction ~ ~ ~ {Tags:["notifylock","LChest"],response:1b}
 kill @e[type=marker,tag=lchest]
-function arenaclear:kill
+execute if entity @s[type=villager] run function arenaclear:kill

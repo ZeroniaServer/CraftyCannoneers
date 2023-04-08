@@ -83,6 +83,7 @@ summon wandering_trader -260 -27 -56 {Rotation:[0.0f,0.0f],Invulnerable:1b,NoGra
 summon wandering_trader -279 -11 -15 {Rotation:[-180.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","WeakpointTeacher"],Silent:1b,CustomName:'[{"translate":"space.-4096"},{"text":"\\uE003"},{"translate":"space.-4096"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:"generic.movement_speed",Base:0}],PersistenceRequired:1b}
 
 kill @e[type=armor_stand,tag=fakechest]
+kill @e[type=interaction,tag=LChestFake]
 execute as @e[type=hopper_minecart,tag=fakechest] run function arenaclear:kill
 execute as @e[type=chest_minecart,tag=fakechest] run function arenaclear:kill
 
