@@ -63,7 +63,10 @@ execute at @s[tag=!InSafezone,tag=Hit1,tag=ChainCannonball,scores={doublehit=4..
 
 #Copper Cannonball
 execute at @s[tag=!InSafezone,tag=Hit1,tag=!StrikeLightning,tag=CopperCannonball] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power2"]}
-
+execute at @s[tag=InSafezone,tag=Hit1,tag=!StrikeLightning,tag=CopperCannonball] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power1"]}
+scoreboard players add @s[tag=StrikeLightning] copperStrike 1
+execute at @s[tag=CopperCannonball,scores={copperStrike=80..},tag=!InSafezone] run summon marker ~ ~1 ~ {Tags:["ImpactMarker","Power2"]}
+execute at @s[tag=CopperCannonball,scores={copperStrike=80..},tag=InSafezone] run summon marker ~ ~1 ~ {Tags:["ImpactMarker","Power1"]}
 
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] click += @s CalcAir1
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] click += @s CalcAir2
@@ -117,9 +120,9 @@ execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=Hit1,scores={doubl
 execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=Hit1,scores={doublehit=4..},tag=!CannonballCluster] run particle flash ~ ~ ~ 0 0 0 0 5 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=Hit1,scores={doublehit=4..},tag=!CannonballCluster] run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
 
-execute at @s[tag=!BouncyCannonball,tag=CopperCannonball,tag=!StrikeLightning,tag=!CannonballCluster] run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
-execute at @s[tag=!BouncyCannonball,tag=CopperCannonball,tag=!StrikeLightning,tag=!CannonballCluster] run particle flash ~ ~ ~ 0 0 0 0 5 force @a[predicate=cannons:seeparticles]
-execute at @s[tag=!BouncyCannonball,tag=CopperCannonball,tag=!StrikeLightning,tag=!CannonballCluster] run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=CopperCannonball,tag=!StrikeLightning] run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=CopperCannonball,tag=!StrikeLightning] run particle flash ~ ~ ~ 0 0 0 0 5 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=CopperCannonball,tag=!StrikeLightning] run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
 tag @s add Hit1
 tp @s[tag=CopperCannonball] @s
 data merge entity @s[tag=CopperCannonball] {Motion:[0.0d,-0.1d,0.0d]}
@@ -127,7 +130,6 @@ scoreboard players reset @s[tag=CopperCannonball] drag
 scoreboard players reset @s[tag=CopperCannonball] gravity
 tag @s[tag=CopperCannonball] add StrikeLightning
 
-scoreboard players add @s[tag=StrikeLightning] copperStrike 1
 execute at @s[scores={copperStrike=20}] run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 execute at @s[scores={copperStrike=20}] as @a[team=!Spectator,team=!Lobby,distance=..6,limit=2,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 item replace entity @s[scores={copperStrike=20}] armor.head with diamond_hoe{CustomModelData:110}
@@ -144,13 +146,6 @@ execute at @s[scores={copperStrike=70}] run summon marker ~ ~1 ~ {Tags:["Lightni
 execute at @s[scores={copperStrike=70}] as @a[team=!Spectator,team=!Lobby,distance=..6,limit=2,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 item replace entity @s[scores={copperStrike=70}] armor.head with diamond_hoe{CustomModelData:113}
 
-execute at @s[scores={copperStrike=80..},tag=!InSafezone] run summon marker ~ ~1 ~ {Tags:["ImpactMarker","Power2"]}
-execute at @s[scores={copperStrike=80..},tag=!InSafezone] run scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] click += @s CalcAir1
-execute at @s[scores={copperStrike=80..},tag=!InSafezone] run scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] click += @s CalcAir2
-execute at @s[scores={copperStrike=80..},tag=!InSafezone] run scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] playerUUID = @s playerUUID
-execute at @s[scores={copperStrike=80..},tag=!InSafezone] run data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
-execute at @s[scores={copperStrike=80..},tag=!InSafezone] run execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] run data modify entity @s CustomName set from storage craftycannoneers:temp CustomName
-execute at @s[scores={copperStrike=80..},tag=!InSafezone] run tag @e[type=marker,tag=ImpactMarker,tag=!HasUUID] add HasUUID
 execute at @s[scores={copperStrike=80..}] run playsound cannonball master @a ~ ~ ~ 4 1
 execute at @s[scores={copperStrike=80..}] run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1
 execute at @s[scores={copperStrike=80..}] run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]

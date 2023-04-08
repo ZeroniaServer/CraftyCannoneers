@@ -13,4 +13,5 @@ execute if entity @s[team=Purple] as @a[team=Orange] if score @s playerUUID = #c
 
 scoreboard players reset #current KillerUUID
 advancement revoke @s only cannons:utilkill
+advancement revoke @s only cannons:cbkill
 scoreboard players reset @s KillerUUID

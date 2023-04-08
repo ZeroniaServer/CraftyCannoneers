@@ -15,7 +15,7 @@ execute if score @s modisigns matches 9152 run function lobby:customizer/modifie
 execute if score @s modisigns matches 9152 run scoreboard players reset @s moditimer
 
 #Modifiers (toggle off)
-execute if score @s modisigns matches 9153 run execute positioned -54 -23 9 run playsound modifier.close master @a ~ ~ ~ 1 1.8
+execute if score @s modisigns matches 9153 positioned -54 -23 9 run playsound modifier.close master @a ~ ~ ~ 1 1.8
 execute if score @s modisigns matches 9153 run particle crit -54 -22.5 9.8 1 1 0 0 30 force
 execute if score @s modisigns matches 9153 run particle end_rod -54 -22.5 9.8 1 1 0 0.1 10 force
 execute if score @s modisigns matches 9153 run function lobby:customizer/modifiers/off
