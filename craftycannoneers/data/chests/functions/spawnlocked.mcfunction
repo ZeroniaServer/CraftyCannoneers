@@ -7,3 +7,5 @@ kill @e[type=marker,tag=SelectedLock,limit=1]
 execute as @e[type=armor_stand,tag=LChestAS,tag=!Randomized] at @s run function chests:randomrotation
 
 scoreboard players operation $CombinedDamage CmdData -= $lockboxspawn CmdData
+
+function chests:generatelockedloot

@@ -1,4 +1,5 @@
 scoreboard players add @s LootLoader 1
+tag @s[scores={LootLoader=32}] remove LoadLoot
 
 ### Real Chests
 
@@ -66,9 +67,12 @@ execute at @s[tag=RChestHopper,scores={LootLoader=32}] run playsound minecraft:b
 execute at @s[tag=RChestHopper,scores={LootLoader=32}] run loot replace entity @s hotbar.4 loot chests:rare/chest
 
 #> Skeleton
-
-
-
+execute at @s[tag=lockedchest,scores={LootLoader=1}] run playsound minecraft:entity.item.pickup master @a ~ ~ ~ 0.2 1
+execute at @s[tag=lockedchest,scores={LootLoader=1}] run playsound minecraft:block.note_block.snare master @a ~ ~ ~ 0.2 1.6
+execute at @s[tag=lockedchest,scores={LootLoader=1}] run data modify entity @s Items append from storage craftycannoneers:lockedchest Items[0]
+execute at @s[tag=lockedchest,scores={LootLoader=1}] run data remove storage craftycannoneers:lockedchest Items[0]
+scoreboard players set @s[tag=lockedchest,scores={LootLoader=6..}] LootLoader 0
+execute unless data storage craftycannoneers:lockedchest Items[0] run scoreboard players set @s[tag=lockedchest] LootLoader 32
 
 ### Training Chests
 
@@ -134,3 +138,11 @@ execute at @s[tag=RChestFake,scores={LootLoader=24}] run loot replace entity @s 
 execute at @s[tag=RChestFake,scores={LootLoader=32}] run playsound minecraft:entity.item.pickup master @a ~ ~ ~ 0.2 1
 execute at @s[tag=RChestFake,scores={LootLoader=32}] run playsound minecraft:block.note_block.snare master @a ~ ~ ~ 0.2 1.6
 execute at @s[tag=RChestFake,scores={LootLoader=32}] run loot replace entity @s hotbar.4 loot chests:rare/chest
+
+#> Skeleton
+execute at @s[tag=fakelockedchest,scores={LootLoader=1}] run playsound minecraft:entity.item.pickup master @a ~ ~ ~ 0.2 1
+execute at @s[tag=fakelockedchest,scores={LootLoader=1}] run playsound minecraft:block.note_block.snare master @a ~ ~ ~ 0.2 1.6
+execute at @s[tag=fakelockedchest,scores={LootLoader=1}] run data modify entity @s Items append from storage craftycannoneers:fakelockedchest Items[0]
+execute at @s[tag=fakelockedchest,scores={LootLoader=1}] run data remove storage craftycannoneers:fakelockedchest Items[0]
+scoreboard players set @s[tag=fakelockedchest,scores={LootLoader=6..}] LootLoader 0
+execute unless data storage craftycannoneers:fakelockedchest Items[0] run scoreboard players set @s[tag=fakelockedchest] LootLoader 32
