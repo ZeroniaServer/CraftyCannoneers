@@ -14,6 +14,7 @@ fill -53 -24 9 -55 -22 9 air
 
 #scores
 scoreboard objectives add copperStrike dummy
+scoreboard objectives add sharktarget dummy
 scoreboard players set $NoTracers CmdData 0
 scoreboard players set $Sharks CmdData 0
 scoreboard players set $Storms CmdData 0
