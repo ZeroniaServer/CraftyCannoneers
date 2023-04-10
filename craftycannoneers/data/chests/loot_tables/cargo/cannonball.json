@@ -1,0 +1,66 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+            {
+                "type": "minecraft:loot_table",
+                "name": "cannons:normal",
+                "weight": 10
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "cannons:hot",
+              "weight": 6
+              
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "cannons:gas",
+              "weight": 10
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "cannons:cluster",
+              "weight": 10
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "cannons:chain",
+              "weight": 7
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "cannons:bouncy",
+              "weight": 10
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "cannons:copper",
+              "weight": 10,
+              "conditions": [
+                {
+                  "condition": "minecraft:weather_check",
+                  "raining": true
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "cannons:golden",
+              "weight": 1
+            }
+        ],
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

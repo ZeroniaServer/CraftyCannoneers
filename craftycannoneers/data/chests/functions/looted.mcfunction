@@ -14,4 +14,7 @@ execute if entity @s[tag=RChestHopper] run tag @e[type=armor_stand,tag=RChestAS,
 execute if entity @s[tag=lockedchest] run item replace entity @e[type=armor_stand,tag=LChestAS,limit=1,sort=nearest,distance=..1] armor.head with diamond_hoe{CustomModelData:72}
 execute if entity @s[tag=lockedchest] run tag @e[type=armor_stand,tag=LChestAS,limit=1,sort=nearest,distance=..1] add Looted
 
+#Cargo
+execute if entity @s[tag=CargoHopper] run tag @e[type=item_display,tag=CargoBarrel,limit=1,sort=nearest,distance=..1] add ContainerLooted
+
 tag @s add Looted

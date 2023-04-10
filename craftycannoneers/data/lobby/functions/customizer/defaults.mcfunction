@@ -9,3 +9,4 @@ scoreboard players reset @a[tag=ModiOwner] moditimer
 scoreboard players set $NoTracers CmdData 0
 scoreboard players set $Sharks CmdData 0
 scoreboard players set $Storms CmdData 0
+scoreboard players set $LostCargo CmdData 0

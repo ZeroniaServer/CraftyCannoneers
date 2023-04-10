@@ -27,8 +27,11 @@ execute if score @s modisigns matches 17863 run function lobby:customizer/modifi
 #Sharks
 execute if score @s modisigns matches 59636 run function lobby:customizer/modifiers/sharks
 
-#No Tracers
+#Sea Storms
 execute if score @s modisigns matches 71845 run function lobby:customizer/modifiers/seastorms
+
+#Lost Cargo
+execute if score @s modisigns matches 256652 run function lobby:customizer/modifiers/lostcargo
 
 schedule clear lobby:customizer/modifiers/off
 schedule clear lobby:customizer/open

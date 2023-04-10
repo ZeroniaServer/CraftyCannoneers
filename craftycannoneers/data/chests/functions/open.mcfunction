@@ -19,4 +19,9 @@ execute at @s[tag=lockedchest] run playsound block.chest.open master @a ~ ~ ~ 1 
 execute at @s[tag=lockedchest] run tag @s add LoadLoot
 execute at @s[tag=lockedchest] run playsound lockedtreasureopen master @a ~ ~ ~ 1 2
 
+#Cargo
+execute at @s[tag=CargoHopper] run data merge entity @e[type=item_display,tag=CargoBarrel,limit=1,sort=nearest,distance=..1] {item:{id:"diamond_hoe",Count:1,tag:{CustomModelData:115}}}
+execute at @s[tag=CargoHopper] run tag @s add LoadLoot
+execute at @s[tag=CargoHopper] run playsound block.barrel.open master @a ~ ~ ~ 1 1.3
+
 tag @s add Opened

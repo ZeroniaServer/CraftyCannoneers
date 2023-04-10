@@ -20,6 +20,9 @@ setblock -54 -22 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"light_blue"
 item replace entity @e[type=armor_stand,tag=SeaStormsIcon,limit=1] armor.head with diamond_hoe{CustomModelData:86}
 setblock -55 -22 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"light_blue",Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 71845"}}',Text2:'{"text":""}',Text3:'{"translate":"modifier.sea_storms","color":"#33ccff"}'}
 
+item replace entity @e[type=armor_stand,tag=LostCargoIcon,limit=1] armor.head with diamond_hoe{CustomModelData:113}
+setblock -53 -23 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"light_blue",Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 256652"}}',Text2:'{"text":""}',Text3:'{"translate":"modifier.lost_cargo","color":"#33ccff"}'}
+
 function lobby:customizer/modifiers/updatemodifiersigns
 
 scoreboard players set $ModiMapActive CmdData 1

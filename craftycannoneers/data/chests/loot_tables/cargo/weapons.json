@@ -1,0 +1,68 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:loot_table",
+            "weight": 2,
+            "name": "weapons:boarding_axe"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "weight": 2,
+            "name": "weapons:hook"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "weight": 1,
+            "name": "weapons:battle_axe"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "weight": 1,
+            "name": "weapons:mace"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "weight": 1,
+            "name": "weapons:saber"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "weight": 2,
+            "name": "weapons:shield"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "weight": 1,
+            "name": "weapons:raid_horn"
+          },
+          {
+            "type": "minecraft:loot_table",
+            "weight": 2,
+            "name": "weapons:arrow",
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 2,
+                  "max": 5
+                }
+              }
+            ]
+          }
+        ],
+        "functions": [
+          {
+            "function": "minecraft:set_count",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+  
