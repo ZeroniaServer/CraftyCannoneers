@@ -24,7 +24,7 @@ scoreboard players set @s[scores={eyeclick=10,CmdData=1..5}] eyeclick 55
 #Fire models
 item replace entity @s[scores={eyeclick=2}] armor.head with mooshroom_spawn_egg{CustomModelData:12}
 item replace entity @s[scores={eyeclick=58}] armor.head with mooshroom_spawn_egg{CustomModelData:13}
-item replace entity @s[scores={eyeclick=60}] armor.head with mooshroom_spawn_egg{CustomModelData:14}
+item replace entity @s[scores={eyeclick=60..}] armor.head with mooshroom_spawn_egg{CustomModelData:14}
 
 execute at @s[scores={eyeclick=94}] run function weapons:barrel/levitate
 execute at @s[scores={eyeclick=95,CmdData=10}] run function weapons:barrel/tier3
