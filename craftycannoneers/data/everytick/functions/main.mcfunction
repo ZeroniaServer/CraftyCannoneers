@@ -66,7 +66,8 @@ execute as @e[type=hopper_minecart,tag=LoadLoot] run function chests:lootloader
 execute as @e[type=chest_minecart,tag=LoadLoot] run function chests:lootloader
 
 #> Reset eyeclick/climb
-scoreboard players reset @a[scores={eyeclick=1..}] eyeclick
+scoreboard players add @a[scores={eyeclick=1..}] eyeclick 1
+scoreboard players reset @a[scores={eyeclick=3..}] eyeclick
 scoreboard players reset @a[scores={climb=1..}] climb
 
 #> Cannonball displays
