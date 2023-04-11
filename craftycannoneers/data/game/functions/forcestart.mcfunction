@@ -83,3 +83,6 @@ execute unless entity @e[type=marker,tag=RingOfFire,predicate=cannons:safezones/
 
 #> Enable modifiers
 execute if score $Sharks CmdData matches 1 run function game:modifiers/sharks/spawnsharks
+execute if score $LostCargo CmdData matches 1 run function game:modifiers/lostcargo/setup
+execute if score $LostCargo CmdData matches 1 run scoreboard players set $CargoTime CmdData 0
+execute if score $LostCargo CmdData matches 1 run scoreboard players set $SpawnCargo CmdData 1

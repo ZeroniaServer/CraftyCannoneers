@@ -27,10 +27,11 @@ execute as @e[type=marker,tag=BarrelSpawn,tag=Picked,scores={CmdData=14..}] at @
 scoreboard players add @e[type=item_display,tag=CargoBarrel] CmdData 1
 execute as @e[type=item_display,tag=CargoBarrel,scores={CmdData=1..35}] on vehicle at @s run tp @s ~ ~0.25 ~
 execute as @e[type=item_display,tag=CargoBarrel,scores={CmdData=1..35}] on vehicle at @s run tp @s ~ ~0.25 ~
+execute as @e[type=item_display,tag=CargoBarrel,scores={CmdData=1..35}] at @s run particle minecraft:bubble_column_up ~ ~ ~ 0.2 0.2 0.2 0.04 3 force @a[predicate=cannons:seeparticles]
 
 execute as @e[type=item_display,tag=CargoBarrel,scores={CmdData=36..47}] on vehicle at @s run tp @s ~ ~-0.05 ~
 
-execute as @e[type=item_display,tag=CargoBarrel,scores={CmdData=40}] at @s run playsound entity.generic.splash master @a ~ ~ ~ 1 1.2
+execute as @e[type=item_display,tag=CargoBarrel,scores={CmdData=40}] at @s run playsound minecraft:entity.player.splash.high_speed master @a ~ ~ ~ 1 1.2
 execute as @e[type=item_display,tag=CargoBarrel,scores={CmdData=40}] at @s run playsound minecraft:entity.drowned.swim master @a ~ ~ ~ 1 0.7
 execute as @e[type=item_display,tag=CargoBarrel,scores={CmdData=40}] at @s run particle splash ~ ~ ~ 0.2 0.2 0.2 0.1 50 force @a[predicate=cannons:seeparticles]
 execute as @e[type=item_display,tag=CargoBarrel,scores={CmdData=40}] at @s run particle falling_water ~ ~0.4 ~ 0.2 0.2 0.2 0.1 10 force @a[predicate=cannons:seeparticles]
@@ -48,3 +49,13 @@ execute as @e[type=item_display,tag=CBDisplay,tag=ContainerLooted,scores={eyecli
 execute as @e[type=item_display,tag=CBDisplay,tag=ContainerLooted,scores={eyeclick=35..}] on passengers run kill @s
 execute as @e[type=item_display,tag=CBDisplay,tag=ContainerLooted,scores={eyeclick=35..}] on vehicle run kill @s
 execute as @e[type=item_display,tag=CBDisplay,tag=ContainerLooted,scores={eyeclick=35..}] run kill @s
+
+
+
+#> Spawn over time
+scoreboard players add $CargoTime CmdData 1
+execute if score $CargoTime CmdData matches 1200 as @e[type=player,limit=1,sort=random,predicate=game:fiftyfifty] run scoreboard players set $SpawnCargo CmdData 1
+execute if score $CargoTime CmdData matches 1200.. run scoreboard players reset $CargoTime CmdData
+execute if score $SpawnCargo CmdData matches 1 run function game:modifiers/lostcargo/spawnpurple
+execute if score $SpawnCargo CmdData matches 1 run function game:modifiers/lostcargo/spawnorange
+execute if score $SpawnCargo CmdData matches 1 run scoreboard players reset $SpawnCargo CmdData
