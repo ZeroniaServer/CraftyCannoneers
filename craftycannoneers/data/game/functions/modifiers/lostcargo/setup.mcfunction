@@ -1,7 +1,6 @@
 kill @e[type=marker,tag=CargoSpawn]
 kill @e[type=marker,tag=BarrelSpawn]
-kill @e[tag=CargoEntity]
-
+execute as @e[type=item_display,tag=CargoBarrel] run function game:modifiers/lostcargo/killbarrel
 
 #> Purple
 summon marker 73 -28 -46 {Tags:["CargoSpawn","CargoEntity","Purple"]}

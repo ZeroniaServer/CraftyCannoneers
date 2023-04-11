@@ -29,6 +29,9 @@ execute if entity @s[tag=GasPower] as @e[type=villager,tag=BlastBarrel,distance=
 execute if entity @s[tag=BlastBarrel1] as @e[type=villager,tag=BlastBarrel,distance=..6] run function weapons:barrel/chainreact
 execute if entity @s[tag=BlastBarrel2] as @e[type=villager,tag=BlastBarrel,distance=..7] run function weapons:barrel/chainreact
 
+#> Explode nearby Cargo Traps
+execute as @e[type=villager,tag=CBTrap,distance=..7] on vehicle run tag @s add TrapExplode
+
 execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] as @a[tag=UtilKilled,distance=..2] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:3b,Duration:1,ShowParticles:0b}]}
 execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] run tag @a[tag=UtilKilled,distance=..2] add damaged
 execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] as @a[tag=UtilKilled,tag=!damaged,distance=..4] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:2b,Duration:1,ShowParticles:0b}]}
