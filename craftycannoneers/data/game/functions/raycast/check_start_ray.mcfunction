@@ -1,0 +1,4 @@
+scoreboard players reset $lookingat CmdData
+execute if entity @s[team=Orange] anchored eyes facing entity @e[type=slime,tag=Weakpoint,tag=Orange] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.01] run scoreboard players set $lookingat CmdData 1
+execute if entity @s[team=Purple] anchored eyes facing entity @e[type=slime,tag=Weakpoint,tag=Purple] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.01] run scoreboard players set $lookingat CmdData 1
+execute if score $lookingat CmdData matches 1 anchored eyes positioned ^ ^ ^ anchored feet run function game:raycast/start_ray

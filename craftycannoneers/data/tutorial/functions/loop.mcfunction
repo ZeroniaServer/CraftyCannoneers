@@ -20,7 +20,7 @@ execute unless entity @a[predicate=game:tutorialbounds] as @e[type=armor_stand,t
 scoreboard players set $runwatchtower CmdData 0
 execute if entity @a[team=Lobby,predicate=tutorial:watchtower,limit=1] run scoreboard players set $runwatchtower CmdData 1
 execute if entity @a[team=Lobby,tag=InTower,limit=1] run scoreboard players set $runwatchtower CmdData 1
-execute if score $runwatchtower CmdData matches 1 as @a[team=Lobby,tag=!SpotFake,tag=UsingSpyglass,predicate=tutorial:watchtower] at @s anchored eyes positioned ^ ^ ^ anchored feet run function tutorial:raycast/start_ray
+execute if score $runwatchtower CmdData matches 1 as @a[team=Lobby,tag=!SpotFake,tag=UsingSpyglass,predicate=tutorial:watchtower] at @s run function tutorial:raycast/check_start_ray
 
 #> X Particles
 scoreboard players set $runxparticle CmdData 0

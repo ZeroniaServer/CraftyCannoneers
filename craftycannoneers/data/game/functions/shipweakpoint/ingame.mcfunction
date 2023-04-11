@@ -1,6 +1,6 @@
 #> Raycast
-execute unless score $OrangeWP CmdData matches 6.. as @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,gamemode=!spectator] at @s anchored eyes positioned ^ ^ ^ anchored feet unless entity @e[type=slime,tag=Weakpoint,tag=Orange,distance=..101] run function game:raycast/start_ray
-execute unless score $PurpleWP CmdData matches 6.. as @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,gamemode=!spectator] at @s anchored eyes positioned ^ ^ ^ anchored feet unless entity @e[type=slime,tag=Weakpoint,tag=Purple,distance=..101] run function game:raycast/start_ray
+execute unless score $OrangeWP CmdData matches 6.. as @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,gamemode=!spectator] at @s unless entity @e[type=slime,tag=Weakpoint,tag=Orange,distance=..101] run function game:raycast/check_start_ray
+execute unless score $PurpleWP CmdData matches 6.. as @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,gamemode=!spectator] at @s unless entity @e[type=slime,tag=Weakpoint,tag=Purple,distance=..101] run function game:raycast/check_start_ray
 
 #> Notification
 execute as @a[tag=UsingSpyglass] unless score @s WPNotify matches 41.. run scoreboard players add @s WPNotify 1
