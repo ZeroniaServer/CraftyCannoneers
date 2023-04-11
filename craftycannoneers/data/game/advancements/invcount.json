@@ -22,12 +22,32 @@
                 }
             }
         },
+        "full_lobby": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "slots": {
+                    "occupied": {
+                        "min": 37
+                    }
+                }
+            }
+        },
         "unfull": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "slots": {
                     "occupied": {
                         "max": 39
+                    }
+                }
+            }
+        },
+        "unfull_lobby": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "slots": {
+                    "occupied": {
+                        "max": 36
                     }
                 }
             }
@@ -45,6 +65,12 @@
         ],
         [
             "full"
+        ],
+        [
+            "full_lobby"
+        ],
+        [
+            "unfull_lobby"
         ],
         [
             "unfull"

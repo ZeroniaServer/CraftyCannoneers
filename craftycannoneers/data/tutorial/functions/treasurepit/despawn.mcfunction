@@ -1,3 +1,4 @@
+kill @s[type=!armor_stand]
 scoreboard players add @s CmdData 1
 execute if score @s CmdData matches 11..21 run particle block sand ~ ~ ~ 0 0 0 0.1 2
 execute if score @s CmdData matches 11..21 run particle block mud ~ ~ ~ 0 0 0 0.1 3

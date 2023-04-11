@@ -7,8 +7,8 @@ execute if score @s CmdData matches ..99 if entity @a[team=!Spectator,gamemode=!
 execute if score @s CmdData matches ..99 if entity @a[team=Lobby,predicate=game:matches_uuid] run kill @s
 
 #> Tag player as needing item and kill self after 5 seconds
-execute if entity @s[scores={CmdData=100..},tag=Cutlass] run tag @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid] add NeedsCutlass
-execute if entity @s[scores={CmdData=100..},tag=Crossbow] run tag @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid] add NeedsCrossbow
-execute if entity @s[scores={CmdData=100..},tag=Spyglass] run tag @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid] add NeedsSpyglass
-execute if entity @s[scores={CmdData=100..},tag=Tracer] run tag @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid] add NeedsTracer
+execute if entity @s[scores={CmdData=100..},tag=Cutlass] on origin run tag @s[team=!Spectator,gamemode=!spectator] add NeedsCutlass
+execute if entity @s[scores={CmdData=100..},tag=Crossbow] on origin run tag @s[team=!Spectator,gamemode=!spectator] add NeedsCrossbow
+execute if entity @s[scores={CmdData=100..},tag=Spyglass] on origin run tag @s[team=!Spectator,gamemode=!spectator] add NeedsSpyglass
+execute if entity @s[scores={CmdData=100..},tag=Tracer] on origin run tag @s[team=!Spectator,gamemode=!spectator] add NeedsTracer
 kill @s[scores={CmdData=100..}]

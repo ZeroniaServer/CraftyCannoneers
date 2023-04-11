@@ -166,5 +166,5 @@ execute at @s[tag=fakelockedchest,scores={LootLoader=1}] run playsound minecraft
 execute at @s[tag=fakelockedchest,scores={LootLoader=1}] run playsound minecraft:block.note_block.snare master @a ~ ~ ~ 0.2 1.6
 execute at @s[tag=fakelockedchest,scores={LootLoader=1}] run data modify entity @s Items append from storage craftycannoneers:fakelockedchest Items[0]
 execute at @s[tag=fakelockedchest,scores={LootLoader=1}] run data remove storage craftycannoneers:fakelockedchest Items[0]
-scoreboard players set @s[tag=fakelockedchest,scores={LootLoader=6..}] LootLoader 0
+scoreboard players set @s[tag=fakelockedchest,scores={LootLoader=4..}] LootLoader 0
 execute unless data storage craftycannoneers:fakelockedchest Items[0] run scoreboard players set @s[tag=fakelockedchest] LootLoader 32

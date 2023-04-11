@@ -4,10 +4,10 @@ tag @s[predicate=chests:key_offhand] add HoldKey
 execute at @s[team=Purple,tag=HoldKey,scores={eyeclick=1..}] if entity @e[type=armor_stand,tag=orangechestdisplay,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
 execute at @s[team=Orange,tag=HoldKey,scores={eyeclick=1..}] if entity @e[type=armor_stand,tag=purplechestdisplay,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
 
-execute at @s[team=Purple,tag=HoldKey,scores={eyeclick=1..}] if entity @e[type=armor_stand,tag=LChestAS,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
-execute at @s[team=Orange,tag=HoldKey,scores={eyeclick=1..}] if entity @e[type=armor_stand,tag=LChestAS,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
+execute at @s[team=Purple,tag=HoldKey,scores={eyeclick=1..}] if entity @e[type=armor_stand,tag=LChestAS,tag=!NewChest,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
+execute at @s[team=Orange,tag=HoldKey,scores={eyeclick=1..}] if entity @e[type=armor_stand,tag=LChestAS,tag=!NewChest,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
 
-execute at @s[team=Lobby,tag=HoldKey,scores={eyeclick=1..}] if entity @e[type=armor_stand,tag=LChestFakeC,tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
+execute at @s[team=Lobby,tag=HoldKey,scores={eyeclick=1..}] if entity @e[type=armor_stand,tag=LChestFakeC,scores={CmdData=10..},tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
 
 title @s[scores={openchest=1..4}] title {"text":" ","color":"dark_aqua"}
 title @s[scores={openchest=1}] subtitle ["",{"translate":"chest.unlocking","color":"dark_aqua"},{"text":" [","color":"gray"},{"text":"||||||||||","bold":true,"color":"red"},{"text":"]","color":"gray"}]

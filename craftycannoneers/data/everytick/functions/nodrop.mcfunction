@@ -15,6 +15,11 @@ execute if entity @a[team=!Spectator,predicate=game:matches_uuid] at @a[team=!Sp
 execute if entity @a[team=!Spectator,predicate=game:matches_uuid] at @s run tp @s @s
 execute store result entity @s Air short 1 run scoreboard players get $toggle CmdData
 
+execute on origin store success score $fullcheck CmdData if entity @s[team=Lobby,tag=fullinv]
+execute if score $fullcheck CmdData matches 1 run scoreboard players add @s eyeclick 1
+execute unless score $fullcheck CmdData matches 1 run scoreboard players reset @s eyeclick
+kill @s[scores={eyeclick=3..}]
+
 execute if score $gamestate CmdData matches 2.. run function everytick:defaultitems
 
 scoreboard players reset $tempuuid playerUUID
