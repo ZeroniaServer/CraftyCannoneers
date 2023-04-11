@@ -21,6 +21,9 @@ execute as @e[type=marker,tag=BarrelSpawn,tag=Picked,tag=Orange,tag=CBCannonball
 #boarding
 execute as @e[type=marker,tag=BarrelSpawn,tag=Picked,tag=Purple,tag=CBBoarding,scores={CmdData=14..}] at @s run summon item_display ~ -48 ~ {Tags:["CargoEntity","CBDisplayRoot"],Passengers:[{id:"item_display",Tags:["CargoBarrel","CargoEntity","CBDisplay"],item:{id:"diamond_hoe",Count:1,tag:{CustomModelData:114}},item_display:"fixed",Passengers:[{id:"hopper_minecart",LootTable:"chests:empty",CustomDisplayTile:1b,DisplayState:{Name:"minecraft:air"},Invulnerable:1b,Silent:1b,Enabled:0b,CustomName:'{"translate":"cargobarrel.boarding","color":"light_purple","bold":true,"underlined":true}',Tags:["CargoHopper","CBBoarding","CargoEntity","Purple","barrel"]}]}]}
 execute as @e[type=marker,tag=BarrelSpawn,tag=Picked,tag=Orange,tag=CBBoarding,scores={CmdData=14..}] at @s run summon item_display ~ -48 ~ {Tags:["CargoEntity","CBDisplayRoot"],Passengers:[{id:"item_display",Tags:["CargoBarrel","CargoEntity","CBDisplay"],item:{id:"diamond_hoe",Count:1,tag:{CustomModelData:114}},item_display:"fixed",Passengers:[{id:"hopper_minecart",LootTable:"chests:empty",CustomDisplayTile:1b,DisplayState:{Name:"minecraft:air"},Invulnerable:1b,Silent:1b,Enabled:0b,CustomName:'{"translate":"cargobarrel.boarding","color":"light_purple","bold":true,"underlined":true}',Tags:["CargoHopper","CBBoarding","CargoEntity","Orange","barrel"]}]}]}
+#trap
+execute as @e[type=marker,tag=BarrelSpawn,tag=Picked,tag=Purple,tag=CBTrap,scores={CmdData=14..}] at @s run summon item_display ~ -48 ~ {Tags:["CargoEntity","CBDisplayRoot"],Passengers:[{id:"item_display",Tags:["CargoBarrel","CargoEntity","CBDisplay"],item:{id:"diamond_hoe",Count:1,tag:{CustomModelData:116}},item_display:"fixed",Passengers:[{id:"villager",NoAI:1b,Silent:1b,NoGravity:1b,Age:-2147483648,PersistenceRequired:1b,CustomName:'{"translate":"cargobarrel.trap","bold":true,"underlined":true}',Tags:["CargoVillager","CBTrap","CargoEntity","Purple","barrel","NoID"]}]}]}
+execute as @e[type=marker,tag=BarrelSpawn,tag=Picked,tag=Orange,tag=CBTrap,scores={CmdData=14..}] at @s run summon item_display ~ -48 ~ {Tags:["CargoEntity","CBDisplayRoot"],Passengers:[{id:"item_display",Tags:["CargoBarrel","CargoEntity","CBDisplay"],item:{id:"diamond_hoe",Count:1,tag:{CustomModelData:116}},item_display:"fixed",Passengers:[{id:"villager",NoAI:1b,Silent:1b,NoGravity:1b,Age:-2147483648,PersistenceRequired:1b,CustomName:'{"translate":"cargobarrel.trap","bold":true,"underlined":true}',Tags:["CargoVillager","CBTrap","CargoEntity","Orange","barrel","NoID"]}]}]}
 
 execute as @e[type=marker,tag=BarrelSpawn,tag=Picked,scores={CmdData=14..}] at @s run kill @s
 
@@ -59,3 +62,6 @@ execute if score $CargoTime CmdData matches 1200.. run scoreboard players reset 
 execute if score $SpawnCargo CmdData matches 1 run function game:modifiers/lostcargo/spawnpurple
 execute if score $SpawnCargo CmdData matches 1 run function game:modifiers/lostcargo/spawnorange
 execute if score $SpawnCargo CmdData matches 1 run scoreboard players reset $SpawnCargo CmdData
+
+#> Traps
+execute as @e[type=villager,tag=TrapExplode] at @s run function game:modifiers/lostcargo/trapexplode
