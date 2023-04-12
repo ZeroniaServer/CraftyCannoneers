@@ -3,9 +3,9 @@ summon armor_stand ~ ~ ~ {Tags:["cannon","Orange","GPDispL","GPHolder","NoID"],M
 summon armor_stand ~ ~ ~ {Tags:["cannon","Orange","GPDispR","GPHolder","NoID"],Marker:1b,Invulnerable:1b,Invisible:1b,NoGravity:1b}
 scoreboard players set @e[type=armor_stand,tag=cannon,tag=!Tutorial] CmdData 0
 
-summon villager ~ ~0.5 ~0.3 {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-2147483648,Tags:["CannonVMain","cannon","Orange","NoID"],PersistenceRequired:1b,Passengers:[{id:"minecraft:marker",Tags:["villager","NoID"],data:{Tags:["CannonVMain","cannon","Orange"]}}]}
-summon villager ~0.5 ~0.5 ~0.5 {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-2147483648,Tags:["CannonVRight","cannon","Orange","NoID"],PersistenceRequired:1b,Passengers:[{id:"minecraft:marker",Tags:["villager","NoID"],data:{Tags:["CannonVRight","cannon","Orange"]}}]}
-summon villager ~-0.5 ~0.5 ~0.5 {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-2147483648,Tags:["CannonVLeft","cannon","Orange","NoID"],PersistenceRequired:1b,Passengers:[{id:"minecraft:marker",Tags:["villager","NoID"],data:{Tags:["CannonVLeft","cannon","Orange"]}}]}
+summon villager ~ ~0.5 ~0.3 {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-2147483648,Tags:["CannonVMain","cannon","Orange","NoID"],PersistenceRequired:1b,DeathTime:19s,Passengers:[{id:"minecraft:marker",Tags:["villager","NoID"],data:{Tags:["CannonVMain","cannon","Orange"]}}]}
+summon villager ~0.5 ~0.5 ~0.5 {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-2147483648,Tags:["CannonVRight","cannon","Orange","NoID"],PersistenceRequired:1b,DeathTime:19s,Passengers:[{id:"minecraft:marker",Tags:["villager","NoID"],data:{Tags:["CannonVRight","cannon","Orange"]}}]}
+summon villager ~-0.5 ~0.5 ~0.5 {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-2147483648,Tags:["CannonVLeft","cannon","Orange","NoID"],PersistenceRequired:1b,DeathTime:19s,Passengers:[{id:"minecraft:marker",Tags:["villager","NoID"],data:{Tags:["CannonVLeft","cannon","Orange"]}}]}
 
 execute as @e[type=armor_stand,tag=cannon,tag=Orange] at @s run tp @s ~ ~ ~ -180 0
 execute as @e[type=villager,tag=cannon,tag=Orange] at @s run tp @s ~ ~ ~ -180 0

@@ -12,7 +12,7 @@ execute anchored eyes positioned ^ ^ ^1 run summon llama_spit ~ ~ ~ {Tags:["rock
 execute anchored eyes positioned ^ ^ ^0.1 run summon llama_spit ~ ~ ~ {Tags:["rock2"]}
 
 # summon temporary llama and copy rotation
-execute positioned ~ -100 ~ run summon llama ~ ~ ~ {Tags:["myllama"]}
+execute positioned ~ -100 ~ run summon llama ~ ~ ~ {Tags:["myllama"],DeathTime:19s,DeathLootTable:"minecraft:empty"}
 data modify entity @e[type=llama,tag=myllama,limit=1] Rotation set from entity @s Rotation
 data modify entity @e[type=llama_spit,tag=rock,limit=1] Owner set from entity @e[type=llama,tag=myllama,limit=1] UUID
 data modify entity @e[type=llama_spit,tag=rock2,limit=1] Owner set from entity @e[type=llama,tag=myllama,limit=1] UUID

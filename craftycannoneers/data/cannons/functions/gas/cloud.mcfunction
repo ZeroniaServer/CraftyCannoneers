@@ -4,11 +4,11 @@ scoreboard players add @s CmdData 1
 
 execute at @s[scores={CmdData=1}] run playsound gas master @a ~ ~ ~ 1 0.8
 execute at @s[scores={CmdData=1}] run summon armor_stand ~ ~ ~ {Small:1b,Marker:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,Tags:["gascloud","GasAS"],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:33}}]}
-execute at @s[scores={CmdData=1}] run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b}
-execute at @s[scores={CmdData=1}] run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b}
-execute at @s[scores={CmdData=1}] run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b}
-execute at @s[scores={CmdData=1}] run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b}
-execute at @s[scores={CmdData=1}] run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b}
+execute at @s[scores={CmdData=1}] run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b,DeathTime:19s,DeathLootTable:"minecraft:empty"}
+execute at @s[scores={CmdData=1}] run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b,DeathTime:19s,DeathLootTable:"minecraft:empty"}
+execute at @s[scores={CmdData=1}] run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b,DeathTime:19s,DeathLootTable:"minecraft:empty"}
+execute at @s[scores={CmdData=1}] run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b,DeathTime:19s,DeathLootTable:"minecraft:empty"}
+execute at @s[scores={CmdData=1}] run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b,DeathTime:19s,DeathLootTable:"minecraft:empty"}
 
 tp @s ~ ~0.002 ~
 effect give @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] poison 6 100 true
