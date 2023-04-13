@@ -6,13 +6,13 @@ kill @e[type=interaction,tag=LChestFake]
 
 function tutorial:cannondock/resetcannons
 
-summon slime -378 -26 -33 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S1"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b,DeathTime:19s,DeathLootTable:"minecraft:empty"}
-summon slime -377 -26 -40 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S2"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b,DeathTime:19s,DeathLootTable:"minecraft:empty"}
-summon slime -376 -30 -50 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S3"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b,DeathTime:19s,DeathLootTable:"minecraft:empty"}
-summon slime -378 -27 -62 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S4"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b,DeathTime:19s,DeathLootTable:"minecraft:empty"}
-summon slime -382 -19 -55 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S5"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b,DeathTime:19s,DeathLootTable:"minecraft:empty"}
-summon slime -382 -10 -54 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S6"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b,DeathTime:19s,DeathLootTable:"minecraft:empty"}
-summon slime -382 -14 -37 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S7"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b,DeathTime:19s,DeathLootTable:"minecraft:empty"}
+summon slime -378 -26 -33 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S1"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b,DeathTime:18s,DeathLootTable:"minecraft:empty"}
+summon slime -377 -26 -40 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S2"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b,DeathTime:18s,DeathLootTable:"minecraft:empty"}
+summon slime -376 -30 -50 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S3"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b,DeathTime:18s,DeathLootTable:"minecraft:empty"}
+summon slime -378 -27 -62 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S4"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b,DeathTime:18s,DeathLootTable:"minecraft:empty"}
+summon slime -382 -19 -55 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S5"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b,DeathTime:18s,DeathLootTable:"minecraft:empty"}
+summon slime -382 -10 -54 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S6"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b,DeathTime:18s,DeathLootTable:"minecraft:empty"}
+summon slime -382 -14 -37 {PersistenceRequired:1b,Tags:["FakeWeakpoint","S7"],Invulnerable:1b,Size:2,NoAI:1b,NoGravity:1b,Silent:1b,DeathTime:18s,DeathLootTable:"minecraft:empty"}
 execute as @e[type=slime,tag=FakeWeakpoint] at @s run function tutorial:spawnweakpointmarkers
 
 forceload add -413 -379 -260 -15
