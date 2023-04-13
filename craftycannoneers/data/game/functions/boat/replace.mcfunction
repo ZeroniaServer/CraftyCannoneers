@@ -1,5 +1,7 @@
 #> Summon new boat with correct rotation if dismounting
-execute at @s[tag=DismountCheck,tag=!Sinking] run function game:boat/rotate
+execute at @s[tag=DismountCheck,tag=!Sinking] positioned ~ ~-0.3 ~ store success score $boatwatercheck CmdData if predicate game:instillwater
+execute if score $boatwatercheck CmdData matches 1 at @s[tag=DismountCheck,tag=!Sinking] align y positioned ~ ~0.7 ~ run function game:boat/rotate
+execute unless score $boatwatercheck CmdData matches 1 at @s[tag=DismountCheck,tag=!Sinking] run function game:boat/rotate
 
 #> Place new boat if sinking
 execute at @s[tag=1,tag=Sinking] run summon boat 109 -30 0 {Invulnerable:1b,Tags:["Boat","BoatBoat","1"],Passengers:[{id:"minecraft:armor_stand",Tags:["Boat","BoatAS","New","1"],Marker:1b,Invulnerable:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:black_banner",Count:1b,tag:{BlockEntityTag:{Patterns:[{Pattern:sku,Color:0}]}}}]}]}
