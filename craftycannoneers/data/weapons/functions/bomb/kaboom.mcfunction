@@ -9,5 +9,11 @@ execute if score @s BombDelay matches 4 run tag @a[tag=!Blasted,gamemode=!specta
 #> Summon slimes
 execute if score @s BombDelay matches 5 if entity @a[gamemode=!spectator,distance=..8.25] run function weapons:bomb/summonslime
 
+#> Set off Blast Barrels and Cargo Traps
+execute if score @s BombDelay matches 6.. as @e[type=villager,tag=CBTrap,distance=..7] on vehicle run tag @s add TrapExplode
+
+#> Set off Blast Barrels
+execute if score @s BombDelay matches 6.. at @s as @e[type=villager,tag=BarrelVillager,distance=..7] run function weapons:barrel/chainreact
+
 #> Explode
 execute if score @s BombDelay matches 6.. run function weapons:bomb/explode
