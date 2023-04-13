@@ -13,6 +13,7 @@ execute if score @s BombDelay matches 5 if entity @a[gamemode=!spectator,distanc
 execute if score @s BombDelay matches 6.. as @e[type=villager,tag=CBTrap,distance=..7] on vehicle run tag @s add TrapExplode
 
 #> Set off Blast Barrels
+execute if score @s BombDelay matches 6.. run data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
 execute if score @s BombDelay matches 6.. run scoreboard players operation $tempuuid playerUUID = @s playerUUID
 execute if score @s BombDelay matches 6.. at @s as @e[type=villager,tag=BarrelVillager,distance=..7] run function weapons:barrel/chainreact
 
