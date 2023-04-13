@@ -1,6 +1,7 @@
 scoreboard players add @s click 1
 
 #> Particles/sounds
+execute if score @s click matches 1 run item replace entity @s container.0 with air
 execute if score @s click matches 1 run function game:modifiers/lostcargo/trapeffects
 
 #> Blast slimes
