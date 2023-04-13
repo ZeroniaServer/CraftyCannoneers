@@ -61,10 +61,6 @@ execute if score $gamestate CmdData matches 3 run function game:gameend
 execute if score $gamestate CmdData matches 2 run function game:ingame
 execute if score $gamestate CmdData matches 2.. run function game:duringgame
 
-#> Loot Loader
-execute as @e[type=hopper_minecart,tag=LoadLoot] run function chests:lootloader
-execute as @e[type=chest_minecart,tag=LoadLoot] run function chests:lootloader
-
 #> Reset eyeclick/climb
 scoreboard players add @a[scores={eyeclick=1..}] eyeclick 1
 scoreboard players reset @a[scores={eyeclick=3..}] eyeclick
