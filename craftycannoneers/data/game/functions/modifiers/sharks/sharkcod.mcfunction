@@ -42,3 +42,6 @@ execute if entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] 
 execute at @s[tag=NewVCod] unless block ~ ~3 ~ water run tp @s ~ ~-0.1 ~
 
 effect give @s invisibility infinite 100 true
+
+#> Dismount boats
+ride @s[predicate=game:boat/inboat] dismount
