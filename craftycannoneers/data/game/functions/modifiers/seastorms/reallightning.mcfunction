@@ -6,3 +6,6 @@ tag @s[tag=!StormEntity,tag=!damaged] add damaged
 #> Set off Blast Barrels/Cargo Traps
 execute at @s as @e[type=villager,tag=CBTrap,distance=..3] on vehicle run tag @s add TrapExplode
 execute at @s as @e[type=villager,tag=BarrelVillager,distance=..3] run function weapons:barrel/chainreact
+
+#> Break nearby Cargo Barrels
+execute at @s as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..3] run function game:modifiers/lostcargo/spillbarrel

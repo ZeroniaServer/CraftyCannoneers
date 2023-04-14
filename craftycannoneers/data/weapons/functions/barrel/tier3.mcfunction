@@ -21,9 +21,12 @@ summon marker ~ ~1 ~ {Tags:["BarrelMaxFX","BlastBarrel","East","NS"],Rotation:[-
 summon marker ~ ~1 ~ {Tags:["BarrelMaxFX","BlastBarrel","South","EW"],Rotation:[180.0f,0.0f]}
 summon marker ~ ~1 ~ {Tags:["BarrelMaxFX","BlastBarrel","West","NS"],Rotation:[0.0f,0.0f]}
 
-# Chain reaction
+#> Chain reaction
 execute unless entity @s[tag=canDamage] run scoreboard players operation $tempuuid playerUUID = @s playerUUID
 execute unless entity @s[tag=canDamage] run data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
 execute unless entity @s[tag=canDamage] as @e[type=villager,tag=BlastBarrel,distance=..7] run function weapons:barrel/chainreact
+
+#> Break Cargo Barrels
+execute at @s[tag=!canDamage] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..7] run function game:modifiers/lostcargo/spillbarrel
 
 kill @s
