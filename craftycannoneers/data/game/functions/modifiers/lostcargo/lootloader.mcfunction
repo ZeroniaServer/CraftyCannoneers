@@ -40,4 +40,4 @@ loot replace entity @s[tag=CBBoarding,scores={LootLoader=8}] hotbar.2 loot chest
 loot replace entity @s[tag=CBBoarding,scores={LootLoader=12}] hotbar.3 loot chests:cargo/boarding
 loot replace entity @s[tag=CBBoarding,scores={LootLoader=16}] hotbar.4 loot chests:cargo/boarding
 
-scoreboard players set @s[scores={LootLoader=16}] LootLoader 32
+scoreboard players set @s[scores={LootLoader=16..}] LootLoader 32
