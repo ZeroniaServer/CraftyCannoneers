@@ -6,6 +6,11 @@ item replace entity @s[scores={CmdData=7}] armor.head with diamond_hoe{Unbreakab
 item replace entity @s[scores={CmdData=9}] armor.head with diamond_hoe{Unbreakable:1b,CustomModelData:88}
 #Placeholder sound probably
 execute at @s[scores={CmdData=1}] run playsound minecraft:entity.evoker_fangs.attack master @a ~ ~ ~ 0.5 1.1
+
+#> Set off Blast Barrels/Cargo Traps
+execute at @s[scores={CmdData=9}] positioned ^ ^ ^1.5 as @e[type=villager,tag=CBTrap,distance=..1.5] on vehicle run tag @s add TrapExplode
+execute at @s[scores={CmdData=9}] positioned ^ ^ ^1.5 as @e[type=villager,tag=BarrelVillager,distance=..1.5] run function weapons:barrel/chainreact
+
 item replace entity @s[scores={CmdData=11}] armor.head with diamond_hoe{Unbreakable:1b,CustomModelData:87}
 execute at @s[scores={CmdData=9}] positioned ^ ^ ^1.5 run effect give @a[distance=..1.5,limit=1,sort=nearest] instant_damage 1 1 true
 execute at @s[scores={CmdData=9}] if predicate game:tooth_chance positioned ^ ^ ^1.5 if entity @a[distance=..1.5,limit=1] at @s run function game:modifiers/sharks/losttooth

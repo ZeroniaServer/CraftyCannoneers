@@ -6,4 +6,9 @@ execute if score @s CmdData matches 30 run summon lightning_bolt ~ ~ ~ {Tags:["S
 execute if score @s CmdData matches 30 run playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~10 ~ 20 0
 execute if score @s CmdData matches 30 run particle flash ~ ~ ~ 0 0 0 0 3 force @a[team=!Lobby]
 execute if score @s CmdData matches 30 run particle minecraft:firework ~ ~20 ~ 0 30 0 0.1 100
+
+#> Set off Blast Barrels/Cargo Traps
+execute if score @s CmdData matches 30 at @s as @e[type=villager,tag=CBTrap,distance=..3] on vehicle run tag @s add TrapExplode
+execute if score @s CmdData matches 30 at @s as @e[type=villager,tag=BarrelVillager,distance=..3] run function weapons:barrel/chainreact
+
 kill @s[scores={CmdData=30..}]
