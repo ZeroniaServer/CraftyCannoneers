@@ -18,3 +18,6 @@ execute at @s[tag=4,tag=!Sailing] unless entity @a[team=!Lobby,team=!Spectator,t
 
 #> Sinking
 execute at @s[tag=Sinking] run function game:boat/sinking
+
+#> No entity collision
+team join NoName
