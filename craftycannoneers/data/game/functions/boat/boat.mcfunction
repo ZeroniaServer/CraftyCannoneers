@@ -15,6 +15,7 @@ execute at @s[tag=1,tag=!Sailing] unless entity @a[team=!Lobby,team=!Spectator,t
 execute at @s[tag=2,tag=!Sailing] unless entity @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..12] positioned 31 -31 0 unless entity @s[distance=..8] run tag @s add Sinking
 execute at @s[tag=3,tag=!Sailing] unless entity @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..12] positioned 83 -31 12 unless entity @s[distance=..8] run tag @s add Sinking
 execute at @s[tag=4,tag=!Sailing] unless entity @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..12] positioned 57 -31 -12 unless entity @s[distance=..8] run tag @s add Sinking
+tag @s[tag=!Sailing,predicate=game:inwater,predicate=game:boat/belowwater] add Sinking
 
 #> Sinking
 execute at @s[tag=Sinking] run function game:boat/sinking
