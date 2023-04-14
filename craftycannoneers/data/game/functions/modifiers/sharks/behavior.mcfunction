@@ -79,3 +79,6 @@ execute at @s[tag=Attacking] run function game:modifiers/sharks/attacking
 scoreboard players reset @s[tag=!Attacking,scores={CmdData=1..}] CmdData 
 
 effect give @s invisibility infinite 100 true
+
+#> Dismount boats
+ride @s[predicate=game:boat/inboat] dismount
