@@ -4,7 +4,7 @@ execute at @s[tag=2,tag=!Sinking] if entity @a[team=!Lobby,team=!Spectator,team=
 execute at @s[tag=3,tag=!Sinking] if entity @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat3,limit=1] run tag @s add Sailing
 execute at @s[tag=4,tag=!Sinking] if entity @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat4,limit=1] run tag @s add Sailing
 
-#> Idle teleport while in water (prevents collision glitches)
+#> Idle teleport while in water (prevents top collision glitches)
 execute at @s[tag=!Sailing,tag=!Sinking] positioned ~ ~-0.3 ~ if predicate game:instillwater at @s align y run tp @s ~ ~0.7 ~
 
 #> Sailing
@@ -23,6 +23,6 @@ execute at @s[tag=Sinking] run function game:boat/sinking
 #> No entity collision
 team join NoName
 
-#> Fix clipping into the floor
-execute if entity @s[tag=!Sinking,predicate=cannons:ships/orange,predicate=cannons:ships/underbottom,predicate=!game:instillwater,nbt={OnGround:0b}] run tp @s ~ -34 ~
-execute if entity @s[tag=!Sinking,predicate=cannons:ships/purple,predicate=cannons:ships/underbottom,predicate=!game:instillwater,nbt={OnGround:0b}] run tp @s ~ -34 ~
+#> Prevent clipping into ship floorboards
+execute if entity @s[tag=!Sinking,predicate=cannons:ships/orange,predicate=cannons:ships/underbottom,predicate=!game:instillwater,nbt={OnGround:0b}] align y run tp @s ~ ~1 ~
+execute if entity @s[tag=!Sinking,predicate=cannons:ships/purple,predicate=cannons:ships/underbottom,predicate=!game:instillwater,nbt={OnGround:0b}] align y run tp @s ~ ~1 ~
