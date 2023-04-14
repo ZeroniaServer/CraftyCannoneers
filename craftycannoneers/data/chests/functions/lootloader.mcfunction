@@ -1,5 +1,4 @@
 scoreboard players add @s LootLoader 0
-tag @s[scores={LootLoader=32}] remove LoadLoot
 
 ### Real Chests
 
@@ -246,3 +245,4 @@ scoreboard players set @s[tag=fakelockedchest,scores={LootLoader=4..}] LootLoade
 execute unless data storage craftycannoneers:fakelockedchest Items[0] run scoreboard players set @s[tag=fakelockedchest] LootLoader 32
 
 scoreboard players add @s[tag=!fakelockedchest,tag=!lockedchest] LootLoader 1
+tag @s[scores={LootLoader=32}] remove LoadLoot
