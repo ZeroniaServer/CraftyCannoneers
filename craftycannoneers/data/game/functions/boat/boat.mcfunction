@@ -23,5 +23,5 @@ execute at @s[tag=Sinking] run function game:boat/sinking
 team join NoName
 
 #> Fix clipping into the floor
-execute if entity @s[tag=!Sinking,predicate=cannons:ships/orange,predicate=cannons:ships/underbottom,predicate=!game:instillwater] run tp @s ~ -34 ~
-execute if entity @s[tag=!Sinking,predicate=cannons:ships/purple,predicate=cannons:ships/underbottom,predicate=!game:instillwater] run tp @s ~ -34 ~
+execute if entity @s[tag=!Sinking,predicate=cannons:ships/orange,predicate=cannons:ships/underbottom,predicate=!game:instillwater,nbt={OnGround:0b}] run tp @s ~ -34 ~
+execute if entity @s[tag=!Sinking,predicate=cannons:ships/purple,predicate=cannons:ships/underbottom,predicate=!game:instillwater,nbt={OnGround:0b}] run tp @s ~ -34 ~
