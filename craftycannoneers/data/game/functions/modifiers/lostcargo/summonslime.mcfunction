@@ -10,5 +10,5 @@ data modify storage craftycannoneers:temp CustomName set from entity @s CustomNa
 execute as @e[type=slime,tag=BlastSlime,tag=!HasName] run data modify entity @s CustomName set from storage craftycannoneers:temp CustomName
 tag @e[type=slime,tag=BlastSlime,tag=!HasName] add HasName
 
-#> Kill players in damage zones
-execute as @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..7] run function game:modifiers/lostcargo/trapkill
+#> Hurt players in damage zones
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..7] run function game:modifiers/lostcargo/trapdamage
