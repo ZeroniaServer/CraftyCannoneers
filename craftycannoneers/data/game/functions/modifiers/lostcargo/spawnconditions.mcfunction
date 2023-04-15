@@ -1,3 +1,3 @@
 #> Unlock spawnpoints if no barrels exist (per team)
-execute as @e[type=marker,tag=CargoSpawn,tag=Spawned,tag=Done,tag=Purple,scores={CmdData=13..}] unless entity @e[type=hopper_minecart,tag=CargoHopper,tag=Purple,tag=!Looted] run function game:modifiers/lostcargo/make_available
-execute as @e[type=marker,tag=CargoSpawn,tag=Spawned,tag=Done,tag=Orange,scores={CmdData=13..}] unless entity @e[type=hopper_minecart,tag=CargoHopper,tag=Orange,tag=!Looted] run function game:modifiers/lostcargo/make_available
+execute as @e[type=marker,tag=CargoSpawn,tag=Spawned,tag=Done,tag=Purple,scores={CmdData=13..}] unless entity @e[type=marker,tag=BarrelSpawn] unless entity @e[type=hopper_minecart,tag=CargoHopper,tag=Purple] unless entity @e[type=villager,tag=CBTrap,tag=Purple] run function game:modifiers/lostcargo/make_available
+execute as @e[type=marker,tag=CargoSpawn,tag=Spawned,tag=Done,tag=Orange,scores={CmdData=13..}] unless entity @e[type=marker,tag=BarrelSpawn] unless entity @e[type=hopper_minecart,tag=CargoHopper,tag=Orange] unless entity @e[type=villager,tag=CBTrap,tag=Orange] run function game:modifiers/lostcargo/make_available
