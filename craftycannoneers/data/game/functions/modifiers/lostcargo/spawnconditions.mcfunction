@@ -1,6 +1,3 @@
-#> Reset spawnpoints
-execute as @e[type=marker,tag=CargoSpawn,tag=Spawned,tag=Purple] unless entity @e[type=hopper_minecart,tag=Purple,tag=CargoHopper,tag=!Looted] run tag @s remove Done
-execute as @e[type=marker,tag=CargoSpawn,tag=Spawned,tag=Purple] unless entity @e[type=hopper_minecart,tag=Purple,tag=CargoHopper,tag=!Looted] run tag @s remove Spawned
-
-execute as @e[type=marker,tag=CargoSpawn,tag=Spawned,tag=Orange] unless entity @e[type=hopper_minecart,tag=Orange,tag=CargoHopper,tag=!Looted] run tag @s remove Done
-execute as @e[type=marker,tag=CargoSpawn,tag=Spawned,tag=Orange] unless entity @e[type=hopper_minecart,tag=Orange,tag=CargoHopper,tag=!Looted] run tag @s remove Spawned
+#> Unlock spawnpoints if no barrels exist (per team)
+execute as @e[type=marker,tag=CargoSpawn,tag=Spawned,tag=Done,tag=Purple,scores={CmdData=13..}] unless entity @e[type=hopper_minecart,tag=CargoHopper,tag=Purple,tag=!Looted] run function game:modifiers/lostcargo/make_available
+execute as @e[type=marker,tag=CargoSpawn,tag=Spawned,tag=Done,tag=Orange,scores={CmdData=13..}] unless entity @e[type=hopper_minecart,tag=CargoHopper,tag=Orange,tag=!Looted] run function game:modifiers/lostcargo/make_available
