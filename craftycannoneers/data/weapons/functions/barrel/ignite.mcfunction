@@ -2,7 +2,7 @@
 execute unless score @s CmdData matches 1.. at @s run particle item mooshroom_spawn_egg{CustomModelData:1} ~ ~0.5 ~ 0.2 0.25 0.2 0.1 40 force
 execute unless score @s CmdData matches 1.. at @s run playsound blastbarrelbreak master @a ~ ~ ~ 0.6 0.9
 execute unless score @s CmdData matches 1.. run loot spawn ~ ~0.1 ~ loot weapons:barrel
-execute unless score @s CmdData matches 1.. run kill @s
+execute unless score @s CmdData matches 1.. run kill
 
 #> Ignite Full Barrels
 scoreboard players add @s eyeclick 1

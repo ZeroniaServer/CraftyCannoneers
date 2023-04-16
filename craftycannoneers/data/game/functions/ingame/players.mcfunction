@@ -1,5 +1,8 @@
 #> Arena water
-function game:ingame/water
+execute unless predicate game:inarena run function game:ingame/water
+title @s[scores={drowning=1..},predicate=game:inarena] title {"text":" ","color":"dark_red"}
+title @s[scores={drowning=1..},predicate=game:inarena] subtitle {"text":" ","color":"dark_red"}
+scoreboard players reset @s[scores={drowning=1..},predicate=game:inarena] drowning
 
 #> Boarding Axe
 execute if data entity @s Inventory[{id:"minecraft:stone_axe"}] run function game:ingame/boardingaxe

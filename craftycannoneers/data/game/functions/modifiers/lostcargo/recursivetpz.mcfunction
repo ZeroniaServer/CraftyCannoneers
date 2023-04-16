@@ -1,4 +1,4 @@
-execute if score @s[tag=Purple] z matches 1.. at @s run tp @s ~ ~ ~1
-execute if score @s[tag=Orange] z matches 1.. at @s run tp @s ~ ~ ~-1
+tp @s[tag=Purple,scores={z=1..}] ~ ~ ~1
+tp @s[tag=Orange,scores={z=1..}] ~ ~ ~-1
 scoreboard players remove @s z 1
-execute if score @s z matches 1.. at @s run function game:modifiers/lostcargo/recursivetpz
+execute at @s[scores={z=1..}] run function game:modifiers/lostcargo/recursivetpz

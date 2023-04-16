@@ -1,4 +1,4 @@
-#> Damage zones
+#> Damage zones - TODO use closest slime for damage *IF* we add trap kill credit
 damage @s[distance=..2] 20.0 mob_attack by @e[type=slime,tag=BlastSlime,tag=CargoSlime,limit=1]
 tag @s[distance=..2] add damaged
 

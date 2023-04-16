@@ -20,7 +20,4 @@ scoreboard players set @s[team=Orange,scores={drowning=80..}] death 1
 scoreboard players set @s[team=Purple,scores={drowning=80..}] death 1
 title @s[scores={drowning=80..}] title {"text":" ","color":"dark_red"}
 title @s[scores={drowning=80..}] subtitle {"text":" ","color":"dark_red"}
-title @s[scores={drowning=1..},predicate=game:inarena] title {"text":" ","color":"dark_red"}
-title @s[scores={drowning=1..},predicate=game:inarena] subtitle {"text":" ","color":"dark_red"}
-scoreboard players reset @s[scores={drowning=1..},predicate=game:inarena] drowning
 scoreboard players reset @s[scores={drowning=80..}] drowning

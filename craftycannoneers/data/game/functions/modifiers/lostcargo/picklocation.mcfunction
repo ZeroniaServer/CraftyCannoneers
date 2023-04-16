@@ -6,8 +6,6 @@ execute store result score @s RNGscore run data get entity @s UUID[0]
 scoreboard players operation @s RNGscore %= @s RNGmax
 scoreboard players operation @s x = @s RNGscore
 
-
-
 scoreboard players set @s RNGscore 0
 scoreboard players set @s RNGmax 8
 
