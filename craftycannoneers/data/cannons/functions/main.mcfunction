@@ -23,12 +23,13 @@ function cannons:gas/main
 execute as @e[type=creeper,tag=CannonballCreeper] run data merge entity @s {Fuse:0}
 
 #> Bounce
-function cannons:bounce/main
+execute as @e[type=slime,tag=BounceSlime] at @s run function cannons:bounce/slime
+execute as @e[type=area_effect_cloud,tag=BounceAEC] at @s run function cannons:bounce/aec
 
 #> Player Cannonball Cooldown
 function cannons:pcbcooldown
 
-#> Weakpoints - TODO OPTIMIZE
+#> Weakpoints
 function game:shipweakpoint/main
 execute if score $OrangeWPDelay CmdData matches 1.. run scoreboard players add $OrangeWPDelay CmdData 1
 execute if score $OrangeWPDelay CmdData matches 20.. run scoreboard players reset $OrangeWPDelay CmdData

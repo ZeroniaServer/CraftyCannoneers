@@ -93,7 +93,7 @@ execute if entity @s[team=!Spectator] run function game:shields
 execute if entity @s[team=!Spectator] run function cannons:hitmarkers
 
 #> Open chests
-function chests:openchest
+execute if entity @s[team=!Spectator] run function chests:openchest
 
 #> Inventory counting
 execute unless entity @s[advancements={game:invcount={rock=false,full=false,full_lobby=false,unfull=false,unfull_lobby=false}}] run function game:invcount

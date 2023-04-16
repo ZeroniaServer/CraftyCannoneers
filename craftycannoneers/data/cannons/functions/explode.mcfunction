@@ -109,6 +109,7 @@ execute at @s[tag=bouncing] if score $bounce CmdData matches 1 run function cann
 scoreboard players reset $bounce CmdData
 scoreboard players reset @s[tag=bouncing,scores={bouncedelay=16..}] bouncedelay
 scoreboard players reset @s[tag=Hit1,tag=BouncyCannonball,scores={doublehit=4..}] doublehit
+execute at @s[tag=bouncing,scores={bouncedelay=1}] run function cannons:bounce/blast
 
 execute at @s[tag=!StrikeLightning,tag=CopperCannonball] run playsound cannonball master @a ~ ~ ~ 4 1
 execute at @s[tag=!StrikeLightning,tag=CopperCannonball] run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1

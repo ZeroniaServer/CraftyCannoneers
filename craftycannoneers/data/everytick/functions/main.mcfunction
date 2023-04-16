@@ -91,8 +91,8 @@ execute if score $gamestate CmdData matches 3 run bossbar set lobbybar color red
 execute if score $gamestate CmdData matches 3 run bossbar set lobbybar name {"translate":"game.ending","bold":true,"color":"red"}
 
 #> Resolve signs
-function everytick:resolvesigns
+execute if entity @a[team=Lobby] run function everytick:resolvesigns
 
 #> Failsafe for reset scoreboards
-execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 unless score $gamestate CmdData matches -1.. run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.game","color":"gray","with":[{"translate":"error.report","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"translate":"error.discord","color":"white"}]}}]},"\n"]
-execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 unless score $gamestate CmdData matches -1.. run function debug:preparerelease
+execute unless score $gamestate CmdData matches -1.. if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.game","color":"gray","with":[{"translate":"error.report","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"translate":"error.discord","color":"white"}]}}]},"\n"]
+execute unless score $gamestate CmdData matches -1.. if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function debug:preparerelease
