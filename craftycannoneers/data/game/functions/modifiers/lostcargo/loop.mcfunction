@@ -49,7 +49,7 @@ execute as @e[type=item_display,tag=CBDisplay,tag=ContainerLooted] run function 
 
 #> Spawn over time
 scoreboard players add $CargoTime CmdData 1
-execute if score $CargoTime CmdData matches 1200 as @e[type=player,limit=1,sort=random,predicate=game:fiftyfifty] run scoreboard players add $SpawnCargo CmdData 1
+execute if score $CargoTime CmdData matches 1200 if predicate game:fiftyfifty run scoreboard players add $SpawnCargo CmdData 1
 execute if score $CargoTime CmdData matches 1200.. run scoreboard players reset $CargoTime CmdData
 execute if score $SpawnCargo CmdData matches 1.. run function game:modifiers/lostcargo/spawnpurple
 execute if score $SpawnCargo CmdData matches 1.. run function game:modifiers/lostcargo/spawnorange
