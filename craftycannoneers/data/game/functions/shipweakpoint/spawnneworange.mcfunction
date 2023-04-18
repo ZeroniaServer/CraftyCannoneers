@@ -6,7 +6,7 @@ execute unless score $PurpleWPDelay CmdData matches 1.. if entity @s[type=slime,
 scoreboard players set $PurpleWPDelay CmdData 1
 
 execute as @e[type=slime,tag=Weakpoint,tag=Purple,limit=1] run function arenaclear:kill
-kill @e[type=marker,tag=Weakpoint,tag=Purple,limit=1]
+kill @e[type=marker,tag=XParticle,tag=Purple]
 
 scoreboard players add $PurpleWP CmdData 1
 
