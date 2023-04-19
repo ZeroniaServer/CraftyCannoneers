@@ -24,3 +24,6 @@ execute if score $PurpleWP CmdData matches 6.. run tellraw @a[team=Purple] ["",{
 execute if score $PurpleWP CmdData matches 6.. run tellraw @a[team=Orange] ["",{"translate":"weakpoint.destroyed.all_own","color":"red"},"\n"]
 
 kill @e[type=marker,tag=SelectedWeakP,limit=1]
+
+#> Lost Cargo
+execute if score $LostCargo CmdData matches 1 if score $PurpleWP CmdData matches 1.. if predicate game:twentypercent run function game:modifiers/lostcargo/spawnorange
