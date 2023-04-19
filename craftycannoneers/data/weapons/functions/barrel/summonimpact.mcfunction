@@ -3,7 +3,7 @@ execute if score @s CmdData matches 10 run summon marker ~ ~ ~ {Tags:["ImpactMar
 
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=BlastBarrel,tag=!HasUUID,limit=1] playerUUID = @s playerUUID
 data modify entity @e[type=marker,tag=ImpactMarker,tag=BlastBarrel,tag=!HasUUID,limit=1] CustomName set from entity @s CustomName
-execute as @e[type=marker,tag=ImpactMarker,tag=BlastBarrel,tag=!HasUUID,limit=1] at @s run function cannons:spawncreeper
+execute as @e[type=marker,tag=ImpactMarker,tag=BlastBarrel,tag=!HasUUID,limit=1] unless score @s CmdData matches 1.. at @s run function cannons:spawncreeper
 tag @e[type=marker,tag=ImpactMarker,tag=BlastBarrel,tag=!HasUUID,limit=1] add HasUUID
 
 execute if score @s CmdData matches 10 if predicate cannons:ships/purple run scoreboard players add $CritPurple CmdData 500

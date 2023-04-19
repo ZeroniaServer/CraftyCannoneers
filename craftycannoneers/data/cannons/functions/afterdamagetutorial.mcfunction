@@ -13,5 +13,3 @@ execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:sh
 execute if entity @s[tag=ChainImpact,scores={CalcSail1=1..},predicate=cannons:ships/abovesails,predicate=cannons:ships/tutorial] at @s run scoreboard players reset $hitmarkuuid playerUUID
 scoreboard players reset @s CalcSail1
 scoreboard players reset @s CalcSail2
-
-kill @s

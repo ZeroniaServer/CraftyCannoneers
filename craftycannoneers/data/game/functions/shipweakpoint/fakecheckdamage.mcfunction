@@ -1,0 +1,2 @@
+execute positioned ~-5 ~ ~ if entity @e[type=marker,tag=ImpactMarker,tag=!Hit1,distance=..3] run function game:shipweakpoint/fakerespawn
+execute positioned ~-3 ~ ~ if entity @e[type=marker,tag=ImpactMarker,tag=Hit1,distance=..3] run function game:shipweakpoint/fakerespawn

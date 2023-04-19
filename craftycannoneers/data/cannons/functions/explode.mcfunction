@@ -113,13 +113,13 @@ execute at @s[tag=bouncing,scores={bouncedelay=1}] run function cannons:bounce/b
 
 execute at @s[tag=!StrikeLightning,tag=CopperCannonball] run playsound cannonball master @a ~ ~ ~ 4 1
 execute at @s[tag=!StrikeLightning,tag=CopperCannonball] run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1
-execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=!Hit1,tag=!CannonballCluster] run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
-execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=!Hit1,tag=!CannonballCluster] run particle flash ~ ~ ~ 0 0 0 0 5 force @a[predicate=cannons:seeparticles]
-execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=!Hit1,tag=!CannonballCluster] run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=!CannonballCluster,tag=!Hit1] run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=!CannonballCluster,tag=!Hit1] run particle flash ~ ~ ~ 0 0 0 0 5 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=!CannonballCluster,tag=!Hit1] run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
 
-execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=Hit1,scores={doublehit=4..},tag=!CannonballCluster] run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
-execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=Hit1,scores={doublehit=4..},tag=!CannonballCluster] run particle flash ~ ~ ~ 0 0 0 0 5 force @a[predicate=cannons:seeparticles]
-execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=Hit1,scores={doublehit=4..},tag=!CannonballCluster] run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=!CannonballCluster,tag=Hit1,scores={doublehit=4..}] run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=!CannonballCluster,tag=Hit1,scores={doublehit=4..}] run particle flash ~ ~ ~ 0 0 0 0 5 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=!BouncyCannonball,tag=!CopperCannonball,tag=!CannonballCluster,tag=Hit1,scores={doublehit=4..}] run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
 
 execute at @s[tag=CopperCannonball,tag=!StrikeLightning] run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=CopperCannonball,tag=!StrikeLightning] run particle flash ~ ~ ~ 0 0 0 0 5 force @a[predicate=cannons:seeparticles]
@@ -153,7 +153,6 @@ execute at @s[scores={copperStrike=80..}] run particle explosion ~ ~ ~ 1 1 1 0.1
 execute at @s[scores={copperStrike=80..}] run particle flash ~ ~ ~ 0 0 0 0 5 force @a[predicate=cannons:seeparticles]
 execute at @s[scores={copperStrike=80..}] run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
 execute at @s[scores={copperStrike=80..}] run tag @s add Hit2
-
 
 execute as @e[type=marker,tag=ImpactMarker,tag=!BlastBarrel] at @s unless score @s CmdData matches 1.. run function cannons:spawncreeper
 
