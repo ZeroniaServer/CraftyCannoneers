@@ -8,14 +8,14 @@ execute if score @s click matches 1 run function game:modifiers/lostcargo/trapef
 execute if score @s click matches 3 if entity @a[gamemode=!spectator,distance=..9] run function game:modifiers/lostcargo/summonslime
 
 #> Chain reaction
-execute if score @s click matches 4 as @e[type=villager,tag=CBTrap,distance=..7] on vehicle run tag @s add TrapExplode
+execute if score @s click matches 4 as @e[type=villager,tag=CBTrap,distance=..4] on vehicle run tag @s add TrapExplode
 
 #> Set off Blast Barrels
 execute if score @s click matches 4 run data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
-execute at @s[scores={click=4}] as @e[type=villager,tag=BarrelVillager,distance=..7] run function weapons:barrel/chainreact
+execute at @s[scores={click=4}] as @e[type=villager,tag=BarrelVillager,distance=..4] run function weapons:barrel/chainreact
 
 #> Break nearby Cargo Barrels
-execute as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..7] run function game:modifiers/lostcargo/spillbarrel
+execute as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..4] run function game:modifiers/lostcargo/spillbarrel
 
 #> Kill the entire barrel (all entities associated with it)
 execute if score @s click matches 5 run function game:modifiers/lostcargo/killbarrel
