@@ -14,3 +14,17 @@ execute if score $CargoTime CmdData matches 1200.. run scoreboard players reset 
 execute if score $SpawnCargo CmdData matches 1.. run function game:modifiers/lostcargo/spawnpurple
 execute if score $SpawnCargo CmdData matches 1.. run function game:modifiers/lostcargo/spawnorange
 execute if score $SpawnCargo CmdData matches 1.. run scoreboard players remove $SpawnCargo CmdData 1
+
+#> Spawn if repeated ship hits
+execute if score $OrangeHitStreak CmdData matches 3.. run function game:modifiers/lostcargo/spawnpurple
+execute if score $OrangeHitStreak CmdData matches 3.. run scoreboard players reset $OrangeHitStreak CmdData
+execute if score $PurpleHitStreak CmdData matches 3.. run function game:modifiers/lostcargo/spawnorange
+execute if score $PurpleHitStreak CmdData matches 3.. run scoreboard players reset $PurpleHitStreak CmdData
+
+execute if score $OrangeHitStreak CmdData matches 1.. run scoreboard players add $OrangeStreakTimer CmdData 1
+execute if score $PurpleHitStreak CmdData matches 1.. run scoreboard players add $PurpleStreakTimer CmdData 1
+
+execute if score $OrangeStreakTimer CmdData matches 30.. run scoreboard players reset $OrangeHitStreak CmdData
+execute if score $PurpleStreakTimer CmdData matches 30.. run scoreboard players reset $PurpleHitStreak CmdData
+execute if score $OrangeStreakTimer CmdData matches 30.. run scoreboard players reset $OrangeStreakTimer CmdData
+execute if score $PurpleStreakTimer CmdData matches 30.. run scoreboard players reset $PurpleStreakTimer CmdData

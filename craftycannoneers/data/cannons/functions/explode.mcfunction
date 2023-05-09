@@ -75,6 +75,7 @@ data modify storage craftycannoneers:temp CustomName set from entity @s CustomNa
 execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] run data modify entity @s CustomName set from storage craftycannoneers:temp CustomName
 tag @e[type=marker,tag=ImpactMarker,tag=!HasUUID] add HasUUID
 
+execute if score $LostCargo CmdData matches 1 at @s[tag=!StreakIncreased,tag=!CSpread] run function game:modifiers/lostcargo/streak
 execute at @s[tag=!Hit1,tag=!BouncyCannonball,tag=!CopperCannonball,tag=!ChainCannonball,predicate=cannons:ships/orange] run playsound shipdamage2 master @a ~ ~ ~ 2 1
 execute at @s[tag=!Hit1,tag=!BouncyCannonball,tag=!CopperCannonball,tag=!ChainCannonball,predicate=cannons:ships/purple] run playsound shipdamage2 master @a ~ ~ ~ 2 1
 execute at @s[tag=Hit1,tag=!BouncyCannonball,tag=!CopperCannonball,tag=!ChainCannonball,scores={doublehit=4..},predicate=cannons:ships/orange] run playsound shipdamage1 master @a ~ ~ ~ 2 1
