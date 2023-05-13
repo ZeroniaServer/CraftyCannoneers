@@ -1,119 +1,117 @@
 {
-    "type": "minecraft:chest",
-    "pools": [
-      {
-        "rolls": {
-          "min": 2,
-          "max": 3,
-          "type": "minecraft:uniform"
-        },
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "weight": 1,
-            "functions": [
-              {
-                "function": "minecraft:set_nbt",
-                "tag": "{display:{Name:'[{\"text\":\"Gunpowder\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Used to change the power of a cannon shot.\",\"italic\":false,\"color\":\"white\"}]']}}"
-              },
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "min": 6,
-                  "max": 9,
-                  "type": "minecraft:uniform"
-                }
-              }
-            ],
-            "name": "minecraft:gunpowder"
-          }
-        ]
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 2,
+        "max": 3,
+        "type": "minecraft:uniform"
       },
-      {
-        "rolls": {
-          "min": 2,
-          "max": 3,
-          "type": "minecraft:uniform"
-        },
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "weight": 1,
-            "functions": [
-              {
-                "function": "minecraft:set_nbt",
-                "tag": "{display:{Name:'[{\"text\":\"Gold\",\"italic\":false,\"color\":\"gold\"}]',Lore:['[{\"text\":\"Currency item used to purchase\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"special cannonballs.\",\"italic\":false,\"color\":\"white\"}]']}}"
-              },
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "min": 6,
-                  "max": 8,
-                  "type": "minecraft:uniform"
-                }
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Gunpowder\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Used to change the power of a cannon shot.\",\"italic\":false,\"color\":\"white\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 6,
+                "max": 9,
+                "type": "minecraft:uniform"
               }
-            ],
-            "name": "minecraft:gold_nugget"
-          }
-        ]
+            }
+          ],
+          "name": "minecraft:gunpowder"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 2,
+        "max": 3,
+        "type": "minecraft:uniform"
       },
-      {
-        "rolls": {
-          "min": 1,
-          "max": 1,
-          "type": "minecraft:uniform"
-        },
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "weight": 1,
-            "functions": [
-              {
-                "function": "minecraft:set_nbt",
-                "tag": "{display:{Name:'[{\"text\":\"Arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
-              },
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "min": 6,
-                  "max": 10,
-                  "type": "minecraft:uniform"
-                }
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Gold\",\"italic\":false,\"color\":\"gold\"}]',Lore:['[{\"text\":\"Currency item used to purchase\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"special cannonballs.\",\"italic\":false,\"color\":\"white\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 6,
+                "max": 8,
+                "type": "minecraft:uniform"
               }
-            ],
-            "name": "minecraft:arrow"
-          }
-        ]
+            }
+          ],
+          "name": "minecraft:gold_nugget"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 1,
+        "type": "minecraft:uniform"
       },
-      {
-        "rolls": {
-          "min": 2,
-          "max": 3,
-          "type": "minecraft:uniform"
-        },
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "weight": 1,
-            "functions": [
-              {
-                "function": "minecraft:set_nbt",
-                "tag": "{HideFlags:127,CustomModelData:73,Unbreakable:1b,Cannonball:9b,display:{Name:'[{\"text\":\"Golden Cannonball\",\"color\":\"gold\",\"italic\":false}]',Lore:['[{\"text\":\"Only found in Skeleton Chests!\",\"italic\":false,\"color\":\"dark_red\",\"underlined\":true},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\",\"underlined\":false}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"The most fancy type of cannonball!\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"The Golden Cannonball gives Gold to\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"their users when they damage ships\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"or kill enemies with them.\",\"italic\":false,\"color\":\"aqua\"}]']}}"
-              },
-              {
-                "function": "minecraft:set_count",
-                "count":
-                {
-                  "min": 1,
-                  "max": 1,
-                  "type":"minecraft:uniform"
-                }
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 6,
+                "max": 10,
+                "type": "minecraft:uniform"
               }
-            ],
-            "name": "minecraft:diamond_hoe"
-          }
-        ]
-      }
-    ]
-  }
-  
+            }
+          ],
+          "name": "minecraft:arrow"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 2,
+        "max": 3,
+        "type": "minecraft:uniform"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:127,CustomModelData:73,Unbreakable:1b,Cannonball:9b,display:{Name:'[{\"text\":\"Golden Cannonball\",\"color\":\"gold\",\"italic\":false}]',Lore:['[{\"text\":\"Only found in Skeleton Chests!\",\"italic\":false,\"color\":\"dark_red\",\"underlined\":true},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\",\"underlined\":false}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"The most fancy type of cannonball!\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"The Golden Cannonball gives Gold to\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"their users when they damage ships\",\"italic\":false,\"color\":\"aqua\"}]','[{\"text\":\"or kill enemies with them.\",\"italic\":false,\"color\":\"aqua\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:diamond_hoe"
+        }
+      ]
+    }
+  ]
+}

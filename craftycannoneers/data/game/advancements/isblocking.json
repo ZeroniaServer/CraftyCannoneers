@@ -1,18 +1,17 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:using_item",
-        "conditions": {
-          "item": {
-            "items": [
-              "minecraft:shield"
-            ]
-          }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:shield"
+          ]
         }
       }
-    },
-    "rewards": {
-      "function": "game:useshield"
     }
+  },
+  "rewards": {
+    "function": "game:useshield"
   }
-  
+}
