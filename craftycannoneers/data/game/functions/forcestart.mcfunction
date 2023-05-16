@@ -4,7 +4,7 @@ scoreboard players reset $AnnouncedLast CmdData
 
 scoreboard players set $gamestate CmdData 2
 
-data merge block -44 -28 0 {Text1:'{"text":""}',Text2:'{"text":""}',Text3:'{"text":""}',Text4:'{"text":""}'}
+data merge block -44 -28 0 {is_waxed:1b,front_text:{messages:['{"text":""}','{"text":""}','{"text":""}','{"text":""}']}}
 
 gamerule fallDamage true
 

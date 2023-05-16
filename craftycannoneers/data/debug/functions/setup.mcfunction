@@ -181,9 +181,9 @@ scoreboard players set $60 CmdData 60
 
 #> Signs
 setblock -49 -28 -3 air
-setblock -49 -28 -3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}',Text4:'{"text":""}'}
+setblock -49 -28 -3 oak_wall_sign[facing=east,waterlogged=false]{is_waxed:1b,front_text:{color:"black",has_glowing_text:0b,messages:['{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}','{"color":"#00CCCC","text":"Click here to"}','{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}','{"text":""}']}}
 setblock -49 -28 3 air
-setblock -49 -28 3 oak_wall_sign[facing=east,waterlogged=false]{Color:"black",GlowingText:0b,Text1:'{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}',Text2:'{"color":"#00CCCC","text":"Click here to"}',Text3:'{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}',Text4:'{"text":""}'}
+setblock -49 -28 3 oak_wall_sign[facing=east,waterlogged=false]{is_waxed:1b,front_text:{color:"black",has_glowing_text:0b,messages:['{"clickEvent":{"action":"run_command","value":"trigger leavegame"},"text":""}','{"color":"#00CCCC","text":"Click here to"}','{"extra":[{"color":"#55FFFF","text":"Leave"},{"color":"#00CCCC","text":" your team!"}],"text":""}','{"text":""}']}}
 setblock -74 -24 1 air
 setblock -74 -24 1 oak_wall_sign
 
