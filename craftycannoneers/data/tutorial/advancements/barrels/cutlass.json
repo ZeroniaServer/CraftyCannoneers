@@ -12,27 +12,32 @@
             }
           }
         },
-        "location": {
-          "position": {
-            "x": {
-              "min": -262,
-              "max": -261
-            },
-            "y": {
-              "min": -25,
-              "max": -24
-            },
-            "z": {
-              "min": -60,
-              "max": -59
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "x": {
+                  "min": -262,
+                  "max": -261
+                },
+                "y": {
+                  "min": -25,
+                  "max": -24
+                },
+                "z": {
+                  "min": -60,
+                  "max": -59
+                }
+              },
+              "block": {
+                "blocks": [
+                  "minecraft:barrel"
+                ]
+              }
             }
-          },
-          "block": {
-            "blocks": [
-              "minecraft:barrel"
-            ]
           }
-        }
+        ]
       }
     }
   },
