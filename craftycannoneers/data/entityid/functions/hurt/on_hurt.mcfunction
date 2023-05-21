@@ -1,0 +1,3 @@
+scoreboard players set @p[tag=victim] lasthurt 0
+scoreboard players operation @p[tag=victim] UUIDtracker = @s playerUUID
+# ...
