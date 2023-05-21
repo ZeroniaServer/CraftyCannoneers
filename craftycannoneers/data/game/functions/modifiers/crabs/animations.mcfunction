@@ -21,3 +21,8 @@ execute if entity @s[tag=Moving] if block ~ ~-0.5 ~ stone run playsound minecraf
 
 execute on vehicle if entity @s[nbt={Motion:[0.0d,0.0d,0.0d]}] on passengers run tag @s remove Moving
 execute if entity @s[tag=!Moving,nbt={item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:118},Count:1b}}] run data merge entity @s {item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:117},Count:1b}}
+
+##FORMAT FOR DAMAGE
+##Make sure this only happens when the crab is in a mode where it can pinch you. Adjust values as necessary
+##This also allows us to control exactly when we make the crab's claw snap
+execute if entity @s[tag=!chase] on vehicle run damage @a[distance=..0.5,limit=1,sort=nearest] 1.5 wither_skull by @s
