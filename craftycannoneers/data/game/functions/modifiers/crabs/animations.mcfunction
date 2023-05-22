@@ -25,4 +25,4 @@ execute if entity @s[tag=!Moving,nbt={item:{id:"minecraft:diamond_hoe",tag:{Cust
 ##FORMAT FOR DAMAGE
 ##Make sure this only happens when the crab is in a mode where it can pinch you. Adjust values as necessary
 ##This also allows us to control exactly when we make the crab's claw snap
-execute if entity @s[tag=!chase] on vehicle run damage @a[distance=..0.5,limit=1,sort=nearest] 1.5 wither_skull by @s
+execute if entity @s[tag=!chase] run function game:modifiers/crabs/pinch

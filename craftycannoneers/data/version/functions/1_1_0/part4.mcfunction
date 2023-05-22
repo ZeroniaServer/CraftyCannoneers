@@ -10,6 +10,8 @@ function tutorial:treasurepit/main
 
 execute as @e[type=armor_stand,tag=TDAS] run function version:1_1_0/dummyrotate
 
+execute unless score $setuprand CmdData matches 1 run function inventory:randomizer/setup/begin
+
 bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"4","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
 bossbar set updatebar value 4
 
