@@ -8,4 +8,4 @@ tag @s add roam
 tag @s remove follow
 tag @s remove steal
 scoreboard players reset @s crabtime
-execute on vehicle run function game:modifiers/crabs/return
+execute if entity @s[tag=chase] on vehicle run function game:modifiers/crabs/return

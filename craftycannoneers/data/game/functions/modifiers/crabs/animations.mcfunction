@@ -22,9 +22,7 @@ execute if entity @s[tag=Moving] if block ~ ~-0.5 ~ stone run playsound minecraf
 execute on vehicle if entity @s[nbt={Motion:[0.0d,0.0d,0.0d]}] on passengers run tag @s remove Moving
 execute if entity @s[tag=!Moving,nbt={item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:118},Count:1b}}] run data merge entity @s {item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:117},Count:1b}}
 
-##FORMAT FOR DAMAGE
-##Make sure this only happens when the crab is in a mode where it can pinch you. Adjust values as necessary
-##This also allows us to control exactly when we make the crab's claw snap
+#> Pinch when in steal mode
 execute if entity @s[tag=steal] run function game:modifiers/crabs/pinch
 
 #> Water detection - allows crab to swim
@@ -39,7 +37,7 @@ execute as @s[tag=!hasitem,scores={crabtime=100..}] run function game:modifiers/
 
 #> Make sprints temporary
 scoreboard players add @s[tag=itemsprint] CmdData 1
-execute if score @s CmdData matches 50.. on vehicle run function game:modifiers/crabs/return
+execute if score @s[tag=chase] CmdData matches 50.. on vehicle run function game:modifiers/crabs/return
 execute if score @s CmdData matches 50.. run tag @s remove itemsprint
 execute if score @s CmdData matches 50.. run scoreboard players reset @s CmdData
 
