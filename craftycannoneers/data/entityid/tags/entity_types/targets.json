@@ -2,6 +2,7 @@
   "values": [
     "minecraft:husk",
     "minecraft:villager",
-    "minecraft:endermite"
+    "minecraft:endermite",
+    "minecraft:cat"
   ]
 }
