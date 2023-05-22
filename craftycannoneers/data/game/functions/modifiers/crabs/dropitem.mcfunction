@@ -4,5 +4,8 @@ execute on passengers run item replace entity @s container.0 with air
 loot spawn ~ ~0.1 ~ mine -69 -64 0 air{drop_contents:1b}
 setblock -69 -64 0 bedrock
 tag @s remove hasitem
-#> TODO: make crab passive!!
+tag @s add roam
+tag @s remove follow
+tag @s remove steal
+scoreboard players reset @s crabtime
 execute on vehicle run function game:modifiers/crabs/return

@@ -25,8 +25,24 @@ execute if entity @s[tag=!Moving,nbt={item:{id:"minecraft:diamond_hoe",tag:{Cust
 ##FORMAT FOR DAMAGE
 ##Make sure this only happens when the crab is in a mode where it can pinch you. Adjust values as necessary
 ##This also allows us to control exactly when we make the crab's claw snap
-execute if entity @s[tag=!chase] run function game:modifiers/crabs/pinch
+execute if entity @s[tag=steal] run function game:modifiers/crabs/pinch
 
 #> Water detection - allows crab to swim
 execute on vehicle at @s[type=endermite,tag=!inwater] if predicate game:inwater at @s run function game:modifiers/crabs/enterwater
 execute on vehicle at @s[type=endermite,tag=inwater] unless predicate game:inwater at @s run function game:modifiers/crabs/exitwater
+
+#> Mode switching
+scoreboard players reset @s[tag=hasitem] crabtime
+scoreboard players add @s[tag=!hasitem] crabtime 1
+execute if entity @s[tag=follow] if entity @a[team=!Spectator,distance=..10] run scoreboard players set @s crabtime 100
+execute as @s[tag=!hasitem,scores={crabtime=100..}] run function game:modifiers/crabs/switchmode
+
+#> Make sprints temporary
+scoreboard players add @s[tag=itemsprint] CmdData 1
+execute if score @s CmdData matches 50.. on vehicle run function game:modifiers/crabs/return
+execute if score @s CmdData matches 50.. run tag @s remove itemsprint
+execute if score @s CmdData matches 50.. run scoreboard players reset @s CmdData
+
+execute if entity @s[tag=roam] run particle dust 0 1 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
+execute if entity @s[tag=follow] run particle dust 1 0.533 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
+execute if entity @s[tag=steal] run particle dust 1 0 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a

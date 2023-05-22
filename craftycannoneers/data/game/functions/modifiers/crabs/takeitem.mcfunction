@@ -1,4 +1,5 @@
 tag @s add hasitem
+tag @s add itemsprint
 
 execute if score $steal CmdData matches 0 on passengers run item replace entity @s container.0 from entity @a[tag=victim,limit=1] hotbar.0
 execute if score $steal CmdData matches 1 on passengers run item replace entity @s container.0 from entity @a[tag=victim,limit=1] hotbar.1
@@ -77,3 +78,12 @@ execute if score $steal CmdData matches 35 run item replace entity @a[tag=victim
 execute if score $steal CmdData matches 36 run item replace entity @a[tag=victim,limit=1] weapon.offhand with air
 
 execute on passengers if data entity @s item{id:"minecraft:goat_horn"} at @s run playsound ravehorn master @a ~ ~ ~ 6 1
+
+tag @s add roam
+tag @s remove follow
+tag @s remove steal
+scoreboard players reset @s crabtime
+scoreboard players set @s crabmode 0
+data merge entity @s {Attributes:[{Name:"generic.follow_range",Base:0}]}
+
+playsound minecraft:entity.item.pickup master @a ~ ~ ~ 0.6 1.2
