@@ -32,6 +32,13 @@ execute if data storage craftycannoneers:inventory Default store result score $s
 execute if data storage craftycannoneers:inventory Default as fffffe5c-ffff-ffbb-0000-01a400000045 on passengers if score @s[tag=!invalid] CmdData = $slot CmdData run tag @s add invalid
 data remove storage craftycannoneers:inventory Default
 
-#> TODO Filter out starter arrows??
+#> Soft-remove all arrows if player has starter arrows
+# The logic behind this kinda sucks, but it's way harder to remove only one slot
+# and guarantee that it accounts for all starter arrows that this player has/needs
+# (what if they spread out their arrow stack?). So we have to remove all arrows.
+# But then, it's also hard to mark all slots as invalid in advance like we do with
+# the single slots for other default items. So we have to soft-remove them and let
+# the system filter out the empty slots by itself.
+execute if score @s arrowsToShoot matches 1.. run data remove storage craftycannoneers:inventory Inventory[{id:"minecraft:arrow"}]
 
 execute as fffffe5c-ffff-ffbb-0000-01a400000045 on passengers if entity @s[tag=invalid] run function inventory:randomizer/remove
