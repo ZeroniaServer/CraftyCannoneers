@@ -26,3 +26,7 @@ execute if entity @s[tag=!Moving,nbt={item:{id:"minecraft:diamond_hoe",tag:{Cust
 ##Make sure this only happens when the crab is in a mode where it can pinch you. Adjust values as necessary
 ##This also allows us to control exactly when we make the crab's claw snap
 execute if entity @s[tag=!chase] run function game:modifiers/crabs/pinch
+
+#> Water detection - allows crab to swim
+execute on vehicle at @s[type=endermite,tag=!inwater] if predicate game:inwater at @s run function game:modifiers/crabs/enterwater
+execute on vehicle at @s[type=endermite,tag=inwater] unless predicate game:inwater at @s run function game:modifiers/crabs/exitwater
