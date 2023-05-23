@@ -8,4 +8,8 @@ execute at @s[scores={CmdData=3},predicate=!cannons:safezones/island] run functi
 execute at @s[scores={CmdData=3},predicate=!cannons:safezones/island,predicate=!cannons:safezones/tutorial] run function cannons:afterdamage
 execute at @s[scores={CmdData=3},predicate=!cannons:safezones/island,predicate=cannons:safezones/tutorial] run function cannons:afterdamagetutorial
 
+#> Remount nearby Crabs
+execute at @s[scores={CmdData=3}] as @e[type=endermite,tag=CrabVehicle,tag=dismounted,distance=..10] run function game:modifiers/crabs/remount
+execute at @s[scores={CmdData=3}] as @e[type=cat,tag=CrabVehicle,tag=dismounted,distance=..10] run function game:modifiers/crabs/remount
+
 kill @s[scores={CmdData=3..}]

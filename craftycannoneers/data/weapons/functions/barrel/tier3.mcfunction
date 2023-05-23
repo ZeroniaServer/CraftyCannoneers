@@ -4,7 +4,11 @@ execute if predicate cannons:ships/orange run tag @s add canDamage
 execute if predicate cannons:ships/purple run tag @s add canDamage
 
 #> Blast slimes
-execute if entity @a[gamemode=!spectator,distance=..8.25] run function weapons:barrel/summonslime
+scoreboard players set $blast BombDelay 0
+execute if entity @a[gamemode=!spectator,distance=..8.25] run scoreboard players set $blast BombDelay 1
+execute unless score $blast BombDelay matches 1 if entity @e[type=endermite,tag=CrabVehicle,limit=1,distance=..8.25] run scoreboard players set $blast BombDelay 1
+execute unless score $blast BombDelay matches 1 if entity @e[type=cat,tag=CrabVehicle,limit=1,distance=..8.25] run scoreboard players set $blast BombDelay 1
+execute if score $blast BombDelay matches 1 run function weapons:barrel/summonslime
 
 #> Cannonball Explosion
 execute if entity @s[tag=canDamage] run function weapons:barrel/summonimpact
@@ -31,5 +35,3 @@ execute at @s[tag=!canDamage] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapD
 
 #> Hurt players in damage zones
 execute at @s[tag=!canDamage] as @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..7] run function weapons:barrel/damage/tier3
-
-kill @s

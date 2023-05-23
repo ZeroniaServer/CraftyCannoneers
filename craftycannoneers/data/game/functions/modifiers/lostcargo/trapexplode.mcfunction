@@ -5,7 +5,11 @@ item replace entity @s[scores={click=1}] container.0 with air
 execute if score @s click matches 1 run function game:modifiers/lostcargo/trapeffects
 
 #> Blast slimes
-execute if score @s click matches 3 if entity @a[gamemode=!spectator,distance=..9] run function game:modifiers/lostcargo/summonslime
+scoreboard players set $blast BombDelay 0
+execute if entity @a[gamemode=!spectator,distance=..9] run scoreboard players set $blast BombDelay 1
+execute unless score $blast BombDelay matches 1 if entity @e[type=endermite,tag=CrabVehicle,limit=1,distance=..9] run scoreboard players set $blast BombDelay 1
+execute unless score $blast BombDelay matches 1 if entity @e[type=cat,tag=CrabVehicle,limit=1,distance=..9] run scoreboard players set $blast BombDelay 1
+execute if score @s click matches 3 if score $blast BombDelay matches 1 run function game:modifiers/lostcargo/summonslime
 
 #> Chain reaction
 execute if score @s click matches 4 as @e[type=villager,tag=CBTrap,distance=..4] on vehicle run tag @s add TrapExplode
@@ -16,6 +20,10 @@ execute at @s[scores={click=4}] as @e[type=villager,tag=BarrelVillager,distance=
 
 #> Break nearby Cargo Barrels
 execute as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..4] run function game:modifiers/lostcargo/spillbarrel
+
+#> Remount nearby Crabs
+execute if score @s click matches 5 as @e[type=endermite,tag=CrabVehicle,tag=dismounted,distance=..10] run function game:modifiers/crabs/remount
+execute if score @s click matches 5 as @e[type=cat,tag=CrabVehicle,tag=dismounted,distance=..10] run function game:modifiers/crabs/remount
 
 #> Kill the entire barrel (all entities associated with it)
 execute if score @s click matches 5 run function game:modifiers/lostcargo/killbarrel

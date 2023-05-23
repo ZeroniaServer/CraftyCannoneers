@@ -24,10 +24,15 @@ scoreboard players set @s[scores={eyeclick=10,CmdData=1..5}] eyeclick 55
 #Fire models
 item replace entity @s[scores={eyeclick=2}] armor.head with mooshroom_spawn_egg{CustomModelData:12}
 item replace entity @s[scores={eyeclick=58}] armor.head with mooshroom_spawn_egg{CustomModelData:13}
-item replace entity @s[scores={eyeclick=60..}] armor.head with mooshroom_spawn_egg{CustomModelData:14}
+item replace entity @s[scores={eyeclick=60..95}] armor.head with mooshroom_spawn_egg{CustomModelData:14}
+item replace entity @s[scores={eyeclick=95..}] armor.head with air
 
 execute at @s[scores={eyeclick=94}] run function weapons:barrel/levitate
 execute at @s[scores={eyeclick=95,CmdData=10}] run function weapons:barrel/tier3
 execute at @s[scores={eyeclick=95,CmdData=6..9}] run function weapons:barrel/tier2
 execute at @s[scores={eyeclick=95,CmdData=1..5}] run function weapons:barrel/tier1
-kill @s[scores={eyeclick=95..}]
+
+#> Remount nearby Crabs
+execute at @s[scores={eyeclick=98}] as @e[type=endermite,tag=CrabVehicle,tag=dismounted,distance=..10] run function game:modifiers/crabs/remount
+execute at @s[scores={eyeclick=98}] as @e[type=cat,tag=CrabVehicle,tag=dismounted,distance=..10] run function game:modifiers/crabs/remount
+kill @s[scores={eyeclick=98..}]

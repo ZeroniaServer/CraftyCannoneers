@@ -1,3 +1,6 @@
+execute as @e[type=endermite,tag=CrabVehicle,tag=!dismounted,distance=..7] run function game:modifiers/crabs/dismount
+execute as @e[type=cat,tag=CrabVehicle,tag=!dismounted,distance=..7] run function game:modifiers/crabs/dismount
+
 #> Summon 20 slimes
 function cannons:bounce/summon4slime
 function cannons:bounce/summon4slime

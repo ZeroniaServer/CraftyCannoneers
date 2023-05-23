@@ -1,3 +1,6 @@
+execute as @e[type=endermite,tag=CrabVehicle,tag=!dismounted,distance=..6] run function game:modifiers/crabs/dismount
+execute as @e[type=cat,tag=CrabVehicle,tag=!dismounted,distance=..6] run function game:modifiers/crabs/dismount
+
 function weapons:bomb/summon4slime
 function weapons:bomb/summon4slime
 function weapons:bomb/summon4slime
