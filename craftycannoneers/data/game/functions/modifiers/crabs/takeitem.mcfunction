@@ -84,6 +84,6 @@ tag @s remove follow
 tag @s remove steal
 scoreboard players reset @s crabtime
 scoreboard players set @s crabmode 0
-data merge entity @s {Attributes:[{Name:"generic.follow_range",Base:0}]}
+attribute @s minecraft:generic.follow_range base set 0
 
 playsound minecraft:entity.item.pickup master @a ~ ~ ~ 0.6 1.2
