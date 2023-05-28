@@ -1,0 +1,49 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:mooshroom_spawn_egg"
+          }
+        ],
+        "functions": [
+          {
+            "function": "minecraft:set_nbt",
+            "tag": "{CustomModelData:16,HideFlags:127,CanPlaceOn:[\"#game:barrel_placeable\"],CrabTrap:1b,display:{Name:'[{\"translate\":\"item.crab_trap_empty\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.crab_trap.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.crab_trap.lore.2\",\"italic\":false,\"color\":\"white\"}]']},EntityTag:{id:\"minecraft:marker\",Tags:[\"CrabTrapSpawn\",\"Full\",\"crabtrap\"]}}"
+          },
+          {
+            "function": "minecraft:set_nbt",
+            "tag": "{NoDrop:1b,CanPlaceOn:[\"\"]}",
+            "conditions": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "team": "Lobby"
+                }
+              }
+            ]
+          },
+          {
+            "function": "minecraft:set_nbt",
+            "tag": "{Blank:1b}",
+            "conditions": [
+              {
+                "condition": "minecraft:inverted",
+                "term": {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "spawnCrabTrap": 0
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
