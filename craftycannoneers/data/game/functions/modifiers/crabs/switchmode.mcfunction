@@ -23,7 +23,7 @@ execute if score @s crabmode matches 0..50 run tag @s add roam
 execute if score @s crabmode matches 0..50 on vehicle on controller run attribute @s minecraft:generic.follow_range base set 0
 
 execute if score @s crabmode matches 51..75 run tag @s add follow
-execute if score @s crabmode matches 51..75 on vehicle on controller run attribute @s minecraft:generic.follow_range base set 16
+execute if score @s crabmode matches 51..75 on vehicle on controller run attribute @s minecraft:generic.follow_range base set 24
 
 execute if score @s crabmode matches 76.. run tag @s add steal
 execute if score @s crabmode matches 76.. on vehicle on controller if entity @a[team=!Spectator,distance=..15] run attribute @s minecraft:generic.follow_range base set 16

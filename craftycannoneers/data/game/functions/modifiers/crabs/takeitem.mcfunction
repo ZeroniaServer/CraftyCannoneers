@@ -77,8 +77,6 @@ execute if score $steal CmdData matches 34 run item replace entity @a[tag=victim
 execute if score $steal CmdData matches 35 run item replace entity @a[tag=victim,limit=1] inventory.26 with air
 execute if score $steal CmdData matches 36 run item replace entity @a[tag=victim,limit=1] weapon.offhand with air
 
-execute on passengers if data entity @s item{id:"minecraft:goat_horn"} at @s run playsound ravehorn master @a ~ ~ ~ 6 1
-
 tag @s add roam
 tag @s remove follow
 tag @s remove steal
