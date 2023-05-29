@@ -228,6 +228,57 @@
                     "op": "replace"
                 }
             ]
+        },
+        {
+            "function": "minecraft:set_lore",
+            "entity": "this",
+            "lore": [
+                {
+                    "translate": "item.crab_trap.lore.1",
+                    "color": "white",
+                    "italic": false
+                },
+                {
+                    "translate": "item.crab_trap.lore.2",
+                    "color": "white",
+                    "italic": false
+                },
+                {
+                    "text": ""
+                },
+                {
+                    "translate": "item.durability",
+                    "color": "white",
+                    "italic": false,
+                    "with": [
+                        {
+                            "score": {
+                                "name": "@s",
+                                "objective": "TrapDurability"
+                            },
+                            "color": "white",
+                            "italic": false
+                        },
+                        {
+                            "text": "5",
+                            "color": "white",
+                            "italic": false
+                        }
+                    ]
+                }
+            ],
+            "replace": true,
+            "conditions": [
+                {
+                    "condition": "minecraft:entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "TrapDurability": {
+                            "max": 4
+                        }
+                    }
+                }
+            ]
         }
     ]
 }
