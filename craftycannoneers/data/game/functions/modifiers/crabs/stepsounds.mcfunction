@@ -70,10 +70,27 @@ execute if block ~ ~-0.5 ~ mangrove_wood run playsound minecraft:block.wood.step
 execute if block ~ ~-0.5 ~ gray_carpet run particle block gray_wool ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
 execute if block ~ ~-0.5 ~ orange_wool run particle block orange_wool ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
 execute if block ~ ~-0.5 ~ orange_carpet run particle block orange_wool ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
+execute if block ~ ~-0.5 ~ yellow_wool run particle block yellow_wool ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
+execute if block ~ ~-0.5 ~ yellow_carpet run particle block yellow_wool ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
 execute if block ~ ~-0.5 ~ purple_wool run particle block purple_wool ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
 execute if block ~ ~-0.5 ~ purple_carpet run particle block purple_wool ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
+execute if block ~ ~-0.5 ~ magenta_wool run particle block magenta_wool ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
+execute if block ~ ~-0.5 ~ magenta_carpet run particle block magenta_wool ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
+
 execute if block ~ ~-0.5 ~ #minecraft:wool run playsound minecraft:block.wool.step master @a ~ ~ ~ 0.2 1
 execute if block ~ ~-0.5 ~ #minecraft:wool_carpets run playsound minecraft:block.wool.step master @a ~ ~ ~ 0.2 1
+
+## concrete fx
+execute if block ~ ~-0.5 ~ orange_concrete run particle block orange_concrete ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
+execute if block ~ ~-0.5 ~ yellow_concrete run particle block yellow_concrete ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
+execute if block ~ ~-0.5 ~ purple_concrete run particle block purple_concrete ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
+execute if block ~ ~-0.5 ~ magenta_concrete run particle block magenta_concrete ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
+execute if block ~ ~-0.5 ~ #game:crab/concrete run playsound minecraft:block.stone.step master @a ~ ~ ~ 0.2 2
+
+## concrete powder fx
+execute if block ~ ~-0.5 ~ orange_concrete_powder run particle block orange_concrete_powder ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
+execute if block ~ ~-0.5 ~ purple_concrete_powder run particle block purple_concrete_powder ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
+execute if block ~ ~-0.5 ~ #game:crab/concrete_powder run playsound minecraft:block.sand.step master @a ~ ~ ~ 0.2 2
 
 ## copper fx
 execute if block ~ ~-0.5 ~ #game:crab/copper run particle block cut_copper ~ ~-0.2 ~ 0.2 0 0.2 0.1 1 normal
