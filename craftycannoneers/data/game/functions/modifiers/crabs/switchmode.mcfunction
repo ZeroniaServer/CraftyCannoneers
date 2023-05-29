@@ -7,13 +7,10 @@ execute as @e[type=marker,tag=CrabSwitch] run scoreboard players operation @s RN
 execute store result score @s crabmode run scoreboard players get @e[type=marker,tag=CrabSwitch,distance=..1,sort=nearest,limit=1] RNGscore
 kill @e[type=marker,tag=CrabSwitch]
 
-
-
-
 execute if score @s[tag=follow] crabmode matches 0..50 if entity @a[team=!Spectator,distance=..4] run scoreboard players set @s crabmode 100
 execute if score @s crabmode matches 51..75 if entity @a[team=!Spectator,distance=..15] run scoreboard players set @s crabmode 0
 execute if score @s crabmode matches 76.. unless entity @a[team=!Spectator,distance=..15] run scoreboard players set @s crabmode 0
-
+execute if score @s[tag=hasitem] crabmode matches 76.. run scoreboard players set @s crabmode 0
 
 tag @s remove roam
 tag @s remove follow

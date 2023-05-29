@@ -64,8 +64,18 @@ scoreboard players reset @s[scores={KillerUUIDreset=10..}] KillerUUID
 scoreboard players reset @s[scores={KillerUUIDreset=10..}] KillerUUIDreset
 
 #> Barrel tags
-tag @a[tag=!barrelMainhand,predicate=weapons:barrel_mainhand] add barrelMainhand
-tag @a[tag=barrelMainhand,predicate=!weapons:barrel_mainhand] remove barrelMainhand
-tag @a[tag=!barrelOffhand,predicate=weapons:barrel_offhand] add barrelOffhand
-tag @a[tag=barrelOffhand,predicate=!weapons:barrel_offhand] remove barrelOffhand
-tag @a remove lookAtBarrel
+tag @s[tag=!barrelMainhand,predicate=weapons:barrel_mainhand] add barrelMainhand
+tag @s[tag=barrelMainhand,predicate=!weapons:barrel_mainhand] remove barrelMainhand
+tag @s[tag=!barrelOffhand,predicate=weapons:barrel_offhand] add barrelOffhand
+tag @s[tag=barrelOffhand,predicate=!weapons:barrel_offhand] remove barrelOffhand
+tag @s remove lookAtBarrel
+
+#> Crab Trap tags
+execute if score $Wildlife CmdData matches 1 run tag @s[tag=!crabTrapMainhand,predicate=weapons:crab_trap_mainhand] add crabTrapMainhand
+execute if score $Wildlife CmdData matches 1 run tag @s[tag=crabTrapMainhand,predicate=!weapons:crab_trap_mainhand] remove crabTrapMainhand
+execute if score $Wildlife CmdData matches 1 run tag @s[tag=!crabTrapOffhand,predicate=weapons:crab_trap_offhand] add crabTrapOffhand
+execute if score $Wildlife CmdData matches 1 run tag @s[tag=crabTrapOffhand,predicate=!weapons:crab_trap_offhand] remove crabTrapOffhand
+execute if score $Wildlife CmdData matches 1 run tag @s remove lookAtCrabTrap
+
+#> Reset placement score
+scoreboard players reset @s[scores={spawnPlaceable=0..}]

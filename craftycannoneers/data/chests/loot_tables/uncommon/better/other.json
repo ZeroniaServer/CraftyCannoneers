@@ -160,7 +160,7 @@
                   "type": "minecraft:score",
                   "target": {
                     "type": "minecraft:fixed",
-                    "name": "$Sharks"
+                    "name": "$Wildlife"
                   },
                   "score": "CmdData",
                   "scale": 1

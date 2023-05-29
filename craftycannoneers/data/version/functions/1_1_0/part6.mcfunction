@@ -19,7 +19,7 @@ scoreboard objectives add sharktarget dummy
 scoreboard objectives add crabtime dummy
 scoreboard objectives add crabmode dummy
 scoreboard players set $NoTracers CmdData 0
-scoreboard players set $Sharks CmdData 0
+scoreboard players set $Wildlife CmdData 0
 scoreboard players set $Storms CmdData 0
 scoreboard players set $LostCargo CmdData 0
 scoreboard players reset @e[type=armor_stand,tag=Parrot,limit=1] CmdData

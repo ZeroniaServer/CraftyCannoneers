@@ -4,7 +4,7 @@ execute if entity @s[predicate=weapons:barrel_mainhand] run tag @s add stackMain
 execute if entity @s[predicate=weapons:barrel_mainhand_64] run tag @s add fullStackMainhand
 
 #> If mainhand is empty, replace with 1 barrel and use blank NBT to prevent animation
-scoreboard players set @s[tag=emptyMainhand] spawnBarrel 0
+scoreboard players set @s[tag=emptyMainhand] spawnPlaceable 0
 loot replace entity @s[tag=emptyMainhand] weapon.mainhand loot weapons:barrel
 item modify entity @s[tag=emptyMainhand] weapon.mainhand weapons:blank
 
@@ -24,7 +24,7 @@ scoreboard players add @s[tag=stackMainhand,tag=!fullStackMainhand] hasBarrels 1
 loot replace entity @s[tag=stackMainhand,tag=!fullStackMainhand] weapon.mainhand loot weapons:barrel_return
 
 #> If mainhand had a stack of barrels, replace with a full stack and use blank NBT to prevent animation
-scoreboard players set @s[tag=fullStackMainhand] spawnBarrel 0
+scoreboard players set @s[tag=fullStackMainhand] spawnPlaceable 0
 loot replace entity @s[tag=fullStackMainhand] weapon.mainhand loot weapons:barrel_stack
 item modify entity @s[tag=fullStackMainhand] weapon.mainhand weapons:blank
 
@@ -35,3 +35,4 @@ execute if entity @s[tag=!emptyMainhand,tag=!stackMainhand] run loot give @s loo
 tag @s[tag=emptyMainhand] remove emptyMainhand
 tag @s[tag=stackMainhand] remove stackMainhand
 tag @s[tag=fullStackMainhand] remove fullStackMainhand
+scoreboard players reset @s[scores={spawnPlaceable=0..}]

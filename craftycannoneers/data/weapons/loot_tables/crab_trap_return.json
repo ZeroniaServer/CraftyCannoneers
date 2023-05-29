@@ -123,7 +123,7 @@
             "source": "this",
             "ops": [
                 {
-                    "source": "item.tag.id",
+                    "source": "data.id",
                     "target": "EntityTag.data.id",
                     "op": "replace"
                 }
@@ -134,7 +134,7 @@
             "source": "this",
             "ops": [
                 {
-                    "source": "item.tag.id",
+                    "source": "data.id",
                     "target": "tag.id",
                     "op": "replace"
                 }
@@ -223,7 +223,7 @@
             "source": "this",
             "ops": [
                 {
-                    "source": "item.tag.durability",
+                    "source": "data.durability",
                     "target": "EntityTag.data.durability",
                     "op": "replace"
                 }

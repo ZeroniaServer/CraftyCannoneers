@@ -36,7 +36,7 @@
                 "condition": "minecraft:entity_scores",
                 "entity": "this",
                 "scores": {
-                  "spawnBarrel": 0
+                  "spawnPlaceable": 0
                 }
               }
             }

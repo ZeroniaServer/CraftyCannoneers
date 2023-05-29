@@ -7,12 +7,12 @@
                     "items": [
                         "minecraft:mooshroom_spawn_egg"
                     ],
-                    "nbt": "{Barrel:1b}"
+                    "nbt": "{CrabTrap:1b}"
                 }
             }
         }
     },
     "rewards": {
-        "function": "weapons:barrel/place"
+        "function": "weapons:crabtrap/place"
     }
 }

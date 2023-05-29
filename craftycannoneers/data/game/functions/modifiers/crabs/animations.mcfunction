@@ -34,3 +34,5 @@ execute if score @s CmdData matches 50.. run scoreboard players reset @s CmdData
 execute if entity @s[tag=roam] run particle dust 0 1 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
 execute if entity @s[tag=follow] run particle dust 1 0.533 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
 execute if entity @s[tag=steal] run particle dust 1 0 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
+
+execute on vehicle unless entity @e[type=villager,tag=CrabTrapVillager,limit=1,distance=..2] run tag @s remove justReleased

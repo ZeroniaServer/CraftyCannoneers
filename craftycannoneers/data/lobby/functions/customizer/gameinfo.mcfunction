@@ -6,7 +6,7 @@ execute if score $TimeLimit CmdData matches 42069.. if score $ShipHP CmdData mat
 
 scoreboard players set $modifiers CmdData 0
 execute if score $NoTracers CmdData matches 1 run scoreboard players add $modifiers CmdData 1
-execute if score $Sharks CmdData matches 1 run scoreboard players add $modifiers CmdData 1
+execute if score $Wildlife CmdData matches 1 run scoreboard players add $modifiers CmdData 1
 execute if score $Storms CmdData matches 1 run scoreboard players add $modifiers CmdData 1
 execute if score $LostCargo CmdData matches 1 run scoreboard players add $modifiers CmdData 1
 #TODO these last 2 are undecided but i'm adding them as placeholders
