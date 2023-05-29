@@ -4,9 +4,15 @@
     "predicate": {
         "equipment": {
             "mainhand": {
+                "tag": "game:noninteractable"
+            },
+            "offhand": {
                 "items": [
                     "minecraft:mooshroom_spawn_egg"
                 ],
+                "count": {
+                    "min": 63
+                },
                 "nbt": "{CrabTrap:1b}"
             }
         }

@@ -7,7 +7,7 @@
                 "items": [
                     "minecraft:mooshroom_spawn_egg"
                 ],
-                "nbt": "{CrabTrap:1b}"
+                "nbt": "{CrabTrap:1b,EntityTag:{data:{durability:5}}}"
             }
         }
     }

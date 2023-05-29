@@ -15,9 +15,9 @@ scoreboard players add @s[tag=stackOffhand,tag=!fullStackOffhand] hasBarrels 1
 loot replace entity @s[tag=stackOffhand,tag=!fullStackOffhand] weapon.offhand loot weapons:barrel_return
 
 #> If offhand had a stack of barrels, replace with a full stack and use blank NBT to prevent animation
-scoreboard players set @s[tag=fullStackMainhand] spawnPlaceable 0
-loot replace entity @s[tag=fullStackMainhand] weapon.offhand loot weapons:barrel_stack
-item modify entity @s[tag=fullStackMainhand] weapon.offhand weapons:blank
+scoreboard players set @s[tag=fullStackOffhand] spawnPlaceable 0
+loot replace entity @s[tag=fullStackOffhand] weapon.offhand loot weapons:barrel_stack
+item modify entity @s[tag=fullStackOffhand] weapon.offhand weapons:blank
 
 #> If all else fails, give a new barrel somewhere
 execute if entity @s[tag=!emptyOffhand,tag=!stackOffhand] run loot give @s loot weapons:barrel
