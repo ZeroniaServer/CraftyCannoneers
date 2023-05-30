@@ -1,8 +1,7 @@
 execute at @s[type=husk,tag=TDZombie] run function tutorial:trainingdummies/hurtdetection
 execute at @s[type=villager,tag=BlastBarrel] run function weapons:barrel/punch
 ## TODO prevent picking up trap during release animation
-## TODO use interaction instead? any reason to have traps be clickable?
-execute at @s[type=villager,tag=CrabTrap] as @e[type=item_display,tag=CrabTrapDisplay,limit=1,distance=..1,sort=nearest] run function weapons:crabtrap/break
+execute at @s[type=interaction,tag=CrabTrap] on passengers run function weapons:crabtrap/break
 execute if entity @s[type=villager,tag=CBTrap] on vehicle run tag @s add TrapExplode
 
 #> Do knockback to crab vehicle if hitting upper endermite
