@@ -1,17 +1,17 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:using_item",
-        "conditions": {
-          "item": {
-            "items": [
-              "minecraft:spyglass"
-            ]
-          }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:spyglass"
+          ]
         }
       }
-    },
-    "rewards": {
-      "function": "game:usespyglass"
     }
+  },
+  "rewards": {
+    "function": "game:usespyglass"
   }
+}

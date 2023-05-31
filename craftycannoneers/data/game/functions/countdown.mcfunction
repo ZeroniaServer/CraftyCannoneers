@@ -1,4 +1,7 @@
-execute if score $countSec CmdData matches 1 run data merge block -44 -28 0 {Text1:'{"text":""}',Text2:'{"text":"Countdown","color":"#55FF55","bold":true}',Text3:'{"text":"Started","color":"#55FF55","bold":true}',Text4:'{"text":""}'}
+execute if score $countSec CmdData matches 1 run data modify block -44 -28 0 front_text.messages[0] set value '{"text":""}'
+execute if score $countSec CmdData matches 1 run data modify block -44 -28 0 front_text.messages[1] set value '{"text":"Countdown","color":"#55FF55","bold":true}'
+execute if score $countSec CmdData matches 1 run data modify block -44 -28 0 front_text.messages[2] set value '{"text":"Started","color":"#55FF55","bold":true}'
+execute if score $countSec CmdData matches 1 run data modify block -44 -28 0 front_text.messages[3] set value '{"text":""}'
 
 scoreboard players add $countSec CmdData 1
 

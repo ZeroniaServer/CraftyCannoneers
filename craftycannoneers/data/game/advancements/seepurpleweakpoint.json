@@ -1,26 +1,26 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:using_item",
-        "conditions": {
-          "item": {
-            "items": [
-              "minecraft:spyglass"
-            ]
-          },
-          "player": {
-            "type_specific": {
-              "type": "player",
-              "looking_at": {
-                "type": "minecraft:slime",
-                "nbt": "{Tags:[\"Weakpoint\",\"Purple\"]}"
-              }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:spyglass"
+          ]
+        },
+        "player": {
+          "type_specific": {
+            "type": "player",
+            "looking_at": {
+              "type": "minecraft:slime",
+              "nbt": "{Tags:[\"Weakpoint\",\"Purple\"]}"
             }
           }
         }
       }
-    },
-    "rewards": {
-      "function": "game:shipweakpoint/seepurpleweakpoint"
     }
+  },
+  "rewards": {
+    "function": "game:shipweakpoint/seepurpleweakpoint"
   }
+}

@@ -15,27 +15,32 @@
         "location": [
           {
             "condition": "minecraft:location_check",
-            "predicate": {
-              "position": {
-                "x": {
-                  "min": -260,
-                  "max": -259
-                },
-                "y": {
-                  "min": -26,
-                  "max": -25
-                },
-                "z": {
-                  "min": -60,
-                  "max": -59
+            "predicate": [
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "position": {
+                    "x": {
+                      "min": -260,
+                      "max": -259
+                    },
+                    "y": {
+                      "min": -26,
+                      "max": -25
+                    },
+                    "z": {
+                      "min": -60,
+                      "max": -59
+                    }
+                  },
+                  "block": {
+                    "blocks": [
+                      "minecraft:barrel"
+                    ]
+                  }
                 }
-              },
-              "block": {
-                "blocks": [
-                  "minecraft:barrel"
-                ]
               }
-            }
+            ]
           }
         ]
       }

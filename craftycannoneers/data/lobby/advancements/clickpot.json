@@ -6,11 +6,16 @@
         "location": [
           {
             "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "tag": "minecraft:flower_pots"
+            "predicate": [
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "block": {
+                    "tag": "minecraft:flower_pots"
+                  }
+                }
               }
-            }
+            ]
           }
         ]
       }

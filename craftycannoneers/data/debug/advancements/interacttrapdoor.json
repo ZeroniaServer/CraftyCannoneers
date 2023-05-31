@@ -6,11 +6,16 @@
         "location": [
           {
             "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "tag": "minecraft:trapdoors"
+            "predicate": [
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "block": {
+                    "tag": "minecraft:trapdoors"
+                  }
+                }
               }
-            }
+            ]
           }
         ]
       }

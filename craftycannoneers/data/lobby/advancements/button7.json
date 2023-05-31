@@ -6,27 +6,32 @@
         "location": [
           {
             "condition": "minecraft:location_check",
-            "predicate": {
-              "position": {
-                "x": {
-                  "min": -57,
-                  "max": -56
-                },
-                "y": {
-                  "min": -24,
-                  "max": -23
-                },
-                "z": {
-                  "min": -10,
-                  "max": -9
+            "predicate": [
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "position": {
+                    "x": {
+                      "min": -57,
+                      "max": -56
+                    },
+                    "y": {
+                      "min": -24,
+                      "max": -23
+                    },
+                    "z": {
+                      "min": -10,
+                      "max": -9
+                    }
+                  },
+                  "block": {
+                    "blocks": [
+                      "minecraft:stone_button"
+                    ]
+                  }
                 }
-              },
-              "block": {
-                "blocks": [
-                  "minecraft:stone_button"
-                ]
               }
-            }
+            ]
           }
         ]
       }
