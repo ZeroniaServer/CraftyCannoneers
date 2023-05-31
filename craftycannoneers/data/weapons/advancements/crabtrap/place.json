@@ -3,12 +3,17 @@
         "requirement": {
             "trigger": "minecraft:item_used_on_block",
             "conditions": {
-                "item": {
-                    "items": [
-                        "minecraft:mooshroom_spawn_egg"
-                    ],
-                    "nbt": "{CrabTrap:1b}"
-                }
+                "location": [
+                    {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                            "items": [
+                                "minecraft:mooshroom_spawn_egg"
+                            ],
+                            "nbt": "{CrabTrap:1b}"
+                        }
+                    }
+                ]
             }
         }
     },

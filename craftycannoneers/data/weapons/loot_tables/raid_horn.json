@@ -14,17 +14,17 @@
           "tag": "{instrument:\"minecraft:ponder_goat_horn\",Unbreakable:1b,Horn:1,display:{Name:'[{\"translate\":\"item.raid_horn\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.raid_horn.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.raid_horn.lore.2\",\"italic\":false,\"color\":\"white\"}]']},HideFlags:127}"
         },
         {
-            "function": "minecraft:set_nbt",
-            "tag": "{NoDrop:1b}",
-            "conditions": [
-                {
-                    "condition": "minecraft:entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "team": "Lobby"
-                    }
-                }
-            ]
+          "function": "minecraft:set_nbt",
+          "tag": "{NoDrop:1b}",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
+            }
+          ]
         }
       ]
     }

@@ -14,17 +14,17 @@
           "tag": "{Unbreakable:1b,Harpoon:2,Enchantments:[{id:\"riptide\",lvl:1}],display:{Name:'[{\"translate\":\"item.minecraft.trident\",\"italic\":false,\"color\":\"green\"}]',Lore:['[{\"translate\":\"item.harpoon.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.harpoon.lore.2\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.harpoon.lore.3\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]']},HideFlags:5}"
         },
         {
-            "function": "minecraft:set_nbt",
-            "tag": "{NoDrop:1b}",
-            "conditions": [
-                {
-                    "condition": "minecraft:entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "team": "Lobby"
-                    }
-                }
-            ]
+          "function": "minecraft:set_nbt",
+          "tag": "{NoDrop:1b}",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
+            }
+          ]
         }
       ]
     }
