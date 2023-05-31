@@ -120,11 +120,15 @@ scoreboard objectives add respawn dummy
 scoreboard objectives add CalcFire1 dummy
 scoreboard objectives add CalcFire2 dummy
 scoreboard objectives add KillerUUIDreset dummy
-scoreboard objectives add spawnBarrel minecraft.used:minecraft.mooshroom_spawn_egg
+scoreboard objectives add spawnPlaceable minecraft.used:minecraft.mooshroom_spawn_egg
 scoreboard objectives add LootLoader dummy
 scoreboard objectives add hasBarrels dummy
 scoreboard objectives add copperStrike dummy
 scoreboard objectives add sharktarget dummy
+scoreboard objectives add crabtime dummy
+scoreboard objectives add crabmode dummy
+scoreboard objectives add TrapDurability dummy
+scoreboard objectives add hasCrabTraps dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
@@ -185,6 +189,8 @@ team modify NoName collisionRule never
 team modify Collide collisionRule pushOwnTeam
 team modify NoName nametagVisibility never
 team modify Collide nametagVisibility never
+team modify Orange nametagVisibility always
+team modify Purple nametagVisibility always
 
 #> Static scores
 scoreboard players set $3 CmdData 3
@@ -244,6 +250,12 @@ scoreboard players set $dust6 CmdData -1
 scoreboard players set $dust3 CmdData -1
 scoreboard players set $dust2 CmdData -1
 scoreboard players set $barrier CmdData -1
+
+#> Modifiers
+scoreboard players add $NoTracers CmdData 0
+scoreboard players add $Wildlife CmdData 0
+scoreboard players add $Storms CmdData 0
+scoreboard players add $LostCargo CmdData 0
 
 #> Messages
 data modify storage craftycannoneers:messages ResourcePack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"We strongly recommend you to ","color":"gray"},{"text":"use the resource pack","bold":true,"color":"red"},{"text":". ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=1-oBF7R2saaPyq1cdZrVvKh-TUHcagulH"}}]'

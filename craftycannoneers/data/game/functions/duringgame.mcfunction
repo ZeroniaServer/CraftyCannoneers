@@ -7,6 +7,9 @@ fill 71 -29 -60 73 -29 -60 spruce_slab[type=top]
 #> Blast Barrels
 function weapons:barrel/main
 
+#> Crab Traps
+execute if score $Wildlife CmdData matches 1 run function weapons:crabtrap/main
+
 #> Player functions
 execute as @a[team=!Lobby,team=!Spectator,team=!Developer] at @s run function game:ingame/players
 scoreboard players reset @a[team=!Purple,team=!Orange,scores={drowning=1..}] drowning

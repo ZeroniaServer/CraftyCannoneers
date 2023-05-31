@@ -1,5 +1,10 @@
 #> Blast slimes
-execute if entity @a[gamemode=!spectator,distance=..8.25] run function weapons:barrel/summonslime
+scoreboard players set $blast BombDelay 0
+execute if entity @a[gamemode=!spectator,distance=..8.25] run scoreboard players set $blast BombDelay 1
+execute unless score $blast BombDelay matches 1 if entity @e[type=endermite,tag=CrabVehicle,limit=1,distance=..8.25] run scoreboard players set $blast BombDelay 1
+execute unless score $blast BombDelay matches 1 if entity @e[type=cat,tag=CrabVehicle,limit=1,distance=..8.25] run scoreboard players set $blast BombDelay 1
+execute unless score $blast BombDelay matches 1 if entity @e[type=drowned,tag=SharkEntity,limit=1,distance=..8.25] run scoreboard players set $blast BombDelay 1
+execute if score $blast BombDelay matches 1 run function weapons:barrel/summonslime
 
 #> Particles/sounds
 playsound blastbarrelexplode master @a ~ ~ ~ 5 1.6
@@ -18,5 +23,3 @@ execute as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..5] r
 
 #> Hurt players in damage zones
 execute as @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..5] run function weapons:barrel/damage/tier1
-
-kill

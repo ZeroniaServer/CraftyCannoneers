@@ -1,0 +1,18 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "item": {
+                    "items": [
+                        "minecraft:mooshroom_spawn_egg"
+                    ],
+                    "nbt": "{CrabTrap:1b}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "weapons:crabtrap/place"
+    }
+}

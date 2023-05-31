@@ -29,7 +29,12 @@ kill @e[type=marker,tag=bbarrel]
 kill @e[type=marker,tag=StormEntity]
 execute as @e[type=drowned,tag=SharkEntity] run function arenaclear:kill
 execute as @e[type=cod,tag=SharkEntity] run function arenaclear:kill
+execute as @e[type=endermite,tag=CrabEntity] run function arenaclear:kill
+execute as @e[type=cat,tag=CrabEntity] run function arenaclear:kill
+kill @e[type=item_display,tag=CrabEntity]
 execute as @e[type=item_display,tag=CargoBarrel] run function game:modifiers/lostcargo/killbarrel
+kill @e[type=item_display,tag=CrabTrap]
+kill @e[type=interaction,tag=CrabTrap]
 
 function arenaclear:fakeairclear
 function arenaclear:boatvehicles

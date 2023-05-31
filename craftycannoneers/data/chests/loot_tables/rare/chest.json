@@ -69,7 +69,7 @@
             "functions": [
                 {
                     "function": "minecraft:set_nbt",
-                    "tag": "{NoDrop:1b}",
+                    "tag": "{NoDrop:1b,CanPlaceOn:[\"\"]}",
                     "conditions": [
                         {
                             "condition": "minecraft:entity_properties",

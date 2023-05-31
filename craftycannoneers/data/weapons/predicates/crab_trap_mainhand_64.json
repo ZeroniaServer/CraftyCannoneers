@@ -1,0 +1,17 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "mainhand": {
+                "items": [
+                    "minecraft:mooshroom_spawn_egg"
+                ],
+                "count": {
+                    "min": 63
+                },
+                "nbt": "{CrabTrap:1b}"
+            }
+        }
+    }
+}

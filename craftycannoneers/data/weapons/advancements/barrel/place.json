@@ -6,7 +6,8 @@
                 "item": {
                     "items": [
                         "minecraft:mooshroom_spawn_egg"
-                    ]
+                    ],
+                    "nbt": "{Barrel:1b}"
                 }
             }
         }

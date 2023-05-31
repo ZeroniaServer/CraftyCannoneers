@@ -13,7 +13,7 @@ execute if entity @s[tag=TracerCannonball] as @a[predicate=game:matches_uuid,lim
 execute if entity @s[tag=Bomb] as @a[predicate=game:matches_uuid,limit=1] run data merge block ~ 256 ~ {Text2:'["",{"translate":"item.blast_bomb.possessive","with":[{"selector":"@a[limit=1,predicate=game:matches_uuid]"}]}]'}
 execute if entity @s[tag=GasPower] as @a[predicate=game:matches_uuid,limit=1] run data merge block ~ 256 ~ {Text2:'["",{"translate":"gas_explosion.possessive","with":[{"selector":"@a[limit=1,predicate=game:matches_uuid]"}]}]'}
 
-#> TODO remove? This is a failsafe in case the message is blank (would need to figure out what leads to the game forgetting who fired a Cannonball)
+#> Failsafe in case the game forgets the owner of this object
 execute if entity @s[tag=Cannonball] unless entity @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text2:'["",{"translate":"cannonball.normal.generic"}]'}
 execute if entity @s[tag=HotCannonball] unless entity @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text2:'["",{"translate":"cannonball.hot.generic"}]'}
 execute if entity @s[tag=ChainCannonball] unless entity @a[predicate=game:matches_uuid] run data merge block ~ 256 ~ {Text2:'["",{"translate":"cannonball.chain.generic"}]'}

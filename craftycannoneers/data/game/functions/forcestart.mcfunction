@@ -82,7 +82,7 @@ scoreboard players add @a[team=Purple] hasArrows 1
 execute unless entity @e[type=marker,tag=RingOfFire,predicate=cannons:safezones/tutorial] run gamerule doFireTick false
 
 #> Enable modifiers
-execute if score $Sharks CmdData matches 1 run function game:modifiers/sharks/spawnsharks
+execute if score $Wildlife CmdData matches 1 run function game:modifiers/sharks/spawnsharks
 execute if score $LostCargo CmdData matches 1 run function game:modifiers/lostcargo/setup
 execute if score $LostCargo CmdData matches 1 run scoreboard players set $CargoTime CmdData 0
 execute if score $LostCargo CmdData matches 1 run scoreboard players set $SpawnCargo CmdData 1
