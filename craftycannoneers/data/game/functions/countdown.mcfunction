@@ -1,4 +1,4 @@
-execute if score $countSec CmdData matches 1 run data merge block -44 -28 0 {is_waxed:1b,front_text:{messages:['{"text":""}','{"text":"Countdown","color":"#55FF55","bold":true}','{"text":"Started","color":"#55FF55","bold":true}','{"text":""}']}}
+execute if score $countSec CmdData matches 1 run data merge block -44 -28 0 {Text1:'{"text":""}',Text2:'{"text":"Countdown","color":"#55FF55","bold":true}',Text3:'{"text":"Started","color":"#55FF55","bold":true}',Text4:'{"text":""}'}
 
 scoreboard players add $countSec CmdData 1
 
