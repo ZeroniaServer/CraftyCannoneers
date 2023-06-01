@@ -1,3 +1,3 @@
-summon chest_minecart 72.50 -28 -59.50 {NoGravity:1b,Silent:1b,Invulnerable:1b,Rotation:[-90.0f, 0.0f],CustomDisplayTile:1b,Tags:["teamchest","purpleteamchest"],CustomName:'{"text":"Purple Team Chest","color":"dark_purple","bold":"true","underlined":"true"}',DisplayState:{Name:"minecraft:air"}}
+summon chest_minecart 72.50 -28 -59.50 {NoGravity:1b,Silent:1b,Invulnerable:1b,Rotation:[-90.0f, 0.0f],CustomDisplayTile:1b,Tags:["teamchest","purpleteamchest"],CustomName:'{"text":"Purple Team Chest","color":"dark_purple","bold":true,"underlined":true}',DisplayState:{Name:"minecraft:air"}}
 data modify entity @e[type=chest_minecart,tag=purpleteamchest,limit=1] Items set from storage craftycannoneers:purpleteamchest Items
 data remove storage craftycannoneers:purpleteamchest Items
