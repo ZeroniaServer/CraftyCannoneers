@@ -22,7 +22,7 @@ execute on vehicle at @s[type=endermite,tag=inwater] unless predicate game:inwat
 scoreboard players reset @s[tag=hasitem] crabtime
 scoreboard players add @s[tag=!hasitem] crabtime 1
 execute if entity @s[tag=follow] if entity @a[team=!Spectator,distance=..8] run scoreboard players set @s crabtime 100
-execute as @s[tag=!hasitem,scores={crabtime=100..}] run function game:modifiers/crabs/switchmode
+execute if entity @s[tag=!hasitem,scores={crabtime=100..}] run function game:modifiers/crabs/switchmode
 
 #> Make sprints temporary
 scoreboard players add @s[tag=itemsprint] CmdData 1
@@ -44,3 +44,8 @@ execute on vehicle unless entity @e[type=item_display,tag=CrabTrap,limit=1,dista
 execute if score $crabrave CmdData matches 1 run data merge entity @s {item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:119},Count:1b}}
 execute if score $crabrave CmdData matches 1 at @s run particle note ~ ~0.2 ~ 0.2 0.2 0.2 0.1 1 force
 execute if score $crabrave CmdData matches 1 on vehicle run effect give @s slowness 1 100 true
+
+#> Crab Trap Immunity
+execute on vehicle run scoreboard players add @s[tag=CrabtrapImmune] eyeclick 1
+execute on vehicle run tag @s[tag=CrabtrapImmune,scores={eyeclick=40..}] remove CrabtrapImmune
+execute on vehicle run scoreboard players reset @s[tag=!CrabtrapImmune,scores={eyeclick=1..}] eyeclick
