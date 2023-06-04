@@ -22,7 +22,7 @@ execute on vehicle at @s[type=endermite,tag=inwater] unless predicate game:inwat
 scoreboard players reset @s[tag=hasitem] crabtime
 scoreboard players add @s[tag=!hasitem] crabtime 1
 execute if entity @s[tag=follow] if entity @a[team=!Spectator,distance=..8] run scoreboard players set @s crabtime 100
-execute as @s[tag=!hasitem,scores={crabtime=100..}] run function game:modifiers/crabs/switchmode
+execute if entity @s[tag=!hasitem,scores={crabtime=100..}] run function game:modifiers/crabs/switchmode
 
 #> Make sprints temporary
 scoreboard players add @s[tag=itemsprint] CmdData 1
@@ -36,3 +36,8 @@ execute if entity @s[tag=follow] run particle dust 1 0.533 0 0.5 ~ ~1 ~ 0 0 0 0 
 execute if entity @s[tag=steal] run particle dust 1 0 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
 
 execute on vehicle unless entity @e[type=item_display,tag=CrabTrap,limit=1,distance=..2] run tag @s remove justReleased
+
+#> Crab Trap Immunity
+execute on vehicle run scoreboard players add @s[tag=CrabtrapImmune] eyeclick 1
+execute on vehicle run tag @s[tag=CrabtrapImmune,scores={eyeclick=40..}] remove CrabtrapImmune
+execute on vehicle run scoreboard players reset @s[tag=!CrabtrapImmune,scores={eyeclick=1..}] eyeclick
