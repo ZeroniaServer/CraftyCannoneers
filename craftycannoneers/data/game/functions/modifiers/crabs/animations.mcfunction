@@ -47,5 +47,7 @@ execute if score $crabrave CmdData matches 1 on vehicle run effect give @s slown
 
 #> Crab Trap Immunity
 execute on vehicle run scoreboard players add @s[tag=CrabtrapImmune] eyeclick 1
+execute if entity @s[tag=!chase] on vehicle at @s[tag=CrabtrapImmune,scores={eyeclick=1}] run function game:modifiers/crabs/chase
+execute if entity @s[tag=chase] on vehicle at @s[tag=CrabtrapImmune,scores={eyeclick=40..}] run function game:modifiers/crabs/return
 execute on vehicle run tag @s[tag=CrabtrapImmune,scores={eyeclick=40..}] remove CrabtrapImmune
 execute on vehicle run scoreboard players reset @s[tag=!CrabtrapImmune,scores={eyeclick=1..}] eyeclick
