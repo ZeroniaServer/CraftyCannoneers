@@ -9,7 +9,6 @@ data modify entity @e[type=cat,tag=temp,limit=1] CustomNameVisible set from enti
 data modify entity @e[type=cat,tag=temp,limit=1] CustomName set from entity @s CustomName
 execute if entity @s[tag=CrabtrapImmune] run tag @e[type=cat,tag=temp,limit=1] add CrabtrapImmune
 execute if entity @s[tag=CrabtrapImmune] run scoreboard players operation @e[type=cat,tag=temp,limit=1] eyeclick = @s eyeclick
-say hi2
 team join NoName @e[type=cat,tag=temp,limit=1]
 execute if entity @s[team=Orange] run team join Orange @e[type=cat,tag=temp,limit=1]
 execute if entity @s[tag=Orange] run tag @e[type=cat,tag=temp,limit=1] add Orange

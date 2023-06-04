@@ -8,7 +8,6 @@ data modify entity @e[type=endermite,tag=CrabVehicle,tag=temp,limit=1] CustomNam
 data modify entity @e[type=endermite,tag=CrabVehicle,tag=temp,limit=1] CustomNameVisible set from entity @s CustomNameVisible
 execute if entity @s[tag=CrabtrapImmune] run tag @e[type=endermite,tag=CrabVehicle,tag=temp,limit=1] add CrabtrapImmune
 execute if entity @s[tag=CrabtrapImmune] run scoreboard players operation @e[type=endermite,tag=CrabVehicle,tag=temp,limit=1] eyeclick = @s eyeclick
-say hi
 team join NoName @e[type=endermite,tag=temp]
 execute if entity @s[team=Orange] run team join Orange @e[type=endermite,tag=temp]
 execute if entity @s[tag=Orange] run tag @e[type=endermite,tag=temp] add Orange
