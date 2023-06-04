@@ -1,4 +1,5 @@
 setblock -69 -64 0 yellow_shulker_box
+execute if entity @s[tag=hashorn] on passengers run item replace entity @s container.0 with air
 execute on passengers run item replace block -69 -64 0 container.0 from entity @s container.0
 execute on passengers run item replace entity @s container.0 with air
 loot spawn ~ ~0.1 ~ mine -69 -64 0 air{drop_contents:1b}

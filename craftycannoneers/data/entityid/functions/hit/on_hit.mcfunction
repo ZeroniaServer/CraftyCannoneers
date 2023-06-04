@@ -13,6 +13,6 @@ execute if entity @s[type=endermite,tag=CrabEntity,tag=CrabVehicle] on passenger
 execute if entity @s[type=endermite,tag=CrabEntity,tag=!CrabVehicle] on vehicle on passengers at @s[type=item_display,tag=!hasitem,tag=!steal] run function game:modifiers/crabs/forcestealmode
 
 #> Crab drops item
-execute if entity @s[type=endermite,tag=CrabEntity,tag=CrabVehicle] on passengers at @s[type=item_display,tag=hasitem] run function game:modifiers/crabs/dropitem
-execute if entity @s[type=endermite,tag=CrabEntity,tag=!CrabVehicle] on vehicle on passengers at @s[type=item_display,tag=hasitem] run function game:modifiers/crabs/dropitem
-execute if entity @s[type=cat,tag=CrabEntity,tag=CrabVehicle] on passengers at @s[type=item_display,tag=hasitem] run function game:modifiers/crabs/dropitem
+execute if entity @s[type=endermite,tag=CrabEntity,tag=CrabVehicle] on passengers at @s[type=item_display,tag=hasitem,tag=!hashorn] run function game:modifiers/crabs/dropitem
+execute if entity @s[type=endermite,tag=CrabEntity,tag=!CrabVehicle] on vehicle on passengers at @s[type=item_display,tag=hasitem,tag=!hashorn] run function game:modifiers/crabs/dropitem
+execute if entity @s[type=cat,tag=CrabEntity,tag=CrabVehicle] on passengers at @s[type=item_display,tag=hasitem,tag=!hashorn] run function game:modifiers/crabs/dropitem
