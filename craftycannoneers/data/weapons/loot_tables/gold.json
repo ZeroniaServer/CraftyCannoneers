@@ -14,17 +14,17 @@
           "tag": "{display:{Name:'[{\"translate\":\"item.gold\",\"italic\":false,\"color\":\"gold\"}]',Lore:['[{\"translate\":\"item.gold.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.gold.lore.2\",\"italic\":false,\"color\":\"white\"}]']}}"
         },
         {
-            "function": "minecraft:set_nbt",
-            "tag": "{NoDrop:1b}",
-            "conditions": [
-                {
-                    "condition": "minecraft:entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "team": "Lobby"
-                    }
-                }
-            ]
+          "function": "minecraft:set_nbt",
+          "tag": "{NoDrop:1b}",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
+            }
+          ]
         }
       ]
     }

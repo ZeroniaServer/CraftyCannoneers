@@ -1,44 +1,43 @@
 {
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "cannons:player",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "weapons:skeleton_key",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "weapons:gunpowder",
+          "weight": 3,
+          "functions": [
             {
-                "type": "minecraft:loot_table",
-                "name": "cannons:player",
-                "weight": 1
-            },
-            {
-              "type": "minecraft:loot_table",
-              "name": "weapons:skeleton_key",
-              "weight": 1
-            },
-            {
-              "type": "minecraft:loot_table",
-              "name": "weapons:gunpowder",
-              "weight": 3,
-              "functions": [
-                {
-                  "function": "minecraft:set_count",
-                  "count": {
-                    "min": 4,
-                    "max": 6
-                  }
-                }
-              ]
-            },
-            {
-              "type": "minecraft:loot_table",
-              "name": "weapons:barrel",
-              "weight": 1
-            },
-            {
-              "type": "minecraft:loot_table",
-              "name": "weapons:boarding_axe",
-              "weight": 2
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 4,
+                "max": 6
+              }
             }
-        ]
-      }
-    ]
-  }
-  
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "weapons:barrel",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "weapons:boarding_axe",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

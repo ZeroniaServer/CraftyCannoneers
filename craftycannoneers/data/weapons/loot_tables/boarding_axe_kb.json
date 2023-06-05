@@ -14,23 +14,23 @@
           "tag": "{Unbreakable:1b,Knockback:1,display:{Name:'[{\"translate\":\"item.boarding_axe\",\"italic\":false,\"color\":\"green\"}]',Lore:['[{\"translate\":\"item.boarding_axe.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.boarding_axe.lore.2\",\"italic\":false,\"color\":\"white\"}]']},HideFlags:4}"
         },
         {
-            "function": "minecraft:set_enchantments",
-            "enchantments": {
-                "minecraft:knockback": 1
-            }
+          "function": "minecraft:set_enchantments",
+          "enchantments": {
+            "minecraft:knockback": 1
+          }
         },
         {
-            "function": "minecraft:set_nbt",
-            "tag": "{NoDrop:1b}",
-            "conditions": [
-                {
-                    "condition": "minecraft:entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "team": "Lobby"
-                    }
-                }
-            ]
+          "function": "minecraft:set_nbt",
+          "tag": "{NoDrop:1b}",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
+            }
+          ]
         }
       ]
     }
