@@ -21,6 +21,21 @@
                         {
                             "condition": "minecraft:inverted",
                             "term": {
+                                "condition": "minecraft:value_check",
+                                "value": {
+                                    "type": "minecraft:score",
+                                    "target": {
+                                        "type": "minecraft:fixed",
+                                        "name": "$GraveRobbery"
+                                    },
+                                    "score": "CmdData"
+                                },
+                                "range": 1
+                            }
+                        },
+                        {
+                            "condition": "minecraft:inverted",
+                            "term": {
                                 "condition": "minecraft:entity_properties",
                                 "entity": "this",
                                 "predicate": {
