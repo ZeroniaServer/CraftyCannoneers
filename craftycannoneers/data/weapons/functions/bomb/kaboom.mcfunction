@@ -5,6 +5,7 @@ data merge entity @s[scores={BombDelay=4}] {Marker:1b,NoGravity:1b}
 #> Summon AECs + tag players as Blasted
 execute if score @s BombDelay matches 4 as @a[tag=!Blasted,gamemode=!spectator,distance=..5] at @s run summon area_effect_cloud ~ ~155 ~ {Tags:["BlastAEC"],Particle:"block air",Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:0.1f,Duration:1,Effects:[{Id:25,Amplifier:100,Duration:2,ShowParticles:0b}]}
 execute if score @s BombDelay matches 4 run tag @a[tag=!Blasted,gamemode=!spectator,distance=..5] add Blasted
+execute if score $Wildlife CmdData matches 1 if score @s BombDelay matches 4 as @e[type=cat,tag=CrabVehicle,distance=..5] at @s run summon area_effect_cloud ~ ~155 ~ {Tags:["BlastAEC"],Particle:"block air",Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:0.1f,Duration:1,Effects:[{Id:25,Amplifier:80,Duration:2,ShowParticles:0b}]}
 
 #> Summon slimes
 scoreboard players set $blast BombDelay 0
