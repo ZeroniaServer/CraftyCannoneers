@@ -6,34 +6,6 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "weapons:arrow",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "type": "minecraft:score",
-                                "target": "this",
-                                "score": "remainderArrows"
-                            }
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "condition": "minecraft:value_check",
-                            "value": {
-                                "type": "minecraft:score",
-                                "target": {
-                                    "type": "minecraft:fixed",
-                                    "name": "$GraveRobbery"
-                                },
-                                "score": "CmdData"
-                            },
-                            "range": 1
-                        }
-                    ]
-                },
-                {
-                    "type": "minecraft:loot_table",
                     "name": "weapons:gold",
                     "functions": [
                         {
@@ -46,21 +18,6 @@
                         }
                     ],
                     "conditions": [
-                        {
-                            "condition": "minecraft:inverted",
-                            "term": {
-                                "condition": "minecraft:value_check",
-                                "value": {
-                                    "type": "minecraft:score",
-                                    "target": {
-                                        "type": "minecraft:fixed",
-                                        "name": "$GraveRobbery"
-                                    },
-                                    "score": "CmdData"
-                                },
-                                "range": 1
-                            }
-                        },
                         {
                             "condition": "minecraft:inverted",
                             "term": {
