@@ -33,7 +33,6 @@ execute at @s[scores={eyeclick=95,CmdData=6..9}] run function weapons:barrel/tie
 execute at @s[scores={eyeclick=95,CmdData=1..5}] run function weapons:barrel/tier1
 
 #> Remount nearby Crabs/Sharks
-execute at @s[scores={eyeclick=98}] as @e[type=endermite,tag=CrabVehicle,tag=dismounted,distance=..10] run function game:modifiers/crabs/remount
 execute at @s[scores={eyeclick=98}] as @e[type=cat,tag=CrabVehicle,tag=dismounted,distance=..10] run function game:modifiers/crabs/remount
 execute at @s[scores={eyeclick=98}] as @e[type=cod,tag=NewVCod,tag=dismounted,distance=..10] run function game:modifiers/sharks/remount
 kill @s[scores={eyeclick=98..}]

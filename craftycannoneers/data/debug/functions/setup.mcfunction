@@ -6,8 +6,7 @@ forceload add -385 -17 -416 -96
 
 #> Gamerules
 gamerule mobGriefing true
-execute unless score $gamestate CmdData matches 2 run gamerule keepInventory true
-execute if score $gamestate CmdData matches 2 unless score $GraveRobbery CmdData matches 1 run gamerule keepInventory true
+gamerule keepInventory true
 gamerule doImmediateRespawn true
 gamerule doLimitedCrafting true
 gamerule doMobSpawning false
@@ -129,6 +128,7 @@ scoreboard objectives add crabtime dummy
 scoreboard objectives add crabmode dummy
 scoreboard objectives add TrapDurability dummy
 scoreboard objectives add hasCrabTraps dummy
+scoreboard objectives add crabs dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
@@ -157,6 +157,7 @@ scoreboard objectives add z2 dummy
 scoreboard objectives add dx2 dummy
 scoreboard objectives add dy2 dummy
 scoreboard objectives add dz2 dummy
+scoreboard objectives add hasCrabTraps dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
@@ -172,6 +173,7 @@ team add Spectator
 team add NoName
 team add Collide
 team add Developer
+team add Blank
 team modify Lobby color blue
 team modify Developer color dark_green
 team modify Orange color gold
@@ -191,6 +193,7 @@ team modify NoName nametagVisibility never
 team modify Collide nametagVisibility never
 team modify Orange nametagVisibility always
 team modify Purple nametagVisibility always
+team modify Blank nametagVisibility always
 
 #> Static scores
 scoreboard players set $3 CmdData 3

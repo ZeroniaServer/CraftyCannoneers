@@ -1,1 +1,2 @@
 execute unless entity @s[predicate=game:onorange,team=Orange] unless entity @s[predicate=game:onpurple,team=Purple] unless score @s gappleTimer matches 1.. run effect clear @s regeneration
+advancement revoke @s only game:takedamage

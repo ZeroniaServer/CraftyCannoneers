@@ -7,7 +7,6 @@ execute if score @s click matches 1 run function game:modifiers/lostcargo/trapef
 #> Blast slimes
 scoreboard players set $blast BombDelay 0
 execute if entity @a[gamemode=!spectator,distance=..9] run scoreboard players set $blast BombDelay 1
-execute unless score $blast BombDelay matches 1 if entity @e[type=endermite,tag=CrabVehicle,limit=1,distance=..9] run scoreboard players set $blast BombDelay 1
 execute unless score $blast BombDelay matches 1 if entity @e[type=cat,tag=CrabVehicle,limit=1,distance=..9] run scoreboard players set $blast BombDelay 1
 execute unless score $blast BombDelay matches 1 if entity @e[type=drowned,tag=SharkEntity,limit=1,distance=..9] run scoreboard players set $blast BombDelay 1
 execute if score @s click matches 3 if score $blast BombDelay matches 1 run function game:modifiers/lostcargo/summonslime
@@ -23,7 +22,6 @@ execute at @s[scores={click=4}] as @e[type=villager,tag=BarrelVillager,distance=
 execute as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..4] run function game:modifiers/lostcargo/spillbarrel
 
 #> Remount nearby Crabs/Sharks
-execute if score @s click matches 5 as @e[type=endermite,tag=CrabVehicle,tag=dismounted,distance=..10] run function game:modifiers/crabs/remount
 execute if score @s click matches 5 as @e[type=cat,tag=CrabVehicle,tag=dismounted,distance=..10] run function game:modifiers/crabs/remount
 execute if score @s click matches 5 as @e[type=cod,tag=NewVCod,tag=dismounted,distance=..10] run function game:modifiers/sharks/remount
 

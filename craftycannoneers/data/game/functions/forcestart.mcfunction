@@ -10,8 +10,6 @@ data modify block -44 -28 0 front_text.messages[2] set value '{"text":""}'
 data modify block -44 -28 0 front_text.messages[3] set value '{"text":""}'
 
 gamerule fallDamage true
-execute unless score $GraveRobbery CmdData matches 1 run gamerule keepInventory true
-execute if score $GraveRobbery CmdData matches 1 run gamerule keepInventory false
 
 #Balancing
 scoreboard players set $OrangeKills BalanceScore 0

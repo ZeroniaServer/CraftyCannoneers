@@ -245,4 +245,17 @@ scoreboard players add @s[tag=fakelockedchest] LootLoader 1
 scoreboard players set @s[tag=fakelockedchest,scores={LootLoader=4..}] LootLoader 0
 execute unless data storage craftycannoneers:fakelockedchest Items[0] run scoreboard players set @s[tag=fakelockedchest] LootLoader 32
 
-scoreboard players add @s[tag=!fakelockedchest,tag=!lockedchest] LootLoader 1
+#> Grave
+execute at @s[tag=grave,scores={LootLoader=0}] run playsound lootloader1 master @a ~ ~ ~ 0.2 1
+execute at @s[tag=grave,scores={LootLoader=0}] run playsound lootloader2 master @a ~ ~ ~ 0.2 1.6
+execute at @s[tag=grave,scores={LootLoader=0}] store result score $currentslot CmdData on passengers run data get entity @s data.Items[0].Slot
+execute at @s[tag=grave,scores={LootLoader=0}] run function chests:dropslot
+execute at @s[tag=grave,scores={LootLoader=0}] on passengers run data modify storage craftycannoneers:grave CurrentItem set from entity @s data.Items[0]
+execute at @s[tag=grave,scores={LootLoader=0}] run data modify entity @s Items append from storage craftycannoneers:grave CurrentItem
+execute at @s[tag=grave,scores={LootLoader=0}] run data remove storage craftycannoneers:grave CurrentItem
+execute at @s[tag=grave,scores={LootLoader=0}] on passengers run data remove entity @s data.Items[0]
+scoreboard players add @s[tag=grave] LootLoader 1
+scoreboard players set @s[tag=grave,scores={LootLoader=8..}] LootLoader 0
+execute on passengers unless data entity @s data.Items[0] on vehicle run scoreboard players set @s[tag=grave] LootLoader 32
+
+scoreboard players add @s[tag=!fakelockedchest,tag=!lockedchest,tag=!grave] LootLoader 1

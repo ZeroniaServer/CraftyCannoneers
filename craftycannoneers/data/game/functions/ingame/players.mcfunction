@@ -77,5 +77,9 @@ execute if score $Wildlife CmdData matches 1 run tag @s[tag=!crabTrapOffhand,pre
 execute if score $Wildlife CmdData matches 1 run tag @s[tag=crabTrapOffhand,predicate=!weapons:crab_trap_offhand] remove crabTrapOffhand
 execute if score $Wildlife CmdData matches 1 run tag @s remove lookAtCrabTrap
 
+#> Crab tracking
+execute if score $Wildlife CmdData matches 1 run scoreboard players add @s hasCrabTraps 0
+execute if score $Wildlife CmdData matches 1 run scoreboard players operation $curr crabs += @s hasCrabTraps
+
 #> Reset placement score
 scoreboard players reset @s[scores={spawnPlaceable=0..}]

@@ -142,7 +142,7 @@
         },
         {
             "function": "minecraft:set_nbt",
-            "tag": "{CustomModelData:15}",
+            "tag": "{Empty:1b,CustomModelData:15}",
             "conditions": [
                 {
                     "condition": "minecraft:entity_scores",
@@ -155,7 +155,7 @@
         },
         {
             "function": "minecraft:set_nbt",
-            "tag": "{CustomModelData:16}",
+            "tag": "{Empty:0b,CustomModelData:16}",
             "conditions": [
                 {
                     "condition": "minecraft:entity_scores",
@@ -168,7 +168,7 @@
         },
         {
             "function": "minecraft:set_nbt",
-            "tag": "{CustomModelData:17}",
+            "tag": "{Empty:1b,CustomModelData:17}",
             "conditions": [
                 {
                     "condition": "minecraft:entity_scores",
@@ -181,7 +181,7 @@
         },
         {
             "function": "minecraft:set_nbt",
-            "tag": "{CustomModelData:18}",
+            "tag": "{Empty:0b,CustomModelData:18}",
             "conditions": [
                 {
                     "condition": "minecraft:entity_scores",
@@ -194,7 +194,7 @@
         },
         {
             "function": "minecraft:set_nbt",
-            "tag": "{CustomModelData:19}",
+            "tag": "{Empty:1b,CustomModelData:19}",
             "conditions": [
                 {
                     "condition": "minecraft:entity_scores",
@@ -207,7 +207,7 @@
         },
         {
             "function": "minecraft:set_nbt",
-            "tag": "{CustomModelData:20}",
+            "tag": "{Empty:0b,CustomModelData:20}",
             "conditions": [
                 {
                     "condition": "minecraft:entity_scores",
