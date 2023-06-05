@@ -2,8 +2,9 @@
 scoreboard players set $chooseinv CmdData 5
 function inventory:randomizer/choose
 
-#> Summon grave chest
-summon hopper_minecart ~ ~ ~ {Tags:["grave","chest","GraveEntity","new"],LootTable:"chests:empty",CustomDisplayTile:1b,DisplayState:{Name:"minecraft:air"},Invulnerable:1b,Silent:1b,Enabled:0b,Passengers:[{id:"minecraft:marker",Tags:["gravedata","GraveEntity","new"]}]}
+#> Set correct location
+data modify storage craftycannoneers:death Pos set from entity @s LastDeathLocation.pos
+execute summon marker run function game:modifiers/graverobbery/place
 
 #> Name grave
 setblock ~ 256 ~ oak_sign
