@@ -23,7 +23,7 @@ item replace entity @e[type=armor_stand,tag=LostCargoIcon,limit=1] armor.head wi
 setblock -53 -23 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"light_blue",messages:['{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 256652"}}','{"text":""}','{"translate":"modifier.lost_cargo","color":"#33ccff"}','{"text":""}']}}
 
 item replace entity @e[type=armor_stand,tag=GraveRobberyIcon,limit=1] armor.head with diamond_hoe{CustomModelData:420}
-setblock -54 -23 9 minecraft:crimson_wall_sign{GlowingText:1b,Color:"light_blue",Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 29013"}}',Text2:'{"text":""}',Text3:'{"translate":"modifier.grave_robbery","color":"#33ccff"}'}
+setblock -54 -23 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"light_blue",messages:['{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 29013"}}','{"text":""}','{"translate":"modifier.grave_robbery","color":"#33ccff"}','{"text":""}']}}
 
 function lobby:customizer/modifiers/updatemodifiersigns
 
