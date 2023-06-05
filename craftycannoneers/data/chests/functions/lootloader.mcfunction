@@ -252,6 +252,7 @@ execute at @s[tag=grave,scores={LootLoader=0}] store result score $currentslot C
 execute at @s[tag=grave,scores={LootLoader=0}] run function chests:dropslot
 execute at @s[tag=grave,scores={LootLoader=0}] on passengers run data modify storage craftycannoneers:grave CurrentItem set from entity @s data.Items[0]
 execute at @s[tag=grave,scores={LootLoader=0}] run data modify entity @s Items append from storage craftycannoneers:grave CurrentItem
+execute at @s[tag=grave,scores={LootLoader=0}] run data remove storage craftycannoneers:grave CurrentItem
 execute at @s[tag=grave,scores={LootLoader=0}] on passengers run data remove entity @s data.Items[0]
 scoreboard players add @s[tag=grave] LootLoader 1
 scoreboard players set @s[tag=grave,scores={LootLoader=8..}] LootLoader 0
