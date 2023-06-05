@@ -1,7 +1,3 @@
-#> Pick 5 random items
-scoreboard players set $chooseinv CmdData 5
-function inventory:randomizer/choose
-
 #> Set correct location
 data modify storage craftycannoneers:death Pos set from entity @s LastDeathLocation.pos
 execute summon marker run function game:modifiers/graverobbery/place

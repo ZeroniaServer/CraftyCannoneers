@@ -1,4 +1,4 @@
-execute if score $GraveRobbery CmdData matches 1 run function game:modifiers/graverobbery/spawngrave
+execute if score $GraveRobbery CmdData matches 1 run function game:modifiers/graverobbery/attempt
 tag @s remove NoRegen
 function cannons:despawnplayerc
 function game:givegear
