@@ -19,6 +19,9 @@ execute if score $load CmdData matches 40.. unless score $updating CmdData match
 #> Particle timers
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function everytick:particles
 
+#> Crab tracking
+scoreboard players set $curr crabs 0
+
 #> Item related functions
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=item] at @s run function everytick:items
 
@@ -96,3 +99,5 @@ execute if entity @a[team=Lobby] run function everytick:resolvesigns
 #> Failsafe for reset scoreboards
 execute unless score $gamestate CmdData matches -1.. if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.game","color":"gray","with":[{"translate":"error.report","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"translate":"error.discord","color":"white"}]}}]},"\n"]
 execute unless score $gamestate CmdData matches -1.. if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function debug:preparerelease
+
+execute if score $gamestate CmdData matches 2.. if score $Wildlife CmdData matches 1 run function game:modifiers/crabs/detectchange

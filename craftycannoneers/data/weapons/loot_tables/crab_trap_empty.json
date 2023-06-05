@@ -11,7 +11,7 @@
         "functions": [
           {
             "function": "minecraft:set_nbt",
-            "tag": "{CustomModelData:15,HideFlags:127,CanPlaceOn:[\"#game:barrel_placeable\"],CrabTrap:1b,display:{Name:'{\"italic\":false,\"color\":\"dark_aqua\",\"translate\":\"item.crab_trap.empty\"}',Lore:['[{\"translate\":\"item.crab_trap.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.crab_trap.lore.2\",\"italic\":false,\"color\":\"white\"}]']},EntityTag:{id:\"minecraft:marker\",Tags:[\"CrabTrapSpawn\",\"Empty\",\"crabtrap\"],data:{durability:5}}}"
+            "tag": "{Empty:1b,CustomModelData:15,HideFlags:127,CanPlaceOn:[\"#game:barrel_placeable\"],CrabTrap:1b,display:{Name:'{\"italic\":false,\"color\":\"dark_aqua\",\"translate\":\"item.crab_trap.empty\"}',Lore:['[{\"translate\":\"item.crab_trap.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.crab_trap.lore.2\",\"italic\":false,\"color\":\"white\"}]']},EntityTag:{id:\"minecraft:marker\",Tags:[\"CrabTrapSpawn\",\"Empty\",\"crabtrap\"],data:{durability:5}}}"
           },
           {
             "function": "minecraft:set_nbt",

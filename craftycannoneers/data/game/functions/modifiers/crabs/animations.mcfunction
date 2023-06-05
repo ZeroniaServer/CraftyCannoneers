@@ -51,3 +51,7 @@ execute if entity @s[tag=!chase] on vehicle at @s[tag=CrabtrapImmune,scores={eye
 execute if entity @s[tag=chase] on vehicle at @s[tag=CrabtrapImmune,scores={eyeclick=40..}] run function game:modifiers/crabs/return
 execute on vehicle run tag @s[tag=CrabtrapImmune,scores={eyeclick=40..}] remove CrabtrapImmune
 execute on vehicle run scoreboard players reset @s[tag=!CrabtrapImmune,scores={eyeclick=1..}] eyeclick
+
+#> Crab tracking
+scoreboard players add $curr crabs 1
+execute on passengers if data entity @s {item:{tag:{CrabTrap:1b,Empty:0b}}} run scoreboard players add $curr crabs 1

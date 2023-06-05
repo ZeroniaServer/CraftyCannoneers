@@ -129,6 +129,7 @@ scoreboard objectives add crabtime dummy
 scoreboard objectives add crabmode dummy
 scoreboard objectives add TrapDurability dummy
 scoreboard objectives add hasCrabTraps dummy
+scoreboard objectives add crabs dummy
 
 #> Parkour
 scoreboard objectives add parkourMins dummy
@@ -157,6 +158,7 @@ scoreboard objectives add z2 dummy
 scoreboard objectives add dx2 dummy
 scoreboard objectives add dy2 dummy
 scoreboard objectives add dz2 dummy
+scoreboard objectives add hasCrabTraps dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"

@@ -18,4 +18,5 @@ execute at @s[scores={CmdData=40,TrapDurability=..-1}] run playsound minecraft:e
 execute at @s[scores={CmdData=40,TrapDurability=..-1}] run playsound minecraft:block.wooden_trapdoor.open master @a ~ ~ ~ 0.2 1.1
 
 execute store result entity @s[scores={CmdData=40..}] item.tag.durability int 1 run scoreboard players get @s TrapDurability
+scoreboard players add $curr crabs 1
 execute if entity @s[scores={CmdData=40..}] run function weapons:crabtrap/break
