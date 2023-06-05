@@ -24,14 +24,17 @@ execute if score @s modisigns matches 9153 run scoreboard players reset @s modit
 #No Tracers
 execute if score @s modisigns matches 17863 run function lobby:customizer/modifiers/notracers
 
-#Sharks
-execute if score @s modisigns matches 59636 run function lobby:customizer/modifiers/sharks
+#Wildlife
+execute if score @s modisigns matches 59636 run function lobby:customizer/modifiers/wildlife
 
 #Sea Storms
 execute if score @s modisigns matches 71845 run function lobby:customizer/modifiers/seastorms
 
 #Lost Cargo
 execute if score @s modisigns matches 256652 run function lobby:customizer/modifiers/lostcargo
+
+#Grave Robbery
+execute if score @s modisigns matches 29013 run function lobby:customizer/modifiers/graverobbery
 
 schedule clear lobby:customizer/modifiers/off
 schedule clear lobby:customizer/open
