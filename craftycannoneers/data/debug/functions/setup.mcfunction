@@ -174,6 +174,7 @@ team add Spectator
 team add NoName
 team add Collide
 team add Developer
+team add Blank
 team modify Lobby color blue
 team modify Developer color dark_green
 team modify Orange color gold
@@ -193,6 +194,7 @@ team modify NoName nametagVisibility never
 team modify Collide nametagVisibility never
 team modify Orange nametagVisibility always
 team modify Purple nametagVisibility always
+team modify Blank nametagVisibility always
 
 #> Static scores
 scoreboard players set $3 CmdData 3

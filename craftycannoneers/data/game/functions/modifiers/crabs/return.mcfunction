@@ -13,7 +13,7 @@ execute if entity @s[team=Orange] run team join Orange @e[type=endermite,tag=tem
 execute if entity @s[tag=Orange] run tag @e[type=endermite,tag=temp] add Orange
 execute if entity @s[team=Purple] run team join Purple @e[type=endermite,tag=temp]
 execute if entity @s[tag=Purple] run tag @e[type=endermite,tag=temp] add Purple
-execute if entity @s[tag=Purple] run tag @e[type=endermite,tag=temp] add Purple
+execute if entity @s[team=Blank] run team join Blank @e[type=endermite,tag=temp]
 tag @e[type=item_display,tag=temp,limit=1] remove chase
 tag @e[type=item_display,tag=temp,limit=1] remove temp
 tag @e[type=endermite,tag=temp] remove temp

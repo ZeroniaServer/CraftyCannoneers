@@ -35,6 +35,8 @@ kill @e[type=item_display,tag=CrabEntity]
 execute as @e[type=item_display,tag=CargoBarrel] run function game:modifiers/lostcargo/killbarrel
 kill @e[type=item_display,tag=CrabTrap]
 kill @e[type=interaction,tag=CrabTrap]
+scoreboard players set $total crabs 0
+scoreboard players set $curr crabs 0
 
 function arenaclear:fakeairclear
 function arenaclear:boatvehicles

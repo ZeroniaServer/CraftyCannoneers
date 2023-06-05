@@ -14,6 +14,8 @@ execute if entity @s[team=Orange] run team join Orange @e[type=cat,tag=temp,limi
 execute if entity @s[tag=Orange] run tag @e[type=cat,tag=temp,limit=1] add Orange
 execute if entity @s[team=Purple] run team join Purple @e[type=cat,tag=temp,limit=1]
 execute if entity @s[tag=Purple] run tag @e[type=cat,tag=temp,limit=1] add Purple
+execute if entity @s[team=Blank] run team join Blank @e[type=cat,tag=temp,limit=1]
+damage @e[type=cat,tag=temp,limit=1] 0.1 arrow by @s
 tag @e[type=item_display,tag=temp,limit=1] add chase
 tag @e[type=item_display,tag=temp,limit=1] remove temp
 tag @e[type=cat,tag=temp,limit=1] remove temp
