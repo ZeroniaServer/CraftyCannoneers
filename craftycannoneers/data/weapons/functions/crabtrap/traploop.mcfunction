@@ -1,2 +1,1 @@
-execute if entity @e[type=endermite,tag=CrabVehicle,tag=!CrabtrapImmune,tag=!justReleased,limit=1,distance=..0.8] run function weapons:crabtrap/capture
 execute if entity @e[type=cat,tag=CrabVehicle,tag=!CrabtrapImmune,tag=!justReleased,limit=1,distance=..0.8] run function weapons:crabtrap/capture

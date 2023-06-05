@@ -9,7 +9,6 @@ execute if score @s BombDelay matches 4 run tag @a[tag=!Blasted,gamemode=!specta
 #> Summon slimes
 scoreboard players set $blast BombDelay 0
 execute if entity @a[gamemode=!spectator,distance=..8.25] run scoreboard players set $blast BombDelay 1
-execute unless score $blast BombDelay matches 1 if entity @e[type=endermite,tag=CrabVehicle,limit=1,distance=..8.25] run scoreboard players set $blast BombDelay 1
 execute unless score $blast BombDelay matches 1 if entity @e[type=cat,tag=CrabVehicle,limit=1,distance=..8.25] run scoreboard players set $blast BombDelay 1
 execute unless score $blast BombDelay matches 1 if entity @e[type=drowned,tag=SharkEntity,limit=1,distance=..8.25] run scoreboard players set $blast BombDelay 1
 execute if score @s BombDelay matches 5 if score $blast BombDelay matches 1 run function weapons:bomb/summonslime

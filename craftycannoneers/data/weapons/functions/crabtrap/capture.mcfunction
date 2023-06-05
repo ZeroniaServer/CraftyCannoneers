@@ -10,6 +10,5 @@ playsound minecraft:block.wooden_trapdoor.close master @a ~ ~ ~ 1 1.2
 playsound minecraft:block.wooden_trapdoor.close master @a ~ ~ ~ 1 1.2
 playsound minecraft:entity.sheep.shear master @a ~ ~ ~ 1 2
 
-execute store success score $killcrab CmdData as @e[type=endermite,tag=CrabVehicle,tag=!justReleased,limit=1,distance=..1,sort=nearest] run function game:modifiers/crabs/killcrab
-execute unless score $killcrab CmdData matches 1 as @e[type=cat,tag=CrabVehicle,tag=!justReleased,limit=1,distance=..1,sort=nearest] run function game:modifiers/crabs/killcrab
+execute as @e[type=cat,tag=CrabVehicle,tag=!justReleased,limit=1,distance=..1,sort=nearest] run function game:modifiers/crabs/killcrab
 function weapons:crabtrap/break

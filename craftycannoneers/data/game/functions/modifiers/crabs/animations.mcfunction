@@ -1,7 +1,6 @@
-data modify entity @s[tag=!chase] Rotation[0] set from entity @e[type=endermite,tag=CrabVehicle,limit=1,sort=nearest] Rotation[0]
-data modify entity @s[tag=chase] Rotation[0] set from entity @e[type=cat,tag=CrabVehicle,limit=1,sort=nearest] Rotation[0]
+data modify entity @s Rotation[0] set from entity @e[type=cat,tag=CrabVehicle,limit=1,sort=nearest] Rotation[0]
 execute if entity @s[nbt={item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:117},Count:1b}}] on vehicle unless entity @s[nbt={Motion:[0.0d,0.0d,0.0d]}] on passengers run tag @s add Moving
-execute on vehicle if entity @s[type=endermite] run function game:modifiers/crabs/lifetime
+execute on vehicle on controller if entity @s[type=endermite] run function game:modifiers/crabs/lifetime
 
 execute if entity @s[tag=Moving,nbt={item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:117},Count:1b}}] run data merge entity @s {item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:118},Count:1b}}
 
@@ -15,8 +14,9 @@ execute if entity @s[tag=!Moving,nbt={item:{id:"minecraft:diamond_hoe",tag:{Cust
 execute if entity @s[tag=steal] run function game:modifiers/crabs/pinch
 
 #> Water detection - allows crab to swim
-execute on vehicle at @s[type=endermite,tag=!inwater] if predicate game:inwater at @s run function game:modifiers/crabs/enterwater
-execute on vehicle at @s[type=endermite,tag=inwater] unless predicate game:inwater at @s run function game:modifiers/crabs/exitwater
+execute on vehicle at @s[tag=!inwater] if predicate game:inwater at @s run function game:modifiers/crabs/enterwater
+execute on vehicle at @s[tag=inwater] unless predicate game:inwater at @s run function game:modifiers/crabs/exitwater
+execute on vehicle at @s[tag=inwater] if predicate game:inwater on controller if entity @s[type=endermite] on vehicle run function game:modifiers/crabs/enterwater
 
 #> Mode switching
 scoreboard players reset @s[tag=hasitem] crabtime
