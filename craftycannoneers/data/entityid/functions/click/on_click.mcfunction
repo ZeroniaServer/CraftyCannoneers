@@ -69,3 +69,6 @@ execute if entity @s[type=hopper_minecart,tag=!Opened] if entity @a[limit=1,tag=
 
 #> Cargo Traps
 execute if entity @s[type=villager,tag=CBTrap] on vehicle run tag @s add TrapExplode
+
+#> Camel (Boat Cannons)
+execute if entity @s[type=camel] on vehicle on vehicle on passengers on passengers if entity @s[tag=BoatCannon,tag=unoccupied] on vehicle on vehicle run ride @a[limit=1,tag=clicker] mount @s
