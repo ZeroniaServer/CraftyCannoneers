@@ -17,3 +17,6 @@ execute if entity @s[tag=Snowman] unless entity @e[type=armor_stand,tag=EasterEg
 execute at @s[tag=Goldy] unless score $goldypet CmdData matches 1.. on target if entity @s[tag=self] run function lobby:easteregg/goldy
 
 execute on target at @s[tag=self] run scoreboard players set $foundinteraction CmdData 1
+
+#> Boat Cannons
+execute if score $BoatCannons CmdData matches 1 if score $foundinteraction CmdData matches 1 if entity @s[tag=BoatCannon,tag=canclick] on vehicle on vehicle on passengers if entity @s[type=player,tag=self] run say valid
