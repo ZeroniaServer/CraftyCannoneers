@@ -17,3 +17,14 @@ execute if entity @s[tag=Snowman] unless entity @e[type=armor_stand,tag=EasterEg
 execute at @s[tag=Goldy] unless score $goldypet CmdData matches 1.. on target if entity @s[tag=self] run function lobby:easteregg/goldy
 
 execute on target at @s[tag=self] run scoreboard players set $foundinteraction CmdData 1
+
+#> Boats
+execute if score $foundinteraction CmdData matches 1 if entity @s[tag=boatoccupant] run scoreboard players set $hasplayer CmdData 0
+execute if score $foundinteraction CmdData matches 1 if entity @s[tag=boatoccupant] on vehicle on passengers if entity @s[type=player] run scoreboard players set $hasplayer CmdData 1
+execute if score $foundinteraction CmdData matches 1 if entity @s[tag=boatoccupant] on vehicle if score $hasplayer CmdData matches 0 run ride @a[tag=self,limit=1] mount @s
+execute if score $foundinteraction CmdData matches 1 if entity @s[tag=boatoccupant] if score $hasplayer CmdData matches 0 run data merge entity @s {width:0,height:0,response:0b}
+
+execute if score $foundinteraction CmdData matches 1 if entity @s[tag=BoatCannonBlocker] run scoreboard players set $hasplayer CmdData 0
+execute if score $foundinteraction CmdData matches 1 if entity @s[tag=BoatCannonBlocker] on vehicle on vehicle on vehicle on passengers if entity @s[type=player] run scoreboard players set $hasplayer CmdData 1
+execute if score $foundinteraction CmdData matches 1 if entity @s[tag=BoatCannonBlocker] if score $hasplayer CmdData matches 0 on vehicle on vehicle on vehicle run ride @a[tag=self,limit=1] mount @s
+execute if score $foundinteraction CmdData matches 1 if entity @s[tag=BoatCannonBlocker] if score $hasplayer CmdData matches 0 run data merge entity @s {response:0b}

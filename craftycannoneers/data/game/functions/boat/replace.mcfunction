@@ -1,11 +1,10 @@
 #> Summon new boat with correct rotation if dismounting
 execute at @s[tag=DismountCheck,tag=!Sinking] positioned ~ ~-0.3 ~ store success score $boatwatercheck CmdData if predicate game:instillwater
-execute if score $boatwatercheck CmdData matches 1 at @s[tag=DismountCheck,tag=!Sinking] align y positioned ~ ~0.7 ~ run function game:boat/rotatesplit
-execute unless score $boatwatercheck CmdData matches 1 at @s[tag=DismountCheck,tag=!Sinking] run function game:boat/rotatesplit
+execute if score $boatwatercheck CmdData matches 1 at @s[tag=DismountCheck,tag=!Sinking] align y positioned ~ ~0.7 ~ run function game:boat/rotate
+execute unless score $boatwatercheck CmdData matches 1 at @s[tag=DismountCheck,tag=!Sinking] run function game:boat/rotate
 
 #> Place new boat if sinking
-execute unless score $BoatCannons CmdData matches 1 if entity @s[tag=Sinking] run function game:boat/placenew
-execute if score $BoatCannons CmdData matches 1 if entity @s[tag=Sinking] run function game:boat/cannon/placenew
+execute if entity @s[tag=Sinking] run function game:boat/placenew
 
 #> Teleport previous occupant up if dismounting
 execute at @s[tag=1,tag=DismountCheck,tag=!Sinking] as @a[tag=inBoat1,distance=..1] run function game:boat/dismounter
