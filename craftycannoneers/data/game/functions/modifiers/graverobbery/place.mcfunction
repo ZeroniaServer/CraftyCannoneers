@@ -5,11 +5,9 @@ execute store result entity @s Pos[0] double 1 run scoreboard players get @s Cmd
 execute store result score @s CmdData run data get storage craftycannoneers:death Pos[2]
 execute store result entity @s Pos[2] double 1 run scoreboard players get @s CmdData
 
-#> Align to nearest floor for y-coordinate
+#> Align to world surface (lowest block) for y-coordinate
 execute store result score @s CmdData run data get storage craftycannoneers:death Pos[1]
-## TODO decide if we want to use ocean floor or have stuff floating on the ocean somehow??
-# execute at @s positioned over world_surface summon marker run function game:modifiers/graverobbery/floorcoord
-execute at @s positioned over ocean_floor summon marker run function game:modifiers/graverobbery/floorcoord
+execute at @s positioned over world_surface summon marker run function game:modifiers/graverobbery/floorcoord
 scoreboard players operation @s CmdData < $y CmdData
 execute store result entity @s Pos[1] double 1 run scoreboard players get @s CmdData
 
