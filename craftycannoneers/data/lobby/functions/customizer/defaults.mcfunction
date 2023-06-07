@@ -10,3 +10,5 @@ scoreboard players set $NoTracers CmdData 0
 scoreboard players set $Wildlife CmdData 0
 scoreboard players set $Storms CmdData 0
 scoreboard players set $LostCargo CmdData 0
+scoreboard players set $GraveRobbery CmdData 0
+scoreboard players set $BoatCannons CmdData 0

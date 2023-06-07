@@ -25,6 +25,9 @@ setblock -53 -23 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,c
 item replace entity @e[type=armor_stand,tag=GraveRobberyIcon,limit=1] armor.head with diamond_hoe{CustomModelData:420}
 setblock -54 -23 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"light_blue",messages:['{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 29013"}}','{"text":""}','{"translate":"modifier.grave_robbery","color":"#33ccff"}','{"text":""}']}}
 
+item replace entity @e[type=armor_stand,tag=BoatCannonsIcon,limit=1] armor.head with diamond_hoe{CustomModelData:690}
+setblock -55 -23 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"light_blue",messages:['{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 50317"}}','{"text":""}','{"translate":"modifier.boat_cannons","color":"#33ccff"}','{"text":""}']}}
+
 function lobby:customizer/modifiers/updatemodifiersigns
 
 scoreboard players set $ModiMapActive CmdData 1
