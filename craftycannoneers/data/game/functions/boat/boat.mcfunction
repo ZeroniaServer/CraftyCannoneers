@@ -1,3 +1,6 @@
+#> Fire boat cannons
+execute if entity @s[tag=FireCannon] run function game:boat/cannon/firecannon
+
 #> Sailing check
 execute at @s[tag=1,tag=!Sinking] if entity @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat1,limit=1] run tag @s add Sailing
 execute at @s[tag=2,tag=!Sinking] if entity @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat2,limit=1] run tag @s add Sailing

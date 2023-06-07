@@ -1,6 +1,10 @@
-#> Check if player is holding a Cannonball/Gunpowder and facing the right direction
+#> Check if player is holding the right items and facing the right direction
 scoreboard players set $rightdir CmdData 0
-execute on vehicle on passengers if entity @s[type=player] unless entity @s[predicate=!cannons:holdgp,predicate=!cannons:holdcb,predicate=!cannons:holdfb,predicate=!cannons:holdcbc,predicate=!cannons:holdccb,predicate=!cannons:holdcocb,predicate=!cannons:holdgcb,predicate=!cannons:holdpcb,predicate=!cannons:holdtcb,predicate=!cannons:holdbcb,predicate=!cannons:holdgocb] anchored eyes positioned as @s on vehicle on passengers rotated as @s[type=armor_stand] on vehicle on passengers if entity @s[type=player] anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.3] run scoreboard players set $rightdir CmdData 1
+execute on vehicle run scoreboard players add @s PowerM 0
+execute on vehicle if score @s PowerM matches 0 on passengers if entity @s[type=player,predicate=cannons:holdgp] anchored eyes positioned as @s on vehicle on passengers rotated as @s[type=armor_stand] on vehicle on passengers if entity @s[type=player] anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.3] run scoreboard players set $rightdir CmdData 1
+execute on vehicle if score @s PowerM matches 1..4 on passengers if entity @s[type=player] anchored eyes positioned as @s on vehicle on passengers rotated as @s[type=armor_stand] on vehicle on passengers if entity @s[type=player] anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.3] run scoreboard players set $rightdir CmdData 1
+execute on vehicle if score @s PowerM matches 5 on passengers if entity @s[type=player,predicate=!cannons:holdgp] anchored eyes positioned as @s on vehicle on passengers rotated as @s[type=armor_stand] on vehicle on passengers if entity @s[type=player] anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.3] run scoreboard players set $rightdir CmdData 1
+execute on vehicle if entity @s[tag=FireCannon] run scoreboard players set $rightdir CmdData 0
 
 #> Prevent clicking on Cannon if not looking in right direction
 execute if score $rightdir CmdData matches 1 on vehicle on passengers if entity @s[type=camel] on passengers on passengers run data merge entity @s[type=interaction,tag=!canclick] {width:0,height:0}

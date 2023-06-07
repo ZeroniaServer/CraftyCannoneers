@@ -2,7 +2,7 @@
 execute on vehicle rotated as @s on passengers positioned as @s[type=!player] run tp @s ~ ~ ~ ~ ~
 
 #> Handle Boat Cannon if enabled
-execute if score $BoatCannons CmdData matches 1 run function game:boat/movecannon
+execute if score $BoatCannons CmdData matches 1 run function game:boat/cannon/move
 
 #> Set banner color
 execute if entity @s[tag=1] if entity @a[team=Purple,predicate=game:boat/inboat1,limit=1] run item replace entity @s armor.head with purple_banner{BlockEntityTag:{Patterns:[{Pattern:mc,Color:15},{Pattern:rs,Color:10},{Pattern:ls,Color:10},{Pattern:ts,Color:10},{Pattern:hhb,Color:10},{Pattern:sku,Color:0}]}}

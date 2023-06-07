@@ -374,5 +374,12 @@ execute if entity @s[tag=3] run tag @e[type=armor_stand,tag=Rotate,limit=1] add 
 execute if entity @s[tag=4] run tag @e[type=boat,tag=Rotate,limit=1] add 4
 execute if entity @s[tag=4] run tag @e[type=armor_stand,tag=Rotate,limit=1] add 4
 
+#> Transfer Cannon data
+scoreboard players operation $temp CannonID = @s CannonID
+scoreboard players operation $temp cannonshot = @s cannonshot
+scoreboard players operation $temp playerUUID = @s playerUUID
+scoreboard players operation $temp PowerM = @s PowerM
+execute as @e[type=boat,tag=Rotate,limit=1] run function game:boat/cannon/transfer
+
 tag @e[type=boat,tag=Rotate,limit=1] remove Rotate
 tag @e[type=armor_stand,tag=Rotate,limit=1] remove Rotate

@@ -4,8 +4,8 @@ execute if score $boatwatercheck CmdData matches 1 at @s[tag=DismountCheck,tag=!
 execute unless score $boatwatercheck CmdData matches 1 at @s[tag=DismountCheck,tag=!Sinking] run function game:boat/rotatesplit
 
 #> Place new boat if sinking
-execute unless score $BoatCannons CmdData matches 1 run function game:boat/placenew
-execute if score $BoatCannons CmdData matches 1 run function game:boat/placenewcannon
+execute unless score $BoatCannons CmdData matches 1 if entity @s[tag=Sinking] run function game:boat/placenew
+execute if score $BoatCannons CmdData matches 1 if entity @s[tag=Sinking] run function game:boat/cannon/placenew
 
 #> Teleport previous occupant up if dismounting
 execute at @s[tag=1,tag=DismountCheck,tag=!Sinking] as @a[tag=inBoat1,distance=..1] run function game:boat/dismounter
@@ -23,5 +23,5 @@ execute if entity @s[tag=4] run tag @a[tag=inBoat4] remove inBoat4
 execute at @s on passengers on passengers on passengers on passengers run function arenaclear:kill
 execute at @s on passengers on passengers on passengers run function arenaclear:kill
 execute at @s on passengers on passengers run function arenaclear:kill
-execute at @s on passengers run function arenaclear:kill
+execute at @s on passengers unless entity @s[type=player] run function arenaclear:kill
 kill @s
