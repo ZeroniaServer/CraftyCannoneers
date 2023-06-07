@@ -10,6 +10,7 @@ execute if entity @s[scores={modisigns=17863},tag=!mobtesting] run function lobb
 execute if entity @s[scores={modisigns=59636},tag=!mobtesting] run function lobby:customizer/mobtest
 execute if entity @s[scores={modisigns=29013},tag=!mobtesting] run function lobby:customizer/mobtest
 execute if entity @s[scores={modisigns=71845},tag=!mobtesting] run function lobby:customizer/mobtest
+execute if entity @s[scores={modisigns=50317},tag=!mobtesting] run function lobby:customizer/mobtest
 execute if entity @s[scores={modisigns=256652},tag=!mobtesting] run function lobby:customizer/mobtest
 
 scoreboard players add @s moditimer 1

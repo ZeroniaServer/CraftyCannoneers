@@ -1,23 +1,22 @@
 {
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:loot_table",
-            "name": "weapons:gold"
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "weapons:gold"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_count",
+          "count": {
+            "min": 1,
+            "max": 4
           }
-        ],
-        "functions": [
-          {
-            "function": "minecraft:set_count",
-            "count": {
-              "min": 1,
-              "max": 4
-            }
-          }
-        ]
-      }
-    ]
-  }
-  
+        }
+      ]
+    }
+  ]
+}

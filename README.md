@@ -9,3 +9,4 @@ Datapack for Crafty Cannoneers. Made by Zeronia.
 - [Misode's generators](https://misode.github.io/)
 - [vdvman1's Raycasting Customizer](https://skylinerw.com/vdvman1/raycast/)
 - [AESTD Tag Library](https://github.com/Aeldrion/AESTD-tag-library)
+- [Cloud Wolf's CloudScripts](https://github.com/CloudWolfYT/CloudScripts)

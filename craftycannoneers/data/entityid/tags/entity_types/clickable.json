@@ -4,6 +4,7 @@
     "minecraft:wandering_trader",
     "minecraft:item_frame",
     "minecraft:hopper_minecart",
-    "minecraft:camel"
+    "minecraft:camel",
+    "minecraft:boat"
   ]
 }

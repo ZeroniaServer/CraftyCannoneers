@@ -10,6 +10,8 @@ summon armor_stand -53 -21.4 9 {Tags:["LobbyEntity","NoTracersIcon","ModifierIco
 summon armor_stand -54 -21.4 9 {Tags:["LobbyEntity","SharksIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
 summon armor_stand -55 -21.4 9 {Tags:["LobbyEntity","SeaStormsIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
 summon armor_stand -53 -22.4 9 {Tags:["LobbyEntity","LostCargoIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
+summon armor_stand -54 -22.4 9 {Tags:["LobbyEntity","GraveRobberyIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
+summon armor_stand -55 -22.4 9 {Tags:["LobbyEntity","BoatCannonsIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
 
 fill -53 -24 9 -55 -22 9 air
 
@@ -22,6 +24,8 @@ scoreboard players set $NoTracers CmdData 0
 scoreboard players set $Wildlife CmdData 0
 scoreboard players set $Storms CmdData 0
 scoreboard players set $LostCargo CmdData 0
+scoreboard players set $GraveRobbery CmdData 0
+scoreboard players set $BoatCannons CmdData 0
 scoreboard players reset @e[type=armor_stand,tag=Parrot,limit=1] CmdData
 
 bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"6","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]

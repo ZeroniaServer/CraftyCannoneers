@@ -14,17 +14,17 @@
           "tag": "{HideFlags:127,CustomModelData:31,Cannonball:4b,Unbreakable:1b,display:{Name:'[{\"translate\":\"cannonball.gas\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"cannonball.gas.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"cannonball.gas.lore.2\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"translate\":\"cannonball.gas.lore.3\",\"italic\":false,\"color\":\"aqua\"}]','[{\"translate\":\"cannonball.gas.lore.4\",\"italic\":false,\"color\":\"aqua\"}]']}}"
         },
         {
-            "function": "minecraft:set_nbt",
-            "tag": "{NoDrop:1b}",
-            "conditions": [
-                {
-                    "condition": "minecraft:entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "team": "Lobby"
-                    }
-                }
-            ]
+          "function": "minecraft:set_nbt",
+          "tag": "{NoDrop:1b}",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
+            }
+          ]
         }
       ]
     }

@@ -1,176 +1,175 @@
 {
-    "type": "minecraft:chest",
-    "pools": [
-      {
-        "rolls": {
-          "type": "minecraft:uniform",
-          "min": 1,
-          "max": 1
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 1
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "cannons:normal",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 1
+              }
+            }
+          ]
         },
-        "entries": [
-          {
-            "type": "minecraft:loot_table",
-            "weight": 1,
-            "name": "cannons:normal",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 1,
-                  "max": 1
-                }
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "cannons:copper",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 1
               }
-            ]
-          },
-          {
-            "type": "minecraft:loot_table",
-            "weight": 1,
-            "name": "cannons:copper",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 1,
-                  "max": 1
-                }
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:weather_check",
+              "raining": true
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "weapons:golden_apple"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "name": "weapons:bomb",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 2
               }
-            ],
-            "conditions": [
-              {
-                "condition": "minecraft:weather_check",
-                "raining": true
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "weapons:skeleton_key",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 1
               }
-            ]
-          },
-          {
-            "type": "minecraft:loot_table",
-            "weight": 1,
-            "name": "weapons:golden_apple"
-          },
-          {
-            "type": "minecraft:loot_table",
-            "weight": 2,
-            "name": "weapons:bomb",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 2,
-                  "max": 2
-                }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "weapons:hook",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 1
               }
-            ]
-          },
-          {
-            "type": "minecraft:loot_table",
-            "weight": 1,
-            "name": "weapons:skeleton_key",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 1,
-                  "max": 1
-                }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "weapons:shield",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 1
               }
-            ]
-          },
-          {
-            "type": "minecraft:loot_table",
-            "weight": 1,
-            "name": "weapons:hook",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 1,
-                  "max": 1
-                }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "weapons:boarding_axe",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 1
               }
-            ]
-          },
-          {
-            "type": "minecraft:loot_table",
-            "weight": 1,
-            "name": "weapons:shield",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 1,
-                  "max": 1
-                }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "name": "weapons:trooper_ale",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 1
               }
-            ]
-          },
-          {
-            "type": "minecraft:loot_table",
-            "weight": 1,
-            "name": "weapons:boarding_axe",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 1,
-                  "max": 1
-                }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "name": "weapons:crab_trap_empty",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 1
               }
-            ]
-          },
-          {
-            "type": "minecraft:loot_table",
-            "weight": 1,
-            "name": "weapons:trooper_ale",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 1,
-                  "max": 1
-                }
-              }
-            ]
-          },
-          {
-            "type": "minecraft:loot_table",
-            "weight": 2,
-            "name": "weapons:crab_trap_empty",
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 1,
-                  "max": 1
-                }
-              }
-            ],
-            "conditions": [
-              {
-                "condition": "minecraft:value_check",
-                "value": {
-                  "type": "minecraft:score",
-                  "target": {
-                    "type": "minecraft:fixed",
-                    "name": "$Wildlife"
-                  },
-                  "score": "CmdData",
-                  "scale": 1
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$Wildlife"
                 },
-                "range": 1
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-  
+                "score": "CmdData",
+                "scale": 1
+              },
+              "range": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

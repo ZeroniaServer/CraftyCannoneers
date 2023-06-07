@@ -71,6 +71,14 @@ execute if entity @s[type=hopper_minecart,tag=!Opened] if entity @a[limit=1,tag=
 execute if entity @s[type=villager,tag=CBTrap] on vehicle run tag @s add TrapExplode
 
 #> Boat Cannons
-execute if score $BoatCannons CmdData matches 1 if entity @s[type=villager,tag=BoatCannon] on vehicle on vehicle on passengers if entity @s[type=player,tag=clicker] run say valid
-execute if entity @s[type=camel,tag=BoatCannonAnchor] on vehicle on vehicle run ride @a[limit=1,tag=clicker] mount @s[type=boat]
-execute if entity @s[type=villager,tag=BoatCannon] on vehicle on vehicle on vehicle run ride @a[limit=1,tag=clicker] mount @s[type=boat]
+execute if score $BoatCannons CmdData matches 1 if entity @s[type=villager,tag=BoatCannon] on vehicle on vehicle if entity @s[tag=!FireCannon] on passengers if entity @s[type=player,tag=clicker] run function game:boat/cannon/interact
+
+#Mount from clicking camel
+execute if entity @s[type=camel,tag=BoatCannonAnchor] run scoreboard players set $hasplayer CmdData 0
+execute if entity @s[type=camel,tag=BoatCannonAnchor] on vehicle on passengers if entity @s[type=player] run scoreboard players set $hasplayer CmdData 1
+execute if entity @s[type=camel,tag=BoatCannonAnchor] if score $hasplayer CmdData matches 0 on vehicle run ride @a[limit=1,tag=clicker] mount @s
+
+#Mount from clicking villager
+execute if entity @s[type=villager,tag=BoatCannon] run scoreboard players set $hasplayer CmdData 0
+execute if entity @s[type=villager,tag=BoatCannon] on vehicle on vehicle on passengers if entity @s[type=player] run scoreboard players set $hasplayer CmdData 1
+execute if entity @s[type=villager,tag=BoatCannon] if score $hasplayer CmdData matches 0 on vehicle on vehicle run ride @a[limit=1,tag=clicker] mount @s

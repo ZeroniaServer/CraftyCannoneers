@@ -36,6 +36,9 @@ execute if score @s modisigns matches 256652 run function lobby:customizer/modif
 #Grave Robbery
 execute if score @s modisigns matches 29013 run function lobby:customizer/modifiers/graverobbery
 
+#Boat Cannons
+execute if score @s modisigns matches 50317 run function lobby:customizer/modifiers/boatcannons
+
 schedule clear lobby:customizer/modifiers/off
 schedule clear lobby:customizer/open
 schedule clear lobby:customizer/updatesigns

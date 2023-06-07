@@ -3,11 +3,16 @@
     "requirement": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "location": {
-          "block": {
-            "tag": "minecraft:fence_gates"
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "tag": "minecraft:fence_gates"
+              }
+            }
           }
-        }
+        ]
       }
     }
   },

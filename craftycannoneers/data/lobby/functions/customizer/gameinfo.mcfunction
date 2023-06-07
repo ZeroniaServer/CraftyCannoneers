@@ -9,9 +9,8 @@ execute if score $NoTracers CmdData matches 1 run scoreboard players add $modifi
 execute if score $Wildlife CmdData matches 1 run scoreboard players add $modifiers CmdData 1
 execute if score $Storms CmdData matches 1 run scoreboard players add $modifiers CmdData 1
 execute if score $LostCargo CmdData matches 1 run scoreboard players add $modifiers CmdData 1
-#TODO these last 2 are undecided but i'm adding them as placeholders
 execute if score $GraveRobbery CmdData matches 1 run scoreboard players add $modifiers CmdData 1
-execute if score $NightMode CmdData matches 1 run scoreboard players add $modifiers CmdData 1
+execute if score $BoatCannons CmdData matches 1 run scoreboard players add $modifiers CmdData 1
 
 execute if score $modifiers CmdData matches 1.. run function lobby:customizer/modifiers/generatelist
 
