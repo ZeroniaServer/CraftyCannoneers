@@ -18,7 +18,7 @@ execute on vehicle run scoreboard players operation @s[tag=FireCannon] playerUUI
 
 #> Remove gunpowder
 execute store success score $removegp CmdData if entity @s[predicate=!cannons:holdgp,predicate=!cannons:holdbcb,predicate=!cannons:holdcb,predicate=!cannons:holdcbc,predicate=!cannons:holdccb,predicate=!cannons:holdcocb,predicate=!cannons:holdfb,predicate=!cannons:holdgcb,predicate=!cannons:holdgocb,predicate=!cannons:holdpcb,predicate=!cannons:holdtcb]
-execute if score $removegp CmdData matches 1 on vehicle run function game:boat/cannon/unloadgunpowder
+execute if score $removegp CmdData matches 1 on vehicle if score @s PowerM matches 1.. run function game:boat/cannon/unloadgunpowder
 execute if score $removegp CmdData matches 1 run loot give @s[gamemode=!creative] loot weapons:gunpowder
 
 #> Consume items otherwise
