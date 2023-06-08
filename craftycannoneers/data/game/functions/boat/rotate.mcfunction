@@ -1,7 +1,7 @@
 execute store result score @s[tag=!respawnboat] eyeclick run data get entity @s Rotation[0]
 execute if score @s eyeclick matches 180 run scoreboard players set @s eyeclick -180
 
-function game:boat/rotate/root
+function game:boat/rotate/tree/root
 
 execute if entity @s[tag=1] run tag @e[type=boat,tag=Rotate,limit=1] add 1
 execute if entity @s[tag=1] run tag @e[type=armor_stand,tag=Rotate,limit=1] add 1

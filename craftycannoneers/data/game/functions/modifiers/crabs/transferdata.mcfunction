@@ -14,6 +14,6 @@ data modify entity @s CustomName set from block ~ 256 ~ front_text.messages[0]
 setblock ~ 256 ~ air
 execute if entity @a[predicate=game:matches_uuid,limit=1] run data merge entity @s {CustomNameVisible:1b}
 
-execute on passengers on passengers run data merge entity @s {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.05f,0f],scale:[1f,1f,1f]},start_interpolation:-1,interpolation_duration:0}
+execute on passengers on passengers run data merge entity @s {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.05f,0f],scale:[1f,1f,1f]},start_interpolation:0,interpolation_duration:0}
 
 tag @s remove new

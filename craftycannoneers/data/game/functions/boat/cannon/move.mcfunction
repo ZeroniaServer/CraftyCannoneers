@@ -12,13 +12,15 @@ execute if score $rightdir CmdData matches 1 on vehicle on passengers if entity 
 execute if score $rightdir CmdData matches 0 on vehicle on passengers if entity @s[type=camel] on passengers on passengers run data merge entity @s[type=interaction,tag=canclick] {width:1,height:-1}
 execute if score $rightdir CmdData matches 0 on vehicle on passengers if entity @s[type=camel] on passengers on passengers run tag @s[type=interaction,tag=canclick] remove canclick
 
-#> Detect occupied boat and adjust hitbox
+#> Detect occupied boat and adjust hitbox + replace display
 scoreboard players set $hasplayer CmdData 0
 execute on vehicle on passengers if entity @s[type=player] run scoreboard players set $hasplayer CmdData 1
 execute if score $hasplayer CmdData matches 1 on vehicle on passengers if entity @s[type=camel] on passengers on passengers run data merge entity @s[type=interaction,tag=!occupied] {width:1,height:-1}
 execute if score $hasplayer CmdData matches 1 on vehicle on passengers if entity @s[type=camel] on passengers on passengers run tag @s[type=interaction,tag=!occupied] add occupied
+execute if score $hasplayer CmdData matches 1 on vehicle on passengers on passengers on passengers if entity @s[type=item_display,tag=BoatCannonDisplay] on vehicle at @s run function game:boat/cannon/displayreplace
 
 #> Rotate the Cannon along with the boat
 execute rotated as @s on vehicle on passengers positioned as @s[type=camel] run tp @s ~ ~ ~ ~ ~
-execute rotated as @s on vehicle on passengers on passengers on passengers positioned as @s run tp @s ~ ~ ~ ~ ~
+execute rotated as @s on vehicle on passengers on passengers positioned as @s[type=villager] run tp @s ~ ~ ~ ~ ~
+execute rotated as @s on vehicle on passengers on passengers on passengers positioned as @s run tp @s[tag=BoatCannonDisplay] ~ ~ ~ ~ ~
 execute on vehicle on passengers if entity @s[type=camel] run function everytick:permababy
