@@ -80,3 +80,6 @@ execute positioned 58 -36.8 17 run particle bubble_column_up 58 -36.8 17 1.4 0 0
 
 #> Traders
 execute as @e[type=wandering_trader,tag=Trader] at @s run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer,distance=..10]
+
+#> Kill marked entities
+execute if score $markkill CmdData matches 1.. as @e[tag=markkill] at @s if loaded ~ ~ ~ run function arenaclear:kill
