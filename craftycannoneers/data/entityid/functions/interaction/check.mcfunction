@@ -20,4 +20,3 @@ execute on target at @s[tag=self] run scoreboard players set $foundinteraction C
 
 #> Boats
 execute if score $foundinteraction CmdData matches 1 if entity @s[tag=boatoccupant] on vehicle run ride @a[tag=self,limit=1] mount @s[tag=!Sailing]
-execute if score $foundinteraction CmdData matches 1 if entity @s[tag=BoatCannonBlocker] on vehicle on vehicle on vehicle run ride @a[tag=self,limit=1] mount @s[tag=!Sailing]

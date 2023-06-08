@@ -3,10 +3,9 @@ kill @e[type=boat,tag=Boat]
 kill @e[type=interaction,tag=boatoccupant]
 
 #> Boat Cannons
-execute as @e[type=husk,tag=BoatCannonDisplay] at @s run function arenaclear:kill
+execute as @e[type=husk,tag=BoatCannonEntity] at @s run function arenaclear:kill
 execute as @e[type=villager,tag=BoatCannon] at @s run function arenaclear:kill
 execute as @e[type=camel,tag=BoatCannonAnchor] at @s run function arenaclear:kill
-kill @e[type=interaction,tag=BoatCannonBlocker]
 kill @e[type=item_display,tag=BoatCannonDisplay]
 kill @e[type=marker,tag=bcannon]
 
