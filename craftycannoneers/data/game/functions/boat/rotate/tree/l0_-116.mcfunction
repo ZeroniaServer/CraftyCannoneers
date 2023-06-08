@@ -1,8 +1,8 @@
-execute if score @s eyeclick matches -116 run function game:boat/rotate/deg/-116
-execute if score @s eyeclick matches -115 run function game:boat/rotate/deg/-115
-execute if score @s eyeclick matches -114 run function game:boat/rotate/deg/-114
-execute if score @s eyeclick matches -113 run function game:boat/rotate/deg/-113
-execute if score @s eyeclick matches -112 run function game:boat/rotate/deg/-112
-execute if score @s eyeclick matches -111 run function game:boat/rotate/deg/-111
-execute if score @s eyeclick matches -110 run function game:boat/rotate/deg/-110
-execute if score @s eyeclick matches -109 run function game:boat/rotate/deg/-109
+execute if score @s eyeclick matches -116 run function game:boat/rotate/action/-116
+execute if score @s eyeclick matches -115 run function game:boat/rotate/action/-115
+execute if score @s eyeclick matches -114 run function game:boat/rotate/action/-114
+execute if score @s eyeclick matches -113 run function game:boat/rotate/action/-113
+execute if score @s eyeclick matches -112 run function game:boat/rotate/action/-112
+execute if score @s eyeclick matches -111 run function game:boat/rotate/action/-111
+execute if score @s eyeclick matches -110 run function game:boat/rotate/action/-110
+execute if score @s eyeclick matches -109 run function game:boat/rotate/action/-109
