@@ -2,5 +2,9 @@
 execute unless score @s click matches 7.. run scoreboard players add @s click 1
 execute if score @s click matches 7.. run tag @s add DismountCheck
 
+#> Hide interaction
+execute unless entity @s[tag=hideinteraction] on passengers run data merge entity @s {width:0,height:0,response:0b}
+tag @s[tag=!hideinteraction] add hideinteraction
+
 #> Dismount check
 execute at @s[tag=DismountCheck,tag=!Sinking] run function game:boat/dismountcheck
