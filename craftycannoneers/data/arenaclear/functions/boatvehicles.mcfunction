@@ -15,5 +15,3 @@ summon marker 31 -30 0 {Tags:["2","respawnboat"]}
 summon marker 83 -30 12 {Tags:["3","respawnboat"]}
 summon marker 57 -30 -12 {Tags:["4","respawnboat"]}
 execute as @e[type=marker,tag=respawnboat] at @s run function game:boat/placenew
-
-execute as @e[type=armor_stand,tag=BoatAS] at @s run function game:boat/copyrotation
