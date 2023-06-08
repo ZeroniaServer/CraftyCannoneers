@@ -9,7 +9,7 @@ execute if score $BoatCannons CmdData matches 1 as @e[type=camel,tag=new] at @s 
 
 execute if score $BoatCannons CmdData matches 1 as @e[type=villager,tag=new] at @s run summon item_display ~ ~0.73125 ~ {Rotation:[-20.0f,0.0f],Tags:["BoatCannonDisplay","new"]}
 
-execute if entity @s[type=boat] if score $BoatCannons CmdData matches 1 run ride @e[type=item_display,tag=BoatCannonDisplay,tag=new,limit=1] mount @e[type=villager,tag=new,limit=1]
+execute if score $BoatCannons CmdData matches 1 run ride @e[type=item_display,tag=BoatCannonDisplay,tag=new,limit=1] mount @e[type=villager,tag=new,limit=1]
 execute if score $BoatCannons CmdData matches 1 run data merge entity @e[type=item_display,tag=BoatCannonDisplay,tag=new,limit=1] {start_interpolation:0,interpolation_duration:0,item_display:"head",transformation:{scale:[0.4645f,0.4645f,0.4645f],translation:[0.0f,1.00375f,0.0f]}}
 
 execute if score $BoatCannons CmdData matches 1 run ride @e[type=villager,tag=new,limit=1] mount @e[type=camel,tag=new,limit=1]
