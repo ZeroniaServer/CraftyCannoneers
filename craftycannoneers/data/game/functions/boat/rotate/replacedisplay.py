@@ -6,4 +6,4 @@ for i in range(-90,90):
     g.write("execute on passengers run tag @s[type=husk] remove new\n")
     g.write("execute on vehicle on vehicle run function game:boat/cannon/updategunpowder\n")
     g.write("execute on passengers run kill @s[type=item_display,tag=BoatCannonDisplay]\n")
-    g.write("execute on passengers run tag @s[type=marker,tag=bcannon] add occupied\n\n")
+    g.write("execute on passengers run tag @s[type=marker,tag=bcannon] add occupied")

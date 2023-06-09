@@ -5,4 +5,3 @@ execute on passengers run tag @s[type=husk] remove new
 execute on vehicle on vehicle run function game:boat/cannon/updategunpowder
 execute on passengers run kill @s[type=item_display,tag=BoatCannonDisplay]
 execute on passengers run tag @s[type=marker,tag=bcannon] add occupied
-
