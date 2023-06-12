@@ -27,9 +27,10 @@ execute if entity @s[tag=!hasitem,scores={crabtime=100..}] run function game:mod
 
 #> Make sprints temporary
 scoreboard players add @s[tag=itemsprint] CmdData 1
-execute at @s[tag=itemsprint] on vehicle at @a[team=Orange,distance=..5,limit=1,sort=nearest] run damage @s[tag=Purple] 0.1 sonic_boom at ~ ~ ~
-execute at @s[tag=itemsprint] on vehicle at @a[team=Purple,distance=..5,limit=1,sort=nearest] run damage @s[tag=Orange] 0.1 sonic_boom at ~ ~ ~
-execute at @s[tag=itemsprint] on vehicle at @a[distance=..5,limit=1,sort=nearest] run damage @s[tag=!Purple,tag=!Orange] 0.1 sonic_boom at ~ ~ ~
+execute at @s[tag=itemsprint,scores={CmdData=..3}] on vehicle run damage @s 0.1 sonic_boom by @s
+execute at @s[tag=itemsprint,scores={CmdData=4..}] on vehicle at @a[team=Orange,distance=..5,limit=1,sort=nearest] run damage @s[tag=Purple] 0.1 sonic_boom at ~ ~ ~
+execute at @s[tag=itemsprint,scores={CmdData=4..}] on vehicle at @a[team=Purple,distance=..5,limit=1,sort=nearest] run damage @s[tag=Orange] 0.1 sonic_boom at ~ ~ ~
+execute at @s[tag=itemsprint,scores={CmdData=4..}] on vehicle at @a[distance=..5,limit=1,sort=nearest] run damage @s[tag=!Purple,tag=!Orange] 0.1 sonic_boom at ~ ~ ~
 execute if score @s[tag=chase] CmdData matches 50.. on vehicle run function game:modifiers/crabs/return
 execute if score @s CmdData matches 50.. run tag @s remove itemsprint
 execute if score @s CmdData matches 50.. on passengers if data entity @s item{id:"minecraft:goat_horn"} on vehicle run tag @s add hashorn
