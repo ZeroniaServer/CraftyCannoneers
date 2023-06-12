@@ -7,4 +7,4 @@ execute at @s[tag=piercing] unless entity @e[type=boat,tag=Boat,distance=..4] ru
 
 #Kills arrows in the ground / outside Combat Area
 execute at @s[nbt={inGround:1b}] run function everytick:arrowbreak
-kill @s[predicate=game:tutorialbounds,predicate=!tutorial:combatarea]
+execute at @s[predicate=game:tutorialbounds,predicate=!tutorial:combatarea] run function everytick:arrowbreak
