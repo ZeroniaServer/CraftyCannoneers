@@ -14,6 +14,8 @@ execute at @s[scores={cannonshot=5,PowerM=3..4}] run scoreboard players set @s c
 execute at @s[scores={cannonshot=5,PowerM=5..}] run playsound cannonprime master @a ~ ~ ~ 0.4 1.6
 
 #> Particles/Sounds
+#TODO flame particles for gunpowder slot @YZERO
+
 #Normal Cannonball
 execute at @s[scores={cannonshot=30..,CannonID=1}] run playsound cannonshot master @a ~ ~ ~ 6 1
 execute at @s[scores={cannonshot=30..,CannonID=1}] run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1
