@@ -64,3 +64,5 @@ execute if score @s entityid.30 matches 0 run tag @s add entityid.nbit30
 execute if score @s entityid.30 matches 1 run tag @s add entityid.bit30
 execute if score @s entityid.31 matches 0 run tag @s add entityid.nbit31
 execute if score @s entityid.31 matches 1 run tag @s add entityid.bit31
+
+data modify entity @s pickup set value 0b
