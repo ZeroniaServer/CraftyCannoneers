@@ -3,6 +3,7 @@ execute as @a if score @s playerUUID = $currentpcb playerUUID run tag @s add Pla
 execute unless entity @a[tag=PlayerCannon,limit=1] run scoreboard players reset @s playerUUID
 advancement grant @a[tag=PlayerCannon,limit=1] only tutorial:zzzunlockables/playercannonball
 
+execute as @a[tag=PlayerCannon,gamemode=!spectator,limit=1] run ride @s dismount
 execute as @a[tag=PlayerCannon,gamemode=!spectator,limit=1] run gamemode spectator @s
 spectate @s @a[tag=PlayerCannon,limit=1]
 tag @a[tag=PlayerCannon,limit=1] add InPlayerCB

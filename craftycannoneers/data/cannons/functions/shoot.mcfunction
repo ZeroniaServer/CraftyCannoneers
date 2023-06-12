@@ -47,11 +47,13 @@ execute at @s[tag=PlayerCannonball,tag=!Submerged,scores={CmdData=4..}] run part
 execute at @s[tag=TracerCannonball,scores={CmdData=1..}] run function cannons:tracerparticle
 
 #> Landing conditions
-execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball] if block ~ ~-1 ~ water run tag @s add Submerged
-execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball,tag=Submerged] run function cannons:waterkill
+execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball,tag=!boatlaunch] if block ~ ~-1 ~ water run tag @s add Submerged
+execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball,tag=Submerged,tag=!boatlaunch] run function cannons:waterkill
 
-execute at @s[tag=PlayerCannonball] if block ~ ~-1 ~ water run scoreboard players set $landed CmdData 1
-execute at @s[tag=TracerCannonball] if block ~ ~-1 ~ water run scoreboard players set $landed CmdData 1
+execute at @s[tag=PlayerCannonball,tag=!boatlaunch] if block ~ ~-1 ~ water run scoreboard players set $landed CmdData 1
+execute at @s[tag=TracerCannonball,tag=!boatlaunch] if block ~ ~-1 ~ water run scoreboard players set $landed CmdData 1
+
+execute at @s[tag=boatlaunch] unless block ~ ~-1 ~ water run tag @s remove boatlaunch
 
 execute store result score @s dx2 run scoreboard players get @s x2
 execute store result score @s dy2 run scoreboard players get @s y2

@@ -5,14 +5,12 @@ execute at @s[scores={cannonshot=1}] run playsound cannonload master @a ~ ~ ~ 1 
 
 #> Shoot
 #TODO make fire time depend on gunpowder amount (PowerM score) - less gunpowder = quicker shot
-execute store result score @s[scores={cannonshot=30}] eyeclick run data get entity @s Rotation[0]
-scoreboard players operation @s[scores={cannonshot=30}] eyeclick /= 2 const
-tag @s[scores={cannonshot=30}] add Shoot
-execute at @s[scores={cannonshot=30}] positioned ^ ^1 ^1 run function game:boat/rotate/tree/root
+execute store result score @s[scores={cannonshot=30..}] eyeclick run data get entity @s Rotation[0]
+scoreboard players operation @s[scores={cannonshot=30..}] eyeclick /= 2 const
+tag @s[scores={cannonshot=30..}] add Shoot
+execute at @s[scores={cannonshot=30..}] positioned ^ ^2 ^3.6 run function game:boat/rotate/tree/root
 
-#TODO give summoned cannonball the player's name + UUID @Evtema
-#TODO make sure player cannonballs dismount the player properly @Evtema
-#TODO cannonball trajectories @YZERO
+#TODO polish cannonball trajectories @YZERO
 #TODO sounds/particles @YZERO
 
 #> Finish shooting

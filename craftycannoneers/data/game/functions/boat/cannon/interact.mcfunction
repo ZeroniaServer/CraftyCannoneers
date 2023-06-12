@@ -10,6 +10,7 @@ execute if predicate cannons:holdccb on vehicle run scoreboard players set @s Ca
 execute if predicate cannons:holdbcb on vehicle run scoreboard players set @s CannonID 6
 execute if predicate cannons:holdpcb on vehicle run scoreboard players set @s CannonID 7
 execute if predicate cannons:holdtcb on vehicle run scoreboard players set @s CannonID 8
+execute if predicate cannons:holdtcb on vehicle run scoreboard players set @s cannonshot 30
 execute if predicate cannons:holdgocb on vehicle run scoreboard players set @s CannonID 9
 execute if predicate cannons:holdcocb on vehicle run scoreboard players set @s CannonID 10
 scoreboard players operation $temp playerUUID = @s playerUUID
