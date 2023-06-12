@@ -23,6 +23,6 @@ execute if score $BoatCannons CmdData matches 1 run tag @e[type=villager,tag=new
 execute if score $BoatCannons CmdData matches 1 run tag @e[type=husk,tag=new,limit=1] remove new
 execute if score $BoatCannons CmdData matches 1 run tag @e[type=camel,tag=new,limit=1] remove new
 execute if score $BoatCannons CmdData matches 1 run tag @e[type=item_display,tag=BoatCannonDisplay,tag=new,limit=1] remove new
-execute if score $BoatCannons CmdData matches 1 as @e[type=boat,tag=new,limit=1] run function cannons:randomaccuracy
-tag @e[type=armor_stand,tag=new] remove new
-tag @e[type=boat,tag=new] remove new
+execute if score $BoatCannons CmdData matches 1 as @e[type=boat,tag=new,limit=1] run function cannons:accuracy/randomaccuracy
+tag @e[type=armor_stand,tag=new,limit=1] remove new
+tag @e[type=boat,tag=new,limit=1] remove new
