@@ -18,8 +18,8 @@ execute if entity @s[tag=4] if entity @a[team=Orange,predicate=game:boat/inboat4
 tag @s[tag=New] remove New
 
 #> Killing (failsafe)
-kill @s[predicate=!game:boat/inboat]
-execute unless entity @e[type=boat,tag=BoatBoat,tag=1,distance=..2] run kill @s[tag=1]
-execute unless entity @e[type=boat,tag=BoatBoat,tag=2,distance=..2] run kill @s[tag=2]
-execute unless entity @e[type=boat,tag=BoatBoat,tag=3,distance=..2] run kill @s[tag=3]
-execute unless entity @e[type=boat,tag=BoatBoat,tag=4,distance=..2] run kill @s[tag=4]
+execute at @s[predicate=!game:boat/inboat] run function game:boat/boatbreak
+execute unless entity @e[type=boat,tag=BoatBoat,tag=1,distance=..2] at @s[tag=1,tag=!kill] run function game:boat/boatbreak
+execute unless entity @e[type=boat,tag=BoatBoat,tag=2,distance=..2] at @s[tag=2,tag=!kill] run function game:boat/boatbreak
+execute unless entity @e[type=boat,tag=BoatBoat,tag=3,distance=..2] at @s[tag=3,tag=!kill] run function game:boat/boatbreak
+execute unless entity @e[type=boat,tag=BoatBoat,tag=4,distance=..2] at @s[tag=4,tag=!kill] run function game:boat/boatbreak

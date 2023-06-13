@@ -20,5 +20,8 @@ execute as @e[type=villager,tag=BlastBarrel,distance=..5] run function weapons:b
 #> Break nearby Cargo Barrels
 execute as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..5] run function game:modifiers/lostcargo/spillbarrel
 
+#> Break nearby Boats
+execute as @e[type=boat,tag=BoatBoat,distance=..5] run damage @s 0.5 explosion at ~ ~ ~
+
 #> Hurt players in damage zones
 execute as @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..5] run function weapons:barrel/damage/tier1

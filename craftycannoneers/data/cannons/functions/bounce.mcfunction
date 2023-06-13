@@ -24,9 +24,9 @@ execute at @s[tag=!InSafezone,tag=!Hit2] if score $explode RNGscore matches 80..
 execute at @s[tag=InSafezone,tag=!Hit2] if score $explode RNGscore matches 80.. run summon marker ~ ~1 ~ {Tags:["ImpactMarker","Power1"]}
 execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run playsound cannonball master @a ~ ~ ~ 4 1.2
 execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1.2
-execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a
-execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run particle flash ~ ~ ~ 0 0 0 0 5 force @a
-execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a
+execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run particle explosion ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run particle flash ~ ~ ~ 0 0 0 0 5 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run particle lava ~ ~ ~ 1 1 1 0.1 10 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run function cannons:bounce/killslime
 execute if score $explode RNGscore matches 80.. run tag @s[tag=!Hit2] add Hit2
 

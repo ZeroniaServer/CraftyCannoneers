@@ -18,8 +18,11 @@ execute if score @s click matches 4 as @e[type=villager,tag=CBTrap,distance=..4]
 execute if score @s click matches 4 run data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
 execute at @s[scores={click=4}] as @e[type=villager,tag=BarrelVillager,distance=..4] run function weapons:barrel/chainreact
 
+#> Break nearby Boats
+execute if score @s click matches 2 as @e[type=boat,tag=BoatBoat,distance=..4] run damage @s 10 explosion at ~ ~ ~
+
 #> Break nearby Cargo Barrels
-execute as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..4] run function game:modifiers/lostcargo/spillbarrel
+execute if score @s click matches 2 as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..4] run function game:modifiers/lostcargo/spillbarrel
 
 #> Remount nearby Crabs/Sharks
 execute if score @s click matches 5 as @e[type=cat,tag=CrabVehicle,tag=dismounted,distance=..10] run function game:modifiers/crabs/remount
