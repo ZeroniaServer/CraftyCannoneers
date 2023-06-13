@@ -3,6 +3,7 @@ execute unless score @s click matches 7.. run scoreboard players add @s click 1
 execute if score @s click matches 7.. run tag @s add DismountCheck
 
 #> Hide interaction
+data modify entity @s[tag=!hideinteraction] Invulnerable set value 0b
 execute unless entity @s[tag=hideinteraction] on passengers run data merge entity @s {width:0,height:0,response:0b}
 tag @s[tag=!hideinteraction] add hideinteraction
 
