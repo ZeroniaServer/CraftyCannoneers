@@ -17,3 +17,8 @@ execute if entity @s[type=endermite,tag=CrabController,tag=inwater] on vehicle a
 execute if entity @s[type=cat,tag=CrabVehicle] on passengers at @s[type=item_display,tag=hasitem,tag=!hashorn] run function game:modifiers/crabs/dropitem
 execute if entity @s[type=endermite,tag=CrabController,tag=!inwater] on vehicle on passengers at @s[type=item_display,tag=hasitem,tag=!hashorn] run function game:modifiers/crabs/dropitem
 execute if entity @s[type=endermite,tag=CrabController,tag=inwater] on vehicle at @s[type=item_display,tag=hasitem,tag=!hashorn] run function game:modifiers/crabs/dropitem
+
+#> Shooting Boat Cannon entities hurts the player
+execute if score $arrow CmdData matches 1 if entity @s[type=camel,tag=BoatCannonAnchor] on vehicle on passengers run function entityid:hit/fakearrow
+execute if score $arrow CmdData matches 1 if entity @s[type=husk,tag=BoatCannonDisplay] on vehicle on vehicle on vehicle on passengers run function entityid:hit/fakearrow
+execute if score $arrow CmdData matches 1 on passengers if entity @s[type=husk,tag=BoatCannonDisplay] on vehicle on vehicle on vehicle on passengers run function entityid:hit/fakearrow
