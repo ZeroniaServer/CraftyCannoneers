@@ -20,7 +20,7 @@ execute rotated as @s on vehicle on passengers on passengers on passengers posit
 execute on vehicle on passengers if entity @s[type=camel] run function everytick:permababy
 
 #> Make passengers invulnerable unless an arrow's nearby
-execute on vehicle at @s store success score $arrownearby CmdData if entity @e[type=arrow,limit=1,distance=..4]
+execute on vehicle at @s store success score $arrownearby CmdData if entity @e[type=arrow,limit=1,distance=..6]
 execute if score $arrownearby CmdData matches 1 on vehicle if entity @s[tag=invul] on passengers run function game:boat/cannon/noninvul
 execute if score $arrownearby CmdData matches 1 on vehicle run tag @s remove invul
 execute if score $arrownearby CmdData matches 0 on vehicle if entity @s[tag=!invul] on passengers run function game:boat/cannon/invul
