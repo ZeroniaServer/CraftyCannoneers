@@ -71,6 +71,7 @@ execute at @s[tag=CopperCannonball,scores={copperStrike=80..},tag=InSafezone] ru
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] click += @s CalcAir1
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] click += @s CalcAir2
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] playerUUID = @s playerUUID
+execute unless data entity @s CustomName run function cannons:namecannonball
 data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
 execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] run data modify entity @s CustomName set from storage craftycannoneers:temp CustomName
 tag @e[type=marker,tag=ImpactMarker,tag=!HasUUID] add HasUUID
