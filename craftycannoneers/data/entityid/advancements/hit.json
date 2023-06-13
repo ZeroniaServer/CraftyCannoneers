@@ -25,6 +25,36 @@
                 ]
             }
         },
+        "trident": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "minecraft:trident",
+                                "expected": true
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "not_trident": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "minecraft:trident",
+                                "expected": false
+                            }
+                        ]
+                    }
+                }
+            }
+        },
         "bit0": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
@@ -926,6 +956,10 @@
         [
             "target",
             "not_target"
+        ],
+        [
+            "trident",
+            "not_trident"
         ],
         [
             "bit0",

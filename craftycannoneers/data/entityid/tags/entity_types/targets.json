@@ -4,6 +4,7 @@
     "minecraft:villager",
     "minecraft:endermite",
     "minecraft:cat",
-    "minecraft:interaction"
+    "minecraft:interaction",
+    "minecraft:camel"
   ]
 }
