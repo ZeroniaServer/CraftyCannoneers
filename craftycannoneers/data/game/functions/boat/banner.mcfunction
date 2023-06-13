@@ -19,7 +19,7 @@ tag @s[tag=New] remove New
 
 #> Killing (failsafe)
 execute at @s[predicate=!game:boat/inboat] run function game:boat/boatbreak
-execute unless entity @e[type=boat,tag=BoatBoat,tag=1,distance=..2] at @s[tag=1,tag=!kill] run function game:boat/boatbreak
-execute unless entity @e[type=boat,tag=BoatBoat,tag=2,distance=..2] at @s[tag=2,tag=!kill] run function game:boat/boatbreak
-execute unless entity @e[type=boat,tag=BoatBoat,tag=3,distance=..2] at @s[tag=3,tag=!kill] run function game:boat/boatbreak
-execute unless entity @e[type=boat,tag=BoatBoat,tag=4,distance=..2] at @s[tag=4,tag=!kill] run function game:boat/boatbreak
+execute unless entity @e[type=boat,tag=BoatBoat,tag=1] at @s[tag=1,tag=!kill] run function game:boat/boatbreak
+execute unless entity @e[type=boat,tag=BoatBoat,tag=2] at @s[tag=2,tag=!kill] run function game:boat/boatbreak
+execute unless entity @e[type=boat,tag=BoatBoat,tag=3] at @s[tag=3,tag=!kill] run function game:boat/boatbreak
+execute unless entity @e[type=boat,tag=BoatBoat,tag=4] at @s[tag=4,tag=!kill] run function game:boat/boatbreak
