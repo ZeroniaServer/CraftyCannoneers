@@ -7,5 +7,8 @@ data modify entity @s[tag=!hideinteraction] Invulnerable set value 0b
 execute unless entity @s[tag=hideinteraction] on passengers run data merge entity @s {width:0,height:0,response:0b}
 tag @s[tag=!hideinteraction] add hideinteraction
 
+#> Explode Cargo Traps
+execute if score $LostCargo CmdData matches 1 as @e[type=villager,tag=CBTrap,distance=..1] on vehicle run tag @s add TrapExplode
+
 #> Dismount check
 execute at @s[tag=DismountCheck,tag=!Sinking] run function game:boat/dismountcheck
