@@ -65,12 +65,12 @@ execute if entity @s[tag=BlastBarrel1] as @e[type=item_display,tag=CBDisplay,tag
 execute if entity @s[tag=BlastBarrel2] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..7] run function game:modifiers/lostcargo/spillbarrel
 
 #> Break nearby Boats
-execute if entity @s[tag=Power1] as @e[type=boat,tag=BoatBoat,distance=..5] run damage @s 10 explosion at ~ ~ ~
-execute if entity @s[tag=Power2] as @e[type=boat,tag=BoatBoat,distance=..6] run damage @s 10 explosion at ~ ~ ~
-execute if entity @s[tag=Power3] as @e[type=boat,tag=BoatBoat,distance=..7] run damage @s 10 explosion at ~ ~ ~
-execute if entity @s[tag=GasPower] as @e[type=boat,tag=BoatBoat,distance=..7] run damage @s 10 explosion at ~ ~ ~
-execute if entity @s[tag=BlastBarrel1] as @e[type=boat,tag=BoatBoat,distance=..6] run damage @s 10 explosion at ~ ~ ~
-execute if entity @s[tag=BlastBarrel2] as @e[type=boat,tag=BoatBoat,distance=..7] run damage @s 10 explosion at ~ ~ ~
+execute if entity @s[tag=Power1] run kill @e[type=boat,tag=BoatBoat,distance=..5]
+execute if entity @s[tag=Power2] run kill @e[type=boat,tag=BoatBoat,distance=..6]
+execute if entity @s[tag=Power3] run kill @e[type=boat,tag=BoatBoat,distance=..7]
+execute if entity @s[tag=GasPower] run kill @e[type=boat,tag=BoatBoat,distance=..7]
+execute if entity @s[tag=BlastBarrel1] run kill @e[type=boat,tag=BoatBoat,distance=..6]
+execute if entity @s[tag=BlastBarrel2] run kill @e[type=boat,tag=BoatBoat,distance=..7]
 
 execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] as @a[tag=UtilKilled,distance=..2] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:3b,Duration:1,ShowParticles:0b}]}
 execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] run tag @a[tag=UtilKilled,distance=..2] add damaged

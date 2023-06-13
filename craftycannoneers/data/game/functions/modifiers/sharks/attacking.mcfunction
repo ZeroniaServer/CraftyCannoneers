@@ -18,7 +18,7 @@ execute at @s[scores={CmdData=9}] positioned ^ ^ ^1.5 store success score $bitca
 execute if score $bitcargo CmdData matches 1 at @s[scores={CmdData=9}] positioned ^ ^ ^1.5 as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,limit=1,sort=nearest,distance=..2] at @s run function game:modifiers/lostcargo/spillbarrel
 
 #> Break boat
-execute at @s[scores={CmdData=9}] positioned ^ ^ ^1.5 run damage @e[type=boat,tag=BoatBoat,limit=1,sort=nearest,distance=..2] 10 magic by @s
+execute at @s[scores={CmdData=9}] positioned ^ ^ ^1.5 run kill @e[type=boat,tag=BoatBoat,limit=1,sort=nearest,distance=..2]
 
 #> Bite player
 execute unless score $bitcargo CmdData matches 1 at @s[scores={CmdData=9}] positioned ^ ^ ^1.5 run effect give @a[team=!Lobby,team=!Spectator,gamemode=adventure,distance=..1.5,limit=1,sort=nearest] instant_damage 1 1 true

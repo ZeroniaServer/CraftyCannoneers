@@ -32,7 +32,7 @@ execute unless entity @s[tag=canDamage] as @e[type=villager,tag=BlastBarrel,dist
 execute at @s[tag=!canDamage] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..6] run function game:modifiers/lostcargo/spillbarrel
 
 #> Break nearby Boats
-execute as @e[type=boat,tag=BoatBoat,distance=..6] run damage @s 1 explosion at ~ ~ ~
+kill @e[type=boat,tag=BoatBoat,distance=..6]
 
 #> Hurt players in damage zones
 execute at @s[tag=!canDamage] as @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..6] run function weapons:barrel/damage/tier2

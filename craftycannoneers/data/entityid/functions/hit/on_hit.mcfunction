@@ -17,9 +17,3 @@ execute if entity @s[type=endermite,tag=CrabController,tag=inwater] on vehicle a
 execute if entity @s[type=cat,tag=CrabVehicle] on passengers at @s[type=item_display,tag=hasitem,tag=!hashorn] run function game:modifiers/crabs/dropitem
 execute if entity @s[type=endermite,tag=CrabController,tag=!inwater] on vehicle on passengers at @s[type=item_display,tag=hasitem,tag=!hashorn] run function game:modifiers/crabs/dropitem
 execute if entity @s[type=endermite,tag=CrabController,tag=inwater] on vehicle at @s[type=item_display,tag=hasitem,tag=!hashorn] run function game:modifiers/crabs/dropitem
-
-#> Hitting Boat Cannon entities hurts the boat
-execute if entity @s[type=camel,tag=BoatCannonAnchor] on vehicle run damage @s[type=boat] 0.1 arrow at ~ ~ ~
-execute if entity @s[type=villager,tag=BoatCannon] on vehicle on vehicle run damage @s[type=boat] 0.1 arrow at ~ ~ ~
-execute if entity @s[type=husk,tag=BoatCannonBlocker] on vehicle on vehicle run damage @s[type=boat] 0.1 arrow at ~ ~ ~
-execute if entity @s[type=husk,tag=BoatCannonDisplay] on vehicle on vehicle on vehicle run damage @s[type=boat] 0.1 arrow at ~ ~ ~

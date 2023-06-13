@@ -19,7 +19,7 @@ execute if score @s click matches 4 run data modify storage craftycannoneers:tem
 execute at @s[scores={click=4}] as @e[type=villager,tag=BarrelVillager,distance=..4] run function weapons:barrel/chainreact
 
 #> Break nearby Boats
-execute if score @s click matches 2 as @e[type=boat,tag=BoatBoat,distance=..4] run damage @s 10 explosion at ~ ~ ~
+execute if score @s click matches 2 run kill @e[type=boat,tag=BoatBoat,distance=..4]
 
 #> Break nearby Cargo Barrels
 execute if score @s click matches 2 as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..4] run function game:modifiers/lostcargo/spillbarrel
