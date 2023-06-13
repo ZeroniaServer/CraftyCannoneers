@@ -1,0 +1,2 @@
+setblock -53 -24 11 minecraft:crimson_wall_sign[facing=south,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:['{"text":""}','{"text":""}','{"text":""}','{"text":""}']},front_text:{color:"red",has_glowing_text:1b,messages:['{"clickEvent":{"action":"run_command","value":"trigger modisigns set 6497"},"text":""}','{"text":""}','{"text":""}','{"color":"#FF0003","translate":"customizer.restore_default"}']},is_waxed:0b}
+schedule function lobby:customizer/removesign 1t replace
