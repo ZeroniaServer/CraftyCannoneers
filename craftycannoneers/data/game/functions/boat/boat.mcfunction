@@ -29,3 +29,10 @@ team join NoName
 #> Prevent clipping into ship floorboards
 execute if entity @s[tag=!Sinking,predicate=cannons:ships/orange,predicate=cannons:ships/underbottom,predicate=!game:instillwater,nbt={OnGround:0b}] align y run tp @s ~ ~1 ~
 execute if entity @s[tag=!Sinking,predicate=cannons:ships/purple,predicate=cannons:ships/underbottom,predicate=!game:instillwater,nbt={OnGround:0b}] align y run tp @s ~ ~1 ~
+
+#> Prevent duplicates
+execute store result score $boat playerUUID run data get entity @s UUID[0]
+execute if entity @s[tag=1] unless score $boat playerUUID = $boat1 CmdData run function game:boat/quickkill
+execute if entity @s[tag=2] unless score $boat playerUUID = $boat2 CmdData run function game:boat/quickkill
+execute if entity @s[tag=3] unless score $boat playerUUID = $boat3 CmdData run function game:boat/quickkill
+execute if entity @s[tag=4] unless score $boat playerUUID = $boat4 CmdData run function game:boat/quickkill
