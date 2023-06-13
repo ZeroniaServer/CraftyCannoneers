@@ -37,6 +37,7 @@ kill @e[type=item_display,tag=CrabTrap]
 kill @e[type=interaction,tag=CrabTrap]
 kill @e[type=item_display,tag=grave]
 kill @e[type=marker,tag=gravedata]
+kill @e[type=marker,tag=CargoEntity]
 scoreboard players set $total crabs 0
 scoreboard players set $curr crabs 0
 
