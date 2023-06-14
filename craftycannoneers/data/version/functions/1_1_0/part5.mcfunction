@@ -19,6 +19,13 @@ scoreboard objectives remove fullInv
 execute as @e[type=armor_stand,tag=ParkourAS,limit=1] if data entity @s CustomName run function version:1_1_0/leaderboardfix1
 execute as @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] at @s unless entity @e[type=area_effect_cloud,tag=ParkourNameAEC,limit=1] run function version:1_1_0/leaderboardfix2
 
+#> Golden + Copper Cannonball displays
+execute unless entity @e[type=armor_stand,tag=CannonballDeco,tag=DecoGOCB] run summon armor_stand -40.5 -26.8 -8.5 {Invisible:1b,Invulnerable:1b,Tags:["CannonballDeco","HasDisplay","DecoGOCB"],Small:1b,Marker:1b,Rotation:[40.231f,1.392f],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1,tag:{CustomModelData:73}}]}
+setblock -41 -27 -9 creeper_head
+
+execute unless entity @e[type=armor_stand,tag=CannonballDeco,tag=DecoCOCB] run summon armor_stand -41.5 -26.75 -5.5 {Invisible:1b,Invulnerable:1b,Tags:["CannonballDeco","HasDisplay","DecoCOCB"],Small:1b,Marker:1b,Rotation:[60.282f,2.056f],ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1,tag:{CustomModelData:109}}]}
+setblock -42 -27 -6 creeper_head
+
 bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"5","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
 bossbar set updatebar value 5
 
