@@ -6,16 +6,6 @@
                 "entity": {
                     "type": "minecraft:creeper",
                     "nbt": "{Tags:[\"CannonballCreeper\"]}"
-                },
-                "damage": {
-                    "type": {
-                        "tags": [
-                            {
-                                "id": "minecraft:is_explosion",
-                                "expected": true
-                            }
-                        ]
-                    }
                 }
             }
         }
