@@ -15,8 +15,8 @@ execute if entity @a[tag=ModiOwner] run bossbar set lobbybar name ["",{"translat
 bossbar set lobbybar color blue
 
 #> Pick owner
-execute unless entity @a[tag=ModiOwner] as @a[scores={modisigns=3384..},limit=1] at @s run playsound entity.villager.work_cartographer master @s ~ ~ ~ 1 1
-execute unless entity @a[tag=ModiOwner] as @a[scores={modisigns=3384..},limit=1] run tag @s add ModiOwner
+execute unless entity @a[tag=ModiOwner] as @a[scores={modisigns=2049..},limit=1] at @s run playsound entity.villager.work_cartographer master @s ~ ~ ~ 1 1
+execute unless entity @a[tag=ModiOwner] as @a[scores={modisigns=2049..},limit=1] run tag @s add ModiOwner
 
 #> As owner
 execute as @a[tag=ModiOwner,limit=1] run function lobby:customizer/modiowner

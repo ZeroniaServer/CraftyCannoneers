@@ -13,6 +13,10 @@ scoreboard players operation $ticks CmdData = $TimeLimit CmdData
 scoreboard players operation $ticks CmdData *= $1200 CmdData
 scoreboard players add $ticks CmdData 20
 
+execute if score $Daytime CmdData matches 0 run time set day
+execute if score $Daytime CmdData matches 1 run time set 12725
+execute if score $Daytime CmdData matches 2 run time set midnight
+
 title @a title {"translate":"customizer.confirmed","underlined":true,"color":"dark_green"}
 title @a subtitle [{"translate":"chat.the_game","color":"green","with":[{"translate":"chat.ready_to_play","color":"green"}]}]
 execute as @a at @s run playsound confirmsettings master @s ~ ~ ~ 1 1.5

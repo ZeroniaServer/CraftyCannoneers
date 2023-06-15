@@ -261,6 +261,7 @@ scoreboard players add $Storms CmdData 0
 scoreboard players add $LostCargo CmdData 0
 scoreboard players add $GraveRobbery CmdData 0
 scoreboard players add $BoatCannons CmdData 0
+scoreboard players add $Daytime CmdData 0
 
 #> Messages
 data modify storage craftycannoneers:messages ResourcePack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"We strongly recommend you to ","color":"gray"},{"text":"use the resource pack","bold":true,"color":"red"},{"text":". ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=1-oBF7R2saaPyq1cdZrVvKh-TUHcagulH"}}]'

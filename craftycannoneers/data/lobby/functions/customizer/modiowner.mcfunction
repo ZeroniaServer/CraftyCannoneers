@@ -2,6 +2,7 @@ effect give @s glowing infinite 100 true
 
 execute if entity @s[scores={modisigns=7853},tag=!mobtesting] run function lobby:customizer/mobtest
 execute if entity @s[scores={modisigns=3384},tag=!mobtesting] run function lobby:customizer/mobtest
+execute if entity @s[scores={modisigns=2049},tag=!mobtesting] run function lobby:customizer/mobtest
 execute if entity @s[scores={modisigns=5732},tag=!mobtesting] run function lobby:customizer/mobtest
 execute if entity @s[scores={modisigns=6497},tag=!mobtesting] run function lobby:customizer/mobtest
 execute if entity @s[scores={modisigns=9152},tag=!mobtesting] run function lobby:customizer/mobtest

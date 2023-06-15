@@ -4,6 +4,9 @@ execute if score @s modisigns matches 7853 run function lobby:customizer/timelim
 #Ship HP
 execute if score @s modisigns matches 3384 run function lobby:customizer/shiphp
 
+#Daytime
+execute if score @s modisigns matches 2049 run function lobby:customizer/daytime
+
 #Confirm
 execute if score @s modisigns matches 5732 run function lobby:customizer/confirm
 

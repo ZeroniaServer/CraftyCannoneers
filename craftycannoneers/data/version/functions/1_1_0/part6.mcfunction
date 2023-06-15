@@ -4,14 +4,16 @@ forceload add -427 -25 -452 -85
 #icons
 tp @e[type=armor_stand,tag=ConfirmIcon] -55 -23.5 9
 kill @e[type=armor_stand,tag=ModifierIcons]
+kill @e[type=armor_stand,tag=DaytimeIcon]
 summon armor_stand -54 -23.5 9 {Tags:["LobbyEntity","ModiIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
 summon armor_stand -54 -23.5 9 {Tags:["LobbyEntity","ModifModiIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
 summon armor_stand -53 -21.4 9 {Tags:["LobbyEntity","NoTracersIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
-summon armor_stand -54 -21.4 9 {Tags:["LobbyEntity","SharksIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
+summon armor_stand -54 -21.4 9 {Tags:["LobbyEntity","WildlifeIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
 summon armor_stand -55 -21.4 9 {Tags:["LobbyEntity","SeaStormsIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
 summon armor_stand -53 -22.4 9 {Tags:["LobbyEntity","LostCargoIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
 summon armor_stand -54 -22.4 9 {Tags:["LobbyEntity","GraveRobberyIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
 summon armor_stand -55 -22.4 9 {Tags:["LobbyEntity","BoatCannonsIcon","ModifierIcons"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
+summon armor_stand -54 -21.3 9 {Tags:["LobbyEntity","DaytimeIcon"],NoGravity:1b,Marker:1b,Silent:1b,Invulnerable:1b}
 
 fill -53 -24 9 -55 -22 9 air
 
@@ -26,6 +28,7 @@ scoreboard players set $Storms CmdData 0
 scoreboard players set $LostCargo CmdData 0
 scoreboard players set $GraveRobbery CmdData 0
 scoreboard players set $BoatCannons CmdData 0
+scoreboard players set $Daytime CmdData 0
 scoreboard players reset @e[type=armor_stand,tag=Parrot,limit=1] CmdData
 
 bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"6","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
