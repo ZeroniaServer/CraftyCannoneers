@@ -75,6 +75,7 @@ tag @s[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedBCB
 tag @s[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedPCB
 tag @s[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedTCB
 tag @s[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedGOCB
+tag @s[advancements={tutorial:zzzunlockables/cannoneer=true}] remove UsedCOCB
 
 #> Display gunpowder count
 execute as @e[type=armor_stand,sort=nearest,distance=..1] unless entity @s[tag=!GPDispL,tag=!GPDispR] run function cannons:forcedisplaygunpowder

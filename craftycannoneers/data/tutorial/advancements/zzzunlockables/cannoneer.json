@@ -90,6 +90,14 @@
           "nbt": "{Tags:[\"UsedGOCB\"]}"
         }
       }
+    },
+    "COCB": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": {
+          "nbt": "{Tags:[\"UsedCOCB\"]}"
+        }
+      }
     }
   },
   "requirements": [
@@ -119,6 +127,9 @@
     ],
     [
       "GOCB"
+    ],
+    [
+      "COCB"
     ]
   ],
   "parent": "tutorial:zzzunlockables/rocks"
