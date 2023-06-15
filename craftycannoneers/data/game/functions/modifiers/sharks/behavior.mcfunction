@@ -74,7 +74,7 @@ execute if entity @s[tag=SwimBack] at @s run tag @s remove Swimback
 # execute at @s unless entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] if block ~ ~4 ~ water unless block ~ ~4.5 ~ air run tp @s ~ ~0.1 ~
 
 #> Attack players
-execute at @s unless entity @e[type=drowned,tag=SharkEntity,tag=Attacking,scores={CmdData=..6},distance=..5] if entity @a[team=!Lobby,team=!Spectator,gamemode=adventure,predicate=game:inwater,distance=..3] run tag @s add Attacking
+execute at @s unless entity @e[type=drowned,tag=SharkEntity,tag=Attacking,scores={CmdData=..6},distance=..5] if entity @a[team=!Lobby,team=!Spectator,gamemode=adventure,tag=SharkTarget,distance=..3] run tag @s add Attacking
 execute at @s[tag=Attacking] run function game:modifiers/sharks/attacking
 scoreboard players reset @s[tag=!Attacking,scores={CmdData=1..}] CmdData 
 
