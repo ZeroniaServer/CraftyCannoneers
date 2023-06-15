@@ -11,6 +11,12 @@ setblock -53 -22 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,c
 setblock -54 -22 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"blue",messages:['{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 2049"}}','{"text":""}','{"translate":"customizer.daytime","color":"blue"}','{"text":""}']}}
 setblock -55 -22 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"pink",messages:['{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 3384"}}','{"text":""}','{"translate":"customizer.ship_health","color":"#F8005B"}','{"text":""}']}}
 function lobby:customizer/updatesigns
+setblock -54 -23 9 light[level=14]
+setblock -54 -21 9 light[level=13]
+
+fill -55 -22 8 -53 -24 8 air
+schedule function lobby:customizer/lightupdate 2t append
+
 scoreboard players reset $ForceCountdown CmdData
 scoreboard players set $gamestate CmdData -1
 

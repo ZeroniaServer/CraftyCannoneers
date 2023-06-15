@@ -32,4 +32,8 @@ function lobby:customizer/modifiers/updatemodifiersigns
 
 scoreboard players set $ModiMapActive CmdData 1
 
+fill -55 -22 8 -53 -24 8 air
 schedule function lobby:customizer/lightupdate 1t append
+
+setblock -55 -24 9 light[level=14]
+setblock -55 -24 9 light[level=14]
