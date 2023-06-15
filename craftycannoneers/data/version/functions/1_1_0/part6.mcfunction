@@ -17,6 +17,11 @@ summon armor_stand -54 -21.3 9 {Tags:["LobbyEntity","DaytimeIcon"],NoGravity:1b,
 
 fill -53 -24 9 -55 -22 9 air
 
+#> Settings Map bench
+setblock -53 -25 8 oak_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]
+setblock -54 -25 8 oak_slab[type=top,waterlogged=false]
+setblock -55 -25 8 oak_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+
 #scores
 scoreboard objectives add copperStrike dummy
 scoreboard objectives add sharktarget dummy
