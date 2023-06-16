@@ -1,6 +1,6 @@
 bossbar set lobbybar players @a[team=Lobby]
-bossbar set lobbybar color green
-bossbar set lobbybar name {"translate":"game.in_progress","bold":true,"color":"green"}
+execute unless score $gamestate CmdData matches 3.. run bossbar set lobbybar color green
+execute unless score $gamestate CmdData matches 3.. run bossbar set lobbybar name {"translate":"game.in_progress","bold":true,"color":"green"}
 bossbar set lobbybar value 10
 
 bossbar set purpleship3 players @a[team=Spectator]
