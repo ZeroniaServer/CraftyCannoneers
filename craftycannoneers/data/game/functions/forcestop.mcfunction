@@ -1,5 +1,3 @@
-function lobby:customizer/modifiers_off
-function lobby:customizer/open
 scoreboard players set @e[type=marker,tag=joinpad] CmdData 0
 tag @a[team=!Lobby,team=!Spectator,team=!Developer,advancements={tutorial:objectives/combat=false}] add NeedsTutorial
 tag @a[team=!Lobby,team=!Spectator,team=!Developer,advancements={tutorial:objectives/cannon=false}] add NeedsTutorial
@@ -24,8 +22,13 @@ bossbar remove purpleship2
 bossbar remove purpleship3
 bossbar remove orangeship
 bossbar remove orangeship2
-
+bossbar set lobbybar players @a
 bossbar set lobbybar value 10
+execute if score $gamestate CmdData matches 0.. run bossbar set lobbybar name [{"translate":"chat.confirm","color":"aqua","with":[{"translate":"chat.settings_map","color":"aqua"}]}]
+function lobby:customizer/modifiers/off
+function lobby:customizer/open
+bossbar set lobbybar max 10
+bossbar set lobbybar color blue
 
 scoreboard players reset $DamageOrange CmdData
 scoreboard players reset $DamagePurple CmdData

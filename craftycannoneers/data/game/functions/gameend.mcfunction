@@ -32,6 +32,8 @@ execute if score $EndTime CmdData matches 1 as @e[type=armor_stand,tag=CannonDis
 execute if score $EndTime CmdData matches 1 run function game:mvpstats/check
 execute if score $EndTime CmdData matches 1 run scoreboard players remove @a[team=Purple,scores={GamesPlayed=1..}] GamesPlayed 1
 execute if score $EndTime CmdData matches 1 run scoreboard players remove @a[team=Orange,scores={GamesPlayed=1..}] GamesPlayed 1
+execute if score $EndTime CmdData matches 1 run bossbar set lobbybar color red
+execute if score $EndTime CmdData matches 1 run bossbar set lobbybar name {"translate":"game.ending","bold":true,"color":"red"}
 execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator,team=!Developer] resistance infinite 100 true
 execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator,team=!Developer] instant_health infinite 100 true
 execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator,team=!Developer] regeneration infinite 100 true

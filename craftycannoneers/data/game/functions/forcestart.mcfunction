@@ -36,6 +36,7 @@ bossbar add purpleship2 ""
 bossbar add purpleship3 ""
 bossbar add orangeship ""
 bossbar add orangeship2 ""
+function game:bossbars
 
 execute as @a[team=Purple] run function game:givegear
 execute as @a[team=Orange] run function game:givegear

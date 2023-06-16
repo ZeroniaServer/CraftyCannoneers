@@ -1,8 +1,3 @@
-#> Lobby bar
-bossbar set lobbybar color green
-bossbar set lobbybar name {"translate":"game.in_progress","bold":true,"color":"green"}
-bossbar set lobbybar value 10
-
 #> Chests spawning
 function chests:spawning
 

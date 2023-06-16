@@ -87,12 +87,6 @@ execute if score $gamestate CmdData matches 0 run scoreboard players set $Countd
 #> Toggle score
 execute store success score $toggle CmdData if score $toggle CmdData matches 0
 
-#> Bossbars
-execute if score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a[team=Lobby]
-execute unless score $gamestate CmdData matches 2.. run bossbar set lobbybar players @a
-execute if score $gamestate CmdData matches 3 run bossbar set lobbybar color red
-execute if score $gamestate CmdData matches 3 run bossbar set lobbybar name {"translate":"game.ending","bold":true,"color":"red"}
-
 #> Resolve signs
 execute if entity @a[team=Lobby] run function everytick:resolvesigns
 
