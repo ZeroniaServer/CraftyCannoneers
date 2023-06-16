@@ -1,3 +1,8 @@
+#> Failsafe for players who crashed out
+execute if score $gamestate CmdData matches -1 run scoreboard players set @s[team=!Lobby] LeftGame 1
+scoreboard players add @s leavecheck 1
+execute unless score @s leavecheck = $curr leavecheck run scoreboard players set @s[team=Lobby] LeftGame 1
+
 #> General effects
 effect give @s saturation infinite 100 true
 effect give @s[team=Lobby] instant_health infinite 100 true
@@ -27,6 +32,7 @@ tag @s[tag=!hasMoved,scores={crouch=30..,msgdelay=160..}] add hasMoved
 
 #> Leave game
 function everytick:leavegame
+scoreboard players operation @s leavecheck = $curr leavecheck
 
 #> If player has moved
 execute if entity @s[tag=hasMoved] run function everytick:hasmoved

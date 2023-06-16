@@ -158,6 +158,8 @@ scoreboard objectives add dx2 dummy
 scoreboard objectives add dy2 dummy
 scoreboard objectives add dz2 dummy
 scoreboard objectives add hasCrabTraps dummy
+scoreboard objectives add leavecheck dummy
+scoreboard players add $curr leavecheck 0
 
 #> Bossbars
 bossbar add lobbybar ""

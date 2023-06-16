@@ -3,6 +3,9 @@
 #> World Updates
 execute if score $load CmdData matches 20.. run function version:check
 
+#> Leave check
+scoreboard players add $curr leavecheck 1
+
 #> Player related functions
 execute as @a at @s run function everytick:players
 
