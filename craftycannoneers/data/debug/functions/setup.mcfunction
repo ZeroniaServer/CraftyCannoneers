@@ -160,10 +160,10 @@ scoreboard objectives add dz2 dummy
 scoreboard objectives add hasCrabTraps dummy
 
 #> Bossbars
-bossbar add lobbybar "Lobbybar"
-execute unless entity @a[tag=ModiOwner,limit=1] run bossbar set lobbybar name [{"translate":"chat.confirm","color":"aqua","with":[{"translate":"chat.settings_map","color":"aqua"}]}]
+bossbar add lobbybar ""
+execute if score $gamestate CmdData matches -1 unless entity @a[tag=ModiOwner,limit=1] run bossbar set lobbybar name [{"translate":"chat.confirm","color":"aqua","with":[{"translate":"chat.settings_map","color":"aqua"}]}]
 bossbar set lobbybar max 10
-bossbar set lobbybar color blue
+execute if score $gamestate CmdData matches ..0 run bossbar set lobbybar color blue
 
 #> Teams
 team add Lobby
