@@ -4,9 +4,9 @@ tag @a[team=!Lobby,team=!Spectator,team=!Developer,advancements={tutorial:object
 tag @a[team=!Lobby,team=!Spectator,team=!Developer,advancements={tutorial:objectives/treasure=false}] add NeedsTutorial
 tag @a[team=!Lobby,team=!Spectator,team=!Developer,advancements={tutorial:objectives/watchtower=false}] add NeedsTutorial
 title @a clear
-execute unless score $updating CmdData matches 1 as @a[team=!Lobby,team=!Spectator,team=!Developer,tag=NeedsTutorial,tag=!hideTips,tag=!JoinReset] run tellraw @s ["","\n",{"translate":"chat.new_here","color":"green","with":[{"translate":"game.name","with":[{"translate":"game.crafty","bold":true,"color":"dark_purple"},{"translate":"game.cannoneers","bold":true,"color":"gold"}]}]},"\n",{"translate":"chat.recommend","color":"green","with":[{"translate":"tutorial.training_island","bold":true,"color":"aqua"}]},"\n",{"translate":"chat.warp_pad","italic":true,"color":"dark_green"},"\n"]
+execute if score $gamestate CmdData matches 0.. unless score $updating CmdData matches 1 as @a[team=!Lobby,team=!Spectator,team=!Developer,tag=NeedsTutorial,tag=!hideTips,tag=!JoinReset] run tellraw @s ["","\n",{"translate":"chat.new_here","color":"green","with":[{"translate":"game.name","with":[{"translate":"game.crafty","bold":true,"color":"dark_purple"},{"translate":"game.cannoneers","bold":true,"color":"gold"}]}]},"\n",{"translate":"chat.recommend","color":"green","with":[{"translate":"tutorial.training_island","bold":true,"color":"aqua"}]},"\n",{"translate":"chat.warp_pad","italic":true,"color":"dark_green"},"\n"]
 tag @a[tag=NeedsTutorial] remove NeedsTutorial
-execute unless score $updating CmdData matches 1 run tellraw @a[tag=!JoinReset] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.0","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
+execute if score $gamestate CmdData matches 0.. unless score $updating CmdData matches 1 run tellraw @a[tag=!JoinReset] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.0","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
 tag @a[team=!Lobby] add LeaveGame
 scoreboard players set $WinningTeam CmdData 0
 scoreboard players set $EndTime CmdData 0
@@ -25,8 +25,7 @@ bossbar remove orangeship2
 bossbar set lobbybar players @a
 bossbar set lobbybar value 10
 execute if score $gamestate CmdData matches 0.. run bossbar set lobbybar name [{"translate":"chat.confirm","color":"aqua","with":[{"translate":"chat.settings_map","color":"aqua"}]}]
-function lobby:customizer/modifiers/off
-function lobby:customizer/open
+execute if score $gamestate CmdData matches 0.. run function lobby:customizer/open
 bossbar set lobbybar max 10
 bossbar set lobbybar color blue
 

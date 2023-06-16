@@ -161,7 +161,7 @@ scoreboard objectives add hasCrabTraps dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
-bossbar set lobbybar name [{"translate":"chat.confirm","color":"aqua","with":[{"translate":"chat.settings_map","color":"aqua"}]}]
+execute unless entity @a[tag=ModiOwner,limit=1] run bossbar set lobbybar name [{"translate":"chat.confirm","color":"aqua","with":[{"translate":"chat.settings_map","color":"aqua"}]}]
 bossbar set lobbybar max 10
 bossbar set lobbybar color blue
 
