@@ -7,11 +7,11 @@ data modify entity @s[tag=!hideinteraction] Invulnerable set value 0b
 execute unless entity @s[tag=hideinteraction] on passengers run data merge entity @s {width:0,height:0,response:0b}
 tag @s[tag=!hideinteraction] add hideinteraction
 
-#> Vulnerability conditions with projectiles
-execute store success score $harpoonnearby CmdData if entity @e[type=trident,limit=1,distance=..6]
+#> Boat invulnerability conditions with nearby projectiles/players
 execute store success score $arrownearby CmdData if entity @e[type=arrow,limit=1,distance=..6]
 execute if score $arrownearby CmdData matches 1 run data modify entity @s Invulnerable set value 0b
-execute if score $harpoonnearby CmdData matches 1 run data modify entity @s Invulnerable set value 1b
+execute if entity @a[limit=1,predicate=!game:boat/inboat,distance=..6] run data modify entity @s Invulnerable set value 1b
+execute if entity @e[type=trident,limit=1,distance=..6] run data modify entity @s Invulnerable set value 1b
 execute unless score $arrownearby CmdData matches 1 run data modify entity @s Invulnerable set value 1b
 
 #> Explode Cargo Traps
