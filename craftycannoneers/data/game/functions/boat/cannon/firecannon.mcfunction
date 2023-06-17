@@ -17,8 +17,8 @@ execute at @s[scores={cannonshot=5,PowerM=5..}] run playsound cannonprime master
 #TODO flame particles for gunpowder slot @YZERO
 
 #Normal Cannonball
-execute at @s[scores={cannonshot=30..,CannonID=1}] run playsound cannonshot master @a ~ ~ ~ 6 1
-execute at @s[scores={cannonshot=30..,CannonID=1}] run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1
+execute at @s[scores={cannonshot=30,CannonID=1}] run playsound cannonshot master @a ~ ~ ~ 6 1
+execute at @s[scores={cannonshot=30,CannonID=1}] run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1
 
 #Hot Cannonball
 execute at @s[scores={cannonshot=26,CannonID=2}] run playsound cannonshot master @a ~ ~ ~ 6 0.85
@@ -54,23 +54,23 @@ execute at @s[scores={cannonshot=30,CannonID=7}] run playsound playershot master
 execute at @s[scores={cannonshot=26,CannonID=7}] run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1.3
 
 #Tracer Cannonball
-execute at @s[scores={cannonshot=30..,CannonID=8}] on passengers run tag @s[type=player] add HoldTCB
-execute at @s[scores={cannonshot=30..,CannonID=8}] run particle explosion ^ ^2.1 ^2 0.1 0.1 0.1 0.1 3 force @a[tag=HoldTCB]
-execute at @s[scores={cannonshot=30..,CannonID=8}] run particle flame ^ ^2.1 ^2 0.1 0.1 0.1 0.3 6 force @a[tag=HoldTCB]
-execute at @s[scores={cannonshot=30..,CannonID=8}] run particle campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
-execute at @s[scores={cannonshot=30..,CannonID=8}] run particle lava ^ ^2.1 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
-execute at @s[scores={cannonshot=30..,CannonID=8}] run playsound cannonshot master @a[tag=HoldTCB] ~ ~ ~ 0.7 2
-execute at @s[scores={cannonshot=30..,CannonID=8}] on passengers run tag @s[type=player] remove HoldTCB
+execute at @s[scores={cannonshot=30,CannonID=8}] on passengers run tag @s[type=player] add HoldTCB
+execute at @s[scores={cannonshot=30,CannonID=8}] run particle explosion ^ ^2.1 ^2 0.1 0.1 0.1 0.1 3 force @a[tag=HoldTCB]
+execute at @s[scores={cannonshot=30,CannonID=8}] run particle flame ^ ^2.1 ^2 0.1 0.1 0.1 0.3 6 force @a[tag=HoldTCB]
+execute at @s[scores={cannonshot=30,CannonID=8}] run particle campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
+execute at @s[scores={cannonshot=30,CannonID=8}] run particle lava ^ ^2.1 ^2 0.1 0.1 0.1 0.02 10 force @a[tag=HoldTCB]
+execute at @s[scores={cannonshot=30,CannonID=8}] run playsound cannonshot master @a[tag=HoldTCB] ~ ~ ~ 0.7 2
+execute at @s[scores={cannonshot=30,CannonID=8}] on passengers run tag @s[type=player] remove HoldTCB
 
 #Golden Cannonball
-execute at @s[scores={cannonshot=30..,CannonID=9}] run playsound cannonshot master @a ~ ~ ~ 6 1
-execute at @s[scores={cannonshot=30..,CannonID=9}] run playsound goldshot master @a ~ ~ ~ 4 1
-execute at @s[scores={cannonshot=30..,CannonID=9}] run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1
+execute at @s[scores={cannonshot=30,CannonID=9}] run playsound cannonshot master @a ~ ~ ~ 6 1
+execute at @s[scores={cannonshot=30,CannonID=9}] run playsound goldshot master @a ~ ~ ~ 4 1
+execute at @s[scores={cannonshot=30,CannonID=9}] run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1
 
 #Copper Cannonball
-execute at @s[scores={cannonshot=30..,CannonID=10}] run playsound cannonshot master @a ~ ~ ~ 6 1.1
-execute at @s[scores={cannonshot=30..,CannonID=10}] run playsound shockshot master @a ~ ~ ~ 4 1
-execute at @s[scores={cannonshot=30..,CannonID=10}] run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1.1
+execute at @s[scores={cannonshot=30,CannonID=10}] run playsound cannonshot master @a ~ ~ ~ 6 1.1
+execute at @s[scores={cannonshot=30,CannonID=10}] run playsound shockshot master @a ~ ~ ~ 4 1
+execute at @s[scores={cannonshot=30,CannonID=10}] run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 1.1
 
 #Particles (non-Tracer)
 execute at @s[scores={cannonshot=26}] unless score @s CannonID matches 8 run particle explosion ^ ^2.1 ^2 0.1 0.1 0.1 0.1 3 force @a[predicate=cannons:seeparticles]
@@ -80,10 +80,14 @@ execute at @s[scores={cannonshot=26}] unless score @s CannonID matches 8 run par
 
 #> Shoot
 #TODO polish cannonball trajectories @YZERO
-execute store result score @s[scores={cannonshot=30..}] eyeclick run data get entity @s Rotation[0]
-scoreboard players operation @s[scores={cannonshot=30..}] eyeclick /= 2 const
-tag @s[scores={cannonshot=30..}] add Shoot
-execute at @s[scores={cannonshot=30..}] positioned ^ ^2 ^3.6 run function game:boat/rotate/tree/root
+execute store result score @s[scores={cannonshot=30}] eyeclick run data get entity @s Rotation[0]
+scoreboard players operation @s[scores={cannonshot=30}] eyeclick /= 2 const
+tag @s[scores={cannonshot=30}] add Shoot
+execute at @s[scores={cannonshot=30}] positioned ^ ^2 ^3.6 run function game:boat/rotate/tree/root
+execute at @s[scores={cannonshot=30}] run function game:boat/cannon/cannonballtick
+
+#> Recoil
+execute if entity @s[scores={cannonshot=30..}] at @s run function game:boat/cannon/recoil
 
 #> Finish shooting
-execute if entity @s[scores={cannonshot=30..}] run function game:boat/cannon/finishshoot
+execute if entity @s[scores={cannonshot=35..}] run function game:boat/cannon/finishshoot

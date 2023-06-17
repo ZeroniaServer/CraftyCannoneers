@@ -27,5 +27,8 @@ execute if score $BoatCannons CmdData matches 1 run scoreboard players operation
 execute if score $BoatCannons CmdData matches 1 run scoreboard players operation $temp PowerM = @s PowerM
 execute if score $BoatCannons CmdData matches 1 as @e[type=boat,tag=Rotate,limit=1] run function game:boat/cannon/transfer
 
+# #> Transfer motion
+# data modify entity @e[type=boat,tag=Rotate,limit=1] Motion set from entity @s Motion
+
 tag @e[type=boat,tag=Rotate,limit=1] remove Rotate
 tag @e[type=armor_stand,tag=Rotate,limit=1] remove Rotate
