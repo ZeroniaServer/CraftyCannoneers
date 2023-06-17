@@ -1,6 +1,6 @@
 #> Begin
 scoreboard players add @s cannonshot 1
-execute if entity @s[scores={cannonshot=1}] on passengers on passengers on passengers run item replace entity @s[type=husk] armor.head with mooshroom_spawn_egg{CustomModelData:12}
+execute if entity @s[scores={cannonshot=1}] on passengers on passengers on passengers run item replace entity @s[type=husk] armor.head with diamond_hoe{CustomModelData:131}
 execute at @s[scores={cannonshot=1}] run playsound cannonload master @a ~ ~ ~ 1 1
 
 #> Fire time depends on gunpowder amount
@@ -80,6 +80,10 @@ execute at @s[scores={cannonshot=26}] unless score @s CannonID matches 8 run par
 
 #> Shoot
 #TODO polish cannonball trajectories @YZERO
+execute at @s[scores={cannonshot=29}] on passengers on passengers on passengers run item replace entity @s[type=husk] armor.head with diamond_hoe{CustomModelData:132}
+execute at @s[scores={cannonshot=30}] on passengers on passengers on passengers run item replace entity @s[type=husk] armor.head with diamond_hoe{CustomModelData:133}
+execute at @s[scores={cannonshot=31}] on passengers on passengers on passengers run item replace entity @s[type=husk] armor.head with diamond_hoe{CustomModelData:132}
+execute at @s[scores={cannonshot=32}] on passengers on passengers on passengers run item replace entity @s[type=husk] armor.head with diamond_hoe{CustomModelData:125}
 execute store result score @s[scores={cannonshot=30}] eyeclick run data get entity @s Rotation[0]
 scoreboard players operation @s[scores={cannonshot=30}] eyeclick /= 2 const
 tag @s[scores={cannonshot=30}] add Shoot
