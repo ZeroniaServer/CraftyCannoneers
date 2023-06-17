@@ -10,13 +10,12 @@ execute if predicate cannons:holdccb on vehicle run scoreboard players set @s Ca
 execute if predicate cannons:holdbcb on vehicle run scoreboard players set @s CannonID 6
 execute if predicate cannons:holdpcb on vehicle run scoreboard players set @s CannonID 7
 execute if predicate cannons:holdtcb on vehicle run scoreboard players set @s CannonID 8
-execute if predicate cannons:holdtcb unless predicate cannons:holdtcb_red on vehicle run scoreboard players set @s[tag=!FireCannon] cannonshot 29
 execute if predicate cannons:holdgocb on vehicle run scoreboard players set @s CannonID 9
 execute if predicate cannons:holdcocb on vehicle run scoreboard players set @s CannonID 10
 scoreboard players operation $temp playerUUID = @s playerUUID
 execute on vehicle run scoreboard players operation @s[scores={CannonID=1..},tag=!FireCannon] playerUUID = $temp playerUUID
-execute unless predicate cannons:holdtcb_red on vehicle if entity @s[scores={CannonID=1..},tag=!FireCannon] on passengers run scoreboard players set @s PowerM 0
-execute unless predicate cannons:holdtcb_red on vehicle run tag @s[scores={CannonID=1..},tag=!FireCannon] add FireCannon
+execute unless predicate cannons:holdtcb_red unless predicate cannons:holdgp on vehicle if entity @s[scores={CannonID=1..},tag=!FireCannon] on passengers run scoreboard players set @s PowerM 0
+execute unless predicate cannons:holdtcb_red unless predicate cannons:holdgp on vehicle run tag @s[scores={CannonID=1..},tag=!FireCannon] add FireCannon
 
 #> Remove gunpowder
 execute store success score $removegp CmdData if entity @s[predicate=!cannons:holdgp,predicate=!cannons:holdbcb,predicate=!cannons:holdcb,predicate=!cannons:holdcbc,predicate=!cannons:holdccb,predicate=!cannons:holdcocb,predicate=!cannons:holdfb,predicate=!cannons:holdgcb,predicate=!cannons:holdgocb,predicate=!cannons:holdpcb,predicate=!cannons:holdtcb]
