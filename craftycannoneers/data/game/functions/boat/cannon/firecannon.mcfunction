@@ -85,9 +85,10 @@ scoreboard players operation @s[scores={cannonshot=30}] eyeclick /= 2 const
 tag @s[scores={cannonshot=30}] add Shoot
 execute at @s[scores={cannonshot=30}] positioned ^ ^2 ^3.6 run function game:boat/rotate/tree/root
 execute at @s[scores={cannonshot=30}] run function game:boat/cannon/cannonballtick
+scoreboard players set @s[scores={cannonshot=30,CannonID=8}] cannonshot 35
 
 #> Recoil
-execute if entity @s[scores={cannonshot=30..}] at @s run function game:boat/cannon/recoil
+execute at @s[scores={cannonshot=30..}] unless score @s CannonID matches 8 run function game:boat/cannon/recoil
 
 #> Finish shooting
 execute if entity @s[scores={cannonshot=35..}] run function game:boat/cannon/finishshoot

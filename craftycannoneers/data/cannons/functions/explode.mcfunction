@@ -158,4 +158,5 @@ execute at @s[scores={copperStrike=80..}] run tag @s add Hit2
 
 execute as @e[type=marker,tag=ImpactMarker,tag=!BlastBarrel] at @s unless score @s CmdData matches 1.. run function cannons:spawncreeper
 
+kill @s[tag=Hit1,tag=boatshot,tag=!BouncyCannonball,tag=!CopperCannonball]
 kill @s[tag=Hit2]

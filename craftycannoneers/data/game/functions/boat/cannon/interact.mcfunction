@@ -10,7 +10,7 @@ execute if predicate cannons:holdccb on vehicle run scoreboard players set @s Ca
 execute if predicate cannons:holdbcb on vehicle run scoreboard players set @s CannonID 6
 execute if predicate cannons:holdpcb on vehicle run scoreboard players set @s CannonID 7
 execute if predicate cannons:holdtcb on vehicle run scoreboard players set @s CannonID 8
-execute if predicate cannons:holdtcb unless predicate cannons:holdtcb_red on vehicle run scoreboard players set @s[tag=!FireCannon] cannonshot 30
+execute if predicate cannons:holdtcb unless predicate cannons:holdtcb_red on vehicle run scoreboard players set @s[tag=!FireCannon] cannonshot 29
 execute if predicate cannons:holdgocb on vehicle run scoreboard players set @s CannonID 9
 execute if predicate cannons:holdcocb on vehicle run scoreboard players set @s CannonID 10
 scoreboard players operation $temp playerUUID = @s playerUUID
@@ -27,7 +27,7 @@ execute if score $removegp CmdData matches 1 on vehicle if score @s PowerM match
 tag @s[predicate=cannons:holdgp] add HoldGP
 tag @s[predicate=cannons:holdtcb] add HoldTCB
 execute if score $removegp CmdData matches 0 run item modify entity @s[gamemode=!creative,tag=HoldGP] weapon.mainhand game:reducecount
-execute if score $removegp CmdData matches 0 run loot replace entity @s[gamemode=!creative,tag=HoldTCB] weapon.mainhand loot cannons:tracer_red
+execute if score $removegp CmdData matches 0 run loot replace entity @s[tag=HoldTCB] weapon.mainhand loot cannons:tracer_red
 execute if score $removegp CmdData matches 0 run item replace entity @s[gamemode=!creative,tag=!HoldGP,tag=!HoldTCB] weapon.mainhand with air
 tag @s[tag=HoldGP] remove HoldGP
 tag @s[tag=HoldTCB] remove HoldTCB
