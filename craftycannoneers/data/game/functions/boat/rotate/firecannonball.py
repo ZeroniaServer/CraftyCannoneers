@@ -2,13 +2,13 @@ for i in range(-90,90):
     g = open("craftycannoneers\\data\\game\\functions\\boat\\rotate\\firecannonball\\%d.mcfunction" % i,"w+")
     g.write("#> Fire Cannonball\n")
     g.write("#Normal Cannonball\n")
-    g.write("execute if score @s CannonID matches 1 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"Cannonball\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n\n" % (i*2))
+    g.write("execute if score @s CannonID matches 1 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"Cannonball\",\"NewCannonball\",\"Hit1\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n\n" % (i*2))
     
     g.write("#Hot Cannonball\n")
-    g.write("execute if score @s CannonID matches 2 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"HotCannonball\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n\n" % (i*2))
+    g.write("execute if score @s CannonID matches 2 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"HotCannonball\",\"NewCannonball\",\"Hit1\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n\n" % (i*2))
 
     g.write("#Cannonball Cluster\n")
-    g.write("execute if score @s CannonID matches 3 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"CannonballCluster\",\"0\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n" % (i*2))
+    g.write("execute if score @s CannonID matches 3 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"CannonballCluster\",\"0\",\"NewCannonball\",\"Hit1\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n" % (i*2))
     g.write("execute if score @s CannonID matches 3 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"CannonballCluster\",\"1\",\"HLeft\",\"Hit1\",\"CSpread\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n" % (i*2))
     g.write("execute if score @s CannonID matches 3 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"CannonballCluster\",\"2\",\"HLeft\",\"Hit1\",\"CSpread\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n" % (i*2))
     g.write("execute if score @s CannonID matches 3 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"CannonballCluster\",\"3\",\"Hit1\",\"HRight\",\"CSpread\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n" % (i*2))
@@ -18,7 +18,7 @@ for i in range(-90,90):
     g.write("execute if score @s CannonID matches 4 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"GasCannonball\",\"Hit1\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n\n" % (i*2))
 
     g.write("#Chain Cannonball\n")
-    g.write("execute if score @s CannonID matches 5 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"ChainCannonball\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959,Passengers:[{id:\"minecraft:armor_stand\",Invisible:1b,Marker:1b,Small:1b,Tags:[\"ChainAnchor\"]}]}\n\n" % (i*2))
+    g.write("execute if score @s CannonID matches 5 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"ChainCannonball\",\"NewCannonball\",\"Hit1\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959,Passengers:[{id:\"minecraft:armor_stand\",Invisible:1b,Marker:1b,Small:1b,Tags:[\"ChainAnchor\"]}]}\n\n" % (i*2))
 
     g.write("#Bouncy Cannonball\n")
     g.write("execute if score @s CannonID matches 6 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"BouncyCannonball\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n\n" % (i*2))
@@ -30,7 +30,7 @@ for i in range(-90,90):
     g.write("execute if score @s CannonID matches 8 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"TracerCannonball\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n\n" % (i*2))
 
     g.write("#Golden Cannonball\n")
-    g.write("execute if score @s CannonID matches 9 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"GoldenCannonball\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n\n" % (i*2))
+    g.write("execute if score @s CannonID matches 9 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"GoldenCannonball\",\"NewCannonball\",\"Hit1\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n\n" % (i*2))
 
     g.write("#Copper Cannonball\n")
     g.write("execute if score @s CannonID matches 10 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"CopperCannonball\",\"NewCannonball\",\"Hit1\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}" % (i*2))
