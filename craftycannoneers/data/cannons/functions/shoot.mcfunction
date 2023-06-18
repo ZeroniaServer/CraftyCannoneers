@@ -47,8 +47,9 @@ execute at @s[tag=PlayerCannonball,tag=!Submerged,scores={CmdData=4..}] run part
 execute at @s[tag=TracerCannonball,scores={CmdData=1..}] run function cannons:tracerparticle
 
 #> Landing conditions
+execute at @s if entity @e[type=boat,distance=..2,limit=1] run scoreboard players set $hitboat CmdData 1
 execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball,tag=!boatlaunch] if block ~ ~-1 ~ water run tag @s add Submerged
-execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball,tag=Submerged,tag=!boatlaunch] run function cannons:waterkill
+execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball,tag=Submerged,tag=!boatlaunch] unless score $hitboat CmdData matches 1 run function cannons:waterkill
 
 execute at @s[tag=PlayerCannonball,tag=!boatlaunch] if block ~ ~-1 ~ water run scoreboard players set $landed CmdData 1
 execute at @s[tag=TracerCannonball,tag=!boatlaunch] if block ~ ~-1 ~ water run scoreboard players set $landed CmdData 1
@@ -70,6 +71,7 @@ execute if score @s CmdData matches 3.. if score @s x2 = @s dx2 if score @s y2 =
 
 execute unless score $landed CmdData matches 1 if entity @s[predicate=!game:inarena,predicate=!cannons:safezones/tutorial] run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s if block ~ ~ ~ #game:nonsolids run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 if score $hitboat CmdData matches 1 run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s unless block ~ ~-1 ~ #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s if block ~ ~-0.5 ~ spruce_slab[type=bottom] run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s if block ~ ~-1 ~ spruce_slab[type=top] run scoreboard players set $landed CmdData 1
@@ -96,5 +98,6 @@ execute if score $landed CmdData matches 1 at @s[tag=!PlayerCannonball,tag=!Trac
 execute if score $landed CmdData matches 1 at @s[tag=PlayerCannonball,tag=!Hit] run function cannons:ejectplayer
 execute if score $landed CmdData matches 1 at @s[tag=TracerCannonball] run function cannons:tracerhit
 scoreboard players reset $landed CmdData
+scoreboard players reset $hitboat CmdData
 
 scoreboard players add @s[tag=BouncyCannonball,tag=Hit1,scores={gravity=..1000}] gravity 60
