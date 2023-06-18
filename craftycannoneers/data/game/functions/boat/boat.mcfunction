@@ -1,5 +1,5 @@
-#> Fire boat cannons
-execute if entity @s[tag=FireCannon] run function game:boat/cannon/firecannon
+#> Handle Boat Cannon if enabled
+execute if score $BoatCannons CmdData matches 1 run function game:boat/cannon/move
 
 #> Sailing check
 execute at @s[tag=1,tag=!Sinking] if entity @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat1,limit=1] run tag @s add Sailing
