@@ -127,7 +127,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "weapons:trooper_ale",
+          "name": "weapons:trooper_tonic",
           "functions": [
             {
               "function": "minecraft:set_count",
