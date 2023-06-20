@@ -21,3 +21,6 @@ execute at @s[tag=Goldy] unless score $goldypet CmdData matches 1.. on target ru
 
 #> Boats
 execute if entity @s[tag=boatoccupant] on vehicle run ride @a[tag=self,limit=1] mount @s[tag=!Sailing]
+
+#> Boat Cannon
+execute if score $BoatCannons CmdData matches 1 if entity @s[tag=BoatCannon] on vehicle on vehicle if entity @s[tag=!FireCannon] on passengers if entity @s[type=player] run function game:boat/cannon/interact

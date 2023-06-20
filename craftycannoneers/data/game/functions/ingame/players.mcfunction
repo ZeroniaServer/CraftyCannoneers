@@ -70,6 +70,9 @@ tag @s[tag=!barrelOffhand,predicate=weapons:barrel_offhand] add barrelOffhand
 tag @s[tag=barrelOffhand,predicate=!weapons:barrel_offhand] remove barrelOffhand
 tag @s remove lookAtBarrel
 
+#> Boat Cannon tag
+tag @s remove lookAtBCannon
+
 #> Crab Trap tags
 execute if score $Wildlife CmdData matches 1 run tag @s[tag=!crabTrapMainhand,predicate=weapons:crab_trap_mainhand] add crabTrapMainhand
 execute if score $Wildlife CmdData matches 1 run tag @s[tag=crabTrapMainhand,predicate=!weapons:crab_trap_mainhand] remove crabTrapMainhand

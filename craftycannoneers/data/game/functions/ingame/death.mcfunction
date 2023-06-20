@@ -10,6 +10,7 @@ tp @s[team=Purple] 52 -26 -55 -90 0
 tag @s remove onboatregen
 tag @s remove onboatweakness
 tag @s remove lookAtBarrel
+tag @s remove lookAtBCannon
 tag @s add loaded
 tag @s remove NeedsCutlass
 tag @s remove NeedsCrossbow

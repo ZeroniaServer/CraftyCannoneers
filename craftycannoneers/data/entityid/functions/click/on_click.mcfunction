@@ -71,10 +71,5 @@ execute if entity @s[type=hopper_minecart,tag=!Opened] if entity @a[limit=1,tag=
 execute if entity @s[type=villager,tag=CBTrap] on vehicle run tag @s add TrapExplode
 
 #> Boat Cannons
-execute if score $BoatCannons CmdData matches 1 if entity @s[type=villager,tag=BoatCannon] on vehicle on vehicle if entity @s[tag=!FireCannon] on passengers if entity @s[type=player,tag=clicker] run function game:boat/cannon/interact
-
 #Mount from clicking camel
 execute if entity @s[type=camel,tag=BoatCannonAnchor] on vehicle run ride @a[limit=1,tag=clicker] mount @s[tag=!Sailing]
-
-#Mount from clicking villager
-execute if entity @s[type=villager,tag=BoatCannon] on vehicle on vehicle run ride @a[limit=1,tag=clicker] mount @s[tag=!Sailing]

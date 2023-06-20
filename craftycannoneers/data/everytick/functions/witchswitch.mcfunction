@@ -1,8 +1,3 @@
-execute if entity @s[tag=bcannon] store success score $occupied CmdData if entity @s[tag=occupied]
-execute if entity @s[tag=bcannon] as @e[type=camel,tag=BoatCannonAnchor,sort=nearest,limit=1,distance=..2] run function game:boat/cannon/witchfix
-kill @s[tag=bcannon]
-execute if entity @s[tag=bcannon] run return 0
-
 execute if entity @s[tag=!bbarrel] run summon villager ~ ~ ~ {NoAI:1b,Silent:1b,Invulnerable:1b,NoGravity:1b,Age:-2147483648,Tags:["newVillager"],PersistenceRequired:1b,DeathTime:17s,Passengers:[{id:"minecraft:marker",Tags:["newVillager"]}]}
 execute if entity @s[tag=bbarrel] run summon villager ~ ~ ~ {NoAI:1b,Silent:1b,NoGravity:1b,Age:-2147483648,Tags:["newVillager"],PersistenceRequired:1b,DeathTime:17s,ActiveEffects:[{Id:6,Amplifier:10b,Duration:-1,ShowParticles:0b}],Passengers:[{id:"minecraft:marker",Tags:["newVillager"]}]}
 team join NoName @e[type=villager,tag=newVillager,limit=1]

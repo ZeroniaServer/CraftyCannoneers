@@ -1,4 +1,6 @@
 #> Load gunpowder
+scoreboard players set $gpfull CmdData 0
+execute if predicate cannons:holdgp on vehicle if score @s PowerM matches 5.. run scoreboard players set $gpfull CmdData 1
 execute if predicate cannons:holdgp on vehicle unless score @s PowerM matches 5.. run function game:boat/cannon/loadgunpowder
 
 #> Load cannonballs
@@ -25,7 +27,7 @@ execute if score $removegp CmdData matches 1 on vehicle if score @s PowerM match
 #> Consume items otherwise
 tag @s[predicate=cannons:holdgp] add HoldGP
 tag @s[predicate=cannons:holdtcb] add HoldTCB
-execute if score $removegp CmdData matches 0 run item modify entity @s[gamemode=!creative,tag=HoldGP] weapon.mainhand game:reducecount
+execute if score $removegp CmdData matches 0 unless score $gpfull CmdData matches 1 run item modify entity @s[gamemode=!creative,tag=HoldGP] weapon.mainhand game:reducecount
 execute if score $removegp CmdData matches 0 run loot replace entity @s[tag=HoldTCB] weapon.mainhand loot cannons:tracer_red
 execute if score $removegp CmdData matches 0 run item replace entity @s[gamemode=!creative,tag=!HoldGP,tag=!HoldTCB] weapon.mainhand with air
 tag @s[tag=HoldGP] remove HoldGP
