@@ -39,9 +39,10 @@ execute if score @s CmdData matches 50.. on passengers if data entity @s item{id
 execute if score @s CmdData matches 50.. on passengers if data entity @s item{id:"minecraft:goat_horn"} at @s run scoreboard players reset $ravetime CmdData
 execute if score @s CmdData matches 50.. run scoreboard players reset @s CmdData
 
-execute if entity @s[tag=roam] run particle dust 0 1 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
-execute if entity @s[tag=follow] run particle dust 1 0.533 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
-execute if entity @s[tag=steal] run particle dust 1 0 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
+#> TODO remove - debug particles
+# execute if entity @s[tag=roam] run particle dust 0 1 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
+# execute if entity @s[tag=follow] run particle dust 1 0.533 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
+# execute if entity @s[tag=steal] run particle dust 1 0 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
 
 execute on vehicle unless entity @e[type=item_display,tag=CrabTrap,limit=1,distance=..2] run tag @s remove justReleased
 
