@@ -13,4 +13,3 @@ execute store result storage craftycannoneers:cannonball Motion[0] double 0.001 
 execute store result storage craftycannoneers:cannonball Motion[1] double 0.001 run scoreboard players get @s y
 execute store result storage craftycannoneers:cannonball Motion[2] double 0.001 run scoreboard players get @s z
 data modify entity @s Motion set from storage craftycannoneers:cannonball Motion
-data remove storage craftycannoneers:cannonball Motion

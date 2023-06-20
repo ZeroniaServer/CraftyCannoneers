@@ -65,7 +65,6 @@ data modify storage craftycannoneers:cannonball Pos set from entity @s Pos
 execute store result score @s x2 run data get storage craftycannoneers:cannonball Pos[0] 10000
 execute store result score @s y2 run data get storage craftycannoneers:cannonball Pos[1] 10000
 execute store result score @s z2 run data get storage craftycannoneers:cannonball Pos[2] 10000
-data remove storage craftycannoneers:cannonball Pos
 
 execute if score @s CmdData matches 3.. if score @s x2 = @s dx2 if score @s y2 = @s dy2 if score @s z2 = @s dz2 run scoreboard players set $landed CmdData 1
 

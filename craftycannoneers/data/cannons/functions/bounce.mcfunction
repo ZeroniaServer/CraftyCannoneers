@@ -69,6 +69,5 @@ tag @s add CannonballShot
 execute store result score @s x run data get storage craftycannoneers:cannonball Motion[0] 1000
 execute store result score @s y run data get storage craftycannoneers:cannonball Motion[1] 1000
 execute store result score @s z run data get storage craftycannoneers:cannonball Motion[2] 1000
-data remove storage craftycannoneers:cannonball Motion
 
 execute if block ~ ~-1 ~ water run tp @s ~ ~-1 ~

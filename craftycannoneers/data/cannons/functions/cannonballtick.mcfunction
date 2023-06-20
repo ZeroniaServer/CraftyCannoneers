@@ -22,7 +22,6 @@ data modify storage craftycannoneers:cannonball Pos set from entity @s Pos
 execute store result score @s dx run data get storage craftycannoneers:cannonball Pos[0] 1000000
 execute store result score @s dy run data get storage craftycannoneers:cannonball Pos[1] 1000000
 execute store result score @s dz run data get storage craftycannoneers:cannonball Pos[2] 1000000
-data remove storage craftycannoneers:cannonball Pos
 
 scoreboard players operation @s dx -= @s x
 scoreboard players operation @s dy -= @s y
@@ -44,4 +43,3 @@ tag @s add CannonballShot
 execute store result score @s x run data get storage craftycannoneers:cannonball Motion[0] 1000
 execute store result score @s y run data get storage craftycannoneers:cannonball Motion[1] 1000
 execute store result score @s z run data get storage craftycannoneers:cannonball Motion[2] 1000
-data remove storage craftycannoneers:cannonball Motion

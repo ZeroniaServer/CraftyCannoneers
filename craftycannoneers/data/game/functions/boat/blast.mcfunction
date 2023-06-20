@@ -7,7 +7,6 @@ execute at @e[type=marker,tag=posanchor,limit=1] facing entity @s eyes positione
 data modify storage craftycannoneers:blastbomb Pos set from entity @s Pos
 execute store result score @s dx run data get storage craftycannoneers:blastbomb Pos[0] 1000000
 execute store result score @s dz run data get storage craftycannoneers:blastbomb Pos[2] 1000000
-data remove storage craftycannoneers:blastbomb Pos
 
 scoreboard players operation @s dx -= @s x
 scoreboard players operation @s dz -= @s z
@@ -22,4 +21,3 @@ execute store result storage craftycannoneers:blastbomb Motion[0] double 0.0035 
 execute store result storage craftycannoneers:blastbomb Motion[2] double 0.0035 run scoreboard players get @s dz
 tp @s @s
 data modify entity @s Motion set from storage craftycannoneers:blastbomb Motion
-data remove storage craftycannoneers:blastbomb Motion
