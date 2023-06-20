@@ -1,5 +1,4 @@
 #> Failsafe for players who crashed out
-execute if score $gamestate CmdData matches -1 run scoreboard players set @s[team=!Lobby,tag=!LeaveGame] LeftGame 1
 scoreboard players add @s leavecheck 1
 execute unless score @s leavecheck = $curr leavecheck run scoreboard players set @s[team=Lobby] LeftGame 1
 
