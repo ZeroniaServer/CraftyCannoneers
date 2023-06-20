@@ -22,5 +22,5 @@ execute if score $arrow CmdData matches 1 if entity @s[type=camel,tag=BoatCannon
 execute if score $arrow CmdData matches 1 if entity @s[type=husk,tag=BoatCannonDisplay] on vehicle on vehicle on vehicle on vehicle on passengers run function entityid:hit/fakearrow
 
 #> Hitting Boat Cannon interaction removes gunpowder if applicable
-execute if entity @s[type=interaction,tag=BoatCannon] on vehicle on vehicle on vehicle if score @s PowerM matches 1.. on passengers run loot give @s[tag=hitter] loot weapons:gunpowder
+execute if entity @s[type=interaction,tag=BoatCannon] on vehicle on vehicle on vehicle if score @s PowerM matches 1.. on passengers run loot give @s[gamemode=!creative,tag=hitter] loot weapons:gunpowder
 execute if entity @s[type=interaction,tag=BoatCannon] on vehicle on vehicle on vehicle if score @s PowerM matches 1.. on passengers if entity @s[tag=hitter] on vehicle run function game:boat/cannon/unloadgunpowder
