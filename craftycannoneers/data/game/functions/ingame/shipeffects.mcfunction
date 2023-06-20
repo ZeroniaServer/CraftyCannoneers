@@ -40,7 +40,6 @@ tag @s[team=Orange,predicate=!game:onpurple,tag=onboatweakness,tag=!lookAtBCanno
 effect clear @s[team=Purple,predicate=!game:onorange,tag=onboatweakness,tag=!lookAtBCannon] weakness
 tag @s[team=Purple,predicate=!game:onorange,tag=onboatweakness,tag=!lookAtBCannon] remove onboatweakness
 
-effect give @s[tag=lookAtBCannon] weakness infinite 0 true
 effect clear @s[tag=!lookAtBCannon,tag=!onboatweakness] weakness
 
 #> Gapple timer

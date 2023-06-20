@@ -24,6 +24,6 @@ tag @s[predicate=cannons:holdgp] add HoldGP
 tag @s[predicate=cannons:holdtcb] add HoldTCB
 execute unless score $gpfull CmdData matches 1 run item modify entity @s[gamemode=!creative,tag=HoldGP] weapon.mainhand game:reducecount
 loot replace entity @s[tag=HoldTCB] weapon.mainhand loot cannons:tracer_red
-item replace entity @s[gamemode=!creative,tag=!HoldGP,tag=!HoldTCB] weapon.mainhand with air
+execute on vehicle if entity @s[tag=FireCannon] on passengers run item replace entity @s[type=player,gamemode=!creative,tag=!HoldGP,tag=!HoldTCB] weapon.mainhand with air
 tag @s[tag=HoldGP] remove HoldGP
 tag @s[tag=HoldTCB] remove HoldTCB

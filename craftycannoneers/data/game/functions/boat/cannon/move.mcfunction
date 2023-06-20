@@ -5,6 +5,7 @@ execute rotated as @s[tag=Sailing,tag=!FireCannon,scores={PowerM=0}] rotated ~ ~
 execute rotated as @s[tag=Sailing,tag=!FireCannon,scores={PowerM=1..}] rotated ~ ~40 on passengers if entity @s[type=player] anchored eyes positioned as @s anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.3] run scoreboard players set $rightdir CmdData 1
 
 #> Make player weak to prevent sounds
+execute if entity @s[tag=Sailing] if score $rightdir CmdData matches 1 on passengers run effect give @s[type=player,tag=!lookAtBCannon] weakness infinite 0 true
 execute if entity @s[tag=Sailing] if score $rightdir CmdData matches 1 on passengers run tag @s[type=player] add lookAtBCannon
 execute if entity @s[tag=Sailing] if score $rightdir CmdData matches 0 on passengers run tag @s[type=player] remove lookAtBCannon
 
