@@ -4,6 +4,7 @@ kill @e[type=interaction,tag=boatoccupant]
 
 #> Boat Cannons
 execute as @e[type=camel,tag=BoatCannonAnchor,tag=!markkill] run function arenaclear:markkill
+execute as @e[type=husk,tag=BoatCannonDisplay,tag=!markkill] run function arenaclear:markkill
 kill @e[type=item_display,tag=BoatCannonDisplay]
 kill @e[type=marker,tag=bcannon]
 kill @e[type=area_effect_cloud,tag=BoatCannonOffset]
