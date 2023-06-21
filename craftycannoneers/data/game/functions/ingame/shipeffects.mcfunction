@@ -31,16 +31,16 @@ tag @s[team=Orange,predicate=game:onpurple,tag=!lookAtBarrel,tag=!onboatweakness
 effect give @s[team=Purple,predicate=game:onorange,tag=!onboatweakness,tag=!lookAtBarrel] weakness infinite 0 true
 tag @s[team=Purple,predicate=game:onorange,tag=!lookAtBarrel,tag=!onboatweakness] add onboatweakness
 
-effect clear @s[tag=onboatweakness,tag=lookAtBarrel,tag=!lookAtBCannon] weakness
-tag @s[tag=onboatweakness,tag=lookAtBarrel,tag=!lookAtBCannon] remove onboatweakness
+effect clear @s[tag=onboatweakness,tag=lookAtBarrel,tag=!lookAtBCannon,tag=!lookAtCannon] weakness
+tag @s[tag=onboatweakness,tag=lookAtBarrel,tag=!lookAtBCannon,tag=!lookAtCannon] remove onboatweakness
 
-effect clear @s[team=Orange,predicate=!game:onpurple,tag=onboatweakness,tag=!lookAtBCannon] weakness
-tag @s[team=Orange,predicate=!game:onpurple,tag=onboatweakness,tag=!lookAtBCannon] remove onboatweakness
+effect clear @s[team=Orange,predicate=!game:onpurple,tag=onboatweakness,tag=!lookAtBCannon,tag=!lookAtCannon] weakness
+tag @s[team=Orange,predicate=!game:onpurple,tag=onboatweakness,tag=!lookAtBCannon,tag=!lookAtCannon] remove onboatweakness
 
-effect clear @s[team=Purple,predicate=!game:onorange,tag=onboatweakness,tag=!lookAtBCannon] weakness
-tag @s[team=Purple,predicate=!game:onorange,tag=onboatweakness,tag=!lookAtBCannon] remove onboatweakness
+effect clear @s[team=Purple,predicate=!game:onorange,tag=onboatweakness,tag=!lookAtBCannon,tag=!lookAtCannon] weakness
+tag @s[team=Purple,predicate=!game:onorange,tag=onboatweakness,tag=!lookAtBCannon,tag=!lookAtCannon] remove onboatweakness
 
-effect clear @s[tag=!lookAtBCannon,tag=!onboatweakness] weakness
+effect clear @s[tag=!lookAtBCannon,tag=!lookAtCannon,tag=!onboatweakness] weakness
 
 #> Gapple timer
 scoreboard players add @s gappleTimer 0

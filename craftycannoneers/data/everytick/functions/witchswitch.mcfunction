@@ -3,9 +3,6 @@ execute if entity @s[tag=bbarrel] run summon villager ~ ~ ~ {NoAI:1b,Silent:1b,N
 team join NoName @e[type=villager,tag=newVillager,limit=1]
 data modify entity @e[type=villager,tag=newVillager,limit=1] Tags set from entity @s data.Tags
 data modify entity @e[type=marker,tag=newVillager,limit=1] data.Tags set from entity @s data.Tags
-execute if score @s CannonID matches 0.. run scoreboard players operation @e[type=villager,tag=newVillager,limit=1] CannonID = @s CannonID
-execute if score @s CannonID matches 0.. run scoreboard players operation @e[type=marker,tag=newVillager,limit=1] CannonID = @s CannonID
-execute if entity @s[tag=Tutorial] run tag @e[type=marker,tag=newVillager,limit=1] add Tutorial
 tag @e[type=marker,tag=newVillager,limit=1] add villager
 execute if entity @s[tag=bbarrel] run tag @e[type=marker,tag=newVillager,limit=1] add bbarrel
 tag @e[type=marker,tag=newVillager,limit=1] remove newVillager

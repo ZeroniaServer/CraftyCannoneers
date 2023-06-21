@@ -1,7 +1,7 @@
 execute as @e[type=marker,tag=LightFlash] at @s run fill ~ ~ ~ ~ ~ ~ air replace light
 kill @e[type=marker,tag=LightFlash]
-execute as @e[type=armor_stand,tag=CannonDisp,tag=!Tutorial] at @s run function cannons:resetgunpowder
-tag @e[type=villager,tag=CannonVMain,tag=Charged,tag=!Tutorial] remove Charged
+execute as @e[type=item_display,tag=CannonDisp,tag=!Tutorial] at @s run function cannons:resetgunpowder
+tag @e[type=interaction,tag=CannonVMain,tag=Charged,tag=!Tutorial] remove Charged
 kill @e[type=armor_stand,tag=cannonball,predicate=!cannons:safezones/tutorial]
 kill @e[type=armor_stand,tag=ChainAnchor,predicate=!game:tutorialbounds]
 execute as @e[type=slime,tag=Weakpoint] run function arenaclear:kill

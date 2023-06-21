@@ -9,8 +9,8 @@ execute at @s[tag=!BouncyCannonball,tag=!PlayerCannonball,tag=!Hit1] run tp @s ^
 #Island
 tag @s[predicate=cannons:safezones/island] add InSafezone
 #Cannons
-execute at @s if entity @e[type=armor_stand,tag=cannon,distance=..2] run tag @s add InSafezone
-execute at @s[tag=!InSafeZone] if entity @e[type=villager,tag=cannon,distance=..2] run tag @s add InSafezone
+execute at @s if entity @e[type=item_display,tag=cannon,distance=..2] run tag @s add InSafezone
+execute at @s[tag=!InSafeZone] if entity @e[type=interaction,tag=cannon,distance=..2] run tag @s add InSafezone
 
 #Ships
 tag @s[predicate=cannons:safezones/ships] add InSafezone

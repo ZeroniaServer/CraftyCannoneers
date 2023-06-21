@@ -28,7 +28,7 @@ execute if score $WinningTeam CmdData matches 2 run particle lava 68 -28 55 12 1
 execute if score $WinningTeam CmdData matches 2 run particle large_smoke 68 -28 55 12 12 4 0.1 8 force
 
 execute if score $EndTime CmdData matches 1 run tag @e[type=marker,tag=joinpad] add Locked
-execute if score $EndTime CmdData matches 1 as @e[type=armor_stand,tag=CannonDisp,tag=OnFire] at @s run function cannons:firering/extinguishcannon
+execute if score $EndTime CmdData matches 1 as @e[type=item_display,tag=CannonDisp,tag=OnFire] at @s run function cannons:firering/extinguishcannon
 execute if score $EndTime CmdData matches 1 run function game:mvpstats/check
 execute if score $EndTime CmdData matches 1 run scoreboard players remove @a[team=Purple,scores={GamesPlayed=1..}] GamesPlayed 1
 execute if score $EndTime CmdData matches 1 run scoreboard players remove @a[team=Orange,scores={GamesPlayed=1..}] GamesPlayed 1
@@ -48,30 +48,30 @@ execute if score $EndTime CmdData matches 150 run effect clear @a[team=!Lobby,te
 execute if score $EndTime CmdData matches 250.. run function game:forcestop
 
 #> Firework purple
-execute if score $EndTime CmdData matches 20 if score $WinningTeam CmdData matches 2 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
-execute if score $EndTime CmdData matches 30 if score $WinningTeam CmdData matches 2 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
-execute if score $EndTime CmdData matches 40 if score $WinningTeam CmdData matches 2 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 20 if score $WinningTeam CmdData matches 2 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 30 if score $WinningTeam CmdData matches 2 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 40 if score $WinningTeam CmdData matches 2 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
 
-execute if score $EndTime CmdData matches 100 if score $WinningTeam CmdData matches 2 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
-execute if score $EndTime CmdData matches 105 if score $WinningTeam CmdData matches 2 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
-execute if score $EndTime CmdData matches 110 if score $WinningTeam CmdData matches 2 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
-execute if score $EndTime CmdData matches 115 if score $WinningTeam CmdData matches 2 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
-execute if score $EndTime CmdData matches 120 if score $WinningTeam CmdData matches 2 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 100 if score $WinningTeam CmdData matches 2 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 105 if score $WinningTeam CmdData matches 2 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 110 if score $WinningTeam CmdData matches 2 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 115 if score $WinningTeam CmdData matches 2 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 120 if score $WinningTeam CmdData matches 2 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/purple,sort=random,limit=1] add Firework
 
 #> Firework orange
-execute if score $EndTime CmdData matches 20 if score $WinningTeam CmdData matches 1 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
-execute if score $EndTime CmdData matches 30 if score $WinningTeam CmdData matches 1 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
-execute if score $EndTime CmdData matches 40 if score $WinningTeam CmdData matches 1 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 20 if score $WinningTeam CmdData matches 1 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 30 if score $WinningTeam CmdData matches 1 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 40 if score $WinningTeam CmdData matches 1 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
 
-execute if score $EndTime CmdData matches 100 if score $WinningTeam CmdData matches 1 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
-execute if score $EndTime CmdData matches 105 if score $WinningTeam CmdData matches 1 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
-execute if score $EndTime CmdData matches 110 if score $WinningTeam CmdData matches 1 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
-execute if score $EndTime CmdData matches 115 if score $WinningTeam CmdData matches 1 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
-execute if score $EndTime CmdData matches 120 if score $WinningTeam CmdData matches 1 run tag @e[type=armor_stand,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 100 if score $WinningTeam CmdData matches 1 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 105 if score $WinningTeam CmdData matches 1 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 110 if score $WinningTeam CmdData matches 1 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 115 if score $WinningTeam CmdData matches 1 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
+execute if score $EndTime CmdData matches 120 if score $WinningTeam CmdData matches 1 run tag @e[type=item_display,tag=cannon,tag=!Firework2,predicate=cannons:ships/orange,sort=random,limit=1] add Firework
 
-execute if score $EndTime CmdData matches 41 run tag @e[type=armor_stand,tag=cannon,tag=Firework2] remove Firework2
-execute if score $EndTime CmdData matches 121 run tag @e[type=armor_stand,tag=cannon,tag=Firework2] remove Firework2
+execute if score $EndTime CmdData matches 41 run tag @e[type=item_display,tag=cannon,tag=Firework2] remove Firework2
+execute if score $EndTime CmdData matches 121 run tag @e[type=item_display,tag=cannon,tag=Firework2] remove Firework2
 
 #> End fireworks
-execute as @e[type=armor_stand,tag=cannon,tag=Firework] at @s run function game:endfirework/cannons
-execute as @e[type=armor_stand,tag=EndFirework] at @s run function game:endfirework/main
+execute as @e[type=item_display,tag=cannon,tag=Firework] at @s run function game:endfirework/cannons
+execute as @e[type=item_display,tag=EndFirework] at @s run function game:endfirework/main

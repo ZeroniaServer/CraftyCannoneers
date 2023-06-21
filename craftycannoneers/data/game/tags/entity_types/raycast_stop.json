@@ -4,6 +4,7 @@
     "minecraft:villager",
     "minecraft:wandering_trader",
     "minecraft:armor_stand",
-    "minecraft:player"
+    "minecraft:player",
+    "minecraft:interaction"
   ]
 }

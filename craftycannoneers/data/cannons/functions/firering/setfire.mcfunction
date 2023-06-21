@@ -1,5 +1,5 @@
-execute at @s[scores={CmdData=1}] run tag @e[type=armor_stand,tag=CannonDisp,tag=!OnFire,distance=..6,limit=2,sort=nearest] add OnFire
-execute at @s[scores={CmdData=1}] run scoreboard players reset @e[type=armor_stand,tag=CannonDisp,tag=OnFire,distance=..6,sort=nearest] firetime
+execute at @s[scores={CmdData=1}] run tag @e[type=item_display,tag=CannonDisp,tag=!OnFire,distance=..6,limit=2,sort=nearest] add OnFire
+execute at @s[scores={CmdData=1}] run scoreboard players reset @e[type=item_display,tag=CannonDisp,tag=OnFire,distance=..6,sort=nearest] firetime
 execute at @s[scores={CmdData=1}] run fill ~-1 ~1 ~-1 ~1 ~1 ~1 fire replace air
 execute at @s[scores={CmdData=3}] run fill ~-1 ~1 ~-1 ~1 ~1 ~1 air replace fire
 execute at @s[scores={CmdData=3}] run fill ~-2 ~2 ~-2 ~2 ~2 ~2 fire replace air

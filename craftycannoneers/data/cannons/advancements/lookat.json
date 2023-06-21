@@ -1,0 +1,21 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:tick",
+            "conditions": {
+                "player": {
+                    "type_specific": {
+                        "type": "player",
+                        "looking_at": {
+                            "type": "minecraft:interaction",
+                            "nbt": "{Tags:[\"cannon\"]}"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cannons:lookat"
+    }
+}

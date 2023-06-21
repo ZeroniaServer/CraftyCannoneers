@@ -56,6 +56,7 @@ scoreboard players reset @s[scores={LeftGame=1..}] LeftGame
 tag @s[tag=LeaveGame] remove onboatregen
 tag @s[tag=LeaveGame] remove onboatweakness
 tag @s[tag=LeaveGame] remove lookAtBarrel
+tag @s[tag=LeaveGame] remove lookAtCannon
 tag @s[tag=LeaveGame] remove lookAtBCannon
 tag @s[tag=LeaveGame] remove barrelMainhand
 tag @s[tag=LeaveGame] remove barrelOffhand

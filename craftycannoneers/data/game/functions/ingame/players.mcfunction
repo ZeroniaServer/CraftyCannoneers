@@ -70,7 +70,9 @@ tag @s[tag=!barrelOffhand,predicate=weapons:barrel_offhand] add barrelOffhand
 tag @s[tag=barrelOffhand,predicate=!weapons:barrel_offhand] remove barrelOffhand
 tag @s remove lookAtBarrel
 
-#> Boat Cannon tag
+#> Cannon tags
+tag @s remove lookAtCannon
+execute if entity @s[tag=!UsingSpyglass] if entity @e[type=interaction,tag=cannon,distance=..8] run function game:raycast/check_start_ray
 tag @s remove lookAtBCannon
 
 #> Crab Trap tags

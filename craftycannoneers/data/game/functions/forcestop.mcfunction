@@ -44,7 +44,7 @@ kill @e[type=marker,tag=WeakpointLoc]
 kill @e[type=marker,tag=Weakpoint]
 execute as @e[type=slime,tag=Weakpoint] run function arenaclear:kill
 
-execute as @e[type=armor_stand,tag=CannonDisp,tag=OnFire] at @s run function cannons:firering/extinguishcannon
+execute as @e[type=item_display,tag=CannonDisp,tag=OnFire] at @s run function cannons:firering/extinguishcannon
 
 scoreboard players set $WasAuto CmdData 0
 

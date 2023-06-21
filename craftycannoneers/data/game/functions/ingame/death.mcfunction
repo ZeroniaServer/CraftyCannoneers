@@ -10,6 +10,7 @@ tp @s[team=Purple] 52 -26 -55 -90 0
 tag @s remove onboatregen
 tag @s remove onboatweakness
 tag @s remove lookAtBarrel
+tag @s remove lookAtCannon
 tag @s remove lookAtBCannon
 tag @s add loaded
 tag @s remove NeedsCutlass
@@ -22,5 +23,5 @@ scoreboard players reset @s death
 scoreboard players add @s hasArrows 1
 scoreboard players set @s respawn 1
 scoreboard players operation $tempuuid playerUUID = @s playerUUID
-execute as @e[type=armor_stand,tag=FireCannon,scores={CmdData=7}] if score @s playerUUID = $tempuuid playerUUID run scoreboard players reset @s playerUUID
+execute as @e[type=item_display,tag=FireCannon,scores={CmdData=7}] if score @s playerUUID = $tempuuid playerUUID run scoreboard players reset @s playerUUID
 function game:mvpstats/ingame_check

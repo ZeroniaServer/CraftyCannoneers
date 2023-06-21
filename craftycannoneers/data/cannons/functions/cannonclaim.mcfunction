@@ -16,8 +16,8 @@ execute at @s[scores={cannonclaim=120..}] run function cannons:accuracy/randomac
 execute at @s[scores={cannonclaim=120..}] run kill @e[type=area_effect_cloud,tag=CannonNametag,limit=1,sort=nearest,distance=..3]
 execute at @s[scores={cannonclaim=120..}] run kill @e[type=area_effect_cloud,tag=GPDispText,limit=2,sort=nearest,distance=..3]
 scoreboard players set @s[scores={cannonclaim=120..}] playerUUID 0
-execute at @s[scores={cannonclaim=120..,playerUUID=0}] run scoreboard players reset @e[type=armor_stand,tag=GPDispL,distance=..2,limit=1,sort=nearest] gpdisp_time
-execute at @s[scores={cannonclaim=120..,playerUUID=0}] run scoreboard players reset @e[type=armor_stand,tag=GPDispR,distance=..2,limit=1,sort=nearest] gpdisp_time
+execute at @s[scores={cannonclaim=120..,playerUUID=0}] run scoreboard players reset @e[type=item_display,tag=GPDispL,distance=..2,limit=1,sort=nearest] gpdisp_time
+execute at @s[scores={cannonclaim=120..,playerUUID=0}] run scoreboard players reset @e[type=item_display,tag=GPDispR,distance=..2,limit=1,sort=nearest] gpdisp_time
 scoreboard players reset @s[scores={cannonclaim=120..,playerUUID=0}] cannonclaim
 
 #> Reset gunpowder after 6 seconds in Cannon Dock
