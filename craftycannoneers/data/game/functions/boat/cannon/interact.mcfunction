@@ -18,7 +18,7 @@ scoreboard players operation $temp playerUUID = @s playerUUID
 execute on vehicle run scoreboard players operation @s[scores={CannonID=1..},tag=!FireCannon] playerUUID = $temp playerUUID
 execute unless predicate cannons:holdtcb_red unless predicate cannons:holdgp on vehicle if entity @s[scores={CannonID=1..},tag=!FireCannon] on passengers run scoreboard players set @s PowerM 0
 execute unless predicate cannons:holdtcb_red unless predicate cannons:holdgp on vehicle run tag @s[scores={CannonID=1..},tag=!FireCannon] add FireCannon
-execute on vehicle if entity @s[tag=FireCannon] on passengers run scoreboard players add @s[type=player,tag=!HoldGP,tag=!HoldTCB] MVPcannon 1
+execute on vehicle if entity @s[tag=FireCannon] on passengers run scoreboard players add @s[type=player,predicate=!cannons:holdgp,predicate=!cannons:holdtcb] MVPcannon 1
 
 #> Consume items
 tag @s[predicate=cannons:holdgp] add HoldGP
