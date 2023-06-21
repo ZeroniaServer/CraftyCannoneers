@@ -3,6 +3,9 @@ scoreboard players add @s firetime 1
 #> Ignite cannon
 execute at @s[scores={firetime=1}] run function cannons:firering/ignitecannon
 
+#> Light block
+execute at @s run setblock ^ ^1 ^2 light[level=15]
+
 #> Continuous effects
 item replace entity @s container.0 with diamond_hoe{CustomModelData:74}
 particle smoke ^ ^1.4 ^0.4 0 0 1 0.1 2 normal @a[team=!Lobby]
