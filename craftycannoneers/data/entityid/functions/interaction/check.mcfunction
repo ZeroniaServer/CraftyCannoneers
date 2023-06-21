@@ -39,6 +39,10 @@ execute at @s as @a[limit=1,tag=self,tag=FillCB] run function cannons:checkowner
 execute at @s as @a[limit=1,tag=self,tag=FillLeft,tag=HoldGP] run function cannons:checkowner
 execute at @s as @a[limit=1,tag=self,tag=FillRight,tag=HoldGP] run function cannons:checkowner
 
+#> Remove Cannon tags
+tag @a[limit=1,tag=self] remove FillLeft
+tag @a[limit=1,tag=self] remove FillRight
+
 #> Credits
 execute if entity @s[tag=BlockyCredit] on target at @s run function lobby:credit/blocky
 execute if entity @s[tag=CarlCredit] on target at @s run function lobby:credit/carl
