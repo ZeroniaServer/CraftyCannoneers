@@ -1,2 +1,2 @@
-item replace entity @s armor.head with air
+item replace entity @s container.0 with air
 tag @s remove HasDisplay

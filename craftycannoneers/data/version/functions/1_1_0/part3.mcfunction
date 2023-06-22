@@ -12,6 +12,9 @@ setblock -260 -24 -59 jungle_wall_sign[facing=south,waterlogged=false]{front_tex
 setblock -58 -24 0 air
 setblock -58 -24 0 spruce_wall_sign[facing=west,waterlogged=false]{front_text:{has_glowing_text:1b,color:"black",messages:['{"translate":"lobby.jail_sign.1"}','{"translate":"lobby.jail_sign.2"}','{"translate":"lobby.jail_sign.3"}','{"translate":"lobby.jail_sign.4"}']}}
 
+#> Replace Lobby Logo armor stand with Item Display
+execute as @e[type=armor_stand,tag=LobbyLogo,limit=1] at @s run function version:1_1_0/logofix
+
 bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"3","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
 bossbar set updatebar value 3
 

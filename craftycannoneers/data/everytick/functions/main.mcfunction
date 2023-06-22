@@ -73,7 +73,7 @@ scoreboard players reset @a[scores={eyeclick=3..}] eyeclick
 scoreboard players reset @a[scores={climb=1..}] climb
 
 #> Cannonball displays
-execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=armor_stand,tag=CannonballDeco] run function lobby:cbdisplays/main
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=item_display,tag=CannonballDeco] run function lobby:cbdisplays/main
 
 #> Ready Up + Countdown
 execute if score $gamestate CmdData matches 0..1 if score $OrangeReady CmdData matches 1 unless entity @a[team=Orange] run function game:readyteams/unreadyemptyorange
