@@ -27,10 +27,10 @@ item replace entity @s[scores={eyeclick=58}] container.0 with mooshroom_spawn_eg
 item replace entity @s[scores={eyeclick=60..95}] container.0 with mooshroom_spawn_egg{CustomModelData:14}
 item replace entity @s[scores={eyeclick=95..}] container.0 with air
 
-execute at @s[scores={eyeclick=94}] run function weapons:barrel/levitate
-execute at @s[scores={eyeclick=95,CmdData=10}] run function weapons:barrel/tier3
-execute at @s[scores={eyeclick=95,CmdData=6..9}] run function weapons:barrel/tier2
-execute at @s[scores={eyeclick=95,CmdData=1..5}] run function weapons:barrel/tier1
+execute at @s[scores={eyeclick=94}] positioned ~ ~-0.05 ~ run function weapons:barrel/levitate
+execute at @s[scores={eyeclick=95,CmdData=10}] positioned ~ ~-0.05 ~ run function weapons:barrel/tier3
+execute at @s[scores={eyeclick=95,CmdData=6..9}] positioned ~ ~-0.05 ~ run function weapons:barrel/tier2
+execute at @s[scores={eyeclick=95,CmdData=1..5}] positioned ~ ~-0.05 ~ run function weapons:barrel/tier1
 
 #> Remount nearby Crabs/Sharks
 execute at @s[scores={eyeclick=98}] as @e[type=cat,tag=CrabVehicle,tag=dismounted,distance=..10] run function game:modifiers/crabs/remount
