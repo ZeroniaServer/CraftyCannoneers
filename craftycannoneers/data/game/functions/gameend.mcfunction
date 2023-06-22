@@ -74,4 +74,4 @@ execute if score $EndTime CmdData matches 121 run tag @e[type=item_display,tag=c
 
 #> End fireworks
 execute as @e[type=item_display,tag=cannon,tag=Firework] at @s run function game:endfirework/cannons
-execute as @e[type=item_display,tag=EndFirework] at @s run function game:endfirework/main
+execute as @e[type=armor_stand,tag=EndFirework] at @s run function game:endfirework/main

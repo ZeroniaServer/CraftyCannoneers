@@ -23,7 +23,7 @@ kill @e[type=area_effect_cloud,tag=GPDispText,tag=!Tutorial]
 kill @e[type=area_effect_cloud,tag=CannonNametag,tag=!Tutorial]
 kill @e[type=marker,tag=RingOfFire,predicate=!cannons:ships/tutorial]
 kill @e[type=interaction,tag=LChest]
-kill @e[type=armor_stand,tag=BlastBarrel]
+kill @e[type=item_display,tag=BlastBarrel]
 execute as @e[type=villager,tag=BlastBarrel] run function arenaclear:kill
 kill @e[type=marker,tag=bbarrel]
 kill @e[type=marker,tag=StormEntity]
