@@ -9,6 +9,9 @@ bossbar set updatebar style notched_6
 
 forceload add -413 -379 -260 -15
 
+kill @e[type=armor_stand,tag=chestdisplay]
+
+#> TODO CHANGE ALL THIS (again :skull:)
 execute as @e[type=armor_stand,tag=KlarDeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add KlarHat
 execute as @e[type=armor_stand,tag=CarlDeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add CarlHat
 execute as @e[type=armor_stand,tag=YZERODeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add YZEROHat
