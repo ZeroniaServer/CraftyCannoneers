@@ -4,7 +4,7 @@ execute if score @s eyeclick matches 1 run playsound trainingdummy_hit1 master @
 execute if score @s eyeclick matches 1 run playsound trainingdummy_hit3 master @a ~ ~ ~ 1 0
 execute if score @s eyeclick matches 1 run playsound trainingdummy_hit2 master @a ~ ~ ~ 1 0.7
 execute if score @s eyeclick matches 1 run playsound trainingdummy_hit2 master @a ~ ~ ~ 1 2
-execute if score @s eyeclick matches 1 run item replace entity @s armor.head with air
+execute if score @s eyeclick matches 1 run item replace entity @s container.0 with air
 execute if score @s eyeclick matches 1 run particle cloud ~ ~ ~ 0 0 0 0.2 10
 execute if score @s eyeclick matches 1 run particle block oak_planks ~ ~1.3 ~ 0 0.3 0 0.1 50
 execute if score @s eyeclick matches 1 run particle block hay_block ^0.2 ^1 ^ 0 0.1 0 0.1 20

@@ -1,6 +1,6 @@
-#> NoGravity + Marker application
-data merge entity @s[tag=!nograv,nbt={OnGround:1b}] {NoGravity:1b,Marker:1b}
-tag @s[tag=!nograv,nbt={OnGround:1b}] add nograv
+#> Initial Animation
+data merge entity @s[tag=!init] {start_interpolation:0,interpolation_duration:3,transformation:{translation:[0.0f,1.8f,0.0f]}}
+tag @s add init
 
 #> Hurt Animation
 execute at @s[tag=DummyHurtAnim] run function tutorial:trainingdummies/hurtanim

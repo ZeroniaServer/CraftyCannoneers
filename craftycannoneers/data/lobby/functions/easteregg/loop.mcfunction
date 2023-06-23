@@ -1,5 +1,5 @@
 #> Snowy Skirmish
-execute as @e[type=armor_stand,tag=SnowmanDeco,limit=1] at @s run function lobby:easteregg/snowman
+execute as @e[type=item_display,tag=SnowmanDeco,limit=1] at @s run function lobby:easteregg/snowman
 
 #> Rocket Launch
 execute as @e[type=armor_stand,tag=RocketLaunch,limit=1] at @s run function lobby:easteregg/rocket/loop

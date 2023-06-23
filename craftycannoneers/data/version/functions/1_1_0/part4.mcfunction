@@ -11,7 +11,9 @@ execute as @e[type=hopper_minecart,tag=fakechest] run function arenaclear:kill
 execute as @e[type=chest_minecart,tag=fakechest] run function arenaclear:kill
 function tutorial:treasurepit/main
 
-execute as @e[type=armor_stand,tag=TDAS] run function version:1_1_0/dummyrotate
+kill @e[type=armor_stand,tag=TrainingDummy]
+function tutorial:trainingdummies/despawnall
+execute summon marker run function tutorial:trainingdummies/spawnall
 
 execute unless score $setuprand CmdData matches 1 run function inventory:randomizer/setup/begin
 
