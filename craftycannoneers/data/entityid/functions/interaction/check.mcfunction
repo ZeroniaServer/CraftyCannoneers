@@ -58,7 +58,7 @@ execute if entity @s[tag=notifylock] on target run tellraw @s ["",{"translate":"
 #> Easter Eggs
 execute at @s[tag=Parrot] unless score $parrotpet CmdData matches 1.. on target run function lobby:easteregg/parrot
 execute if entity @s[tag=Planetary] on target run advancement grant @s only tutorial:eastereggs/planetary
-execute if entity @s[tag=Snowman] unless entity @e[type=item_display,tag=EasterEgg,tag=SnowmanDeco,limit=1] run summon item_display -85 -28 -31 {width:1f,height:2f,Rotation:[-45.0f,0.0f],Tags:["EasterEgg","SnowmanDeco"],item_display:"head",item:{id:"diamond_hoe",Count:1b,tag:{CustomModelData:66}},transformation:{translation:[0.0f,-3.0f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},interpolation_duration:10}
+execute if entity @s[tag=Snowman] unless entity @e[type=item_display,tag=EasterEgg,tag=SnowmanDeco,limit=1] run summon item_display -85 -28 -31 {width:1f,height:2f,Rotation:[-45.0f,0.0f],Tags:["EasterEgg","SnowmanDeco"],item_display:"head",item:{id:"diamond_hoe",Count:1b,tag:{CustomModelData:66}},transformation:{translation:[0.0f,-3.0f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},interpolation_duration:10,Passengers:[{id:"item_display",Rotation:[45.0f,0.0f],Tags:["EasterEgg","Carrot"],width:1f,height:2f,item_display:"head",item:{id:"golden_carrot",Count:1b},transformation:{translation:[0.0f,-3.0f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[1f,1f,1f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},interpolation_duration:10}]}
 execute at @s[tag=Goldy] unless score $goldypet CmdData matches 1.. on target run function lobby:easteregg/goldy
 
 #> Boats
