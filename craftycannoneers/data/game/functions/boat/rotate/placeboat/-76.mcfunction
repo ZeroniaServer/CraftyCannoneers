@@ -11,7 +11,7 @@ execute if score $BoatCannons CmdData matches 1 at @e[type=area_effect_cloud,tag
 
 execute if score $BoatCannons CmdData matches 1 at @e[type=area_effect_cloud,tag=base,tag=new,limit=1] run summon area_effect_cloud ~ ~0.375 ~ {Duration:20000000,Tags:["BoatCannonOffset","extend","new"]}
 
-execute if score $BoatCannons CmdData matches 1 at @e[type=area_effect_cloud,tag=base,tag=new,limit=1] run summon item_display ~ ~0.75 ~ {width:1f,height:1f,Rotation:[-152.0f,0.0f],Tags:["BoatCannonDisplay","new"]}
+execute if score $BoatCannons CmdData matches 1 at @e[type=area_effect_cloud,tag=base,tag=new,limit=1] run summon item_display ~ ~0.75 ~ {Rotation:[-152.0f,0.0f],Tags:["BoatCannonDisplay","new"]}
 
 execute if score $BoatCannons CmdData matches 1 run data merge entity @e[type=item_display,tag=BoatCannonDisplay,tag=new,limit=1] {start_interpolation:0,interpolation_duration:0,item_display:"head",transformation:{scale:[0.4645f,0.4645f,0.4645f],translation:[0.0f,1.00375f,0.0f]}}
 
