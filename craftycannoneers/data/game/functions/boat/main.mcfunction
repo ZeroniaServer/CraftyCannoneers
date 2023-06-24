@@ -1,5 +1,5 @@
 #> Banner
-execute as @e[type=armor_stand,tag=BoatAS] at @s run function game:boat/banner
+execute as @e[type=item_display,tag=BoatBanner] at @s run function game:boat/banner
 
 #> Tag player in boat
 tag @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat1,limit=1] add inBoat1

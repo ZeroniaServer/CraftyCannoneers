@@ -1,16 +1,13 @@
 #> Rotate the sail along with the boat
 execute on vehicle rotated as @s on passengers positioned as @s[type=!player] run tp @s ~ ~ ~ ~ ~
+function game:boat/euler
+
+#> Hide this sail in order to show the other one
+execute on vehicle if entity @s[tag=Sailing] on passengers run item replace entity @s[tag=BoatBanner] container.0 with air
 
 #> Set banner color
-execute if entity @s[tag=1] if entity @a[team=Purple,predicate=game:boat/inboat1,limit=1] run item replace entity @s armor.head with purple_banner{BlockEntityTag:{Patterns:[{Pattern:mc,Color:15},{Pattern:rs,Color:10},{Pattern:ls,Color:10},{Pattern:ts,Color:10},{Pattern:hhb,Color:10},{Pattern:sku,Color:0}]}}
-execute if entity @s[tag=2] if entity @a[team=Purple,predicate=game:boat/inboat2,limit=1] run item replace entity @s armor.head with purple_banner{BlockEntityTag:{Patterns:[{Pattern:mc,Color:15},{Pattern:rs,Color:10},{Pattern:ls,Color:10},{Pattern:ts,Color:10},{Pattern:hhb,Color:10},{Pattern:sku,Color:0}]}}
-execute if entity @s[tag=3] if entity @a[team=Purple,predicate=game:boat/inboat3,limit=1] run item replace entity @s armor.head with purple_banner{BlockEntityTag:{Patterns:[{Pattern:mc,Color:15},{Pattern:rs,Color:10},{Pattern:ls,Color:10},{Pattern:ts,Color:10},{Pattern:hhb,Color:10},{Pattern:sku,Color:0}]}}
-execute if entity @s[tag=4] if entity @a[team=Purple,predicate=game:boat/inboat4,limit=1] run item replace entity @s armor.head with purple_banner{BlockEntityTag:{Patterns:[{Pattern:mc,Color:15},{Pattern:rs,Color:10},{Pattern:ls,Color:10},{Pattern:ts,Color:10},{Pattern:hhb,Color:10},{Pattern:sku,Color:0}]}}
-
-execute if entity @s[tag=1] if entity @a[team=Orange,predicate=game:boat/inboat1,limit=1] run item replace entity @s armor.head with orange_banner{BlockEntityTag:{Patterns:[{Pattern:mc,Color:15},{Pattern:rs,Color:1},{Pattern:ls,Color:1},{Pattern:hhb,Color:1},{Pattern:ts,Color:1},{Pattern:sku,Color:0}]}}
-execute if entity @s[tag=2] if entity @a[team=Orange,predicate=game:boat/inboat2,limit=1] run item replace entity @s armor.head with orange_banner{BlockEntityTag:{Patterns:[{Pattern:mc,Color:15},{Pattern:rs,Color:1},{Pattern:ls,Color:1},{Pattern:hhb,Color:1},{Pattern:ts,Color:1},{Pattern:sku,Color:0}]}}
-execute if entity @s[tag=3] if entity @a[team=Orange,predicate=game:boat/inboat3,limit=1] run item replace entity @s armor.head with orange_banner{BlockEntityTag:{Patterns:[{Pattern:mc,Color:15},{Pattern:rs,Color:1},{Pattern:ls,Color:1},{Pattern:hhb,Color:1},{Pattern:ts,Color:1},{Pattern:sku,Color:0}]}}
-execute if entity @s[tag=4] if entity @a[team=Orange,predicate=game:boat/inboat4,limit=1] run item replace entity @s armor.head with orange_banner{BlockEntityTag:{Patterns:[{Pattern:mc,Color:15},{Pattern:rs,Color:1},{Pattern:ls,Color:1},{Pattern:hhb,Color:1},{Pattern:ts,Color:1},{Pattern:sku,Color:0}]}}
+execute on vehicle on passengers if entity @s[type=player,team=Purple] on vehicle on passengers on passengers run item replace entity @s[tag=BoatBanner2] container.0 with purple_banner
+execute on vehicle on passengers if entity @s[type=player,team=Orange] on vehicle on passengers on passengers run item replace entity @s[tag=BoatBanner2] container.0 with orange_banner
 
 tag @s[tag=New] remove New
 
