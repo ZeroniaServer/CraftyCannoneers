@@ -1,3 +1,14 @@
+#> Prevent duplicates
+execute store result score $boat playerUUID run data get entity @s UUID[0]
+execute if entity @s[tag=1] unless score $boat playerUUID = $boat1 CmdData run function game:boat/quickkill
+execute if entity @s[tag=1] unless score $boat playerUUID = $boat1 CmdData run return 0
+execute if entity @s[tag=2] unless score $boat playerUUID = $boat2 CmdData run function game:boat/quickkill
+execute if entity @s[tag=2] unless score $boat playerUUID = $boat2 CmdData run return 0
+execute if entity @s[tag=3] unless score $boat playerUUID = $boat3 CmdData run function game:boat/quickkill
+execute if entity @s[tag=3] unless score $boat playerUUID = $boat3 CmdData run return 0
+execute if entity @s[tag=4] unless score $boat playerUUID = $boat4 CmdData run function game:boat/quickkill
+execute if entity @s[tag=4] unless score $boat playerUUID = $boat4 CmdData run return 0
+
 #> Only allow mounting after 5 ticks to prevent issues with display interpolation
 scoreboard players add @s[tag=!allowmount] click 1 
 execute if entity @s[scores={click=5..},tag=!allowmount] on passengers run data merge entity @s[tag=boatoccupant] {width:2,height:1}
@@ -34,10 +45,3 @@ team join NoName
 #> Prevent clipping into ship floorboards
 execute if entity @s[tag=!Sinking,predicate=cannons:ships/orange,predicate=cannons:ships/underbottom,predicate=!game:instillwater,nbt={OnGround:0b}] align y run tp @s ~ ~1 ~
 execute if entity @s[tag=!Sinking,predicate=cannons:ships/purple,predicate=cannons:ships/underbottom,predicate=!game:instillwater,nbt={OnGround:0b}] align y run tp @s ~ ~1 ~
-
-#> Prevent duplicates
-execute store result score $boat playerUUID run data get entity @s UUID[0]
-execute if entity @s[tag=1] unless score $boat playerUUID = $boat1 CmdData run function game:boat/quickkill
-execute if entity @s[tag=2] unless score $boat playerUUID = $boat2 CmdData run function game:boat/quickkill
-execute if entity @s[tag=3] unless score $boat playerUUID = $boat3 CmdData run function game:boat/quickkill
-execute if entity @s[tag=4] unless score $boat playerUUID = $boat4 CmdData run function game:boat/quickkill
