@@ -9,8 +9,13 @@ execute if entity @s[tag=Sailing] if score $rightdir CmdData matches 1 on passen
 execute if entity @s[tag=Sailing] if score $rightdir CmdData matches 1 on passengers run tag @s[type=player] add lookAtBCannon
 execute if entity @s[tag=Sailing] if score $rightdir CmdData matches 0 on passengers run tag @s[type=player] remove lookAtBCannon
 
-#> Detect occupied boat and adjust hitbox + replace display
-execute if entity @s[tag=Sailing] on passengers on passengers on passengers on passengers if entity @s[type=item_display,tag=BoatCannonDisplay] on vehicle at @s run function game:boat/cannon/displayreplace
+#> Detect occupied boat and replace display
+execute if entity @s[tag=Sailing,tag=!displayreplaced] on passengers on passengers on passengers on passengers run item replace entity @s[type=item_display,tag=BoatCannonDisplay] container.0 with air
+execute if entity @s[tag=Sailing,tag=!displayreplaced] run function game:boat/cannon/updategunpowder
+tag @s[tag=Sailing,tag=!displayreplaced] add displayreplaced
+
+#> Rotate secondary display
+execute on passengers on passengers on passengers on passengers if entity @s[type=item_display,tag=BoatCannonDisplay] run function game:boat/euler
 
 #> Replace interaction once still
 execute if entity @s[tag=Sailing] run function game:boat/cannon/motiondetect
