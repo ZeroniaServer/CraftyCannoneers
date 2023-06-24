@@ -1,0 +1,10 @@
+data modify entity @s[tag=Parrot] transformation.scale[1] set value 0.4f
+data modify entity @s[tag=Parrot] transformation.translation[1] set value -0.1f
+data modify entity @s[tag=Planetary] transformation.translation[1] set value 0.2f
+data modify entity @s[tag=Goldy] transformation.scale[1] set value 0.3f
+data modify entity @s[tag=Goldy] transformation.translation[1] set value -0.4f
+data merge entity @s[tag=!PlanetaryGun] {start_interpolation:0,interpolation_duration:2}
+data merge entity @s[tag=PlanetaryGun] {start_interpolation:2,interpolation_duration:2}
+execute if entity @s[tag=PlanetaryHelmet] run scoreboard players set $planetary CmdData 1
+execute store result score @s[tag=!PlanetaryGun] CmdData run schedule function lobby:easteregg/unsquishcheck 2t append
+execute store result score @s[tag=PlanetaryGun] CmdData run schedule function lobby:easteregg/unsquishcheck 5t append

@@ -1,7 +1,6 @@
 forceload add -427 -25 -452 -85
 
-#> New modifier options stuff
-#icons
+#> New Settings Map icons (TODO fully replace with item displays)
 tp @e[type=armor_stand,tag=ConfirmIcon] -55 -23.5 9
 kill @e[type=armor_stand,tag=ModifierIcons]
 kill @e[type=armor_stand,tag=DaytimeIcon]
