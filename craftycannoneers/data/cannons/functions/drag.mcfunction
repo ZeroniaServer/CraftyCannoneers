@@ -1,11 +1,13 @@
 ### incorporating drag/gravity
 # drag depends on sign of x/z motion
-execute if score @s x matches 500.. run scoreboard players operation @s x -= @s drag
-execute if score @s x matches ..-500 run scoreboard players operation @s x += @s drag
-execute if score @s z matches 500.. run scoreboard players operation @s z -= @s drag
-execute if score @s z matches ..-500 run scoreboard players operation @s z += @s drag
+execute if score @s[tag=!boatlaunch,tag=!boatshot] x matches 500.. run scoreboard players operation @s x -= @s drag
+execute if score @s[tag=!boatlaunch,tag=!boatshot] x matches ..-500 run scoreboard players operation @s x += @s drag
+execute if score @s[tag=!boatlaunch,tag=!boatshot] z matches 500.. run scoreboard players operation @s z -= @s drag
+execute if score @s[tag=!boatlaunch,tag=!boatshot] z matches ..-500 run scoreboard players operation @s z += @s drag
+
 # y velocity only needs a lower cap bc gravity just keeps going down
-execute if score @s y matches -500.. run scoreboard players operation @s y -= @s gravity
+execute if score @s[tag=!boatlaunch,tag=!boatshot] y matches -500.. run scoreboard players operation @s y -= @s gravity
+execute if entity @s[tag=boatshot] run scoreboard players operation @s y -= @s gravity
 
 ### storing back into cannonball motion
 data modify storage craftycannoneers:cannonball Motion set value [0d, 0d, 0d]

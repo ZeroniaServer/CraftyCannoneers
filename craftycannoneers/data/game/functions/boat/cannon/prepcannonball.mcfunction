@@ -6,4 +6,16 @@ scoreboard players operation @s PowerV += $current PowerM
 scoreboard players operation @s PowerV += $current PowerM
 scoreboard players operation @s drag = $current drag
 scoreboard players operation @s gravity = $current gravity
+
+execute if score @s PowerM matches 2 run scoreboard players set @s drag 20
+execute if score @s PowerM matches 3 run scoreboard players set @s drag 30
+execute if score @s PowerM matches 4 run scoreboard players set @s drag 50
+execute if score @s PowerM matches 5.. run scoreboard players set @s drag 80
+
+execute if score @s PowerM matches 1 run scoreboard players set @s gravity 50
+execute if score @s PowerM matches 2 run scoreboard players set @s gravity 120
+execute if score @s PowerM matches 3 run scoreboard players set @s gravity 200
+execute if score @s PowerM matches 4 run scoreboard players set @s gravity 250
+execute if score @s PowerM matches 5.. run scoreboard players add @s gravity 100
+
 tag @s remove NewCannonball
