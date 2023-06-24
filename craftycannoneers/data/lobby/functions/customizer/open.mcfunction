@@ -23,13 +23,13 @@ scoreboard players set $gamestate CmdData -1
 tag @e[type=marker,tag=joinpad] add Locked
 kill @e[type=item,predicate=game:inarena]
 
-item replace entity @e[type=armor_stand,tag=TimeIcon,limit=1] armor.head with diamond_hoe{CustomModelData:35}
-item replace entity @e[type=armor_stand,tag=HPIcon,limit=1] armor.head with diamond_hoe{CustomModelData:36}
-item replace entity @e[type=armor_stand,tag=ConfirmIcon,limit=1] armor.head with diamond_hoe{CustomModelData:37}
-item replace entity @e[type=armor_stand,tag=DefaultsIcon,limit=1] armor.head with diamond_hoe{CustomModelData:38}
-item replace entity @e[type=armor_stand,tag=ModiIcon,limit=1] armor.head with diamond_hoe{CustomModelData:83}
+item replace entity @e[type=item_display,tag=TimeIcon,limit=1] container.0 with diamond_hoe{CustomModelData:35}
+item replace entity @e[type=item_display,tag=HPIcon,limit=1] container.0 with diamond_hoe{CustomModelData:36}
+item replace entity @e[type=item_display,tag=ConfirmIcon,limit=1] container.0 with diamond_hoe{CustomModelData:37}
+item replace entity @e[type=item_display,tag=DefaultsIcon,limit=1] container.0 with diamond_hoe{CustomModelData:38}
+item replace entity @e[type=item_display,tag=ModiIcon,limit=1] container.0 with diamond_hoe{CustomModelData:83}
 
-item replace entity @e[type=glow_item_frame,tag=MapEntity,limit=1] container.0 with diamond_hoe{CustomModelData:76}
+item replace entity @e[type=item_display,tag=MapEntity,limit=1] container.0 with diamond_hoe{CustomModelData:76}
 
 execute as @e[type=hopper_minecart,tag=chest] run data remove entity @s Items
 execute as @e[type=hopper_minecart,tag=chest] run data merge entity @s {LootTable:"chests:empty"}

@@ -208,8 +208,6 @@ scoreboard players set $60 CmdData 60
 
 #> Other lobby blocks
 fill -40 -23 -18 -38 -22 -18 air
-execute positioned -55 -23 9 run tag @e[type=glow_item_frame,limit=1,sort=nearest] add MapEntity
-execute as @e[type=glow_item_frame,tag=MapEntity] run data merge entity @s {Silent:1b}
 
 #> Entity ID
 scoreboard objectives add entityid dummy
