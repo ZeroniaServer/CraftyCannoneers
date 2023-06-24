@@ -1,7 +1,7 @@
 #> Begin
 scoreboard players add @s cannonshot 1
 scoreboard players set @s[scores={cannonshot=1,CannonID=8}] cannonshot 30
-execute if entity @s[tag=Sailing,scores={cannonshot=1}] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay2] container.0 with diamond_hoe{CustomModelData:131}
+execute if entity @s[tag=Sailing,scores={cannonshot=1}] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:131}
 execute if entity @s[tag=!Sailing,scores={cannonshot=1}] on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:131}
 execute at @s[scores={cannonshot=1}] run playsound cannonload master @a ~ ~ ~ 1 1
 
@@ -82,10 +82,10 @@ execute at @s[scores={cannonshot=26}] unless score @s CannonID matches 8 run par
 
 #> Shoot
 #TODO polish cannonball trajectories @YZERO
-execute at @s[tag=Sailing,scores={cannonshot=29}] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay2] container.0 with diamond_hoe{CustomModelData:132}
-execute at @s[tag=Sailing,scores={cannonshot=30}] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay2] container.0 with diamond_hoe{CustomModelData:133}
-execute at @s[tag=Sailing,scores={cannonshot=31}] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay2] container.0 with diamond_hoe{CustomModelData:132}
-execute at @s[tag=Sailing,scores={cannonshot=32}] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay2] container.0 with diamond_hoe{CustomModelData:125}
+execute at @s[tag=Sailing,scores={cannonshot=29}] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:132}
+execute at @s[tag=Sailing,scores={cannonshot=30}] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:133}
+execute at @s[tag=Sailing,scores={cannonshot=31}] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:132}
+execute at @s[tag=Sailing,scores={cannonshot=32}] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:125}
 
 execute at @s[tag=!Sailing,scores={cannonshot=29}] on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:132}
 execute at @s[tag=!Sailing,scores={cannonshot=30}] on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:133}

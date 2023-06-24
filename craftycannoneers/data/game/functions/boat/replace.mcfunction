@@ -20,8 +20,4 @@ execute if entity @s[tag=3] run tag @a[tag=inBoat3] remove inBoat3
 execute if entity @s[tag=4] run tag @a[tag=inBoat4] remove inBoat4
 
 #> Kill old boat
-execute at @s on passengers on passengers on passengers on passengers run function arenaclear:kill
-execute at @s on passengers on passengers on passengers run function arenaclear:kill
-execute at @s on passengers on passengers run function arenaclear:kill
-execute at @s on passengers unless entity @s[type=player] run function arenaclear:kill
-kill @s
+function game:boat/cannon/kill

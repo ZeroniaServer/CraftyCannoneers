@@ -14,8 +14,8 @@ execute if entity @s[tag=Sailing,tag=!displayreplaced] on passengers on passenge
 execute if entity @s[tag=Sailing,tag=!displayreplaced] run function game:boat/cannon/updategunpowder
 tag @s[tag=Sailing,tag=!displayreplaced] add displayreplaced
 
-#> Rotate secondary display
-execute on passengers on passengers on passengers on passengers if entity @s[type=item_display,tag=BoatCannonDisplay] run function game:boat/euler
+#> Display functions
+execute rotated as @s on passengers on passengers on passengers on passengers positioned as @s[type=item_display,tag=BoatCannonDisplay] run function game:boat/cannon/display
 
 #> Replace interaction once still
 execute if entity @s[tag=Sailing] run function game:boat/cannon/motiondetect
