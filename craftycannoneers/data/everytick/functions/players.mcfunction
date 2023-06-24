@@ -134,7 +134,7 @@ execute at @s[scores={throwsb=1..}] run function lobby:rock/spawn
 
 #> Easter Eggs
 advancement grant @s[advancements={tutorial:eastereggs/parrot=true,tutorial:eastereggs/snowman=true,tutorial:eastereggs/planetary=true,tutorial:eastereggs/goldy=true,tutorial:eastereggs/rocketriders=true,tutorial:eastereggs/end=false}] only tutorial:eastereggs/end
-execute at @s[scores={parrotpet=1..}] unless entity @e[type=armor_stand,tag=Parrot,distance=..7] run scoreboard players reset @s parrotpet
+execute at @s[scores={parrotpet=1..}] unless entity @e[type=item_display,tag=Parrot,distance=..7] run scoreboard players reset @s parrotpet
 
 #> Tutorial warps
 execute unless entity @e[type=marker,tag=TutorialWarp,distance=..2] run tag @s remove Warped
