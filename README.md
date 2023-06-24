@@ -10,3 +10,4 @@ Datapack for Crafty Cannoneers. Made by Zeronia.
 - [vdvman1's Raycasting Customizer](https://skylinerw.com/vdvman1/raycast/)
 - [AESTD Tag Library](https://github.com/Aeldrion/AESTD-tag-library)
 - [Cloud Wolf's CloudScripts](https://github.com/CloudWolfYT/CloudScripts)
+- [DorkOrc's display entity rotation conversion method](https://discord.com/channels/154777837382008833/157097006500806656/1121648582928375820)
