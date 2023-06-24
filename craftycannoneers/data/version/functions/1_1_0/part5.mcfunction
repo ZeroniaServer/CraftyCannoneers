@@ -52,11 +52,11 @@ execute as @e[type=item_display,tag=DecoPCB,limit=1] at @s rotated as @e[type=ar
 kill @e[type=armor_stand,tag=CannonballDeco]
 
 #Golden Cannonball
-execute unless entity @e[type=item_display,tag=CannonballDeco,tag=DecoGOCB] run summon item_display -40.5 -26.8 -8.5 {width:1f,height:1f,item_display:"fixed",Tags:["CannonballDeco","HasDisplay","DecoGOCB"],Rotation:[40.231f,1.392f],item:{id:"minecraft:diamond_hoe",Count:1,tag:{CustomModelData:73}}}
+execute unless entity @e[type=item_display,tag=CannonballDeco,tag=DecoGOCB] run summon item_display -40.5 -26.6 -8.5 {width:1f,height:1f,item_display:"fixed",Tags:["CannonballDeco","HasDisplay","DecoGOCB"],Rotation:[40.231f,1.392f],item:{id:"minecraft:diamond_hoe",Count:1,tag:{CustomModelData:73}}}
 setblock -41 -27 -9 creeper_head
 
 #Copper Cannonball
-execute unless entity @e[type=item_display,tag=CannonballDeco,tag=DecoCOCB] run summon item_display -41.5 -26.75 -5.5 {width:1f,height:1f,item_display:"fixed",Tags:["CannonballDeco","HasDisplay","DecoCOCB"],Rotation:[60.282f,2.056f],item:{id:"minecraft:diamond_hoe",Count:1,tag:{CustomModelData:109}}}
+execute unless entity @e[type=item_display,tag=CannonballDeco,tag=DecoCOCB] run summon item_display -41.5 -26.55 -5.5 {width:1f,height:1f,item_display:"fixed",Tags:["CannonballDeco","HasDisplay","DecoCOCB"],Rotation:[60.282f,2.056f],item:{id:"minecraft:diamond_hoe",Count:1,tag:{CustomModelData:109}}}
 setblock -42 -27 -6 creeper_head
 
 bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"5","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]

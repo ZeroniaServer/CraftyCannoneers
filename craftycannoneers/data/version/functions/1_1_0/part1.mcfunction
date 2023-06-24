@@ -11,23 +11,22 @@ forceload add -413 -379 -260 -15
 
 kill @e[type=armor_stand,tag=chestdisplay]
 
-#> TODO CHANGE ALL THIS (again :skull:)
-execute as @e[type=armor_stand,tag=KlarDeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add KlarHat
-execute as @e[type=armor_stand,tag=CarlDeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add CarlHat
-execute as @e[type=armor_stand,tag=YZERODeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add YZEROHat
-execute as @e[type=armor_stand,tag=EvtemaDeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add EvtemaHat
-execute as @e[type=armor_stand,tag=StuffyDeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add StuffyHat
-execute as @e[type=armor_stand,tag=BlockyDeco,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add BlockyHat
-execute as @e[type=armor_stand,tag=ParkourAS,limit=1] at @s run tag @e[type=armor_stand,tag=PirateHat,sort=nearest,limit=1] add ParkourHat
+kill @e[type=armor_stand,tag=PirateHat]
+execute unless entity @e[type=item_display,tag=KlarHat,limit=1] run summon item_display -31.023135 -27.838197 23.363027 {Tags:["KlarHat","LobbyDisplay","PirateHat"],item:{id:"diamond_hoe",tag:{CustomModelData:39},Count:1b},transformation:{translation:[0.0f,1.8f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:2.0f,width:1.0f,Rotation:[137.0f,3.0f]}
+execute unless entity @e[type=item_display,tag=CarlHat,limit=1] run summon item_display -32.369882 -27.838603 23.539926 {Tags:["CarlHat","LobbyDisplay","PirateHat"],item:{id:"diamond_hoe",tag:{CustomModelData:39},Count:1b},transformation:{translation:[0.0f,1.8f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:2.0f,width:1.0f,Rotation:[140.2422f,-1.5560243f]}
+execute unless entity @e[type=item_display,tag=YZEROHat,limit=1] run summon item_display -33.647564 -27.848182 23.669529 {Tags:["YZEROHat","LobbyDisplay","PirateHat"],item:{id:"diamond_hoe",tag:{CustomModelData:39},Count:1b},transformation:{translation:[0.0f,1.8f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:2.0f,width:1.0f,Rotation:[158.0f,2.0f]}
+execute unless entity @e[type=item_display,tag=EvtemaHat,limit=1] run summon item_display -35.604416 -27.813136 23.762563 {Tags:["EvtemaHat","LobbyDisplay","PirateHat"],item:{id:"diamond_hoe",tag:{CustomModelData:39},Count:1b},transformation:{translation:[0.0f,1.8f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:2.0f,width:1.0f,Rotation:[-143.12912f,13.0f]}
+execute unless entity @e[type=item_display,tag=StuffyHat,limit=1] run summon item_display -36.508239 -27.706403 22.910340 {Tags:["StuffyHat","LobbyDisplay","PirateHat"],item:{id:"diamond_hoe",tag:{CustomModelData:39},Count:1b},transformation:{translation:[0.0f,1.8f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:2.0f,width:1.0f,Rotation:[-173.09488f,-30.0f]}
+execute unless entity @e[type=item_display,tag=BlockyHat,limit=1] run summon item_display -37.766797 -27.837961 23.489282 {Tags:["BlockyHat","LobbyDisplay","PirateHat"],item:{id:"diamond_hoe",tag:{CustomModelData:39},Count:1b},transformation:{translation:[0.0f,1.8f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:2.0f,width:1.0f,Rotation:[-179.08362f,-2.2f]}
+execute unless entity @e[type=item_display,tag=ParkourHat,limit=1] run summon item_display -73.800627 -21.826783 1.810798 {Tags:["ParkourHat","PirateHat","LobbyDisplay"],item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:61},Count:1b},transformation:{translation:[0.0f,1.8f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:3.0f,width:1.0f,Rotation:[-131.88344f,11.681128f]}
 
-execute as @e[type=armor_stand,tag=PirateHat,tag=!110HatPlacement] at @s run tp @s ~ ~0.17 ~
-execute as @e[type=armor_stand,tag=EvtemaHat,tag=!110HatPlacement,limit=1] at @s run tp @s ^ ^ ^0.06
-execute as @e[type=armor_stand,tag=StuffyHat,tag=!110HatPlacement,limit=1] at @s run tp @s ^ ^-0.06 ^-0.1
-execute as @e[type=armor_stand,tag=KlarHat,tag=!110HatPlacement,limit=1] at @s run tp @s ^ ^0.001 ^
-execute as @e[type=armor_stand,tag=BlockyHat,tag=!110HatPlacement,limit=1] at @s run tp @s ^ ^0.001 ^
-execute as @e[type=armor_stand,tag=ParkourHat,tag=!110HatPlacement,limit=1] at @s run tp @s ^ ^ ^0.04
+kill @e[type=armor_stand,tag=CarlDeco2,limit=1]
+execute unless entity @e[type=item_display,tag=CarlDeco2] run summon item_display -32.244406 -27.999252 23.470547 {Rotation:[140.2422f,-0.73602414f],item:{id:"minecraft:spyglass",Count:1b},Tags:["CarlDeco2","LobbyDisplay"],transformation:{translation:[0.0f,1.8f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:2.0f,width:1.0f}
 
-tag @e[type=armor_stand,tag=PirateHat,tag=!110HatPlacement] add 110HatPlacement
+kill @e[type=armor_stand,tag=StuffyDeco2,limit=1]
+execute unless entity @e[type=item_display,tag=StuffyDeco2] run summon item_display -36.651614 -25.487648 23.194982 {Rotation:[-102.30206f,1.4650879f],item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:30},Count:1b},Tags:["LobbyDisplay","StuffyDeco2"],transformation:{translation:[0.0f,0.9f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.4375f,0.4375f,0.4375f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:1.0f,width:1.0f}
+
+execute as @e[type=item_display,tag=LobbyDisplay] at @s run tp @s ^ ^ ^
 
 execute as @e[type=armor_stand,tag=KlarDeco,tag=!NameUpdated] at @s run function version:1_1_0/creditsfix
 execute as @e[type=armor_stand,tag=CarlDeco,tag=!NameUpdated] at @s run function version:1_1_0/creditsfix
