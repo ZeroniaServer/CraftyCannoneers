@@ -6,6 +6,7 @@ scoreboard players set $blast BombDelay 0
 execute if entity @a[gamemode=!spectator,distance=..6.75] run scoreboard players set $blast BombDelay 1
 execute unless score $blast BombDelay matches 1 if entity @e[type=cat,tag=CrabVehicle,limit=1,distance=..6.75] run scoreboard players set $blast BombDelay 1
 execute unless score $blast BombDelay matches 1 if entity @e[type=drowned,tag=SharkEntity,limit=1,distance=..6.75] run scoreboard players set $blast BombDelay 1
+execute unless score $blast BombDelay matches 1 if entity @e[type=boat,tag=Boat,limit=1,distance=..6.75] run scoreboard players set $blast BombDelay 1
 execute at @s if score $blast BombDelay matches 1 run function cannons:bounce/tpslime
 execute at @s unless score $tp bounceID matches 1 if score $blast BombDelay matches 1 run function cannons:bounce/summonslime
 scoreboard players reset $tp bounceID

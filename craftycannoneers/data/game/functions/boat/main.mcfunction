@@ -18,9 +18,12 @@ execute if entity @a unless entity @e[type=boat,tag=BoatBoat,tag=3] run summon m
 execute if entity @a unless entity @e[type=boat,tag=BoatBoat,tag=4] run summon marker 57 -30 -12 {Tags:["4","respawnboat"]}
 execute as @e[type=marker,tag=respawnboat] at @s run function game:boat/placenew
 
-#> Kill Cannon entities (failsafe)
-execute if score $BoatCannons CmdData matches 1 as @e[type=camel,tag=BoatCannonAnchor,predicate=!game:boat/inboat] run function game:boat/cannon/kill
-execute if score $BoatCannons CmdData matches 1 as @e[type=area_effect_cloud,tag=BoatCannonOffset,predicate=!game:mounted] run function game:boat/cannon/kill
+#> Kill banner secondary entity (failsafe)
+kill @e[type=item_display,tag=BoatBanner2,predicate=!game:mounted]
 
 #> Kill interaction entity (failsafe)
 kill @e[type=interaction,tag=boatoccupant,predicate=!game:boat/inboat]
+
+#> Kill Cannon entities (failsafe)
+execute if score $BoatCannons CmdData matches 1 as @e[type=camel,tag=BoatCannonAnchor,predicate=!game:boat/inboat] run function game:boat/cannon/kill
+execute if score $BoatCannons CmdData matches 1 as @e[type=area_effect_cloud,tag=BoatCannonOffset,predicate=!game:mounted] run function game:boat/cannon/kill

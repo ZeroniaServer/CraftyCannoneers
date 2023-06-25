@@ -3,9 +3,7 @@ execute as @e[type=cat,tag=CrabVehicle,tag=!dismounted,distance=..6] run functio
 execute as @e[type=cod,tag=NewVCod,tag=!dismounted,distance=..6] run function game:modifiers/sharks/dismount
 
 #> Blast nearby Boats backwards
-summon marker ~ ~ ~ {Tags:["posanchor"]}
-execute as @e[type=boat,tag=BoatBoat,distance=..6] run function game:boat/blast
-kill @e[type=marker,tag=posanchor]
+execute at @s as @e[type=boat,tag=BoatBoat,distance=..6] run function game:boat/blast
 
 function weapons:bomb/summon4slime
 function weapons:bomb/summon4slime

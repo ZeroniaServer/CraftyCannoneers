@@ -15,9 +15,7 @@ execute unless score $blast BombDelay matches 1 if entity @e[type=drowned,tag=Sh
 execute if score @s BombDelay matches 5 if score $blast BombDelay matches 1 run function weapons:bomb/summonslime
 
 #> Blast nearby Boats backwards
-execute if score @s BombDelay matches 4.. run summon marker ~ ~ ~ {Tags:["posanchor"]}
-execute if score @s BombDelay matches 4.. as @e[type=boat,tag=BoatBoat,distance=..6] run function game:boat/blast
-kill @e[type=marker,tag=posanchor]
+execute if score @s BombDelay matches 4.. at @s as @e[type=boat,tag=BoatBoat,distance=..6] run function game:boat/blast
 
 #> Set off Cargo Traps
 execute if score @s BombDelay matches 6.. as @e[type=villager,tag=CBTrap,distance=..4] on vehicle run tag @s add TrapExplode

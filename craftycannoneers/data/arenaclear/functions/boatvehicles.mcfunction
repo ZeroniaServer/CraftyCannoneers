@@ -1,4 +1,4 @@
-kill @e[type=armor_stand,tag=Boat]
+kill @e[type=item_display,tag=Boat]
 kill @e[type=boat,tag=Boat]
 kill @e[type=interaction,tag=boatoccupant]
 

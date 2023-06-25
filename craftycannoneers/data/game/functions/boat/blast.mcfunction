@@ -2,7 +2,7 @@ data modify storage craftycannoneers:blastbomb Pos set from entity @s Pos
 execute store result score @s x run data get storage craftycannoneers:blastbomb Pos[0] 1000000
 execute store result score @s z run data get storage craftycannoneers:blastbomb Pos[2] 1000000
 
-execute at @e[type=marker,tag=posanchor,limit=1] facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.001
+execute facing entity @s eyes positioned as @s run tp @s ^ ^ ^0.001
 
 data modify storage craftycannoneers:blastbomb Pos set from entity @s Pos
 execute store result score @s dx run data get storage craftycannoneers:blastbomb Pos[0] 1000000
