@@ -9,7 +9,7 @@ execute at @s[scores={CmdData=1}] run playsound minecraft:entity.evoker_fangs.at
 
 #> Set off Blast Barrels/Cargo Traps
 execute at @s[scores={CmdData=9}] positioned ^ ^ ^1 as @e[type=villager,tag=CBTrap,distance=..2] on vehicle run tag @s add TrapExplode
-execute at @s[scores={CmdData=9}] positioned ^ ^ ^1 as @e[type=villager,tag=BarrelVillager,distance=..2] run function weapons:barrel/chainreact
+execute at @s[scores={CmdData=9}] positioned ^ ^ ^1 positioned ~ ~-1 ~ as @e[type=husk,tag=BlastBarrel,distance=..2] run function weapons:barrel/chainreact
 
 item replace entity @s[scores={CmdData=11}] armor.head with diamond_hoe{Unbreakable:1b,CustomModelData:87}
 

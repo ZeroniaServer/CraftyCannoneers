@@ -1,4 +1,4 @@
-execute unless score @s CmdData matches 1.. as @e[type=interaction,tag=BlastBarrelCenter,limit=1,sort=nearest] run function weapons:barrel/punch
+execute unless score @s CmdData matches 1.. positioned ~ ~-1 ~ as @e[type=husk,tag=BlastBarrel,limit=1,sort=nearest] at @s positioned ~ ~1 ~ run function weapons:barrel/punch
 execute unless score @s CmdData matches 1.. run return 0
 
 execute if score @s CmdData matches 1.. run loot give @a[tag=hitter,gamemode=!creative,limit=1] loot weapons:gunpowder

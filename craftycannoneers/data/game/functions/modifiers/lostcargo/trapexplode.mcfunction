@@ -16,7 +16,7 @@ execute if score @s click matches 4 as @e[type=villager,tag=CBTrap,distance=..4]
 
 #> Set off Blast Barrels
 execute if score @s click matches 4 run data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
-execute at @s[scores={click=4}] as @e[type=villager,tag=BarrelVillager,distance=..4] run function weapons:barrel/chainreact
+execute at @s[scores={click=4}] positioned ~ ~-1 ~ as @e[type=husk,tag=BlastBarrel,distance=..4] run function weapons:barrel/chainreact
 
 #> Break nearby Boats
 execute if score @s click matches 2 run kill @e[type=boat,tag=BoatBoat,distance=..4]

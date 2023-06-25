@@ -25,7 +25,7 @@ execute if score @s BombDelay matches 6.. as @e[type=villager,tag=CBTrap,distanc
 #> Set off Blast Barrels
 execute if score @s BombDelay matches 6.. run data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
 execute if score @s BombDelay matches 6.. run scoreboard players operation $tempuuid playerUUID = @s playerUUID
-execute if score @s BombDelay matches 6.. as @e[type=villager,tag=BarrelVillager,distance=..4] run function weapons:barrel/chainreact
+execute if score @s BombDelay matches 6.. positioned ~ ~-1 ~ as @e[type=husk,tag=BlastBarrel,distance=..4] run function weapons:barrel/chainreact
 
 #> Break nearby Cargo Barrels
 execute if score @s BombDelay matches 6.. as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..4] run function game:modifiers/lostcargo/spillbarrel

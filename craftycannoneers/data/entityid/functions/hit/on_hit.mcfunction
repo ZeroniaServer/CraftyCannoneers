@@ -2,9 +2,8 @@
 execute at @s[type=husk,tag=TDZombie] run function tutorial:trainingdummies/hurtdetection
 
 #> Blast Barrel
-execute at @s[type=husk,tag=BlastBarrel] run function weapons:barrel/punch
-execute at @s[type=interaction,tag=BlastBarrelCenter] run function weapons:barrel/punch
-execute at @s[type=interaction,tag=BlastBarrelGP] as @e[type=item_display,tag=BlastBarrel,distance=..1,sort=nearest,limit=1] at @s run function weapons:barrel/empty
+execute at @s[type=husk,tag=BlastBarrel] positioned ~ ~1 ~ run function weapons:barrel/punch
+execute at @s[type=interaction,tag=BlastBarrel] as @e[type=item_display,tag=BlastBarrel,distance=..1,sort=nearest,limit=1] at @s run function weapons:barrel/empty
 
 #> Crab Trap 
 execute at @s[type=interaction,tag=CrabTrap] on passengers run function weapons:crabtrap/break
