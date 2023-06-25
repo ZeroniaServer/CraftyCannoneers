@@ -23,6 +23,10 @@ execute if entity @s[tag=still,tag=!interactionreplaced] on passengers on passen
 tag @s[tag=still,tag=!interactionreplaced] add interactionreplaced
 execute if entity @s[tag=!still,tag=interactionreplaced] run tag @s remove interactionreplaced
 
+#> Tip Cannon model down while moving
+execute if entity @s[tag=Sailing,tag=!noplayerinput,tag=!tipped,tag=!FireCannon] run function game:boat/cannon/tipcannon
+execute if entity @s[tag=Sailing,tag=noplayerinput,tag=tipped,tag=!FireCannon] run function game:boat/cannon/updategunpowder
+
 #> Prevent clicking on Cannon if not looking in right direction
 execute if score $rightdir CmdData matches 0 if entity @s[tag=Sailing] on passengers on passengers on passengers run data merge entity @s[type=interaction] {width:0,height:0,response:0b}
 execute if score $rightdir CmdData matches 1 if entity @s[tag=Sailing] on passengers on passengers on passengers run data merge entity @s[type=interaction] {width:1,height:-1,response:1b}
