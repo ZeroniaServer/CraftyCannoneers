@@ -29,7 +29,10 @@ execute unless entity @s[tag=canDamage] run data modify storage craftycannoneers
 execute unless entity @s[tag=canDamage] as @e[type=bat,tag=BlastBarrel,distance=..6] run function weapons:barrel/chainreact
 
 #> Break Cargo Barrels
-execute at @s[tag=!canDamage] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..6] run function game:modifiers/lostcargo/spillbarrel
+execute at @s[tag=!canDamage] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..6] at @s run function game:modifiers/lostcargo/spillbarrel
+
+#> Break nearby Crab Traps
+execute as @e[type=item_display,tag=CrabTrap,distance=..6] at @s run function weapons:crabtrap/break
 
 #> Break nearby Boats
 kill @e[type=boat,tag=BoatBoat,distance=..6]

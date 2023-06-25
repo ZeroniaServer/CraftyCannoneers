@@ -1,3 +1,5 @@
+tag @s[tag=ReleaseCrab] remove Empty
+
 particle item mooshroom_spawn_egg{CustomModelData:15} ~ ~0.5 ~ 0.2 0.25 0.2 0.1 40 force
 
 playsound crabtrapbreak2 master @a ~ ~ ~ 1 1.2

@@ -12,7 +12,12 @@ execute if score @s CmdData matches 30 as @e[type=villager,tag=CBTrap,distance=.
 execute if score @s CmdData matches 30 as @e[type=bat,tag=BlastBarrel,distance=..3] run function weapons:barrel/chainreact
 
 #> Break nearby Cargo Barrels
-execute if score @s CmdData matches 30 as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..3] run function game:modifiers/lostcargo/spillbarrel
+execute if score @s CmdData matches 30 as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..3] at @s run function game:modifiers/lostcargo/spillbarrel
 
+#> Break nearby Crab Traps
+execute if score @s CmdData matches 30 as @e[type=item_display,tag=CrabTrap,distance=..3] at @s run function weapons:crabtrap/break
+
+#> Break nearby Boats
+execute if score @s CmdData matches 30 run kill @e[type=boat,tag=Sailing,distance=..3]
 
 kill @s[scores={CmdData=30..}]

@@ -57,12 +57,12 @@ execute if entity @s[tag=BlastBarrel1] as @e[type=villager,tag=CBTrap,distance=.
 execute if entity @s[tag=BlastBarrel2] as @e[type=villager,tag=CBTrap,distance=..7] on vehicle run tag @s add TrapExplode
 
 #> Break nearby Cargo Barrels
-execute if entity @s[tag=Power1] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..5] run function game:modifiers/lostcargo/spillbarrel
-execute if entity @s[tag=Power2] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..6] run function game:modifiers/lostcargo/spillbarrel
-execute if entity @s[tag=Power3] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..7] run function game:modifiers/lostcargo/spillbarrel
-execute if entity @s[tag=GasPower] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..7] run function game:modifiers/lostcargo/spillbarrel
-execute if entity @s[tag=BlastBarrel1] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..6] run function game:modifiers/lostcargo/spillbarrel
-execute if entity @s[tag=BlastBarrel2] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..7] run function game:modifiers/lostcargo/spillbarrel
+execute if entity @s[tag=Power1] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..5] at @s run function game:modifiers/lostcargo/spillbarrel
+execute if entity @s[tag=Power2] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..6] at @s run function game:modifiers/lostcargo/spillbarrel
+execute if entity @s[tag=Power3] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..7] at @s run function game:modifiers/lostcargo/spillbarrel
+execute if entity @s[tag=GasPower] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..7] at @s run function game:modifiers/lostcargo/spillbarrel
+execute if entity @s[tag=BlastBarrel1] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..6] at @s run function game:modifiers/lostcargo/spillbarrel
+execute if entity @s[tag=BlastBarrel2] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..7] at @s run function game:modifiers/lostcargo/spillbarrel
 
 #> Break nearby Boats
 execute if entity @s[tag=Power1] run kill @e[type=boat,tag=BoatBoat,distance=..5]
@@ -71,6 +71,14 @@ execute if entity @s[tag=Power3] run kill @e[type=boat,tag=BoatBoat,distance=..7
 execute if entity @s[tag=GasPower] run kill @e[type=boat,tag=BoatBoat,distance=..7]
 execute if entity @s[tag=BlastBarrel1] run kill @e[type=boat,tag=BoatBoat,distance=..6]
 execute if entity @s[tag=BlastBarrel2] run kill @e[type=boat,tag=BoatBoat,distance=..7]
+
+#> Break nearby Crab Traps
+execute if entity @s[tag=Power1] as @e[type=item_display,tag=CrabTrap,distance=..5] at @s run function weapons:crabtrap/break
+execute if entity @s[tag=Power2] as @e[type=item_display,tag=CrabTrap,distance=..6] at @s run function weapons:crabtrap/break
+execute if entity @s[tag=Power3] as @e[type=item_display,tag=CrabTrap,distance=..7] at @s run function weapons:crabtrap/break
+execute if entity @s[tag=GasPower] as @e[type=item_display,tag=CrabTrap,distance=..7] at @s run function weapons:crabtrap/break
+execute if entity @s[tag=BlastBarrel1] as @e[type=item_display,tag=CrabTrap,distance=..6] at @s run function weapons:crabtrap/break
+execute if entity @s[tag=BlastBarrel2] as @e[type=item_display,tag=CrabTrap,distance=..7] at @s run function weapons:crabtrap/break
 
 execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] as @a[tag=UtilKilled,distance=..2] at @s run summon area_effect_cloud ~ ~ ~ {Tags:["damage"],Particle:"block air",ReapplicationDelay:-1,Radius:0.1f,Duration:2,Age:-1,WaitTime:0,Effects:[{Id:7,Amplifier:3b,Duration:1,ShowParticles:0b}]}
 execute if entity @s[tag=!GoldImpact,tag=!cluster,tag=!GasPower] run tag @a[tag=UtilKilled,distance=..2] add damaged

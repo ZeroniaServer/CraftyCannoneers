@@ -22,7 +22,10 @@ execute at @s[scores={click=4}] as @e[type=bat,tag=BlastBarrel,distance=..4] run
 execute if score @s click matches 2 run kill @e[type=boat,tag=BoatBoat,distance=..4]
 
 #> Break nearby Cargo Barrels
-execute if score @s click matches 2 as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..4] run function game:modifiers/lostcargo/spillbarrel
+execute if score @s click matches 2 as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..4] at @s run function game:modifiers/lostcargo/spillbarrel
+
+#> Break nearby Crab Traps
+execute if score @s click matches 2 as @e[type=item_display,tag=CrabTrap,distance=..4] at @s run function weapons:crabtrap/break
 
 #> Remount nearby Crabs/Sharks
 execute if score @s click matches 5 as @e[type=cat,tag=CrabVehicle,tag=dismounted,distance=..10] run function game:modifiers/crabs/remount

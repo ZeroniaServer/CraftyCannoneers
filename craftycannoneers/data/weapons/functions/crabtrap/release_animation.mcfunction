@@ -19,4 +19,5 @@ execute at @s[scores={CmdData=40,TrapDurability=..-1}] run playsound crabtrapope
 
 execute store result entity @s[scores={CmdData=40..}] item.tag.durability int 1 run scoreboard players get @s TrapDurability
 scoreboard players add $curr crabs 1
+tag @s[scores={CmdData=40..}] remove ReleaseCrab
 execute if entity @s[scores={CmdData=40..}] run function weapons:crabtrap/break

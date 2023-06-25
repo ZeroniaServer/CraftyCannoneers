@@ -18,7 +18,10 @@ data modify storage craftycannoneers:temp CustomName set from entity @s CustomNa
 execute as @e[type=bat,tag=BlastBarrel,distance=..5] run function weapons:barrel/chainreact
 
 #> Break nearby Cargo Barrels
-execute as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..5] run function game:modifiers/lostcargo/spillbarrel
+execute as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..5] at @s run function game:modifiers/lostcargo/spillbarrel
+
+#> Break nearby Crab Traps
+execute as @e[type=item_display,tag=CrabTrap,distance=..5] at @s run function weapons:crabtrap/break
 
 #> Break nearby Boats
 kill @e[type=boat,tag=BoatBoat,distance=..5]

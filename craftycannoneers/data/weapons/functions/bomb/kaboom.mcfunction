@@ -28,7 +28,10 @@ execute if score @s BombDelay matches 6.. run scoreboard players operation $temp
 execute if score @s BombDelay matches 6.. as @e[type=bat,tag=BlastBarrel,distance=..4] run function weapons:barrel/chainreact
 
 #> Break nearby Cargo Barrels
-execute if score @s BombDelay matches 6.. as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..4] run function game:modifiers/lostcargo/spillbarrel
+execute if score @s BombDelay matches 6.. as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..4] at @s run function game:modifiers/lostcargo/spillbarrel
+
+#> Break nearby Crab Traps
+execute if score @s BombDelay matches 6.. as @e[type=item_display,tag=CrabTrap,distance=..4] at @s run function weapons:crabtrap/break
 
 #> Explode
 execute if score @s BombDelay matches 6.. run function weapons:bomb/explode
