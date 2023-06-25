@@ -43,6 +43,7 @@ tag @s[team=Purple,predicate=!game:onorange,tag=onboatweakness,tag=!lookAtBCanno
 effect clear @s[tag=!lookAtBCannon,tag=!lookAtCannon,tag=!lookAtBarrel,tag=!onboatweakness] weakness
 
 #> Gapple timer
+effect give @s[scores={eatGapple=1..}] instant_health 1 0 true
 scoreboard players add @s gappleTimer 0
 scoreboard players set @s[scores={eatGapple=1..}] gappleTimer 1
 scoreboard players reset @s eatGapple
