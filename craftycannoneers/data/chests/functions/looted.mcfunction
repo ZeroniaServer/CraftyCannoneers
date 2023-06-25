@@ -17,4 +17,8 @@ execute if entity @s[tag=lockedchest] run tag @e[type=armor_stand,tag=LChestAS,l
 #Cargo
 execute if entity @s[tag=CargoHopper] run tag @e[type=item_display,tag=CargoBarrel,limit=1,sort=nearest,distance=..1] add ContainerLooted
 
+#Grave
+execute if entity @s[tag=grave] on vehicle run item replace entity @s container.0 with diamond_hoe{CustomModelData:136}
+execute if entity @s[tag=grave] on vehicle run tag @s add Looted
+
 tag @s add Looted

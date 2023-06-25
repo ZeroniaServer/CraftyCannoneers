@@ -25,8 +25,8 @@ execute at @s[tag=CargoHopper] run tag @s add LoadLoot
 execute at @s[tag=CargoHopper] run playsound block.barrel.open master @a ~ ~ ~ 1 1.3
 
 #Grave
-#> TODO update visuals/sounds
-# execute at @s[tag=grave] run data merge entity @e[type=item_display,tag=CargoBarrel,limit=1,sort=nearest,distance=..1] {item:{id:"diamond_hoe",Count:1,tag:{CustomModelData:115}}}
+#> TODO add sounds
+execute at @s[tag=grave] on vehicle run item replace entity @s container.0 with diamond_hoe{CustomModelData:135}
 execute at @s[tag=grave] run tag @s add LoadLoot
 # execute at @s[tag=grave] run playsound block.barrel.open master @a ~ ~ ~ 1 1.3
 
