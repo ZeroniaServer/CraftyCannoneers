@@ -1,3 +1,6 @@
+execute unless score @s CmdData matches 1.. as @e[type=interaction,tag=BlastBarrelCenter,limit=1,sort=nearest] run function weapons:barrel/punch
+execute unless score @s CmdData matches 1.. run return 0
+
 execute if score @s CmdData matches 1.. run loot give @a[tag=hitter,gamemode=!creative,limit=1] loot weapons:gunpowder
 execute if score @s CmdData matches 1.. run playsound takegunpowder master @a ~ ~ ~ 0.6 2
 execute if score @s CmdData matches 1.. run scoreboard players remove @s CmdData 1
