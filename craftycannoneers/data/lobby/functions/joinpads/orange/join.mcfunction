@@ -8,7 +8,7 @@ title @s clear
 title @s times 0 50 15
 execute unless score $gamestate CmdData matches 2.. run tp @s -46 -28.5 2 -180 0
 execute if score $gamestate CmdData matches 2.. run tp @s 88 -26 55 90 0
-execute at @s run playsound block.beehive.enter master @a ~ ~ ~ 1 1
+execute at @s run playsound joingame master @a ~ ~ ~ 1 1
 tag @s add loaded
 execute unless score $gamestate CmdData matches 2.. run function game:givelobbygear
 execute if score $gamestate CmdData matches 2.. run function game:givegear

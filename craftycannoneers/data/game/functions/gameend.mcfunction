@@ -3,21 +3,21 @@ scoreboard players add $EndTime CmdData 1
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1..10 run title @a title {"translate":"game.tie","color":"gray"}
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1..10 run title @a[team=!Lobby,team=!Spectator,team=!Developer] subtitle {"translate":"game.tie.splash","color":"dark_gray"}
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1..10 run title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"dark_gray"}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a[team=!Lobby,team=!Spectator,team=!Developer] at @s run playsound entity.wither.hurt master @s ~ ~ ~ 1 0
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a[team=!Lobby,team=!Spectator,team=!Developer] at @s run playsound tiegame master @s ~ ~ ~ 1 0
 
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1..10 run title @a title {"translate":"game.win.orange","color":"gold"}
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1..10 run title @a[team=Orange] subtitle {"translate":"game.win.splash","color":"green"}
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1..10 run title @a[team=Purple] subtitle {"translate":"game.lose.splash","color":"red"}
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1..10 run title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"dark_gray"}
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a[team=Orange] at @s run playsound wingame master @s ~ ~ ~ 1 1.3
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a[team=Purple] at @s run playsound entity.wither.spawn master @s ~ ~ ~ 1 2
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a[team=Purple] at @s run playsound losegame master @s ~ ~ ~ 1 2
 
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1..10 run title @a title {"translate":"game.win.purple","color":"dark_purple"}
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1..10 run title @a[team=Purple] subtitle {"translate":"game.win.splash","color":"green"}
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1..10 run title @a[team=Orange] subtitle {"translate":"game.lose.splash","color":"red"}
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1..10 run title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"dark_gray"}
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Purple] at @s run playsound wingame master @s ~ ~ ~ 1 1.3
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Orange] at @s run playsound entity.wither.spawn master @s ~ ~ ~ 1 2
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Orange] at @s run playsound losegame master @s ~ ~ ~ 1 2
 
 #Explosion animation
 execute if score $WinningTeam CmdData matches 1 run particle explosion 72 -28 -55 12 12 4 0.1 10 force

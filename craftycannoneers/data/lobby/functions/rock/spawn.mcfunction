@@ -1,4 +1,5 @@
 # summon temporary entity "in front of the player", if the player was standing at 0 0 0
+playsound throwrock player @a ~ ~ ~
 execute if entity @s[x_rotation=0..30] run tag @s add above
 execute if entity @s[x_rotation=30.000000000001..90] run tag @s add below
 execute if entity @s[x_rotation=-180..-0.000000001] run tag @s add above

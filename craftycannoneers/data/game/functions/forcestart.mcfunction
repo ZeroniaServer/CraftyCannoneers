@@ -52,7 +52,7 @@ spawnpoint @a[team=Purple] 52 -26 -55 -90
 
 execute as @e[type=wandering_trader,tag=Trader] run function arenaclear:villagertrades
 
-execute as @a at @s run playsound entity.generic.explode master @s ~ ~ ~ 100 1.2
+execute as @a at @s run playsound gamestart master @s ~ ~ ~ 100 1.2
 
 scoreboard players reset @a loverocks
 advancement revoke @a[advancements={tutorial:zzzunlockables/rocks={50=false}}] only tutorial:zzzunlockables/rocks

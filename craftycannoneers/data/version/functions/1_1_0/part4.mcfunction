@@ -22,4 +22,4 @@ bossbar set updatebar value 4
 
 schedule function version:1_1_0/part5 10t
 
-execute as @a at @s run playsound minecraft:block.end_portal_frame.fill master @s ~ ~ ~ 1 2
+execute as @a at @s run playsound updateadvance master @s ~ ~ ~ 1 2
