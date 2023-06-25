@@ -1,12 +1,12 @@
 #> Entity-based illegal cases
-execute if entity @e[type=item_display,tag=BlastBarrel,distance=..1] run tag @s add illegal
-execute if entity @e[type=item_display,tag=CrabTrap,distance=..1] run tag @s add illegal
-execute if entity @e[type=wandering_trader,distance=..1] run tag @s add illegal
-execute if entity @e[type=hopper_minecart,distance=..1] run tag @s add illegal
-execute if entity @e[type=chest_minecart,distance=..1] run tag @s add illegal
+execute if entity @e[type=item_display,tag=BlastBarrel,distance=..0.5] run tag @s add illegal
+execute if entity @e[type=item_display,tag=CrabTrap,distance=..0.5] run tag @s add illegal
+execute if entity @e[type=wandering_trader,distance=..0.5] run tag @s add illegal
+execute if entity @e[type=hopper_minecart,distance=..0.5] run tag @s add illegal
+execute if entity @e[type=chest_minecart,distance=..0.5] run tag @s add illegal
 
 #> Block-based illegal cases
-execute unless entity @s[tag=illegal] positioned ~ ~-1 ~ if entity @e[type=item_display,tag=BlastBarrel,distance=..1] run tag @s add illegal
+execute unless entity @s[tag=illegal] positioned ~ ~-1 ~ if entity @e[type=item_display,tag=BlastBarrel,distance=..0.5] run tag @s add illegal
 execute unless entity @s[tag=illegal] unless block ~ ~0.5 ~ #game:barrel_exclude unless block ~ ~0.5 ~ #minecraft:trapdoors[half=bottom,open=false] unless block ~ ~0.5 ~ #minecraft:trapdoors[open=true] run tag @s add illegal
 execute unless entity @s[tag=illegal] if block ~ ~-0.5 ~ #game:barrel_exclude run tag @s add illegal
 execute unless entity @s[tag=illegal] if block ~ ~0.5 ~ #minecraft:fence_gates[open=false] run tag @s add illegal

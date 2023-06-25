@@ -12,10 +12,6 @@ execute if entity @s[tag=TutorialWeapon,tag=Harpoon] as @a[limit=1,tag=clicker] 
 execute if entity @s[tag=Trader] at @s run playsound trader_ambient master @a[limit=1,tag=clicker] ~ ~ ~ 0.5
 execute if entity @s[tag=Teacher] at @s run playsound teacher_ambient master @a[limit=1,tag=clicker] ~ ~ ~ 0.5
 
-#> Blast Barrels
-execute at @s[tag=BlastBarrel] if entity @a[limit=1,tag=clicker,predicate=cannons:holdgp] as @e[type=item_display,tag=BlastBarrel,distance=..1,sort=nearest,limit=1] at @s run function weapons:barrel/fill
-execute at @s[tag=BlastBarrel] if entity @a[limit=1,tag=clicker,predicate=!cannons:holdgp] as @e[type=item_display,tag=BlastBarrel,distance=..1,sort=nearest,limit=1] at @s run function weapons:barrel/empty
-
 #> Pirate Teachers
 execute if entity @s[tag=CannonTeacher] as @a[limit=1,tag=clicker] run function lobby:tutorial/cannon
 execute if entity @s[tag=ChestTeacher] as @a[limit=1,tag=clicker] run function lobby:tutorial/chest

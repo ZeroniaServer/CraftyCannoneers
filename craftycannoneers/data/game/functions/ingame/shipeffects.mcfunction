@@ -25,22 +25,22 @@ execute unless score @s openchest matches 1.. unless score @s spotting matches 1
 tag @s[team=Purple,tag=EnemyMSG,predicate=!game:onorange] remove EnemyMSG
 
 #> Weakness on enemy ship + other conditions
-effect give @s[team=Orange,predicate=game:onpurple,tag=!onboatweakness,tag=!lookAtBarrel] weakness infinite 0 true
-tag @s[team=Orange,predicate=game:onpurple,tag=!lookAtBarrel,tag=!onboatweakness] add onboatweakness
+effect give @s[team=Orange,predicate=game:onpurple,tag=!onboatweakness] weakness infinite 0 true
+tag @s[team=Orange,predicate=game:onpurple,tag=!onboatweakness] add onboatweakness
 
-effect give @s[team=Purple,predicate=game:onorange,tag=!onboatweakness,tag=!lookAtBarrel] weakness infinite 0 true
-tag @s[team=Purple,predicate=game:onorange,tag=!lookAtBarrel,tag=!onboatweakness] add onboatweakness
+effect give @s[team=Purple,predicate=game:onorange,tag=!onboatweakness] weakness infinite 0 true
+tag @s[team=Purple,predicate=game:onorange,tag=!onboatweakness] add onboatweakness
 
-effect clear @s[tag=onboatweakness,tag=lookAtBarrel,tag=!lookAtBCannon,tag=!lookAtCannon] weakness
-tag @s[tag=onboatweakness,tag=lookAtBarrel,tag=!lookAtBCannon,tag=!lookAtCannon] remove onboatweakness
+effect clear @s[tag=onboatweakness,tag=!lookAtBarrel,tag=!lookAtBCannon,tag=!lookAtCannon] weakness
+tag @s[tag=onboatweakness,tag=!lookAtBarrel,tag=!lookAtBCannon,tag=!lookAtCannon] remove onboatweakness
 
-effect clear @s[team=Orange,predicate=!game:onpurple,tag=onboatweakness,tag=!lookAtBCannon,tag=!lookAtCannon] weakness
-tag @s[team=Orange,predicate=!game:onpurple,tag=onboatweakness,tag=!lookAtBCannon,tag=!lookAtCannon] remove onboatweakness
+effect clear @s[team=Orange,predicate=!game:onpurple,tag=onboatweakness,tag=!lookAtBCannon,tag=!lookAtCannon,tag=!lookAtBarrel] weakness
+tag @s[team=Orange,predicate=!game:onpurple,tag=onboatweakness,tag=!lookAtBCannon,tag=!lookAtCannon,tag=!lookAtBarrel] remove onboatweakness
 
-effect clear @s[team=Purple,predicate=!game:onorange,tag=onboatweakness,tag=!lookAtBCannon,tag=!lookAtCannon] weakness
-tag @s[team=Purple,predicate=!game:onorange,tag=onboatweakness,tag=!lookAtBCannon,tag=!lookAtCannon] remove onboatweakness
+effect clear @s[team=Purple,predicate=!game:onorange,tag=onboatweakness,tag=!lookAtBCannon,tag=!lookAtCannon,tag=!lookAtBarrel] weakness
+tag @s[team=Purple,predicate=!game:onorange,tag=onboatweakness,tag=!lookAtBCannon,tag=!lookAtCannon,tag=!lookAtBarrel] remove onboatweakness
 
-effect clear @s[tag=!lookAtBCannon,tag=!lookAtCannon,tag=!onboatweakness] weakness
+effect clear @s[tag=!lookAtBCannon,tag=!lookAtCannon,tag=!lookAtBarrel,tag=!onboatweakness] weakness
 
 #> Gapple timer
 scoreboard players add @s gappleTimer 0

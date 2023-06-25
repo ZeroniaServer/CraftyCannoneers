@@ -24,7 +24,8 @@ kill @e[type=area_effect_cloud,tag=CannonNametag,tag=!Tutorial]
 kill @e[type=marker,tag=RingOfFire,predicate=!cannons:ships/tutorial]
 kill @e[type=interaction,tag=LChest]
 kill @e[type=item_display,tag=BlastBarrel]
-execute as @e[type=villager,tag=BlastBarrel] run function arenaclear:kill
+kill @e[type=interaction,tag=BlastBarrel]
+execute as @e[type=husk,tag=BlastBarrel] run function arenaclear:kill
 kill @e[type=marker,tag=bbarrel]
 kill @e[type=marker,tag=StormEntity]
 execute as @e[type=drowned,tag=SharkEntity] run function arenaclear:kill

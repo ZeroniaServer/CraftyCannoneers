@@ -1,6 +1,15 @@
+#> Training Dummy
 execute at @s[type=husk,tag=TDZombie] run function tutorial:trainingdummies/hurtdetection
-execute at @s[type=villager,tag=BlastBarrel] run function weapons:barrel/punch
+
+#> Blast Barrel
+execute at @s[type=husk,tag=BlastBarrel] run function weapons:barrel/punch
+execute at @s[type=interaction,tag=BlastBarrelCenter] run function weapons:barrel/punch
+execute at @s[type=interaction,tag=BlastBarrelGP] as @e[type=item_display,tag=BlastBarrel,distance=..1,sort=nearest,limit=1] at @s run function weapons:barrel/empty
+
+#> Crab Trap 
 execute at @s[type=interaction,tag=CrabTrap] on passengers run function weapons:crabtrap/break
+
+#> Cargo Trap
 execute if entity @s[type=villager,tag=CBTrap] on vehicle run tag @s add TrapExplode
 
 #> Do knockback to crab vehicle if hitting upper endermite

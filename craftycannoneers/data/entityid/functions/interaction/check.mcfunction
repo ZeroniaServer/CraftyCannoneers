@@ -52,6 +52,9 @@ execute if entity @s[tag=StuffyCredit] on target at @s run function lobby:credit
 execute if entity @s[tag=YZEROCredit] on target at @s run function lobby:credit/yzero
 execute if entity @s[tag=ZeroniaCredit] on target at @s run function lobby:credit/zeronia
 
+#> Blast Barrel
+execute at @s[tag=BlastBarrelGP] if entity @a[limit=1,tag=self,predicate=cannons:holdgp] as @e[type=item_display,tag=BlastBarrel,distance=..1,sort=nearest,limit=1] at @s run function weapons:barrel/fill
+
 #> Locked Chest Warns
 execute if entity @s[tag=notifylock] on target run tellraw @s ["",{"translate":"chest.skeleton.warn","color":"red","with":[{"translate":"chest.skeleton","underlined":true,"color":"dark_red"},{"translate":"item.skeleton_key","color":"dark_aqua"}]}]
 
