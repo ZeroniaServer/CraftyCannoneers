@@ -19,6 +19,18 @@ execute on vehicle at @s[tag=!inwater] if predicate game:inwater at @s run funct
 execute on vehicle at @s[tag=inwater] unless predicate game:inwater at @s run function game:modifiers/crabs/exitwater
 execute on vehicle at @s[tag=inwater] if predicate game:inwater on controller if entity @s[type=endermite] on vehicle run function game:modifiers/crabs/enterwater
 
+#> Swim towards players if underwater
+execute if entity @s[tag=!roam] on vehicle at @s if predicate game:inwater unless block ~ ~0.5 ~ #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute if entity @s[tag=!roam] on vehicle at @s[tag=!waterstuck] if predicate game:inwater unless block ~ ~ ~1 #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute if entity @s[tag=!roam] on vehicle at @s[tag=!waterstuck] if predicate game:inwater unless block ~ ~ ~-1 #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute if entity @s[tag=!roam] on vehicle at @s[tag=!waterstuck] if predicate game:inwater unless block ~1 ~ ~ #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute if entity @s[tag=!roam] on vehicle at @s[tag=!waterstuck] if predicate game:inwater unless block ~-1 ~ ~ #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute if entity @s[tag=!roam] on vehicle at @s[tag=!waterstuck] if predicate game:inwater unless block ~ ~0.5 ~1 #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute if entity @s[tag=!roam] on vehicle at @s[tag=!waterstuck] if predicate game:inwater unless block ~ ~0.5 ~-1 #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute if entity @s[tag=!roam] on vehicle at @s[tag=!waterstuck] if predicate game:inwater unless block ~1 ~0.5 ~ #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute if entity @s[tag=!roam] on vehicle at @s[tag=!waterstuck] if predicate game:inwater unless block ~-1 ~0.5 ~ #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute unless score $crabrave CmdData matches 1 on vehicle at @s[tag=waterstuck] run function game:modifiers/crabs/waterstuck
+
 #> Mode switching
 scoreboard players reset @s[tag=hasitem] crabtime
 scoreboard players add @s[tag=!hasitem] crabtime 1
@@ -38,11 +50,6 @@ execute if score @s CmdData matches 50.. on passengers if data entity @s item{id
 execute if score @s CmdData matches 50.. on passengers if data entity @s item{id:"minecraft:goat_horn"} at @s run scoreboard players set $crabrave CmdData 1
 execute if score @s CmdData matches 50.. on passengers if data entity @s item{id:"minecraft:goat_horn"} at @s run scoreboard players reset $ravetime CmdData
 execute if score @s CmdData matches 50.. run scoreboard players reset @s CmdData
-
-#> TODO remove - debug particles
-# execute if entity @s[tag=roam] run particle dust 0 1 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
-# execute if entity @s[tag=follow] run particle dust 1 0.533 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
-# execute if entity @s[tag=steal] run particle dust 1 0 0 0.5 ~ ~1 ~ 0 0 0 0 10 force @a
 
 execute on vehicle unless entity @e[type=item_display,tag=CrabTrap,limit=1,distance=..2] run tag @s remove justReleased
 
