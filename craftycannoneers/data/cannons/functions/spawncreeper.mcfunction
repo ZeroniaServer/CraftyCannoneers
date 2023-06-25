@@ -41,12 +41,12 @@ tag @e[type=creeper,tag=!HasUUID] add HasUUID
 
 #> Blast Barrel chain reaction
 scoreboard players operation $tempuuid playerUUID = @s playerUUID
-execute if entity @s[tag=Power1] positioned ~ ~-1 ~ as @e[type=husk,tag=BlastBarrel,distance=..5] run function weapons:barrel/chainreact
-execute if entity @s[tag=Power2] positioned ~ ~-1 ~ as @e[type=husk,tag=BlastBarrel,distance=..6] run function weapons:barrel/chainreact
-execute if entity @s[tag=Power3] positioned ~ ~-1 ~ as @e[type=husk,tag=BlastBarrel,distance=..7] run function weapons:barrel/chainreact
-execute if entity @s[tag=GasPower] positioned ~ ~-1 ~ as @e[type=husk,tag=BlastBarrel,distance=..7] run function weapons:barrel/chainreact
-execute if entity @s[tag=BlastBarrel1] positioned ~ ~-1 ~ as @e[type=husk,tag=BlastBarrel,distance=..6] run function weapons:barrel/chainreact
-execute if entity @s[tag=BlastBarrel2] positioned ~ ~-1 ~ as @e[type=husk,tag=BlastBarrel,distance=..7] run function weapons:barrel/chainreact
+execute if entity @s[tag=Power1] as @e[type=bat,tag=BlastBarrel,distance=..5] run function weapons:barrel/chainreact
+execute if entity @s[tag=Power2] as @e[type=bat,tag=BlastBarrel,distance=..6] run function weapons:barrel/chainreact
+execute if entity @s[tag=Power3] as @e[type=bat,tag=BlastBarrel,distance=..7] run function weapons:barrel/chainreact
+execute if entity @s[tag=GasPower] as @e[type=bat,tag=BlastBarrel,distance=..7] run function weapons:barrel/chainreact
+execute if entity @s[tag=BlastBarrel1] as @e[type=bat,tag=BlastBarrel,distance=..6] run function weapons:barrel/chainreact
+execute if entity @s[tag=BlastBarrel2] as @e[type=bat,tag=BlastBarrel,distance=..7] run function weapons:barrel/chainreact
 
 #> Explode nearby Cargo Traps
 execute if entity @s[tag=Power1] as @e[type=villager,tag=CBTrap,distance=..5] on vehicle run tag @s add TrapExplode

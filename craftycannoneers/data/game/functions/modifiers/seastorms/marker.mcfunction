@@ -9,7 +9,7 @@ execute if score @s CmdData matches 30 run particle minecraft:firework ~ ~20 ~ 0
 
 #> Set off Blast Barrels/Cargo Traps
 execute if score @s CmdData matches 30 as @e[type=villager,tag=CBTrap,distance=..3] on vehicle run tag @s add TrapExplode
-execute if score @s CmdData matches 30 positioned ~ ~-1 ~ as @e[type=husk,tag=BlastBarrel,distance=..3] run function weapons:barrel/chainreact
+execute if score @s CmdData matches 30 as @e[type=bat,tag=BlastBarrel,distance=..3] run function weapons:barrel/chainreact
 
 #> Break nearby Cargo Barrels
 execute if score @s CmdData matches 30 as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..3] run function game:modifiers/lostcargo/spillbarrel

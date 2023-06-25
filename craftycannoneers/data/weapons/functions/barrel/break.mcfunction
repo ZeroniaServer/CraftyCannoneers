@@ -3,5 +3,5 @@ playsound blastbarrelbreak master @a ~ ~ ~ 0.6 0.9
 loot spawn ~ ~0.1 ~ loot weapons:barrel
 loot spawn ~ ~0.1 ~ loot weapons:gunpowder_return
 kill @e[type=interaction,tag=BlastBarrel,distance=..1,limit=2,sort=nearest]
-execute positioned ~ ~-1 ~ as @e[type=husk,tag=BlastBarrel,limit=1,sort=nearest] run function arenaclear:kill
+execute as @e[type=bat,tag=BlastBarrel,limit=1,sort=nearest] run function arenaclear:kill
 kill
