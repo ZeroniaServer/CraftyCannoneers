@@ -53,3 +53,17 @@ fill 66 -30 -50 66 -30 -49 creeper_head
 
 execute unless block 57 -23 -52 end_stone_brick_wall[up=true] run setblock 57 -23 -52 end_stone_brick_wall[up=true]
 fill 57 -22 -51 57 -22 -50 creeper_head
+
+fill 78 -29 -50 78 -29 -52 spruce_slab[type=top]
+fill 74 -29 -49 74 -29 -51 spruce_slab[type=top]
+fill 70 -29 -49 70 -29 -51 spruce_slab[type=top]
+fill 78 -32 -50 78 -32 -52 spruce_slab[type=top]
+fill 66 -32 -49 66 -32 -51 spruce_slab[type=top]
+fill 57 -24 -50 57 -24 -52 dark_oak_slab[type=top]
+
+fill 62 -29 50 62 -29 52 spruce_slab[type=top]
+fill 66 -29 49 66 -29 51 spruce_slab[type=top]
+fill 70 -29 49 70 -29 51 spruce_slab[type=top]
+fill 62 -32 50 62 -32 52 spruce_slab[type=top]
+fill 74 -32 49 74 -32 51 spruce_slab[type=top]
+fill 83 -24 50 83 -24 52 dark_oak_slab[type=top]
