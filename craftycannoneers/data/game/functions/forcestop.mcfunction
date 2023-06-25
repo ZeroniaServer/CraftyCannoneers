@@ -56,3 +56,9 @@ weather clear
 scoreboard players reset $StormTime CmdData
 scoreboard players reset $WindEffect CmdData
 kill @e[type=drowned,tag=SharkEntity]
+execute as @e[type=endermite,tag=CrabEntity] run function arenaclear:kill
+execute as @e[type=cat,tag=CrabEntity] run function arenaclear:kill
+kill @e[type=item_display,tag=CrabEntity]
+
+#> Game timer
+scoreboard players reset $gametime CmdData

@@ -1,3 +1,6 @@
+#> Game timer
+scoreboard players add $gametime CmdData 1
+
 #> Team Chests
 execute as @e[type=marker,tag=orangeteamchest,limit=1] at @s positioned 68.50 -28 60.50 rotated -90 0 run function game:teamchest/orange/main
 execute as @e[type=marker,tag=purpleteamchest,limit=1] at @s positioned 72.50 -28 -59.50 rotated -90 0 run function game:teamchest/purple/main

@@ -11,3 +11,7 @@ execute if score $ravetime CmdData matches 100.. as @e[type=item_display,tag=Cra
 execute if score $ravetime CmdData matches 100.. as @e[type=item_display,tag=CrabDisplay,tag=hashorn] run tag @s remove hasitem
 execute if score $ravetime CmdData matches 100.. as @e[type=item_display,tag=CrabDisplay,tag=hashorn] run tag @s remove hashorn
 execute if score $ravetime CmdData matches 100.. run scoreboard players reset $ravetime CmdData
+
+#> Spawn crabs
+execute if loaded 70 -28 0 if score $gametime CmdData matches ..39 unless score $curr crabs matches 5.. run function game:modifiers/crabs/spawnnew
+execute if loaded 70 -28 0 if score $gametime CmdData matches 40.. unless score $total crabs matches 5.. run function game:modifiers/crabs/spawnnew
