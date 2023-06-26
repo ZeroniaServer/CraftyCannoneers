@@ -28,29 +28,12 @@ item replace entity @s[scores={eyeclick=60..95}] container.0 with mooshroom_spaw
 item replace entity @s[scores={eyeclick=95..}] container.0 with air
 
 #> Light blocks
-execute at @s[scores={eyeclick=2..94},tag=!lit] store success score $lit CmdData run fill ~ ~ ~ ~ ~ ~ light[level=14] replace air
-execute if score $lit CmdData matches 1 run tag @s add lit
-execute at @s[scores={eyeclick=95}] run fill ~ ~ ~ ~ ~ ~ air replace light[level=14]
-
-execute at @s[scores={eyeclick=2..94},tag=!lit] store success score $lit CmdData run fill ~ ~1 ~ ~ ~1 ~ light[level=14] replace air
-execute if score $lit CmdData matches 1 run tag @s add lit
-execute at @s[scores={eyeclick=95}] unless block ~ ~ ~ light[level=14] run fill ~ ~1 ~ ~ ~1 ~ air replace light[level=14]
-
-execute at @s[scores={eyeclick=2..94},tag=!lit] store success score $lit CmdData run fill ~ ~ ~1 ~ ~ ~1 light[level=14] replace air
-execute if score $lit CmdData matches 1 run tag @s add lit
-execute at @s[scores={eyeclick=95}] unless block ~ ~ ~ light[level=14] unless block ~ ~1 ~ light[level=14] run fill ~ ~ ~1 ~ ~ ~1 air replace light[level=14]
-
-execute at @s[scores={eyeclick=2..94},tag=!lit] store success score $lit CmdData run fill ~ ~ ~-1 ~ ~ ~-1 light[level=14] replace air
-execute if score $lit CmdData matches 1 run tag @s add lit
-execute at @s[scores={eyeclick=95}] unless block ~ ~ ~ light[level=14] unless block ~ ~1 ~ light[level=14] unless block ~ ~ ~1 light[level=14] run fill ~ ~ ~-1 ~ ~ ~-1 air replace light[level=14]
-
-execute at @s[scores={eyeclick=2..94},tag=!lit] store success score $lit CmdData run fill ~1 ~ ~ ~1 ~ ~ light[level=14] replace air
-execute if score $lit CmdData matches 1 run tag @s add lit
-execute at @s[scores={eyeclick=95}] unless block ~ ~ ~ light[level=14] unless block ~ ~1 ~ light[level=14] unless block ~ ~ ~1 light[level=14] unless block ~ ~ ~-1 light[level=14] run fill ~1 ~ ~ ~1 ~ ~ air replace light[level=14]
-
-execute at @s[scores={eyeclick=2..94},tag=!lit] store success score $lit CmdData run fill ~-1 ~ ~ ~-1 ~ ~ light[level=14] replace air
-execute if score $lit CmdData matches 1 run tag @s add lit
-execute at @s[scores={eyeclick=95}] unless block ~ ~ ~ light[level=14] unless block ~ ~1 ~ light[level=14] unless block ~ ~ ~1 light[level=14] unless block ~ ~ ~-1 light[level=14] unless block ~1 ~ ~ light[level=14] run fill ~-1 ~ ~ ~-1 ~ ~ air replace light[level=14]
+execute at @s[scores={eyeclick=2..}] positioned ~ ~ ~ run function weapons:barrel/light
+execute at @s[scores={eyeclick=2..}] positioned ~ ~1 ~ run function weapons:barrel/light
+execute at @s[scores={eyeclick=2..}] positioned ~ ~ ~1 run function weapons:barrel/light
+execute at @s[scores={eyeclick=2..}] positioned ~ ~ ~-1 run function weapons:barrel/light
+execute at @s[scores={eyeclick=2..}] positioned ~1 ~ ~ run function weapons:barrel/light
+execute at @s[scores={eyeclick=2..}] positioned ~-1 ~ ~ run function weapons:barrel/light
 
 execute at @s[scores={eyeclick=94}] positioned ~ ~-0.05 ~ run function weapons:barrel/levitate
 execute at @s[scores={eyeclick=95,CmdData=10}] positioned ~ ~-0.05 ~ run function weapons:barrel/tier3
