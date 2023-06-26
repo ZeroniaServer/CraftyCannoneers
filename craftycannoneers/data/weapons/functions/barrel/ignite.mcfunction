@@ -32,23 +32,23 @@ execute at @s[scores={eyeclick=2..94},tag=!lit] store success score $lit CmdData
 execute if score $lit CmdData matches 1 run tag @s add lit
 execute at @s[scores={eyeclick=95}] run fill ~ ~ ~ ~ ~ ~ air replace light[level=14]
 
-execute at @s[scores={eyeclick=2..94},tag=!lit] unless block ~ ~ ~ light[level=14] run fill ~ ~1 ~ ~ ~1 ~ light[level=14] replace air
+execute at @s[scores={eyeclick=2..94},tag=!lit] store success score $lit CmdData run fill ~ ~1 ~ ~ ~1 ~ light[level=14] replace air
 execute if score $lit CmdData matches 1 run tag @s add lit
 execute at @s[scores={eyeclick=95}] unless block ~ ~ ~ light[level=14] run fill ~ ~1 ~ ~ ~1 ~ air replace light[level=14]
 
-execute at @s[scores={eyeclick=2..94},tag=!lit] unless block ~ ~ ~ light[level=14] unless block ~ ~1 ~ light[level=14] run fill ~ ~ ~1 ~ ~ ~1 light[level=14] replace air
+execute at @s[scores={eyeclick=2..94},tag=!lit] store success score $lit CmdData run fill ~ ~ ~1 ~ ~ ~1 light[level=14] replace air
 execute if score $lit CmdData matches 1 run tag @s add lit
 execute at @s[scores={eyeclick=95}] unless block ~ ~ ~ light[level=14] unless block ~ ~1 ~ light[level=14] run fill ~ ~ ~1 ~ ~ ~1 air replace light[level=14]
 
-execute at @s[scores={eyeclick=2..94},tag=!lit] unless block ~ ~ ~ light[level=14] unless block ~ ~1 ~ light[level=14] unless block ~ ~ ~1 light[level=14] run fill ~ ~ ~-1 ~ ~ ~-1 light[level=14] replace air
+execute at @s[scores={eyeclick=2..94},tag=!lit] store success score $lit CmdData run fill ~ ~ ~-1 ~ ~ ~-1 light[level=14] replace air
 execute if score $lit CmdData matches 1 run tag @s add lit
 execute at @s[scores={eyeclick=95}] unless block ~ ~ ~ light[level=14] unless block ~ ~1 ~ light[level=14] unless block ~ ~ ~1 light[level=14] run fill ~ ~ ~-1 ~ ~ ~-1 air replace light[level=14]
 
-execute at @s[scores={eyeclick=2..94},tag=!lit] unless block ~ ~ ~ light[level=14] unless block ~ ~1 ~ light[level=14] unless block ~ ~ ~1 light[level=14] unless block ~ ~ ~-1 light[level=14] run fill ~1 ~ ~ ~1 ~ ~ light[level=14] replace air
+execute at @s[scores={eyeclick=2..94},tag=!lit] store success score $lit CmdData run fill ~1 ~ ~ ~1 ~ ~ light[level=14] replace air
 execute if score $lit CmdData matches 1 run tag @s add lit
 execute at @s[scores={eyeclick=95}] unless block ~ ~ ~ light[level=14] unless block ~ ~1 ~ light[level=14] unless block ~ ~ ~1 light[level=14] unless block ~ ~ ~-1 light[level=14] run fill ~1 ~ ~ ~1 ~ ~ air replace light[level=14]
 
-execute at @s[scores={eyeclick=2..94},tag=!lit] unless block ~ ~ ~ light[level=14] unless block ~ ~1 ~ light[level=14] unless block ~ ~ ~1 light[level=14] unless block ~ ~ ~-1 light[level=14] unless block ~1 ~ ~ light[level=14] run fill ~-1 ~ ~ ~-1 ~ ~ light[level=14] replace air
+execute at @s[scores={eyeclick=2..94},tag=!lit] store success score $lit CmdData run fill ~-1 ~ ~ ~-1 ~ ~ light[level=14] replace air
 execute if score $lit CmdData matches 1 run tag @s add lit
 execute at @s[scores={eyeclick=95}] unless block ~ ~ ~ light[level=14] unless block ~ ~1 ~ light[level=14] unless block ~ ~ ~1 light[level=14] unless block ~ ~ ~-1 light[level=14] unless block ~1 ~ ~ light[level=14] run fill ~-1 ~ ~ ~-1 ~ ~ air replace light[level=14]
 
