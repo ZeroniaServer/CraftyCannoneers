@@ -25,8 +25,8 @@ execute at @e[type=armor_stand,tag=CannonballDeco,tag=DecoCB] run summon item_di
 execute as @e[type=item_display,tag=DecoCB,limit=1] at @s rotated as @e[type=armor_stand,tag=CannonballDeco,tag=DecoCB] run tp @s ~ ~ ~ ~ 0
 
 #Hot Cannonball
-setblock -44 -25 -8 light[level=15]
-execute at @e[type=armor_stand,tag=CannonballDeco,tag=DecoFB] run summon item_display ~ ~ ~ {Tags:["CannonballDeco","HasDisplay","DecoFB"],item:{id:"minecraft:lava_bucket",tag:{CustomModelData:1},Count:1b},transformation:{translation:[0.0f,0.9f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.4375f,0.4375f,0.4375f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:1.0f,width:1.0f,interpolation_duration:0,Rotation:[28.37343f,0.0f]}
+setblock -44 -25 -8 light[level=13]
+execute at @e[type=armor_stand,tag=CannonballDeco,tag=DecoFB] run summon item_display ~ ~ ~ {Tags:["CannonballDeco","HasDisplay","DecoFB"],brightness:{block:15,sky:15},item:{id:"minecraft:lava_bucket",tag:{CustomModelData:1},Count:1b},transformation:{translation:[0.0f,0.9f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.4375f,0.4375f,0.4375f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:1.0f,width:1.0f,interpolation_duration:0,Rotation:[28.37343f,0.0f]}
 execute as @e[type=item_display,tag=DecoFB,limit=1] at @s rotated as @e[type=armor_stand,tag=CannonballDeco,tag=DecoFB] run tp @s ~ ~ ~ ~ 0
 
 #Gas Cannonball
