@@ -8,7 +8,13 @@ execute at @s[scores={cannonshot=1}] run playsound cannonload master @a ~ ~ ~ 1 
 execute at @s[scores={cannonshot=5}] run playsound cannonprime master @a ~ ~ ~ 0.4 1.6
 
 #> Particles/Sounds
-#TODO flame particles for gunpowder slot @YZERO
+execute at @s[scores={cannonshot=2}] run particle soul_fire_flame ^ ^0.9 ^0.55 .02 0.05 .02 .003 1 normal @a[predicate=cannons:seeparticles]
+execute at @s[scores={cannonshot=2}] run particle soul_fire_flame ^-0.15 ^0.9 ^0.55 .02 0.05 .02 .003 1 normal @a[predicate=cannons:seeparticles]
+execute at @s[scores={cannonshot=2}] run particle soul_fire_flame ^0.15 ^0.9 ^0.55 .02 0.05 .02 .003 1 normal @a[predicate=cannons:seeparticles]
+
+execute at @s[scores={cannonshot=5..30}] if predicate game:fiftyfifty run particle flame ^ ^0.85 ^0.6 .02 0.1 .02 .003 1 normal @a[predicate=cannons:seeparticles]
+execute at @s[scores={cannonshot=5..30}] if predicate game:fiftyfifty run particle flame ^-0.15 ^0.85 ^0.6 .02 0.1 .02 .003 1 normal @a[predicate=cannons:seeparticles]
+execute at @s[scores={cannonshot=5..30}] if predicate game:fiftyfifty run particle flame ^0.15 ^0.85 ^0.6 .02 0.1 .02 .003 1 normal @a[predicate=cannons:seeparticles]
 
 #Normal Cannonball
 execute at @s[scores={cannonshot=30,CannonID=1}] run playsound cannonshot master @a ~ ~ ~ 6 1
