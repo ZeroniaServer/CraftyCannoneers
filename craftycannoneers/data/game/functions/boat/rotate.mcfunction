@@ -25,6 +25,9 @@ execute if score $BoatCannons CmdData matches 1 run scoreboard players operation
 execute if score $BoatCannons CmdData matches 1 run scoreboard players operation $temp cannonshot = @s cannonshot
 execute if score $BoatCannons CmdData matches 1 run scoreboard players operation $temp playerUUID = @s playerUUID
 execute if score $BoatCannons CmdData matches 1 run scoreboard players operation $temp PowerM = @s PowerM
+execute if score $BoatCannons CmdData matches 1 run scoreboard players operation $temp firetime = @s firetime
+execute if score $BoatCannons CmdData matches 1 store success score $onfire CmdData if entity @s[tag=OnFire]
+execute if score $BoatCannons CmdData matches 1 store success score $recoil CmdData if entity @s[tag=Recoil]
 execute if score $BoatCannons CmdData matches 1 as @e[type=boat,tag=Rotate,limit=1] run function game:boat/cannon/transfer
 
 tag @e[type=boat,tag=Rotate,limit=1] remove Rotate

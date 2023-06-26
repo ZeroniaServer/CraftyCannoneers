@@ -11,6 +11,9 @@ execute as @a unless entity @s[team=!Lobby,team=!Spectator,team=!Developer] run 
 #> Boat
 execute as @e[type=boat,tag=BoatBoat] at @s run function game:boat/boat
 
+#> Temporary light
+execute as @e[type=marker,tag=templight] at @s run function game:boat/cannon/templight
+
 #> Respawning (failsafe)
 execute if entity @a unless entity @e[type=boat,tag=BoatBoat,tag=1] run summon marker 109 -30 0 {Tags:["1","respawnboat"]}
 execute if entity @a unless entity @e[type=boat,tag=BoatBoat,tag=2] run summon marker 31 -30 0 {Tags:["2","respawnboat"]}

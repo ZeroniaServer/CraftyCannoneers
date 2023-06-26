@@ -10,3 +10,5 @@ execute if entity @s[scores={cannonshot=29}] on passengers on passengers on pass
 execute if entity @s[scores={cannonshot=30}] on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:133}
 execute if entity @s[scores={cannonshot=31}] on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:132}
 execute if entity @s[scores={cannonshot=32}] on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:125}
+
+execute if entity @s[tag=OnFire] on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:137}

@@ -1,8 +1,8 @@
 #> Check if player is holding the right items and facing the right direction
 scoreboard players set $rightdir CmdData 0
 scoreboard players add @s PowerM 0
-execute rotated as @s[tag=Sailing,tag=!FireCannon,scores={PowerM=0}] rotated ~ ~40 on passengers if entity @s[type=player,predicate=cannons:holdgp] anchored eyes positioned as @s anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.3] run scoreboard players set $rightdir CmdData 1
-execute rotated as @s[tag=Sailing,tag=!FireCannon,scores={PowerM=1..}] rotated ~ ~40 on passengers if entity @s[type=player] anchored eyes positioned as @s anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.3] run scoreboard players set $rightdir CmdData 1
+execute rotated as @s[tag=Sailing,tag=!FireCannon,tag=!OnFire,scores={PowerM=0}] rotated ~ ~40 on passengers if entity @s[type=player,predicate=cannons:holdgp] anchored eyes positioned as @s anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.3] run scoreboard players set $rightdir CmdData 1
+execute rotated as @s[tag=Sailing,tag=!FireCannon,tag=!OnFire,scores={PowerM=1..}] rotated ~ ~40 on passengers if entity @s[type=player] anchored eyes positioned as @s anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.3] run scoreboard players set $rightdir CmdData 1
 
 #> Make player weak to prevent sounds
 execute if entity @s[tag=Sailing] if score $rightdir CmdData matches 1 on passengers run effect give @s[type=player,tag=!lookAtBCannon] weakness infinite 0 true
@@ -24,8 +24,8 @@ tag @s[tag=still,tag=!interactionreplaced] add interactionreplaced
 execute if entity @s[tag=!still,tag=interactionreplaced] run tag @s remove interactionreplaced
 
 #> Tip Cannon model down while moving
-execute if entity @s[tag=Sailing,tag=!noplayerinput,tag=!tipped,tag=!FireCannon] run function game:boat/cannon/tipcannon
-execute if entity @s[tag=Sailing,tag=noplayerinput,tag=tipped,tag=!FireCannon] run function game:boat/cannon/updategunpowder
+execute if entity @s[tag=Sailing,tag=!noplayerinput,tag=!tipped,tag=!FireCannon,tag=!OnFire] run function game:boat/cannon/tipcannon
+execute if entity @s[tag=Sailing,tag=noplayerinput,tag=tipped,tag=!FireCannon,tag=!OnFire] run function game:boat/cannon/updategunpowder
 
 #> Prevent clicking on Cannon if not looking in right direction
 execute if score $rightdir CmdData matches 0 if entity @s[tag=Sailing] on passengers on passengers on passengers run data merge entity @s[type=interaction] {width:0,height:0,response:0b}
@@ -45,3 +45,6 @@ execute if score $arrownearby CmdData matches 0 run tag @s add invul
 
 #> Fire cannon
 execute at @s[tag=FireCannon] run function game:boat/cannon/firecannon
+
+#> Cannon on fire
+execute at @s[tag=OnFire] run function game:boat/cannon/cannononfire
