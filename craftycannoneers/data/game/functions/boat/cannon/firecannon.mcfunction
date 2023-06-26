@@ -100,5 +100,8 @@ scoreboard players set @s[scores={cannonshot=30,CannonID=8}] cannonshot 35
 #> Recoil
 execute at @s[scores={cannonshot=27..}] unless score @s CannonID matches 8 run function game:boat/cannon/recoil
 
+#> Set light
+execute at @s[scores={cannonshot=27}] run summon marker ~ ~ ~ {Tags:["templight","flash"]}
+
 #> Finish shooting
 execute if entity @s[scores={cannonshot=33..}] run function game:boat/cannon/finishshoot
