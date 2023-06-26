@@ -5,7 +5,7 @@
     "equipment": {
       "mainhand": {
         "items": [
-          "minecraft:diamond_hoe"
+          "minecraft:lava_bucket"
         ],
         "nbt": "{Cannonball:2b}"
       }

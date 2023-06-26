@@ -1,5 +1,5 @@
 item replace entity @s[tag=DecoCB] container.0 with diamond_hoe{CustomModelData:16}
-item replace entity @s[tag=DecoFB] container.0 with diamond_hoe{CustomModelData:22}
+item replace entity @s[tag=DecoFB] container.0 with lava_bucket{CustomModelData:1}
 item replace entity @s[tag=DecoGCB] container.0 with diamond_hoe{CustomModelData:31}
 item replace entity @s[tag=DecoCCB] container.0 with diamond_hoe{CustomModelData:32}
 item replace entity @s[tag=DecoBCB] container.0 with diamond_hoe{CustomModelData:55}
