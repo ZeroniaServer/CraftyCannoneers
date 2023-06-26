@@ -9,7 +9,10 @@ scoreboard players add @s eyeclick 1
 execute at @s[scores={eyeclick=2}] run playsound blastbarrelignite master @a ~ ~ ~ 1 1
 execute at @s[scores={eyeclick=2}] run playsound blastbarrelburn master @a ~ ~ ~ 1 1
 
-execute if entity @s[scores={eyeclick=2}] at @e[type=interaction,tag=] run
+execute at @s[scores={eyeclick=2}] run particle soul_fire_flame ^0.46 ^0.12 ^ .02 0.05 .02 .003 1 normal @a[predicate=cannons:seeparticles]
+execute at @s[scores={eyeclick=2}] run particle soul_fire_flame ^-0.46 ^0.12 ^ .02 0.05 .02 .003 1 normal @a[predicate=cannons:seeparticles]
+execute at @s[scores={eyeclick=5..}] run particle flame ^0.4 ^0.54 ^ .02 0.1 .02 .003 1 normal @a[predicate=cannons:seeparticles]
+execute at @s[scores={eyeclick=5..}] run particle flame ^-0.4 ^0.54 ^ .02 0.1 .02 .003 1 normal @a[predicate=cannons:seeparticles]
 
 execute at @s[scores={eyeclick=10..20}] run particle smoke ~ ~1.3 ~ 0.1 0.4 0.1 0.01 1 force @a[team=!Lobby]
 execute at @s[scores={eyeclick=60..}] run particle flame ~ ~1.3 ~ 0.1 0.4 0.1 0.01 1 force @a[team=!Lobby]
