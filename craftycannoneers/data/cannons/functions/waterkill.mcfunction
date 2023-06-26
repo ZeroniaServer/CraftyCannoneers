@@ -4,7 +4,7 @@ data merge entity @s {Motion:[0.0d,-0.3d,0.0d]}
 
 
 execute if entity @s[tag=Cannonball,scores={eyeclick=30..}] run particle item diamond_hoe{CustomModelData:16} ^ ^1 ^-6 0 0 0 0.1 40 force @a[predicate=cannons:seeparticles]
-execute if entity @s[tag=HotCannonball,scores={eyeclick=30..}] run particle item diamond_hoe{CustomModelData:22} ^ ^1 ^-6 0 0 0 0.1 40 force @a[predicate=cannons:seeparticles]
+execute if entity @s[tag=HotCannonball,scores={eyeclick=30..}] run particle item lava_bucket{CustomModelData:1} ^ ^1 ^-6 0 0 0 0.1 40 force @a[predicate=cannons:seeparticles]
 execute if entity @s[tag=HotCannonball,scores={eyeclick=1}] run particle cloud ^ ^1.2 ^-6 0.6 0.2 0.6 0.1 30 force @a[predicate=cannons:seeparticles]
 execute if entity @s[tag=HotCannonball,scores={eyeclick=1}] run particle bubble_column_up ^ ^-1 ^-6 0.6 0.2 0.6 0.1 30 force @a[predicate=cannons:seeparticles]
 execute if entity @s[tag=CannonballCluster,scores={eyeclick=30..}] run particle item diamond_hoe{CustomModelData:30} ^ ^1 ^-6 0 0 0 0.1 10 force @a[predicate=cannons:seeparticles]

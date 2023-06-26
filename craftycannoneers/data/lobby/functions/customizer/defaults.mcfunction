@@ -1,5 +1,6 @@
 scoreboard players set $ShipHP CmdData 1000
 scoreboard players set $Daytime CmdData 0
+time set day
 scoreboard players set $TimeLimit CmdData 42069
 
 function lobby:customizer/updatesigns
