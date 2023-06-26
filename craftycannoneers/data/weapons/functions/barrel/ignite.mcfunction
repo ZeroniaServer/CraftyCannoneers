@@ -9,8 +9,6 @@ scoreboard players add @s eyeclick 1
 execute at @s[scores={eyeclick=2}] run playsound blastbarrelignite master @a ~ ~ ~ 1 1
 execute at @s[scores={eyeclick=2}] run playsound blastbarrelburn master @a ~ ~ ~ 1 1
 
-execute if entity @s[scores={eyeclick=2}] at @e[type=interaction,tag=] run
-
 execute at @s[scores={eyeclick=10..20}] run particle smoke ~ ~1.3 ~ 0.1 0.4 0.1 0.01 1 force @a[team=!Lobby]
 execute at @s[scores={eyeclick=60..}] run particle flame ~ ~1.3 ~ 0.1 0.4 0.1 0.01 1 force @a[team=!Lobby]
 execute at @s[scores={eyeclick=70..}] run particle lava ~ ~ ~ 0.1 0.1 0.1 0.01 1 force @a[team=!Lobby]
