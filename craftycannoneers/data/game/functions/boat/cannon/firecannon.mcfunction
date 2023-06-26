@@ -5,15 +5,7 @@ execute if entity @s[tag=Sailing,scores={cannonshot=1}] on passengers on passeng
 execute if entity @s[tag=!Sailing,scores={cannonshot=1}] on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:131}
 execute at @s[scores={cannonshot=1}] run playsound cannonload master @a ~ ~ ~ 1 1
 
-#> Fire time depends on gunpowder amount
-#TODO improve these ranges? @YZERO
-execute at @s[scores={cannonshot=5,PowerM=1..2}] run playsound cannonprime master @a ~ ~ ~ 0.4 1.8
-execute at @s[scores={cannonshot=5,PowerM=1..2}] run scoreboard players set @s cannonshot 25
-
-execute at @s[scores={cannonshot=5,PowerM=3..4}] run playsound cannonprime master @a ~ ~ ~ 0.4 1.7
-execute at @s[scores={cannonshot=5,PowerM=3..4}] run scoreboard players set @s cannonshot 10
-
-execute at @s[scores={cannonshot=5,PowerM=5..}] run playsound cannonprime master @a ~ ~ ~ 0.4 1.6
+execute at @s[scores={cannonshot=5}] run playsound cannonprime master @a ~ ~ ~ 0.4 1.6
 
 #> Particles/Sounds
 #TODO flame particles for gunpowder slot @YZERO
@@ -81,7 +73,6 @@ execute at @s[scores={cannonshot=26}] unless score @s CannonID matches 8 run par
 execute at @s[scores={cannonshot=26}] unless score @s CannonID matches 8 run particle lava ^ ^2.1 ^2 0.1 0.1 0.1 0.02 10 force @a[predicate=cannons:seeparticles]
 
 #> Shoot
-#TODO polish cannonball trajectories @YZERO
 execute at @s[tag=Sailing,scores={cannonshot=29}] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:132}
 execute at @s[tag=Sailing,scores={cannonshot=30}] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:133}
 execute at @s[tag=Sailing,scores={cannonshot=31}] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:132}
