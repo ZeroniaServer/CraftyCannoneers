@@ -1,7 +1,7 @@
 scoreboard players add @s BombDelay 1
 
 item replace entity @s[scores={BombDelay=1}] container.0 with ender_eye{CustomModelData:2}
-data merge entity @s[scores={BombDelay=1}] {start_interpolation:0,interpolation_duration:5,transformation:{scale:[3f,3f,3f]}}
+data merge entity @s[scores={BombDelay=1}] {start_interpolation:0,interpolation_duration:1,transformation:{scale:[2.5f,2.5f,2.5f]}}
 
 #> Summon AECs + tag players as Blasted
 execute if score @s BombDelay matches 1 as @a[tag=!Blasted,gamemode=!spectator,distance=..5] at @s run summon area_effect_cloud ~ ~155 ~ {Tags:["BlastAEC"],Particle:"block air",Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:0.1f,Duration:1,Effects:[{Id:25,Amplifier:100,Duration:2,ShowParticles:0b}]}
