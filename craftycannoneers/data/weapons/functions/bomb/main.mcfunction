@@ -2,7 +2,7 @@
 function weapons:bomb/throw
 
 #> Functionality
-execute as @e[type=armor_stand,tag=Bomb] at @s run function weapons:bomb/functionality
+execute as @e[type=item_display,tag=BombTracker] at @s run function weapons:bomb/functionality
 
 #> Blasted players
 scoreboard players add @a[tag=Blasted] blasttime 1

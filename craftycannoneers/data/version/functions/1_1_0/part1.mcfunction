@@ -10,6 +10,7 @@ bossbar set updatebar style notched_6
 forceload add -413 -379 -260 -15
 
 kill @e[type=armor_stand,tag=chestdisplay]
+kill @e[type=armor_stand,tag=BoatAS]
 
 kill @e[type=armor_stand,tag=PirateHat]
 execute unless entity @e[type=item_display,tag=KlarHat,limit=1] run summon item_display -31.023135 -27.838197 23.363027 {Tags:["KlarHat","LobbyDisplay","PirateHat"],item:{id:"diamond_hoe",tag:{CustomModelData:39},Count:1b},transformation:{translation:[0.0f,1.8f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:2.0f,width:1.0f,Rotation:[137.0f,3.0f]}

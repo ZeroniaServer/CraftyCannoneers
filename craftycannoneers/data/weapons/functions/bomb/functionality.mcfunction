@@ -1,5 +1,9 @@
+#> Snowball functions
+scoreboard players set $inair CmdData 0
+execute on vehicle at @s run function weapons:bomb/snowball
+
 #> General
-tag @s[tag=!WaterKill,scores={CmdData=3..},nbt={OnGround:1b}] add Kaboom
+execute if score $inair CmdData matches 0 run tag @s[tag=!WaterKill,scores={CmdData=3..}] add Kaboom
 scoreboard players add @s CmdData 1
 execute at @s[tag=!WaterKill] run particle flame ~ ~0.5 ~ 0 0 0 .02 1 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=!WaterKill] run playsound blastbombfuse master @a ~ ~ ~ 0.5 1
@@ -9,17 +13,13 @@ execute at @s[tag=!WaterKill] if block ~ ~ ~ water run scoreboard players reset 
 execute at @s if block ~ ~ ~ water run tag @s add WaterKill
 execute at @s[predicate=game:inwater] run tag @s add WaterKill 
 tag @s[tag=WaterKill] remove Kaboom
-data merge entity @s[tag=WaterKill,scores={CmdData=1}] {Motion:[0.0,-0.02,0.0]}
+execute if entity @s[tag=WaterKill,scores={CmdData=1}] on vehicle run kill @s
+item replace entity @s[tag=WaterKill,scores={CmdData=1}] container.0 with ender_eye{CustomModelData:2}
+data merge entity @s[tag=WaterKill,scores={CmdData=1}] {start_interpolation:0,interpolation_duration:30,transformation:{translation:[0.0f,-1.0f,0.0f]}}
 execute at @s[tag=WaterKill,scores={CmdData=1}] run particle cloud ~ ~1 ~ 0 0 0 0.1 2 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=WaterKill,scores={CmdData=1}] run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.8 2
 execute at @s[tag=WaterKill,scores={CmdData=2}] run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.8 1.6
 execute at @s[tag=WaterKill,scores={CmdData=30..}] run function weapons:bomb/waterkill
 
-#> Air toggle
-execute store result entity @s Air short 1 run scoreboard players get $toggle CmdData
-
-#> Other landing conditions
-execute at @s[tag=!WaterKill,predicate=!game:inwater] run function weapons:bomb/checklanded
-
 #> Kaboom
-execute at @s[tag=Kaboom] run function weapons:bomb/kaboom
+execute at @s[tag=Kaboom] positioned ~ ~-0.2 ~ run function weapons:bomb/kaboom

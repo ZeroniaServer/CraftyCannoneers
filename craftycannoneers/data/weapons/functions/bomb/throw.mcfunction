@@ -5,9 +5,6 @@ tag @a[team=!Lobby,predicate=weapons:bomb_offhand] add HoldBomb
 #> Click bomb
 execute as @a[tag=HoldBomb,tag=!BombDelay,scores={eyeclick=1..}] at @s run function weapons:bomb/clickbomb
 
-#> Bomb tick
-execute as @e[type=armor_stand,tag=ThrowBomb,tag=!BombThrown] at @s run function weapons:bomb/tick
-
 #> Bomb throw delay
 scoreboard players add @a[tag=BombDelay] BombDelay 1
 tag @a[tag=BombDelay,scores={BombDelay=5..}] remove BombDelay
