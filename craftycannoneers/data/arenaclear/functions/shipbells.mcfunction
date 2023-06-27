@@ -1,4 +1,3 @@
-kill @e[type=armor_stand,tag=ShipBell]
-
-summon armor_stand 63 -24.1 -55 {Invulnerable:1b,Marker:1b,NoGravity:1b,Silent:1b,Tags:["ShipBell","Purple"],ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1b,tag:{CustomModelData:68}}]}
-summon armor_stand 77 -24.1 55 {Invulnerable:1b,Marker:1b,NoGravity:1b,Silent:1b,Tags:["ShipBell","Orange"],ArmorItems:[{},{},{},{id:"diamond_hoe",Count:1b,tag:{CustomModelData:68}}]}
+kill @e[type=item_display,tag=ShipBell]
+summon item_display 63 -22.4125 -55 {Tags:["ShipBell","Purple"],item:{id:"diamond_hoe",Count:1b,tag:{CustomModelData:68}},item_display:"head",width:5f,height:2f,transformation:{scale:[0.625f,0.625f,0.625f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+summon item_display 77 -22.4125 55 {Tags:["ShipBell","Orange"],item:{id:"diamond_hoe",Count:1b,tag:{CustomModelData:68}},item_display:"head",width:5f,height:2f,transformation:{scale:[0.625f,0.625f,0.625f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}

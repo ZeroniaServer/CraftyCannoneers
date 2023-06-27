@@ -5,7 +5,7 @@ function chests:spawning
 function tutorial:tips/showtip
 
 #> Ship bell
-execute as @e[type=armor_stand,tag=ShipBell,limit=2] run function game:ingame/bell
+execute as @e[type=item_display,tag=ShipBell,limit=2] run function game:ingame/bell
 
 #> Spawn new weakpoints if the old ones die for some reason (failsafe)
 execute unless score $OrangeWPDelay CmdData matches 1.. as @e[type=slime,tag=Weakpoint,tag=Orange,tag=WeakpointDamaged,limit=1] unless score $OrangeWP CmdData matches 6.. run function game:shipweakpoint/spawnnewpurple
