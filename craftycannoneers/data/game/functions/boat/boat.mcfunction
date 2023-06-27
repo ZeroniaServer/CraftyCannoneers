@@ -48,4 +48,4 @@ execute if entity @s[tag=!Sinking,predicate=cannons:ships/purple,predicate=canno
 
 #> Break when in ground to fix issues with boat motion/collision
 execute unless block ~ ~ ~ #cannons:cannonball_passable unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] unless block ~ ~ ~ ladder unless block ~ ~ ~ #minecraft:candles[waterlogged=true] run kill @s
-execute unless block ~ ~1 ~ #cannons:cannonball_passable unless block ~ ~1 ~ ladder unless block ~ ~1 ~ #minecraft:slabs[type=top] run kill @s
+execute unless block ~ ~1 ~ #cannons:cannonball_passable unless block ~ ~1 ~ ladder unless block ~ ~1 ~ #minecraft:slabs[type=top] unless block ~ ~1 ~ lantern run kill @s
