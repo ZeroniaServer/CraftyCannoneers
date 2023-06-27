@@ -10,8 +10,8 @@ execute store result storage craftycannoneers:boat transformation.right_rotation
 
 # applies rotation transformations.
 execute on passengers run data modify entity @s transformation merge from storage craftycannoneers:boat transformation
-execute if score $lighting CmdData matches 1 on passengers run data modify entity @s[tag=BoatCannonDisplay] brightness merge from storage craftycannoneers:boat brightness
-execute unless score $lighting CmdData matches 1 on passengers run data remove entity @s[tag=BoatCannonDisplay] brightness
+execute if score $lighting CmdData matches 1 on passengers run data modify entity @s brightness merge from storage craftycannoneers:boat brightness
+execute unless score $lighting CmdData matches 1 on passengers run data remove entity @s brightness
 execute on passengers run data merge entity @s {start_interpolation:0,interpolation_duration:2}
 
 # resets entity rotation.

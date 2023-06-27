@@ -47,4 +47,5 @@ execute if entity @s[tag=!Sinking,predicate=cannons:ships/orange,predicate=canno
 execute if entity @s[tag=!Sinking,predicate=cannons:ships/purple,predicate=cannons:ships/underbottom,predicate=!game:instillwater,nbt={OnGround:0b}] align y run tp @s ~ ~1 ~
 
 #> Break when in ground to fix issues with boat motion/collision
-execute unless block ~ ~ ~ #cannons:cannonball_passable run kill @s
+execute unless block ~ ~ ~ #cannons:cannonball_passable unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] unless block ~ ~ ~ ladder unless block ~ ~ ~ #minecraft:candles[waterlogged=true] run kill @s
+execute unless block ~ ~1 ~ #cannons:cannonball_passable unless block ~ ~1 ~ ladder unless block ~ ~1 ~ #minecraft:slabs[type=top] run kill @s

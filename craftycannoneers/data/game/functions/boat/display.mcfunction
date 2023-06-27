@@ -5,7 +5,7 @@ execute unless block ^ ^ ^0.5 air unless block ^ ^ ^0.5 light run scoreboard pla
 execute unless block ^ ^ ^-0.5 air unless block ^ ^ ^-0.5 light run scoreboard players set $lighting CmdData 1
 execute unless block ^ ^ ^1 air unless block ^ ^ ^1 light run scoreboard players set $lighting CmdData 1
 execute unless block ^ ^ ^-1 air unless block ^ ^ ^-1 light run scoreboard players set $lighting CmdData 1
-execute if score $lighting CmdData matches 1 run function game:boat/cannon/lighting
+execute if score $lighting CmdData matches 1 run function game:boat/lighting
 execute unless score $lighting CmdData matches 1 run data remove entity @s brightness
 
 #> Rotate secondary display

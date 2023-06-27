@@ -1,6 +1,6 @@
 #> Rotate the sail along with the boat
 execute on vehicle rotated as @s on passengers positioned as @s[type=!player] run tp @s ~ ~ ~ ~ ~
-function game:boat/euler
+function game:boat/display
 
 #> Hide this sail in order to show the other one
 execute on vehicle if entity @s[tag=Sailing] on passengers run item replace entity @s[tag=BoatBanner] container.0 with air
