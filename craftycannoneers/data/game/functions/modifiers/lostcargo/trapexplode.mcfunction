@@ -11,12 +11,11 @@ execute unless score $blast BombDelay matches 1 if entity @e[type=cat,tag=CrabVe
 execute unless score $blast BombDelay matches 1 if entity @e[type=drowned,tag=SharkEntity,limit=1,distance=..9] run scoreboard players set $blast BombDelay 1
 execute if score @s click matches 3 if score $blast BombDelay matches 1 run function game:modifiers/lostcargo/summonslime
 
-#> Chain reaction
-execute if score @s click matches 4 as @e[type=villager,tag=CBTrap,distance=..4] on vehicle run tag @s add TrapExplode
-
-#> Set off Blast Barrels
+#> Set off Blast Barre;s/Cargo Traps
+execute if score @s click matches 4 run scoreboard players operation $tempuuid playerUUID = @s playerUUID
 execute if score @s click matches 4 run data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
-execute at @s[scores={click=4}] as @e[type=bat,tag=BlastBarrel,distance=..4] run function weapons:barrel/chainreact
+execute if score @s click matches 4 as @e[type=villager,tag=CBTrap,distance=..4] on vehicle run function game:modifiers/lostcargo/chainreact
+execute if score @s click matches 4 as @e[type=bat,tag=BlastBarrel,distance=..4] run function weapons:barrel/chainreact
 
 #> Break nearby Boats
 execute if score @s click matches 2 run kill @e[type=boat,tag=BoatBoat,distance=..4]

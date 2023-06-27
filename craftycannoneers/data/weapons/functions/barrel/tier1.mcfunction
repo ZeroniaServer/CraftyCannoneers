@@ -16,6 +16,7 @@ particle explosion ~ ~ ~ 1 1 1 0.1 12 force @a[team=!Lobby]
 scoreboard players operation $tempuuid playerUUID = @s playerUUID
 data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
 execute as @e[type=bat,tag=BlastBarrel,distance=..5] run function weapons:barrel/chainreact
+execute as @e[type=villager,tag=CBTrap,distance=..5] on vehicle run function game:modifiers/lostcargo/chainreact
 
 #> Break nearby Cargo Barrels
 execute as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..5] at @s run function game:modifiers/lostcargo/spillbarrel

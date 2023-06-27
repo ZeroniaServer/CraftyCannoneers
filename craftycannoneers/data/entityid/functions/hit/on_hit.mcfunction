@@ -9,7 +9,7 @@ execute at @s[type=interaction,tag=BlastBarrel] as @e[type=item_display,tag=Blas
 execute at @s[type=interaction,tag=CrabTrap] on passengers run function weapons:crabtrap/break
 
 #> Cargo Trap
-execute if entity @s[type=villager,tag=CBTrap] on vehicle run tag @s add TrapExplode
+execute if entity @s[type=villager,tag=CBTrap] on vehicle run function game:modifiers/lostcargo/punchtrap
 
 #> Do knockback to crab vehicle if hitting upper endermite
 execute if entity @s[type=endermite,tag=CrabController,tag=!inwater] on vehicle run damage @s 1 mob_attack by @a[tag=hitter,limit=1]
