@@ -14,6 +14,7 @@ setblock -58 -24 0 spruce_wall_sign[facing=west,waterlogged=false]{front_text:{h
 
 #> Replace Lobby Logo armor stand with Item Display
 execute as @e[type=armor_stand,tag=LobbyLogo,limit=1] at @s run function version:1_1_0/logofix
+fill -45 -22 3 -45 -22 2 light[level=14]
 
 bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"3","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
 bossbar set updatebar value 3
