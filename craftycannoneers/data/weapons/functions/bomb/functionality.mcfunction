@@ -9,9 +9,8 @@ execute at @s[tag=!WaterKill] run particle flame ~ ~0.5 ~ 0 0 0 .02 1 force @a[p
 execute at @s[tag=!WaterKill] run playsound blastbombfuse master @a ~ ~ ~ 0.5 1
 
 #> Water kill
-execute at @s[tag=!WaterKill] if block ~ ~ ~ water run scoreboard players reset @s CmdData
-execute at @s if block ~ ~ ~ water run tag @s add WaterKill
-execute at @s[predicate=game:inwater] run tag @s add WaterKill 
+scoreboard players reset @s[predicate=game:inwater,tag=!WaterKill] CmdData
+tag @s[predicate=game:inwater,tag=!WaterKill] add WaterKill 
 tag @s[tag=WaterKill] remove Kaboom
 execute if entity @s[tag=WaterKill,scores={CmdData=1}] on vehicle run kill @s
 item replace entity @s[tag=WaterKill,scores={CmdData=1}] container.0 with ender_eye{CustomModelData:2}
@@ -19,6 +18,7 @@ data merge entity @s[tag=WaterKill,scores={CmdData=1}] {start_interpolation:0,in
 execute at @s[tag=WaterKill,scores={CmdData=1}] run particle cloud ~ ~1 ~ 0 0 0 0.1 2 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=WaterKill,scores={CmdData=1}] run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.8 2
 execute at @s[tag=WaterKill,scores={CmdData=2}] run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.8 1.6
+data merge entity @s[tag=WaterKill,scores={CmdData=28}] {start_interpolation:0,interpolation_duration:3,transformation:{scale:[0.0f,0.0f,0.0f]}}
 execute at @s[tag=WaterKill,scores={CmdData=30..}] run function weapons:bomb/waterkill
 
 #> Kaboom
