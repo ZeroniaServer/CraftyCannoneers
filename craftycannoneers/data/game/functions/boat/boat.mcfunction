@@ -45,3 +45,6 @@ team join NoName
 #> Prevent clipping into ship floorboards
 execute if entity @s[tag=!Sinking,predicate=cannons:ships/orange,predicate=cannons:ships/underbottom,predicate=!game:instillwater,nbt={OnGround:0b}] align y run tp @s ~ ~1 ~
 execute if entity @s[tag=!Sinking,predicate=cannons:ships/purple,predicate=cannons:ships/underbottom,predicate=!game:instillwater,nbt={OnGround:0b}] align y run tp @s ~ ~1 ~
+
+#> Break when in ground to fix issues with boat motion/collision
+execute unless block ~ ~ ~ #cannons:cannonball_passable run kill @s
