@@ -7,6 +7,7 @@ execute at @s as @e[type=armor_stand,tag=GasBubble,distance=0.001..8] if score @
 
 execute at @s[tag=HasPlayer] if entity @e[type=marker,tag=GasCloud,distance=..7] run tp @s ~ ~ ~ facing entity @p[tag=GasChase]
 execute at @s[tag=HasPlayer] if entity @e[type=marker,tag=GasCloud,distance=..7] run tp @s ^ ^ ^0.08
+execute at @s[tag=HasPlayer] run function game:boat/euler
 
 tag @a[tag=GasChase] remove GasChase
 scoreboard players reset $current ChaseUUID
