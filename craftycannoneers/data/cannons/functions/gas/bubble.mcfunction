@@ -4,13 +4,15 @@ execute at @s[tag=New] run tp @s @e[type=bat,tag=GasBat,limit=1,sort=nearest,dis
 
 tag @s[tag=New] remove New
 scoreboard players add @s CmdData 1
-execute at @s[scores={CmdData=7}] run data merge entity @s {NoGravity:1b,Marker:1b,Small:0b}
+execute at @s[scores={CmdData=7}] run data merge entity @s {NoGravity:1b,Marker:1b}
+execute if entity @s[scores={CmdData=7}] on passengers run data merge entity @s {start_interpolation:0,interpolation_duration:10,transformation:{scale:[0.675f,0.675f,0.675f],translation:[0f,1f,0f]}}
 execute at @s[tag=!New,scores={CmdData=8..}] run tp @s ~ ~0.003 ~
 execute at @s[tag=!New,scores={CmdData=8..}] run tp @s ^ ^ ^0.006
-execute at @s run particle soul ~ ~0.7 ~ 0.3 0.3 0.3 0.03 1 force
+execute at @s run particle soul ~ ~ ~ 0.3 0.3 0.3 0.03 1 force
 scoreboard players add @s[tag=!New,scores={CmdData=8..}] CmdData 1
 
-data merge entity @s[tag=!New,scores={CmdData=490}] {Small:1b}
+execute if entity @s[tag=!New,scores={CmdData=489}] on passengers run data merge entity @s {start_interpolation:0,interpolation_duration:6,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f]}}
+execute if entity @s[tag=!New,scores={CmdData=500..}] on passengers run kill @s
 kill @s[tag=!New,scores={CmdData=500..}]
 
 execute at @s run function cannons:gas/chase

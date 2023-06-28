@@ -6,7 +6,7 @@ place template minecraft:training_ship1 -400 -37 -83
 place template minecraft:training_ship2 -400 -37 -35
 
 kill @e[type=armor_stand,tag=GasBubble,predicate=cannons:ships/tutorial]
-kill @e[type=armor_stand,tag=GasAS,predicate=cannons:ships/tutorial]
+kill @e[type=armor_stand,tag=GasDisplay,predicate=cannons:ships/tutorial]
 kill @e[type=bat,predicate=cannons:ships/tutorial]
 
 execute if entity @e[type=marker,tag=RingOfFire,predicate=cannons:ships/tutorial] unless entity @e[type=marker,tag=RingOfFire,limit=1] run gamerule doFireTick false

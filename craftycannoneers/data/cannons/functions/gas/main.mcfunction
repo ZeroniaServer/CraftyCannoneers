@@ -1,5 +1,5 @@
-#> Gas AS
-execute as @e[type=armor_stand,tag=GasAS] at @s run function cannons:gas/gasas
+#> Gas Display
+execute as @e[type=item_display,tag=GasDisplay] at @s run function cannons:gas/gasdisplay
 
 #> Gas Cloud
 execute as @e[type=marker,tag=GasCloud] at @s run function cannons:gas/cloud
