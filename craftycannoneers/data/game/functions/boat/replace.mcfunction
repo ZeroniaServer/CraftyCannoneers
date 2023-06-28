@@ -20,4 +20,5 @@ execute if entity @s[tag=3] run tag @a[tag=inBoat3] remove inBoat3
 execute if entity @s[tag=4] run tag @a[tag=inBoat4] remove inBoat4
 
 #> Kill old boat
+execute if entity @s[tag=Sinking] run function game:boat/breakeffect
 function game:boat/cannon/kill

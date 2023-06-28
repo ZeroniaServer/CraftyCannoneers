@@ -15,7 +15,7 @@ execute if entity @s[tag=Sailing,tag=!displayreplaced] run function game:boat/ca
 tag @s[tag=Sailing,tag=!displayreplaced] add displayreplaced
 
 #> Display functions
-execute rotated as @s on passengers on passengers on passengers on passengers positioned as @s[type=item_display,tag=BoatCannonDisplay] run function game:boat/cannon/display
+execute rotated as @s on passengers on passengers on passengers on passengers positioned as @s[type=item_display,tag=BoatCannonDisplay] run function game:boat/display
 
 #> Replace interaction once still
 execute if entity @s[tag=Sailing] run function game:boat/cannon/motiondetect
