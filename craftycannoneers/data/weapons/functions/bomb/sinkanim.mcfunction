@@ -1,4 +1,4 @@
-execute if block ~ ~-0.2 ~ water run data merge entity @s {start_interpolation:0,interpolation_duration:21,transformation:{translation:[0.0f,-0.1f,0.0f]}}
+execute if block ~ ~-0.1 ~ water run data merge entity @s {start_interpolation:0,interpolation_duration:21,transformation:{translation:[0.0f,-0.1f,0.0f]}}
 execute if block ~ ~-0.2 ~ water run data merge entity @s {start_interpolation:0,interpolation_duration:22,transformation:{translation:[0.0f,-0.2f,0.0f]}}
 execute if block ~ ~-0.3 ~ water run data merge entity @s {start_interpolation:0,interpolation_duration:23,transformation:{translation:[0.0f,-0.3f,0.0f]}}
 execute if block ~ ~-0.4 ~ water run data merge entity @s {start_interpolation:0,interpolation_duration:24,transformation:{translation:[0.0f,-0.4f,0.0f]}}
