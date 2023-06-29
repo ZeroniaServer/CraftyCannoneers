@@ -17,17 +17,15 @@ scoreboard players operation @s dx -= @s x
 scoreboard players operation @s dy -= @s y
 scoreboard players operation @s dz -= @s z
 
-scoreboard players operation @s[scores={dy=1000..}] dy /= 2 const
-
 #########
 #How to change the speed:
 #		"(...) Motion[0] double 0.002 (...)"		<--- the bigger this number, the faster the entity
 #########
 
 data modify storage craftycannoneers:blastbomb Motion set value [0d, 0d, 0d]
-execute store result storage craftycannoneers:blastbomb Motion[0] double 0.0015 run scoreboard players get @s dx
-execute store result storage craftycannoneers:blastbomb Motion[1] double 0.0015 run scoreboard players get @s dy
-execute store result storage craftycannoneers:blastbomb Motion[2] double 0.0015 run scoreboard players get @s dz
+execute store result storage craftycannoneers:blastbomb Motion[0] double 0.001 run scoreboard players get @s dx
+execute store result storage craftycannoneers:blastbomb Motion[1] double 0.001 run scoreboard players get @s dy
+execute store result storage craftycannoneers:blastbomb Motion[2] double 0.001 run scoreboard players get @s dz
 data modify entity @s Motion set from storage craftycannoneers:blastbomb Motion
 
 tag @s add BombThrown
