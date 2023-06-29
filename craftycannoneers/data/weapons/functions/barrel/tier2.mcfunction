@@ -38,5 +38,11 @@ execute as @e[type=item_display,tag=CrabTrap,distance=..6] at @s run function we
 #> Break nearby Boats
 kill @e[type=boat,tag=BoatBoat,distance=..6]
 
+#> Blast items/projectiles back
+execute as @e[type=item,distance=..6] run function weapons:barrel/blast2
+execute as @e[type=arrow,distance=..6] run function weapons:barrel/blast2
+execute as @e[type=trident,distance=..6] run function weapons:barrel/blast2
+execute as @e[type=snowball,distance=..6] run function weapons:barrel/blast2
+
 #> Hurt players in damage zones
 execute at @s[tag=!canDamage] as @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..6] run function weapons:barrel/damage/tier2

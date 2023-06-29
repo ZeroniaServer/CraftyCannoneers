@@ -17,6 +17,12 @@ execute if score @s BombDelay matches 3 if score $blast BombDelay matches 1 run 
 #> Blast nearby Boats backwards
 execute if score @s BombDelay matches 2.. at @s as @e[type=boat,tag=BoatBoat,distance=..6] run function game:boat/blast
 
+#> Do the same for items/projectiles
+execute if score @s BombDelay matches 2.. at @s as @e[type=item,distance=..6] run function weapons:bomb/blast
+execute if score @s BombDelay matches 2.. at @s as @e[type=arrow,distance=..6] run function weapons:bomb/blast
+execute if score @s BombDelay matches 2.. at @s as @e[type=trident,distance=..6] run function weapons:bomb/blast
+execute if score @s BombDelay matches 2.. at @s as @e[type=snowball,distance=..6] run function weapons:bomb/blast
+
 #> Set off Blast Barrels/Cargo Traps
 execute if score @s BombDelay matches 3.. run data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
 execute if score @s BombDelay matches 3.. run scoreboard players operation $tempuuid playerUUID = @s playerUUID
