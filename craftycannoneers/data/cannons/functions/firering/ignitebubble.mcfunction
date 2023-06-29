@@ -10,4 +10,5 @@ execute at @s[scores={death=15..}] run tag @e[type=marker,tag=GasCloud,distance=
 execute at @s[scores={death=5}] run particle explosion ~ ~0.6 ~ 0 0 0 0 3 force
 execute at @s run particle flame ~ ~0.6 ~ 0 0 0 0.1 1 force
 
+execute if score @s death matches 15.. on passengers run kill @s
 kill @s[scores={death=15..}]

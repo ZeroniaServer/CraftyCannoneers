@@ -1,5 +1,5 @@
 #> Hot Cannonball interaction
-kill @e[type=item_display,tag=GasDisplay,distance=..1,limit=1,sort=nearest]
+execute as @e[type=item_display,tag=GasDisplay,distance=..1,limit=1,sort=nearest] on vehicle run function cannons:gas/cloudkill
 summon marker ~ ~ ~ {Tags:["ImpactMarker","GasPower"],CustomName:'{"translate":"gas_explosion.generic"}'}
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=GasPower,limit=1,sort=nearest] playerUUID = @s playerUUID
 execute as @e[type=marker,tag=ImpactMarker,tag=GasPower] at @s unless score @s CmdData matches 1.. run function cannons:namecannonball
