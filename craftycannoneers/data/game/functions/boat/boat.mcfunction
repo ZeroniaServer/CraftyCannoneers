@@ -11,7 +11,7 @@ execute if entity @s[tag=4] unless score $boat playerUUID = $boat4 CmdData run r
 
 #> Only allow mounting after 5 ticks to prevent issues with display interpolation
 scoreboard players add @s[tag=!allowmount] click 1 
-execute if entity @s[scores={click=5..},tag=!allowmount] on passengers run data merge entity @s[tag=boatoccupant] {width:2,height:1}
+execute if entity @s[scores={click=5..},tag=!allowmount] on passengers run data merge entity @s[tag=boatoccupant,tag=!hidden] {width:2,height:1}
 tag @s[scores={click=8},tag=!allowmount] add allowmount
 
 #> Handle Boat Cannon if enabled

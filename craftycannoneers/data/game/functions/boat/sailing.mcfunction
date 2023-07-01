@@ -4,8 +4,8 @@ execute if score @s click matches 7.. run tag @s add DismountCheck
 
 #> Hide interaction
 data modify entity @s[tag=!hideinteraction] Invulnerable set value 0b
-execute unless entity @s[tag=hideinteraction] on passengers run data merge entity @s {width:0,height:0,response:0b}
-tag @s[tag=!hideinteraction] add hideinteraction
+execute on passengers run data merge entity @s[tag=boatoccupant,tag=!hidden] {width:0,height:0,response:0b}
+execute on passengers run tag @s[tag=boatoccupant,tag=!hidden] add hidden
 
 #> Boat invulnerability conditions with nearby projectiles/players
 execute store success score $arrownearby CmdData if entity @e[type=arrow,limit=1,distance=..6]
