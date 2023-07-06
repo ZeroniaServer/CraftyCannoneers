@@ -28,6 +28,9 @@ item replace entity @e[type=item_display,tag=HPIcon,limit=1] container.0 with di
 item replace entity @e[type=item_display,tag=ConfirmIcon,limit=1] container.0 with diamond_hoe{CustomModelData:37}
 item replace entity @e[type=item_display,tag=DefaultsIcon,limit=1] container.0 with diamond_hoe{CustomModelData:38}
 item replace entity @e[type=item_display,tag=ModiIcon,limit=1] container.0 with diamond_hoe{CustomModelData:83}
+execute if score $Daytime CmdData matches 0 run item replace entity @e[type=item_display,tag=DaytimeIcon,limit=1] container.0 with diamond_hoe{CustomModelData:120}
+execute if score $Daytime CmdData matches 1 run item replace entity @e[type=item_display,tag=DaytimeIcon,limit=1] container.0 with diamond_hoe{CustomModelData:121}
+execute if score $Daytime CmdData matches 2 run item replace entity @e[type=item_display,tag=DaytimeIcon,limit=1] container.0 with diamond_hoe{CustomModelData:122}
 
 item replace entity @e[type=item_display,tag=MapEntity,limit=1] container.0 with diamond_hoe{CustomModelData:76}
 
