@@ -1,5 +1,5 @@
+function arenaclear:traders
 function arenaclear:reset
 function arenaclear:cannons
 function arenaclear:shipbells
-function arenaclear:traders
 function arenaclear:seagulls

@@ -46,6 +46,7 @@ kill @e[type=item_display,tag=Bomb]
 scoreboard players set $total crabs 0
 scoreboard players set $curr crabs 0
 
+function arenaclear:villagertrades
 function arenaclear:fakeairclear
 function arenaclear:boatvehicles
 function arenaclear:shipplacement

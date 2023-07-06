@@ -39,6 +39,7 @@ execute as @e[type=armor_stand,tag=StuffyDeco,tag=!NameUpdated] at @s run functi
 execute as @e[type=armor_stand,tag=BlockyDeco,tag=!NameUpdated] at @s run function version:1_1_0/creditsfix
 
 function arenaclear:traders
+function arenaclear:villagertrades
 
 bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"1","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
 bossbar set updatebar value 1
