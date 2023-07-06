@@ -1,7 +1,7 @@
 scoreboard players add @s firetime 1
 
 #> Ignite cannon
-execute at @s[scores={firetime=1}] run function cannons:firering/ignitecannon
+execute at @s[scores={firetime=1},tag=!FireCannon] run function cannons:firering/ignitecannon
 
 #> Light block
 execute at @s run setblock ^ ^1 ^2 light[level=15]

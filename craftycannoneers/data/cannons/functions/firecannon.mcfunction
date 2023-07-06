@@ -3,6 +3,8 @@ tag @s add FireCannon
 scoreboard players add @s cannonshot 1
 execute at @s[scores={cannonshot=1}] run tag @e[type=interaction,tag=CannonVLeft,distance=..2,limit=1,sort=nearest] add GPLocked
 execute at @s[scores={cannonshot=1}] run tag @e[type=interaction,tag=CannonVRight,distance=..2,limit=1,sort=nearest] add GPLocked
+execute at @s[scores={cannonshot=1}] as @e[type=interaction,tag=GPLocked,distance=..2,limit=2,sort=nearest] run data modify entity @s response set value 0b
+execute at @s[scores={cannonshot=1}] as @e[type=interaction,tag=CannonVMain,distance=..2,limit=1,sort=nearest] run data modify entity @s response set value 0b
 execute at @s[scores={cannonshot=1}] run item replace entity @e[type=item_display,tag=GPDispR,distance=..2,limit=1,sort=nearest] container.0 with air
 execute at @s[scores={cannonshot=1}] run item replace entity @e[type=item_display,tag=GPDispL,distance=..2,limit=1,sort=nearest] container.0 with air
 execute at @s[scores={cannonshot=1}] run item replace entity @s container.0 with diamond_hoe{CustomModelData:107}
@@ -164,6 +166,8 @@ execute at @s[scores={cannonshot=30..}] run tp @e[type=armor_stand,tag=cannonbal
 #> End Fire Cannon
 execute at @s[scores={cannonshot=30..}] unless score @s CmdData matches 8 run scoreboard players set @e[type=item_display,tag=GPDispL,distance=..2,limit=1,sort=nearest] CmdData 0
 execute at @s[scores={cannonshot=30..}] unless score @s CmdData matches 8 run scoreboard players set @e[type=item_display,tag=GPDispR,distance=..2,limit=1,sort=nearest] CmdData 0
+execute at @s[scores={cannonshot=30..}] as @e[type=interaction,tag=GPLocked,distance=..2,limit=2,sort=nearest] run data modify entity @s response set value 1b
+execute at @s[scores={cannonshot=30..}] as @e[type=interaction,tag=CannonVMain,distance=..2,limit=1,sort=nearest] run data modify entity @s response set value 1b
 execute at @s[scores={cannonshot=30..}] run tag @e[type=interaction,tag=CannonVLeft,tag=GPLocked,distance=..2,limit=1,sort=nearest] remove GPLocked
 execute at @s[scores={cannonshot=30..}] run tag @e[type=interaction,tag=CannonVRight,tag=GPLocked,distance=..2,limit=1,sort=nearest] remove GPLocked
 execute at @s[scores={cannonshot=30..}] run function cannons:updategp
