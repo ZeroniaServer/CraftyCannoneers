@@ -1,7 +1,7 @@
 #> This function runs every tick. Use this as the main function to call other functions that should run every tick.
 
 #> World Updates
-execute if score $load CmdData matches 20.. run function version:check
+execute if score $load CmdData matches 40.. run function version:check
 
 #> Leave check
 scoreboard players add $curr leavecheck 1
