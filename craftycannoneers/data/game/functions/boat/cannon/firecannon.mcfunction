@@ -1,6 +1,7 @@
 #> Begin
 scoreboard players add @s cannonshot 1
 scoreboard players set @s[scores={cannonshot=1,CannonID=8}] cannonshot 30
+execute at @s[scores={cannonshot=1}] run function game:boat/motionlock
 execute if entity @s[tag=Sailing,scores={cannonshot=1}] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:131}
 execute if entity @s[tag=!Sailing,scores={cannonshot=1}] on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:131}
 execute at @s[scores={cannonshot=1}] run playsound cannonload master @a ~ ~ ~ 1 1
@@ -96,6 +97,8 @@ execute at @s[scores={cannonshot=30}] positioned ^ ^2 ^3.6 run function game:boa
 tag @s[scores={cannonshot=30}] remove Shoot
 execute at @s[scores={cannonshot=30}] run function game:boat/cannon/cannonballtick
 scoreboard players set @s[scores={cannonshot=30,CannonID=8}] cannonshot 35
+
+execute at @s[scores={cannonshot=27}] run function game:boat/motionunlock
 
 #> Recoil
 execute at @s[scores={cannonshot=27..}] unless score @s CannonID matches 8 run function game:boat/cannon/recoil

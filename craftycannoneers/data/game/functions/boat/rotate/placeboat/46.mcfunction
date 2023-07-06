@@ -7,15 +7,12 @@ execute if score $BoatCannons CmdData matches 1 as @e[type=boat,tag=new,limit=1]
 
 execute if score $BoatCannons CmdData matches 1 as @e[type=camel,tag=new,limit=1] at @s anchored feet rotated ~ 0 run summon area_effect_cloud ^ ^0.8375 ^0.5 {Duration:20000000,Tags:["BoatCannonOffset","base","new"]}
 
-execute if score $BoatCannons CmdData matches 1 at @e[type=area_effect_cloud,tag=base,tag=new,limit=1] run summon interaction ~ ~0.375 ~ {Tags:["BoatCannon","new"],response:0b,width:0,height:0}
-
 execute if score $BoatCannons CmdData matches 1 at @e[type=area_effect_cloud,tag=base,tag=new,limit=1] run summon area_effect_cloud ~ ~0.375 ~ {Duration:20000000,Tags:["BoatCannonOffset","extend","new"]}
 
 execute if score $BoatCannons CmdData matches 1 at @e[type=area_effect_cloud,tag=base,tag=new,limit=1] run summon item_display ~ ~0.75 ~ {Rotation:[92.0f,0.0f],Tags:["BoatCannonDisplay","new"],item_display:"head",transformation:{translation:[0.0f,1.00375f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.4645f,0.4645f,0.4645f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},Passengers:[{id:"item_display",Tags:["BoatCannonDisplay"],item_display:"head",transformation:{translation:[0.0f,1.00375f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.4645f,0.4645f,0.4645f],left_rotation:[0.0f,0.0f,0.0f,1.0f]}}]}
 
 execute if score $BoatCannons CmdData matches 1 run ride @e[type=item_display,tag=BoatCannonDisplay,tag=new,limit=1] mount @e[type=area_effect_cloud,tag=extend,tag=new,limit=1]
 execute if score $BoatCannons CmdData matches 1 run ride @e[type=area_effect_cloud,tag=extend,tag=new,limit=1] mount @e[type=area_effect_cloud,tag=base,tag=new,limit=1]
-execute if score $BoatCannons CmdData matches 1 run ride @e[type=interaction,tag=new,limit=1] mount @e[type=area_effect_cloud,tag=base,tag=new,limit=1]
 execute if score $BoatCannons CmdData matches 1 run ride @e[type=area_effect_cloud,tag=base,tag=new,limit=1] mount @e[type=camel,tag=new,limit=1]
 ride @e[type=item_display,tag=BoatBanner,tag=new,limit=1] mount @e[type=boat,tag=new,limit=1]
 execute if score $BoatCannons CmdData matches 1 run ride @e[type=camel,tag=new,limit=1] mount @e[type=boat,tag=new,limit=1]
