@@ -10,5 +10,5 @@ function entityid:flush
 function tutorial:initialize
 function tutorial:tips/newset
 function debug:setup
-function debug:noservermode
+scoreboard players reset $servermode CmdData
 scoreboard players set $forcedmodes CmdData 1

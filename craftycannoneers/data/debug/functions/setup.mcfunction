@@ -159,6 +159,9 @@ scoreboard objectives add dy2 dummy
 scoreboard objectives add dz2 dummy
 scoreboard objectives add hasCrabTraps dummy
 scoreboard objectives add leavecheck dummy
+scoreboard objectives add spectate trigger
+scoreboard objectives add joinorange trigger
+scoreboard objectives add joinpurple trigger
 scoreboard players add $curr leavecheck 0
 
 #> Bossbars
