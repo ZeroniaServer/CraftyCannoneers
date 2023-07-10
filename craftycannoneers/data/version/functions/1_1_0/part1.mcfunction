@@ -9,6 +9,11 @@ bossbar set updatebar style notched_6
 
 forceload add -413 -379 -260 -15
 
+#> Joinpad barrier displays
+execute unless entity @e[type=item_display,tag=JoinpadBarrier,tag=Orange] at @e[type=marker,tag=JoinpadOrange] positioned ~ ~1 ~ run summon item_display ~ ~ ~ {Tags:["JoinpadBarrier","Orange"],item:{id:"minecraft:barrier",Count:1},width:1f,height:1f,billboard:"center",brightness:{sky:15,block:15}}
+execute unless entity @e[type=item_display,tag=JoinpadBarrier,tag=Purple] at @e[type=marker,tag=JoinpadPurple] positioned ~ ~1 ~ run summon item_display ~ ~ ~ {Tags:["JoinpadBarrier","Purple"],item:{id:"minecraft:barrier",Count:1},width:1f,height:1f,billboard:"center",brightness:{sky:15,block:15}}
+execute unless entity @e[type=item_display,tag=JoinpadBarrier,tag=Spectator] at @e[type=marker,tag=JoinpadSpec] positioned ~ ~1 ~ run summon item_display ~ ~ ~ {Tags:["JoinpadBarrier","Spectator"],item:{id:"minecraft:barrier",Count:1},width:1f,height:1f,billboard:"center",brightness:{sky:15,block:15}}
+
 kill @e[type=armor_stand,tag=chestdisplay]
 kill @e[type=armor_stand,tag=BoatAS]
 kill @e[type=armor_stand,tag=ShipBell]
