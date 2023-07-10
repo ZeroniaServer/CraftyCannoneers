@@ -253,7 +253,6 @@ scoreboard players set -1 const -1
 scoreboard players set $dust6 CmdData -1
 scoreboard players set $dust3 CmdData -1
 scoreboard players set $dust2 CmdData -1
-scoreboard players set $barrier CmdData -1
 
 #> Modifiers
 scoreboard players add $NoTracers CmdData 0

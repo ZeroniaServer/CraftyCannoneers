@@ -28,7 +28,9 @@ item replace entity @e[type=item_display,tag=LobbyEntity] container.0 with air
 
 item replace entity @e[type=item_display,tag=MapEntity,limit=1] container.0 with diamond_hoe{CustomModelData:34}
 
-tag @e[type=marker,tag=joinpad] remove Locked
+scoreboard players reset $orangelock CmdData
+scoreboard players reset $purplelock CmdData
+execute as @e[type=marker,tag=joinpad] at @s run function lobby:joinpads/unlock
 scoreboard players reset @e[type=marker,tag=joinpad] CmdData
 
 function arenaclear:reset

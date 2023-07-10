@@ -10,6 +10,3 @@ execute if score $dust3 CmdData matches 2.. run scoreboard players set $dust3 Cm
 
 scoreboard players add $dust2 CmdData 1
 execute if score $dust2 CmdData matches 1.. run scoreboard players set $dust2 CmdData 0
-
-scoreboard players add $barrier CmdData 1
-execute if score $barrier CmdData matches 79.. run scoreboard players set $barrier CmdData 0

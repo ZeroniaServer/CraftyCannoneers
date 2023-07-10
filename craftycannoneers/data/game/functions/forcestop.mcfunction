@@ -10,7 +10,7 @@ execute if score $gamestate CmdData matches 0.. unless score $updating CmdData m
 tag @a[team=!Lobby] add LeaveGame
 scoreboard players set $WinningTeam CmdData 0
 scoreboard players set $EndTime CmdData 0
-scoreboard players set $barrier CmdData -1
+execute as @e[type=marker,tag=joinpad] at @s run function lobby:joinpads/lock
 scoreboard players set $dust6 CmdData -1
 scoreboard players set $dust3 CmdData -1
 scoreboard players set $dust2 CmdData -1

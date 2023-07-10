@@ -19,6 +19,11 @@ fill -45 -22 3 -45 -22 2 light[level=14]
 bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"3","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
 bossbar set updatebar value 3
 
+#> Joinpad barrier displays
+execute unless entity @e[type=item_display,tag=JoinpadBarrier,tag=Orange] at @e[type=marker,tag=JoinpadOrange] positioned ~ ~1 ~ run summon item_display ~ ~ ~ {Tags:["JoinpadBarrier","Orange"],item:{id:"minecraft:barrier",Count:1},width:1f,height:1f,billboard:"center",brightness:{sky:15,block:15}}
+execute unless entity @e[type=item_display,tag=JoinpadBarrier,tag=Purple] at @e[type=marker,tag=JoinpadPurple] positioned ~ ~1 ~ run summon item_display ~ ~ ~ {Tags:["JoinpadBarrier","Purple"],item:{id:"minecraft:barrier",Count:1},width:1f,height:1f,billboard:"center",brightness:{sky:15,block:15}}
+execute unless entity @e[type=item_display,tag=JoinpadBarrier,tag=Spectator] at @e[type=marker,tag=JoinpadSpec] positioned ~ ~1 ~ run summon item_display ~ ~ ~ {Tags:["JoinpadBarrier","Spectator"],item:{id:"minecraft:barrier",Count:1},width:1f,height:1f,billboard:"center",brightness:{sky:15,block:15}}
+
 schedule function version:1_1_0/part4 10t
 
 execute as @a at @s run playsound updateadvance master @s ~ ~ ~ 1 2

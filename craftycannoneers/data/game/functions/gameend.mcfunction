@@ -27,7 +27,7 @@ execute if score $WinningTeam CmdData matches 2 run particle explosion 68 -28 55
 execute if score $WinningTeam CmdData matches 2 run particle lava 68 -28 55 12 12 4 0.1 12 force
 execute if score $WinningTeam CmdData matches 2 run particle large_smoke 68 -28 55 12 12 4 0.1 8 force
 
-execute if score $EndTime CmdData matches 1 run tag @e[type=marker,tag=joinpad] add Locked
+execute if score $EndTime CmdData matches 1 as @e[type=marker,tag=joinpad] at @s run function lobby:joinpads/lock
 execute if score $EndTime CmdData matches 1 as @e[type=item_display,tag=CannonDisp,tag=OnFire] at @s run function cannons:firering/extinguishcannon
 execute if score $EndTime CmdData matches 1 as @e[type=wandering_trader,tag=Trader] at @s run function arenaclear:replacetrader
 execute if score $EndTime CmdData matches 1 run function game:mvpstats/check
