@@ -31,4 +31,5 @@ execute if score $count MVPdamage matches 1 as @a[tag=DamageMVP] run function ga
 execute if score $count MVPdamage matches 2.. run function game:mvpstats/leastcannons
 scoreboard players reset $count MVPdamage
 
-function game:mvpstats/adaptivehats
+#> Update everyone's hats
+execute as @a[team=!Lobby,team=!Spectator,team=!Developer] run function game:mvpstats/adaptivehats

@@ -27,7 +27,6 @@ execute if entity @s[tag=TracerCannonball] unless entity @a[predicate=game:match
 execute if entity @s[tag=Bomb] unless entity @a[predicate=game:matches_uuid] run data modify block ~ 256 ~ front_text.messages[0] set value '["",{"translate":"item.blast_bomb.generic"}]'
 execute if entity @s[tag=GasPower] unless entity @a[predicate=game:matches_uuid] run data modify block ~ 256 ~ front_text.messages[0] set value '["",{"translate":"gas_explosion.generic"}]'
 data modify entity @s CustomName set from block ~ 256 ~ front_text.messages[0]
-execute if entity @s[tag=PlayerCannonball] run data modify entity @e[type=slime,tag=PCannonballname,tag=New,limit=1,sort=nearest] CustomName set from entity @s CustomName
-execute if entity @s[tag=PlayerCannonball] run tag @e[type=slime,tag=PCannonballname,tag=New,limit=1,sort=nearest] remove New
+execute if entity @s[tag=PlayerCannonball] on passengers on passengers run team join Spectator @s[tag=PCannonballname]
 setblock ~ 256 ~ air
 scoreboard players reset $tempuuid playerUUID
