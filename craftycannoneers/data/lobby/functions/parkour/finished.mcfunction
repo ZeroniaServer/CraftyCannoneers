@@ -6,7 +6,7 @@ execute if entity @s[scores={parkourSecs=..9,parkourMins=10..}] run tellraw @a[t
 execute if entity @s[scores={parkourSecs=10..,parkourMins=10..}] run tellraw @a[team=!Purple,team=!Orange,team=!Spectator] ["",{"translate":"parkour.finished","color":"dark_green","with":[{"selector":"@s"},[{"score":{"name":"@s","objective":"parkourMins"},"color":"green","bold":true},{"text":":","color":"green","bold":true},{"score":{"name":"@s","objective":"parkourSecs"},"color":"green","bold":true},{"text":".","color":"green","bold":true},{"score":{"name":"@s","objective":"parkourDeci"},"color":"green","bold":true},{"score":{"name":"@s","objective":"parkourDeci2"},"color":"green","bold":true}]]}]
 
 #> Visual/Sound effects
-playsound parkourfinish master @s ~ ~ ~ 1 1.1
+playsound parkourfinish1 master @s ~ ~ ~ 1 1.1
 playsound parkourfinish2 master @s ~ ~ ~ 1 1
 playsound parkourfinish3 master @s ~ ~ ~ 1 1.3
 particle firework ~ ~1 ~ 0 0 0 0.1 100 normal @s
