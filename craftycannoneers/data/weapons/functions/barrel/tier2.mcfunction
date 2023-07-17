@@ -27,7 +27,7 @@ particle lava ~ ~ ~ 3 3 3 0.1 30 force @a[team=!Lobby]
 execute unless entity @s[tag=canDamage] run scoreboard players operation $tempuuid playerUUID = @s playerUUID
 execute unless entity @s[tag=canDamage] run data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
 execute unless entity @s[tag=canDamage] as @e[type=bat,tag=BlastBarrel,distance=..6] run function weapons:barrel/chainreact
-execute unless entity @s[tag=canDamage] as @e[type=villager,tag=CBTrap,distance=..6] on vehicle run function game:modifiers/lostcargo/chainreact
+execute unless entity @s[tag=canDamage] as @e[type=husk,tag=CBTrap,distance=..6] on vehicle run function game:modifiers/lostcargo/chainreact
 
 #> Break Cargo Barrels
 execute at @s[tag=!canDamage] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..6] at @s run function game:modifiers/lostcargo/spillbarrel

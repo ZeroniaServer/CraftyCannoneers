@@ -49,12 +49,12 @@ execute if entity @s[tag=BlastBarrel1] as @e[type=bat,tag=BlastBarrel,distance=.
 execute if entity @s[tag=BlastBarrel2] as @e[type=bat,tag=BlastBarrel,distance=..7] run function weapons:barrel/chainreact
 
 #> Explode nearby Cargo Traps
-execute if entity @s[tag=Power1] as @e[type=villager,tag=CBTrap,distance=..5] on vehicle run function game:modifiers/lostcargo/chainreact
-execute if entity @s[tag=Power2] as @e[type=villager,tag=CBTrap,distance=..6] on vehicle run function game:modifiers/lostcargo/chainreact
-execute if entity @s[tag=Power3] as @e[type=villager,tag=CBTrap,distance=..7] on vehicle run function game:modifiers/lostcargo/chainreact
-execute if entity @s[tag=GasPower] as @e[type=villager,tag=CBTrap,distance=..7] on vehicle run function game:modifiers/lostcargo/chainreact
-execute if entity @s[tag=BlastBarrel1] as @e[type=villager,tag=CBTrap,distance=..6] on vehicle run function game:modifiers/lostcargo/chainreact
-execute if entity @s[tag=BlastBarrel2] as @e[type=villager,tag=CBTrap,distance=..7] on vehicle run function game:modifiers/lostcargo/chainreact
+execute if entity @s[tag=Power1] as @e[type=husk,tag=CBTrap,distance=..5] on vehicle run function game:modifiers/lostcargo/chainreact
+execute if entity @s[tag=Power2] as @e[type=husk,tag=CBTrap,distance=..6] on vehicle run function game:modifiers/lostcargo/chainreact
+execute if entity @s[tag=Power3] as @e[type=husk,tag=CBTrap,distance=..7] on vehicle run function game:modifiers/lostcargo/chainreact
+execute if entity @s[tag=GasPower] as @e[type=husk,tag=CBTrap,distance=..7] on vehicle run function game:modifiers/lostcargo/chainreact
+execute if entity @s[tag=BlastBarrel1] as @e[type=husk,tag=CBTrap,distance=..6] on vehicle run function game:modifiers/lostcargo/chainreact
+execute if entity @s[tag=BlastBarrel2] as @e[type=husk,tag=CBTrap,distance=..7] on vehicle run function game:modifiers/lostcargo/chainreact
 
 #> Break nearby Cargo Barrels
 execute if entity @s[tag=Power1] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..5] at @s run function game:modifiers/lostcargo/spillbarrel

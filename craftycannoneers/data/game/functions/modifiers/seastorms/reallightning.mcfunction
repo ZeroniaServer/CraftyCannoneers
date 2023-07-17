@@ -4,7 +4,7 @@ execute if entity @s[tag=!StormEntity,tag=!damaged] as @a[team=!Lobby,team=!Spec
 tag @s[tag=!StormEntity,tag=!damaged] add damaged
 
 #> Set off Blast Barrels/Cargo Traps
-execute at @s as @e[type=villager,tag=CBTrap,distance=..3] on vehicle run tag @s add TrapExplode
+execute at @s as @e[type=husk,tag=CBTrap,distance=..3] on vehicle run tag @s add TrapExplode
 scoreboard players set $noname CmdData 1
 execute at @s as @e[type=bat,tag=BlastBarrel,distance=..3] run function weapons:barrel/chainreact
 scoreboard players set $noname CmdData 0

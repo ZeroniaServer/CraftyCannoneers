@@ -11,8 +11,8 @@ execute if score $StormTime CmdData matches 690.. run summon marker 70 -27 0 {Ta
 execute as @e[type=marker,tag=StormEventPicker,limit=1] run function game:modifiers/seastorms/pickevent
 
 #> Lightning
-execute as @e[type=lightning_bolt] at @s run function game:modifiers/seastorms/reallightning
 execute as @e[type=marker,tag=LightningMarker] at @s run function game:modifiers/seastorms/marker
+execute as @e[type=lightning_bolt] at @s run function game:modifiers/seastorms/reallightning
 
 #> Wind
 execute if score $WindDirection CmdData matches 0..1 run scoreboard players add $WindEffect CmdData 1

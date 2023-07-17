@@ -8,7 +8,7 @@ item replace entity @s[scores={CmdData=9}] armor.head with diamond_hoe{Unbreakab
 execute at @s[scores={CmdData=1}] run playsound minecraft:entity.evoker_fangs.attack master @a ~ ~ ~ 0.5 1.1
 
 #> Set off Blast Barrels/Cargo Traps
-execute at @s[scores={CmdData=9}] positioned ^ ^ ^1 as @e[type=villager,tag=CBTrap,distance=..2] on vehicle run function game:modifiers/lostcargo/sharkbite
+execute at @s[scores={CmdData=9}] positioned ^ ^ ^1 as @e[type=husk,tag=CBTrap,distance=..2] on vehicle run function game:modifiers/lostcargo/sharkbite
 scoreboard players set $shark CmdData 1
 execute at @s[scores={CmdData=9}] positioned ^ ^ ^1 as @e[type=bat,tag=BlastBarrel,distance=..2] run function weapons:barrel/chainreact
 scoreboard players set $shark CmdData 0

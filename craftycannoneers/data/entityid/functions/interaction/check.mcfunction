@@ -70,3 +70,6 @@ execute if entity @s[tag=boatoccupant] on vehicle if entity @s[tag=motionlock] o
 
 #> Boat Cannon
 execute if score $BoatCannons CmdData matches 1 if entity @s[tag=BoatCannon] on vehicle on vehicle on vehicle if entity @s[tag=!FireCannon] on passengers if entity @s[type=player,tag=self] run function game:boat/cannon/interact
+
+#> Cargo Traps
+execute if entity @s[tag=CBTrap] on vehicle run function game:modifiers/lostcargo/clicktrap

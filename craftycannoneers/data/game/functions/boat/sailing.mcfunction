@@ -15,7 +15,7 @@ execute if entity @e[type=trident,limit=1,distance=..6] run data modify entity @
 execute unless score $arrownearby CmdData matches 1 run data modify entity @s Invulnerable set value 1b
 
 #> Explode Cargo Traps
-execute if score $LostCargo CmdData matches 1 as @e[type=villager,tag=CBTrap,distance=..1] on vehicle run tag @s add TrapExplode
+execute if score $LostCargo CmdData matches 1 as @e[type=husk,tag=CBTrap,distance=..1] on vehicle run tag @s add TrapExplode
 
 #> Dismount check
 execute at @s[tag=DismountCheck,tag=!Sinking] run function game:boat/dismountcheck

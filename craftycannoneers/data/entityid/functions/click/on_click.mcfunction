@@ -21,9 +21,6 @@ execute if entity @s[tag=WeakpointTeacher] as @a[limit=1,tag=clicker] run functi
 #> Treasure Chests (Loot Loader)
 execute if entity @s[type=hopper_minecart,tag=!Opened] if entity @a[limit=1,tag=clicker,tag=lowerteam] run tag @s add lowerteam
 
-#> Cargo Traps
-execute if entity @s[type=villager,tag=CBTrap] on vehicle run function game:modifiers/lostcargo/clicktrap
-
 #> Boat Cannons
 #Mount from clicking camel
 execute if entity @s[type=camel,tag=BoatCannonAnchor] on vehicle run ride @a[limit=1,tag=clicker] mount @s[tag=!Sailing]

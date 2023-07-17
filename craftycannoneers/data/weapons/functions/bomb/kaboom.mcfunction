@@ -27,7 +27,7 @@ execute if score @s BombDelay matches 2..3 at @s as @e[type=snowball,distance=..
 execute if score @s BombDelay matches 3 run data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
 execute if score @s BombDelay matches 3 run scoreboard players operation $tempuuid playerUUID = @s playerUUID
 execute if score @s BombDelay matches 3 as @e[type=bat,tag=BlastBarrel,distance=..4] run function weapons:barrel/chainreact
-execute if score @s BombDelay matches 3 as @e[type=villager,tag=CBTrap,distance=..4] on vehicle run function game:modifiers/lostcargo/chainreact
+execute if score @s BombDelay matches 3 as @e[type=husk,tag=CBTrap,distance=..4] on vehicle run function game:modifiers/lostcargo/chainreact
 
 #> Break nearby Cargo Barrels
 execute if score @s BombDelay matches 3 as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..4] at @s run function game:modifiers/lostcargo/spillbarrel
