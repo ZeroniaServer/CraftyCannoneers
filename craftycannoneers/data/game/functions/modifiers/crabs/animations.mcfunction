@@ -19,6 +19,12 @@ execute on vehicle at @s[tag=!inwater] if predicate game:inwater at @s run funct
 execute on vehicle at @s[tag=inwater] unless predicate game:inwater at @s run function game:modifiers/crabs/exitwater
 execute on vehicle at @s[tag=inwater] if predicate game:inwater on controller if entity @s[type=endermite] on vehicle run function game:modifiers/crabs/enterwater
 
+#> Despawn if in water for too long
+execute on vehicle at @s[tag=inwater] if predicate game:inwater unless entity @a[team=!Lobby,team=!Spectator,distance=..7] on passengers run scoreboard players add @s[tag=CrabDisplay] drowning 1
+execute on vehicle at @s[tag=!inwater] unless predicate game:inwater on passengers run scoreboard players remove @s[tag=CrabDisplay,scores={drowning=1..}] drowning 2
+scoreboard players set @s[scores={drowning=..-1}] drowning 0
+execute if score @s drowning matches 200.. on vehicle run function game:modifiers/crabs/killcrab
+
 #> Swim towards players if underwater
 execute if entity @s[tag=!roam] on vehicle at @s if predicate game:inwater unless block ~ ~0.5 ~ #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
 execute if entity @s[tag=!roam] on vehicle at @s[tag=!waterstuck] if predicate game:inwater unless block ~ ~ ~1 #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
@@ -69,6 +75,3 @@ execute on vehicle run scoreboard players reset @s[tag=!CrabtrapImmune,scores={e
 #> Crab tracking
 scoreboard players add $curr crabs 1
 execute on passengers if data entity @s {item:{tag:{CrabTrap:1b,Empty:0b}}} run scoreboard players add $curr crabs 1
-
-#> Get out of blocks
-# execute unless block ~ ~ ~ #
