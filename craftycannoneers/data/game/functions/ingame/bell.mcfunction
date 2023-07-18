@@ -40,7 +40,9 @@ execute at @s[scores={CmdData=360..,bellring=12..}] run scoreboard players set @
 
 execute at @s[tag=Purple,scores={CmdData=1..}] unless entity @a[team=Orange,predicate=game:onpurple] run scoreboard players remove @s CmdData 1
 execute at @s[tag=Orange,scores={CmdData=1..}] unless entity @a[team=Purple,predicate=game:onorange] run scoreboard players remove @s CmdData 1
+execute at @s[tag=Purple,scores={bellring=1..}] unless entity @a[team=Orange,predicate=game:onpurple] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{left_rotation:{axis:[1f,0f,1f],angle:0f}}}
 execute at @s[tag=Purple,scores={bellring=1..}] unless entity @a[team=Orange,predicate=game:onpurple] run scoreboard players reset @s bellring
+execute at @s[tag=Orange,scores={bellring=1..}] unless entity @a[team=Purple,predicate=game:onorange] run data merge entity @s {start_interpolation:0,interpolation_duration:1,transformation:{left_rotation:{axis:[1f,0f,1f],angle:0f}}}
 execute at @s[tag=Orange,scores={bellring=1..}] unless entity @a[team=Purple,predicate=game:onorange] run scoreboard players reset @s bellring
 
 
