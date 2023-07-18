@@ -15,6 +15,8 @@ kill @e[type=armor_stand,tag=TrainingDummy]
 function tutorial:trainingdummies/despawnall
 execute summon marker run function tutorial:trainingdummies/spawnall
 
+item replace entity @e[type=wandering_trader,tag=Teacher] armor.head with diamond_hoe{CustomModelData:39}
+
 execute unless entity fffffe5c-ffff-ffbb-0000-01a400000045 run function inventory:randomizer/setup/begin
 
 #> Light up the Lobby for nighttime

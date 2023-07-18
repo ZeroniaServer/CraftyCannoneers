@@ -43,6 +43,7 @@ execute as @e[type=armor_stand,tag=EvtemaDeco,tag=!NameUpdated] at @s run functi
 execute as @e[type=armor_stand,tag=StuffyDeco,tag=!NameUpdated] at @s run function version:1_1_0/creditsfix
 execute as @e[type=armor_stand,tag=BlockyDeco,tag=!NameUpdated] at @s run function version:1_1_0/creditsfix
 
+execute as @e[type=wandering_trader,tag=Trader] run function arenaclear:kill
 function arenaclear:traders
 function arenaclear:villagertrades
 

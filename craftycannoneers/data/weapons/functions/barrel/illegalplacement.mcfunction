@@ -1,7 +1,7 @@
 #> Entity-based illegal cases
 execute if entity @e[type=item_display,tag=BlastBarrel,distance=..0.5] run tag @s add illegal
 execute if entity @e[type=item_display,tag=CrabTrap,distance=..0.5] run tag @s add illegal
-execute if entity @e[type=wandering_trader,distance=..0.5] run tag @s add illegal
+execute if entity @e[type=villager,distance=..0.5] run tag @s add illegal
 execute if entity @e[type=hopper_minecart,distance=..0.5] run tag @s add illegal
 execute if entity @e[type=chest_minecart,distance=..0.5] run tag @s add illegal
 
