@@ -1,5 +1,4 @@
 #> Set correct location
-data modify storage craftycannoneers:death Pos set from entity @s LastDeathLocation.pos
 execute summon marker run function game:modifiers/graverobbery/place
 
 #> Name grave
