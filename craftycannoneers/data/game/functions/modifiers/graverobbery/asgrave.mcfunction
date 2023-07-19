@@ -6,7 +6,7 @@ execute at @s[tag=ascend,tag=!underwater] run function game:modifiers/graverobbe
 execute at @s[tag=water,tag=!ascended,tag=!underwater] positioned ~ ~-0.1 ~ unless predicate game:located_water at @s run function game:modifiers/graverobbery/emerge
 execute at @s[tag=water,tag=!ascended,tag=!underwater] positioned ~ ~-0.1 ~ unless predicate game:located_water run tag @s add ascended
 execute at @s[tag=water,tag=ascended,tag=!rightheight,tag=!underwater] on vehicle at @s run tp @s ~ ~-0.05 ~
-execute at @s[tag=water,tag=ascended,tag=!rightheight,tag=!underwater] if block ~ ~0.29999 ~ water run tag @s add rightheight
+execute at @s[tag=water,tag=ascended,tag=!rightheight,tag=!underwater] if block ~ ~0.24999 ~ water run tag @s add rightheight
 
 #> Bobble in water
 execute if entity @s[tag=water,tag=rightheight,tag=!underwater] on vehicle at @s run function game:modifiers/graverobbery/bobble
