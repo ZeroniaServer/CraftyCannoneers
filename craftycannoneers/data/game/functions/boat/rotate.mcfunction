@@ -31,5 +31,7 @@ execute if score $BoatCannons CmdData matches 1 run scoreboard players operation
 execute if score $BoatCannons CmdData matches 1 store success score $recoil CmdData if entity @s[tag=Recoil]
 execute as @e[type=boat,tag=Rotate,limit=1] run function game:boat/transfer
 
+execute if entity @s[tag=respawnboat] as @e[type=boat,tag=Rotate,limit=1] at @s run function game:boat/anchor
+
 tag @e[type=boat,tag=Rotate,limit=1] remove Rotate
 tag @e[type=armor_stand,tag=Rotate,limit=1] remove Rotate
