@@ -80,7 +80,6 @@ execute if score $Wildlife CmdData matches 1 run tag @s[tag=!crabTrapMainhand,pr
 execute if score $Wildlife CmdData matches 1 run tag @s[tag=crabTrapMainhand,predicate=!weapons:crab_trap_mainhand] remove crabTrapMainhand
 execute if score $Wildlife CmdData matches 1 run tag @s[tag=!crabTrapOffhand,predicate=weapons:crab_trap_offhand] add crabTrapOffhand
 execute if score $Wildlife CmdData matches 1 run tag @s[tag=crabTrapOffhand,predicate=!weapons:crab_trap_offhand] remove crabTrapOffhand
-execute if score $Wildlife CmdData matches 1 run tag @s remove lookAtCrabTrap
 
 #> Crab tracking
 execute if score $Wildlife CmdData matches 1 run scoreboard players add @s hasCrabTraps 0
