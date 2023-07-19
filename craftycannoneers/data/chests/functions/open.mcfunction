@@ -27,15 +27,15 @@ execute at @s[tag=CargoHopper] run playsound block.barrel.open master @a ~ ~ ~ 1
 #Grave
 execute at @s[tag=grave] on vehicle run item replace entity @s armor.head with diamond_hoe{CustomModelData:135}
 execute at @s[tag=grave] run tag @s add LoadLoot
-execute at @s[tag=grave] run playsound minecraft:block.grindstone.use master @a ~ ~ ~ 1 1.2
-execute at @s[tag=grave] run playsound minecraft:block.deepslate.break master @a ~ ~ ~ 1 0
+execute at @s[tag=grave] run playsound graveopen1 master @a ~ ~ ~ 1 1.2
+execute at @s[tag=grave] run playsound graveopen2 master @a ~ ~ ~ 1 0
 #soul sounds are cool
-execute at @s[tag=grave] run playsound minecraft:particle.soul_escape master @a ~ ~ ~ 1 1
-execute at @s[tag=grave] run playsound minecraft:particle.soul_escape master @a ~ ~ ~ 1 1
-execute at @s[tag=grave] run playsound minecraft:particle.soul_escape master @a ~ ~ ~ 1 1
-execute at @s[tag=grave] run playsound minecraft:particle.soul_escape master @a ~ ~ ~ 1 0.8
-execute at @s[tag=grave] run playsound minecraft:particle.soul_escape master @a ~ ~ ~ 1 1.1
-execute at @s[tag=grave] run playsound minecraft:particle.soul_escape master @a ~ ~ ~ 1 0
+execute at @s[tag=grave] run playsound graveopen3 master @a ~ ~ ~ 1 1
+execute at @s[tag=grave] run playsound graveopen3 master @a ~ ~ ~ 1 1
+execute at @s[tag=grave] run playsound graveopen3 master @a ~ ~ ~ 1 1
+execute at @s[tag=grave] run playsound graveopen3 master @a ~ ~ ~ 1 0.8
+execute at @s[tag=grave] run playsound graveopen3 master @a ~ ~ ~ 1 1.1
+execute at @s[tag=grave] run playsound graveopen3 master @a ~ ~ ~ 1 0
 execute at @s[tag=grave] run particle sculk_soul ~ ~0.4 ~ 0 0 0 0.06 12 force @a[predicate=cannons:seeparticles]
 
 tag @s add Opened
