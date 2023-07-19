@@ -14,10 +14,10 @@ execute at @s[scores={CmdData=300,bellring=15..}] run scoreboard players set @s 
 execute at @s[scores={CmdData=300,bellring=12}] run playsound shipbell_echo master @a ~ ~ ~ 6 1
 execute at @s[scores={CmdData=300,bellring=12..}] run playsound shipbell_resonate master @a ~ ~ ~ 5 1
 
-data merge entity @s[scores={CmdData=300,bellring=12}] {start_interpolation:0,interpolation_duration:1,transformation:{left_rotation:{axis:[1f,0f,0f],angle:0.15f}}}
+data merge entity @s[scores={CmdData=300,bellring=12}] {start_interpolation:0,interpolation_duration:1,transformation:{left_rotation:{axis:[1f,0f,0f],angle:0.2f}}}
 data merge entity @s[scores={CmdData=301,bellring=12}] {start_interpolation:0,interpolation_duration:1,transformation:{left_rotation:{axis:[1f,0f,1f],angle:0f}}}
-data merge entity @s[scores={CmdData=302,bellring=12}] {start_interpolation:0,interpolation_duration:1,transformation:{left_rotation:{axis:[1f,0f,0f],angle:-0.15f}}}
-data merge entity @s[scores={CmdData=303,bellring=12}] {start_interpolation:0,interpolation_duration:1,transformation:{left_rotation:{axis:[1f,0f,1f],angle:0f}}}
+data merge entity @s[scores={CmdData=302,bellring=12}] {start_interpolation:0,interpolation_duration:1,transformation:{left_rotation:{axis:[1f,0f,0f],angle:-0.2f}}}
+data merge entity @s[scores={CmdData=303,bellring=12}] {start_interpolation:0,interpolation_duration:2,transformation:{left_rotation:{axis:[1f,0f,0f],angle:0.1f}}}
 
 data merge entity @s[scores={CmdData=300,bellring=13..}] {start_interpolation:0,interpolation_duration:5,transformation:{left_rotation:{axis:[0f,0f,-1f],angle:0.1f}}}
 data merge entity @s[scores={CmdData=305,bellring=12..}] {start_interpolation:0,interpolation_duration:5,transformation:{left_rotation:{axis:[-1f,0f,0f],angle:0.1f}}}
