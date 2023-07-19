@@ -38,7 +38,6 @@ kill @e[type=item_display,tag=CrabEntity]
 execute as @e[type=item_display,tag=CargoBarrel] run function game:modifiers/lostcargo/killbarrel
 kill @e[type=item_display,tag=CrabTrap]
 kill @e[type=interaction,tag=CrabTrap]
-kill @e[type=item_display,tag=grave]
 kill @e[type=marker,tag=gravedata]
 kill @e[type=marker,tag=CargoEntity]
 kill @e[type=potion,tag=Bomb]

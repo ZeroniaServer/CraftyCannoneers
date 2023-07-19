@@ -25,7 +25,7 @@ execute at @s[tag=CargoHopper] run tag @s add LoadLoot
 execute at @s[tag=CargoHopper] run playsound block.barrel.open master @a ~ ~ ~ 1 1.3
 
 #Grave
-execute at @s[tag=grave] on vehicle run item replace entity @s container.0 with diamond_hoe{CustomModelData:135}
+execute at @s[tag=grave] on vehicle run item replace entity @s armor.head with diamond_hoe{CustomModelData:135}
 execute at @s[tag=grave] run tag @s add LoadLoot
 execute at @s[tag=grave] run playsound minecraft:block.grindstone.use master @a ~ ~ ~ 1 1.2
 execute at @s[tag=grave] run playsound minecraft:block.deepslate.break master @a ~ ~ ~ 1 0
