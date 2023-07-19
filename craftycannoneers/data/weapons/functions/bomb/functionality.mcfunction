@@ -12,7 +12,7 @@ execute at @s[tag=!WaterKill] run playsound blastbombfuse master @a ~ ~ ~ 0.5 1
 scoreboard players set @s[predicate=game:inwater,tag=!WaterKill] CmdData 0
 tag @s[predicate=game:inwater,tag=!WaterKill] add WaterKill 
 tag @s[tag=WaterKill] remove Kaboom
-execute if entity @s[tag=WaterKill,scores={CmdData=1}] on vehicle run kill @s
+execute if entity @s[tag=WaterKill,scores={CmdData=0}] on vehicle run kill @s
 execute as @s[tag=WaterKill,scores={CmdData=1..}] at @s run function weapons:bomb/sinkanim
 execute at @s[tag=WaterKill,scores={CmdData=1}] run particle cloud ~ ~1 ~ 0 0 0 0.1 2 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=WaterKill,scores={CmdData=1}] run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.8 2
