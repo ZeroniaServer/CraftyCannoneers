@@ -1,6 +1,6 @@
-#> Snowball functions
+#> Projectile functions
 scoreboard players set $inair CmdData 0
-execute on vehicle at @s run function weapons:bomb/snowball
+execute on vehicle at @s run function weapons:bomb/projectile
 
 #> General
 execute if score $inair CmdData matches 0 run tag @s[tag=!WaterKill,scores={CmdData=3..}] add Kaboom

@@ -9,7 +9,7 @@ execute at @s as @e[type=boat,tag=BoatBoat,distance=..7] run function game:boat/
 execute at @s as @e[type=item,distance=..7] run function weapons:bomb/blast
 execute at @s as @e[type=arrow,distance=..7] run function weapons:bomb/blast
 execute at @s as @e[type=trident,distance=..7] run function weapons:bomb/blast
-execute at @s as @e[type=snowball,distance=..7] run function weapons:bomb/blast
+execute at @s as @e[type=potion,distance=..7] run function weapons:bomb/blast
 
 #> Summon 20 slimes
 function cannons:bounce/summon4slime

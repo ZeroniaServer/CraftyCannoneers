@@ -31,7 +31,7 @@ kill @e[type=boat,tag=BoatBoat,distance=..5]
 execute as @e[type=item,distance=..5] run function weapons:barrel/blast1
 execute as @e[type=arrow,distance=..5] run function weapons:barrel/blast1
 execute as @e[type=trident,distance=..5] run function weapons:barrel/blast1
-execute as @e[type=snowball,distance=..5] run function weapons:barrel/blast1
+execute as @e[type=potion,distance=..5] run function weapons:barrel/blast1
 
 #> Hurt players in damage zones
 execute as @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..5] run function weapons:barrel/damage/tier1

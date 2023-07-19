@@ -21,7 +21,7 @@ execute if score @s BombDelay matches 2..3 at @s as @e[type=boat,tag=BoatBoat,di
 execute if score @s BombDelay matches 2..3 at @s as @e[type=item,distance=..6] run function weapons:bomb/blast
 execute if score @s BombDelay matches 2..3 at @s as @e[type=arrow,distance=..6] run function weapons:bomb/blast
 execute if score @s BombDelay matches 2..3 at @s as @e[type=trident,distance=..6] run function weapons:bomb/blast
-execute if score @s BombDelay matches 2..3 at @s as @e[type=snowball,distance=..6] run function weapons:bomb/blast
+execute if score @s BombDelay matches 2..3 at @s as @e[type=potion,distance=..6] run function weapons:bomb/blast
 
 #> Set off Blast Barrels/Cargo Traps
 execute if score @s BombDelay matches 3 run data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
