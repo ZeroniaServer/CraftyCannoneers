@@ -7,6 +7,10 @@ execute at @s positioned over world_surface summon marker run function game:modi
 scoreboard players operation @s CmdData < $y CmdData
 execute store result entity @s Pos[1] double 1 run scoreboard players get @s CmdData
 
+#> Move sufficiently away from other entities
+scoreboard players set $gravetries CmdData 0
+function game:modifiers/graverobbery/nooverlap
+
 #> Adjust to other floor heights
 execute at @s run function game:modifiers/graverobbery/adjustheight
 execute at @s positioned ~ ~-1 ~ if predicate game:located_water run tag @s add water
