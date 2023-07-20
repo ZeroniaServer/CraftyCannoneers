@@ -14,3 +14,7 @@ execute at @s[tag=RChestAS] run particle falling_dust purple_concrete ~ ~2 ~ 0 0
 execute at @s[tag=LChestAS] run particle falling_dust red_concrete ~ ~0.1 ~ 0.2 0 0.2 0.1 2 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..7]
 execute at @s[tag=LChestAS] run particle falling_dust red_concrete ~ ~1 ~ 0 0 0 0.1 1 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=7..12]
 execute at @s[tag=LChestAS] run particle falling_dust red_concrete ~ ~2 ~ 0 0 0 0.1 1 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=13..]
+#Grave
+execute at @s[tag=grave] run particle falling_dust sculk ~ ~0.1 ~ 0.2 0 0.2 0.1 2 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..7]
+execute at @s[tag=grave] run particle falling_dust sculk ~ ~1 ~ 0 0 0 0.1 1 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=7..12]
+execute at @s[tag=grave] run particle falling_dust sculk ~ ~2 ~ 0 0 0 0.1 1 normal @a[team=!Lobby,team=!Spectator,team=!Developer,distance=13..]

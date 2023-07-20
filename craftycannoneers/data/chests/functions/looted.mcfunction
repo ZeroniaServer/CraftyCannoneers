@@ -19,5 +19,6 @@ execute if entity @s[tag=CargoHopper] run tag @e[type=item_display,tag=CargoBarr
 
 #Grave
 execute if entity @s[tag=grave] on vehicle run item replace entity @s armor.head with diamond_hoe{CustomModelData:136}
+execute if entity @s[tag=grave] on vehicle run tag @s add Looted
 
 tag @s add Looted

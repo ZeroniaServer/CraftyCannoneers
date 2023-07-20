@@ -1,3 +1,4 @@
 function chests:looted
 data remove entity @s Items
-kill @s
+execute on passengers run kill
+kill

@@ -8,6 +8,9 @@ execute at @s[tag=water,tag=!ascended,tag=!underwater] positioned ~ ~-0.1 ~ unle
 execute at @s[tag=water,tag=ascended,tag=!rightheight,tag=!underwater] on vehicle at @s run tp @s ~ ~-0.05 ~
 execute at @s[tag=water,tag=ascended,tag=!rightheight,tag=!underwater] if block ~ ~0.24999 ~ water run tag @s add rightheight
 
+execute if entity @s[tag=rightheight] on vehicle unless score @s CmdData matches 31.. run scoreboard players set @s CmdData 31
+execute if entity @s[tag=!water] on vehicle unless score @s CmdData matches 31.. run scoreboard players set @s CmdData 31
+
 #> Bobble in water
 execute if entity @s[tag=water,tag=rightheight,tag=!underwater] on vehicle at @s run function game:modifiers/graverobbery/bobble
 

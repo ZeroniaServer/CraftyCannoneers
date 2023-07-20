@@ -30,13 +30,13 @@ execute at @s[tag=grave] run tag @s add LoadLoot
 execute at @s[tag=grave] run playsound graveopen1 master @a ~ ~ ~ 1 1.2
 execute at @s[tag=grave] run playsound graveopen2 master @a ~ ~ ~ 1 0
 #soul sounds are cool
-execute at @s[tag=grave] run playsound graveopen3 master @a ~ ~ ~ 1 1
-execute at @s[tag=grave] run playsound graveopen3 master @a ~ ~ ~ 1 1
-execute at @s[tag=grave] run playsound graveopen3 master @a ~ ~ ~ 1 1
-execute at @s[tag=grave] run playsound graveopen3 master @a ~ ~ ~ 1 0.8
-execute at @s[tag=grave] run playsound graveopen3 master @a ~ ~ ~ 1 1.1
-execute at @s[tag=grave] run playsound graveopen3 master @a ~ ~ ~ 1 0
-execute at @s[tag=grave] run particle sculk_soul ~ ~0.4 ~ 0 0 0 0.06 12 force @a[predicate=cannons:seeparticles]
-execute at @s[tag=grave] if predicate game:located_water run particle minecraft:bubble_column_up ~ ~ ~ 0 1 0 0 20 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=grave] run playsound soulshriek master @a ~ ~ ~ 1 1
+execute at @s[tag=grave] run playsound soulshriek master @a ~ ~ ~ 1 1
+execute at @s[tag=grave] run playsound soulshriek master @a ~ ~ ~ 1 1
+execute at @s[tag=grave] run playsound soulshriek master @a ~ ~ ~ 1 0.8
+execute at @s[tag=grave] run playsound soulshriek master @a ~ ~ ~ 1 1.1
+execute at @s[tag=grave] run playsound soulshriek master @a ~ ~ ~ 1 0
+execute at @s[tag=grave] run particle sculk_soul ~ ~0.4 ~ 0 0 0 0.06 12 force @a[team=!Lobby]
+execute at @s[tag=grave] if predicate game:located_water run particle minecraft:bubble_column_up ~ ~ ~ 0 1 0 0 20 force @a[team=!Lobby]
 
 tag @s add Opened

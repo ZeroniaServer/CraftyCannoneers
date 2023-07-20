@@ -1,4 +1,9 @@
 scoreboard players add @s CmdData 1
+
+#> Special case for Graves
+execute at @s[tag=grave,scores={CmdData=171..}] run function game:modifiers/graverobbery/breakgrave
+execute if entity @s[tag=grave] run return 0
+
 execute at @s[tag=!LChestAS,scores={CmdData=171}] run kill @e[type=hopper_minecart,tag=Looted,distance=..1,sort=nearest]
 execute at @s[tag=LChestAS,scores={CmdData=171}] run kill @e[type=chest_minecart,tag=Looted,distance=..1,sort=nearest]
 execute at @s[scores={CmdData=171..220}] run tp @s ~ ~-0.033 ~
