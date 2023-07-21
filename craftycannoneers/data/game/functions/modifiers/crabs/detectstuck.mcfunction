@@ -1,0 +1,9 @@
+execute at @s[predicate=game:inwater] unless block ~ ~0.5 ~ #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute at @s[tag=!waterstuck,predicate=game:inwater] unless block ~ ~ ~1 #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute at @s[tag=!waterstuck,predicate=game:inwater] unless block ~ ~ ~-1 #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute at @s[tag=!waterstuck,predicate=game:inwater] unless block ~1 ~ ~ #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute at @s[tag=!waterstuck,predicate=game:inwater] unless block ~-1 ~ ~ #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute at @s[tag=!waterstuck,predicate=game:inwater] unless block ~ ~0.5 ~1 #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute at @s[tag=!waterstuck,predicate=game:inwater] unless block ~ ~0.5 ~-1 #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute at @s[tag=!waterstuck,predicate=game:inwater] unless block ~1 ~0.5 ~ #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck
+execute at @s[tag=!waterstuck,predicate=game:inwater] unless block ~-1 ~0.5 ~ #cannons:cannonball_passable if entity @a[team=!Lobby,team=!Spectator,distance=1..7,predicate=game:inwater,limit=1] run tag @s add waterstuck

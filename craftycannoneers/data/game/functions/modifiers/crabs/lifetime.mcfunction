@@ -1,3 +1,5 @@
 #Prevents endermite despawning (extremely rare but anyway)
-data merge entity @s[nbt={Lifetime:0}] {Lifetime:-2147483648}
-execute on passengers run data merge entity @s[type=endermite,nbt={Lifetime:0}] {Lifetime:-2147483648}
+execute unless score @s Lifetime = @s Lifetime run scoreboard players set @s Lifetime -2147483648
+scoreboard players add @s Lifetime 1
+data merge entity @s[scores={Lifetime=2399..}] {Lifetime:-2147483648}
+scoreboard players set @s[scores={Lifetime=2399..}] Lifetime -2147483648
