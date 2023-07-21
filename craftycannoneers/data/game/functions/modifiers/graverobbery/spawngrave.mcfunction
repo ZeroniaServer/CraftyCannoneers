@@ -1,6 +1,7 @@
 #> Break any previous unopened graves owned by this player
 scoreboard players operation $tempuuid playerUUID = @s playerUUID
 execute as @e[type=hopper_minecart,tag=grave,tag=!Opened,predicate=game:matches_uuid] on vehicle at @s run function game:modifiers/graverobbery/breakgrave
+execute as @e[type=hopper_minecart,tag=grave,tag=Looted,predicate=game:matches_uuid] on vehicle at @s run function game:modifiers/graverobbery/breakgrave
 
 #> Place correct location
 execute summon marker run function game:modifiers/graverobbery/place
