@@ -18,12 +18,6 @@ data modify storage craftycannoneers:temp CustomName set from entity @s CustomNa
 execute as @e[type=bat,tag=BlastBarrel,distance=..5] run function weapons:barrel/chainreact
 execute as @e[type=husk,tag=CBTrap,distance=..5] on vehicle run function game:modifiers/lostcargo/chainreact
 
-#> Break nearby Cargo Barrels
-execute as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..5] at @s run function game:modifiers/lostcargo/spillbarrel
-
-#> Break nearby Crab Traps
-execute as @e[type=item_display,tag=CrabTrap,distance=..5] at @s run function weapons:crabtrap/break
-
 #> Break nearby Boats
 kill @e[type=boat,tag=BoatBoat,distance=..5]
 
@@ -32,6 +26,12 @@ execute as @e[type=item,distance=..5] run function weapons:barrel/blast1
 execute as @e[type=arrow,distance=..5] run function weapons:barrel/blast1
 execute as @e[type=trident,distance=..5] run function weapons:barrel/blast1
 execute as @e[type=potion,distance=..5] run function weapons:barrel/blast1
+
+#> Break nearby Cargo Barrels
+execute as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..5] at @s run function game:modifiers/lostcargo/spillbarrel
+
+#> Break nearby Crab Traps
+execute as @e[type=item_display,tag=CrabTrap,distance=..5] at @s run function weapons:crabtrap/break
 
 #> Hurt players in damage zones
 execute as @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..5] run function weapons:barrel/damage/tier1
