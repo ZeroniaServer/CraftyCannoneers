@@ -48,3 +48,4 @@ execute as @e[type=item_display,tag=CrabTrap,distance=..10] at @s run function w
 
 #> Hurt players in damage zones
 execute at @s[tag=!canDamage] as @a[team=!Lobby,team=!Spectator,team=!Developer,distance=..10] run function weapons:barrel/damage/tier3
+execute at @s[tag=canDamage] as @a[team=!Lobby,team=!Spectator,team=!Developer,distance=5..10] run function weapons:barrel/damage/tier3
