@@ -19,4 +19,6 @@ tag @s[tag=!damaged,distance=..6] add damaged
 
 damage @s[tag=!damaged,distance=..7] 1.0 mob_attack by @e[type=slime,tag=BarrelSlime,limit=1,sort=nearest]
 
+damage @s[tag=!damaged,distance=..10] 0.5 mob_attack by @e[type=slime,tag=BarrelSlime,limit=1,sort=nearest]
+
 tag @s[tag=damaged] remove damaged
