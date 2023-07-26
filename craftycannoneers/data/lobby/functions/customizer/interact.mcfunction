@@ -12,6 +12,7 @@ execute if score @s modisigns matches 5732 run function lobby:customizer/confirm
 
 #Restore Defaults
 execute if score @s modisigns matches 6497 run function lobby:customizer/defaults
+execute if score @s modisigns matches 6497 run playsound settingsreset master @s ~ ~ ~ 2 1
 
 #Modifiers (toggle on)
 execute if score @s modisigns matches 9152 run function lobby:customizer/modifiers/on
@@ -46,4 +47,4 @@ schedule clear lobby:customizer/modifiers/off
 schedule clear lobby:customizer/open
 schedule clear lobby:customizer/updatesigns
 
-execute at @s[tag=ModiOwner] run playsound ui.button.click master @s ~ ~ ~ 1 1
+execute at @s[tag=ModiOwner] unless score @s modisigns matches 6497 run playsound ui.button.click master @s ~ ~ ~ 1 1
