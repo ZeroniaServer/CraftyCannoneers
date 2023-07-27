@@ -1,6 +1,22 @@
 execute on target if entity @s[tag=self] run scoreboard players set $foundinteraction CmdData 1
 execute unless score $foundinteraction CmdData matches 1 run return 0
 
+#> Settings Map
+execute if entity @s[tag=TimeIcon] on target run trigger modisigns set 7853
+execute if entity @s[tag=HPIcon] on target run trigger modisigns set 3384
+execute if entity @s[tag=DefaultsIcon] on target run trigger modisigns set 6497
+execute if entity @s[tag=ConfirmIcon] on target run trigger modisigns set 5732
+execute if entity @s[tag=ModiIcon] if score $ModiMapActive CmdData matches 0 on target run trigger modisigns set 9152
+execute if entity @s[tag=ModiIcon] if score $ModiMapActive CmdData matches 1 on target run trigger modisigns set 9153
+execute if entity @s[tag=DaytimeIcon] on target run trigger modisigns set 2049
+execute if entity @s[tag=NoTracersIcon] on target run trigger modisigns set 17863
+execute if entity @s[tag=WildlifeIcon] on target run trigger modisigns set 59636
+execute if entity @s[tag=SeaStormsIcon] on target run trigger modisigns set 71845
+execute if entity @s[tag=LostCargoIcon] on target run trigger modisigns set 256652
+execute if entity @s[tag=GraveRobberyIcon] on target run trigger modisigns set 29013
+execute if entity @s[tag=BoatCannonsIcon] on target run trigger modisigns set 50317
+execute if entity @s[tag=SettingsInteraction] run return 0
+
 #> Tags for interacting with Cannons
 execute if entity @s[tag=CannonVLeft,tag=!GPLocked] run tag @a[limit=1,tag=self] add FillLeft
 execute if entity @s[tag=CannonVRight,tag=!GPLocked] run tag @a[limit=1,tag=self] add FillRight

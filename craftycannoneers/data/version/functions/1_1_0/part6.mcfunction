@@ -43,6 +43,9 @@ execute unless entity @e[type=item_display,tag=GraveRobberyIcon,limit=1] positio
 #Boat Cannons
 execute unless entity @e[type=item_display,tag=BoatCannonsIcon,limit=1] positioned -55 -22.4 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","BoatCannonsIcon","ModifierIcons"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
 
+#> Settings Map interactions
+execute as @e[type=item_display,tag=LobbyEntity,tag=!interactable] at @s run function version:1_1_0/interactions/settings 
+
 fill -53 -24 9 -55 -22 9 air
 
 #> Settings Map bench

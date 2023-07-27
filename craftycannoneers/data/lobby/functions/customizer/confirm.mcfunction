@@ -28,6 +28,8 @@ item replace entity @e[type=item_display,tag=LobbyEntity] container.0 with air
 
 item replace entity @e[type=item_display,tag=MapEntity,limit=1] container.0 with diamond_hoe{CustomModelData:34}
 
+execute as @e[type=interaction,tag=SettingsInteraction] run data merge entity @s {width:0f,height:0f}
+
 scoreboard players reset $orangelock CmdData
 scoreboard players reset $purplelock CmdData
 execute as @e[type=marker,tag=joinpad] at @s run function lobby:joinpads/unlock

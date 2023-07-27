@@ -18,6 +18,9 @@ setblock -54 -22 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,c
 setblock -55 -22 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"pink",messages:['{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 3384"}}','{"text":""}','{"translate":"customizer.ship_health","color":"#F8005B"}','{"text":""}']}}
 scoreboard players set $ModiMapActive CmdData 0
 
+execute as @e[type=interaction,tag=ModiOn] run data merge entity @s {width:0f,height:0f}
+execute as @e[type=interaction,tag=ModiOff] run data merge entity @s {width:0.5f,height:0.5f}
+
 function lobby:customizer/updatesigns
 
 fill -55 -22 8 -53 -24 8 air

@@ -34,6 +34,8 @@ execute if score $Daytime CmdData matches 2 run item replace entity @e[type=item
 
 item replace entity @e[type=item_display,tag=MapEntity,limit=1] container.0 with diamond_hoe{CustomModelData:76}
 
+execute as @e[type=interaction,tag=SettingsInteraction,tag=!ModiOn] run data merge entity @s {width:0.5f,height:0.5f}
+
 execute as @e[type=hopper_minecart,tag=chest] run data remove entity @s Items
 execute as @e[type=hopper_minecart,tag=chest] run data merge entity @s {LootTable:"chests:empty"}
 

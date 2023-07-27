@@ -28,6 +28,9 @@ setblock -54 -23 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,c
 item replace entity @e[type=item_display,tag=BoatCannonsIcon,limit=1] container.0 with diamond_hoe{CustomModelData:124}
 setblock -55 -23 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"light_blue",messages:['{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 50317"}}','{"text":""}','{"translate":"modifier.boat_cannons","color":"#33ccff"}','{"text":""}']}}
 
+execute as @e[type=interaction,tag=ModiOn] run data merge entity @s {width:0.5f,height:0.5f}
+execute as @e[type=interaction,tag=ModiOff] run data merge entity @s {width:0f,height:0f}
+
 function lobby:customizer/modifiers/updatemodifiersigns
 
 scoreboard players set $ModiMapActive CmdData 1
