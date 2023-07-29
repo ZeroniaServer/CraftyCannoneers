@@ -5,8 +5,8 @@ execute at @s[type=armor_stand,tag=NewChest] run function chests:rise
 execute at @s[type=armor_stand,tag=!Looted,scores={CmdData=31..}] run function chests:particles
 
 #> Open
-execute at @s[type=hopper_minecart,tag=!Opened] if data entity @s Items run function chests:open
-execute at @s[type=chest_minecart,tag=!Opened] if data entity @s Items run function chests:open
+execute at @s[type=hopper_minecart,tag=!Opened] if data entity @s Items[] run function chests:open
+execute at @s[type=chest_minecart,tag=!Opened] if data entity @s Items[] run function chests:open
 
 #> Once opened
 execute at @s[type=hopper_minecart,tag=Opened,tag=!Looted] run function chests:opened
