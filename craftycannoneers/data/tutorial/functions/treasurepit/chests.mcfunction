@@ -6,8 +6,8 @@ execute at @s[scores={CmdData=..9}] run function tutorial:treasurepit/rise
 execute if entity @s[type=armor_stand,tag=!Looted,scores={CmdData=31..}] run function tutorial:treasurepit/particles
 
 #> Open
-execute at @s[type=hopper_minecart,tag=fakechest,tag=!Opened] if data entity @s Items run function tutorial:treasurepit/open
-execute at @s[type=chest_minecart,tag=fakelockedchest,tag=!Opened] if data entity @s Items run function tutorial:treasurepit/open
+execute at @s[type=hopper_minecart,tag=fakechest,tag=!Opened] if data entity @s Items[] run function tutorial:treasurepit/open
+execute at @s[type=chest_minecart,tag=fakelockedchest,tag=!Opened] if data entity @s Items[] run function tutorial:treasurepit/open
 
 #> Once opened
 execute at @s[type=hopper_minecart,tag=fakechest,tag=Opened,tag=!Looted] run function tutorial:treasurepit/opened

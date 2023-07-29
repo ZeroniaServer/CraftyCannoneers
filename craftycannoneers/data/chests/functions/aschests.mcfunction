@@ -1,5 +1,5 @@
 #> Open
-execute if entity @s[tag=!Opened] if data entity @s Items run function chests:open
+execute if entity @s[tag=!Opened] if data entity @s Items[] run function chests:open
 
 #> Once opened
 execute if entity @s[tag=Opened] run function chests:opened
