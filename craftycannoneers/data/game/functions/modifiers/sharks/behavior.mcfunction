@@ -6,6 +6,13 @@ execute if entity @s[tag=Pos4,tag=!IsBack] unless entity @a[tag=SharkTarget,team
 execute if entity @s[tag=Pos5,tag=!IsBack] unless entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] positioned 72 -33 -34 unless entity @s[distance=..4] run tag @s add SwimBack
 execute if entity @s[tag=Pos6,tag=!IsBack] unless entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] positioned 61 -33 -34 unless entity @s[distance=..4] run tag @s add SwimBack
 
+execute if entity @s[tag=Pos1,tag=!IsBack] if entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] run tag @s remove SwimBack
+execute if entity @s[tag=Pos2,tag=!IsBack] if entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] run tag @s remove SwimBack
+execute if entity @s[tag=Pos3,tag=!IsBack] if entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] run tag @s remove SwimBack
+execute if entity @s[tag=Pos4,tag=!IsBack] if entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] run tag @s remove SwimBack
+execute if entity @s[tag=Pos5,tag=!IsBack] if entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] run tag @s remove SwimBack
+execute if entity @s[tag=Pos6,tag=!IsBack] if entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] run tag @s remove SwimBack
+
 execute unless score $Storms CmdData matches 1 if entity @s[tag=Pos1,tag=!IsBack] unless entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] positioned 57 -33 34 if entity @s[distance=..4] at @s run summon cod ~ ~ ~ {PersistenceRequired:1b,Silent:1b,Attributes:[{Base:2.0d,Name:"minecraft:generic.movement_speed"}],Tags:["Pos1","SharkCod","SharkEntity","NewVCod"],Invulnerable:1b,DeathTime:17s,DeathLootTable:"minecraft:empty"}
 execute unless score $Storms CmdData matches 1 if entity @s[tag=Pos2,tag=!IsBack] unless entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] positioned 68 -33 34 if entity @s[distance=..4] at @s run summon cod ~ ~ ~ {PersistenceRequired:1b,Silent:1b,Attributes:[{Base:2.0d,Name:"minecraft:generic.movement_speed"}],Tags:["Pos2","SharkCod","SharkEntity","NewVCod"],Invulnerable:1b,DeathTime:17s,DeathLootTable:"minecraft:empty"}
 execute unless score $Storms CmdData matches 1 if entity @s[tag=Pos3,tag=!IsBack] unless entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] positioned 79 -33 34 if entity @s[distance=..4] at @s run summon cod ~ ~ ~ {PersistenceRequired:1b,Silent:1b,Attributes:[{Base:2.0d,Name:"minecraft:generic.movement_speed"}],Tags:["Pos3","SharkCod","SharkEntity","NewVCod"],Invulnerable:1b,DeathTime:17s,DeathLootTable:"minecraft:empty"}
@@ -68,10 +75,6 @@ execute if entity @s[tag=Pos6,tag=IsBack] positioned 61 -33 -34 unless entity @s
 
 execute if entity @s[tag=SwimBack] at @s run tp @s ^ ^ ^0.1
 execute if entity @s[tag=SwimBack] at @s run tag @s remove Swimback
-
-#> Hover in deep water
-# execute at @s unless entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] if block ~ ~4 ~ water unless block ~ ~4.5 ~ air run effect give @s slow_falling 1 100 true
-# execute at @s unless entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] if block ~ ~4 ~ water unless block ~ ~4.5 ~ air run tp @s ~ ~0.1 ~
 
 #> Attack players
 execute at @s unless entity @e[type=drowned,tag=SharkEntity,tag=Attacking,scores={CmdData=..6},distance=..5] if entity @a[team=!Lobby,team=!Spectator,gamemode=adventure,tag=SharkTarget,distance=..3] run tag @s add Attacking

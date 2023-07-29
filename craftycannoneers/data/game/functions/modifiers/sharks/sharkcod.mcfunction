@@ -36,9 +36,6 @@ execute at @s[tag=Pos6] unless entity @e[type=drowned,tag=Pos6,tag=IsBack] on pa
 execute at @s[tag=Pos6] unless entity @e[type=drowned,tag=Pos6,tag=IsBack] on vehicle run ride @s dismount
 execute at @s[tag=Pos6] unless entity @e[type=drowned,tag=Pos6,tag=IsBack] run function arenaclear:kill
 
-execute if entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] run ride @s dismount
-execute if entity @a[tag=SharkTarget,team=!Lobby,team=!Spectator,distance=..12] run function arenaclear:kill
-
 execute at @s[tag=NewVCod] unless block ~ ~3 ~ water run tp @s ~ ~-0.1 ~
 
 effect give @s invisibility infinite 100 true
