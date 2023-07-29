@@ -1,52 +1,47 @@
 {
-  "criteria": {
-    "requirement": {
-      "trigger": "minecraft:item_used_on_block",
-      "conditions": {
-        "player": {
-          "location": {
-            "position": {
-              "z": {
-                "min": -59
-              }
-            }
-          }
-        },
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": [
-              {
-                "condition": "minecraft:location_check",
-                "predicate": {
-                  "position": {
-                    "x": {
-                      "min": -262,
-                      "max": -261
-                    },
-                    "y": {
-                      "min": -25,
-                      "max": -24
-                    },
-                    "z": {
-                      "min": -60,
-                      "max": -59
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "position": {
+                            "z": {
+                                "min": -59
+                            }
+                        }
                     }
-                  },
-                  "block": {
-                    "blocks": [
-                      "minecraft:barrel"
-                    ]
-                  }
-                }
-              }
-            ]
-          }
-        ]
-      }
+                },
+                "location": [
+                    {
+                        "condition": "minecraft:location_check",
+                        "predicate": {
+                            "position": {
+                                "x": {
+                                    "min": -262,
+                                    "max": -261
+                                },
+                                "y": {
+                                    "min": -25,
+                                    "max": -24
+                                },
+                                "z": {
+                                    "min": -60,
+                                    "max": -59
+                                }
+                            },
+                            "block": {
+                                "blocks": [
+                                    "minecraft:barrel"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "tutorial:weapons/cutlass"
     }
-  },
-  "rewards": {
-    "function": "tutorial:weapons/cutlass"
-  }
 }

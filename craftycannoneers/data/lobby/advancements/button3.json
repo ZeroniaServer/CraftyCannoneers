@@ -1,43 +1,38 @@
 {
-  "criteria": {
-    "requirement": {
-      "trigger": "minecraft:item_used_on_block",
-      "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": [
-              {
-                "condition": "minecraft:location_check",
-                "predicate": {
-                  "position": {
-                    "x": {
-                      "min": -61,
-                      "max": -60
-                    },
-                    "y": {
-                      "min": -19,
-                      "max": -18
-                    },
-                    "z": {
-                      "min": -17,
-                      "max": -16
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "minecraft:location_check",
+                        "predicate": {
+                            "position": {
+                                "x": {
+                                    "min": -61,
+                                    "max": -60
+                                },
+                                "y": {
+                                    "min": -19,
+                                    "max": -18
+                                },
+                                "z": {
+                                    "min": -17,
+                                    "max": -16
+                                }
+                            },
+                            "block": {
+                                "blocks": [
+                                    "minecraft:stone_button"
+                                ]
+                            }
+                        }
                     }
-                  },
-                  "block": {
-                    "blocks": [
-                      "minecraft:stone_button"
-                    ]
-                  }
-                }
-              }
-            ]
-          }
-        ]
-      }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "lobby:easteregg/rocket/check"
     }
-  },
-  "rewards": {
-    "function": "lobby:easteregg/rocket/check"
-  }
 }

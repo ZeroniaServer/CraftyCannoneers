@@ -1,43 +1,38 @@
 {
-  "criteria": {
-    "requirement": {
-      "trigger": "minecraft:item_used_on_block",
-      "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": [
-              {
-                "condition": "minecraft:location_check",
-                "predicate": {
-                  "position": {
-                    "x": {
-                      "min": -43,
-                      "max": -42
-                    },
-                    "y": {
-                      "min": -26,
-                      "max": -25
-                    },
-                    "z": {
-                      "min": 5,
-                      "max": 6
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "minecraft:location_check",
+                        "predicate": {
+                            "position": {
+                                "x": {
+                                    "min": -43,
+                                    "max": -42
+                                },
+                                "y": {
+                                    "min": -26,
+                                    "max": -25
+                                },
+                                "z": {
+                                    "min": 5,
+                                    "max": 6
+                                }
+                            },
+                            "block": {
+                                "blocks": [
+                                    "minecraft:stone_button"
+                                ]
+                            }
+                        }
                     }
-                  },
-                  "block": {
-                    "blocks": [
-                      "minecraft:stone_button"
-                    ]
-                  }
-                }
-              }
-            ]
-          }
-        ]
-      }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "lobby:easteregg/rocket/trapdoor/8"
     }
-  },
-  "rewards": {
-    "function": "lobby:easteregg/rocket/trapdoor/8"
-  }
 }

@@ -1,27 +1,22 @@
 {
-  "criteria": {
-    "requirement": {
-      "trigger": "minecraft:item_used_on_block",
-      "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": [
-              {
-                "condition": "minecraft:location_check",
-                "predicate": {
-                  "block": {
-                    "tag": "minecraft:trapdoors"
-                  }
-                }
-              }
-            ]
-          }
-        ]
-      }
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "minecraft:location_check",
+                        "predicate": {
+                            "block": {
+                                "tag": "minecraft:trapdoors"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "debug:trapdoors"
     }
-  },
-  "rewards": {
-    "function": "debug:trapdoors"
-  }
 }
