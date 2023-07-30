@@ -47,6 +47,8 @@ execute as @e[type=wandering_trader,tag=Trader] run function arenaclear:kill
 function arenaclear:traders
 function arenaclear:villagertrades
 
+execute unless entity @e[type=interaction,tag=protect,limit=1] run function version:1_1_0/interactions/protect
+
 setblock -51 -27 -3 air
 setblock -51 -27 -3 minecraft:purple_wall_banner[facing=west]{Patterns:[{Color:15,Pattern:"mc"},{Color:10,Pattern:"ls"},{Color:10,Pattern:"rs"},{Color:10,Pattern:"hhb"},{Color:10,Pattern:"ts"},{Color:0,Pattern:"pig"}]}
 
