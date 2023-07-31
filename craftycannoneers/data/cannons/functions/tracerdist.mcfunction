@@ -55,7 +55,7 @@ execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfif
 execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^-0.25 ^ ^
 execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^-0.25 ^ ^
 execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^-0.25 ^ ^
-execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^-0.25 ^ ^
+execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^-0.25 ^ ^
 execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^0.25 ^ ^
 execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^0.25 ^ ^
 execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^0.25 ^ ^
@@ -120,7 +120,7 @@ execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfif
 execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^ ^-0.25 ^
 execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^ ^-0.25 ^
 execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^ ^-0.25 ^
-execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^ ^-0.25 ^
+execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^ ^-0.25 ^
 execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^ ^0.25 ^
 execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^ ^0.25 ^
 execute positioned as @s if predicate game:fiftyfifty if predicate game:fiftyfifty if predicate game:fiftyfifty run tp @s ^ ^0.25 ^
