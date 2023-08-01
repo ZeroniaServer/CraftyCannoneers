@@ -16,7 +16,8 @@ scoreboard players operation @s dz -= @s z
 #		"(...) Motion[0] double 0.002 (...)"		<--- the bigger this number, the faster the entity
 #########
 
-data modify storage craftycannoneers:blastbomb Motion set value [0d, 0.4d, 0d]
+execute unless entity @s[tag=Sailing] run data modify storage craftycannoneers:blastbomb Motion set value [0d, 0.5d, 0d]
+execute if entity @s[tag=Sailing] run data modify storage craftycannoneers:blastbomb Motion set value [0d, 0.4d, 0d]
 execute store result storage craftycannoneers:blastbomb Motion[0] double 0.0035 run scoreboard players get @s dx
 execute store result storage craftycannoneers:blastbomb Motion[2] double 0.0035 run scoreboard players get @s dz
 tp @s @s
