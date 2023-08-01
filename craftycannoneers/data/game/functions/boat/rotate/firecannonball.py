@@ -18,7 +18,7 @@ for i in range(-90,90):
     g.write("execute if score @s CannonID matches 4 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"GasCannonball\",\"Hit1\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n\n" % (i*2))
 
     g.write("#Chain Cannonball\n")
-    g.write("execute if score @s CannonID matches 5 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"ChainCannonball\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959,Passengers:[{id:\"minecraft:armor_stand\",Invisible:1b,Marker:1b,Small:1b,Tags:[\"ChainAnchor\"]}]}\n\n" % (i*2))
+    g.write("execute if score @s CannonID matches 5 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"ChainCannonball\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n\n" % (i*2))
 
     g.write("#Bouncy Cannonball\n")
     g.write("execute if score @s CannonID matches 6 run summon armor_stand ~ ~ ~ {Tags:[\"cannonball\",\"BouncyCannonball\",\"NewCannonball\",\"boatlaunch\"],Rotation:[%d.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}\n\n" % (i*2))

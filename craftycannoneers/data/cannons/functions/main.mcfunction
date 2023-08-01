@@ -4,9 +4,6 @@ execute as @e[type=item_display,tag=DisplayGP] at @s run function cannons:loadgu
 #> Cannon Tick
 execute as @e[type=item_display,tag=CannonDisp] at @s run function cannons:cannontick
 
-#> Remove Chain Anchors
-kill @e[type=armor_stand,tag=ChainAnchor,predicate=!game:mounted]
-
 #> Light Flash
 execute as @e[type=marker,tag=LightFlash] at @s run function cannons:lightflash
 

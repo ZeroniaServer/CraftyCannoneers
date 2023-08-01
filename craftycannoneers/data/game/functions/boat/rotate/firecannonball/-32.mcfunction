@@ -16,7 +16,7 @@ execute if score @s CannonID matches 3 run summon armor_stand ~ ~ ~ {Tags:["cann
 execute if score @s CannonID matches 4 run summon armor_stand ~ ~ ~ {Tags:["cannonball","GasCannonball","Hit1","NewCannonball","boatlaunch"],Rotation:[-64.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}
 
 #Chain Cannonball
-execute if score @s CannonID matches 5 run summon armor_stand ~ ~ ~ {Tags:["cannonball","ChainCannonball","NewCannonball","boatlaunch"],Rotation:[-64.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959,Passengers:[{id:"minecraft:armor_stand",Invisible:1b,Marker:1b,Small:1b,Tags:["ChainAnchor"]}]}
+execute if score @s CannonID matches 5 run summon armor_stand ~ ~ ~ {Tags:["cannonball","ChainCannonball","NewCannonball","boatlaunch"],Rotation:[-64.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}
 
 #Bouncy Cannonball
 execute if score @s CannonID matches 6 run summon armor_stand ~ ~ ~ {Tags:["cannonball","BouncyCannonball","NewCannonball","boatlaunch"],Rotation:[-64.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}

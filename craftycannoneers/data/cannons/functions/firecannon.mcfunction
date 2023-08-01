@@ -100,9 +100,9 @@ execute at @s[scores={cannonshot=26,CmdData=5}] run playsound cannonshot2 master
 execute at @s[scores={cannonshot=26,CmdData=5}] run playsound cannonshot2 master @a ~ ~ ~ 4 1.3
 execute at @s[scores={cannonshot=26,CmdData=5}] run playsound cannonshot2 master @a ~ ~ ~ 4 0.7
 execute at @s[scores={cannonshot=26,CmdData=5}] run playsound cannonshot_distant master @a[distance=15..] ~ ~ ~ 8 0.9
-execute at @s[tag=Purple,scores={cannonshot=30..,CmdData=5}] run summon armor_stand ~ ~1 ~ {Tags:["cannonball","ChainCannonball","NewCannonball"],Rotation:[0.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959,Passengers:[{id:"minecraft:armor_stand",Invisible:1b,Marker:1b,Small:1b,Tags:["ChainAnchor"]}]}
-execute at @s[tag=Orange,scores={cannonshot=30..,CmdData=5}] run summon armor_stand ~ ~1 ~ {Tags:["cannonball","ChainCannonball","NewCannonball"],Rotation:[180.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959,Passengers:[{id:"minecraft:armor_stand",Invisible:1b,Marker:1b,Small:1b,Tags:["ChainAnchor"]}]}
-execute at @s[tag=!Purple,tag=!Orange,scores={cannonshot=30..,CmdData=5}] run summon armor_stand ~ ~1 ~ {Tags:["cannonball","ChainCannonball","NewCannonball"],Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959,Passengers:[{id:"minecraft:armor_stand",Invisible:1b,Marker:1b,Small:1b,Tags:["ChainAnchor"]}]}
+execute at @s[tag=Purple,scores={cannonshot=30..,CmdData=5}] run summon armor_stand ~ ~1 ~ {Tags:["cannonball","ChainCannonball","NewCannonball"],Rotation:[0.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}
+execute at @s[tag=Orange,scores={cannonshot=30..,CmdData=5}] run summon armor_stand ~ ~1 ~ {Tags:["cannonball","ChainCannonball","NewCannonball"],Rotation:[180.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}
+execute at @s[tag=!Purple,tag=!Orange,scores={cannonshot=30..,CmdData=5}] run summon armor_stand ~ ~1 ~ {Tags:["cannonball","ChainCannonball","NewCannonball"],Rotation:[90.0f,0.0f],Small:1b,Silent:1b,Invisible:1b,Invulnerable:1b,DisabledSlots:4144959}
 
 #Bouncy Cannonball
 execute at @s[scores={cannonshot=26,CmdData=6}] run playsound cannonshot master @a ~ ~ ~ 6 1.1
