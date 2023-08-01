@@ -31,8 +31,8 @@ execute at @s[tag=CannonballShot] run function cannons:drag
 execute at @s[tag=BouncyCannonball,tag=Hit1] if entity @a[team=!Lobby,team=!Spectator,distance=..20] run function cannons:bounce/bouncedrag
 execute store result entity @s Air double 1 run scoreboard players get $toggle CmdData
 
-execute at @s[tag=ChainCannonball,tag=!Submerged,scores={CmdData=4..}] on passengers on passengers on origin at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^1 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
-execute at @s[tag=ChainCannonball,tag=!Submerged,scores={CmdData=4..}] on passengers on passengers on origin at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^-1 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
+execute rotated as @s[tag=ChainCannonball,tag=!Submerged,scores={CmdData=4..}] on passengers on passengers on origin positioned as @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^1 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
+execute rotated as @s[tag=ChainCannonball,tag=!Submerged,scores={CmdData=4..}] on passengers on passengers on origin positioned as @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^-1 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=GoldenCannonball,tag=!Submerged,scores={CmdData=4..}] on passengers on passengers on origin at @s run particle dust_color_transition 1 0.835 0 1.4 1 0.667 0 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
 
 execute at @s[tag=!TracerCannonball,tag=!CannonballCluster,tag=!Submerged,tag=!StrikeLightning,tag=!ChainCannonball,tag=!GoldenCannonball,tag=!bouncing,scores={CmdData=4..}] on passengers on passengers on origin at @s run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
