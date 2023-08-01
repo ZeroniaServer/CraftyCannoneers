@@ -1,6 +1,9 @@
 #> Projectile functions
 scoreboard players set $inair CmdData 0
-execute on vehicle at @s run function weapons:bomb/projectile
+execute at @s positioned ~ ~0.1 ~ if entity @e[type=boat,dx=0,limit=1] run scoreboard players add @s crouch 1
+execute if score @s crouch matches 2.. run tag @s add boat
+execute if entity @s[tag=boat] on vehicle run kill
+execute if entity @s[tag=!boat] on vehicle run function weapons:bomb/projectile
 
 #> General
 execute if score $inair CmdData matches 0 run tag @s[tag=!WaterKill,scores={CmdData=3..}] add Kaboom
@@ -9,8 +12,8 @@ execute at @s[tag=!WaterKill] run particle flame ~ ~0.5 ~ 0 0 0 .02 1 force @a[p
 execute at @s[tag=!WaterKill] run playsound blastbombfuse master @a ~ ~ ~ 0.5 1
 
 #> Water kill
-scoreboard players set @s[predicate=game:inwater,tag=!WaterKill] CmdData 0
-tag @s[predicate=game:inwater,tag=!WaterKill] add WaterKill 
+scoreboard players set @s[predicate=game:inwater,tag=!WaterKill,tag=!boat] CmdData 0
+tag @s[predicate=game:inwater,tag=!WaterKill,tag=!boat] add WaterKill 
 tag @s[tag=WaterKill] remove Kaboom
 execute if entity @s[tag=WaterKill,scores={CmdData=0}] on vehicle run kill @s
 execute at @s[tag=WaterKill,scores={CmdData=1}] unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] positioned ~ ~-0.2 ~ unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] run function weapons:bomb/sinkanim
