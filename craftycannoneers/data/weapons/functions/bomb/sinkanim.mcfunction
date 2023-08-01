@@ -12,3 +12,4 @@ execute positioned ~ ~-0.7 ~ if predicate game:located_water run data merge enti
 execute positioned ~ ~-0.8 ~ if predicate game:located_water run data merge entity @s {start_interpolation:0,interpolation_duration:28,transformation:{translation:[0.0f,-0.8f,0.0f]}}
 execute positioned ~ ~-0.9 ~ if predicate game:located_water run data merge entity @s {start_interpolation:0,interpolation_duration:29,transformation:{translation:[0.0f,-0.9f,0.0f]}}
 execute positioned ~ ~-1 ~ if predicate game:located_water run data merge entity @s {start_interpolation:0,interpolation_duration:30,transformation:{translation:[0.0f,-1.0f,0.0f]}}
+execute store result score @s click run data get entity @s interpolation_duration
