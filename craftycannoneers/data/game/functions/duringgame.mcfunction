@@ -67,9 +67,7 @@ execute positioned 81 -36.8 -17 run particle bubble_column_up 81 -36.8 -17 1.4 0
 execute positioned 58 -36.8 17 run particle bubble_column_up 58 -36.8 17 1.4 0 0 0.2 5 normal @a[team=!Lobby,distance=..16]
 
 #> Traders
-execute as @e[type=villager,tag=Trader] at @s run tp @s ~ ~ ~ facing entity @p[gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer,distance=..10]
-execute as @e[type=villager,tag=Trader,tag=Orange] at @s unless entity @a[gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer,distance=..10,limit=1] run tp @s ~ ~ ~ 180 0
-execute as @e[type=villager,tag=Trader,tag=Purple] at @s unless entity @a[gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer,distance=..10,limit=1] run tp @s ~ ~ ~ 0 0
+execute as @e[type=villager,tag=Trader] at @s run function game:traders
 
 #> Kill marked entities
 execute if score $markkill CmdData matches 1.. as @e[tag=markkill] at @s if loaded ~ ~ ~ run function arenaclear:kill
