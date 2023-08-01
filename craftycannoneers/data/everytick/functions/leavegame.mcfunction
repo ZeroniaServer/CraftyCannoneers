@@ -70,6 +70,7 @@ tag @s[tag=LeaveGame] remove NeedsTracer
 tag @s[tag=LeaveGame] remove mobtesting
 tag @s[tag=LeaveGame] remove ModiOwner
 tag @s[tag=LeaveGame] remove lowerteam
+tag @s[tag=LeaveGame] remove cr
 scoreboard players reset @s[tag=LeaveGame] respawn
 execute if entity @s[tag=LeaveGame] run function lobby:easteregg/rocket/reset
 execute if entity @s[tag=LeaveGame] run function game:boat/removetags

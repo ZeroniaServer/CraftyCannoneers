@@ -16,6 +16,8 @@ tag @s remove NeedsCutlass
 tag @s remove NeedsCrossbow
 tag @s remove NeedsSpyglass
 tag @s remove NeedsTracer
+tag @s remove cr
+tag @s remove InPlayerCB
 scoreboard players add @s MVPdeath 1
 scoreboard players set @s shotArrows 0
 scoreboard players reset @s death
