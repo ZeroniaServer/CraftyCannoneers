@@ -1,5 +1,5 @@
 tag @s add raycaster
 scoreboard players set #hit raycast 0
 scoreboard players set #distance raycast 0
-function game:raycast/ray
+function game:raycast/ray_cannon
 tag @s remove raycaster
