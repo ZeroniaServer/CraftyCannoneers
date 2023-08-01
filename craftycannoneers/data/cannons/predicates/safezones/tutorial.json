@@ -3,7 +3,7 @@
     "predicate": {
         "position": {
             "x": {
-                "min": -407,
+                "min": -400,
                 "max": -285
             },
             "z": {

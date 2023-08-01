@@ -1,3 +1,8 @@
+execute at @s if predicate cannons:pasttraining run tag @s add kill
+execute if entity @s[tag=kill,tag=!TracerCannonball] run function cannons:killcb
+execute if entity @s[tag=kill,tag=TracerCannonball] run function cannons:tracerhit
+execute if entity @s[tag=kill] run return 0
+
 scoreboard players add @s[tag=Hit1] doublehit 1
 scoreboard players add @s CmdData 1
 
@@ -88,7 +93,6 @@ execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores=
 execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] on passengers rotated as @s unless block ^ ^ ^1 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] on passengers rotated as @s unless block ^ ^ ^-1 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] on passengers rotated as @s unless block ^ ^ ^-3 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
-execute if predicate cannons:pasttraining run tag @s add outside
 
 execute unless score $landed CmdData matches 1 unless score $phase CmdData matches 1 at @s[tag=!ChainCannonball,tag=!InWater] if block ^ ^ ^2 barrier run scoreboard players set $phase CmdData 1
 execute unless score $landed CmdData matches 1 unless score $phase CmdData matches 1 at @s[tag=!ChainCannonball,tag=!InWater] if block ^ ^ ^1 barrier run scoreboard players set $phase CmdData 1
