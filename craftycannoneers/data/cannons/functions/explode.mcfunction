@@ -159,5 +159,10 @@ execute at @s[scores={copperStrike=80..}] run tag @s add Hit2
 
 execute as @e[type=marker,tag=ImpactMarker,tag=!BlastBarrel] at @s unless score @s CmdData matches 1.. run function cannons:spawncreeper
 
-kill @s[tag=Hit1,tag=boatshot,tag=!BouncyCannonball,tag=!CopperCannonball]
-kill @s[tag=Hit2]
+tag @s[tag=Hit1,tag=boatshot,tag=!BouncyCannonball,tag=!CopperCannonball] add kill
+tag @s[tag=Hit2] add kill
+execute if entity @s[tag=kill] on passengers on passengers on origin run kill @s[type=marker,tag=cbmarker]
+execute if entity @s[tag=kill] on passengers on passengers run kill @s[type=snowball,tag=cbtracker]
+execute if entity @s[tag=kill] on passengers on origin run kill @s[type=marker,tag=cbmarker]
+execute if entity @s[tag=kill] on passengers run kill @s[type=snowball,tag=cbtracker]
+kill @s[tag=kill]

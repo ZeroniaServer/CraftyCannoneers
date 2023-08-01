@@ -43,3 +43,5 @@ tag @s add CannonballShot
 execute store result score @s x run data get storage craftycannoneers:cannonball Motion[0] 1000
 execute store result score @s y run data get storage craftycannoneers:cannonball Motion[1] 1000
 execute store result score @s z run data get storage craftycannoneers:cannonball Motion[2] 1000
+
+execute at @s[tag=!TracerCannonball] run function cannons:tracker
