@@ -16,7 +16,7 @@ scoreboard players set @s[tag=CannonballCluster] doublehit 69
 
 execute at @s[tag=ChainCannonball,tag=AccuracySet] run tp @s ~ ~ ~ ~40 ~
 execute at @s[tag=ChainCannonball,tag=!AccuracySet] run function cannons:setaccuracy
-execute at @s[tag=ChainCannonball,tag=!AccuracySet] run function cannons:chainaccuracy
+execute at @s[tag=ChainCannonball,tag=!chainacc] run function cannons:chainaccuracy
 execute at @s[tag=PlayerCannonball,tag=!AccuracySet] run function cannons:setaccuracy
 execute at @s[tag=PlayerCannonball] run function cannons:playercbtravel
 execute at @s[tag=TracerCannonball,tag=!AccuracySet] run function cannons:setaccuracy
@@ -74,7 +74,16 @@ execute store result score @s z2 run data get storage craftycannoneers:cannonbal
 execute if score @s CmdData matches 3.. if score @s x2 = @s dx2 if score @s y2 = @s dy2 if score @s z2 = @s dz2 run scoreboard players set $landed CmdData 1
 
 execute if entity @s[predicate=!game:inarena,predicate=!cannons:safezones/tutorial] run tag @s add outside
-execute unless score $landed CmdData matches 1 at @s if block ~ ~ ~ #game:nonsolids run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=!ChainCannonball] if block ~ ~ ~ #game:nonsolids run scoreboard players set $landed CmdData 1
+
+execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball] on passengers rotated as @s if block ~ ~ ~ #game:nonsolids run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball] on passengers rotated as @s if block ^ ^ ^1 #game:nonsolids run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball] on passengers rotated as @s if block ^ ^ ^-1 #game:nonsolids run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball] on passengers rotated as @s if block ^ ^ ^2 #game:nonsolids run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball] on passengers rotated as @s if block ^ ^ ^-2 #game:nonsolids run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball] on passengers rotated as @s if block ^ ^ ^3 #game:nonsolids run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball] on passengers rotated as @s if block ^ ^ ^-3 #game:nonsolids run scoreboard players set $landed CmdData 1
+
 execute unless score $landed CmdData matches 1 if score $hitboat CmdData matches 1 run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s unless block ~ ~-1 ~ #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s if block ~ ~-0.5 ~ spruce_slab[type=bottom] run scoreboard players set $landed CmdData 1
@@ -87,12 +96,12 @@ execute unless score $landed CmdData matches 1 at @s if block ~ ~-0.1875 ~ spruc
 execute unless score $landed CmdData matches 1 at @s[tag=!ChainCannonball,tag=!InWater] unless block ^ ^ ^2 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s[tag=!ChainCannonball,tag=!InWater] unless block ^ ^ ^1 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
 execute unless score $landed CmdData matches 1 at @s[tag=!ChainCannonball,tag=!InWater] unless block ^ ^ ^ #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
-execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] on passengers rotated as @s unless block ~ ~ ~ #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
-execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] on passengers rotated as @s unless block ^ ^ ^3 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
-execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] on passengers rotated as @s unless block ^ ^ ^2 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
-execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] on passengers rotated as @s unless block ^ ^ ^1 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
-execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] on passengers rotated as @s unless block ^ ^ ^-1 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
-execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] on passengers rotated as @s unless block ^ ^ ^-3 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] unless block ~ ~ ~ #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] unless block ^ ^ ^3 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] unless block ^ ^ ^2 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] unless block ^ ^ ^1 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] unless block ^ ^ ^-1 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
+execute unless score $landed CmdData matches 1 at @s[tag=ChainCannonball,scores={CmdData=4..},tag=!InWater] unless block ^ ^ ^-3 #cannons:cannonball_passable run scoreboard players set $landed CmdData 1
 
 execute unless score $landed CmdData matches 1 unless score $phase CmdData matches 1 at @s[tag=!ChainCannonball,tag=!InWater] if block ^ ^ ^2 barrier run scoreboard players set $phase CmdData 1
 execute unless score $landed CmdData matches 1 unless score $phase CmdData matches 1 at @s[tag=!ChainCannonball,tag=!InWater] if block ^ ^ ^1 barrier run scoreboard players set $phase CmdData 1
