@@ -22,7 +22,7 @@ execute at @s[tag=WaterKill,scores={CmdData=1}] if block ~ ~ ~ #minecraft:slabs[
 execute at @s[tag=WaterKill,scores={CmdData=1}] run particle cloud ~ ~1 ~ 0 0 0 0.1 2 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=WaterKill,scores={CmdData=1}] run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.8 2
 execute at @s[tag=WaterKill,scores={CmdData=2}] run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.8 1.6
-execute at @s[tag=WaterKill,scores={CmdData=1..}] unless score @s CmdData > @s click run function weapons:bomb/bubbletrail
+execute at @s[tag=WaterKill,scores={CmdData=1..}] run function weapons:bomb/bubbletrail
 data merge entity @s[tag=WaterKill,scores={CmdData=28}] {start_interpolation:0,interpolation_duration:3,transformation:{scale:[0.0f,0.0f,0.0f]}}
 execute at @s[tag=WaterKill,scores={CmdData=30..}] run function weapons:bomb/waterkill
 
