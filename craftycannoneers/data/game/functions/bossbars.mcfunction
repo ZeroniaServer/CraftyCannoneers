@@ -13,8 +13,10 @@ bossbar set purpleship name ["",{"translate":"%1$s (%2$s): ","with":[{"translate
 bossbar set orangeship2 name ["",{"translate":"%1$s (%2$s): ","with":[{"translate":"game.orange"},{"translate":"game.you"}],"color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"translate":"%1$s: ","with":[{"translate":"game.purple"}],"color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
 bossbar set purpleship3 name ["",{"translate":"%1$s: ","with":[{"translate":"game.purple"}],"color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"translate":"%1$s: ","with":[{"translate":"game.orange"}],"color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
 
+scoreboard players add $ShipHP CmdData 1
 execute store result bossbar purpleship max run scoreboard players get $ShipHP CmdData
 execute store result bossbar purpleship2 max run scoreboard players get $ShipHP CmdData
 execute store result bossbar purpleship3 max run scoreboard players get $ShipHP CmdData
 execute store result bossbar orangeship max run scoreboard players get $ShipHP CmdData
 execute store result bossbar orangeship2 max run scoreboard players get $ShipHP CmdData
+scoreboard players remove $ShipHP CmdData 1

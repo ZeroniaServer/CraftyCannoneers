@@ -5,9 +5,9 @@ execute at @s[tag=HasPlayer] store result score $current ChaseUUID run scoreboar
 execute at @s as @e[type=armor_stand,tag=GasBubble,distance=0.001..8] if score @s ChaseUUID = $current ChaseUUID run tag @s remove HasPlayer
 execute at @s as @e[type=armor_stand,tag=GasBubble,distance=0.001..8] if score @s ChaseUUID = $current ChaseUUID run scoreboard players reset @s ChaseUUID
 
-execute at @s[tag=HasPlayer] if entity @e[type=marker,tag=GasCloud,distance=..7] run tp @s ~ ~ ~ facing entity @p[tag=GasChase]
+execute at @s[tag=HasPlayer] on passengers at @s facing entity @p[tag=GasChase] eyes on vehicle positioned as @s if entity @e[type=marker,tag=GasCloud,distance=..7] run tp @s ~ ~ ~ ~ ~
 execute at @s[tag=HasPlayer] if entity @e[type=marker,tag=GasCloud,distance=..7] run tp @s ^ ^ ^0.08
-execute at @s run function game:boat/euler
+execute rotated as @s on passengers positioned as @s run tp @s ~ ~ ~ ~ ~
 
 tag @a[tag=GasChase] remove GasChase
 scoreboard players reset $current ChaseUUID

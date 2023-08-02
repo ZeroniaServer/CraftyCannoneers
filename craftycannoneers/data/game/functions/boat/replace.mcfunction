@@ -5,7 +5,7 @@ execute if score $boatwatercheck CmdData matches 1 at @s[tag=Replace] align y po
 execute unless score $boatwatercheck CmdData matches 1 at @s[tag=Replace] run function game:boat/rotate
 
 #> Place new boat if sinking
-execute if entity @s[tag=Sinking] run function game:boat/placenew
+execute if entity @s[tag=Sinking] run function game:boat/placenewmarker
 
 #> Teleport previous occupant up if dismounting
 execute at @s[tag=1,tag=Replace] as @a[tag=inBoat1,distance=..1] run function game:boat/dismounter

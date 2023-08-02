@@ -10,7 +10,7 @@ execute if score $rightdir CmdData matches 1 on passengers run tag @s[type=playe
 execute if score $rightdir CmdData matches 0 on passengers run tag @s[type=player] remove lookAtBCannon
 
 #> Detect occupied boat and replace display
-execute if entity @s[tag=!displayreplaced] on passengers on passengers on passengers on passengers run item replace entity @s[type=item_display,tag=BoatCannonDisplay] container.0 with air
+execute if entity @s[tag=!displayreplaced] on passengers on passengers on passengers run item replace entity @s[type=item_display,tag=BoatCannonDisplay] container.0 with air
 execute if entity @s[tag=!displayreplaced] run function game:boat/cannon/updategunpowder
 tag @s[tag=!displayreplaced] add displayreplaced
 
@@ -35,4 +35,4 @@ scoreboard players set @s[scores={sprint=12..}] sprint 0
 
 #> Rotate the Cannon along with the boat
 execute rotated as @s on passengers positioned as @s[type=camel] run tp @s ~ ~ ~ ~ ~
-execute rotated as @s on passengers on passengers on passengers on passengers positioned as @s run tp @s[tag=BoatCannonDisplay] ~ ~ ~ ~ ~
+execute rotated as @s on passengers on passengers on passengers positioned as @s run tp @s[tag=BoatCannonDisplay] ~ ~ ~ ~ ~

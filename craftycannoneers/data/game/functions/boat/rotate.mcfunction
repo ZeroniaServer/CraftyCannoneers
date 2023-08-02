@@ -1,7 +1,5 @@
-execute store result score @s[tag=!respawnboat] eyeclick run data get entity @s Rotation[0]
-scoreboard players set @s[scores={eyeclick=180}] eyeclick -180
-scoreboard players operation @s eyeclick /= 2 const
-function game:boat/rotate/tree/root
+data modify storage craftycannoneers:boat angle set from entity @s Rotation[0]
+function game:boat/placeboat with storage craftycannoneers:boat
 
 execute if entity @s[tag=1] run tag @e[type=boat,tag=Rotate,limit=1] add 1
 execute if entity @s[tag=1] run tag @e[type=armor_stand,tag=Rotate,limit=1] add 1

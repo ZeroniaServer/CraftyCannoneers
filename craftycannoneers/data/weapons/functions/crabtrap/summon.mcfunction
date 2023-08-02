@@ -6,6 +6,6 @@ playsound crabtrapopen master @a ~ ~ ~ 1 1.1
 
 execute if entity @s[tag=Empty] run tag @e[type=cat,tag=CrabVehicle,distance=..2] add CrabtrapImmune
 
-execute if entity @s[tag=Empty] run function weapons:crabtrap/rotate
-execute if entity @s[tag=!Empty] run function weapons:crabtrap/rotate_full
+data modify storage craftycannoneers:crab angle set from entity @s Rotation[0]
+function weapons:crabtrap/rotate with storage craftycannoneers:crab
 kill @s

@@ -18,26 +18,17 @@ spawnpoint @s[team=Lobby] -55 -21 0 -90
 execute unless score @s playerUUID matches -2147483648.. store result score @s playerUUID run data get entity @s UUID[0]
 tag @s[team=] add LeaveGame
 
-#> Message delay
-scoreboard players add @s msgdelay 0
-scoreboard players add @s[scores={msgdelay=..159}] msgdelay 1
-
-#> Movement detection
-scoreboard players reset @s[scores={msgdelay=..159}] jump
-scoreboard players reset @s[scores={msgdelay=..159}] walk
-scoreboard players reset @s[scores={msgdelay=..159}] sprint
-scoreboard players reset @s[scores={msgdelay=..159}] crouch
-tag @s[tag=!hasMoved,scores={jump=1..,msgdelay=160..}] add hasMoved
-tag @s[tag=!hasMoved,scores={walk=30..,msgdelay=160..}] add hasMoved
-tag @s[tag=!hasMoved,scores={sprint=50..,msgdelay=160..}] add hasMoved
-tag @s[tag=!hasMoved,scores={crouch=30..,msgdelay=160..}] add hasMoved
-
 #> Leave game
 function everytick:leavegame
 scoreboard players operation @s leavecheck = $curr leavecheck
 
-#> If player has moved
-execute if entity @s[tag=hasMoved] run function everytick:hasmoved
+#> Welcome new players
+execute at @s[team=Lobby,tag=!firstJoined] run function everytick:welcome
+
+#> Notify players about resource pack
+execute if score $gamestate CmdData matches 0..2 run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.0","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"ReadyToPlay","storage":"craftycannoneers:messages","interpret":true}]}]}]
+execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.0","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
+tag @s[tag=firstJoined] add msgReceived
 
 #> Servermode team join
 #Orange

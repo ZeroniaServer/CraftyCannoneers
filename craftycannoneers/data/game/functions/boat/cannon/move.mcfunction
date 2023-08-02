@@ -7,7 +7,7 @@ scoreboard players add @s PowerM 0
 execute if entity @s[tag=Sailing] run function game:boat/cannon/sailing
 
 #> Display functions
-execute rotated as @s on passengers on passengers on passengers on passengers positioned as @s[type=item_display,tag=BoatCannonDisplay] run function game:boat/display
+execute rotated as @s on passengers on passengers on passengers positioned as @s[type=item_display,tag=BoatCannonDisplay] run function game:boat/display
 
 #> Make sure Cannon doesn't tip when first mounted
 execute if entity @s[tag=!Sailing,tag=!fakestill] run function game:boat/cannon/fakestill

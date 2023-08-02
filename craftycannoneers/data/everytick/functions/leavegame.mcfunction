@@ -42,7 +42,6 @@ effect clear @s[tag=LeaveGame]
 gamemode adventure @s[tag=LeaveGame]
 attribute @s[tag=LeaveGame] minecraft:generic.luck base set 0.0
 recipe take @s[tag=LeaveGame] *
-tag @s[tag=LeaveGame,scores={LeftGame=1..}] remove hasMoved
 tag @s[tag=LeaveGame,scores={LeftGame=1..}] remove msgReceived
 scoreboard players reset @s[tag=!firstJoined,tag=LeaveGame] msgdelay
 tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/combat=false}] add NeedsTutorial

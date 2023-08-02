@@ -16,13 +16,17 @@ scoreboard players set @s[predicate=game:inwater,tag=!WaterKill,tag=!boat] CmdDa
 tag @s[predicate=game:inwater,tag=!WaterKill,tag=!boat] add WaterKill 
 tag @s[tag=WaterKill] remove Kaboom
 execute if entity @s[tag=WaterKill,scores={CmdData=0}] on vehicle run kill @s
-execute at @s[tag=WaterKill,scores={CmdData=1}] unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] positioned ~ ~-0.2 ~ unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] run function weapons:bomb/sinkanim
-execute at @s[tag=WaterKill,scores={CmdData=1}] unless block ~ ~ ~ #minecraft:slabs[waterlogged=true] positioned ~ ~-0.2 ~ if block ~ ~ ~ #minecraft:slabs[waterlogged=true] positioned ~ ~-0.3 ~ run function weapons:bomb/sinkanim
-execute at @s[tag=WaterKill,scores={CmdData=1}] if block ~ ~ ~ #minecraft:slabs[waterlogged=true] positioned ~ ~-0.6 ~ run function weapons:bomb/sinkanim
+execute at @s[tag=WaterKill,scores={CmdData=1..}] positioned ~ ~-0.8 ~ if predicate game:located_water run scoreboard players add @s crouch 1
+execute at @s[tag=WaterKill,scores={CmdData=1..}] positioned ~ ~-0.7 ~ if predicate game:located_water run scoreboard players add @s crouch 1
+execute at @s[tag=WaterKill,scores={CmdData=1..}] positioned ~ ~-0.6 ~ if predicate game:located_water run scoreboard players add @s crouch 1
+execute at @s[tag=WaterKill,scores={CmdData=1..,crouch=3}] run tp @s ~ ~-0.015 ~
+execute at @s[tag=WaterKill,scores={CmdData=1..,crouch=2}] run tp @s ~ ~-0.015 ~
+execute at @s[tag=WaterKill,scores={CmdData=1..,crouch=1}] run tp @s ~ ~-0.015 ~
+scoreboard players reset @s[tag=WaterKill,scores={CmdData=1..}] crouch
+execute at @s[tag=WaterKill,scores={CmdData=1..}] run particle bubble ~ ~ ~ 0 0 0 0 1 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=WaterKill,scores={CmdData=1}] run particle cloud ~ ~1 ~ 0 0 0 0.1 2 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=WaterKill,scores={CmdData=1}] run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.8 2
 execute at @s[tag=WaterKill,scores={CmdData=2}] run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.8 1.6
-execute at @s[tag=WaterKill,scores={CmdData=1..}] run function weapons:bomb/bubbletrail
 data merge entity @s[tag=WaterKill,scores={CmdData=28}] {start_interpolation:0,interpolation_duration:3,transformation:{scale:[0.0f,0.0f,0.0f]}}
 execute at @s[tag=WaterKill,scores={CmdData=30..}] run function weapons:bomb/waterkill
 
