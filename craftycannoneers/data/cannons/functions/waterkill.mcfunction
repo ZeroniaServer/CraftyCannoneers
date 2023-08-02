@@ -4,6 +4,8 @@ data merge entity @s {Motion:[0.0d,-0.3d,0.0d]}
 
 execute if entity @s[scores={eyeclick=1}] positioned ~ 100 ~ positioned over world_surface positioned ~ ~1 ~ run function cannons:splash
 
+particle bubble ^ ^1 ^ 0.05 0 0.05 0 1 force @a[predicate=cannons:seeparticles]
+
 execute if entity @s[tag=Cannonball,scores={eyeclick=30..}] run particle item diamond_hoe{CustomModelData:16} ^ ^1 ^ 0 0 0 0.1 40 force @a[predicate=cannons:seeparticles]
 execute if entity @s[tag=HotCannonball,scores={eyeclick=30..}] run particle item lava_bucket{CustomModelData:1} ^ ^1 ^ 0 0 0 0.1 40 force @a[predicate=cannons:seeparticles]
 execute if entity @s[tag=HotCannonball,scores={eyeclick=1}] run particle cloud ^ ^1.2 ^ 0.6 0.2 0.6 0.1 30 force @a[predicate=cannons:seeparticles]
