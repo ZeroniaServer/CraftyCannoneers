@@ -1,7 +1,4 @@
-scoreboard players set @s RNGmax 13
-execute store result score @s RNGscore run data get entity @s UUID[0]
-execute store result score @s RNGscore run scoreboard players operation @s RNGscore %= @s RNGmax
-
+execute store result score @s RNGscore run random value 0..12
 scoreboard players set $2 CmdData 2
 tag @s[scores={RNGscore=1..5}] add HLeft
 tag @s[scores={RNGscore=6..10}] add HRight

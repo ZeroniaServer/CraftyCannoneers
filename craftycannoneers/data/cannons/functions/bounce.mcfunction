@@ -8,12 +8,7 @@ particle cloud ~ ~ ~ 1 0.2 1 0.05 12 force
 
 execute at @s run function cannons:bounce/sound
 
-execute if score @s bounce matches 7.. run scoreboard players set $max RNGmax 100
-execute if score @s bounce matches 7.. at @s run summon marker ~ ~ ~ {Tags:["ExplodeRNG"]}
-execute if score @s bounce matches 7.. store result score $explode RNGscore run data get entity @e[type=marker,tag=ExplodeRNG,limit=1] UUID[0]
-kill @e[type=marker,tag=ExplodeRNG,limit=1]
-execute if score @s bounce matches 7.. run scoreboard players operation $explode RNGscore %= $max RNGmax
-scoreboard players reset $max RNGmax
+execute if score @s bounce matches 7.. store result score $explode RNGscore run random value 0..99
 
 scoreboard players add @s bounce 1
 

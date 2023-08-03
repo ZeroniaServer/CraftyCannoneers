@@ -5,7 +5,7 @@ execute if entity @s[tag=new] run function game:endfirework/duration
 execute if entity @s[tag=new2] run function game:endfirework/type
 
 #> Randomize rotation
-execute if entity @s[tag=new3] run function game:endfirework/rotation
+execute if entity @s[tag=new3] run function game:endfirework/randomrotation
 
 #> Flight
 scoreboard players add @s CmdData 1

@@ -1,8 +1,4 @@
-scoreboard players set @s RNGscore 0
-scoreboard players set @s RNGmax 100
-
-execute store result score @s RNGscore run data get entity @s UUID[2]
-scoreboard players operation @s RNGscore %= @s RNGmax
+execute store result score @s RNGscore run random value 0..99
 
 tag @s[scores={RNGscore=..30}] add CBGunpowder
 tag @s[scores={RNGscore=31..60}] add CBGold

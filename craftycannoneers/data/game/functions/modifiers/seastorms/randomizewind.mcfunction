@@ -1,15 +1,4 @@
-scoreboard players set @s z 0
-scoreboard players set @s RNGscore 0
-scoreboard players set @s RNGmax 81
-execute store result score @s RNGscore run data get entity @s UUID[0]
-execute store result score @s z run scoreboard players operation @s RNGscore %= @s RNGmax
-
-scoreboard players set @s y 0
-scoreboard players set @s RNGscore 0
-scoreboard players set @s RNGmax 45
-execute store result score @s RNGscore run data get entity @s UUID[0]
-execute store result score @s y run scoreboard players operation @s RNGscore %= @s RNGmax
-
-function game:modifiers/seastorms/windposrecursive
-
+execute store result storage craftycannoneers:wind z int 1 run random value 0..80
+execute store result storage craftycannoneers:wind y int 1 run random value 0..44
+function game:modifiers/seastorms/windpos with storage craftycannoneers:wind
 tag @s remove New

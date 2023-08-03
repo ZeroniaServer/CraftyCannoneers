@@ -1,11 +1,6 @@
 scoreboard players reset @s crabtime
 
-summon marker ~ ~ ~ {Tags:["CrabSwitch"]}
-scoreboard players set @e[type=marker,tag=CrabSwitch] RNGmax 100
-execute as @e[type=marker,tag=CrabSwitch] store result score @s RNGscore run data get entity @s UUID[0]
-execute as @e[type=marker,tag=CrabSwitch] run scoreboard players operation @s RNGscore %= @s RNGmax
-execute store result score @s crabmode run scoreboard players get @e[type=marker,tag=CrabSwitch,distance=..1,sort=nearest,limit=1] RNGscore
-kill @e[type=marker,tag=CrabSwitch]
+execute store result score @s crabmode run random value 0..99
 
 execute if score @s[tag=follow] crabmode matches 0..50 if entity @a[team=!Spectator,distance=..4] run scoreboard players set @s crabmode 100
 execute if score @s crabmode matches 51..75 if entity @a[team=!Spectator,distance=..15] run scoreboard players set @s crabmode 0

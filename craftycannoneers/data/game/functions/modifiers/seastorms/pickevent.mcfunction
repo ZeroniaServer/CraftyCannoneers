@@ -1,6 +1,4 @@
-scoreboard players set @s RNGmax 3
-execute store result score @s RNGscore run data get entity @s UUID[0]
-scoreboard players operation @s RNGscore %= @s RNGmax
+execute store result score @s RNGscore run random value 0..2
 
 execute if score @s RNGscore matches 0 run function game:modifiers/seastorms/lightning
 execute if score @s RNGscore matches 1 run function game:modifiers/seastorms/thunder

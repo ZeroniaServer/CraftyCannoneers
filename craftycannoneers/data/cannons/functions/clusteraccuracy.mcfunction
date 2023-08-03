@@ -3,9 +3,7 @@ scoreboard players add @s[tag=2] gravity 35
 scoreboard players add @s[tag=3] gravity 35
 scoreboard players add @s[tag=4] gravity 45
 
-scoreboard players set @s RNGmax 40
-execute store result score @s RNGscore run data get entity @s UUID[1]
-execute store result score @s RNGscore run scoreboard players operation @s RNGscore %= @s RNGmax
+execute store result score @s RNGscore run random value 0..39
 
 scoreboard players set $2 CmdData 2
 

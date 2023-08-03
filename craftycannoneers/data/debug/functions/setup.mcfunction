@@ -29,7 +29,7 @@ difficulty hard
 scoreboard objectives add CmdData dummy
 scoreboard players set $load CmdData 0
 scoreboard objectives add RNGscore dummy
-scoreboard objectives add RNGmax dummy
+scoreboard objectives remove RNGmax
 scoreboard objectives add drag dummy
 scoreboard objectives add gravity dummy
 scoreboard objectives add doublehit dummy
