@@ -61,10 +61,12 @@ scoreboard objectives add useharpoon minecraft.used:minecraft.trident
 scoreboard objectives add eyeclick dummy
 scoreboard objectives add openchest dummy
 scoreboard objectives add bubblewarn dummy
-scoreboard objectives add walk minecraft.custom:minecraft.walk_one_cm
-scoreboard objectives add sprint minecraft.custom:minecraft.sprint_one_cm
-scoreboard objectives add crouch minecraft.custom:minecraft.crouch_one_cm
-scoreboard objectives add jump minecraft.custom:minecraft.jump
+scoreboard objectives remove walk
+scoreboard objectives remove sprint
+scoreboard objectives remove crouch
+scoreboard objectives remove jump
+scoreboard objectives add ctr dummy
+scoreboard objectives add ctr2 dummy
 scoreboard objectives add click minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add clickcooldown dummy
 scoreboard objectives add throwsb minecraft.used:minecraft.snowball

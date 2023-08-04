@@ -6,5 +6,5 @@ execute store result score @s z2 run data get storage craftycannoneers:boat Pos[
 scoreboard players set @s dx2 0
 scoreboard players set @s dy2 0
 scoreboard players set @s dz2 0
-scoreboard players set @s crouch 5
+scoreboard players set @s ctr 5
 tag @s add fakestill

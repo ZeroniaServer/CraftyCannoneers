@@ -1,7 +1,7 @@
 #> Projectile functions
 scoreboard players set $inair CmdData 0
-execute at @s positioned ~ ~0.1 ~ if entity @e[type=boat,dx=0,limit=1] run scoreboard players add @s crouch 1
-execute if score @s crouch matches 2.. run tag @s add boat
+execute at @s positioned ~ ~0.1 ~ if entity @e[type=boat,dx=0,limit=1] run scoreboard players add @s ctr 1
+execute if score @s ctr matches 2.. run tag @s add boat
 execute if entity @s[tag=boat] on vehicle run kill
 execute if entity @s[tag=!boat] on vehicle run function weapons:bomb/projectile
 
@@ -16,13 +16,13 @@ scoreboard players set @s[predicate=game:inwater,tag=!WaterKill,tag=!boat] CmdDa
 tag @s[predicate=game:inwater,tag=!WaterKill,tag=!boat] add WaterKill 
 tag @s[tag=WaterKill] remove Kaboom
 execute if entity @s[tag=WaterKill,scores={CmdData=0}] on vehicle run kill @s
-execute at @s[tag=WaterKill,scores={CmdData=1..}] positioned ~ ~-0.8 ~ if predicate game:located_water run scoreboard players add @s crouch 1
-execute at @s[tag=WaterKill,scores={CmdData=1..}] positioned ~ ~-0.7 ~ if predicate game:located_water run scoreboard players add @s crouch 1
-execute at @s[tag=WaterKill,scores={CmdData=1..}] positioned ~ ~-0.6 ~ if predicate game:located_water run scoreboard players add @s crouch 1
-execute at @s[tag=WaterKill,scores={CmdData=1..,crouch=3}] run tp @s ~ ~-0.015 ~
-execute at @s[tag=WaterKill,scores={CmdData=1..,crouch=2}] run tp @s ~ ~-0.015 ~
-execute at @s[tag=WaterKill,scores={CmdData=1..,crouch=1}] run tp @s ~ ~-0.015 ~
-scoreboard players reset @s[tag=WaterKill,scores={CmdData=1..}] crouch
+execute at @s[tag=WaterKill,scores={CmdData=1..}] positioned ~ ~-0.8 ~ if predicate game:located_water run scoreboard players add @s ctr 1
+execute at @s[tag=WaterKill,scores={CmdData=1..}] positioned ~ ~-0.7 ~ if predicate game:located_water run scoreboard players add @s ctr 1
+execute at @s[tag=WaterKill,scores={CmdData=1..}] positioned ~ ~-0.6 ~ if predicate game:located_water run scoreboard players add @s ctr 1
+execute at @s[tag=WaterKill,scores={CmdData=1..,ctr=3}] run tp @s ~ ~-0.015 ~
+execute at @s[tag=WaterKill,scores={CmdData=1..,ctr=2}] run tp @s ~ ~-0.015 ~
+execute at @s[tag=WaterKill,scores={CmdData=1..,ctr=1}] run tp @s ~ ~-0.015 ~
+scoreboard players reset @s[tag=WaterKill,scores={CmdData=1..}] ctr
 execute at @s[tag=WaterKill,scores={CmdData=1..}] run particle bubble ~ ~ ~ 0 0 0 0 1 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=WaterKill,scores={CmdData=1}] run particle cloud ~ ~1 ~ 0 0 0 0.1 2 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=WaterKill,scores={CmdData=1}] run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.8 2
