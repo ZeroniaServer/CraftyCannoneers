@@ -15,8 +15,6 @@ kill @e[type=armor_stand,tag=TrainingDummy]
 function tutorial:trainingdummies/despawnall
 execute summon marker run function tutorial:trainingdummies/spawnall
 
-execute unless entity fffffe5c-ffff-ffbb-0000-01a400000045 run function inventory:randomizer/setup/begin
-
 #> Light up the Lobby for nighttime
 setblock -74 -22 1 light[level=13]
 setblock -73 -21 -1 light[level=15]

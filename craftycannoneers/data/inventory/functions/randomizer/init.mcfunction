@@ -1,36 +1,17 @@
-execute as fffffe5c-ffff-ffbb-0000-01a400000045 on passengers run function inventory:randomizer/reset
+#> Set up storage spaces
 data modify storage craftycannoneers:inventory Inventory set from entity @s Inventory
+data modify storage craftycannoneers:inventory Result set value []
 scoreboard players set $pickedinv CmdData 0
 
-#> Remove armor
+#> Remove armor/default items
 data remove storage craftycannoneers:inventory Inventory[{Slot:100b}]
 data remove storage craftycannoneers:inventory Inventory[{Slot:101b}]
 data remove storage craftycannoneers:inventory Inventory[{Slot:102b}]
 data remove storage craftycannoneers:inventory Inventory[{Slot:103b}]
-
-#> Filter out Cutlass
-data modify storage craftycannoneers:inventory Default set from storage craftycannoneers:inventory Inventory[{id:"minecraft:iron_sword"}]
-execute if data storage craftycannoneers:inventory Default store result score $slot CmdData run data get storage craftycannoneers:inventory Default.Slot
-execute if data storage craftycannoneers:inventory Default as fffffe5c-ffff-ffbb-0000-01a400000045 on passengers if score @s[tag=!invalid] CmdData = $slot CmdData run tag @s add invalid
-data remove storage craftycannoneers:inventory Default
-
-#> Filter out Crossbow
-data modify storage craftycannoneers:inventory Default set from storage craftycannoneers:inventory Inventory[{id:"minecraft:crossbow"}]
-execute if data storage craftycannoneers:inventory Default store result score $slot CmdData run data get storage craftycannoneers:inventory Default.Slot
-execute if data storage craftycannoneers:inventory Default as fffffe5c-ffff-ffbb-0000-01a400000045 on passengers if score @s[tag=!invalid] CmdData = $slot CmdData run tag @s add invalid
-data remove storage craftycannoneers:inventory Default
-
-#> Filter out Spotting Spyglass
-data modify storage craftycannoneers:inventory Default set from storage craftycannoneers:inventory Inventory[{id:"minecraft:spyglass"}]
-execute if data storage craftycannoneers:inventory Default store result score $slot CmdData run data get storage craftycannoneers:inventory Default.Slot
-execute if data storage craftycannoneers:inventory Default as fffffe5c-ffff-ffbb-0000-01a400000045 on passengers if score @s[tag=!invalid] CmdData = $slot CmdData run tag @s add invalid
-data remove storage craftycannoneers:inventory Default
-
-#> Filter out Tracer Cannonball
-data modify storage craftycannoneers:inventory Default set from storage craftycannoneers:inventory Inventory[{id:"minecraft:diamond_hoe",tag:{Cannonball:8b}}]
-execute if data storage craftycannoneers:inventory Default store result score $slot CmdData run data get storage craftycannoneers:inventory Default.Slot
-execute if data storage craftycannoneers:inventory Default as fffffe5c-ffff-ffbb-0000-01a400000045 on passengers if score @s[tag=!invalid] CmdData = $slot CmdData run tag @s add invalid
-data remove storage craftycannoneers:inventory Default
+data remove storage craftycannoneers:inventory Inventory[{id:"minecraft:iron_sword"}]
+data remove storage craftycannoneers:inventory Inventory[{id:"minecraft:crossbow"}]
+data remove storage craftycannoneers:inventory Inventory[{id:"minecraft:spyglass"}]
+data remove storage craftycannoneers:inventory Inventory[{id:"minecraft:diamond_hoe",tag:{Cannonball:8b}}]
 
 #> Soft-remove all arrows if player has starter arrows
 # The logic behind this kinda sucks, but it's way harder to remove only one slot
@@ -40,5 +21,3 @@ data remove storage craftycannoneers:inventory Default
 # the single slots for other default items. So we have to soft-remove them and let
 # the system filter out the empty slots by itself.
 execute if score @s arrowsToShoot matches 1.. run data remove storage craftycannoneers:inventory Inventory[{id:"minecraft:arrow"}]
-
-execute as fffffe5c-ffff-ffbb-0000-01a400000045 on passengers if entity @s[tag=invalid] run function inventory:randomizer/remove

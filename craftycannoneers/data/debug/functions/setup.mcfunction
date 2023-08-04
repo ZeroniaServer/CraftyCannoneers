@@ -29,7 +29,6 @@ difficulty hard
 scoreboard objectives add CmdData dummy
 scoreboard players set $load CmdData 0
 scoreboard objectives add RNGscore dummy
-scoreboard objectives remove RNGmax
 scoreboard objectives add drag dummy
 scoreboard objectives add gravity dummy
 scoreboard objectives add doublehit dummy
@@ -43,7 +42,6 @@ scoreboard objectives add leavegame trigger
 scoreboard objectives add CannonTutorial dummy
 scoreboard objectives add ChestTutorial dummy
 scoreboard objectives add playerUUID dummy
-scoreboard objectives remove arrowtime
 scoreboard objectives add death minecraft.custom:minecraft.deaths
 scoreboard objectives add kill playerKillCount
 scoreboard objectives add LeftGame minecraft.custom:minecraft.leave_game
@@ -61,10 +59,6 @@ scoreboard objectives add useharpoon minecraft.used:minecraft.trident
 scoreboard objectives add eyeclick dummy
 scoreboard objectives add openchest dummy
 scoreboard objectives add bubblewarn dummy
-scoreboard objectives remove walk
-scoreboard objectives remove sprint
-scoreboard objectives remove crouch
-scoreboard objectives remove jump
 scoreboard objectives add ctr dummy
 scoreboard objectives add ctr2 dummy
 scoreboard objectives add click minecraft.used:minecraft.carrot_on_a_stick

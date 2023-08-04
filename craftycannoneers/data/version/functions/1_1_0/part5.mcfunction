@@ -13,7 +13,14 @@ data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=ParkourText2,limit
 data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=Madeby,limit=1] {CustomName:'{"color":"gray","translate":"lobby.label.credits.1","with":[{"color":"green","translate":"zeronia"}]}'}
 data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=Clickon,limit=1] {CustomName:'{"italic":true,"color":"yellow","translate":"lobby.label.credits.2"}'}
 
+#> Remove unused scoreboard objectives
 scoreboard objectives remove fullInv
+scoreboard objectives remove RNGmax
+scoreboard objectives remove walk
+scoreboard objectives remove sprint
+scoreboard objectives remove crouch
+scoreboard objectives remove jump
+scoreboard objectives remove arrowtime
 
 #> Move Parkour leaderboard text up
 execute as @e[type=armor_stand,tag=ParkourAS,limit=1] if data entity @s CustomName run function version:1_1_0/leaderboardfix1
