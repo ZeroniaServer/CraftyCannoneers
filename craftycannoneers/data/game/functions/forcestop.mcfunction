@@ -1,6 +1,5 @@
 scoreboard players set @e[type=marker,tag=joinpad] CmdData 0
 title @a clear
-execute if score $gamestate CmdData matches 0.. unless score $updating CmdData matches 1 run tellraw @a[tag=!JoinReset] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.0","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
 tag @a[team=!Lobby] add LeaveGame
 scoreboard players set $WinningTeam CmdData 0
 scoreboard players set $EndTime CmdData 0

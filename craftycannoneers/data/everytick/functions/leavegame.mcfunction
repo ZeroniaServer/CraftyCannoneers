@@ -16,13 +16,13 @@ execute if score $servermode CmdData matches 1 run scoreboard players enable @s 
 execute if entity @s[team=!Lobby,team=!Spectator,team=!Developer] unless score @s leavegame matches 0 run tellraw @a ["",{"translate":"game.left_team","color":"dark_aqua","with":[{"selector":"@s"}]}]
 execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run tellraw @a ["",{"translate":"game.left_spectator","color":"gray","with":[{"selector":"@s","color":"dark_gray"}]}]
 execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run title @s actionbar ""
-execute if entity @s[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveGame
-execute if entity @s[team=Lobby,scores={leavegame=1..}] unless score @s leavegame matches 0 run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_leave","color":"red"}]
+tellraw @s[team=Lobby,scores={leavegame=1..}] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_leave","color":"red"}]
 scoreboard players reset @s[scores={leavegame=1..}] leavegame
 
 #Pirate Hat game leaving
 execute if entity @s[team=Purple,predicate=!game:has_hat] unless score @s death matches 1.. unless score @s respawn matches 1.. run trigger leavegame
 execute if entity @s[team=Orange,predicate=!game:has_hat] unless score @s death matches 1.. unless score @s respawn matches 1.. run trigger leavegame
+execute if entity @s[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveGame
 
 #Unready by leaving
 execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple,tag=ClickedReady] run function game:readyteams/unreadyleavepurple
@@ -30,6 +30,7 @@ execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matc
 
 title @s[tag=LeaveGame] times 0 50 15
 team join Lobby @s[tag=LeaveGame]
+execute if score $gamestate CmdData matches 2.. run function game:ingame/endcriteria
 execute at @s[tag=LeaveGame] run tp @s @s
 execute if entity @s[tag=LeaveGame,predicate=!game:tutorialbounds] run tp @s -55 -21 0 -90 0
 execute if entity @s[tag=LeaveGame,predicate=game:tutorialbounds] unless score @s LeftGame matches 1.. run tp @s -264 -20 -21 -90 0
@@ -43,7 +44,7 @@ gamemode adventure @s[tag=LeaveGame]
 attribute @s[tag=LeaveGame] minecraft:generic.luck base set 0.0
 recipe take @s[tag=LeaveGame] *
 tag @s[tag=LeaveGame,scores={LeftGame=1..}] remove hasMoved
-tag @s[tag=LeaveGame,scores={LeftGame=1..}] remove msgReceived
+tag @s[tag=LeaveGame] remove msgReceived
 scoreboard players reset @s[tag=!firstJoined,tag=LeaveGame] msgdelay
 tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/combat=false}] add NeedsTutorial
 tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/cannon=false}] add NeedsTutorial
