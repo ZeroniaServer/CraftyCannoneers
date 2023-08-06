@@ -21,8 +21,7 @@ execute at @s[scores={cannonshot=26}] unless score @s CmdData matches 8 run part
 execute at @s[scores={cannonshot=26}] unless score @s CmdData matches 8 run particle flame ^ ^2.1 ^2 0.1 0.1 0.1 0.3 6 force @a[predicate=cannons:seeparticles]
 execute at @s[scores={cannonshot=26}] unless score @s CmdData matches 8 run particle campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force @a[predicate=cannons:seeparticles]
 execute at @s[scores={cannonshot=26}] unless score @s CmdData matches 8 run particle lava ^ ^2.1 ^2 0.1 0.1 0.1 0.02 10 force @a[predicate=cannons:seeparticles]
-execute at @s[scores={cannonshot=28}] unless score @s CmdData matches 8 run item replace entity @s container.0 with diamond_hoe{CustomModelData:62}
-execute at @s[scores={cannonshot=29}] unless score @s CmdData matches 8 run item replace entity @s container.0 with diamond_hoe{CustomModelData:63}
+execute at @s[scores={cannonshot=28}] unless score @s CmdData matches 8 run tag @e[type=item_display,tag=CannonBarrel,limit=1,sort=nearest] add RecoilAnimation
 execute at @s[scores={cannonshot=30}] unless score @s CmdData matches 8 run item replace entity @s container.0 with diamond_hoe{CustomModelData:1}
 execute at @s[scores={cannonshot=30}] unless score @s CmdData matches 8 run summon marker ^ ^2 ^4 {Tags:["LightFlash","cannon"]}
 
