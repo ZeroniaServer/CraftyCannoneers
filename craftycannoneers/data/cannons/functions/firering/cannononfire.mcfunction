@@ -3,6 +3,10 @@ scoreboard players add @s firetime 1
 #> Ignite cannon
 execute at @s[scores={firetime=1},tag=!FireCannon] run function cannons:firering/ignitecannon
 
+#> Start Cannon Barrel fire animation
+execute at @s[scores={firetime=1},tag=!FireCannon] run tag @e[type=item_display,tag=CannonBarrel,limit=1,sort=nearest] add FireAnimation
+execute at @s[scores={firetime=1},tag=!FireCannon] run scoreboard players reset @e[type=item_display,tag=CannonBarrel,limit=1,sort=nearest] firetime
+
 #> Light block
 execute at @s run setblock ^ ^1 ^2 light[level=15]
 
