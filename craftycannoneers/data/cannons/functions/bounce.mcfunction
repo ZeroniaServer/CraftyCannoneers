@@ -25,9 +25,9 @@ execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run particle la
 execute at @s[tag=!Hit2] if score $explode RNGscore matches 80.. run function cannons:bounce/killslime
 execute if score $explode RNGscore matches 80.. run tag @s[tag=!Hit2] add Hit2
 
-execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run scoreboard players operation @s playerUUID = @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] playerUUID
-execute as @e[type=marker,tag=ImpactMarker,tag=!HasUUID] at @s run data modify entity @s CustomName set from entity @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..4] CustomName
-tag @e[type=marker,tag=ImpactMarker,tag=!HasUUID] add HasUUID
+scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID,limit=1] playerUUID = @s playerUUID
+data modify entity @e[type=marker,tag=ImpactMarker,tag=!HasUUID,limit=1] CustomName set from entity @s CustomName
+tag @e[type=marker,tag=ImpactMarker,tag=!HasUUID,limit=1] add HasUUID
 
 execute if score $explode RNGscore matches 80.. run tag @s add Hit2
 scoreboard players reset $explode RNGscore

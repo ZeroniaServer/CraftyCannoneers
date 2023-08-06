@@ -3,6 +3,18 @@
         "requirement": {
             "trigger": "minecraft:item_used_on_block",
             "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "team": "Lobby"
+                            }
+                        }
+                    }
+                ],
                 "location": [
                     {
                         "condition": "minecraft:match_tool",

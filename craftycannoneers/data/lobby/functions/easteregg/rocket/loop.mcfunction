@@ -29,7 +29,7 @@ execute at @s[scores={CmdData=100}] run playsound entity.generic.explode master 
 execute at @s[scores={CmdData=102}] run playsound entity.generic.explode master @a ~ ~ ~ 3 0.9
 execute at @s[scores={CmdData=105}] run playsound entity.generic.explode master @a ~ ~ ~ 3 0.8
 execute at @s[scores={CmdData=100}] run particle explosion ~ ~2 ~ 1.3 2 1.3 0.1 40 force
-execute at @s[scores={CmdData=102}] run item replace entity @s armor.head with air
+execute at @s[scores={CmdData=102}] run item replace entity @s container.0 with air
 execute at @s[scores={CmdData=102}] run summon item ~ ~ ~ {Tags:["RRHeadItem"],Item:{id:"player_head",Count:1b,tag:{SkullOwner:YZEROgame}},PickupDelay:2000,Motion:[0.0d,0.1d,0.15d]}
 execute at @s[scores={CmdData=102}] run summon item ~ ~ ~ {Tags:["RRHeadItem"],Item:{id:"player_head",Count:1b,tag:{SkullOwner:Evtema3}},PickupDelay:2000,Motion:[0.1d,0.3d,0.1d]}
 execute at @s[scores={CmdData=102}] run summon item ~ ~ ~ {Tags:["RRHeadItem"],Item:{id:"player_head",Count:1b,tag:{SkullOwner:Chronos22}},PickupDelay:2000,Motion:[0.15d,0.2d,0.0d]}

@@ -2,7 +2,7 @@
 execute as @e[type=item_display,tag=SnowmanDeco,limit=1] at @s run function lobby:easteregg/snowman
 
 #> Rocket Launch
-execute as @e[type=armor_stand,tag=RocketLaunch,limit=1] at @s run function lobby:easteregg/rocket/loop
+execute as @e[type=item_display,tag=RocketLaunch,limit=1] at @s run function lobby:easteregg/rocket/loop
 execute as @e[type=item,tag=RRHeadItem] at @s run function lobby:easteregg/rocket/headitem
 
 #> Pet the Parrot

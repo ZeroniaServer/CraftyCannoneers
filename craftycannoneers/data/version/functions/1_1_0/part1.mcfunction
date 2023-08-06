@@ -10,14 +10,16 @@ bossbar set updatebar style notched_6
 forceload add -413 -379 -260 -15
 
 #> Joinpad barrier displays
-execute unless entity @e[type=item_display,tag=JoinpadBarrier,tag=Orange] at @e[type=marker,tag=JoinpadOrange] positioned ~ ~1 ~ run summon item_display ~ ~ ~ {Tags:["JoinpadBarrier","Orange"],item:{id:"minecraft:barrier",Count:1},width:1f,height:1f,billboard:"center",brightness:{sky:15,block:15}}
-execute unless entity @e[type=item_display,tag=JoinpadBarrier,tag=Purple] at @e[type=marker,tag=JoinpadPurple] positioned ~ ~1 ~ run summon item_display ~ ~ ~ {Tags:["JoinpadBarrier","Purple"],item:{id:"minecraft:barrier",Count:1},width:1f,height:1f,billboard:"center",brightness:{sky:15,block:15}}
-execute unless entity @e[type=item_display,tag=JoinpadBarrier,tag=Spectator] at @e[type=marker,tag=JoinpadSpec] positioned ~ ~1 ~ run summon item_display ~ ~ ~ {Tags:["JoinpadBarrier","Spectator"],item:{id:"minecraft:barrier",Count:1},width:1f,height:1f,billboard:"center",brightness:{sky:15,block:15}}
+execute unless entity @e[type=item_display,tag=JoinpadBarrier,tag=Orange,limit=1] at @e[type=marker,tag=JoinpadOrange,limit=1] positioned ~ ~1 ~ run summon item_display ~ ~ ~ {Tags:["JoinpadBarrier","Orange"],item:{id:"minecraft:barrier",Count:1},width:1f,height:1f,billboard:"center",brightness:{sky:15,block:15}}
+execute unless entity @e[type=item_display,tag=JoinpadBarrier,tag=Purple,limit=1] at @e[type=marker,tag=JoinpadPurple,limit=1] positioned ~ ~1 ~ run summon item_display ~ ~ ~ {Tags:["JoinpadBarrier","Purple"],item:{id:"minecraft:barrier",Count:1},width:1f,height:1f,billboard:"center",brightness:{sky:15,block:15}}
+execute unless entity @e[type=item_display,tag=JoinpadBarrier,tag=Spectator,limit=1] at @e[type=marker,tag=JoinpadSpec,limit=1] positioned ~ ~1 ~ run summon item_display ~ ~ ~ {Tags:["JoinpadBarrier","Spectator"],item:{id:"minecraft:barrier",Count:1},width:1f,height:1f,billboard:"center",brightness:{sky:15,block:15}}
 
 kill @e[type=armor_stand,tag=chestdisplay]
 kill @e[type=armor_stand,tag=BoatAS]
 kill @e[type=armor_stand,tag=ShipBell]
 function arenaclear:shipbells
+kill @e[type=armor_stand,tag=seagull]
+function arenaclear:seagulls
 
 kill @e[type=armor_stand,tag=PirateHat]
 execute unless entity @e[type=item_display,tag=KlarHat,limit=1] run summon item_display -31.023135 -27.838197 23.363027 {Tags:["KlarHat","LobbyDisplay","PirateHat"],item:{id:"diamond_hoe",tag:{CustomModelData:39},Count:1b},transformation:{translation:[0.0f,1.8f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:2.0f,width:1.0f,Rotation:[137.0f,3.0f]}
@@ -29,10 +31,10 @@ execute unless entity @e[type=item_display,tag=BlockyHat,limit=1] run summon ite
 execute unless entity @e[type=item_display,tag=ParkourHat,limit=1] run summon item_display -73.800627 -21.826783 1.810798 {Tags:["ParkourHat","PirateHat","LobbyDisplay"],item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:61},Count:1b},transformation:{translation:[0.0f,1.8f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:3.0f,width:1.0f,Rotation:[-131.88344f,11.681128f]}
 
 kill @e[type=armor_stand,tag=CarlDeco2,limit=1]
-execute unless entity @e[type=item_display,tag=CarlDeco2] run summon item_display -32.244406 -27.999252 23.470547 {Rotation:[140.2422f,-0.73602414f],item:{id:"minecraft:spyglass",Count:1b},Tags:["CarlDeco2","LobbyDisplay"],transformation:{translation:[0.0f,1.8f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:2.0f,width:1.0f}
+execute unless entity @e[type=item_display,tag=CarlDeco2,limit=1] run summon item_display -32.244406 -27.999252 23.470547 {Rotation:[140.2422f,-0.73602414f],item:{id:"minecraft:spyglass",Count:1b},Tags:["CarlDeco2","LobbyDisplay"],transformation:{translation:[0.0f,1.8f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:2.0f,width:1.0f}
 
 kill @e[type=armor_stand,tag=StuffyDeco2,limit=1]
-execute unless entity @e[type=item_display,tag=StuffyDeco2] run summon item_display -36.651614 -25.487648 23.194982 {Rotation:[-102.30206f,1.4650879f],item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:30},Count:1b},Tags:["LobbyDisplay","StuffyDeco2"],transformation:{translation:[0.0f,0.9f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.4375f,0.4375f,0.4375f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:1.0f,width:1.0f}
+execute unless entity @e[type=item_display,tag=StuffyDeco2,limit=1] run summon item_display -36.651614 -25.487648 23.194982 {Rotation:[-102.30206f,1.4650879f],item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:30},Count:1b},Tags:["LobbyDisplay","StuffyDeco2"],transformation:{translation:[0.0f,0.9f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.4375f,0.4375f,0.4375f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},item_display:"head",height:1.0f,width:1.0f}
 
 execute as @e[type=item_display,tag=LobbyDisplay] at @s run tp @s ^ ^ ^
 

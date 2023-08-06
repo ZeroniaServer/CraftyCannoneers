@@ -12,7 +12,7 @@ execute if entity @a[team=Lobby,tag=OnDock,limit=1] run scoreboard players set $
 execute if score $runcannon CmdData matches 1 run function tutorial:cannondock/main
 
 #> Ship Timer
-execute if score $shipstatus CmdData matches 1 unless entity @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/tutorial] run function tutorial:cannondock/shiptimer
+execute if score $shipstatus CmdData matches 1 unless entity @e[type=armor_stand,tag=cannonball,predicate=cannons:safezones/tutorial,limit=1] run function tutorial:cannondock/shiptimer
 execute unless entity @a[tag=OnDock] if score $shipstatus CmdData matches 1 if score $shiptimer CmdData matches 1.. run function tutorial:cannondock/restoreship
 execute unless entity @a[predicate=game:tutorialbounds] as @e[type=item_display,tag=CannonDisp,tag=Tutorial,scores={eyeclick=1..}] run scoreboard players set @s eyeclick 120
 

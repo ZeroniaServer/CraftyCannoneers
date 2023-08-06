@@ -8,8 +8,3 @@ execute unless entity @e[type=armor_stand,tag=LChestFakeC] run function tutorial
 
 #> Chest functionality
 execute as @e[type=armor_stand,tag=fakechest] run function tutorial:treasurepit/chests
-execute as @e[type=hopper_minecart,tag=fakechest] run function tutorial:treasurepit/chests
-execute as @e[type=chest_minecart,tag=fakechest] run function tutorial:treasurepit/chests
-
-#> Locked Chest notifications
-execute as @e[type=armor_stand,tag=LChestFakeC] at @s run function tutorial:treasurepit/lockedchestnotif

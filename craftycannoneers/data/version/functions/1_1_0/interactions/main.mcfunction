@@ -1,5 +1,5 @@
 execute at @s[tag=LChestVillager] run function version:1_1_0/interactions/lchest
-execute at @s[tag=LChestFakeVillager] run function version:1_1_0/interactions/lchestfake
+execute at @s[tag=LChestFakeVillager] run function version:1_1_0/interactions/lchest
 execute at @s[tag=BlockyCredit] run function version:1_1_0/interactions/blocky
 execute at @s[tag=CarlCredit] run function version:1_1_0/interactions/carl
 execute at @s[tag=EvtemaCredit] run function version:1_1_0/interactions/evtema

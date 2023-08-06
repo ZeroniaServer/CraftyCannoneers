@@ -29,7 +29,7 @@ scoreboard players set $curr crabs 0
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=item] at @s run function everytick:items
 
 #> Seagulls
-execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=armor_stand,tag=seagull] at @s at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run function everytick:seagull
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=item_display,tag=seagull] at @s at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run function everytick:seagull
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=marker,tag=seagull] at @s run function everytick:seagullspin
 
 #> Cannons

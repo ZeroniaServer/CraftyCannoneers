@@ -40,12 +40,12 @@ execute at @s[team=Purple,scores={openchest=20}] if entity @e[type=item_display,
 execute at @s[team=Purple,predicate=game:onorange,scores={openchest=20..}] run tag @e[type=item_display,tag=orangechestdisplay,tag=!Unlocked] add Unlocked
 execute at @s[team=Orange,predicate=game:onpurple,scores={openchest=20..}] run tag @e[type=item_display,tag=purplechestdisplay,tag=!Unlocked] add Unlocked
 
-execute at @s[team=Purple,predicate=!game:onorange,scores={openchest=20..}] run kill @e[type=interaction,tag=LChest]
+execute at @s[team=Purple,predicate=!game:onorange,scores={openchest=20..}] run kill @e[type=interaction,tag=LChest,limit=1]
 execute at @s[team=Purple,predicate=!game:onorange,scores={openchest=20..}] run tag @e[type=armor_stand,tag=LChestAS,tag=!Unlocked,limit=1,sort=nearest] add Unlocked
-execute at @s[team=Orange,predicate=!game:onpurple,scores={openchest=20..}] run kill @e[type=interaction,tag=LChest]
+execute at @s[team=Orange,predicate=!game:onpurple,scores={openchest=20..}] run kill @e[type=interaction,tag=LChest,limit=1]
 execute at @s[team=Orange,predicate=!game:onpurple,scores={openchest=20..}] run tag @e[type=armor_stand,tag=LChestAS,tag=!Unlocked,limit=1,sort=nearest] add Unlocked
 
-execute at @s[team=Lobby,scores={openchest=20..}] run kill @e[type=interaction,tag=LChestFake]
+execute at @s[team=Lobby,scores={openchest=20..}] run kill @e[type=interaction,tag=LChestFake,limit=1]
 execute at @s[team=Lobby,scores={openchest=20..}] run tag @e[type=armor_stand,tag=LChestFakeC,tag=!Unlocked,limit=1,sort=nearest] add Unlocked
 scoreboard players reset @s[scores={openchest=20..}] openchest
 

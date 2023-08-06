@@ -65,7 +65,6 @@ scoreboard players set $LostCargo CmdData 0
 scoreboard players set $GraveRobbery CmdData 0
 scoreboard players set $BoatCannons CmdData 0
 scoreboard players set $Daytime CmdData 0
-scoreboard players reset @e[type=armor_stand,tag=Parrot,limit=1] CmdData
 
 bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"6","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
 bossbar set updatebar value 6
