@@ -19,6 +19,7 @@ kill @e[type=armor_stand,tag=BoatAS]
 kill @e[type=armor_stand,tag=ShipBell]
 function arenaclear:shipbells
 kill @e[type=armor_stand,tag=seagull]
+kill @e[type=armor_stand,tag=EndFirework]
 function arenaclear:seagulls
 
 kill @e[type=armor_stand,tag=PirateHat]

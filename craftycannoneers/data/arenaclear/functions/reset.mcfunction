@@ -10,7 +10,7 @@ kill @e[type=marker,tag=LockSpawn]
 execute as @e[type=armor_stand,tag=chest] run function chests:kill
 kill @e[type=area_effect_cloud,tag=ChestNotif]
 kill @e[type=item,predicate=game:inarena]
-kill @e[type=armor_stand,tag=EndFirework]
+kill @e[type=item_display,tag=EndFirework]
 kill @e[type=arrow,predicate=!game:tutorialbounds]
 kill @e[type=trident,predicate=!game:tutorialbounds]
 kill @e[type=armor_stand,tag=GasBubble,predicate=!cannons:ships/tutorialfull]

@@ -6,3 +6,4 @@ scoreboard players set $angle CmdData 3
 execute store result storage craftycannoneers:firework angle int 1 run scoreboard players operation $angle CmdData *= @s RNGscore
 execute at @s run function game:endfirework/rotate with storage craftycannoneers:firework angle
 tag @s remove new3
+data modify entity @s teleport_duration set value 2
