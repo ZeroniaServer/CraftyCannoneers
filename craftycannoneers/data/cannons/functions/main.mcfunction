@@ -1,10 +1,8 @@
 #> Load Gunpowder
 execute as @e[type=item_display,tag=DisplayGP] at @s run function cannons:loadgunpowder
 
-#> Cannon Tick
-execute as @e[type=item_display,tag=CannonDisp,tag=CannonCart] at @s run function cannons:cannontick
-execute as @e[type=item_display,tag=CannonDisp,tag=RecoilAnimation] at @s run function cannons:recoilanim
-execute as @e[type=item_display,tag=CannonDisp,tag=FireAnimation] at @s run function cannons:fireanim
+#> Cannon Displays
+execute as @e[type=item_display,tag=CannonDisp] at @s run function cannons:display
 
 #> Light Flash
 execute as @e[type=marker,tag=LightFlash] at @s run function cannons:lightflash
