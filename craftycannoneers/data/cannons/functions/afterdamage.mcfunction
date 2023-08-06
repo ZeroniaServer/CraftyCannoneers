@@ -32,7 +32,9 @@ execute if entity @s[tag=ChainImpact,scores={CalcSail1=..10},predicate=cannons:s
 execute if entity @s[tag=ChainImpact,predicate=cannons:ships/purple] unless score @s CalcSail1 matches 1.. at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
 execute if entity @s[tag=ChainImpact,scores={doublehit=4..},predicate=cannons:ships/purple] unless score @s CalcSail1 matches 1.. at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
 execute if entity @s[tag=ChainImpact,predicate=cannons:ships/purple] if score @s CalcSail1 matches 1.. at @s run playsound ripsail master @a ~ ~ ~ 3 1
+execute if entity @s[tag=ChainImpact,predicate=cannons:ships/purple] if score @s CalcSail1 matches 1.. at @s run particle block purple_wool ~ ~ ~ 1 1 1 0.1 100 force @a[predicate=cannons:seeparticles]
 execute if entity @s[tag=ChainImpact,scores={doublehit=4..},predicate=cannons:ships/purple] if score @s CalcSail1 matches 1.. at @s run playsound ripsail master @a ~ ~ ~ 3 0.9
+execute if entity @s[tag=ChainImpact,scores={doublehit=4..},predicate=cannons:ships/purple] if score @s CalcSail1 matches 1.. at @s run particle block purple_wool ~ ~ ~ 1 1 1 0.1 100 force @a[predicate=cannons:seeparticles]
 execute if entity @s[tag=ChainImpact] at @s unless score @s CalcSail1 matches 1.. run playsound cannonball master @a ~ ~ ~ 4 1
 execute if entity @s[tag=ChainImpact] at @s unless score @s CalcSail1 matches 1.. run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1
 
@@ -74,7 +76,9 @@ execute if entity @s[tag=ChainImpact,scores={CalcSail1=..10},predicate=cannons:s
 execute if entity @s[tag=ChainImpact,predicate=cannons:ships/orange] unless score @s CalcSail1 matches 1.. at @s run playsound shipdamage2 master @a ~ ~ ~ 2 1
 execute if entity @s[tag=ChainImpact,scores={doublehit=4..},predicate=cannons:ships/orange] unless score @s CalcSail1 matches 1.. at @s run playsound shipdamage1 master @a ~ ~ ~ 2 1
 execute if entity @s[tag=ChainImpact,predicate=cannons:ships/orange] if score @s CalcSail1 matches 1.. at @s run playsound ripsail master @a ~ ~ ~ 3 1
+execute if entity @s[tag=ChainImpact,predicate=cannons:ships/orange] if score @s CalcSail1 matches 1.. at @s run particle block orange_wool ~ ~ ~ 1 1 1 0.1 100 force @a[predicate=cannons:seeparticles]
 execute if entity @s[tag=ChainImpact,scores={doublehit=4..},predicate=cannons:ships/orange] if score @s CalcSail1 matches 1.. at @s run playsound ripsail master @a ~ ~ ~ 3 0.9
+execute if entity @s[tag=ChainImpact,scores={doublehit=4..},predicate=cannons:ships/orange] if score @s CalcSail1 matches 1.. at @s run particle block orange_wool ~ ~ ~ 1 1 1 0.1 100 force @a[predicate=cannons:seeparticles]
 
 execute if entity @s[scores={CalcAir2=0..},predicate=cannons:ships/orange] run scoreboard players operation $CurrentDamage CmdData += @s CriticalDamage
 execute if entity @s[scores={CalcAir2=0..,CriticalDamage=1..},predicate=cannons:ships/orange] run scoreboard players operation $CritOrange CmdData += $CurrentDamage CmdData
