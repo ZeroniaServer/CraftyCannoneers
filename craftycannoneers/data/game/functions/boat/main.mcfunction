@@ -26,7 +26,6 @@ execute if entity @a unless entity @e[type=boat,tag=BoatBoat,tag=4] run summon m
 execute as @e[type=marker,tag=respawnboat] at @s run function game:boat/placenew
 
 #> Kill extra entities (failsafe)
-kill @e[type=item_display,tag=BoatBanner2,predicate=!game:mounted]
 kill @e[type=interaction,tag=boatoccupant,predicate=!game:boat/inboat]
 execute if score $BoatCannons CmdData matches 1 as @e[type=camel,tag=BoatCannonAnchor,predicate=!game:boat/inboat] run function game:boat/cannon/kill
 execute if score $BoatCannons CmdData matches 1 as @e[type=area_effect_cloud,tag=BoatCannonOffset,predicate=!game:mounted] run function game:boat/cannon/kill

@@ -9,11 +9,6 @@ execute if score $rightdir CmdData matches 1 on passengers run effect give @s[ty
 execute if score $rightdir CmdData matches 1 on passengers run tag @s[type=player] add lookAtBCannon
 execute if score $rightdir CmdData matches 0 on passengers run tag @s[type=player] remove lookAtBCannon
 
-#> Detect occupied boat and replace display
-execute if entity @s[tag=!displayreplaced] on passengers on passengers on passengers run item replace entity @s[type=item_display,tag=BoatCannonDisplay] container.0 with air
-execute if entity @s[tag=!displayreplaced] run function game:boat/cannon/updategunpowder
-tag @s[tag=!displayreplaced] add displayreplaced
-
 #> Tip Cannon model down while moving
 function game:boat/cannon/motiondetect
 execute if entity @s[tag=!still,tag=!tipped,tag=!FireCannon,tag=!OnFire] run function game:boat/cannon/tipcannon

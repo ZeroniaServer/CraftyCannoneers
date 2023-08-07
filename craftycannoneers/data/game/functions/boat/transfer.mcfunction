@@ -11,4 +11,4 @@ scoreboard players add @s PowerM 0
 execute if score $recoil CmdData matches 1 run tag @s add Recoil
 tag @s[scores={CannonID=1..},tag=!OnFire] add FireCannon
 execute unless entity @s[tag=FireCannon] on passengers run scoreboard players operation @s[type=camel] PowerM = $temp PowerM
-function game:boat/cannon/transfergunpowder
+function game:boat/cannon/updategunpowder

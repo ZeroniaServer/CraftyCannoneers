@@ -2,14 +2,11 @@
 execute on vehicle rotated as @s on passengers positioned as @s[type=!player] run tp @s ~ ~ ~ ~ ~
 function game:boat/display
 
-#> Hide this sail in order to show the other one
-execute on vehicle if entity @s[tag=Sailing] on passengers run item replace entity @s[tag=BoatBanner] container.0 with air
-
 #> Set banner color
-execute on vehicle if entity @s[tag=!motionlock] on passengers if entity @s[type=player,team=Purple] on vehicle on passengers on passengers run item replace entity @s[tag=BoatBanner2] container.0 with purple_banner
-execute on vehicle if entity @s[tag=!motionlock] on passengers if entity @s[type=player,team=Orange] on vehicle on passengers on passengers run item replace entity @s[tag=BoatBanner2] container.0 with orange_banner
-execute on vehicle if entity @s[tag=motionlock] on passengers on passengers if entity @s[type=player,team=Purple] on vehicle on vehicle on passengers on passengers run item replace entity @s[tag=BoatBanner2] container.0 with purple_banner
-execute on vehicle if entity @s[tag=motionlock] on passengers on passengers if entity @s[type=player,team=Orange] on vehicle on vehicle on passengers on passengers run item replace entity @s[tag=BoatBanner2] container.0 with orange_banner
+execute on vehicle if entity @s[tag=!motionlock] on passengers if entity @s[type=player,team=Purple] on vehicle on passengers run item replace entity @s[tag=BoatBanner] container.0 with purple_banner
+execute on vehicle if entity @s[tag=!motionlock] on passengers if entity @s[type=player,team=Orange] on vehicle on passengers run item replace entity @s[tag=BoatBanner] container.0 with orange_banner
+execute on vehicle if entity @s[tag=motionlock] on passengers on passengers if entity @s[type=player,team=Purple] on vehicle on vehicle on passengers run item replace entity @s[tag=BoatBanner] container.0 with purple_banner
+execute on vehicle if entity @s[tag=motionlock] on passengers on passengers if entity @s[type=player,team=Orange] on vehicle on vehicle on passengers run item replace entity @s[tag=BoatBanner] container.0 with orange_banner
 tag @s[tag=New] remove New
 
 #> Killing (failsafe)
