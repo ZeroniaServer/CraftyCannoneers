@@ -27,7 +27,3 @@ execute if score $rightdir CmdData matches 1 run scoreboard players add @s ctr2 
 execute if score $rightdir CmdData matches 1 if score @s ctr2 matches 1 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] run function game:boat/cannon/cycleinteraction
 execute if score $rightdir CmdData matches 1 if score @s ctr2 matches 7 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] on passengers if entity @s[tag=kill] run function arenaclear:kill
 scoreboard players set @s[scores={ctr2=12..}] ctr2 0
-
-#> Rotate the Cannon along with the boat
-execute rotated as @s on passengers positioned as @s[type=camel] run tp @s ~ ~ ~ ~ ~
-execute rotated as @s on passengers on passengers on passengers positioned as @s run tp @s[tag=BoatCannonDisplay] ~ ~ ~ ~ ~
