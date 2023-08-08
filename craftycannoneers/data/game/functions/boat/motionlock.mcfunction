@@ -28,4 +28,3 @@ tag @e[type=boat,tag=Rotate,limit=1] remove Rotate
 
 execute on passengers if entity @s[type=player] run function game:boat/mountlock
 tag @s add kill
-function game:boat/cannon/kill

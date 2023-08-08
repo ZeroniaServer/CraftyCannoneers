@@ -15,7 +15,9 @@ execute if entity @s[scores={click=5..},tag=!allowmount] on passengers run data 
 tag @s[scores={click=8},tag=!allowmount] add allowmount
 
 #> Handle Boat Cannon if enabled
+execute if entity @s[tag=kill] run function game:boat/cannon/kill
 execute if score $BoatCannons CmdData matches 1 run function game:boat/cannon/move
+execute if entity @s[tag=kill] run return 0
 
 #> Sailing check
 execute at @s[tag=1,tag=!Sinking] if entity @a[team=!Lobby,team=!Spectator,team=!Developer,predicate=game:boat/inboat1,limit=1] run tag @s add Sailing

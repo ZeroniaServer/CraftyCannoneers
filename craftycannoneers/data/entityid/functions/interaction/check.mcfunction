@@ -81,8 +81,8 @@ execute if entity @s[tag=Snowman] unless entity @e[type=item_display,tag=EasterE
 execute at @s[tag=Goldy] unless score $goldypet CmdData matches 1.. on target run function lobby:easteregg/goldy
 
 #> Boats
-execute if entity @s[tag=boatoccupant] on vehicle run ride @a[tag=self,limit=1] mount @s[tag=!Sailing,tag=!motionlock]
-execute if entity @s[tag=boatoccupant] on vehicle if entity @s[tag=motionlock] on passengers run ride @a[tag=self,limit=1] mount @s[tag=boatoccupant]
+execute if entity @s[tag=boatoccupant] on vehicle run ride @a[tag=self,limit=1] mount @s[tag=!Sailing,tag=!motionlock,tag=!kill]
+execute if entity @s[tag=boatoccupant] on vehicle if entity @s[tag=motionlock,tag=!kill] on passengers run ride @a[tag=self,limit=1] mount @s[tag=boatoccupant]
 
 #> Boat Cannon
 execute if score $BoatCannons CmdData matches 1 if entity @s[tag=BoatCannon] on vehicle on vehicle on vehicle if entity @s[tag=!FireCannon] on passengers if entity @s[type=player,tag=self] run function game:boat/cannon/interact
