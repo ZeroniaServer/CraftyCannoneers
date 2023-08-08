@@ -11,8 +11,10 @@ execute if score $rightdir CmdData matches 0 on passengers run tag @s[type=playe
 
 #> Tip Cannon model down while moving
 function game:boat/cannon/motiondetect
-execute if entity @s[tag=!still,tag=!tipped,tag=!FireCannon,tag=!OnFire] run function game:boat/cannon/tipcannon
-execute if entity @s[tag=still,tag=tipped,tag=!FireCannon,tag=!OnFire] run function game:boat/cannon/updategunpowder
+scoreboard players add @s[scores={eyeclick=1..}] eyeclick 1
+scoreboard players reset @s[scores={eyeclick=10..}] eyeclick
+execute if entity @s[tag=!still,tag=!tipped,tag=!FireCannon,tag=!OnFire] unless score @s eyeclick matches 1.. run function game:boat/cannon/tipcannon
+execute if entity @s[tag=still,tag=tipped,tag=!FireCannon,tag=!OnFire] run function game:boat/cannon/untipcannon
 
 #> Prevent clicking on Cannon if not looking in right direction
 execute if score $rightdir CmdData matches 0 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] run function game:boat/cannon/removeinteraction
@@ -24,6 +26,6 @@ execute if score $rightdir CmdData matches 1 on passengers on passengers on pass
 #> Interaction cycling
 execute if score $rightdir CmdData matches 0 run scoreboard players set @s ctr2 0
 execute if score $rightdir CmdData matches 1 run scoreboard players add @s ctr2 1
-execute if score $rightdir CmdData matches 1 if score @s ctr2 matches 1 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] run function game:boat/cannon/cycleinteraction
-execute if score $rightdir CmdData matches 1 if score @s ctr2 matches 7 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] on passengers if entity @s[tag=kill] run function arenaclear:kill
+execute if score $rightdir CmdData matches 1 if score @s ctr2 matches 12 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] run function game:boat/cannon/cycleinteraction
+execute if score $rightdir CmdData matches 1 if score @s ctr2 matches 6 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] on passengers if entity @s[tag=kill] run function arenaclear:kill
 scoreboard players set @s[scores={ctr2=12..}] ctr2 0

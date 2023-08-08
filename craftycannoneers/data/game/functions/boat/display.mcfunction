@@ -10,3 +10,5 @@ execute unless score $lighting CmdData matches 1 run data remove entity @s[tag=l
 execute unless score $lighting CmdData matches 1 run tag @s remove lit
 execute unless score $lighting CmdData matches 1 on passengers run data remove entity @s[tag=lit] brightness
 execute unless score $lighting CmdData matches 1 on passengers run tag @s remove lit
+
+execute rotated as @s on passengers positioned as @s run tp @s ~ ~ ~ ~ ~

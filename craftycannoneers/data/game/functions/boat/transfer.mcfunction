@@ -1,8 +1,6 @@
 scoreboard players operation @s firetime = $temp firetime
+execute if score $motionlock CmdData matches 1 run tag @s add motionlock
 execute if score $onfire CmdData matches 1 run tag @s add OnFire
-execute if score $motionlock CmdData matches 1 run function game:boat/motionlock
-execute unless score $BoatCannons CmdData matches 1 run return 0
-
 scoreboard players operation @s CannonID = $temp CannonID
 scoreboard players operation @s cannonshot = $temp cannonshot
 scoreboard players operation @s playerUUID = $temp playerUUID

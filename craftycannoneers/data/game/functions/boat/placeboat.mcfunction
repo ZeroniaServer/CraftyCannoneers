@@ -1,5 +1,5 @@
 #> Place Boat
-$summon boat ~ ~ ~ {Rotation:[$(angle),0.0f],Invulnerable:1b,Tags:["Boat","BoatBoat","new","Rotate"],Passengers:[{id:"minecraft:interaction",Tags:["boatoccupant"],width:0,height:0,response:1b}]}
+$summon boat ~ ~ ~ {Rotation:[$(angle),0.0f],Invulnerable:1b,Tags:["Boat","BoatBoat","new","Rotate"],Passengers:[{id:"minecraft:interaction",Tags:["boatoccupant","new"],width:0,height:0,response:1b}]}
 
 $execute as @e[type=boat,tag=new] at @s anchored feet rotated ~ 0 run summon item_display ^ ^0.1875 ^-0.6 {Rotation:[$(angle),0.0f],Tags:["Boat","BoatBanner","new","Rotate"],teleport_duration:3,width:1f,height:2f,item:{id:"minecraft:black_banner",Count:1b,tag:{BlockEntityTag:{Patterns:[{Pattern:sku,Color:0}]}}},item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]}}
 

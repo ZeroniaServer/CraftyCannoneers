@@ -5,8 +5,9 @@ function game:boat/display
 #> Set banner color
 execute on vehicle if entity @s[tag=!motionlock] on passengers if entity @s[type=player,team=Purple] on vehicle on passengers run item replace entity @s[tag=BoatBanner] container.0 with purple_banner
 execute on vehicle if entity @s[tag=!motionlock] on passengers if entity @s[type=player,team=Orange] on vehicle on passengers run item replace entity @s[tag=BoatBanner] container.0 with orange_banner
-execute on vehicle if entity @s[tag=motionlock] on passengers on passengers if entity @s[type=player,team=Purple] on vehicle on vehicle on passengers run item replace entity @s[tag=BoatBanner] container.0 with purple_banner
-execute on vehicle if entity @s[tag=motionlock] on passengers on passengers if entity @s[type=player,team=Orange] on vehicle on vehicle on passengers run item replace entity @s[tag=BoatBanner] container.0 with orange_banner
+execute on vehicle if entity @s[tag=motionlock] on passengers if entity @s[type=player,team=Purple] on vehicle on passengers run item replace entity @s[tag=BoatBanner] container.0 with purple_banner
+execute on vehicle if entity @s[tag=motionlock] on passengers if entity @s[type=player,team=Orange] on vehicle on passengers run item replace entity @s[tag=BoatBanner] container.0 with orange_banner
+
 tag @s[tag=New] remove New
 
 #> Killing (failsafe)
