@@ -28,6 +28,7 @@ execute if entity @s[type=endermite,tag=CrabController,tag=inwater] on vehicle a
 
 #> Shooting Boat Cannon entities hurts the player
 execute if score $arrow CmdData matches 1 if entity @s[type=camel,tag=BoatCannonAnchor] on vehicle on passengers run function entityid:hit/fakearrow
+execute if score $arrow CmdData matches 1 if entity @s[type=husk,tag=BoatCannonDisplay] on vehicle on vehicle on vehicle on vehicle on passengers run function entityid:hit/fakearrow
 
 #> Tags for interacting with Cannons
 execute if entity @s[tag=CannonVLeft,tag=!GPLocked] run tag @a[limit=1,tag=hitter] add FillLeft
