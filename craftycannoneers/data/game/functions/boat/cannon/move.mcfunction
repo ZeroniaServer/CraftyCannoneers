@@ -14,6 +14,7 @@ execute if entity @s[tag=!Sailing,tag=!fakestill] run function game:boat/cannon/
 
 #> Permababy camel
 execute on passengers if entity @s[type=camel] run function everytick:permababy
+execute on passengers on passengers if entity @s[type=camel] run function everytick:permababy
 
 #> Make passengers invulnerable unless an arrow's nearby
 execute at @s store success score $arrownearby CmdData if entity @e[type=arrow,limit=1,distance=..6]

@@ -17,7 +17,8 @@ execute if entity @s[tag=!still,tag=!tipped,tag=!FireCannon,tag=!OnFire] unless 
 execute if entity @s[tag=still,tag=tipped,tag=!FireCannon,tag=!OnFire] run function game:boat/cannon/untipcannon
 
 #> Prevent clicking on Cannon if not looking in right direction
-execute if score $rightdir CmdData matches 0 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] run function game:boat/cannon/removeinteraction
+execute if entity @s[tag=!tipped] if score $rightdir CmdData matches 0 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] run function game:boat/cannon/removeinteraction
+execute if entity @s[tag=tipped] if score $rightdir CmdData matches 0 on passengers on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] run function game:boat/cannon/removeinteraction
 execute if score $rightdir CmdData matches 1 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=!interaction] run function game:boat/cannon/replaceinteraction
 
 #> Prevent click animation if not holding right item
