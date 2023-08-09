@@ -35,5 +35,4 @@ scoreboard players set @s[scores={sprint=12..}] sprint 0
 
 #> Rotate the Cannon along with the boat
 execute rotated as @s on passengers positioned as @s[type=camel] run tp @s ~ ~ ~ ~ ~
-data modify storage craftycannoneers:boat RotX set from entity @s Rotation[0]
-execute on passengers on passengers on passengers on passengers run data modify entity @s[tag=BoatCannonDisplay] Rotation[0] set from storage craftycannoneers:boat RotX
+execute rotated as @s on passengers on passengers on passengers on passengers positioned as @s run tp @s[tag=BoatCannonDisplay] ~ ~ ~ ~ ~
