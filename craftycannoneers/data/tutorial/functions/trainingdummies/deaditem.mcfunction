@@ -1,6 +1,3 @@
-data modify entity @s[tag=!UUIDConfirmed] Item.tag.hash set from entity @s UUID[0]
-tag @s[tag=!UUIDConfirmed] add UUIDConfirmed
-
 scoreboard players add @s CmdData 1
 execute at @s[tag=wheat,scores={CmdData=36}] run particle item wheat ~ ~0.3 ~ 0 0 0 0.1 12
 execute at @s[tag=pumpkin,scores={CmdData=36}] run particle block carved_pumpkin ~ ~0.3 ~ 0 0 0 0.1 12
