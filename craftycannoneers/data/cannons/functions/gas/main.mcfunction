@@ -5,7 +5,7 @@ execute as @e[type=item_display,tag=GasDisplay] at @s run function cannons:gas/g
 execute as @e[type=marker,tag=GasCloud] at @s run function cannons:gas/cloud
 
 #> Gas Bubble
-execute as @e[type=armor_stand,tag=GasBubble] at @s run function cannons:gas/bubble
+execute as @e[type=item_display,tag=GasBubble] at @s run function cannons:gas/bubble
 
 #> No Natural Regeneration timer
 tag @a[team=!Purple,team=!Orange] remove NoRegen

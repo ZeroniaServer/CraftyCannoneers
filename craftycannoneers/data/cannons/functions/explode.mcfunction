@@ -16,8 +16,8 @@ execute at @s[tag=!InSafeZone] if entity @e[type=interaction,tag=cannon,distance
 tag @s[predicate=cannons:safezones/ships] add InSafezone
 
 #FIREBALL EFFECT
-execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. run scoreboard players operation @e[type=armor_stand,tag=GasBubble,tag=!GasIgnite,distance=..6] playerUUID = @s playerUUID
-execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. run tag @e[type=armor_stand,tag=GasBubble,tag=!GasIgnite,distance=..6] add GasIgnite
+execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. run scoreboard players operation @e[type=item_display,tag=GasBubble,tag=!GasIgnite,distance=..6] playerUUID = @s playerUUID
+execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. run tag @e[type=item_display,tag=GasBubble,tag=!GasIgnite,distance=..6] add GasIgnite
 execute if score $BoatCannons CmdData matches 1 at @s[tag=!Hit1,tag=HotCannonball] run tag @e[type=boat,tag=!OnFire,distance=..8,limit=2,sort=nearest] add OnFire
 execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. run summon marker ^ ^-2 ^3 {Tags:["RingOfFire"]}
 execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. if predicate game:onpurple run scoreboard players add $PFireCount CmdData 1
