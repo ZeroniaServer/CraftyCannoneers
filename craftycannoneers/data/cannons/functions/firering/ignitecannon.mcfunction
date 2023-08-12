@@ -4,4 +4,5 @@ scoreboard players set @e[type=item_display,tag=GPDispR,scores={CmdData=1..},dis
 execute at @e[type=item_display,tag=GPDispL,distance=..1.5,limit=1,sort=nearest] run data modify entity @e[type=interaction,tag=CannonVLeft,distance=..2,limit=1,sort=nearest] response set value 0b
 execute at @e[type=item_display,tag=GPDispR,distance=..1.5,limit=1,sort=nearest] run data modify entity @e[type=interaction,tag=CannonVRight,distance=..2,limit=1,sort=nearest] response set value 0b
 data modify entity @e[type=interaction,tag=CannonVMain,distance=..2,limit=1,sort=nearest] response set value 0b
+playsound ignitecannon master @a ~ ~ ~ 0.75 0.5
 function cannons:updategp

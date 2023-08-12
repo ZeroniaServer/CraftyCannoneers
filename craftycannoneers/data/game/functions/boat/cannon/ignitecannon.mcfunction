@@ -3,3 +3,4 @@ execute if entity @s[tag=!FireCannon,tag=!Sailing] on passengers on passengers o
 execute if entity @s[tag=!FireCannon,tag=Sailing] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:137}
 execute if entity @s[tag=FireCannon,tag=!Sailing] on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:144}
 execute if entity @s[tag=FireCannon,tag=Sailing] on passengers on passengers on passengers on passengers on passengers run item replace entity @s[tag=BoatCannonDisplay] container.0 with diamond_hoe{CustomModelData:144}
+playsound ignitecannon master @a ~ ~ ~ 0.75 0.5
