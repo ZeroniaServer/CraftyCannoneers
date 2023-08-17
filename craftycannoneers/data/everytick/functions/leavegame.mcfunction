@@ -13,16 +13,15 @@ execute unless score $servermode CmdData matches 1 run scoreboard players enable
 execute unless score $servermode CmdData matches 1 run scoreboard players reset @s[team=Lobby] leavegame
 execute if score $servermode CmdData matches 1 run scoreboard players enable @s leavegame
 
-execute if entity @s[team=!Lobby,team=!Spectator,team=!Developer] unless score @s leavegame matches 0 run tellraw @a ["",{"translate":"game.left_team","color":"dark_aqua","with":[{"selector":"@s"}]}]
-execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run tellraw @a ["",{"translate":"game.left_spectator","color":"gray","with":[{"selector":"@s","color":"dark_gray"}]}]
-execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run title @s actionbar ""
-tellraw @s[team=Lobby,scores={leavegame=1..}] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_leave","color":"red"}]
-scoreboard players reset @s[scores={leavegame=1..}] leavegame
-
 #Pirate Hat game leaving
 execute if entity @s[team=Purple,predicate=!game:has_hat] unless score @s death matches 1.. unless score @s respawn matches 1.. run trigger leavegame
 execute if entity @s[team=Orange,predicate=!game:has_hat] unless score @s death matches 1.. unless score @s respawn matches 1.. run trigger leavegame
 execute if entity @s[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveGame
+
+execute if entity @s[team=!Lobby,team=!Spectator,team=!Developer] unless score @s leavegame matches 0 run tellraw @a ["",{"translate":"game.left_team","color":"dark_aqua","with":[{"selector":"@s"}]}]
+execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run tellraw @a ["",{"translate":"game.left_spectator","color":"gray","with":[{"selector":"@s","color":"dark_gray"}]}]
+execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run title @s actionbar ""
+tellraw @s[team=Lobby,scores={leavegame=1..}] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_leave","color":"red"}]
 
 #Unready by leaving
 execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple,tag=ClickedReady] run function game:readyteams/unreadyleavepurple
@@ -44,12 +43,12 @@ gamemode adventure @s[tag=LeaveGame]
 attribute @s[tag=LeaveGame] minecraft:generic.luck base set 0.0
 recipe take @s[tag=LeaveGame] *
 tag @s[tag=LeaveGame,scores={LeftGame=1..}] remove hasMoved
-tag @s[tag=LeaveGame] remove msgReceived
-scoreboard players reset @s[tag=!firstJoined,tag=LeaveGame] msgdelay
-tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/combat=false}] add NeedsTutorial
-tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/cannon=false}] add NeedsTutorial
-tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/treasure=false}] add NeedsTutorial
-tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/watchtower=false}] add NeedsTutorial
+execute unless score @s leavegame matches 1.. run tag @s[tag=LeaveGame] remove msgReceived
+execute unless score @s leavegame matches 1.. run scoreboard players reset @s[tag=LeaveGame] msgdelay
+execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/combat=false}] add NeedsTutorial
+execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/cannon=false}] add NeedsTutorial
+execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/treasure=false}] add NeedsTutorial
+execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/watchtower=false}] add NeedsTutorial
 execute if entity @s[tag=LeaveGame] unless entity @s[team=] unless score @s LeftGame matches 1.. at @s run playsound leavegame master @s ~ ~ ~ 1 1
 scoreboard players reset @s[scores={LeftGame=1..}] LeftGame
 tag @s[tag=LeaveGame] remove onboatregen
