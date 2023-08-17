@@ -10,4 +10,5 @@ execute at @s[tag=SeaStormsIcon] run summon interaction ~ ~-0.1 ~0.7 {width:0f,h
 execute at @s[tag=LostCargoIcon] run summon interaction ~ ~-0.1 ~0.7 {width:0f,height:0f,response:1b,Tags:["SettingsInteraction","LostCargoIcon","ModiOn"]}
 execute at @s[tag=BoatCannonsIcon] run summon interaction ~ ~-0.1 ~0.7 {width:0f,height:0f,response:1b,Tags:["SettingsInteraction","BoatCannonsIcon","ModiOn"]}
 execute at @s[tag=GraveRobberyIcon] run summon interaction ~ ~-0.1 ~0.7 {width:0f,height:0f,response:1b,Tags:["SettingsInteraction","GraveRobberyIcon","ModiOn"]}
+execute at @s[tag=CancelMatch] run summon interaction ~ ~-0.1 ~0.7 {width:0f,height:0f,response:1b,Tags:["SettingsInteraction","CancelMatch"]}
 tag @s add interactable

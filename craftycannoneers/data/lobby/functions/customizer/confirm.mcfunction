@@ -24,7 +24,7 @@ function lobby:customizer/gameinfo
 
 scoreboard players set $gamestate CmdData 0
 
-item replace entity @e[type=item_display,tag=LobbyEntity] container.0 with air
+item replace entity @e[type=item_display,tag=LobbyEntity,tag=!CancelMatch] container.0 with air
 
 item replace entity @e[type=item_display,tag=MapEntity,limit=1] container.0 with diamond_hoe{CustomModelData:34}
 
@@ -35,4 +35,6 @@ scoreboard players reset $purplelock CmdData
 execute as @e[type=marker,tag=joinpad] at @s run function lobby:joinpads/unlock
 scoreboard players reset @e[type=marker,tag=joinpad] CmdData
 
-function arenaclear:reset
+execute unless score $mcancel CmdData matches 1 run function arenaclear:reset
+scoreboard players reset $mcancel CmdData
+function lobby:customizer/cancel/begin

@@ -15,6 +15,7 @@ execute if entity @s[tag=SeaStormsIcon] on target run trigger modisigns set 7184
 execute if entity @s[tag=LostCargoIcon] on target run trigger modisigns set 256652
 execute if entity @s[tag=GraveRobberyIcon] on target run trigger modisigns set 29013
 execute if entity @s[tag=BoatCannonsIcon] on target run trigger modisigns set 50317
+execute if entity @s[tag=CancelMatch] on target if score @s clickcooldown matches 0 run trigger cancelMatch set 1
 execute if entity @s[tag=SettingsInteraction] run return 0
 
 #> Tags for interacting with Cannons

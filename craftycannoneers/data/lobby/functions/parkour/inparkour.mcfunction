@@ -48,13 +48,8 @@ execute positioned -73 -22 -1 if entity @s[tag=!CancelParkour,distance=5..] at @
 execute at @s[tag=CancelParkour] run function lobby:parkour/cancel
 
 #> Controls
-scoreboard players add @s clickcooldown 0
 tag @s[scores={click=1..,clickcooldown=0},predicate=lobby:parkourrestart] add RestartParkour
 tag @s[scores={click=1..,clickcooldown=0},predicate=lobby:parkourquit] add QuitParkour
-scoreboard players set @s[scores={clickcooldown=5..}] clickcooldown 0
-scoreboard players add @s[scores={clickcooldown=1..}] clickcooldown 1
-scoreboard players set @s[scores={click=1..}] clickcooldown 1
-scoreboard players reset @s[scores={click=1..}] click
 execute at @s[tag=RestartParkour] run function lobby:parkour/restart
 execute at @s[tag=QuitParkour] run function lobby:parkour/quit
 

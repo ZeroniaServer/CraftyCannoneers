@@ -1,5 +1,8 @@
 execute unless score $gamestate CmdData matches 1 run scoreboard players enable @a[team=!Lobby,team=!Spectator,team=!Developer] readyup
 execute if score $gamestate CmdData matches 1 as @a[team=!Lobby,team=!Spectator,team=!Developer] run trigger readyup set 0
+scoreboard players enable @a[team=Lobby] cancelMatch
+execute as @a[team=!Lobby,team=!Developer] run trigger cancelMatch set 0
+execute as @a[team=Lobby,scores={cancelMatch=1..,clickcooldown=0}] run function lobby:customizer/cancel/interact
 
 execute as @a[team=Orange] unless score @s readyup matches 0 unless score $OrangeReady CmdData matches 1 at @s run function game:readyteams/readyorange
 execute as @a[team=Orange] unless score @s readyup matches 0 if score $OrangeReady CmdData matches 1 at @s run function game:readyteams/unreadyorange

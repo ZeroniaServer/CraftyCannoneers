@@ -96,6 +96,9 @@ execute unless score $gamestate CmdData matches 2.. run bossbar set lobbybar pla
 #> Resolve signs
 execute if entity @a[team=Lobby] run function everytick:resolvesigns
 
+#> Resume cancel match counter
+execute if score $InTeams CmdData matches 0 if score $gamestate CmdData matches 0 if score $mcancel CmdData matches -1 run function lobby:customizer/cancel/resume
+
 #> Failsafe for reset scoreboards
 execute unless score $gamestate CmdData matches -1.. if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.game","color":"gray","with":[{"translate":"error.report","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"translate":"error.discord","color":"white"}]}}]},"\n"]
 execute unless score $gamestate CmdData matches -1.. if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function debug:preparerelease
