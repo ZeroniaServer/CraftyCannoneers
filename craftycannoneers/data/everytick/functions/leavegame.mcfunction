@@ -43,12 +43,11 @@ gamemode adventure @s[tag=LeaveGame]
 attribute @s[tag=LeaveGame] minecraft:generic.luck base set 0.0
 recipe take @s[tag=LeaveGame] *
 tag @s[tag=LeaveGame,scores={LeftGame=1..}] remove hasMoved
-tag @s[tag=LeaveGame,scores={leavegame=0}] remove msgReceived
-scoreboard players reset @s[tag=!firstJoined,tag=LeaveGame] msgdelay
-tag @s[tag=firstJoined,tag=LeaveGame,scores={leavegame=0},advancements={tutorial:objectives/combat=false}] add NeedsTutorial
-tag @s[tag=firstJoined,tag=LeaveGame,scores={leavegame=0},advancements={tutorial:objectives/cannon=false}] add NeedsTutorial
-tag @s[tag=firstJoined,tag=LeaveGame,scores={leavegame=0},advancements={tutorial:objectives/treasure=false}] add NeedsTutorial
-tag @s[tag=firstJoined,tag=LeaveGame,scores={leavegame=0},advancements={tutorial:objectives/watchtower=false}] add NeedsTutorial
+execute unless score @s leavegame matches 1.. run tag @s[tag=LeaveGame] remove msgReceived
+execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/combat=false}] add NeedsTutorial
+execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/cannon=false}] add NeedsTutorial
+execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/treasure=false}] add NeedsTutorial
+execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/watchtower=false}] add NeedsTutorial
 execute if entity @s[tag=LeaveGame] unless entity @s[team=] unless score @s LeftGame matches 1.. at @s run playsound leavegame master @s ~ ~ ~ 1 1
 scoreboard players reset @s[scores={LeftGame=1..}] LeftGame
 tag @s[tag=LeaveGame] remove onboatregen
@@ -79,7 +78,7 @@ scoreboard players reset @s[tag=LeaveGame] KillerUUID
 scoreboard players reset @s[tag=LeaveGame] KillerUUIDreset
 title @s[tag=LeaveGame] title ""
 title @s[tag=LeaveGame] subtitle ""
-scoreboard players set @s[scores={leavegame=1..}] leavegame 0
+scoreboard players reset @s[scores={leavegame=1..}] leavegame
 
 tellraw @s[tag=LeaveGame,tag=inParkour] [{"translate":"parkour.left_canceled","color":"red"}]
 tag @s[tag=LeaveGame,tag=inParkour] remove inParkour
