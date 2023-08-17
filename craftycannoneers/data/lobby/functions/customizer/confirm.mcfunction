@@ -36,5 +36,6 @@ execute as @e[type=marker,tag=joinpad] at @s run function lobby:joinpads/unlock
 scoreboard players reset @e[type=marker,tag=joinpad] CmdData
 
 execute unless score $mcancel CmdData matches 1 run function arenaclear:reset
+function arenaclear:boatvehicles
 scoreboard players reset $mcancel CmdData
 function lobby:customizer/cancel/begin
