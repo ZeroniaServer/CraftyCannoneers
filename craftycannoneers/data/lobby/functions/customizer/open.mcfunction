@@ -34,7 +34,13 @@ execute if score $Daytime CmdData matches 2 run item replace entity @e[type=item
 
 item replace entity @e[type=item_display,tag=MapEntity,limit=1] container.0 with diamond_hoe{CustomModelData:76}
 
-execute as @e[type=interaction,tag=SettingsInteraction,tag=!ModiOn] run data merge entity @s {width:0.5f,height:0.5f}
+execute as @e[type=interaction,tag=SettingsInteraction,tag=!ModiOn,tag=!CancelMatch] run data merge entity @s {width:0.5f,height:0.5f}
+
+function lobby:customizer/cancel/disable
+
+execute if score $mcancel CmdData matches 1 run tellraw @a {"translate":"chat.canceled_match","color":"red","with":[{"selector":"@s","bold":true}]}
+execute if score $mcancel CmdData matches 1 run tellraw @a ["\n",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.0","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
+execute if score $mcancel CmdData matches 1 run return 1
 
 execute as @e[type=hopper_minecart,tag=chest] run data remove entity @s Items
 execute as @e[type=hopper_minecart,tag=chest] run data merge entity @s {LootTable:"chests:empty"}

@@ -87,3 +87,6 @@ execute if score $Wildlife CmdData matches 1 unless entity 00000539-ffff-fe5c-00
 execute if score $LostCargo CmdData matches 1 run function game:modifiers/lostcargo/setup
 execute if score $LostCargo CmdData matches 1 run scoreboard players set $CargoTime CmdData 0
 execute if score $LostCargo CmdData matches 1 run scoreboard players set $SpawnCargo CmdData 1
+
+#> Disable match canceling
+function lobby:customizer/cancel/reset

@@ -126,6 +126,7 @@ scoreboard objectives add TrapDurability dummy
 scoreboard objectives add hasCrabTraps dummy
 scoreboard objectives add crabs dummy
 scoreboard objectives add Lifetime dummy
+scoreboard objectives add cancelMatch trigger
 
 #> Parkour
 scoreboard objectives add parkourMins dummy

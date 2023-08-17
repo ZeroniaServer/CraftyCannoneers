@@ -127,6 +127,13 @@ execute if entity @s[team=Lobby] run function lobby:parkour/main
 effect clear @s[team=!Lobby,tag=inParkour] invisibility
 tag @s[team=!Lobby,tag=inParkour] remove inParkour
 
+#> Click cooldown
+scoreboard players add @s clickcooldown 0
+scoreboard players set @s[scores={clickcooldown=5..}] clickcooldown 0
+scoreboard players add @s[scores={clickcooldown=1..}] clickcooldown 1
+scoreboard players set @s[scores={click=1..}] clickcooldown 1
+scoreboard players reset @s[scores={click=1..}] click
+
 #> Rocks
 execute at @s[scores={throwsb=1..}] run function lobby:rock/spawn
 
