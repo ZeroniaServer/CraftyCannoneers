@@ -79,6 +79,7 @@ scoreboard players reset @s[tag=LeaveGame] KillerUUID
 scoreboard players reset @s[tag=LeaveGame] KillerUUIDreset
 title @s[tag=LeaveGame] title ""
 title @s[tag=LeaveGame] subtitle ""
+scoreboard players reset @s[scores={leavegame=1..}] leavegame
 
 tellraw @s[tag=LeaveGame,tag=inParkour] [{"translate":"parkour.left_canceled","color":"red"}]
 tag @s[tag=LeaveGame,tag=inParkour] remove inParkour
