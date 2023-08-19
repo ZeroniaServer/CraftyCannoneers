@@ -9,8 +9,8 @@ kill @e[type=item_display,tag=BoatCannonDisplay]
 kill @e[type=marker,tag=bcannon]
 kill @e[type=area_effect_cloud,tag=BoatCannonOffset]
 
-summon marker 109 -30 0 {Tags:["1","respawnboat"]}
-summon marker 31 -30 0 {Tags:["2","respawnboat"]}
-summon marker 83 -30 12 {Tags:["3","respawnboat"]}
-summon marker 57 -30 -12 {Tags:["4","respawnboat"]}
+summon marker 109 -31 0 {Tags:["1","respawnboat"]}
+summon marker 31 -31 0 {Tags:["2","respawnboat"]}
+summon marker 83 -31 12 {Tags:["3","respawnboat"]}
+summon marker 57 -31 -12 {Tags:["4","respawnboat"]}
 execute as @e[type=marker,tag=respawnboat] at @s run function game:boat/placenew
