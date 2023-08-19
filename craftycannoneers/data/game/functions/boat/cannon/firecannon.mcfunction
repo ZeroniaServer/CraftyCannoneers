@@ -2,8 +2,7 @@
 scoreboard players add @s cannonshot 1
 scoreboard players set @s[scores={cannonshot=1,CannonID=8}] cannonshot 30
 execute at @s[scores={cannonshot=1}] run function game:boat/motionlock
-execute if entity @s[tag=!OnFire,scores={cannonshot=2}] on passengers run item replace entity @s[tag=BoatCannonBarrel] container.0 with diamond_hoe{CustomModelData:131}
-execute if entity @s[tag=OnFire,scores={cannonshot=2}] on passengers run item replace entity @s[tag=BoatCannonBarrel] container.0 with diamond_hoe{CustomModelData:144}
+execute if entity @s[scores={cannonshot=2}] on passengers run item replace entity @s[tag=BoatCannonBarrel] container.0 with diamond_hoe{CustomModelData:131}
 
 execute at @s[scores={cannonshot=2}] run playsound cannonload master @a ~ ~ ~ 1 1
 
@@ -88,14 +87,10 @@ execute at @s[scores={cannonshot=27..}] unless score @s CannonID matches 8 run f
 execute at @s[scores={cannonshot=27}] run summon marker ~ ~ ~ {Tags:["templight","flash"]}
 
 #> Shoot
-execute at @s[tag=!OnFire,scores={cannonshot=29}] on passengers run item replace entity @s[tag=BoatCannonBarrel] container.0 with diamond_hoe{CustomModelData:132}
-execute at @s[tag=!OnFire,scores={cannonshot=30}] on passengers run item replace entity @s[tag=BoatCannonBarrel] container.0 with diamond_hoe{CustomModelData:133}
-execute at @s[tag=!OnFire,scores={cannonshot=31}] on passengers run item replace entity @s[tag=BoatCannonBarrel] container.0 with diamond_hoe{CustomModelData:132}
+execute at @s[scores={cannonshot=29}] on passengers run data merge entity @s[tag=BoatCannonBarrel] {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0f,2.15f,-0.02f],left_rotation:[-0.09f,0.0f,0.0f,1.0f]}}
+execute at @s[tag=!OnFire,scores={cannonshot=31}] on passengers run data merge entity @s[tag=BoatCannonBarrel] {start_interpolation:0,interpolation_duration:5,transformation:{translation:[0f,2.375f,0.425f],left_rotation:[0.0f,0.0f,0.0f,1.0f]}}
+execute at @s[tag=OnFire,scores={cannonshot=31}] run function game:boat/cannon/tipfireblank
 execute at @s[tag=!OnFire,scores={cannonshot=32}] on passengers run item replace entity @s[tag=BoatCannonBarrel] container.0 with diamond_hoe{CustomModelData:125}
-
-execute at @s[tag=OnFire,scores={cannonshot=29}] on passengers run item replace entity @s[tag=BoatCannonBarrel] container.0 with diamond_hoe{CustomModelData:145}
-execute at @s[tag=OnFire,scores={cannonshot=30}] on passengers run item replace entity @s[tag=BoatCannonBarrel] container.0 with diamond_hoe{CustomModelData:146}
-execute at @s[tag=OnFire,scores={cannonshot=31}] on passengers run item replace entity @s[tag=BoatCannonBarrel] container.0 with diamond_hoe{CustomModelData:145}
 execute at @s[tag=OnFire,scores={cannonshot=32}] on passengers run item replace entity @s[tag=BoatCannonBarrel] container.0 with diamond_hoe{CustomModelData:137}
 
 data modify storage craftycannoneers:boat angle set from entity @s Rotation[0]

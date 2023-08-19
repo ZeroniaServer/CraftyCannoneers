@@ -18,11 +18,15 @@ execute if entity @s[tag=3] store result score $boat3 CmdData run data get entit
 execute if entity @s[tag=4] store result score $boat4 CmdData run data get entity @e[type=boat,tag=Rotate,limit=1] UUID[0]
 
 #> Transfer Boat data
+execute if score $BoatCannons CmdData matches 1 run scoreboard players operation $temp firetime = @s firetime
+execute if score $BoatCannons CmdData matches 1 store success score $onfire CmdData if entity @s[tag=OnFire]
 execute if score $BoatCannons CmdData matches 1 run scoreboard players operation $temp CannonID = @s CannonID
 execute if score $BoatCannons CmdData matches 1 run scoreboard players operation $temp cannonshot = @s cannonshot
 execute if score $BoatCannons CmdData matches 1 run scoreboard players operation $temp playerUUID = @s playerUUID
 execute if score $BoatCannons CmdData matches 1 run scoreboard players operation $temp PowerM = @s PowerM
 execute if score $BoatCannons CmdData matches 1 store success score $recoil CmdData if entity @s[tag=Recoil]
+execute if score $BoatCannons CmdData matches 1 store success score $tipped CmdData if entity @s[tag=tipped]
+execute if score $BoatCannons CmdData matches 1 on passengers run data modify storage craftycannoneers:boat transformation set from entity @s[tag=BoatCannonBarrel] transformation
 execute if score $BoatCannons CmdData matches 1 as @e[type=boat,tag=Rotate,limit=1] run function game:boat/transfer
 tag @e[type=boat,tag=Rotate,limit=1] remove Rotate
 

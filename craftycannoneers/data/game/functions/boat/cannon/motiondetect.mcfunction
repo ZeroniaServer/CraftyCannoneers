@@ -16,7 +16,6 @@ scoreboard players operation @s dz2 -= @s z2
 execute if score @s dx2 matches ..-1 run scoreboard players operation @s dx2 *= -1 const
 execute if score @s dy2 matches ..-1 run scoreboard players operation @s dy2 *= -1 const
 execute if score @s dz2 matches ..-1 run scoreboard players operation @s dz2 *= -1 const
-# tellraw @a [{"score":{"name":"@s","objective":"dx2"}}," ",{"score":{"name":"@s","objective":"dy2"}}," ",{"score":{"name":"@s","objective":"dz2"}}]
 execute if score @s dx2 < 2 const if score @s dy2 < 2 const if score @s dz2 < 2 const run scoreboard players set $still CmdData 1
 execute if score $still CmdData matches 1 run scoreboard players add @s ctr 1
 execute if score $still CmdData matches 0 run scoreboard players reset @s ctr

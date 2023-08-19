@@ -4,6 +4,7 @@ scoreboard players set $response CmdData 1
 scoreboard players add @s PowerM 0
 
 #> Sailing functionality
+execute if entity @s[tag=!Sailing,tag=!OnFire,tag=tipped] run function game:boat/cannon/untipcannon
 execute if entity @s[tag=Sailing] run function game:boat/cannon/sailing
 
 #> Display functions
