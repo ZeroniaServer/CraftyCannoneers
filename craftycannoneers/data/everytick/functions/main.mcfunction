@@ -61,7 +61,7 @@ execute if score $load CmdData matches 40.. as @e[type=marker,tag=TutorialWarp,l
 execute if score $load CmdData matches 40.. as @e[type=armor_stand,tag=YZERODeco,limit=1] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
 execute if score $load CmdData matches 40.. as @e[type=armor_stand,tag=EvtemaDeco,limit=1] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
 execute if score $load CmdData matches 40.. as @e[type=armor_stand,tag=StuffyDeco,limit=1] at @s run particle enchant ~ ~0.1 ~ 0.2 0 0.2 0.3 2 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
-execute if score $load CmdData matches 40.. run function lobby:credit/translators/loop
+execute if score $load CmdData matches 40.. as @e[type=item_display,tag=Globe,limit=1] run function lobby:credit/translators/loop
 
 #> Ingame
 execute if score $gamestate CmdData matches 3 run function game:gameend

@@ -18,6 +18,9 @@ execute if entity @s[tag=BoatCannonsIcon] on target run trigger modisigns set 50
 execute if entity @s[tag=CancelMatch] on target if score @s clickcooldown matches 0 run trigger cancelMatch set 1
 execute if entity @s[tag=SettingsInteraction] run return 0
 
+#> Translator Credits
+execute if entity @s[tag=TranslatorCredit] as @e[type=item_display,tag=Globe,tag=!Spin,limit=1] run function lobby:credit/translators/next
+
 #> Tags for interacting with Cannons
 execute if entity @s[tag=CannonVLeft,tag=!GPLocked] run tag @a[limit=1,tag=self] add FillLeft
 execute if entity @s[tag=CannonVRight,tag=!GPLocked] run tag @a[limit=1,tag=self] add FillRight

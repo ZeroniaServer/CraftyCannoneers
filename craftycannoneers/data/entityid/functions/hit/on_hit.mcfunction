@@ -46,3 +46,6 @@ tag @a[limit=1,tag=hitter] remove FillRight
 #> Remove Gunpowder from Boat Cannons
 execute if entity @s[type=interaction,tag=BoatCannon] on vehicle on vehicle on vehicle if score @s PowerM matches 1.. on passengers run loot give @s[gamemode=!creative,tag=hitter] loot weapons:gunpowder
 execute if entity @s[type=interaction,tag=BoatCannon] on vehicle on vehicle on vehicle if score @s PowerM matches 1.. on passengers if entity @s[tag=hitter] on vehicle run function game:boat/cannon/unloadgunpowder
+
+#> Translator Credits
+execute if entity @s[tag=TranslatorCredit] as @e[type=item_display,tag=Globe,tag=!Spin,limit=1] run function lobby:credit/translators/previous
