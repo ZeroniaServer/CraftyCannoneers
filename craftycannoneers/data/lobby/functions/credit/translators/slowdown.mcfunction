@@ -1,0 +1,2 @@
+data merge entity @e[type=item_display,tag=Globe,limit=1] {start_interpolation:0,interpolation_duration:5,transformation:{left_rotation:[0.0f,1.0f,0.0f,0.0f]}}
+data merge entity @e[type=item_display,tag=Globe,limit=1] {start_interpolation:0,interpolation_duration:5,transformation:{right_rotation:[0.0f,1.0f,0.0f,0.0f]}}
