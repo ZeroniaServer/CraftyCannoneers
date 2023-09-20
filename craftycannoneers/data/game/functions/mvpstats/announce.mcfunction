@@ -1,5 +1,5 @@
 tellraw @a ["","\n",{"translate":"game.game_over","bold":true,"color":"green"}]
-tellraw @a ["",{"translate":"game.purple","color":"dark_purple"},{"text":": ","color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"translate":"game.orange","color":"gold"},{"text":": ","color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
+tellraw @a ["",{"translate":"game.ship_health.purple","color":"dark_purple"},{"text":": ","color":"dark_purple"},{"text":"❤","color":"red"},{"score":{"name":"$PurpleHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"},{"text":" | ","color":"dark_gray","bold":true},{"translate":"game.ship_health.orange","color":"gold"},{"text":": ","color":"gold"},{"text":"❤","color":"red"},{"score":{"name":"$OrangeHP","objective":"CmdData"},"color":"gray"},"/",{"score":{"name":"$ShipHP","objective":"CmdData"},"color":"gray"}]
 
 #> Cannons
 execute store result score $MVPCount CmdData if entity @a[tag=CannonMVP]
