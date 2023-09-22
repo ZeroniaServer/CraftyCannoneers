@@ -1,0 +1,272 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 5,
+        "max": 6,
+        "type": "minecraft:uniform"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Gunpowder\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Used to change the power of a cannon shot.\",\"italic\":false,\"color\":\"white\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3,
+                "max": 5,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:gunpowder"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Gold\",\"italic\":false,\"color\":\"gold\"}]',Lore:['[{\"text\":\"Currency item used to purchase\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"special cannonballs.\",\"italic\":false,\"color\":\"white\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 4,
+                "max": 6,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:gold_nugget"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:arrow"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2,
+        "type": "minecraft:uniform"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:127,CustomModelData:16,Unbreakable:1b,Cannonball:1b,display:{Name:'[{\"text\":\"Cannonball\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"The most basic type of cannonball.\",\"italic\":false,\"color\":\"white\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:diamond_hoe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:golden_apple",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Golden Apple\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 1
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "team": "Lobby"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:apple",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'[{\"text\":\"Golden Apple\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 1
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:2,Bomb:1b,display:{Name:'[{\"text\":\"Blast Bomb\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Throwable weapon which deals\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"a massive amount of knockback.\",\"italic\":false,\"color\":\"white\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2,
+                "max": 2,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:ender_eye"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,Key:1b,display:{Name:'[{\"text\":\"Skeleton Key\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Use this key to unlock \",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"any locked Chests!\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]']}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:ender_eye"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Damage:200,display:{Name:'[{\"text\":\"Hook\",\"italic\":false,\"color\":\"dark_aqua\"}]'},AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:20,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,10659,12629,-21318]},{AttributeName:\"generic.attack_damage\",Amount:3,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,10759,12629,-21518]}]}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:iron_hoe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,Blocking:0,Damage:316,display:{Name:'[{\"text\":\"Shield\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:shield"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Unbreakable:1b,display:{Name:'[{\"text\":\"Boarding Axe\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"text\":\"Gets Knockback when boarding\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"the Enemy Ship!\",\"italic\":false,\"color\":\"white\"}]']},HideFlags:4}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:stone_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomPotionColor:6886656,custom_potion_effects:[{id:\"minecraft:dolphins_grace\",duration:160,amplifier:0},{id:\"minecraft:speed\",duration:200,amplifier:1}],display:{Name:'[{\"text\":\"Trooper Ale\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:potion"
+        }
+      ]
+    }
+  ]
+}
