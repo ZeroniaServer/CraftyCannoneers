@@ -30,3 +30,4 @@ kill @e[type=interaction,tag=boatoccupant,predicate=!game:boat/inboat]
 execute if score $BoatCannons CmdData matches 1 as @e[type=camel,tag=BoatCannonAnchor,predicate=!game:mounted] run function game:boat/cannon/kill
 execute if score $BoatCannons CmdData matches 1 as @e[type=husk,tag=BoatCannonAnchor,predicate=!game:boat/inboat] run function game:boat/cannon/kill
 execute if score $BoatCannons CmdData matches 1 as @e[type=area_effect_cloud,tag=BoatCannonOffset,predicate=!game:mounted] run function game:boat/cannon/kill
+execute if score $BoatCannons CmdData matches 1 as @e[type=item_display,tag=BoatCannonDisplay,predicate=!game:mounted] run function game:boat/cannon/kill
