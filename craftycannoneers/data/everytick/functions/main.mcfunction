@@ -42,7 +42,8 @@ execute if score $runcannons CmdData matches 1 if score $load CmdData matches 40
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function everytick:entityeffects
 
 #> Rocks
-execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=marker,tag=rocktracker] at @s run function lobby:rock/tp
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=marker,tag=rocktracker] at @s run function lobby:rock/track
+execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run kill @e[type=spectral_arrow,nbt={inGround:1b}]
 
 #> Joinpads
 execute if score $load CmdData matches 10.. unless score $updating CmdData matches 1 run function lobby:joinpads/main

@@ -9,10 +9,7 @@ tag @s[tag=above] remove above
 tag @s[tag=below] remove below
 
 # summon the projectile entity - spectral arrow with 0 glowing + piercing
-execute anchored eyes positioned ^ ^ ^0.1 run summon spectral_arrow ~ ~ ~ {Tags:["rock"],Duration:0,Silent:1b,SoundEvent:"entity.snowball.throw",PierceLevel:10}
-
-# copy the markers position tag to the spit's motion tag
-data modify entity @e[type=spectral_arrow,tag=rock,limit=1] Motion set from entity @e[type=marker,tag=direction,limit=1] Pos
+execute anchored eyes positioned ^ ^ ^0.1 summon spectral_arrow run function lobby:rock/arrow
 
 # set up snowball
 execute as @e[type=snowball,tag=!init,limit=1,sort=nearest] run data modify entity @s Motion set from entity @e[type=marker,tag=direction,limit=1] Pos
