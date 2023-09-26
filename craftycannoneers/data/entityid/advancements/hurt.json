@@ -12,6 +12,18 @@
                 }
             }
         },
+        "rock": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "direct_entity": {
+                            "type": "spectral_arrow"
+                        }
+                    }
+                }
+            }
+        },
         "bit0": {
             "trigger": "minecraft:entity_hurt_player",
             "conditions": {
@@ -783,7 +795,8 @@
     },
     "requirements": [
         [
-            "arrow"
+            "arrow",
+            "rock"
         ],
         [
             "bit0",

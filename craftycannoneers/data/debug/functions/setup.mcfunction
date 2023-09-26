@@ -45,8 +45,8 @@ scoreboard objectives add playerUUID dummy
 scoreboard objectives add death minecraft.custom:minecraft.deaths
 scoreboard objectives add kill playerKillCount
 scoreboard objectives add LeftGame minecraft.custom:minecraft.leave_game
-scoreboard objectives add rockID dummy
-scoreboard objectives add rockOwner dummy
+scoreboard objectives remove rockID
+scoreboard objectives remove rockOwner
 scoreboard objectives add spotting dummy
 scoreboard objectives add drowning dummy
 scoreboard objectives add MVPkill dummy

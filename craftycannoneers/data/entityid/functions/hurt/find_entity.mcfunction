@@ -31,5 +31,6 @@ execute if entity @s[advancements={entityid:hurt={bit28=true}}] run scoreboard p
 execute if entity @s[advancements={entityid:hurt={bit29=true}}] run scoreboard players add $hurt entityid 536870912
 execute if entity @s[advancements={entityid:hurt={bit30=true}}] run scoreboard players add $hurt entityid 1073741824
 execute if entity @s[advancements={entityid:hurt={bit31=true}}] run scoreboard players operation $hurt entityid *= -1 const
-execute as @e[type=arrow] if score @s entityid = $hurt entityid run function entityid:hurt/on_hurt
+execute if score $rock CmdData matches 1 as @e[type=spectral_arrow] if score @s entityid = $hurt entityid run kill
+execute unless score $rock CmdData matches 1 as @e[type=arrow] if score @s entityid = $hurt entityid run function entityid:hurt/on_hurt
 scoreboard players reset $hurt entityid
