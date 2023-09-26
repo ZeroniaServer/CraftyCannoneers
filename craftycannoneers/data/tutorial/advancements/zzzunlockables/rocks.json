@@ -26,7 +26,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 1
+              "loverocks": {
+                "min": 1
+              }
             }
           }
         ]
@@ -40,7 +42,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 2
+              "loverocks": {
+                "min": 2
+              }
             }
           }
         ]
@@ -54,7 +58,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 3
+              "loverocks": {
+                "min": 3
+              }
             }
           }
         ]
@@ -68,7 +74,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 4
+              "loverocks": {
+                "min": 4
+              }
             }
           }
         ]
@@ -82,7 +90,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 5
+              "loverocks": {
+                "min": 5
+              }
             }
           }
         ]
@@ -96,7 +106,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 6
+              "loverocks": {
+                "min": 6
+              }
             }
           }
         ]
@@ -110,7 +122,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 7
+              "loverocks": {
+                "min": 7
+              }
             }
           }
         ]
@@ -124,7 +138,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 8
+              "loverocks": {
+                "min": 8
+              }
             }
           }
         ]
@@ -138,7 +154,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 9
+              "loverocks": {
+                "min": 9
+              }
             }
           }
         ]
@@ -152,7 +170,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 10
+              "loverocks": {
+                "min": 10
+              }
             }
           }
         ]
@@ -166,7 +186,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 11
+              "loverocks": {
+                "min": 11
+              }
             }
           }
         ]
@@ -180,7 +202,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 12
+              "loverocks": {
+                "min": 12
+              }
             }
           }
         ]
@@ -194,7 +218,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 13
+              "loverocks": {
+                "min": 13
+              }
             }
           }
         ]
@@ -208,7 +234,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 14
+              "loverocks": {
+                "min": 14
+              }
             }
           }
         ]
@@ -222,7 +250,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 15
+              "loverocks": {
+                "min": 15
+              }
             }
           }
         ]
@@ -236,7 +266,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 16
+              "loverocks": {
+                "min": 16
+              }
             }
           }
         ]
@@ -250,7 +282,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 17
+              "loverocks": {
+                "min": 17
+              }
             }
           }
         ]
@@ -264,7 +298,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 18
+              "loverocks": {
+                "min": 18
+              }
             }
           }
         ]
@@ -278,7 +314,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 19
+              "loverocks": {
+                "min": 19
+              }
             }
           }
         ]
@@ -292,7 +330,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 20
+              "loverocks": {
+                "min": 20
+              }
             }
           }
         ]
@@ -306,7 +346,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 21
+              "loverocks": {
+                "min": 21
+              }
             }
           }
         ]
@@ -320,7 +362,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 22
+              "loverocks": {
+                "min": 22
+              }
             }
           }
         ]
@@ -334,7 +378,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 23
+              "loverocks": {
+                "min": 23
+              }
             }
           }
         ]
@@ -348,7 +394,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 24
+              "loverocks": {
+                "min": 24
+              }
             }
           }
         ]
@@ -362,7 +410,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 25
+              "loverocks": {
+                "min": 25
+              }
             }
           }
         ]
@@ -376,7 +426,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 26
+              "loverocks": {
+                "min": 26
+              }
             }
           }
         ]
@@ -390,7 +442,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 27
+              "loverocks": {
+                "min": 27
+              }
             }
           }
         ]
@@ -404,7 +458,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 28
+              "loverocks": {
+                "min": 28
+              }
             }
           }
         ]
@@ -418,7 +474,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 29
+              "loverocks": {
+                "min": 29
+              }
             }
           }
         ]
@@ -432,7 +490,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 30
+              "loverocks": {
+                "min": 30
+              }
             }
           }
         ]
@@ -446,7 +506,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 31
+              "loverocks": {
+                "min": 31
+              }
             }
           }
         ]
@@ -460,7 +522,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 32
+              "loverocks": {
+                "min": 32
+              }
             }
           }
         ]
@@ -474,7 +538,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 33
+              "loverocks": {
+                "min": 33
+              }
             }
           }
         ]
@@ -488,7 +554,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 34
+              "loverocks": {
+                "min": 34
+              }
             }
           }
         ]
@@ -502,7 +570,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 35
+              "loverocks": {
+                "min": 35
+              }
             }
           }
         ]
@@ -516,7 +586,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 36
+              "loverocks": {
+                "min": 36
+              }
             }
           }
         ]
@@ -530,7 +602,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 37
+              "loverocks": {
+                "min": 37
+              }
             }
           }
         ]
@@ -544,7 +618,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 38
+              "loverocks": {
+                "min": 38
+              }
             }
           }
         ]
@@ -558,7 +634,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 39
+              "loverocks": {
+                "min": 39
+              }
             }
           }
         ]
@@ -572,7 +650,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 40
+              "loverocks": {
+                "min": 40
+              }
             }
           }
         ]
@@ -586,7 +666,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 41
+              "loverocks": {
+                "min": 41
+              }
             }
           }
         ]
@@ -600,7 +682,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 42
+              "loverocks": {
+                "min": 42
+              }
             }
           }
         ]
@@ -614,7 +698,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 43
+              "loverocks": {
+                "min": 43
+              }
             }
           }
         ]
@@ -628,7 +714,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 44
+              "loverocks": {
+                "min": 44
+              }
             }
           }
         ]
@@ -642,7 +730,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 45
+              "loverocks": {
+                "min": 45
+              }
             }
           }
         ]
@@ -656,7 +746,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 46
+              "loverocks": {
+                "min": 46
+              }
             }
           }
         ]
@@ -670,7 +762,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 47
+              "loverocks": {
+                "min": 47
+              }
             }
           }
         ]
@@ -684,7 +778,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 48
+              "loverocks": {
+                "min": 48
+              }
             }
           }
         ]
@@ -698,7 +794,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 49
+              "loverocks": {
+                "min": 49
+              }
             }
           }
         ]
@@ -712,7 +810,9 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "loverocks": 50
+              "loverocks": {
+                "min": 50
+              }
             }
           }
         ]
