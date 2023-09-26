@@ -1,26 +1,18 @@
 scoreboard players operation $currentcheck playerUUID = @s playerUUID
 
-execute as @e[type=item_display,tag=CannonDisp,tag=!Owned,distance=..3,limit=1,sort=nearest] if score @s playerUUID matches 0 run tag @s add NoOwner
-execute as @e[type=item_display,tag=CannonDisp,tag=!NoOwner,distance=..3,limit=1,sort=nearest] if score @s playerUUID = $currentcheck playerUUID run tag @s add Owned
+execute as @e[type=item_display,tag=CannonDisp,distance=..3,limit=1,sort=nearest] run tag @s[scores={playerUUID=0}] add NewClaim
+scoreboard players operation @e[type=item_display,tag=NewClaim,limit=1,sort=nearest] playerUUID = $currentcheck playerUUID
 
-execute as @e[type=item_display,tag=Owned,limit=1,sort=nearest] if score @s playerUUID = $currentcheck playerUUID run scoreboard players operation $currentcannon playerUUID = @s playerUUID
-execute if entity @e[type=item_display,tag=NoOwner,limit=1,sort=nearest] run scoreboard players operation $currentcannon playerUUID = @s playerUUID
-execute as @e[type=item_display,tag=NoOwner,limit=1,sort=nearest] run tag @s add NewClaim
-execute as @e[type=item_display,tag=NoOwner,limit=1,sort=nearest] run scoreboard players operation @s playerUUID = $currentcannon playerUUID
-execute as @e[type=item_display,tag=Owned,limit=1,sort=nearest] run scoreboard players operation @s playerUUID = $currentcannon playerUUID
-tag @e[type=item_display,tag=NoOwner] remove NoOwner
-tag @e[type=item_display,tag=Owned] remove Owned
-
-execute as @e[type=item_display,tag=CannonDisp] if score $currentcannon playerUUID = @s playerUUID run tag @s add CurrentCheck
+execute as @e[type=item_display,tag=CannonDisp,distance=..3,limit=1,sort=nearest] if score $currentcheck playerUUID = @s playerUUID run tag @s add CurrentCheck
 
 execute as @e[type=item_display,tag=CurrentCheck] at @s run tag @e[type=interaction,tag=CannonVLeft,limit=1,sort=nearest,distance=..2] add CurrentCheck
 execute as @e[type=item_display,tag=CurrentCheck] at @s run tag @e[type=interaction,tag=CannonVRight,limit=1,sort=nearest,distance=..2] add CurrentCheck
 execute as @e[type=item_display,tag=CurrentCheck] at @s run tag @e[type=interaction,tag=CannonVMain,limit=1,sort=nearest,distance=..2] add CurrentCheck
 
-execute unless entity @e[type=item_display,tag=CurrentCheck] if entity @e[type=item_display,tag=CannonDisp,tag=!CurrentCheck,tag=!OnFire,distance=..3,limit=1] run tellraw @s {"translate":"cannon.occupied","italic":true,"color":"red"}
-execute unless entity @e[type=item_display,tag=CurrentCheck] run tag @s remove FillLeft
-execute unless entity @e[type=item_display,tag=CurrentCheck] run tag @s remove FillRight
-execute unless entity @e[type=item_display,tag=CurrentCheck] run tag @s remove FillCB
+execute unless entity @e[type=item_display,tag=CurrentCheck,limit=1] run tellraw @s {"translate":"cannon.occupied","italic":true,"color":"red"}
+execute unless entity @e[type=item_display,tag=CurrentCheck,limit=1] run tag @s remove FillLeft
+execute unless entity @e[type=item_display,tag=CurrentCheck,limit=1] run tag @s remove FillRight
+execute unless entity @e[type=item_display,tag=CurrentCheck,limit=1] run tag @s remove FillCB
 
 execute if entity @e[type=item_display,tag=CurrentCheck,tag=OnFire] run tellraw @s {"translate":"cannon.on_fire","italic":true,"color":"red"}
 execute if entity @e[type=item_display,tag=CurrentCheck,tag=OnFire] run tag @s remove FillLeft
