@@ -38,6 +38,7 @@ kill @e[type=marker,tag=Weakpoint]
 execute as @e[type=slime,tag=Weakpoint] run function arenaclear:kill
 
 execute as @e[type=item_display,tag=CannonDisp,tag=OnFire] at @s run function cannons:firering/extinguishcannon
+scoreboard players set @e[type=item_display,tag=FireAnimation] firetime 399
 
 scoreboard players set $WasAuto CmdData 0
 
