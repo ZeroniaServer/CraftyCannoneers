@@ -10,5 +10,4 @@ execute at @s[scores={CmdData=171..200}] run particle block sand ~ ~ ~ 0 0 0 0.1
 execute at @s[scores={CmdData=171..200}] run particle block dirt ~ ~ ~ 0 0 0 0.1 5 normal @a[team=!Lobby]
 execute at @s[scores={CmdData=171..200}] run playsound chestbury master @a ~ ~ ~ 1 1.6
 execute at @s[scores={CmdData=200}] run playsound chestbury2 master @a ~ ~ ~ 1 1.7
-data remove entity @s[scores={CmdData=220..}] Items
 kill @s[scores={CmdData=220..}]
