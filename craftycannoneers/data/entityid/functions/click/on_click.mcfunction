@@ -27,5 +27,6 @@ execute at @s[type=chest_minecart,tag=fakelockedchest,tag=!Opened] run function 
 execute if entity @s[type=hopper_minecart,tag=!Opened] if entity @a[limit=1,tag=clicker,tag=lowerteam] run tag @s add lowerteam
 
 #> Boat Cannons
-#Mount from clicking camel
+#Mount from clicking camel or villager
 execute if entity @s[type=camel,tag=BoatCannonAnchor] on vehicle run ride @a[limit=1,tag=clicker] mount @s[tag=!Sailing]
+execute if entity @s[type=villager,tag=BoatCannonAnchor] on vehicle run ride @a[limit=1,tag=clicker] mount @s[tag=!Sailing]
