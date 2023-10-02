@@ -1,4 +1,5 @@
 tag @s remove inParkour
+tag @s remove resettimeonce
 playsound parkourcancel master @s ~ ~ ~ 1 1.2
 playsound parkourcancel master @s ~ ~ ~ 1 0.8
 function game:clearinventory

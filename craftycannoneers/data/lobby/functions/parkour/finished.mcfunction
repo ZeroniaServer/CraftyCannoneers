@@ -23,4 +23,5 @@ execute if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestPar
 #> Remove tags
 tag @s add firstParkour
 tag @s remove inParkour
+tag @s remove resettimeonce
 tag @s remove finishedParkour

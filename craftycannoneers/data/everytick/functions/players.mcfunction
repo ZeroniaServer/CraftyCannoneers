@@ -126,6 +126,7 @@ execute positioned -279 -11 -15 if entity @s[scores={WeakpointTutorial=1..},dist
 execute if entity @s[team=Lobby] run function lobby:parkour/main
 effect clear @s[team=!Lobby,tag=inParkour] invisibility
 tag @s[team=!Lobby,tag=inParkour] remove inParkour
+tag @s[team=!Lobby,tag=resettimeonce] remove resettimeonce
 
 #> Click cooldown
 scoreboard players add @s clickcooldown 0

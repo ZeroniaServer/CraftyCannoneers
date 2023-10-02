@@ -82,5 +82,6 @@ scoreboard players reset @s[scores={leavegame=1..}] leavegame
 
 tellraw @s[tag=LeaveGame,tag=inParkour] [{"translate":"parkour.left_canceled","color":"red"}]
 tag @s[tag=LeaveGame,tag=inParkour] remove inParkour
+tag @s[tag=LeaveGame,tag=inParkour] remove resettimeonce
 
 tag @s[tag=LeaveGame] remove LeaveGame

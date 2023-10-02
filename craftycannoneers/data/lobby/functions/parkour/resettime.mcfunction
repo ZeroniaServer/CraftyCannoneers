@@ -5,4 +5,5 @@ scoreboard players set @s parkourDeci2 0
 scoreboard players set @s parkourTimer 0
 scoreboard players set @s finalParkourTime 0
 scoreboard players set @s checkpoint 0
-tellraw @s[tag=!startParkour] {"translate":"parkour.reset_time","color":"dark_green","italic":true}
+tellraw @s[tag=!startParkour,tag=!resettimeonce] {"translate":"parkour.reset_time","color":"dark_green","italic":true}
+tag @s[tag=!startParkour] add resettimeonce

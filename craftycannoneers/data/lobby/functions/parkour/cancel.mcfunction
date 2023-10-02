@@ -1,4 +1,5 @@
 tag @s remove inParkour
+tag @s remove resettimeonce
 execute positioned -71 -21 -1 if entity @s[distance=10..] at @s run tp @s @s
 execute positioned -71 -21 -1 if entity @s[distance=10..] at @s run tp @s -71 -21 -1 90 0
 execute positioned -71 -21 -1 unless entity @s[distance=10..] run tellraw @s {"translate":"parkour.canceled","color":"red","bold":true}
