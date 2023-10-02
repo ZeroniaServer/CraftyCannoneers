@@ -20,8 +20,8 @@ execute at @s positioned ~ ~-1 ~ if predicate game:located_water positioned ~ ~1
 #> Summon rotated grave chest
 data modify storage craftycannoneers:grave angle set from entity @s Rotation[0]
 execute at @s run function game:modifiers/graverobbery/rotate with storage craftycannoneers:grave
-execute if entity @s[tag=water] run tag @e[type=hopper_minecart,tag=grave,tag=new] add water
-execute if entity @s[tag=surface] run tag @e[type=hopper_minecart,tag=grave,tag=new] add surface
+execute if entity @s[tag=water] run tag @e[type=armor_stand,tag=grave,tag=new] add water
+execute if entity @s[tag=surface] run tag @e[type=armor_stand,tag=grave,tag=new] add surface
 
 #> Remove temp marker
 kill @s

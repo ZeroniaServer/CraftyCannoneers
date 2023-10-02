@@ -1,4 +1,5 @@
 tag @s remove new
+execute on vehicle run tag @s remove new
 playsound gravespawn1 master @a ~ ~ ~ 2 0
 playsound gravebreak2 master @a ~ ~ ~ 1 1.2
 playsound gravebreak2 master @a ~ ~ ~ 1 1.5

@@ -12,3 +12,6 @@ execute at @s[tag=Looted,scores={CmdData=30..220}] run function chests:bury
 
 #> As Chests
 execute on passengers at @s[type=!interaction] run function chests:aschests
+
+#> As Graves
+execute at @s[tag=grave] run function game:modifiers/graverobbery/asgrave
