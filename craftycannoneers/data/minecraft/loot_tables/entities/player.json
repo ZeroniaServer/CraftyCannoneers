@@ -21,6 +21,27 @@
                         {
                             "condition": "minecraft:inverted",
                             "term": {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "killer",
+                                "predicate": {
+                                    "type": "minecraft:cat",
+                                    "nbt": "{Tags:[\"teamless\"]}"
+                                }
+                            }
+                        },
+                        {
+                            "condition": "minecraft:inverted",
+                            "term": {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "killer",
+                                "predicate": {
+                                    "type": "minecraft:drowned"
+                                }
+                            }
+                        },
+                        {
+                            "condition": "minecraft:inverted",
+                            "term": {
                                 "condition": "minecraft:value_check",
                                 "value": {
                                     "type": "minecraft:score",
