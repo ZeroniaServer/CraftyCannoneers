@@ -6,6 +6,7 @@ execute if entity @s[tag=still,tag=!FireCannon,tag=!OnFire,scores={PowerM=5}] on
 
 #> Make player weak to prevent sounds
 execute if score $rightdir CmdData matches 1 on passengers run effect give @s[type=player,tag=!lookAtBCannon] weakness infinite 0 true
+execute if score $rightdir CmdData matches 1 on passengers run attribute @s[type=player,tag=!lookAtBCannon] generic.attack_damage modifier add 9c55d773-f866-4def-9740-6253d5ebb737 "nodamage" -100 add
 execute if score $rightdir CmdData matches 1 on passengers run tag @s[type=player] add lookAtBCannon
 execute if score $rightdir CmdData matches 0 on passengers run tag @s[type=player] remove lookAtBCannon
 

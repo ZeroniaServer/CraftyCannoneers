@@ -54,6 +54,7 @@ tag @s[tag=LeaveGame] remove onboatregen
 tag @s[tag=LeaveGame] remove onboatweakness
 tag @s[tag=LeaveGame] remove lookAtBarrel
 tag @s[tag=LeaveGame] remove lookAtCannon
+attribute @s[tag=LeaveGame] generic.attack_damage modifier remove 9c55d773-f866-4def-9740-6253d5ebb737
 tag @s[tag=LeaveGame] remove lookAtBCannon
 tag @s[tag=LeaveGame] remove barrelMainhand
 tag @s[tag=LeaveGame] remove barrelOffhand

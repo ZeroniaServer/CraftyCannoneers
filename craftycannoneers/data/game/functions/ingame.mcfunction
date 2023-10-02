@@ -17,11 +17,5 @@ execute as @a run trigger readyup set 0
 #> Ingame timer
 execute unless score $TimeLimit CmdData matches 42069.. run function game:ingame/timer
 
-#> Modifier loops - TODO relocate to duringgame?
-execute if score $Storms CmdData matches 1 run function game:modifiers/seastorms/loop
-execute if score $Wildlife CmdData matches 1 run function game:modifiers/sharks/loop
-execute if score $Wildlife CmdData matches 1 run function game:modifiers/crabs/loop
-execute if score $LostCargo CmdData matches 1 run function game:modifiers/lostcargo/loop
-
 #> Game end criteria
 execute unless score $gamestate CmdData matches 3.. run function game:ingame/endcriteria

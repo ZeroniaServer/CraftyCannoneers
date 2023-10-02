@@ -41,6 +41,7 @@ effect clear @s[team=Purple,predicate=!game:onorange,tag=onboatweakness,tag=!loo
 tag @s[team=Purple,predicate=!game:onorange,tag=onboatweakness,tag=!lookAtBCannon,tag=!lookAtCannon,tag=!lookAtBarrel] remove onboatweakness
 
 effect clear @s[tag=!lookAtBCannon,tag=!lookAtCannon,tag=!lookAtBarrel,tag=!onboatweakness] weakness
+attribute @s[tag=!lookAtBCannon,tag=!lookAtCannon,tag=!lookAtBarrel,tag=!onboatweakness] generic.attack_damage modifier remove 9c55d773-f866-4def-9740-6253d5ebb737
 
 #> Gapple timer
 effect give @s[scores={eatGapple=1..}] instant_health 1 0 true

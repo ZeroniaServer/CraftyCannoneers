@@ -11,6 +11,7 @@ tag @s remove onboatweakness
 tag @s remove lookAtBarrel
 tag @s remove lookAtCannon
 tag @s remove lookAtBCannon
+attribute @s generic.attack_damage modifier remove 9c55d773-f866-4def-9740-6253d5ebb737
 tag @s add loaded
 tag @s remove NeedsCutlass
 tag @s remove NeedsCrossbow

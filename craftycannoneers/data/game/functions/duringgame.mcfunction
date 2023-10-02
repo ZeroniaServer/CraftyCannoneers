@@ -1,6 +1,12 @@
 #> Game timer
 scoreboard players add $gametime CmdData 1
 
+#> Modifier loops
+execute if score $Storms CmdData matches 1 run function game:modifiers/seastorms/loop
+execute if score $Wildlife CmdData matches 1 run function game:modifiers/sharks/loop
+execute if score $Wildlife CmdData matches 1 run function game:modifiers/crabs/loop
+execute if score $LostCargo CmdData matches 1 run function game:modifiers/lostcargo/loop
+
 #> Team Chests
 execute as @e[type=marker,tag=orangeteamchest,limit=1] at @s positioned 68.50 -28 60.50 rotated -90 0 run function game:teamchest/orange/main
 execute as @e[type=marker,tag=purpleteamchest,limit=1] at @s positioned 72.50 -28 -59.50 rotated -90 0 run function game:teamchest/purple/main
