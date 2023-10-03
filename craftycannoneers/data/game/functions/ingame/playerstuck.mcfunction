@@ -27,3 +27,8 @@ effect clear @s[tag=!IsStuck,tag=!dismounter,nbt={OnGround:1b}] jump_boost
 effect give @s[tag=IsStuck] jump_boost infinite 3 true
 
 tag @s[tag=IsStuck] remove IsStuck
+
+tag @s[tag=waterstuck] remove waterstuck
+execute if block ~ ~1 ~ #minecraft:slabs[type=top] unless block ~ ~ ~ water[level=0] run tag @s add waterstuck
+item modify entity @s[tag=waterstuck] armor.feet game:depthstrider
+item modify entity @s[tag=!waterstuck] armor.feet game:nodepthstrider
