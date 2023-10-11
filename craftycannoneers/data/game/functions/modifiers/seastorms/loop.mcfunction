@@ -17,12 +17,12 @@ execute as @e[type=lightning_bolt] at @s run function game:modifiers/seastorms/r
 #> Wind
 execute if score $WindDirection CmdData matches 0..1 run scoreboard players add $WindEffect CmdData 1
 # East
-execute if score $WindDirection CmdData matches 0 if score $WindEffect CmdData matches 1 run playsound seastorm master @a 36 -12 0 7 1
-execute if score $WindDirection CmdData matches 0 if score $WindEffect CmdData matches 1 run playsound seastorm master @a 104 -12 0 5 1.6
+execute if score $WindDirection CmdData matches 0 if score $WindEffect CmdData matches 1 run playsound seastorm master @a 36 -12 0 8 1
+execute if score $WindDirection CmdData matches 0 if score $WindEffect CmdData matches 1 run playsound seastorm master @a 104 -12 0 6 1.6
 
 # West
-execute if score $WindDirection CmdData matches 1 if score $WindEffect CmdData matches 1 run playsound seastorm master @a 104 -12 0 7 1
-execute if score $WindDirection CmdData matches 1 if score $WindEffect CmdData matches 1 run playsound seastorm master @a 36 -12 0 5 1.6
+execute if score $WindDirection CmdData matches 1 if score $WindEffect CmdData matches 1 run playsound seastorm master @a 104 -12 0 8 1
+execute if score $WindDirection CmdData matches 1 if score $WindEffect CmdData matches 1 run playsound seastorm master @a 36 -12 0 6 1.6
 #Global
 execute if score $WindEffect CmdData matches 275.. run scoreboard players reset $WindDirection CmdData
 execute if score $WindEffect CmdData matches 275.. run scoreboard players reset $WindEffect CmdData
