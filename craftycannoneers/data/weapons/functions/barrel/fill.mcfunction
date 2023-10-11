@@ -1,5 +1,5 @@
 execute unless score @s CmdData matches 10.. run item modify entity @a[tag=self,gamemode=!creative,limit=1] weapon.mainhand game:reducecount
-execute unless score @s CmdData matches 10.. run playsound gunpowder master @a ~ ~ ~ 0.6 2
+execute unless score @s CmdData matches 10.. run playsound gunpowder master @a ~ ~ ~ 0.2 2
 execute unless score @s CmdData matches 10.. run scoreboard players add @s CmdData 1
 
 tag @a[tag=self,limit=1] remove self
