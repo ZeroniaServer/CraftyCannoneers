@@ -1,12 +1,10 @@
-#> Ascend
+#> Ascend/emerge from water
 execute at @s[tag=water,tag=!ascended] positioned ~ ~0.1 ~ if predicate game:located_water run tag @s add ascend
 execute at @s[tag=water,tag=!ascended] positioned ~ ~-0.1 ~ if predicate game:located_water run tag @s add ascend
 execute at @s[tag=water,tag=!ascended] unless block ~ ~0.9 ~ #game:sponge_replace unless block ~ ~0.9 ~ #game:raycast_exclude run tag @s add underwater
-execute at @s[tag=ascend,tag=!underwater] run function game:modifiers/graverobbery/ascend
-execute at @s[tag=water,tag=!ascended,tag=!underwater] positioned ~ ~-0.1 ~ unless predicate game:located_water at @s run function game:modifiers/graverobbery/emerge
-execute at @s[tag=water,tag=!ascended,tag=!underwater] positioned ~ ~-0.1 ~ unless predicate game:located_water run tag @s add ascended
+execute at @s[tag=ascend,tag=!ascended,tag=!underwater] run function game:modifiers/graverobbery/ascend
 execute at @s[tag=water,tag=ascended,tag=!rightheight,tag=!underwater] at @s run tp @s ~ ~-0.05 ~
-execute at @s[tag=water,tag=ascended,tag=!rightheight,tag=!underwater] positioned ~ ~0.24999 ~ if predicate game:located_water run tag @s add rightheight
+execute at @s[tag=water,tag=ascended,tag=!rightheight,tag=!underwater] positioned ~ ~0.0624999 ~ if predicate game:located_water run tag @s add rightheight
 
 execute if entity @s[tag=rightheight] unless score @s CmdData matches 31.. run scoreboard players set @s CmdData 31
 execute if entity @s[tag=!water] unless score @s CmdData matches 31.. run scoreboard players set @s CmdData 31

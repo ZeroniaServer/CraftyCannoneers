@@ -15,6 +15,7 @@ execute if entity @s[tag=CargoHopper] on vehicle run tag @s add ContainerLooted
 
 #Grave
 execute if entity @s[tag=grave] on vehicle run item replace entity @s armor.head with diamond_hoe{CustomModelData:136}
+execute if entity @s[tag=grave] on vehicle unless score @s CmdData matches 31.. run scoreboard players set @s CmdData 31
 
 #Global
 execute unless entity @s[tag=CargoHopper] on vehicle run tag @s add Looted
