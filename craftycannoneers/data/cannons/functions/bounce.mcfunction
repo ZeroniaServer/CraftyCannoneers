@@ -3,8 +3,8 @@ execute at @s unless entity @a[team=!Lobby,team=!Spectator,distance=..20] run fu
 
 scoreboard players add @s drag 4
 scoreboard players set @s gravity -250
-particle sweep_attack ~ ~ ~ 1 0.1 1 0 8 force
-particle cloud ~ ~ ~ 1 0.2 1 0.05 12 force
+particle sweep_attack ~ ~ ~ 1 0.1 1 0 8 force @a[predicate=cannons:seeparticles]
+particle cloud ~ ~ ~ 1 0.2 1 0.05 12 force @a[predicate=cannons:seeparticles]
 
 execute at @s run function cannons:bounce/sound
 

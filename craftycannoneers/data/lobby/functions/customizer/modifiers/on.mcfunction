@@ -1,7 +1,7 @@
 item replace entity @e[type=item_display,tag=MapEntity,limit=1] container.0 with diamond_hoe{CustomModelData:82}
 execute positioned -54 -23 9 run playsound modifier.open master @a ~ ~ ~ 1 2
-particle enchanted_hit -54 -22.5 9.8 1 1 0 0 30 force
-particle end_rod -54 -22.5 9.8 1 1 0 0.1 10 force
+particle enchanted_hit -54 -22.5 9.8 1 1 0 0 30 force @a[predicate=!game:tutorialbounds]
+particle end_rod -54 -22.5 9.8 1 1 0 0.1 10 force @a[predicate=!game:tutorialbounds]
 
 #> Place modifier signs
 fill -53 -24 9 -55 -22 9 air

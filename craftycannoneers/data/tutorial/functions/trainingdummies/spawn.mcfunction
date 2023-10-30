@@ -7,4 +7,4 @@ summon husk ~ ~ ~ {DeathTime:17s,Tags:["TrainingDummy","TDZombie"],Attributes:[{
 tp @e[type=husk,tag=TrainingDummy,tag=TDZombie,limit=1,sort=nearest,distance=..0.1] ~ ~ ~ ~ ~
 summon area_effect_cloud ~ ~1.6 ~ {Tags:["TrainingDummy","NameTag"],Duration:2000000000,CustomNameVisible:1b,CustomName:'["",{"text":"❤ ","color":"red"},{"text":"20","color":"green"},{"text":"/","color":"gray"},{"text":"20","color":"dark_green"}]'}
 execute as @e[type=husk,tag=TDZombie] store result score @s eyeclick run data get entity @s Health
-particle cloud ~ ~1 ~ 0 0.5 0 0.1 20 force
+particle cloud ~ ~1 ~ 0 0.5 0 0.1 20 force @a[team=Lobby,predicate=game:tutorialbounds]

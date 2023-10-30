@@ -10,9 +10,9 @@ title @s[scores={drowning=1..80}] subtitle {"translate":"game.return_combat","co
 execute if score @s drowning matches 20 run playsound entity.generic.swim master @s ~ ~ ~ 1 0.7
 execute if score @s drowning matches 40 run playsound entity.generic.swim master @s ~ ~ ~ 1 0.8
 execute if score @s drowning matches 60 run playsound entity.generic.swim master @s ~ ~ ~ 1 1
-execute if score @s drowning matches 80.. run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force
-execute if score @s drowning matches 80.. run particle falling_water ~ ~ ~ 0.2 0.4 0.1 0.2 150 force
-execute if score @s drowning matches 80.. run particle bubble_column_up ~ ~ ~ 0.4 0.2 0.4 0.1 20 force
+execute if score @s drowning matches 80.. run particle splash ~ ~ ~ 0.3 0 0.3 0.3 150 force @a[team=!Lobby]
+execute if score @s drowning matches 80.. run particle falling_water ~ ~ ~ 0.2 0.4 0.1 0.2 150 force @a[team=!Lobby]
+execute if score @s drowning matches 80.. run particle bubble_column_up ~ ~ ~ 0.4 0.2 0.4 0.1 20 force @a[team=!Lobby]
 execute if score @s drowning matches 80.. run playsound entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 0
 execute if score @s drowning matches 80.. run playsound entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 1.4
 execute if score @s drowning matches 80.. run playsound block.bubble_column.whirlpool_ambient master @a[distance=1..] ~ ~ ~ 1 1.2

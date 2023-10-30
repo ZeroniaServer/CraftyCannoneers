@@ -4,7 +4,7 @@ scoreboard players add @s CmdData 1
 execute if entity @s[scores={CmdData=7}] run function cannons:gas/randomsize
 execute at @s[scores={CmdData=8..}] run tp @s ~ ~0.003 ~
 execute at @s[scores={CmdData=8..}] facing ^ ^ ^0.006 run tp @s ^ ^ ^0.006 ~ ~
-execute at @s run particle soul ~ ~ ~ 0.3 0.3 0.3 0.03 1 force
+execute at @s run particle soul ~ ~ ~ 0.3 0.3 0.3 0.03 1 force @a[predicate=cannons:seeparticles]
 scoreboard players add @s[scores={CmdData=8..}] CmdData 1
 
 data merge entity @s[scores={CmdData=489}] {start_interpolation:0,interpolation_duration:6,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f]}}
