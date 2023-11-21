@@ -1,18 +1,27 @@
 {
-  "filter": {
-    "block": [
-      {
-        "namespace": "^minecraft$",
-        "path": "recipes/.*"
-      },
-      {
-        "namespace": "^minecraft$",
-        "path": "advancements/.*"
-      }
-    ]
-  },
-  "pack": {
-    "pack_format": 23,
-    "description": "Made by Zeronia"
-  }
+    "filter": {
+        "block": [
+            {
+                "namespace": "^minecraft$",
+                "path": "recipes/.*"
+            },
+            {
+                "namespace": "^minecraft$",
+                "path": "advancements/.*"
+            }
+        ]
+    },
+    "pack": {
+        "pack_format": 18,
+        "description": "Made by Zeronia",
+        "supported_formats": [18, 26]
+    },
+    "overlays": {
+        "entries": [
+            {
+                "formats": [19, 26],
+                "directory": "1_20_3"
+            }
+        ]
+    }
 }
