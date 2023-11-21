@@ -5,3 +5,4 @@ execute unless score $WorldVersion CmdData matches 1040.. run function version:1
 execute unless score $WorldVersion CmdData matches 1050.. run function version:1_0_5/update
 execute unless score $WorldVersion CmdData matches 1060.. run function version:1_0_6/update
 execute unless score $WorldVersion CmdData matches 1070.. run function version:1_0_7/update
+execute unless score $WorldVersion CmdData matches 1080.. run function version:1_0_8/update
