@@ -79,7 +79,9 @@ setblock -46 -24 -5 light[level=14]
 setblock -45 -24 0 light[level=14]
 setblock -46 -24 5 light[level=14]
 
+#> New Treasure Pit water pool
 place template version:1_1_0/treasure_pit -239 -29 -25
+summon interaction -229 -28 -14 {width:0.5f,height:0.5f,Tags:["protect"]}
 
 bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"4","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
 bossbar set updatebar value 4
