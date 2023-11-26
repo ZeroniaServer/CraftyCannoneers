@@ -1,25 +1,23 @@
-execute at @s[tag=!Hit1,predicate=!cannons:safezones/island] store result score @s CalcAir1 run fill ~ ~-1 ~ ~ ~-1 ~ air replace #game:shipblocks
-execute at @s[tag=!Hit1,predicate=!cannons:safezones/island] store result score @s CalcAir2 run fill ^1 ^1 ^1 ^-1 ^-1 ^1 air replace #game:shipblocks
+#>Safezone check
+tag @s[predicate=cannons:safezones/island] add InSafezone
+tag @s[predicate=cannons:safezones/ships] add InSafezone
+tag @s[predicate=cannons:safezones/lobby] add InSafezone
+execute at @s[tag=!InSafezone] if entity @e[type=item_display,tag=cannon,distance=..2] run tag @s add InSafezone
+execute at @s[tag=!InSafezone] if entity @e[type=interaction,tag=cannon,distance=..2] run tag @s add InSafezone
 
-execute at @s[tag=CopperCannonball,tag=!StrikeLightning,predicate=!cannons:safezones/island] store result score @s CalcAir1 run fill ~ ~-1 ~ ~ ~-1 ~ air replace #game:shipblocks
-execute at @s[tag=CopperCannonball,tag=!StrikeLightning,predicate=!cannons:safezones/island] store result score @s CalcAir2 run fill ^1 ^1 ^1 ^-1 ^-1 ^1 air replace #game:shipblocks
+execute at @s[tag=!Hit1,tag=!InSafezone] store result score @s CalcAir1 run fill ~ ~-1 ~ ~ ~-1 ~ air replace #game:shipblocks
+execute at @s[tag=!Hit1,tag=!InSafezone] store result score @s CalcAir2 run fill ^1 ^1 ^1 ^-1 ^-1 ^1 air replace #game:shipblocks
+
+execute at @s[tag=CopperCannonball,tag=!StrikeLightning,tag=!InSafezone] store result score @s CalcAir1 run fill ~ ~-1 ~ ~ ~-1 ~ air replace #game:shipblocks
+execute at @s[tag=CopperCannonball,tag=!StrikeLightning,tag=!InSafezone] store result score @s CalcAir2 run fill ^1 ^1 ^1 ^-1 ^-1 ^1 air replace #game:shipblocks
 
 execute at @s[tag=!BouncyCannonball,tag=!PlayerCannonball,tag=!Hit1] run tp @s ^ ^ ^1
-#>Safezone check
-#Island
-tag @s[predicate=cannons:safezones/island] add InSafezone
-#Cannons
-execute at @s if entity @e[type=item_display,tag=cannon,distance=..2] run tag @s add InSafezone
-execute at @s[tag=!InSafeZone] if entity @e[type=interaction,tag=cannon,distance=..2] run tag @s add InSafezone
-
-#Ships
-tag @s[predicate=cannons:safezones/ships] add InSafezone
 
 #FIREBALL EFFECT
 execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. run scoreboard players operation @e[type=item_display,tag=GasBubble,tag=!GasIgnite,distance=..6] playerUUID = @s playerUUID
 execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. run tag @e[type=item_display,tag=GasBubble,tag=!GasIgnite,distance=..6] add GasIgnite
 execute if score $BoatCannons CmdData matches 1 at @s[tag=!Hit1,tag=HotCannonball] run tag @e[type=boat,tag=!OnFire,distance=..8,limit=2,sort=nearest] add OnFire
-execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. run summon marker ^ ^-2 ^3 {Tags:["RingOfFire"]}
+execute at @s[tag=!InSafezone,tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. run summon marker ^ ^-2 ^3 {Tags:["RingOfFire"]}
 execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. if predicate game:onpurple run scoreboard players add $PFireCount CmdData 1
 execute at @s[tag=!Hit1,tag=HotCannonball] unless score @s doublehit matches 1.. if predicate game:onpurple run scoreboard players add $OFireCount CmdData 1
 scoreboard players operation @e[type=marker,tag=RingOfFire,tag=!HasUUID,limit=1] playerUUID = @s playerUUID

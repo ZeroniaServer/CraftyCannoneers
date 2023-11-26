@@ -1,4 +1,4 @@
-execute unless predicate cannons:safezones/island unless score @s CmdData matches 1.. at @s run function cannons:lightfill1
+execute unless predicate cannons:safezones/island unless predicate cannons:safezones/lobby unless score @s CmdData matches 1.. at @s run function cannons:lightfill1
 scoreboard players set @s CmdData 1
 
 #> Dismount nearby Crabs/Sharks so they can be moved
@@ -28,7 +28,7 @@ execute if entity @s[tag=BlastBarrel1] run summon creeper ~ ~ ~ {Tags:["BlastBar
 execute if entity @s[tag=BlastBarrel2] run summon creeper ~ ~ ~ {Invulnerable:1b,Tags:["BlastBarrelCreeper","CannonballCreeper"],CustomName:'{"translate":"item.blast_barrel.generic"}',Fuse:1,Silent:1b,CustomNameVisible:0b,NoAI:1b,CanPickUpLoot:0b,DeathTime:17s,ExplosionRadius:3}
 execute if entity @s[tag=BlastBarrel2] run summon creeper ~ ~ ~ {Invulnerable:1b,Tags:["BlastBarrelCreeper","CannonballCreeper"],CustomName:'{"translate":"item.blast_barrel.generic"}',Fuse:1,Silent:1b,CustomNameVisible:0b,NoAI:1b,CanPickUpLoot:0b,DeathTime:17s,ExplosionRadius:2}
 team join Collide @e[type=creeper,tag=BlastBarrelCreeper]
-execute if entity @s[tag=GasPower,predicate=!cannons:safezones/island,predicate=!cannons:safezones/tutorial] run summon creeper ~ ~ ~ {Tags:["GasCreeper","CannonballCreeper"],CustomName:'{"translate":"gas_explosion.generic"}',Fuse:1,Silent:1b,CustomNameVisible:0b,NoAI:1b,CanPickUpLoot:0b,DeathTime:17s,ExplosionRadius:2}
+execute if entity @s[tag=GasPower,predicate=!cannons:safezones/island,predicate=!cannons:safezones/tutorial,predicate=!cannons:safezones/lobby] run summon creeper ~ ~ ~ {Tags:["GasCreeper","CannonballCreeper"],CustomName:'{"translate":"gas_explosion.generic"}',Fuse:1,Silent:1b,CustomNameVisible:0b,NoAI:1b,CanPickUpLoot:0b,DeathTime:17s,ExplosionRadius:2}
 team join NoName @e[type=creeper,tag=!hasUUID]
 scoreboard players operation @e[type=creeper,tag=!HasUUID,sort=nearest,distance=..2] playerUUID = @s playerUUID
 data modify storage craftycannoneers:temp CustomName set from entity @s CustomName
