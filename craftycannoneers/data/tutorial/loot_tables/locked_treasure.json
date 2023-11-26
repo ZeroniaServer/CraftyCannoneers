@@ -12,7 +12,7 @@
       "functions": [
         {
           "function": "minecraft:set_nbt",
-          "tag": "{NoDrop:1b}"
+          "tag": "{NoDrop:1b,CanPlaceOn:[\"\"],HideFlags:127}"
         }
       ]
     }
