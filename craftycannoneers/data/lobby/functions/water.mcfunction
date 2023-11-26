@@ -5,3 +5,4 @@ playsound entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 0
 playsound entity.player.splash.high_speed master @a[distance=1..] ~ ~ ~ 1 1.4
 playsound block.bubble_column.whirlpool_ambient master @a[distance=1..] ~ ~ ~ 1 1.2
 tag @s add LeaveGame
+tag @s add WaterTP

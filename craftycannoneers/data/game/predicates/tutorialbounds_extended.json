@@ -3,12 +3,12 @@
     "predicate": {
         "position": {
             "x": {
-                "min": -300,
-                "max": -180
+                "min": -305,
+                "max": -175
             },
             "z": {
-                "min": -95,
-                "max": 15
+                "min": -100,
+                "max": 20
             }
         }
     }

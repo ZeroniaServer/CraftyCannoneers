@@ -31,29 +31,29 @@ title @s[tag=LeaveGame] times 0 50 15
 team join Lobby @s[tag=LeaveGame]
 execute if score $gamestate CmdData matches 2.. run function game:ingame/endcriteria
 execute at @s[tag=LeaveGame] run tp @s @s
-execute if entity @s[tag=LeaveGame,predicate=!game:tutorialbounds] run tp @s -55 -21 0 -90 0
-execute if entity @s[tag=LeaveGame,predicate=game:tutorialbounds] unless score @s LeftGame matches 1.. run tp @s -264 -20 -21 -90 0
-execute if entity @s[tag=LeaveGame,predicate=game:tutorialbounds] if score @s LeftGame matches 1.. run tp @s -55 -21 0 -90 0
-execute if entity @s[tag=LeaveGame,predicate=game:tutorialbounds] run tag @s add Warped
+execute if entity @s[tag=LeaveGame,predicate=!game:tutorialbounds_extended] run tp @s -55 -21 0 -90 0
+execute if entity @s[tag=LeaveGame,predicate=game:tutorialbounds_extended] run tag @s add Warped
+execute if entity @s[tag=LeaveGame,predicate=game:tutorialbounds_extended] unless score @s LeftGame matches 1.. run tp @s -264 -20 -21 -90 0
+execute if entity @s[tag=LeaveGame,predicate=game:tutorialbounds_extended] if score @s LeftGame matches 1.. run tp @s -55 -21 0 -90 0
 clear @s[tag=LeaveGame]
-execute if entity @s[tag=LeaveGame] run function lobby:easteregg/buttonreset
 execute if entity @s[tag=LeaveGame] run function lobby:items
 effect clear @s[tag=LeaveGame]
 gamemode adventure @s[tag=LeaveGame]
 attribute @s[tag=LeaveGame] minecraft:generic.luck base set 0.0
 recipe take @s[tag=LeaveGame] *
 tag @s[tag=LeaveGame,scores={LeftGame=1..}] remove hasMoved
-execute unless score @s leavegame matches 1.. run tag @s[tag=LeaveGame] remove msgReceived
-execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/combat=false}] add NeedsTutorial
-execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/cannon=false}] add NeedsTutorial
-execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/treasure=false}] add NeedsTutorial
-execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,advancements={tutorial:objectives/watchtower=false}] add NeedsTutorial
+execute unless score @s leavegame matches 1.. run tag @s[tag=LeaveGame,tag=!WaterTP] remove msgReceived
+execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,tag=!WaterTP,advancements={tutorial:objectives/combat=false}] add NeedsTutorial
+execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,tag=!WaterTP,advancements={tutorial:objectives/cannon=false}] add NeedsTutorial
+execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,tag=!WaterTP,advancements={tutorial:objectives/treasure=false}] add NeedsTutorial
+execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,tag=!WaterTP,advancements={tutorial:objectives/watchtower=false}] add NeedsTutorial
 execute if entity @s[tag=LeaveGame] unless entity @s[team=] unless score @s LeftGame matches 1.. at @s run playsound leavegame master @s ~ ~ ~ 1 1
 scoreboard players reset @s[scores={LeftGame=1..}] LeftGame
 tag @s[tag=LeaveGame] remove onboatregen
 tag @s[tag=LeaveGame] remove onboatweakness
 tag @s[tag=LeaveGame] remove lookAtBarrel
 tag @s[tag=LeaveGame] remove lookAtCannon
+tag @s[tag=LeaveGame] remove WaterTP
 attribute @s[tag=LeaveGame] generic.attack_damage modifier remove 9c55d773-f866-4def-9740-6253d5ebb737
 tag @s[tag=LeaveGame] remove lookAtBCannon
 tag @s[tag=LeaveGame] remove barrelMainhand

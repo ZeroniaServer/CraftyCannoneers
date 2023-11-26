@@ -102,7 +102,7 @@ execute if entity @s[team=!Spectator] run function chests:openchest
 execute unless entity @s[advancements={game:invcount={rock=false,full=false,full_lobby=false,unfull=false,unfull_lobby=false}}] run function game:invcount
 
 #> Lobby water
-execute at @s[team=Lobby,predicate=!game:inlobby] if block ~ ~ ~ water run function lobby:water
+execute at @s[team=Lobby,predicate=!game:inlobby,predicate=!game:tutorialbounds] if block ~ ~ ~ water run function lobby:water
 
 #> Reset stats/tags
 scoreboard players reset @s[team=Lobby] MVPkill
@@ -143,7 +143,7 @@ advancement grant @s[advancements={tutorial:eastereggs/parrot=true,tutorial:east
 execute at @s[scores={parrotpet=1..}] unless entity @e[type=item_display,tag=Parrot,distance=..7] run scoreboard players reset @s parrotpet
 
 #> Tutorial warps
-execute unless entity @e[type=marker,tag=TutorialWarp,distance=..2] run tag @s remove Warped
+execute at @s unless entity @e[type=marker,tag=TutorialWarp,distance=..2] run tag @s remove Warped
 
 #> Toggle tips
 function everytick:toggletips
