@@ -1,6 +1,6 @@
 scoreboard players set @e[type=marker,tag=joinpad] CmdData 0
 title @a clear
-tag @a[team=!Lobby] add LeaveGame
+tag @a[team=!Lobby,team=!Developer] add LeaveGame
 scoreboard players set $WinningTeam CmdData 0
 scoreboard players set $EndTime CmdData 0
 execute as @e[type=marker,tag=joinpad] at @s run function lobby:joinpads/lock

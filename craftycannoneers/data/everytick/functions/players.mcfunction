@@ -19,7 +19,7 @@ execute unless score @s playerUUID matches -2147483648.. store result score @s p
 tag @s[team=] add LeaveGame
 
 #> Leave game
-function everytick:leavegame
+execute unless entity @s[team=Developer] run function everytick:leavegame
 scoreboard players operation @s leavecheck = $curr leavecheck
 
 #> Welcome new players
