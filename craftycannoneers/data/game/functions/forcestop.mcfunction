@@ -1,5 +1,5 @@
 scoreboard players set @e[type=marker,tag=joinpad] CmdData 0
-title @a clear
+title @a[tag=!inParkour] clear
 tag @a[team=!Lobby,team=!Developer] add LeaveGame
 scoreboard players set $WinningTeam CmdData 0
 scoreboard players set $EndTime CmdData 0
