@@ -12,16 +12,12 @@
         ]
     },
     "pack": {
-        "pack_format": 15,
+        "pack_format": 18,
         "description": "Made by Zeronia",
-        "supported_formats": [15, 26]
+        "supported_formats": [18, 26]
     },
     "overlays": {
         "entries": [
-            {
-                "formats": [17, 18],
-                "directory": "1_20_2"
-            },
             {
                 "formats": [19, 26],
                 "directory": "1_20_3"

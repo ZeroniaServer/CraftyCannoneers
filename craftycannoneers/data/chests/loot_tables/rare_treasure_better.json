@@ -329,7 +329,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomPotionColor:6886656,CustomPotionEffects:[{Id:30,Duration:160,Amplifier:0},{Id:1,Duration:200,Amplifier:1}],display:{Name:'[{\"text\":\"Trooper Tonic\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+              "tag": "{CustomPotionColor:6886656,custom_potion_effects:[{id:\"minecraft:dolphins_grace\",duration:160,amplifier:0},{id:\"minecraft:speed\",duration:200,amplifier:1}],display:{Name:'[{\"text\":\"Trooper Tonic\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
             },
             {
               "function": "minecraft:set_count",
