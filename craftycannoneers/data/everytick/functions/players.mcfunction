@@ -11,25 +11,20 @@ spawnpoint @s[team=Lobby] -55 -21 0 -90
 execute unless score @s playerUUID matches -2147483648.. store result score @s playerUUID run data get entity @s UUID[0]
 tag @s[team=] add LeaveGame
 
-#> Message delay
-scoreboard players add @s msgdelay 0
-scoreboard players add @s[scores={msgdelay=..159}] msgdelay 1
-
-#> Movement detection
-scoreboard players reset @s[scores={msgdelay=..159}] jump
-scoreboard players reset @s[scores={msgdelay=..159}] walk
-scoreboard players reset @s[scores={msgdelay=..159}] sprint
-scoreboard players reset @s[scores={msgdelay=..159}] crouch
-tag @s[tag=!hasMoved,scores={jump=1..,msgdelay=160..}] add hasMoved
-tag @s[tag=!hasMoved,scores={walk=30..,msgdelay=160..}] add hasMoved
-tag @s[tag=!hasMoved,scores={sprint=50..,msgdelay=160..}] add hasMoved
-tag @s[tag=!hasMoved,scores={crouch=30..,msgdelay=160..}] add hasMoved
-
 #> Leave game
 execute unless entity @s[team=Developer] run function everytick:leavegame
 
-#> If player has moved
-execute if entity @s[tag=hasMoved] run function everytick:hasmoved
+#> Welcome new players
+execute at @s[team=Lobby,tag=!firstJoined] run function everytick:welcome
+
+#> Notify players about Training Island
+execute if entity @s[tag=NeedsTutorial,tag=!hideTips] run tellraw @s ["","\n",{"text":"It seems like you're new to ","color":"green"},{"text":"Crafty ","bold":true,"color":"dark_purple"},{"text":"Cannoneers","bold":true,"color":"gold"},{"text":"!","color":"green"},"\n",{"text":"We highly recommend you to check out the ","color":"green"},{"text":"Training Island","bold":true,"color":"aqua"},{"text":" before playing the actual game!","color":"green"},"\n",{"text":"You can go there by using the blue warp pad on the left side of the Lobby.","italic":true,"color":"dark_green"},"\n"]
+tag @s[tag=NeedsTutorial] remove NeedsTutorial
+
+#> Notify players about resource pack
+execute if score $gamestate CmdData matches 0..2 run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true,"extra":["\n\n",{"nbt":"ReadyToPlay","storage":"craftycannoneers:messages","interpret":true}]},{"nbt":"ReadyToPlay","storage":"craftycannoneers:messages","interpret":true}]}]
+execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true,"extra":["\n\n",{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]
+tag @s[tag=firstJoined] add msgReceived
 
 #> Join teams
 execute at @s[team=Lobby] run function lobby:joinpads/jointeams

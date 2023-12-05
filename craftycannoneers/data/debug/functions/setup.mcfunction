@@ -60,10 +60,6 @@ scoreboard objectives add useharpoon minecraft.used:minecraft.trident
 scoreboard objectives add eyeclick dummy
 scoreboard objectives add openchest dummy
 scoreboard objectives add bubblewarn dummy
-scoreboard objectives add walk minecraft.custom:minecraft.walk_one_cm
-scoreboard objectives add sprint minecraft.custom:minecraft.sprint_one_cm
-scoreboard objectives add crouch minecraft.custom:minecraft.crouch_one_cm
-scoreboard objectives add jump minecraft.custom:minecraft.jump
 scoreboard objectives add click minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add clickcooldown dummy
 scoreboard objectives add throwsb minecraft.used:minecraft.snowball
@@ -95,7 +91,6 @@ scoreboard objectives add fakeexpose4 dummy
 scoreboard objectives add fakeexpose5 dummy
 scoreboard objectives add fakeexpose6 dummy
 scoreboard objectives add fakeexpose7 dummy
-scoreboard objectives add msgdelay dummy
 scoreboard objectives add bouncedelay dummy
 scoreboard objectives add MVPdamage dummy
 scoreboard objectives add ChaseUUID dummy

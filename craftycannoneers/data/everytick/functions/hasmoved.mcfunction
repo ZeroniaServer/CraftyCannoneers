@@ -1,9 +1,3 @@
-#> Reset movement tracking scoreboards
-scoreboard players reset @s jump
-scoreboard players reset @s walk
-scoreboard players reset @s sprint
-scoreboard players reset @s crouch
-
 #> Welcome new players
 execute at @s[team=Lobby,tag=!firstJoined] run function everytick:welcome
 
