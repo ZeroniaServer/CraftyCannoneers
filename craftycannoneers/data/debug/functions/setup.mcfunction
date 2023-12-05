@@ -136,7 +136,7 @@ scoreboard objectives add dz2 dummy
 
 #> Bossbars
 bossbar add lobbybar "Lobbybar"
-bossbar set lobbybar name {"text":"Please confirm game settings at the Settings Map!","color":"aqua"}
+execute if score $gamestate CmdData matches -1 unless entity @a[tag=ModiOwner,limit=1] run bossbar set lobbybar name {"text":"Please confirm game settings at the Settings Map!","color":"aqua"}
 bossbar set lobbybar max 10
 bossbar set lobbybar color blue
 
