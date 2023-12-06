@@ -12,8 +12,8 @@ scoreboard players enable @s[team=!Lobby] leavegame
 scoreboard players reset @s[team=Lobby] leavegame
 
 #Pirate Hat game leaving
-execute if entity @s[team=Purple,predicate=!game:has_hat] unless score @s death matches 1.. unless score @s respawn matches 1.. run trigger leavegame
-execute if entity @s[team=Orange,predicate=!game:has_hat] unless score @s death matches 1.. unless score @s respawn matches 1.. run trigger leavegame
+execute if entity @s[team=Purple,predicate=!game:has_hat] unless score @s death matches 1.. run trigger leavegame
+execute if entity @s[team=Orange,predicate=!game:has_hat] unless score @s death matches 1.. run trigger leavegame
 execute if entity @s[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveGame
 
 execute if entity @s[team=!Lobby,team=!Spectator,team=!Developer] unless score @s leavegame matches 0 run tellraw @a ["",{"selector":"@s"},{"text":" left their team!","color":"dark_aqua"}]
@@ -57,7 +57,6 @@ tag @s[tag=LeaveGame] remove NeedsSpyglass
 tag @s[tag=LeaveGame] remove NeedsTracer
 tag @s[tag=LeaveGame] remove mobtesting
 tag @s[tag=LeaveGame] remove ModiOwner
-scoreboard players reset @s[tag=LeaveGame] respawn
 execute if entity @s[tag=LeaveGame] run function lobby:easteregg/rocket/reset
 execute if entity @s[tag=LeaveGame] run function game:boat/removetags
 scoreboard players reset @s[tag=LeaveGame] loverocks
