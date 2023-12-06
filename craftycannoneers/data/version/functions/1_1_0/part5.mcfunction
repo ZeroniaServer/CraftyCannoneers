@@ -16,10 +16,6 @@ data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=Clickon,limit=1] {
 #> Remove unused scoreboard objectives
 scoreboard objectives remove fullInv
 scoreboard objectives remove RNGmax
-scoreboard objectives remove walk
-scoreboard objectives remove sprint
-scoreboard objectives remove crouch
-scoreboard objectives remove jump
 scoreboard objectives remove arrowtime
 
 #> Move Parkour leaderboard text up
