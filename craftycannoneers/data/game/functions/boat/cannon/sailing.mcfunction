@@ -24,10 +24,3 @@ execute if score $rightdir CmdData matches 1 on passengers on passengers at @s[t
 
 #> Prevent click animation if not holding right item
 execute if score $rightdir CmdData matches 1 on passengers on passengers on passengers store result entity @s[type=interaction] response byte 1 run scoreboard players get $response CmdData
-
-#> Interaction cycling
-execute if score $rightdir CmdData matches 0 run scoreboard players set @s ctr2 0
-execute if score $rightdir CmdData matches 1 run scoreboard players add @s ctr2 1
-execute if score $rightdir CmdData matches 1 if score @s ctr2 matches 12 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] run function game:boat/cannon/cycleinteraction
-execute if score $rightdir CmdData matches 1 if score @s ctr2 matches 6 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] on passengers if entity @s[tag=kill] run function arenaclear:kill
-scoreboard players set @s[scores={ctr2=12..}] ctr2 0
