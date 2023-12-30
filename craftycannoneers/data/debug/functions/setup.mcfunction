@@ -119,6 +119,7 @@ scoreboard objectives add LootLoader dummy
 scoreboard objectives add hasBarrels dummy
 scoreboard objectives add copperStrike dummy
 scoreboard objectives add sharktarget dummy
+scoreboard objectives add sharkcooldown dummy
 scoreboard objectives add crabtime dummy
 scoreboard objectives add crabmode dummy
 scoreboard objectives add TrapDurability dummy

@@ -50,7 +50,7 @@ execute if score @s kill matches 1.. run function game:ingame/kill
 #> Death
 scoreboard players add @s[scores={respawn=1..}] respawn 1
 execute if score @s death matches 1.. run function game:ingame/death
-scoreboard players reset @s[scores={respawn=30..}] respawn
+scoreboard players reset @s[scores={respawn=220..}] respawn
 
 #> Chest balancing
 function balancing:chestluck

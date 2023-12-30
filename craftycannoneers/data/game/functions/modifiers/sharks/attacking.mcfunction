@@ -28,4 +28,10 @@ execute unless score $bitcargo CmdData matches 1 at @s[scores={CmdData=9}] posit
 execute at @s[scores={CmdData=9}] if predicate game:tooth_chance positioned ^ ^ ^1 if entity @a[distance=..2,limit=1] at @s run function game:modifiers/sharks/losttooth
 execute at @s[scores={CmdData=9}] run particle bubble ^ ^ ^2 0 0 0 0.1 10 force @a[team=!Lobby]
 item replace entity @s[scores={CmdData=11}] armor.head with diamond_hoe{Unbreakable:1b,CustomModelData:87}
+
+execute at @s[scores={CmdData=9}] store result score @s sharkcooldown run random value 1..60
+
+scoreboard players set @s[scores={CmdData=9}] crabmode 100
+
+tag @s[scores={CmdData=9}] add OnCooldown
 tag @s[scores={CmdData=45..}] remove Attacking

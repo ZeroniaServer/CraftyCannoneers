@@ -84,6 +84,8 @@ execute unless entity @e[type=marker,tag=RingOfFire,predicate=cannons:safezones/
 #> Enable modifiers
 execute if score $Wildlife CmdData matches 1 run function game:modifiers/sharks/spawnsharks
 execute if score $Wildlife CmdData matches 1 unless entity 00000539-ffff-fe5c-0000-004500000015 run summon marker 0 0 0 {UUID:[I;1337,-420,69,21]}
+execute if score $Wildlife CmdData matches 1 run scoreboard players set @a[team=Orange] respawn 1
+execute if score $Wildlife CmdData matches 1 run scoreboard players set @a[team=Purple] respawn 1
 execute if score $LostCargo CmdData matches 1 run function game:modifiers/lostcargo/setup
 execute if score $LostCargo CmdData matches 1 run scoreboard players set $CargoTime CmdData 0
 execute if score $LostCargo CmdData matches 1 run scoreboard players set $SpawnCargo CmdData 1
