@@ -14,23 +14,23 @@ execute at @s[tag=GPDispL,scores={gpdisp_time=1}] at @e[type=interaction,tag=Can
 execute at @s[tag=GPDispL,scores={gpdisp_time=1}] at @e[type=interaction,tag=CannonVLeft,tag=Tutorial,limit=1,sort=nearest,distance=..2] run summon area_effect_cloud ~ ~ ~ {Tags:["cannon","GPDispText","1","Tutorial"],Duration:2000000000,Particle:"block air"}
 execute at @s[tag=GPDispL,scores={gpdisp_time=1}] at @e[type=interaction,tag=CannonVRight,tag=Tutorial,limit=1,sort=nearest,distance=..2] run summon area_effect_cloud ~ ~ ~ {Tags:["cannon","GPDispText","2","Tutorial"],Duration:2000000000,Particle:"block air"}
 
-execute at @s[tag=GPDispL,scores={CmdData=0,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:"0",CustomNameVisible:1b}
-execute at @s[tag=GPDispL,scores={CmdData=1,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:"1",CustomNameVisible:1b}
-execute at @s[tag=GPDispL,scores={CmdData=2,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:"2",CustomNameVisible:1b}
-execute at @s[tag=GPDispL,scores={CmdData=3,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:"3",CustomNameVisible:1b}
-execute at @s[tag=GPDispL,scores={CmdData=4,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:"4",CustomNameVisible:1b}
-execute at @s[tag=GPDispL,scores={CmdData=5,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:"5",CustomNameVisible:1b}
-execute at @s[tag=GPDispL,scores={CmdData=6,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:"6",CustomNameVisible:1b}
-execute at @s[tag=GPDispL,scores={CmdData=7,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:"7",CustomNameVisible:1b}
+execute at @s[tag=GPDispL,scores={CmdData=0,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:'"0"',CustomNameVisible:1b}
+execute at @s[tag=GPDispL,scores={CmdData=1,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:'"1"',CustomNameVisible:1b}
+execute at @s[tag=GPDispL,scores={CmdData=2,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:'"2"',CustomNameVisible:1b}
+execute at @s[tag=GPDispL,scores={CmdData=3,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:'"3"',CustomNameVisible:1b}
+execute at @s[tag=GPDispL,scores={CmdData=4,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:'"4"',CustomNameVisible:1b}
+execute at @s[tag=GPDispL,scores={CmdData=5,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:'"5"',CustomNameVisible:1b}
+execute at @s[tag=GPDispL,scores={CmdData=6,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:'"6"',CustomNameVisible:1b}
+execute at @s[tag=GPDispL,scores={CmdData=7,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2] {CustomName:'"7"',CustomNameVisible:1b}
 
-execute at @s[tag=GPDispR,scores={CmdData=0,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:"0",CustomNameVisible:1b}
-execute at @s[tag=GPDispR,scores={CmdData=1,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:"1",CustomNameVisible:1b}
-execute at @s[tag=GPDispR,scores={CmdData=2,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:"2",CustomNameVisible:1b}
-execute at @s[tag=GPDispR,scores={CmdData=3,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:"3",CustomNameVisible:1b}
-execute at @s[tag=GPDispR,scores={CmdData=4,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:"4",CustomNameVisible:1b}
-execute at @s[tag=GPDispR,scores={CmdData=5,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:"5",CustomNameVisible:1b}
-execute at @s[tag=GPDispR,scores={CmdData=6,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:"6",CustomNameVisible:1b}
-execute at @s[tag=GPDispR,scores={CmdData=7,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:"7",CustomNameVisible:1b}
+execute at @s[tag=GPDispR,scores={CmdData=0,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:'"0"',CustomNameVisible:1b}
+execute at @s[tag=GPDispR,scores={CmdData=1,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:'"1"',CustomNameVisible:1b}
+execute at @s[tag=GPDispR,scores={CmdData=2,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:'"2"',CustomNameVisible:1b}
+execute at @s[tag=GPDispR,scores={CmdData=3,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:'"3"',CustomNameVisible:1b}
+execute at @s[tag=GPDispR,scores={CmdData=4,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:'"4"',CustomNameVisible:1b}
+execute at @s[tag=GPDispR,scores={CmdData=5,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:'"5"',CustomNameVisible:1b}
+execute at @s[tag=GPDispR,scores={CmdData=6,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:'"6"',CustomNameVisible:1b}
+execute at @s[tag=GPDispR,scores={CmdData=7,gpdisp_time=2}] run data merge entity @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2] {CustomName:'"7"',CustomNameVisible:1b}
 
 execute at @s[scores={gpdisp_time=120..}] run kill @e[type=area_effect_cloud,tag=GPDispText,tag=1,limit=1,sort=nearest,distance=..2]
 execute at @s[scores={gpdisp_time=120..}] run kill @e[type=area_effect_cloud,tag=GPDispText,tag=2,limit=1,sort=nearest,distance=..2]
