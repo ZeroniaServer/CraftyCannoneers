@@ -9,7 +9,7 @@ execute summon marker run function game:modifiers/graverobbery/place
 #> Name grave
 scoreboard players operation @e[type=hopper_minecart,tag=grave,tag=new,limit=1] playerUUID = @s playerUUID
 tag @s add self
-setblock ~ 256 ~ oak_sign{front_text:{messages:['["",{"translate":"chest.grave","with":[{"selector":"@a[tag=self,limit=1]"}],"color":"dark_gray","bold":true,"underlined":true}]','{"text":""}','{"text":""}','{"text":""}']}}
+setblock ~ 256 ~ oak_sign{front_text:{messages:['[{"translate":"space.-8"},{"text":"\\uE025","color":"#7b7b00"},{"translate":"space.-169"},{"translate":"chest.grave","with":[{"selector":"@a[tag=self,limit=1]","color":"#a9a900"}],"color":"#a9a900","bold":true,"underlined":true},{"translate":"space.-4096"}]','{"text":""}','{"text":""}','{"text":""}']}}
 data modify entity @e[type=hopper_minecart,tag=grave,tag=new,limit=1] CustomName set from block ~ 256 ~ front_text.messages[0]
 setblock ~ 256 ~ air
 tag @s remove self
