@@ -78,5 +78,6 @@ summon wandering_trader -260 -27 -56 {ArmorItems:[{},{},{},{id:"minecraft:diamon
 summon wandering_trader -279 -11 -15 {ArmorItems:[{},{},{},{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:39}}],Rotation:[-180.0f,0.0f],Invulnerable:1b,NoGravity:1b,NoAI:1b,Tags:["Teacher","WeakpointTeacher"],Silent:1b,CustomName:'[{"translate":"space.-4096"},{"text":"\\uE003"},{"translate":"space.-4096"}]',CustomNameVisible:1b,Offers:{Recipes:[]},Attributes:[{Name:"generic.movement_speed",Base:0}],PersistenceRequired:1b}
 
 execute as @e[type=armor_stand,tag=fakechest] run function chests:kill
+execute as @e[type=item_display,tag=CargoBarrelFake] run function game:modifiers/lostcargo/killbarrel
 
 function tutorial:treasurepit/main

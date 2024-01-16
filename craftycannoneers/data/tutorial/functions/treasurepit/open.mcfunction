@@ -15,6 +15,10 @@ execute if entity @s[tag=fakelockedchest] on vehicle run item replace entity @s 
 execute if entity @s[tag=fakelockedchest] run playsound block.chest.open master @a ~ ~ ~ 1 0.7
 execute if entity @s[tag=fakelockedchest] run playsound lockedtreasureopen master @a ~ ~ ~ 1 2
 
+#Cargo
+execute at @s[tag=CargoHopperFake] on vehicle run item replace entity @s container.0 with diamond_hoe{CustomModelData:115}
+execute at @s[tag=CargoHopperFake] run playsound block.barrel.open master @a ~ ~ ~ 1 1.3
+
 #Global
 tag @s add LoadLoot
 tag @s add Opened

@@ -23,6 +23,7 @@ execute if entity @s[type=hopper_minecart,tag=chest,tag=!Opened] run function ch
 execute if entity @s[type=hopper_minecart,tag=barrel,tag=!Opened] run function chests:open
 execute if entity @s[type=chest_minecart,tag=chest,tag=!Opened] run function chests:open
 execute at @s[type=hopper_minecart,tag=fakechest,tag=!Opened] run function tutorial:treasurepit/open
+execute at @s[type=hopper_minecart,tag=fakebarrel,tag=!Opened] run function tutorial:treasurepit/open
 execute at @s[type=chest_minecart,tag=fakelockedchest,tag=!Opened] run function tutorial:treasurepit/open
 execute if entity @s[type=hopper_minecart,tag=!Opened] if entity @a[limit=1,tag=clicker,tag=lowerteam] run tag @s add lowerteam
 
