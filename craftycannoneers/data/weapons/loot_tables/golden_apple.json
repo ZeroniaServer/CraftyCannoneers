@@ -28,7 +28,7 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "team": "Lobby"
+                  "nbt": "{Tags:[\"fakechest\"]}"
                 }
               }
             }
@@ -57,7 +57,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "team": "Lobby"
+                "nbt": "{Tags:[\"fakechest\"]}"
               }
             }
           ]
