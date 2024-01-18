@@ -1,6 +1,6 @@
 execute unless score $gamestate CmdData matches 2.. run tellraw @a ["",{"translate":"game.joined","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"game.joined.orange","color":"gold"},{"translate":"game.joined.team","color":"dark_aqua"},""]}]
 execute if score $gamestate CmdData matches 2.. run tellraw @a ["",{"translate":"game.joined","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"game.joined.orange","color":"gold"},{"translate":"game.joined.team","color":"dark_aqua"},{"translate":"game.late","color":"dark_aqua"}]}]
-execute if score $gamestate CmdData matches 2.. run tellraw @s ["",{"translate":"game.take_off","color":"aqua","italic":true,"with":[{"translate":"armor.hat","bold":true,"color":"gold"}]}]
+execute if score $gamestate CmdData matches 2.. run tellraw @s ["",{"translate":"game.take_off","color":"aqua","italic":true,"with":[{"translate":"armor.hat.instruction","bold":true,"color":"gold"}]}]
 gamemode adventure @s
 team join Orange @s
 execute at @s run tp @s @s

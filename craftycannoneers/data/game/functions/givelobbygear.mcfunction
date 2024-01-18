@@ -17,5 +17,5 @@ item replace entity @s[team=Purple] armor.feet with leather_boots{AttributeModif
 
 loot replace entity @s hotbar.0 loot lobby:rocks
 
-tellraw @s[team=Purple] ["",{"translate":"game.take_off","color":"aqua","italic":true,"with":[{"translate":"armor.hat","bold":true,"color":"dark_purple"}]}]
-tellraw @s[team=Orange] ["",{"translate":"game.take_off","color":"aqua","italic":true,"with":[{"translate":"armor.hat","bold":true,"color":"gold"}]}]
+tellraw @s[team=Purple] ["",{"translate":"game.take_off","color":"aqua","italic":true,"with":[{"translate":"armor.hat.instruction","bold":true,"color":"dark_purple"}]}]
+tellraw @s[team=Orange] ["",{"translate":"game.take_off","color":"aqua","italic":true,"with":[{"translate":"armor.hat.instruction","bold":true,"color":"gold"}]}]
