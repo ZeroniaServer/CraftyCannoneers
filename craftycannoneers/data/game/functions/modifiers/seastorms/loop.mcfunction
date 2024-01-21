@@ -40,9 +40,9 @@ execute if score $WindEffect CmdData matches 201..202 run function game:modifier
 execute if score $WindEffect CmdData matches 221..222 run function game:modifiers/seastorms/spawnwindtrail
 execute if score $WindEffect CmdData matches 241..242 run function game:modifiers/seastorms/spawnwindtrail
 execute if score $WindEffect CmdData matches 261..262 run function game:modifiers/seastorms/spawnwindtrail
-execute if score $WindEffect CmdData matches 20..200 as @e[type=armor_stand,tag=cannonball,tag=!StrikeLightning,tag=!Submerged,scores={CmdData=4..},predicate=!cannons:safezones/tutorial] run function game:modifiers/seastorms/projectileinacc
-execute if score $WindEffect CmdData matches 20..200 as @e[type=potion,tag=Bomb,predicate=!cannons:safezones/tutorial] run function game:modifiers/seastorms/projectileinacc
-execute if score $WindEffect CmdData matches 20..200 as @e[type=arrow,predicate=!cannons:safezones/tutorial] run function game:modifiers/seastorms/projectileinacc
-execute if score $WindEffect CmdData matches 20..200 as @e[type=trident,predicate=!cannons:safezones/tutorial] run function game:modifiers/seastorms/projectileinacc
+execute if score $WindEffect CmdData matches 20.. as @e[type=armor_stand,tag=cannonball,tag=!StrikeLightning,tag=!Submerged,scores={CmdData=4..},predicate=!cannons:safezones/tutorial] run function game:modifiers/seastorms/projectileinacc
+execute if score $WindEffect CmdData matches 20.. as @e[type=potion,tag=Bomb,predicate=!cannons:safezones/tutorial,predicate=!game:inwater] run function game:modifiers/seastorms/projectileinacc
+execute if score $WindEffect CmdData matches 20.. as @e[type=arrow,predicate=!cannons:safezones/tutorial,predicate=!game:inwater] run function game:modifiers/seastorms/projectileinacc
+execute if score $WindEffect CmdData matches 20.. as @e[type=trident,predicate=!cannons:safezones/tutorial,predicate=!game:inwater] run function game:modifiers/seastorms/projectileinacc
 
 execute as @e[type=marker,tag=WindIndicator] run function game:modifiers/seastorms/windeffects
