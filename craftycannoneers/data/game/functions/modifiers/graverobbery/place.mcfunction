@@ -3,7 +3,7 @@ tp @s ~ ~ ~ ~ ~
 
 #> Align to world surface (lowest block) for y-coordinate
 execute store result score @s CmdData run data get entity @s Pos[1]
-execute at @s positioned over world_surface summon marker run function game:modifiers/graverobbery/floorcoord
+execute at @s positioned over motion_blocking summon marker run function game:modifiers/graverobbery/floorcoord
 scoreboard players operation @s CmdData < $y CmdData
 execute store result entity @s Pos[1] double 1 run scoreboard players get @s CmdData
 
