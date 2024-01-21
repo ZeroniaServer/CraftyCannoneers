@@ -1,5 +1,5 @@
-execute unless score $gamestate CmdData matches 2.. run tellraw @a ["",{"translate":"game.joined","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"game.joined.purple","color":"dark_purple"},{"translate":"game.joined.team","color":"dark_aqua"},""]}]
-execute if score $gamestate CmdData matches 2.. run tellraw @a ["",{"translate":"game.joined","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"game.joined.purple","color":"dark_purple"},{"translate":"game.joined.team","color":"dark_aqua"},{"translate":"game.late","color":"dark_aqua"}]}]
+execute unless score $gamestate CmdData matches 2.. run tellraw @a ["",{"translate":"game.joined","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"game.joined.purple","color":"dark_purple"}]}]
+execute if score $gamestate CmdData matches 2.. run tellraw @a ["",{"translate":"game.joined.late","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"game.joined.purple","color":"dark_purple"}]}]
 execute if score $gamestate CmdData matches 2.. run tellraw @s ["",{"translate":"game.take_off","color":"aqua","italic":true,"with":[{"translate":"armor.hat.instruction","bold":true,"color":"dark_purple"}]}]
 gamemode adventure @s
 team join Purple @s
