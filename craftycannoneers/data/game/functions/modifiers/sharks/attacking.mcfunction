@@ -24,8 +24,8 @@ execute at @s[scores={CmdData=9}] positioned ^ ^ ^1 as @e[type=item_display,tag=
 execute at @s[scores={CmdData=9}] positioned ^ ^ ^1 run kill @e[type=boat,tag=BoatBoat,limit=1,sort=nearest,distance=..2]
 
 #> Bite player
-execute unless score $bitcargo CmdData matches 1 at @s[scores={CmdData=9}] positioned ^ ^ ^1 run effect give @a[team=!Lobby,team=!Spectator,gamemode=adventure,distance=..2,limit=1,sort=nearest] instant_damage 1 1 true
-execute at @s[scores={CmdData=9}] if predicate game:tooth_chance positioned ^ ^ ^1 if entity @a[distance=..2,limit=1] at @s run function game:modifiers/sharks/losttooth
+execute unless score $bitcargo CmdData matches 1 at @s[scores={CmdData=9}] positioned ^ ^ ^1 run effect give @a[team=!Lobby,team=!Spectator,tag=SharkTarget,gamemode=adventure,distance=..2,limit=1,sort=nearest] instant_damage 1 1 true
+execute at @s[scores={CmdData=9}] if predicate game:tooth_chance positioned ^ ^ ^1 if entity @a[team=!Lobby,team=!Spectator,tag=SharkTarget,distance=..2,limit=1] at @s run function game:modifiers/sharks/losttooth
 execute at @s[scores={CmdData=9}] run particle bubble ^ ^ ^2 0 0 0 0.1 10 force @a[team=!Lobby]
 item replace entity @s[scores={CmdData=11}] armor.head with diamond_hoe{Unbreakable:1b,CustomModelData:87}
 
