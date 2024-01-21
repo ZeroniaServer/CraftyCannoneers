@@ -1,10 +1,10 @@
 scoreboard players add $StartSplash CmdData 1
 
 execute if score $StartSplash CmdData matches 1..11 as @a at @s run title @a title {"translate":"\uE031 "}
-execute if score $StartSplash CmdData matches 1 as @a at @s run playsound minecraft:entity.player.swim master @s ~ ~ ~ 1 0.7
-execute if score $StartSplash CmdData matches 1 as @a at @s run playsound minecraft:entity.player.swim master @s ~ ~ ~ 1 0.7
-execute if score $StartSplash CmdData matches 1 as @a at @s run playsound minecraft:entity.player.swim master @s ~ ~ ~ 1 0.7
-execute if score $StartSplash CmdData matches 1 as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.1
+execute if score $StartSplash CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
+execute if score $StartSplash CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
+execute if score $StartSplash CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
+execute if score $StartSplash CmdData matches 1 as @a at @s run playsound ding master @s ~ ~ ~ 1 1.1
 execute if score $StartSplash CmdData matches 1 as @a at @s run title @a subtitle {"translate":"game.started","color":"#000000"}
 execute if score $StartSplash CmdData matches 2 as @a at @s run title @a subtitle {"translate":"game.started","color":"#00181a"}
 execute if score $StartSplash CmdData matches 3 as @a at @s run title @a subtitle {"translate":"game.started","color":"#003033"}

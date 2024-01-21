@@ -1,10 +1,10 @@
 scoreboard players add $EndTime CmdData 1
 
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1..10 run title @a title {"translate":"\uE031 "}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a at @s run playsound minecraft:entity.player.swim master @s ~ ~ ~ 1 0.7
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a at @s run playsound minecraft:entity.player.swim master @s ~ ~ ~ 1 0.7
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a at @s run playsound minecraft:entity.player.swim master @s ~ ~ ~ 1 0.7
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.1
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a at @s run playsound ding master @s ~ ~ ~ 1 1.1
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 run title @a subtitle {"translate":"game.tie","color":"#000000"}
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 2 run title @a subtitle {"translate":"game.tie","color":"#1a0000"}
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 3 run title @a subtitle {"translate":"game.tie","color":"#330000"}
@@ -19,10 +19,10 @@ execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matche
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a[team=!Lobby,team=!Spectator,team=!Developer] at @s run playsound tiegame master @s ~ ~ ~ 1 0
 
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1..16 run title @a title {"text":"\uE02E "}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a at @s run playsound minecraft:entity.player.swim master @s ~ ~ ~ 1 0.7
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a at @s run playsound minecraft:entity.player.swim master @s ~ ~ ~ 1 0.7
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a at @s run playsound minecraft:entity.player.swim master @s ~ ~ ~ 1 0.7
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.1
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a at @s run playsound ding master @s ~ ~ ~ 1 1.1
 #Global
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 run title @a subtitle {"translate":"game.win.orange","color":"#000000"}
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 2 run title @a subtitle {"translate":"game.win.orange","color":"#1a0a00"}
@@ -50,10 +50,10 @@ execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matche
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a[team=Purple] at @s run playsound losegame master @s ~ ~ ~ 1 2
 
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1..16 run title @a title {"text":"\uE030 "}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a at @s run playsound minecraft:entity.player.swim master @s ~ ~ ~ 1 0.7
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a at @s run playsound minecraft:entity.player.swim master @s ~ ~ ~ 1 0.7
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a at @s run playsound minecraft:entity.player.swim master @s ~ ~ ~ 1 0.7
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.1
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a at @s run playsound ding master @s ~ ~ ~ 1 1.1
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 run title @a subtitle {"translate":"game.win.purple","color":"#000000"}
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 2 run title @a subtitle {"translate":"game.win.purple","color":"#0f051a"}
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 3 run title @a subtitle {"translate":"game.win.purple","color":"#1f0a33"}
