@@ -9,15 +9,18 @@ bossbar set lobbybar max 10
 execute store result bossbar lobbybar value run scoreboard players get $Countdown CmdData
 
 execute unless score $Countdown CmdData matches 10 if score $countSec CmdData matches 10 as @a at @s run playsound countdown master @s ~ ~ ~ 0.5 1.1
-execute if score $countSec CmdData matches 20.. as @a at @s run playsound countdown master @s ~ ~ ~ 1 0.9
+execute if score $countSec CmdData matches 20 as @a at @s run playsound countdown master @s ~ ~ ~ 1 0.9
 execute if score $Countdown CmdData matches 2..4 if score $countSec CmdData matches 20 as @a at @s run playsound countdown master @s ~ ~ ~ 1 0.7
 execute if score $Countdown CmdData matches 1 if score $countSec CmdData matches 10 as @a at @s run playsound countdown master @s ~ ~ ~ 1 0.7
 execute if score $Countdown CmdData matches 1 if score $countSec CmdData matches 20 as @a at @s run playsound countdown master @s ~ ~ ~ 1 0.7
+
+
 execute if score $Countdown CmdData matches ..0 run function game:forcestart
 
 execute if score $countSec CmdData matches 20.. run scoreboard players remove $Countdown CmdData 1
 
-execute if score $countSec CmdData matches 20.. run scoreboard players reset $countSec CmdData
+execute if score $countSec CmdData matches 20.. unless score $Countdown CmdData matches 0 run scoreboard players reset $countSec CmdData
+execute if score $countSec CmdData matches 31.. if score $Countdown CmdData matches 0 run scoreboard players reset $countSec CmdData
 
 execute if score $Countdown CmdData matches 2.. run bossbar set lobbybar name ["",{"translate":"game.countdown.seconds","bold":true,"color":"green","with":[{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"dark_green"}]}]
 execute if score $Countdown CmdData matches 1 run bossbar set lobbybar name ["",{"translate":"game.countdown.second","bold":true,"color":"green","with":[{"score":{"name":"$Countdown","objective":"CmdData"},"bold":true,"color":"dark_green"}]}]

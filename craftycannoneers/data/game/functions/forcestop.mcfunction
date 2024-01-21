@@ -22,6 +22,7 @@ execute if score $gamestate CmdData matches 0.. run function lobby:customizer/op
 bossbar set lobbybar max 10
 bossbar set lobbybar color blue
 
+scoreboard players reset $StartSplash CmdData
 scoreboard players reset $DamageOrange CmdData
 scoreboard players reset $DamagePurple CmdData
 scoreboard players reset $CritOrange CmdData

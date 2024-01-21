@@ -89,6 +89,7 @@ execute if score $gamestate CmdData matches 2.. run scoreboard players set $Purp
 
 execute if score $gamestate CmdData matches 0 run function game:startgame
 execute if score $gamestate CmdData matches 1 run function game:countdown
+execute if score $gamestate CmdData matches 2 unless score $StartSplash CmdData matches 12.. run function game:startsplash
 execute if score $gamestate CmdData matches 0 run scoreboard players set $Countdown CmdData 0
 
 #> Toggle score

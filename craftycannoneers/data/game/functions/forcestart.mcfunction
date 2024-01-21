@@ -18,9 +18,6 @@ scoreboard players set $KillThreshold BalanceScore 0
 scoreboard players set $PVPbal BalanceScore 0
 
 tag @a remove ClickedReady
-title @a title {"translate":"game.started","color":"dark_aqua"}
-title @a[team=!Lobby,team=!Spectator,team=!Developer] subtitle {"translate":"game.start_splash","color":"aqua"}
-title @a[team=!Purple,team=!Orange] subtitle {"text":" ","color":"aqua"}
 scoreboard players set $Tip CmdData 0
 function tutorial:newset
 
