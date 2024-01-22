@@ -1,13 +1,9 @@
-#> Prints each line of the Modifier list
-scoreboard players add $currentline CmdData 1
+#> Prints list of modifiers
 
-execute if score $currentline CmdData matches 1 if data storage craftycannoneers:modifiers line[1] run tellraw @a {"translate":"customizer.current_modifiers","color":"blue","with":[["",{"nbt":"line[0][]","storage":"craftycannoneers:modifiers","interpret":true,"separator":{"text":", ","color":"gray"}},{"text":", ","color":"gray"}]]}
-execute unless score $currentline CmdData matches 1 if data storage craftycannoneers:modifiers line[1] run tellraw @a {"translate":"customizer.current_modifiers","color":"#585c24","with":[["",{"nbt":"line[0][]","storage":"craftycannoneers:modifiers","interpret":true,"separator":{"text":", ","color":"gray"}},{"text":", ","color":"gray"}]]}
-
-execute if score $currentline CmdData matches 1 if data storage craftycannoneers:modifiers line[0] unless data storage craftycannoneers:modifiers line[1] run tellraw @a {"translate":"customizer.current_modifiers","color":"blue","with":[["",{"nbt":"line[0][]","storage":"craftycannoneers:modifiers","interpret":true,"separator":{"text":", ","color":"gray"}}]]}
-execute unless score $currentline CmdData matches 1 if data storage craftycannoneers:modifiers line[0] unless data storage craftycannoneers:modifiers line[1] run tellraw @a {"translate":"customizer.current_modifiers","color":"#585c24","with":[["",{"nbt":"line[0][]","storage":"craftycannoneers:modifiers","interpret":true,"separator":{"text":", ","color":"gray"}}]]}
-
-data remove storage craftycannoneers:modifiers line[0]
-execute if data storage craftycannoneers:modifiers line[0] run function lobby:customizer/modifiers/printlist
-execute unless data storage craftycannoneers:modifiers line[0] run scoreboard players reset $currentline CmdData
-execute unless data storage craftycannoneers:modifiers line[0] run data remove storage craftycannoneers:modifiers line
+tellraw @a {"translate":"customizer.current_modifiers","color":"#0077af"}
+execute if score $BoatCannons CmdData matches 1 run tellraw @a [{"text":"- ","color":"gray"},{"translate":"modifier.boat_cannons","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"translate":"modifier.boat_cannons.description","color":"white"}]}}]
+execute if score $GraveRobbery CmdData matches 1 run tellraw @a [{"text":"- ","color":"gray"},{"translate":"modifier.grave_robbery","color":"aqua","hoverEvent":{"action":"show_text","contents":[{"translate":"modifier.grave_robbery.description","color":"white"}]}}]
+execute if score $LostCargo CmdData matches 1 run tellraw @a [{"text":"- ","color":"gray"},{"translate":"modifier.lost_cargo","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"translate":"modifier.lost_cargo.description","color":"white"}]}}]
+execute if score $Storms CmdData matches 1 run tellraw @a [{"text":"- ","color":"gray"},{"translate":"modifier.sea_storms","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"translate":"modifier.sea_storms.description","color":"white"},"\n",{"translate":"modifier.experienced_pirates","color":"gray","italic":true}]}}]
+execute if score $Wildlife CmdData matches 1 run tellraw @a [{"text":"- ","color":"gray"},{"translate":"modifier.wildlife","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"translate":"modifier.wildlife.description","color":"white"}]}}]
+execute if score $NoTracers CmdData matches 1 run tellraw @a [{"text":"- ","color":"gray"},{"translate":"modifier.no_tracers","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"translate":"modifier.no_tracers.description","color":"white"},"\n",{"translate":"modifier.experienced_pirates","color":"gray","italic":true}]}}]
