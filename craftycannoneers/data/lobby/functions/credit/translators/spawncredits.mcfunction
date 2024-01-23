@@ -16,7 +16,7 @@ execute if score $TranslatorPage CmdData matches 1 run summon item_display -35 -
 execute if score $TranslatorPage CmdData matches 1 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Name"],billboard:"fixed",transformation:{translation:[0f,0f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"text":"CapitaineMinus","color":"#C412FE"}]',alignment:"center"}
 execute if score $TranslatorPage CmdData matches 1 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Flag"],billboard:"fixed",background:0,transformation:{translation:[0f,0f,0f],scale:[0.0f,0.0f,0.0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"translate":":flag_fr:","color":"white"}]',alignment:"center"}
 #Globe Text
-execute if score $TranslatorPage CmdData matches 1 run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"text":"[1/3]","color":"white"}]',start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
+execute if score $TranslatorPage CmdData matches 1 run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"text":"[1/4]","color":"white"}]',start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
 
 #> Page 2
 #Pingoda - Italian
@@ -32,7 +32,7 @@ execute if score $TranslatorPage CmdData matches 2 run summon item_display -35 -
 execute if score $TranslatorPage CmdData matches 2 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Name"],billboard:"fixed",transformation:{translation:[0f,0f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"text":"YZEROgame","color":"#00ff00"}]',alignment:"center"}
 execute if score $TranslatorPage CmdData matches 2 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Flag"],billboard:"fixed",background:0,transformation:{translation:[0f,0f,0f],scale:[0.0f,0.0f,0.0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"translate":":flag_nl:","color":"white"}]',alignment:"center"}
 #Globe Text
-execute if score $TranslatorPage CmdData matches 2 run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"text":"[2/3]","color":"white"}]',start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
+execute if score $TranslatorPage CmdData matches 2 run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"text":"[2/4]","color":"white"}]',start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
 
 #> Page 3
 #Tai_zazanek - Japanese
@@ -48,7 +48,23 @@ execute if score $TranslatorPage CmdData matches 3 run summon item_display -35 -
 execute if score $TranslatorPage CmdData matches 3 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Name"],billboard:"fixed",transformation:{translation:[0f,0f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"text":"Evtema3","color":"red"}]',alignment:"center"}
 execute if score $TranslatorPage CmdData matches 3 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Flag"],billboard:"fixed",background:0,transformation:{translation:[0f,0f,0f],scale:[0.0f,0.0f,0.0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"translate":":flag_au:","color":"white"}]',alignment:"center"}
 #Globe Text
-execute if score $TranslatorPage CmdData matches 3 run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"text":"[3/3]","color":"white"}]',start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
+execute if score $TranslatorPage CmdData matches 3 run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"text":"[3/4]","color":"white"}]',start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
+
+#> Page 4
+#syktyvkar - Russian
+execute if score $TranslatorPage CmdData matches 4 run summon item_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit1","Skull"],start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"syktyvkarr"}}}
+execute if score $TranslatorPage CmdData matches 4 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit1","Name"],billboard:"fixed",transformation:{translation:[0f,0f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"text":"syktyvkarr","color":"#c0c0c0"}]',alignment:"center"}
+execute if score $TranslatorPage CmdData matches 4 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit1","Flag"],billboard:"fixed",background:0,transformation:{translation:[0f,0f,0f],scale:[0.0f,0.0f,0.0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"translate":":flag_ru:","color":"white"}]',alignment:"center"}
+#Tobost06 - Norwegian
+execute if score $TranslatorPage CmdData matches 4 run summon item_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit2","Skull"],start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"Tobost06"}}}
+execute if score $TranslatorPage CmdData matches 4 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit2","Name"],billboard:"fixed",transformation:{translation:[0f,0f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"text":"Tobost06","color":"aqua"}]',alignment:"center"}
+execute if score $TranslatorPage CmdData matches 4 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit2","Flag"],billboard:"fixed",background:0,transformation:{translation:[0f,0f,0f],scale:[0.0f,0.0f,0.0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"translate":":flag_no:","color":"white"}]',alignment:"center"}
+#Rainlife - ???
+execute if score $TranslatorPage CmdData matches 4 run summon item_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Skull"],start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"Rainlife"}}}
+execute if score $TranslatorPage CmdData matches 4 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Name"],billboard:"fixed",transformation:{translation:[0f,0f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"text":"Rainlife","color":"red"}]',alignment:"center"}
+execute if score $TranslatorPage CmdData matches 4 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Flag"],billboard:"fixed",background:0,transformation:{translation:[0f,0f,0f],scale:[0.0f,0.0f,0.0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"translate":":flag_se:","color":"white"}]',alignment:"center"}
+#Globe Text
+execute if score $TranslatorPage CmdData matches 4 run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"text":"[4/4]","color":"white"}]',start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
 
 execute as @e[tag=Name,tag=!Old] run data merge entity @s {start_interpolation:0,interpolation_duration:0,transformation:{scale:[0.0f,0.0f,0.0f]}}
 
