@@ -20,6 +20,7 @@ execute if entity @s[tag=SettingsInteraction] run return 0
 
 #> Translator Credits
 execute if entity @s[tag=TranslatorCredit] as @e[type=item_display,tag=Globe,tag=!Spin,limit=1] run function lobby:credit/translators/next
+execute if entity @s[tag=TranslatorCredit] on target run advancement grant @s only tutorial:zzzunlockables/credits
 
 #> Tags for interacting with Cannons
 execute if entity @s[tag=CannonVLeft,tag=!GPLocked] run tag @a[limit=1,tag=self] add FillLeft
