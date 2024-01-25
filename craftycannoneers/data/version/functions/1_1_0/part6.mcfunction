@@ -26,22 +26,22 @@ execute unless entity @e[type=item_display,tag=ModiIcon,limit=1] positioned -54 
 execute unless entity @e[type=item_display,tag=ModifModiIcon,limit=1] positioned -54 -23.5 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","ModifModiIcon","ModifierIcons"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
 
 #No Tracers
-execute unless entity @e[type=item_display,tag=NoTracersIcon,limit=1] positioned -53 -21.4 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","NoTracersIcon","ModifierIcons"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
+execute unless entity @e[type=item_display,tag=NoTracersIcon,limit=1] positioned -53 -21.3 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","NoTracersIcon","ModifierIcons"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
 
 #Wildlife
-execute unless entity @e[type=item_display,tag=WildlifeIcon,limit=1] positioned -54 -21.4 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","WildlifeIcon","ModifierIcons"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
+execute unless entity @e[type=item_display,tag=WildlifeIcon,limit=1] positioned -54 -21.3 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","WildlifeIcon","ModifierIcons"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
 
 #Sea Storms
-execute unless entity @e[type=item_display,tag=SeaStormsIcon,limit=1] positioned -55 -21.4 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","SeaStormsIcon","ModifierIcons"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
+execute unless entity @e[type=item_display,tag=SeaStormsIcon,limit=1] positioned -55 -21.3 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","SeaStormsIcon","ModifierIcons"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
 
 #Lost Cargo
-execute unless entity @e[type=item_display,tag=LostCargoIcon,limit=1] positioned -53 -22.4 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","LostCargoIcon","ModifierIcons"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
+execute unless entity @e[type=item_display,tag=LostCargoIcon,limit=1] positioned -53 -22.3 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","LostCargoIcon","ModifierIcons"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
 
 #Grave Robbery
-execute unless entity @e[type=item_display,tag=GraveRobberyIcon,limit=1] positioned -54 -22.4 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","GraveRobberyIcon","ModifierIcons"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
+execute unless entity @e[type=item_display,tag=GraveRobberyIcon,limit=1] positioned -54 -22.3 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","GraveRobberyIcon","ModifierIcons"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
 
 #Boat Cannons
-execute unless entity @e[type=item_display,tag=BoatCannonsIcon,limit=1] positioned -55 -22.4 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","BoatCannonsIcon","ModifierIcons"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
+execute unless entity @e[type=item_display,tag=BoatCannonsIcon,limit=1] positioned -55 -22.3 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","BoatCannonsIcon","ModifierIcons"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
 
 #Cancel Match
 execute unless entity @e[type=item_display,tag=CancelMatch,limit=1] positioned -54 -23.3 9 run summon item_display ~ ~ ~ {Tags:["LobbyEntity","CancelMatch"],item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]},width:1f,height:1f}
