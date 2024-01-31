@@ -61,6 +61,12 @@ execute at @s[tag=!InSafezone,tag=Hit1,tag=ChainCannonball,scores={doublehit=4..
 execute at @s[tag=!InSafezone,tag=Hit1,tag=ChainCannonball,scores={doublehit=4..}] run summon marker ^ ^ ^-1 {Tags:["ImpactMarker","Power2","Hit1"]}
 
 #Copper Cannonball
+execute at @s[tag=CopperCannonball,tag=StrikeLightning] if block ~ ~0.1 ~ air run tp @s ~ ~-0.1 ~
+execute at @s[tag=CopperCannonball,tag=StrikeLightning] if block ~ ~0.1 ~ air run tp @s ~ ~-0.1 ~
+execute at @s[tag=CopperCannonball,tag=StrikeLightning] if block ~ ~0.1 ~ air run tp @s ~ ~-0.1 ~
+execute at @s[tag=CopperCannonball,tag=StrikeLightning] if block ~ ~0.1 ~ air run tp @s ~ ~-0.1 ~
+execute at @s[tag=CopperCannonball,tag=StrikeLightning] if block ~ ~0.1 ~ air run tp @s ~ ~-0.1 ~
+execute at @s[tag=CopperCannonball,tag=StrikeLightning] if block ~ ~0.1 ~ air run tp @s ~ ~-0.1 ~
 execute at @s[tag=!InSafezone,tag=Hit1,tag=!StrikeLightning,tag=CopperCannonball] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power2"]}
 execute at @s[tag=InSafezone,tag=Hit1,tag=!StrikeLightning,tag=CopperCannonball] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power1"]}
 scoreboard players add @s[tag=StrikeLightning] copperStrike 1
