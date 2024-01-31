@@ -4,8 +4,8 @@
     {
       "rolls": {
         "type": "minecraft:uniform",
-        "min": 2,
-        "max": 3
+        "min": 3,
+        "max": 5
       },
       "entries": [
         {
@@ -16,8 +16,31 @@
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
-                "min": 6,
-                "max": 9
+                "min": 8,
+                "max": 13
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 4,
+        "max": 6
+      },
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "weapons:gold",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 9,
+                "max": 13
               }
             }
           ]
@@ -33,14 +56,14 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "weapons:gold",
+          "name": "weapons:golden_apple",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
-                "min": 6,
-                "max": 8
+                "min": 0,
+                "max": 2
               }
             }
           ]
@@ -62,7 +85,7 @@
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
-                "min": 6,
+                "min": 7,
                 "max": 10
               }
             }
@@ -74,7 +97,7 @@
       "rolls": {
         "type": "minecraft:uniform",
         "min": 2,
-        "max": 3
+        "max": 4
       },
       "entries": [
         {
