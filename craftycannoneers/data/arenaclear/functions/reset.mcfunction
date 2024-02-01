@@ -8,6 +8,7 @@ kill @e[type=marker,tag=Weakpoint]
 kill @e[type=marker,tag=WeakpointLoc]
 kill @e[type=marker,tag=LockSpawn]
 execute as @e[type=armor_stand,tag=chest] run function chests:kill
+execute as @e[type=chest_minecart,tag=lockedchest] run function arenaclear:kill
 kill @e[type=area_effect_cloud,tag=ChestNotif]
 kill @e[type=item,predicate=game:inarena]
 kill @e[type=item_display,tag=EndFirework]
