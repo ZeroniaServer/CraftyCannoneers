@@ -140,19 +140,27 @@ scoreboard players reset @s[tag=CopperCannonball] gravity
 tag @s[tag=CopperCannonball] add StrikeLightning
 
 execute at @s[scores={copperStrike=20}] run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
-execute at @s[scores={copperStrike=20}] as @a[team=!Spectator,team=!Lobby,distance=..6,limit=2,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
+execute at @s[scores={copperStrike=20}] as @a[team=!Spectator,team=!Lobby,predicate=!game:inwater,distance=..7,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
+execute at @s[scores={copperStrike=20}] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add ByLightning
+execute at @s[scores={copperStrike=20}] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add OnFire
 item replace entity @s[scores={copperStrike=20}] armor.head with diamond_hoe{CustomModelData:110}
 
 execute at @s[scores={copperStrike=35}] run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
-execute at @s[scores={copperStrike=35}] as @a[team=!Spectator,team=!Lobby,distance=..6,limit=2,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
+execute at @s[scores={copperStrike=35}] as @a[team=!Spectator,team=!Lobby,predicate=!game:inwater,distance=..7,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
+execute at @s[scores={copperStrike=35}] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add ByLightning
+execute at @s[scores={copperStrike=35}] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add OnFire
 item replace entity @s[scores={copperStrike=35}] armor.head with diamond_hoe{CustomModelData:111}
 
 execute at @s[scores={copperStrike=55}] run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
-execute at @s[scores={copperStrike=55}] as @a[team=!Spectator,team=!Lobby,distance=..6,limit=2,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
+execute at @s[scores={copperStrike=55}] as @a[team=!Spectator,team=!Lobby,predicate=!game:inwater,distance=..7,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
+execute at @s[scores={copperStrike=55}] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add ByLightning
+execute at @s[scores={copperStrike=55}] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add OnFire
 item replace entity @s[scores={copperStrike=55}] armor.head with diamond_hoe{CustomModelData:112}
 
 execute at @s[scores={copperStrike=70}] run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
-execute at @s[scores={copperStrike=70}] as @a[team=!Spectator,team=!Lobby,distance=..6,limit=2,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
+execute at @s[scores={copperStrike=70}] as @a[team=!Spectator,team=!Lobby,predicate=!game:inwater,distance=..7,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
+execute at @s[scores={copperStrike=70}] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add ByLightning
+execute at @s[scores={copperStrike=70}] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add OnFire
 item replace entity @s[scores={copperStrike=70}] armor.head with diamond_hoe{CustomModelData:113}
 
 execute at @s[scores={copperStrike=80..}] run playsound cannonball master @a ~ ~ ~ 4 1

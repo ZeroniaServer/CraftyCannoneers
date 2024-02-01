@@ -11,6 +11,7 @@ tag @s[tag=!FireCannon,tag=Recoil,scores={firetime=7}] remove Recoil
 execute at @s[tag=!FireCannon,scores={PowerM=1..,firetime=2}] on passengers run data merge entity @s[tag=BoatCannonBarrel] {start_interpolation:0,interpolation_duration:1,transformation:{translation:[0f,2.225f,0f],left_rotation:[-0.09f,0.0f,0.0f,1.0f]}}
 execute at @s[tag=!FireCannon,scores={PowerM=1..,firetime=3}] run function game:boat/cannon/fireblank
 execute at @s[tag=!FireCannon,scores={PowerM=1..,firetime=4}] run function game:boat/cannon/tipfireblank
+execute at @s[tag=!FireCannon,tag=ByLightning,scores={PowerM=1..,firetime=4}] run scoreboard players add @s firetime 60
 
 #> Light block
 execute at @s positioned ^ ^1 ^ unless entity @e[type=marker,tag=templight,limit=1,distance=..1] run summon marker ~ ~ ~ {Tags:["templight"]}
