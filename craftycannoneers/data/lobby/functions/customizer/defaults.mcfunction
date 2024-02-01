@@ -1,6 +1,7 @@
 scoreboard players set $ShipHP CmdData 1000
 scoreboard players set $Daytime CmdData 0
 scoreboard players set $TimeLimit CmdData 42069
+time set day
 
 function lobby:customizer/updatesigns
 scoreboard players reset @s[tag=ModiOwner] moditimer
