@@ -38,7 +38,7 @@ execute at @s[tag=Pos6] unless entity @e[type=drowned,tag=Pos6,tag=IsBack] unles
 
 execute at @s[tag=NewVCod] unless block ~ ~3 ~ water run tp @s ~ ~-0.1 ~
 
-effect give @s invisibility infinite 100 true
+effect give @s invisibility infinite 0 true
 
 #> Dismount boats
 ride @s[predicate=game:boat/inboat] dismount

@@ -125,7 +125,7 @@ execute at @s unless entity @e[type=drowned,tag=!OnCooldown,tag=SharkEntity,tag=
 execute at @s[tag=Attacking,tag=!OnCooldown] run function game:modifiers/sharks/attacking
 scoreboard players reset @s[tag=!Attacking,scores={CmdData=1..}] CmdData
 
-effect give @s invisibility infinite 100 true
+effect give @s invisibility infinite 0 true
 
 #> Dismount boats
 ride @s[predicate=game:boat/inboat] dismount
