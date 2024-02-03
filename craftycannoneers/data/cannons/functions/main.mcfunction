@@ -10,6 +10,9 @@ execute as @e[type=marker,tag=LightFlash] at @s run function cannons:lightflash
 #> Shoot
 execute as @e[type=armor_stand,tag=cannonball] at @s run function cannons:shoot
 
+#> Spawn Creeper
+execute as @e[type=marker,tag=ImpactMarker,tag=!BlastBarrel] at @s unless score @s CmdData matches 1.. run function cannons:spawncreeper
+
 #> Fire Ring
 execute as @e[type=marker,tag=RingOfFire] at @s run function cannons:firering/functionality
 

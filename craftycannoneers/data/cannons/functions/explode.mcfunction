@@ -174,7 +174,5 @@ execute if score @s copperStrike matches 1.. run scoreboard players operation @e
 execute if score @s copperStrike matches 1.. as @e[type=marker,tag=LightningMarker,tag=Instant,tag=!HasUUID] run data modify entity @s CustomName set from storage craftycannoneers:temp CustomName
 execute if score @s copperStrike matches 1.. run tag @e[type=marker,tag=LightningMarker,tag=Instant,tag=!HasUUID] add HasUUID
 
-execute as @e[type=marker,tag=ImpactMarker,tag=!BlastBarrel] at @s unless score @s CmdData matches 1.. run function cannons:spawncreeper
-
 execute if entity @s[tag=Hit1,tag=boatshot,tag=!BouncyCannonball,tag=!CopperCannonball] run function cannons:killcb
 execute if entity @s[tag=Hit2] run function cannons:killcb
