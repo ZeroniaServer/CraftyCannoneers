@@ -16,5 +16,5 @@ execute if entity @s[tag=ChainCannonball,scores={eyeclick=30..}] run particle it
 execute if entity @s[tag=BouncyCannonball,tag=!bouncing,scores={eyeclick=30..}] run particle item diamond_hoe{CustomModelData:55} ^ ^1 ^ 0 0 0 0.1 40 force @a[predicate=cannons:seeparticles]
 execute if entity @s[tag=BouncyCannonball,tag=bouncing,scores={eyeclick=30..}] run particle item diamond_hoe{CustomModelData:55} ~ ~1 ~ 0 0 0 0.1 40 force @a[predicate=cannons:seeparticles]
 execute if entity @s[tag=GoldenCannonball,scores={eyeclick=30..}] run particle item diamond_hoe{CustomModelData:73} ^ ^1 ^ 0 0 0 0.1 40 force @a[predicate=cannons:seeparticles]
-
+execute if entity @s[tag=CopperCannonball,scores={eyeclick=30..}] run particle item diamond_hoe{CustomModelData:109} ^ ^1 ^ 0 0 0 0.1 40 force @a[predicate=cannons:seeparticles]
 execute if entity @s[scores={eyeclick=30..}] run function cannons:killcb
