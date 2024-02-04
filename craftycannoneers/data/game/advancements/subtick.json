@@ -1,12 +1,14 @@
 {
     "criteria": {
         "requirement": {
-            "trigger": "minecraft:player_hurt_entity",
+            "trigger": "minecraft:tick",
             "conditions": {
-                "entity": {
-                    "type": "minecraft:bat",
-                    "nbt": "{Tags:[\"subtickbat\"]}"
-                }
+                "player": [
+                    {
+                        "condition": "minecraft:weather_check",
+                        "thundering": true
+                    }
+                ]
             }
         }
     },
