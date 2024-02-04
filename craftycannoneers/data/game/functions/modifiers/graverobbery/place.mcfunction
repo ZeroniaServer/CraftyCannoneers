@@ -11,8 +11,14 @@ execute store result entity @s Pos[1] double 1 run scoreboard players get @s Cmd
 scoreboard players set $gravetries CmdData 0
 function game:modifiers/graverobbery/nooverlap
 
-#> Adjust to other floor heights
+#> Another alignment attempt
+execute store result score @s CmdData run data get entity @s Pos[1]
+execute at @s positioned over motion_blocking summon marker run function game:modifiers/graverobbery/floorcoord
+scoreboard players operation @s CmdData < $y CmdData
+execute store result entity @s Pos[1] double 1 run scoreboard players get @s CmdData
 execute at @s run function game:modifiers/graverobbery/adjustheight
+
+#> Detect water/surface
 execute at @s positioned ~ ~-1 ~ if predicate game:located_water run tag @s add water
 execute at @s if predicate game:located_water run tag @s add water
 execute at @s positioned ~ ~-1 ~ if predicate game:located_water positioned ~ ~1 ~ unless predicate game:located_water run tag @s add surface
