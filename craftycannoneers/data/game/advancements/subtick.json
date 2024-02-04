@@ -11,6 +11,6 @@
         }
     },
     "rewards": {
-        "function": "game:modifiers/seastorms/ticklightning"
+        "function": "game:modifiers/seastorms/subtick"
     }
 }
