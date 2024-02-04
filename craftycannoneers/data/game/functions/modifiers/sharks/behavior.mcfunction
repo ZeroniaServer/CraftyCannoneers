@@ -133,3 +133,6 @@ ride @s[predicate=game:boat/inboat] dismount
 #> Movement speed changes
 scoreboard players add @s crabmode 1
 execute if score @s crabmode matches 100.. run function game:modifiers/sharks/switchspeed
+
+#> Max height
+execute if entity @s[predicate=game:sharkbounds] run tp @s ~ -31.5 ~
