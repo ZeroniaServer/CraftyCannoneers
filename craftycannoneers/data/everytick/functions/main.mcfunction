@@ -109,3 +109,5 @@ execute unless score $gamestate CmdData matches -1.. if score $load CmdData matc
 execute unless score $gamestate CmdData matches -1.. if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function debug:preparerelease
 
 execute if score $gamestate CmdData matches 2.. if score $Wildlife CmdData matches 1 run function game:modifiers/crabs/detectchange
+
+execute if score $gamestate CmdData matches 2.. if score $Storms CmdData matches 1 as @r at @s run function game:modifiers/seastorms/prepsubtick
