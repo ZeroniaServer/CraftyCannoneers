@@ -4,7 +4,7 @@ scoreboard players add @s firetime 1
 execute at @s[scores={firetime=1},tag=!FireCannon] run function cannons:firering/ignitecannon
 
 #> Start Cannon Barrel fire animation
-execute at @s[scores={firetime=1},tag=!FireCannon] run tag @e[type=item_display,tag=CannonBarrel,limit=1,sort=nearest] add FireAnimation
+execute at @s[scores={firetime=1}] run tag @e[type=item_display,tag=CannonBarrel,limit=1,sort=nearest] add FireAnimation
 execute at @s[scores={firetime=1},tag=!FireCannon] run scoreboard players reset @e[type=item_display,tag=CannonBarrel,limit=1,sort=nearest] firetime
 execute at @s[scores={firetime=3},tag=!FireCannon,tag=ByLightning] run scoreboard players add @e[type=item_display,tag=CannonBarrel,limit=1,sort=nearest] firetime 200
 execute at @s[scores={firetime=3},tag=ByLightning] run scoreboard players add @s firetime 200
