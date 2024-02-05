@@ -70,8 +70,8 @@ execute at @s[tag=CopperCannonball,tag=StrikeLightning] if block ~ ~0.1 ~ air ru
 execute at @s[tag=!InSafezone,tag=Hit1,tag=!StrikeLightning,tag=CopperCannonball] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power2"]}
 execute at @s[tag=InSafezone,tag=Hit1,tag=!StrikeLightning,tag=CopperCannonball] run summon marker ^ ^ ^0.5 {Tags:["ImpactMarker","Power1"]}
 scoreboard players add @s[tag=StrikeLightning] copperStrike 1
-execute at @s[tag=CopperCannonball,scores={copperStrike=80..},tag=!InSafezone] run summon marker ~ ~1 ~ {Tags:["ImpactMarker","Power2"]}
-execute at @s[tag=CopperCannonball,scores={copperStrike=80..},tag=InSafezone] run summon marker ~ ~1 ~ {Tags:["ImpactMarker","Power1"]}
+execute at @s[tag=CopperCannonball,scores={copperStrike=80},tag=!InSafezone] run summon marker ~ ~1 ~ {Tags:["ImpactMarker","Power2"]}
+execute at @s[tag=CopperCannonball,scores={copperStrike=80},tag=InSafezone] run summon marker ~ ~1 ~ {Tags:["ImpactMarker","Power1"]}
 
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] click += @s CalcAir1
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=!HasUUID] click += @s CalcAir2
@@ -142,26 +142,33 @@ tag @s[tag=CopperCannonball] add StrikeLightning
 execute at @s[scores={copperStrike=20},predicate=!game:inwater] run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 execute at @s[scores={copperStrike=20},predicate=!game:inwater] as @a[team=!Spectator,team=!Lobby,predicate=!game:inwater,distance=..7,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 execute at @s[scores={copperStrike=20},predicate=!game:inwater] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add ByLightning
+execute at @s[scores={copperStrike=20},predicate=!game:inwater] run tag @e[type=boat,tag=!OnFire,distance=..7,limit=2,sort=nearest] add ByLightning
 execute at @s[scores={copperStrike=20},predicate=!game:inwater] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add OnFire
+execute at @s[scores={copperStrike=20},predicate=!game:inwater] run tag @e[type=boat,tag=!OnFire,distance=..7,limit=2,sort=nearest] add OnFire
 item replace entity @s[scores={copperStrike=20},predicate=!game:inwater] armor.head with diamond_hoe{CustomModelData:110}
 
 execute at @s[scores={copperStrike=35},predicate=!game:inwater] run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 execute at @s[scores={copperStrike=35},predicate=!game:inwater] as @a[team=!Spectator,team=!Lobby,predicate=!game:inwater,distance=..7,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 execute at @s[scores={copperStrike=35},predicate=!game:inwater] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add ByLightning
+execute at @s[scores={copperStrike=35},predicate=!game:inwater] run tag @e[type=boat,tag=!OnFire,distance=..7,limit=2,sort=nearest] add ByLightning
 execute at @s[scores={copperStrike=35},predicate=!game:inwater] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add OnFire
+execute at @s[scores={copperStrike=35},predicate=!game:inwater] run tag @e[type=boat,tag=!OnFire,distance=..7,limit=2,sort=nearest] add OnFire
 item replace entity @s[scores={copperStrike=35},predicate=!game:inwater] armor.head with diamond_hoe{CustomModelData:111}
 
 execute at @s[scores={copperStrike=55},predicate=!game:inwater] run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 execute at @s[scores={copperStrike=55},predicate=!game:inwater] as @a[team=!Spectator,team=!Lobby,predicate=!game:inwater,distance=..7,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 execute at @s[scores={copperStrike=55},predicate=!game:inwater] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add ByLightning
+execute at @s[scores={copperStrike=55},predicate=!game:inwater] run tag @e[type=boat,tag=!OnFire,distance=..7,limit=2,sort=nearest] add ByLightning
 execute at @s[scores={copperStrike=55},predicate=!game:inwater] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add OnFire
+execute at @s[scores={copperStrike=55},predicate=!game:inwater] run tag @e[type=boat,tag=!OnFire,distance=..7,limit=2,sort=nearest] add OnFire
 item replace entity @s[scores={copperStrike=55},predicate=!game:inwater] armor.head with diamond_hoe{CustomModelData:112}
 
 execute at @s[scores={copperStrike=70},predicate=!game:inwater] run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 execute at @s[scores={copperStrike=70},predicate=!game:inwater] as @a[team=!Spectator,team=!Lobby,predicate=!game:inwater,distance=..7,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 execute at @s[scores={copperStrike=70},predicate=!game:inwater] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add ByLightning
+execute at @s[scores={copperStrike=70},predicate=!game:inwater] run tag @e[type=boat,tag=!OnFire,distance=..7,limit=2,sort=nearest] add ByLightning
 execute at @s[scores={copperStrike=70},predicate=!game:inwater] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add OnFire
-item replace entity @s[scores={copperStrike=70},predicate=!game:inwater] armor.head with diamond_hoe{CustomModelData:113}
+execute at @s[scores={copperStrike=70},predicate=!game:inwater] run tag @e[type=boat,tag=!OnFire,distance=..7,limit=2,sort=nearest] add OnFire
 
 execute at @s[scores={copperStrike=80..},predicate=!game:inwater] run playsound cannonball master @a ~ ~ ~ 4 1
 execute at @s[scores={copperStrike=80..},predicate=!game:inwater] run playsound cannonball_distant master @a[distance=14..] ~ ~ ~ 6 1

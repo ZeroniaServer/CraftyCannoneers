@@ -54,6 +54,7 @@ execute at @s[tag=TracerCannonball,scores={CmdData=1..}] run function cannons:tr
 #> Landing conditions
 execute at @s if entity @e[type=boat,distance=..2,limit=1] run scoreboard players set $hitboat CmdData 1
 execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball,tag=!Submerged] if block ~ ~3 ~ water run tag @s add Submerged
+execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball,tag=!Submerged] run tag @s[predicate=game:inwater] add Submerged
 execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball,tag=Submerged,tag=!boatlaunch] unless score $hitboat CmdData matches 1 run function cannons:waterkill
 
 execute at @s[tag=PlayerCannonball] if block ~ ~3 ~ water run scoreboard players set $landed CmdData 1

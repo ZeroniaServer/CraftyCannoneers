@@ -12,12 +12,16 @@ execute at @s[tag=!FireCannon,scores={PowerM=1..,firetime=2}] on passengers run 
 execute at @s[tag=!FireCannon,scores={PowerM=1..,firetime=3}] run function game:boat/cannon/fireblank
 execute at @s[tag=!FireCannon,scores={PowerM=1..,firetime=4}] run function game:boat/cannon/tipfireblank
 
+#> Half the time if struck by lightning
+scoreboard players add @s[scores={firetime=7},tag=!FireCannon,tag=ByLightning] firetime 200
+
 #> Light block
 execute at @s positioned ^ ^1 ^ unless entity @e[type=marker,tag=templight,limit=1,distance=..1] run summon marker ~ ~ ~ {Tags:["templight"]}
 
 #> Continuous effects
 particle smoke ^ ^1.2 ^1.7 0 0 0 0.1 2 normal @a[team=!Lobby]
 particle flame ^ ^1.2 ^1.7 0 0 0 0.03 2 normal @a[team=!Lobby]
+execute if entity @s[tag=ByLightning] run particle electric_spark ^ ^1.4 ^0.5 0.3 0.2 1 0.03 7 normal @a[team=!Lobby]
 
 #> Extinguish cannon
 execute at @s[scores={firetime=400..}] run function game:boat/cannon/extinguishcannon
