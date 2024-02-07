@@ -1,3 +1,6 @@
+#> Kill hats
+execute if entity @s[nbt={Item:{id:"minecraft:diamond_hoe",tag:{Hat:1b}}}] run return run kill
+
 #> Arrow return
 execute if entity @s[nbt={Item:{id:"minecraft:arrow"}}] run function everytick:arrowreturn
 

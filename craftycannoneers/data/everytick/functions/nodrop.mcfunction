@@ -1,26 +1,15 @@
-##Processes individual items for the purpose of preventing item dropping
-##Thanks to Cloud Wolf for the tip!
-kill @s[nbt={Item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:91}}}]
-kill @s[nbt={Item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:18}}}]
-kill @s[nbt={Item:{id:"minecraft:diamond_hoe",tag:{CustomModelData:17}}}]
+#> Immediately give back item, where possible
+setblock 0 300 0 yellow_shulker_box
+item replace block 0 300 0 container.0 with stone
+data modify block 0 300 0 Items[0] merge from entity @s Item
+execute on origin run loot give @s mine 0 300 0 air{drop_contents:1b}
+setblock 0 300 0 air
 
-data modify entity @s[tag=!processed] Owner set from entity @s Thrower
-data merge entity @s {NoGravity:1b}
-data merge entity @s[tag=!processed] {PickupDelay:0s}
-execute store result score @s[tag=!processed] playerUUID run data get entity @s Thrower[0]
-scoreboard players operation $tempuuid playerUUID = @s playerUUID
-execute if entity @s[tag=processed] unless entity @a[team=!Spectator,gamemode=!spectator,predicate=game:matches_uuid] run kill @s
-execute if entity @a[team=!Spectator,predicate=game:matches_uuid] at @a[team=!Spectator,predicate=game:matches_uuid,limit=1] run tp @s ~ ~ ~
-execute if entity @a[team=!Spectator,predicate=game:matches_uuid] at @a[team=!Spectator,predicate=game:matches_uuid,scores={Falling=20..}] run tp @s ~ ~-0.5 ~
-execute if entity @a[team=!Spectator,predicate=game:matches_uuid] at @s run tp @s @s
-execute store result entity @s Air short 1 run scoreboard players get $toggle CmdData
+#> Check for default items and full inventory before killing
+function everytick:defaultitemcheck
+execute if entity @s[tag=Cutlass] on origin run tag @s[team=!Spectator,gamemode=!spectator,tag=fullInv] add NeedsCutlass
+execute if entity @s[tag=Crossbow] on origin run tag @s[team=!Spectator,gamemode=!spectator,tag=fullInv] add NeedsCrossbow
+execute if entity @s[tag=Spyglass] on origin run tag @s[team=!Spectator,gamemode=!spectator,tag=fullInv] add NeedsSpyglass
+execute if entity @s[tag=Tracer] on origin run tag @s[team=!Spectator,gamemode=!spectator,tag=fullInv] add NeedsTracer
 
-execute on origin store success score $fullcheck CmdData if entity @s[team=Lobby,tag=fullinv]
-execute if score $fullcheck CmdData matches 1 run scoreboard players add @s eyeclick 1
-execute unless score $fullcheck CmdData matches 1 run scoreboard players reset @s eyeclick
-kill @s[scores={eyeclick=3..}]
-
-execute if score $gamestate CmdData matches 2.. run function everytick:defaultitems
-
-scoreboard players reset $tempuuid playerUUID
-tag @s[tag=!processed] add processed
+kill @s
