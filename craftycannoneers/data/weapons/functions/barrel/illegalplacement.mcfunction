@@ -1,6 +1,8 @@
 #> Entity-based illegal cases
 execute if entity @e[type=item_display,tag=BlastBarrel,distance=..0.5] run tag @s add illegal
+execute positioned ~ ~-0.5 ~ if entity @e[type=item_display,tag=BlastBarrel,distance=..0.5] run tag @s add illegal
 execute if entity @e[type=item_display,tag=CrabTrap,distance=..0.5] run tag @s add illegal
+execute positioned ~ ~-0.5 ~ if entity @e[type=item_display,tag=CrabTrap,distance=..0.5] run tag @s add illegal
 execute if entity @e[type=villager,distance=..0.5] run tag @s add illegal
 execute if entity @e[type=hopper_minecart,distance=..0.5] run tag @s add illegal
 execute if entity @e[type=chest_minecart,distance=..0.5] run tag @s add illegal
@@ -31,5 +33,6 @@ execute unless entity @s[tag=illegal] if block ~ ~-1 ~ #minecraft:slabs[type=bot
 execute unless entity @s[tag=illegal] if block ~ ~ ~ campfire align y run tp @s ~ ~0.4375 ~
 
 #> Special case for slab 1-block gap
-execute if block ~ ~-1 ~ #minecraft:slabs[type=top] if block ~ ~-2 ~ #minecraft:slabs[type=bottom] run tp @s ~ ~-1.5 ~
-execute if block ~ ~-1 ~ #minecraft:slabs[type=top] if block ~ ~-2 ~ #minecraft:slabs[type=bottom] run tag @s remove illegal
+execute if block ~ ~-1 ~ #minecraft:slabs[type=top] unless block ~ ~-1 ~ spruce_slab[type=top] if block ~ ~-2 ~ #minecraft:slabs[type=bottom] run tp @s ~ ~-1.5 ~
+execute if block ~ ~-1 ~ #minecraft:slabs[type=top] unless block ~ ~-1 ~ spruce_slab[type=top] if block ~ ~-2 ~ #minecraft:slabs[type=bottom] run tag @s remove illegal
+execute if block ~ ~ ~ #minecraft:slabs[type=top] run tag @s add illegal
