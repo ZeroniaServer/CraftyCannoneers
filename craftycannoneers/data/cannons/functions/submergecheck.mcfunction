@@ -1,0 +1,1 @@
+$execute positioned ~ ~$(depth) ~ positioned ~ ~-0.5 ~ if predicate game:located_water run tag @s add Submerged
