@@ -6,6 +6,8 @@ execute if score $rot eyeclick matches -44..45 run scoreboard players set $angle
 execute if score $rot eyeclick matches 46..135 run scoreboard players set $angle CmdData 0
 execute if score $rot eyeclick matches 136..180 run scoreboard players set $angle CmdData 1
 execute if score $rot eyeclick matches -180..-135 run scoreboard players set $angle CmdData 1
+data modify storage iris:settings MaxRecursionDepth set value 16
+execute at @s anchored eyes positioned ^ ^ ^ run function iris:get_target
 execute as @e[type=marker,tag=BlastBarrelSpawn,limit=1] at @s run function weapons:barrel/attemptplace
 tag @s remove placer
 scoreboard players reset @s spawnPlaceable

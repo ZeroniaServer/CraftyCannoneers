@@ -1,0 +1,10 @@
+{
+    "values": [
+		"minecraft:endermite",
+		"minecraft:silverfish",
+		{
+			"id": "minecraft:tadpole",
+			"required": false
+		}
+	]
+}

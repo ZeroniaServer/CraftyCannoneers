@@ -1,0 +1,12 @@
+{
+    "values": [
+        {
+            "id": "minecraft:end_rod",
+            "required": false
+        },
+        {
+            "id": "minecraft:lightning_rod",
+            "required": false
+        }
+    ]
+}

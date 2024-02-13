@@ -1,6 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"debug:setup"
+		"debug:setup",
+        "iris:setup/load"
 	]
 }

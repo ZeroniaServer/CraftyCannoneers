@@ -1,0 +1,16 @@
+{
+    "values": [
+        {
+            "id": "minecraft:redstone_torch",
+            "required": false
+        },
+        {
+            "id": "minecraft:soul_torch",
+            "required": false
+        },
+        {
+            "id": "minecraft:torch",
+            "required": false
+        }
+    ]
+}

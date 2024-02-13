@@ -1,5 +1,7 @@
 advancement revoke @s only weapons:crabtrap/place
 tag @s add placer
-execute rotated as @s rotated ~180 ~ as @e[type=marker,tag=CrabTrapSpawn,limit=1] positioned as @s run function weapons:crabtrap/attemptplace
+data modify storage iris:settings MaxRecursionDepth set value 16
+execute at @s anchored eyes positioned ^ ^ ^ run function iris:get_target
+execute as @e[type=marker,tag=CrabTrapSpawn,limit=1] run function weapons:crabtrap/attemptplace
 tag @s remove placer
 scoreboard players reset @s spawnPlaceable

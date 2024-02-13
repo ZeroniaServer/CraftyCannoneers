@@ -1,0 +1,92 @@
+{
+    "values": [
+        {
+            "id": "minecraft:pitcher_crop",
+            "required": false
+        },
+        {
+            "id": "minecraft:pointed_dripstone",
+            "required": false
+        },
+        {
+            "id": "minecraft:rail",
+            "required": false
+        },
+        {
+            "id": "#iris:shape_groups/redstone_torch",
+            "required": false
+        },
+        {
+            "id": "#iris:shape_groups/redstone_wall_torch",
+            "required": false
+        },
+        {
+            "id": "minecraft:redstone_wire",
+            "required": false
+        },
+        {
+            "id": "minecraft:scaffolding",
+            "required": false
+        },
+        {
+            "id": "minecraft:sea_pickle",
+            "required": false
+        },
+        {
+            "id": "minecraft:small_amethyst_bud",
+            "required": false
+        },
+        {
+            "id": "minecraft:sniffer_egg",
+            "required": false
+        },
+        {
+            "id": "minecraft:snow",
+            "required": false
+        },
+        {
+            "id": "minecraft:spore_blossom",
+            "required": false
+        },
+        {
+            "id": "#iris:shape_groups/sugar_cane",
+            "required": false
+        },
+        {
+            "id": "minecraft:sweet_berry_bush",
+            "required": false
+        },
+        {
+            "id": "minecraft:torchflower_crop",
+            "required": false
+        },
+        {
+            "id": "minecraft:tripwire",
+            "required": false
+        },
+        {
+            "id": "minecraft:tripwire_hook",
+            "required": false
+        },
+        {
+            "id": "minecraft:turtle_egg",
+            "required": false
+        },
+        {
+            "id": "minecraft:twisting_vines",
+            "required": false
+        },
+        {
+            "id": "minecraft:vine",
+            "required": false
+        },
+        {
+            "id": "minecraft:weeping_vines",
+            "required": false
+        },
+        {
+            "id": "minecraft:wheat",
+            "required": false
+        }
+    ]
+}
