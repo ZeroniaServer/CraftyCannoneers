@@ -56,13 +56,9 @@ execute if score @s[tag=Credit2,tag=!Old] CmdData matches 15.. if score $Transla
 execute if score @s[tag=Credit3,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 1 at @s run particle dust 0.768 0.07 0.996 1 -33 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
 
 execute if score @s[tag=Credit1,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 2 at @s run particle dust 0.568 0 1 1 -37 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
-execute if score @s[tag=Credit2,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 2 at @s run particle dust 0.854 0.905 0 1 -35 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
-execute if score @s[tag=Credit3,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 2 at @s run particle dust 0 255 0 1 -33 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
+execute if score @s[tag=Credit2,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 2 at @s run particle dust 0.75 0.75 0.75 1 -35 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
+execute if score @s[tag=Credit3,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 2 at @s run particle dust 0.75 0.75 0.75 1 -33 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
 
-execute if score @s[tag=Credit1,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 3 at @s run particle dust 0.75 0.75 0.75 1 -37 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
+execute if score @s[tag=Credit1,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 3 at @s run particle dust 0 255 0 1 -37 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
 execute if score @s[tag=Credit2,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 3 at @s run particle dust 0.015 0.521 0.690 1 -35 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
 execute if score @s[tag=Credit3,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 3 at @s run particle dust 0.815 0 0 1 -33 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
-
-execute if score @s[tag=Credit1,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 4 at @s run particle dust 0.75 0.75 0.75 1 -37 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
-execute if score @s[tag=Credit2,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 4 at @s run particle dust 0.015 0.521 0.690 1 -35 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
-execute if score @s[tag=Credit3,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 4 at @s run particle dust 0.815 0 0 1 -33 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
