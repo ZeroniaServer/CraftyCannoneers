@@ -65,7 +65,3 @@ execute on vehicle run function everytick:permababy
 
 #> Controller lifetime
 execute on vehicle on controller if entity @s[type=endermite] run function game:modifiers/crabs/lifetime
-
-#> Target correctly teamed players
-execute on vehicle if entity @s[tag=Orange] run damage @s 0.1 bad_respawn_point by @a[team=Purple,limit=1,sort=nearest,distance=..5]
-execute on vehicle if entity @s[tag=Purple] run damage @s 0.1 bad_respawn_point by @a[team=Orange,limit=1,sort=nearest,distance=..5]
