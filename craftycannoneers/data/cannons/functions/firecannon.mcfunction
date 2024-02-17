@@ -149,6 +149,9 @@ execute at @s[tag=!Purple,tag=!Orange,scores={cannonshot=30..,CmdData=10}] run s
 #Global
 scoreboard players operation @e[type=armor_stand,tag=NewCannonball] playerUUID = @s playerUUID
 execute as @e[type=armor_stand,tag=NewCannonball] at @s run function cannons:namecannonball
+scoreboard players operation @e[type=armor_stand,tag=NewCannonball] drag = @s drag
+scoreboard players operation @e[type=armor_stand,tag=NewCannonball] gravity = @s gravity
+tag @e[type=armor_stand,tag=NewCannonball] add AccuracySet
 tag @e[type=armor_stand,tag=NewCannonball] remove NewCannonball
 
 execute at @s[scores={cannonshot=30..}] run tp @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..1] @s
