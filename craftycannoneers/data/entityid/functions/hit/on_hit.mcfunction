@@ -43,6 +43,8 @@ tag @a[limit=1,tag=hitter] remove FillLeft
 tag @a[limit=1,tag=hitter] remove FillRight
 
 #> Remove Gunpowder from Boat Cannons
+execute if entity @s[type=interaction,tag=BoatCannon] on vehicle on vehicle on vehicle if score @s PowerM matches 1.. on passengers if entity @s[team=Orange] run execute as @e[type=slime,tag=Spotted,tag=Weakpoint,tag=Orange,scores={spotting=80..}] run scoreboard players set @s spotting 80
+execute if entity @s[type=interaction,tag=BoatCannon] on vehicle on vehicle on vehicle if score @s PowerM matches 1.. on passengers if entity @s[team=Purple] run execute as @e[type=slime,tag=Spotted,tag=Weakpoint,tag=Purple,scores={spotting=80..}] run scoreboard players set @s spotting 80
 execute if entity @s[type=interaction,tag=BoatCannon] on vehicle on vehicle on vehicle if score @s PowerM matches 1.. on passengers run loot give @s[gamemode=!creative,tag=hitter] loot weapons:gunpowder
 execute if entity @s[type=interaction,tag=BoatCannon] on vehicle on vehicle on vehicle if score @s PowerM matches 1.. on passengers if entity @s[tag=hitter] on vehicle run function game:boat/cannon/unloadgunpowder
 
