@@ -151,7 +151,12 @@ scoreboard players operation @e[type=armor_stand,tag=NewCannonball] playerUUID =
 execute as @e[type=armor_stand,tag=NewCannonball] at @s run function cannons:namecannonball
 scoreboard players operation @e[type=armor_stand,tag=NewCannonball] drag = @s drag
 scoreboard players operation @e[type=armor_stand,tag=NewCannonball] gravity = @s gravity
-tag @e[type=armor_stand,tag=NewCannonball] add AccuracySet
+execute as @e[tag=CannonballCluster,tag=!AccuracySet] at @s run function cannons:setaccuracy
+execute as @e[tag=CannonballCluster,tag=!0,tag=!clusteracc] at @s run function cannons:clusteraccuracy
+execute as @e[tag=ChainCannonball,tag=!chainacc] at @s run function cannons:chainaccuracy
+scoreboard players set @e[tag=CannonballCluster] doublehit 69
+tag @e[type=armor_stand,tag=NewCannonball,tag=!ChainCannonball] add AccuracySet
+
 tag @e[type=armor_stand,tag=NewCannonball] remove NewCannonball
 
 execute at @s[scores={cannonshot=30..}] run tp @e[type=armor_stand,tag=cannonball,limit=1,sort=nearest,distance=..1] @s
