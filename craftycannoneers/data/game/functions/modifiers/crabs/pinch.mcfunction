@@ -1,4 +1,4 @@
-execute on vehicle if entity @s[team=!Purple,team=!Orange] run tag @a[distance=..1,limit=1,sort=nearest] add victim
+execute on vehicle if entity @s[team=!Purple,team=!Orange] run tag @a[team=!Lobby,team=!Spectator,team=!Developer,gamemode=!spectator,distance=..1,limit=1,sort=nearest] add victim
 execute on vehicle if entity @s[team=Purple] run tag @a[team=Orange,distance=..1,limit=1,sort=nearest] add victim
 execute on vehicle if entity @s[team=Orange] run tag @a[team=Purple,distance=..1,limit=1,sort=nearest] add victim
 execute on vehicle run scoreboard players operation @a[tag=victim,limit=1] KillerUUID = @s KillerUUID
