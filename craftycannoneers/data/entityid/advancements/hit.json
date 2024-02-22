@@ -950,9 +950,27 @@
                     }
                 ]
             }
+        },
+        "no_knockback": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "tags": [
+                            {
+                                "id": "minecraft:no_knockback",
+                                "expected": false
+                            }
+                        ]
+                    }
+                }
+            }
         }
     },
     "requirements": [
+        [
+            "no_knockback"
+        ],
         [
             "target",
             "not_target"
