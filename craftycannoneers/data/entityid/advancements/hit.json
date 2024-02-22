@@ -951,14 +951,14 @@
                 ]
             }
         },
-        "no_knockback": {
+        "ignore": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
                 "damage": {
                     "type": {
                         "tags": [
                             {
-                                "id": "minecraft:no_knockback",
+                                "id": "entityid:ignore",
                                 "expected": false
                             }
                         ]
@@ -969,7 +969,7 @@
     },
     "requirements": [
         [
-            "no_knockback"
+            "ignore"
         ],
         [
             "target",
