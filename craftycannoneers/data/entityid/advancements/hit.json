@@ -950,27 +950,9 @@
                     }
                 ]
             }
-        },
-        "ignore": {
-            "trigger": "minecraft:player_hurt_entity",
-            "conditions": {
-                "damage": {
-                    "type": {
-                        "tags": [
-                            {
-                                "id": "entityid:ignore",
-                                "expected": false
-                            }
-                        ]
-                    }
-                }
-            }
         }
     },
     "requirements": [
-        [
-            "ignore"
-        ],
         [
             "target",
             "not_target"
