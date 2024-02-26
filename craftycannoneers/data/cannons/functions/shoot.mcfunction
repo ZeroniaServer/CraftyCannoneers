@@ -10,16 +10,10 @@ execute if entity @s[tag=!TracerCannonball,tag=!PlayerCannonball,scores={CmdData
 
 scoreboard players add @s[tag=bouncing,scores={bouncedelay=1..}] bouncedelay 1
 
-# execute at @s[tag=CannonballCluster,tag=!AccuracySet] run function cannons:setaccuracy
-# execute at @s[tag=CannonballCluster,tag=!0,tag=!clusteracc] run function cannons:clusteraccuracy
 scoreboard players set @s[tag=CannonballCluster] doublehit 69
 
 execute at @s[tag=ChainCannonball,tag=chainacc,scores={CmdData=2..}] run tp @s ~ ~ ~ ~40 ~
-# execute at @s[tag=ChainCannonball,tag=!AccuracySet] run function cannons:setaccuracy
-# execute at @s[tag=ChainCannonball,tag=!chainacc] run function cannons:chainaccuracy
-# execute at @s[tag=PlayerCannonball,tag=!AccuracySet] run function cannons:setaccuracy
 execute at @s[tag=PlayerCannonball] run function cannons:playercbtravel
-# execute at @s[tag=TracerCannonball,tag=!AccuracySet] run function cannons:setaccuracy
 
 scoreboard players operation @s[tag=!CannonballShot] PowerL *= $3 CmdData
 scoreboard players operation @s[tag=!CannonballShot] PowerR *= $3 CmdData
