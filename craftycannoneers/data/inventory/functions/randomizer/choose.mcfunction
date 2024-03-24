@@ -9,4 +9,4 @@ execute store result score $size CmdData if data storage craftycannoneers:invent
 scoreboard players remove $size CmdData 1
 
 #> Call loop using value of $chooseinv CmdData
-function inventory:randomizer/loop
+execute unless score $size CmdData matches ..-1 run function inventory:randomizer/loop
