@@ -10,11 +10,22 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{Unbreakable:1b,Knockback:0,display:{Name:'[{\"translate\":\"item.boarding_axe\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.boarding_axe.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.boarding_axe.lore.2\",\"italic\":false,\"color\":\"white\"}]']},HideFlags:4}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{Knockback:0}"
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_components",
+          "components": {
+            "!minecraft:damage": {},
+            "minecraft:custom_name": "[{\"translate\":\"item.boarding_axe\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"item.boarding_axe.lore.1\",\"italic\":false,\"color\":\"white\"}]",
+              "[{\"translate\":\"item.boarding_axe.lore.2\",\"italic\":false,\"color\":\"white\"}]"
+            ]
+          }
+        },
+        {
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

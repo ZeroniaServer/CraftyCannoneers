@@ -1,26 +1,26 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
-    "display": {
-        "title": {
-            "translate": "achievement.tutorial",
-            "color": "dark_aqua"
-        },
-        "description": {
-            "translate": "achievement.tutorial.description",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:knowledge_book"
-        },
-        "frame": "goal",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": false
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "display": {
+    "title": {
+      "translate": "achievement.tutorial",
+      "color": "dark_aqua"
     },
-    "criteria": {
-        "impossible": {
-            "trigger": "minecraft:impossible"
-        }
+    "description": {
+      "translate": "achievement.tutorial.description",
+      "color": "white"
     },
-    "parent": "tutorial:zzzunlockables/credits"
+    "icon": {
+      "id": "minecraft:knowledge_book"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "tutorial:zzzunlockables/credits"
 }

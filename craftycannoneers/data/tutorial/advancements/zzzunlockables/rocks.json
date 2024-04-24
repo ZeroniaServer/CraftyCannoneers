@@ -10,7 +10,7 @@
       "color": "white"
     },
     "icon": {
-      "item": "minecraft:snowball"
+      "id": "minecraft:snowball"
     },
     "frame": "goal",
     "show_toast": true,

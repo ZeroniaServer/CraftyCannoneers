@@ -9,8 +9,10 @@
           "name": "minecraft:golden_apple",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{display:{Name:'[{\"translate\":\"item.minecraft.golden_apple\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": "[{\"translate\":\"item.minecraft.golden_apple\",\"italic\":false,\"color\":\"dark_aqua\"}]"
+              }
             },
             {
               "function": "minecraft:set_count",
@@ -40,8 +42,14 @@
           "name": "minecraft:apple",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{NoDrop:1b,display:{Name:'[{\"translate\":\"item.minecraft.golden_apple\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{NoDrop:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": "[{\"translate\":\"item.minecraft.golden_apple\",\"italic\":false,\"color\":\"dark_aqua\"}]"
+              }
             },
             {
               "function": "minecraft:set_count",

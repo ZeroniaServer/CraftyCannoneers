@@ -5,13 +5,13 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "lobby:rock",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": 15
             }
-          ]
+          ],
+          "value": "lobby:rock"
         }
       ]
     }

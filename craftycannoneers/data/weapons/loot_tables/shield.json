@@ -10,11 +10,19 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{CustomModelData:1,Blocking:0,Damage:316,display:{Name:'[{\"translate\":\"item.minecraft.shield\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{Blocking:0}"
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:custom_model_data": 1,
+            "minecraft:damage": 316,
+            "minecraft:custom_name": "[{\"translate\":\"item.minecraft.shield\",\"italic\":false,\"color\":\"dark_aqua\"}]"
+          }
+        },
+        {
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

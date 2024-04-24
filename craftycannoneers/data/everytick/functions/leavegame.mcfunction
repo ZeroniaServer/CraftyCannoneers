@@ -54,6 +54,7 @@ tag @s[tag=LeaveGame] remove lookAtBarrel
 tag @s[tag=LeaveGame] remove lookAtCannon
 tag @s[tag=LeaveGame] remove WaterTP
 attribute @s[tag=LeaveGame] generic.attack_damage modifier remove 9c55d773-f866-4def-9740-6253d5ebb737
+attribute @s[tag=LeaveGame] generic.safe_fall_distance base set 1024
 tag @s[tag=LeaveGame] remove lookAtBCannon
 tag @s[tag=LeaveGame] remove barrelMainhand
 tag @s[tag=LeaveGame] remove barrelOffhand

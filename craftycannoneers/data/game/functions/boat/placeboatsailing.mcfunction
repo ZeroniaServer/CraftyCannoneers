@@ -11,8 +11,6 @@ $execute as @e[type=boat,tag=new] at @s anchored feet rotated ~ 0 run summon ite
 
 $execute as @e[type=boat,tag=new,limit=1] at @s anchored feet rotated ~ 0 run summon camel ^ ^0.1875 ^-0.4 {Age:-2147483648,Silent:1b,DeathTime:17s,active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:-1,show_particles:0b},{id:"minecraft:instant_health",amplifier:10b,duration:-1,show_particles:0b}],Team:"NoName",PersistenceRequired:1b,NoAI:1b,Rotation:[$(angle)f,0.0f],Tags:["BoatCannonAnchor","new"]}
 
-$execute if score $BoatCannons CmdData matches 1 as @e[type=boat,tag=new,limit=1] at @s anchored feet rotated ~ 0 run summon villager ^ ^-0.1625 ^-0.4 {ArmorItems:[{},{},{},{}],Offers:{Trades:[]},Silent:1b,DeathTime:17s,active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:-1,show_particles:0b},{id:"minecraft:instant_health",amplifier:10b,duration:-1,show_particles:0b}],Team:"NoName",PersistenceRequired:1b,NoAI:1b,Rotation:[$(angle)f,0.0f],Tags:["BoatCannonAnchor","new"]}
-
 execute as @e[type=camel,tag=new,limit=1] at @s anchored feet rotated ~ 0 run summon area_effect_cloud ^ ^0.9 ^0.225 {Duration:20000000,Tags:["BoatCannonOffset","base","new"]}
 
 ride @e[type=area_effect_cloud,tag=base,tag=new,limit=1] mount @e[type=camel,tag=new,limit=1]
@@ -21,6 +19,5 @@ ride @e[type=item_display,tag=BoatBanner,tag=new,limit=1] mount @e[type=boat,tag
 ride @e[type=item_display,tag=BoatCannonBarrel,tag=new,limit=1] mount @e[type=boat,tag=new,limit=1]
 ride @e[type=item_display,tag=BoatCannonCart,tag=new,limit=1] mount @e[type=boat,tag=new,limit=1]
 ride @e[type=camel,tag=new,limit=1] mount @e[type=boat,tag=new,limit=1]
-ride @e[type=villager,tag=new,limit=1] mount @e[type=boat,tag=new,limit=1]
 
 execute as @e[type=boat,tag=new,limit=1] run function game:boat/removenew

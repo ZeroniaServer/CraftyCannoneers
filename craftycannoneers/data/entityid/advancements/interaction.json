@@ -1,21 +1,21 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:player_interacted_with_entity",
-            "conditions": {
-                "entity": [
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "type": "minecraft:interaction"
-                        }
-                    }
-                ]
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:interaction"
             }
-        }
-    },
-    "rewards": {
-        "function": "entityid:interaction/click"
+          }
+        ]
+      }
     }
+  },
+  "rewards": {
+    "function": "entityid:interaction/click"
+  }
 }

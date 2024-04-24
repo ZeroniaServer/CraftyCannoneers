@@ -1,16 +1,16 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:entity_killed_player",
-            "conditions": {
-                "entity": {
-                    "type": "minecraft:creeper",
-                    "nbt": "{Tags:[\"CannonballCreeper\"]}"
-                }
-            }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:creeper",
+          "nbt": "{Tags:[\"CannonballCreeper\"]}"
         }
-    },
-    "rewards": {
-        "function": "cannons:utilkillcheck"
+      }
     }
+  },
+  "rewards": {
+    "function": "cannons:utilkillcheck"
+  }
 }

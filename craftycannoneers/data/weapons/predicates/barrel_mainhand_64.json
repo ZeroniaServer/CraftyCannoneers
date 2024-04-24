@@ -1,17 +1,19 @@
 {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-        "equipment": {
-            "mainhand": {
-                "items": [
-                    "minecraft:mooshroom_spawn_egg"
-                ],
-                "count": {
-                    "min": 63
-                },
-                "nbt": "{Barrel:1b}"
-            }
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "items": [
+          "minecraft:mooshroom_spawn_egg"
+        ],
+        "count": {
+          "min": 63
+        },
+        "components": {
+          "minecraft:custom_data": "{Barrel:1b}"
         }
+      }
     }
+  }
 }

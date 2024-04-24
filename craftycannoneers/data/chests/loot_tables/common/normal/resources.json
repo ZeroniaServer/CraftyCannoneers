@@ -11,7 +11,6 @@
         {
           "type": "minecraft:loot_table",
           "weight": 4,
-          "name": "weapons:gunpowder",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -21,12 +20,12 @@
                 "max": 4
               }
             }
-          ]
+          ],
+          "value": "weapons:gunpowder"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 5,
-          "name": "weapons:gold",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -36,12 +35,12 @@
                 "max": 3
               }
             }
-          ]
+          ],
+          "value": "weapons:gold"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "weapons:arrow",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -51,7 +50,8 @@
                 "max": 2
               }
             }
-          ]
+          ],
+          "value": "weapons:arrow"
         }
       ]
     }

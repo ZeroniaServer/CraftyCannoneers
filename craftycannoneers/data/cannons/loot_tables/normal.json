@@ -10,11 +10,43 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{HideFlags:127,CustomModelData:16,Unbreakable:1b,Cannonball:1b,display:{Name:'[{\"translate\":\"cannonball.normal\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"cannonball.normal.lore\",\"italic\":false,\"color\":\"white\"}]']}}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{Cannonball:1b}"
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:custom_model_data": 16,
+            "!minecraft:damage": {},
+            "minecraft:custom_name": "[{\"translate\":\"cannonball.normal\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"cannonball.normal.lore\",\"italic\":false,\"color\":\"white\"}]"
+            ],
+            "minecraft:enchantments": {
+              "levels": {},
+              "show_in_tooltip": false
+            },
+            "minecraft:attribute_modifiers": {
+              "modifiers": [],
+              "show_in_tooltip": false
+            },
+            "minecraft:can_break": {
+              "predciates": [],
+              "show_in_tooltip": false
+            },
+            "minecraft:can_place_on": {
+              "predciates": [],
+              "show_in_tooltip": false
+            },
+            "minecraft:hide_additional_tooltip": {},
+            "minecraft:dyed_color": {
+              "rgb": 0,
+              "show_in_tooltip": false
+            }
+          }
+        },
+        {
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

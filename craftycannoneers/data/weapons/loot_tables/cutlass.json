@@ -10,8 +10,21 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{HideFlags:5,NoDrop:1b,Enchantments:[{id:\"vanishing_curse\",lvl:1}],Unbreakable:1b,display:{Name:'[{\"translate\":\"item.cutlass\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{NoDrop:1b}"
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:enchantments": {
+              "levels": {
+                "minecraft:vanishing_curse": 1
+              },
+              "show_in_tooltip": false
+            },
+            "!minecraft:damage": {},
+            "minecraft:custom_name": "[{\"translate\":\"item.cutlass\",\"italic\":false,\"color\":\"dark_aqua\"}]"
+          }
         }
       ]
     }

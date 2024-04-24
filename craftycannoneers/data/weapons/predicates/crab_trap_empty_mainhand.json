@@ -1,14 +1,22 @@
 {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-        "equipment": {
-            "mainhand": {
-                "items": [
-                    "minecraft:mooshroom_spawn_egg"
-                ],
-                "nbt": "{CrabTrap:1b,EntityTag:{data:{durability:5}}}"
-            }
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "items": [
+          "minecraft:mooshroom_spawn_egg"
+        ],
+        "components": {
+          "minecraft:entity_data": {
+            "data": {
+              "durability": 5
+            },
+            "id": "UNKNOWN_ENTITY"
+          },
+          "minecraft:custom_data": "{CrabTrap:1b}"
         }
+      }
     }
+  }
 }

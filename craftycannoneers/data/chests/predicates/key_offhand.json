@@ -10,7 +10,9 @@
         "items": [
           "minecraft:ender_eye"
         ],
-        "nbt": "{Key:1b}"
+        "components": {
+          "minecraft:custom_data": "{Key:1b}"
+        }
       }
     }
   }

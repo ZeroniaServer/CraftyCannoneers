@@ -1,79 +1,79 @@
 {
-    "criteria": {
-        "rock": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "items": [
-                    {
-                        "items": [
-                            "minecraft:snowball"
-                        ]
-                    }
-                ]
-            }
-        },
-        "full": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "slots": {
-                    "occupied": {
-                        "min": 40
-                    }
-                }
-            }
-        },
-        "full_lobby": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "slots": {
-                    "occupied": {
-                        "min": 37
-                    }
-                }
-            }
-        },
-        "unfull": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "slots": {
-                    "occupied": {
-                        "max": 39
-                    }
-                }
-            }
-        },
-        "unfull_lobby": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "slots": {
-                    "occupied": {
-                        "max": 36
-                    }
-                }
-            }
-        },
-        "impossible": {
-            "trigger": "minecraft:impossible"
-        }
-    },
-    "requirements": [
-        [
-            "impossible"
-        ],
-        [
-            "rock"
-        ],
-        [
-            "full"
-        ],
-        [
-            "full_lobby"
-        ],
-        [
-            "unfull_lobby"
-        ],
-        [
-            "unfull"
+  "criteria": {
+    "rock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:snowball"
+            ]
+          }
         ]
+      }
+    },
+    "full": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "slots": {
+          "occupied": {
+            "min": 40
+          }
+        }
+      }
+    },
+    "full_lobby": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "slots": {
+          "occupied": {
+            "min": 37
+          }
+        }
+      }
+    },
+    "unfull": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "slots": {
+          "occupied": {
+            "max": 39
+          }
+        }
+      }
+    },
+    "unfull_lobby": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "slots": {
+          "occupied": {
+            "max": 36
+          }
+        }
+      }
+    },
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "impossible"
+    ],
+    [
+      "rock"
+    ],
+    [
+      "full"
+    ],
+    [
+      "full_lobby"
+    ],
+    [
+      "unfull_lobby"
+    ],
+    [
+      "unfull"
     ]
+  ]
 }

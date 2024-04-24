@@ -10,11 +10,48 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{Damage:2020,AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:-3.5,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,13259,12629,-26518]},{AttributeName:\"generic.attack_damage\",Amount:12.0,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,13359,12629,-26718]}],display:{Name:'[{\"translate\":\"item.mace\",\"italic\":false,\"color\":\"dark_aqua\"}]'},HideFlags:5}"
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:damage": 2020,
+            "minecraft:attribute_modifiers": {
+              "modifiers": [
+                {
+                  "amount": -3.5,
+                  "slot": "mainhand",
+                  "name": "generic.attack_speed",
+                  "uuid": [
+                    -12248,
+                    13259,
+                    12629,
+                    -26518
+                  ],
+                  "type": "generic.attack_speed",
+                  "operation": "add_value"
+                },
+                {
+                  "amount": 12.0,
+                  "slot": "mainhand",
+                  "name": "generic.attack_damage",
+                  "uuid": [
+                    -12248,
+                    13359,
+                    12629,
+                    -26718
+                  ],
+                  "type": "generic.attack_damage",
+                  "operation": "add_value"
+                }
+              ]
+            },
+            "minecraft:custom_name": "[{\"translate\":\"item.mace\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:enchantments": {
+              "levels": {},
+              "show_in_tooltip": false
+            }
+          }
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

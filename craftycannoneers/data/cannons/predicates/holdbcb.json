@@ -7,7 +7,9 @@
         "items": [
           "minecraft:diamond_hoe"
         ],
-        "nbt": "{Cannonball:6b}"
+        "components": {
+          "minecraft:custom_data": "{Cannonball:6b}"
+        }
       }
     }
   }

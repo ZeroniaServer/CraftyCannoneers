@@ -6,8 +6,8 @@ scoreboard players set @e[type=item_display,tag=NoID] CmdData 0
 scoreboard players set @e[type=item_display,tag=CannonDisp,tag=NoID,limit=1] playerUUID 0
 scoreboard players set @e[type=item_display,tag=CannonDisp,tag=NoID,limit=1] gravity 0
 scoreboard players set @e[type=item_display,tag=CannonDisp,tag=NoID,limit=1] drag 0
-item replace entity @e[type=item_display,tag=CannonCart,tag=NoID,limit=1] container.0 with diamond_hoe{CustomModelData:1}
-item replace entity @e[type=item_display,tag=CannonBarrel,tag=NoID,limit=1] container.0 with diamond_hoe{CustomModelData:62}
+item replace entity @e[type=item_display,tag=CannonCart,tag=NoID,limit=1] container.0 with minecraft:diamond_hoe[custom_model_data=1]
+item replace entity @e[type=item_display,tag=CannonBarrel,tag=NoID,limit=1] container.0 with minecraft:diamond_hoe[custom_model_data=62]
 execute as @e[type=item_display,tag=NoID] run data merge entity @s {start_interpolation:0,interpolation_duration:0,transformation:{scale:[0.625f,0.625f,0.625f],translation:[0.0f,1.6875f,0.0f]}}
 execute as @e[type=item_display,tag=NoID] run scoreboard players operation @s CannonID = $current CannonID
 tag @e[type=item_display,tag=NoID] remove NoID

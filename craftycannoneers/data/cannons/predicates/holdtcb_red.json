@@ -7,7 +7,9 @@
         "items": [
           "minecraft:diamond_hoe"
         ],
-        "nbt": "{CustomModelData:91}"
+        "components": {
+          "minecraft:custom_model_data": 91
+        }
       }
     }
   }

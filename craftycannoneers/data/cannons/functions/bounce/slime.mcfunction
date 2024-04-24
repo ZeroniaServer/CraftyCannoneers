@@ -2,7 +2,7 @@ team join Collide @s
 scoreboard players add @s CmdData 1
 
 execute at @s[scores={CmdData=1}] run tp @s ~ ~-35 ~
-data merge entity @s[scores={CmdData=1}] {Attributes:[{Name:"generic.attack_damage",Base:6d}]}
+data merge entity @s[scores={CmdData=1}] {Attributes:[{Name:"generic.attack_damage",Base:6.0d}]}
 
 #> Remount nearby Crabs/Sharks
 execute at @s[scores={CmdData=3}] as @e[type=cat,tag=CrabVehicle,tag=dismounted,distance=..10] run function game:modifiers/crabs/remount

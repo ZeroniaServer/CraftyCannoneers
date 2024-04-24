@@ -10,11 +10,16 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{display:{Name:'[{\"translate\":\"item.minecraft.gunpowder\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.gunpowder.lore\",\"italic\":false,\"color\":\"white\"}]']}}"
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:custom_name": "[{\"translate\":\"item.minecraft.gunpowder\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"item.gunpowder.lore\",\"italic\":false,\"color\":\"white\"}]"
+            ]
+          }
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

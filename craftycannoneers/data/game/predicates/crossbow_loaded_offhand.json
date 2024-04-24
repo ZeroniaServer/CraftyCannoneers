@@ -7,7 +7,9 @@
         "items": [
           "minecraft:crossbow"
         ],
-        "nbt": "{Charged:1b}"
+        "components": {
+          "minecraft:custom_data": "{Charged:1b}"
+        }
       }
     }
   }

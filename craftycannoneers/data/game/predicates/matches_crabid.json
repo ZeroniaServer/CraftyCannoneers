@@ -1,29 +1,29 @@
 {
-    "condition": "minecraft:value_check",
-    "value": {
-        "type": "minecraft:score",
-        "target": "this",
-        "score": "click",
-        "scale": 1
+  "condition": "minecraft:value_check",
+  "value": {
+    "type": "minecraft:score",
+    "target": "this",
+    "score": "click",
+    "scale": 1
+  },
+  "range": {
+    "min": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "$crabid"
+      },
+      "score": "CmdData",
+      "scale": 1
     },
-    "range": {
-        "min": {
-            "type": "minecraft:score",
-            "target": {
-                "type": "minecraft:fixed",
-                "name": "$crabid"
-            },
-            "score": "CmdData",
-            "scale": 1
-        },
-        "max": {
-            "type": "minecraft:score",
-            "target": {
-                "type": "minecraft:fixed",
-                "name": "$crabid"
-            },
-            "score": "CmdData",
-            "scale": 1
-        }
+    "max": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "$crabid"
+      },
+      "score": "CmdData",
+      "scale": 1
     }
+  }
 }

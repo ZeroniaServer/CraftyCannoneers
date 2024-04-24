@@ -10,8 +10,37 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{NoDrop:1b,Unbreakable:1b,display:{Name:'[{\"translate\":\"item.crossbow\",\"italic\":false,\"color\":\"dark_aqua\"}]'},Enchantments:[{id:\"quick_charge\",lvl:2},{id:\"vanishing_curse\",lvl:1}],HideFlags:7,Charged:1b,ChargedProjectiles:[{id:\"minecraft:arrow\",Count:1b,tag:{display:{Name:'[{\"translate\":\"item.minecraft.arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}}]}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{NoDrop:1b,Charged:1b}"
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:enchantments": {
+              "levels": {
+                "minecraft:quick_charge": 2,
+                "minecraft:vanishing_curse": 1
+              },
+              "show_in_tooltip": false
+            },
+            "!minecraft:damage": {},
+            "minecraft:custom_name": "[{\"translate\":\"item.crossbow\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:charged_projectiles": [
+              {
+                "id": "minecraft:arrow",
+                "tag": {
+                  "display": {
+                    "Name": "[{\"translate\":\"item.minecraft.arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]"
+                  }
+                },
+                "count": 1
+              }
+            ],
+            "minecraft:attribute_modifiers": {
+              "modifiers": [],
+              "show_in_tooltip": false
+            }
+          }
         }
       ]
     }

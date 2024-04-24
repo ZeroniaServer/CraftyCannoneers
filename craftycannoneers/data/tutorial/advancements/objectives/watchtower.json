@@ -1,26 +1,26 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
-    "display": {
-        "title": {
-            "translate": "tutorial.watchtower",
-            "color": "green"
-        },
-        "description": {
-            "translate": "achievement.watchtower.description",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:spyglass"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": false
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "display": {
+    "title": {
+      "translate": "tutorial.watchtower",
+      "color": "green"
     },
-    "criteria": {
-        "impossible": {
-            "trigger": "minecraft:impossible"
-        }
+    "description": {
+      "translate": "achievement.watchtower.description",
+      "color": "white"
     },
-    "parent": "tutorial:objectives/treasure"
+    "icon": {
+      "id": "minecraft:spyglass"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "tutorial:objectives/treasure"
 }

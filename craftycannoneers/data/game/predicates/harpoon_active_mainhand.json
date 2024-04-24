@@ -7,7 +7,9 @@
         "items": [
           "minecraft:trident"
         ],
-        "nbt": "{Harpoon:2}"
+        "components": {
+          "minecraft:custom_data": "{Harpoon:2}"
+        }
       }
     }
   }

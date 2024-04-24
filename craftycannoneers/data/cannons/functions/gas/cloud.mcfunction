@@ -18,7 +18,7 @@ tag @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Deve
 effect clear @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] regeneration
 scoreboard players reset @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] NoRegenTimer
 
-execute at @s[scores={CmdData=243}] run data merge entity @e[type=item_display,tag=GasDisplay,limit=1,sort=nearest,distance=..1] {start_interpolation:0,interpolation_duration:8,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f]}}
+execute at @s[scores={CmdData=243}] run data merge entity @e[type=item_display,tag=GasDisplay,limit=1,sort=nearest,distance=..1] {start_interpolation:0,interpolation_duration:8,transformation:{scale:[0.0f,0.0f,0.0f],translation:[0.0f,0.0f,0.0f]}}
 execute at @s[scores={CmdData=250..}] as @e[type=item_display,tag=GasDisplay,limit=1,sort=nearest,distance=..1] run function cannons:gas/cloudkill
 kill @s[scores={CmdData=250..}]
 

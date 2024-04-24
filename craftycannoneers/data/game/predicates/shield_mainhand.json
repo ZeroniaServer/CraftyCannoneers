@@ -7,7 +7,9 @@
         "items": [
           "minecraft:shield"
         ],
-        "nbt": "{Blocking:0}"
+        "components": {
+          "minecraft:custom_data": "{Blocking:0}"
+        }
       }
     }
   }

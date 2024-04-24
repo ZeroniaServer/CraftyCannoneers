@@ -10,11 +10,44 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{instrument:\"minecraft:ponder_goat_horn\",Unbreakable:1b,Horn:1,display:{Name:'[{\"translate\":\"item.raid_horn\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.raid_horn.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.raid_horn.lore.2\",\"italic\":false,\"color\":\"white\"}]']},HideFlags:127}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{Horn:1}"
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_components",
+          "components": {
+            "!minecraft:damage": {},
+            "minecraft:custom_name": "[{\"translate\":\"item.raid_horn\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"item.raid_horn.lore.1\",\"italic\":false,\"color\":\"white\"}]",
+              "[{\"translate\":\"item.raid_horn.lore.2\",\"italic\":false,\"color\":\"white\"}]"
+            ],
+            "minecraft:instrument": "minecraft:ponder_goat_horn",
+            "minecraft:enchantments": {
+              "levels": {},
+              "show_in_tooltip": false
+            },
+            "minecraft:attribute_modifiers": {
+              "modifiers": [],
+              "show_in_tooltip": false
+            },
+            "minecraft:can_break": {
+              "predciates": [],
+              "show_in_tooltip": false
+            },
+            "minecraft:can_place_on": {
+              "predciates": [],
+              "show_in_tooltip": false
+            },
+            "minecraft:hide_additional_tooltip": {},
+            "minecraft:dyed_color": {
+              "rgb": 0,
+              "show_in_tooltip": false
+            }
+          }
+        },
+        {
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

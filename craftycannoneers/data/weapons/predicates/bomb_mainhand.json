@@ -7,7 +7,9 @@
         "items": [
           "minecraft:ender_eye"
         ],
-        "nbt": "{Bomb:1b}"
+        "components": {
+          "minecraft:custom_data": "{Bomb:1b}"
+        }
       }
     }
   }

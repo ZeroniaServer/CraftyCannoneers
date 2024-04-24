@@ -11,7 +11,9 @@
               "items": [
                 "minecraft:carrot_on_a_stick"
               ],
-              "nbt": "{Quit:1b}"
+              "components": {
+                "minecraft:custom_data": "{Quit:1b}"
+              }
             }
           }
         }
@@ -30,7 +32,9 @@
               "items": [
                 "minecraft:carrot_on_a_stick"
               ],
-              "nbt": "{Quit:1b}"
+              "components": {
+                "minecraft:custom_data": "{Quit:1b}"
+              }
             }
           }
         }

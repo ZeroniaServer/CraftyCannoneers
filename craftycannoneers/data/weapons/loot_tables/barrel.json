@@ -10,11 +10,50 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{CustomModelData:1,HideFlags:127,CanPlaceOn:[\"#game:barrel_placeable\"],Barrel:1b,display:{Name:'[{\"translate\":\"item.blast_barrel\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.blast_barrel.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.blast_barrel.lore.2\",\"italic\":false,\"color\":\"white\"}]']},EntityTag:{id:\"minecraft:marker\",Tags:[\"BlastBarrelSpawn\",\"barrel\"]}}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{CanPlaceOn:[\"#game:barrel_placeable\"],Barrel:1b}"
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:custom_model_data": 1,
+            "minecraft:custom_name": "[{\"translate\":\"item.blast_barrel\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"item.blast_barrel.lore.1\",\"italic\":false,\"color\":\"white\"}]",
+              "[{\"translate\":\"item.blast_barrel.lore.2\",\"italic\":false,\"color\":\"white\"}]"
+            ],
+            "minecraft:entity_data": {
+              "id": "minecraft:marker",
+              "Tags": [
+                "BlastBarrelSpawn",
+                "barrel"
+              ]
+            },
+            "minecraft:enchantments": {
+              "levels": {},
+              "show_in_tooltip": false
+            },
+            "minecraft:attribute_modifiers": {
+              "modifiers": [],
+              "show_in_tooltip": false
+            },
+            "minecraft:can_break": {
+              "predciates": [],
+              "show_in_tooltip": false
+            },
+            "minecraft:can_place_on": {
+              "predciates": [],
+              "show_in_tooltip": false
+            },
+            "minecraft:hide_additional_tooltip": {},
+            "minecraft:dyed_color": {
+              "rgb": 0,
+              "show_in_tooltip": false
+            }
+          }
+        },
+        {
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b,CanPlaceOn:[\"\"]}",
           "conditions": [
             {
@@ -27,7 +66,7 @@
           ]
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_custom_data",
           "tag": "{Blank:1b}",
           "conditions": [
             {

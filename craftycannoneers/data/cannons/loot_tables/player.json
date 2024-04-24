@@ -10,11 +10,46 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{Unbreakable:1b,HideFlags:127,CustomModelData:56,Cannonball:7b,display:{Name:'[{\"translate\":\"cannonball.player\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"cannonball.player.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"cannonball.player.lore.2\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"translate\":\"cannonball.player.lore.3\",\"italic\":false,\"color\":\"aqua\"}]']}}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{Cannonball:7b}"
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:custom_model_data": 56,
+            "!minecraft:damage": {},
+            "minecraft:custom_name": "[{\"translate\":\"cannonball.player\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"cannonball.player.lore.1\",\"italic\":false,\"color\":\"white\"}]",
+              "[{\"translate\":\"cannonball.player.lore.2\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
+              "[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
+              "[{\"translate\":\"cannonball.player.lore.3\",\"italic\":false,\"color\":\"aqua\"}]"
+            ],
+            "minecraft:enchantments": {
+              "levels": {},
+              "show_in_tooltip": false
+            },
+            "minecraft:attribute_modifiers": {
+              "modifiers": [],
+              "show_in_tooltip": false
+            },
+            "minecraft:can_break": {
+              "predciates": [],
+              "show_in_tooltip": false
+            },
+            "minecraft:can_place_on": {
+              "predciates": [],
+              "show_in_tooltip": false
+            },
+            "minecraft:hide_additional_tooltip": {},
+            "minecraft:dyed_color": {
+              "rgb": 0,
+              "show_in_tooltip": false
+            }
+          }
+        },
+        {
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

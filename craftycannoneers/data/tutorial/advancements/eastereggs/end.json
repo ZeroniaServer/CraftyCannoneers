@@ -1,25 +1,25 @@
 {
-    "display": {
-        "title": {
-            "translate": "achievement.easter_egg",
-            "color": "aqua"
-        },
-        "description": {
-            "translate": "achievement.easter_egg.description",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:dragon_egg"
-        },
-        "frame": "goal",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
+  "display": {
+    "title": {
+      "translate": "achievement.easter_egg",
+      "color": "aqua"
     },
-    "criteria": {
-        "location": {
-            "trigger": "minecraft:impossible"
-        }
+    "description": {
+      "translate": "achievement.easter_egg.description",
+      "color": "white"
     },
-    "parent": "tutorial:eastereggs/rocketriders"
+    "icon": {
+      "id": "minecraft:dragon_egg"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "location": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "tutorial:eastereggs/rocketriders"
 }

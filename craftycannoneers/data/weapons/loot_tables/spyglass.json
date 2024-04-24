@@ -10,8 +10,28 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{HideFlags:7,NoDrop:1b,Enchantments:[{id:\"vanishing_curse\",lvl:1}],display:{Name:'[{\"translate\":\"item.spyglass\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.spyglass.lore.1\",\"italic\":false,\"color\":\"aqua\"}]','[{\"translate\":\"item.spyglass.lore.2\",\"italic\":false,\"color\":\"aqua\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]']}}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{NoDrop:1b}"
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:enchantments": {
+              "levels": {
+                "minecraft:vanishing_curse": 1
+              },
+              "show_in_tooltip": false
+            },
+            "minecraft:custom_name": "[{\"translate\":\"item.spyglass\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"item.spyglass.lore.1\",\"italic\":false,\"color\":\"aqua\"}]",
+              "[{\"translate\":\"item.spyglass.lore.2\",\"italic\":false,\"color\":\"aqua\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]"
+            ],
+            "minecraft:attribute_modifiers": {
+              "modifiers": [],
+              "show_in_tooltip": false
+            }
+          }
         }
       ]
     }

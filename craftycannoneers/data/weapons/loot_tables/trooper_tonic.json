@@ -10,11 +10,28 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{CustomPotionColor:6886656,custom_potion_effects:[{id:\"minecraft:dolphins_grace\",duration:160,amplifier:0},{id:\"minecraft:speed\",duration:200,amplifier:1}],display:{Name:'[{\"translate\":\"item.trooper_tonic\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:custom_name": "[{\"translate\":\"item.trooper_tonic\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:potion_contents": {
+              "custom_effects": [
+                {
+                  "id": "minecraft:dolphins_grace",
+                  "duration": 160,
+                  "amplifier": 0
+                },
+                {
+                  "id": "minecraft:speed",
+                  "duration": 200,
+                  "amplifier": 1
+                }
+              ],
+              "custom_color": 6886656
+            }
+          }
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

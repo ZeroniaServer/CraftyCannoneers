@@ -10,8 +10,10 @@
       "color": "white"
     },
     "icon": {
-      "item": "minecraft:diamond_hoe",
-      "nbt": "{CustomModelData:29}"
+      "id": "minecraft:diamond_hoe",
+      "components": {
+        "minecraft:custom_model_data": 29
+      }
     },
     "frame": "goal",
     "show_toast": true,

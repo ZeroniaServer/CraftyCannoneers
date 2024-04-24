@@ -2,6 +2,7 @@ execute unless score $gamestate CmdData matches 2.. run tellraw @a ["",{"transla
 execute if score $gamestate CmdData matches 2.. run tellraw @a ["",{"translate":"game.joined.late","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"game.joined.orange","color":"gold"}]}]
 execute if score $gamestate CmdData matches 2.. run tellraw @s ["",{"translate":"game.take_off","color":"aqua","italic":true,"with":[{"translate":"armor.hat.instruction","bold":true,"color":"gold"}]}]
 gamemode adventure @s
+attribute @s generic.safe_fall_distance base set 3
 team join Orange @s
 execute at @s run tp @s @s
 title @s clear

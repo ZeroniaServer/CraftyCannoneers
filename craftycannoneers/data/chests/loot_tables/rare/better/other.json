@@ -11,7 +11,6 @@
         {
           "type": "minecraft:loot_table",
           "weight": 5,
-          "name": "cannons:normal",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -21,12 +20,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "cannons:normal"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "cannons:copper",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -42,12 +41,12 @@
               "condition": "minecraft:weather_check",
               "raining": true
             }
-          ]
+          ],
+          "value": "cannons:copper"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "cannons:hot",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -57,12 +56,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "cannons:hot"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "cannons:cluster",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -72,12 +71,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "cannons:cluster"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "cannons:gas",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -87,12 +86,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "cannons:gas"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "cannons:chain",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -102,12 +101,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "cannons:chain"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "cannons:bouncy",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -117,12 +116,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "cannons:bouncy"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "cannons:player",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -132,12 +131,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "cannons:player"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 5,
-          "name": "weapons:golden_apple",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -147,12 +146,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "weapons:golden_apple"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 6,
-          "name": "weapons:bomb",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -162,12 +161,12 @@
                 "max": 3
               }
             }
-          ]
+          ],
+          "value": "weapons:bomb"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 7,
-          "name": "weapons:barrel",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -177,12 +176,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "weapons:barrel"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 4,
-          "name": "weapons:skeleton_key",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -192,12 +191,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "weapons:skeleton_key"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "weapons:shield",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -207,12 +206,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "weapons:shield"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "weapons:trooper_tonic",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -222,12 +221,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "weapons:trooper_tonic"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "weapons:mace",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -237,12 +236,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "weapons:mace"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "weapons:saber",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -252,12 +251,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "weapons:saber"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "weapons:battle_axe",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -267,12 +266,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "weapons:battle_axe"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "weapons:harpoon",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -283,8 +282,10 @@
               }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{Damage:250}",
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:damage": 250
+              },
               "conditions": [
                 {
                   "condition": "minecraft:entity_properties",
@@ -295,12 +296,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "value": "weapons:harpoon"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "weapons:raid_horn",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -310,12 +311,12 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "weapons:raid_horn"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 3,
-          "name": "weapons:crab_trap_empty",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -340,7 +341,8 @@
               },
               "range": 1
             }
-          ]
+          ],
+          "value": "weapons:crab_trap_empty"
         }
       ]
     }

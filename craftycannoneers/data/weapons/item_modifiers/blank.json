@@ -1,6 +1,6 @@
 [
-    {
-        "function": "minecraft:set_nbt",
-        "tag": "{Blank:1b}"
-    }
+  {
+    "function": "minecraft:set_custom_data",
+    "tag": "{Blank:1b}"
+  }
 ]
