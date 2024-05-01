@@ -29,9 +29,9 @@ execute at @s[scores={eyeclick=10,CmdData=1..5}] run playsound blastbarrelcharge
 scoreboard players set @s[scores={eyeclick=10,CmdData=1..5}] eyeclick 55
 
 #Fire models
-item replace entity @s[scores={eyeclick=2}] container.0 with mooshroom_spawn_egg{CustomModelData:12}
-item replace entity @s[scores={eyeclick=58}] container.0 with mooshroom_spawn_egg{CustomModelData:13}
-item replace entity @s[scores={eyeclick=60..95}] container.0 with mooshroom_spawn_egg{CustomModelData:14}
+item replace entity @s[scores={eyeclick=2}] container.0 with mooshroom_spawn_egg[custom_model_data=12]
+item replace entity @s[scores={eyeclick=58}] container.0 with mooshroom_spawn_egg[custom_model_data=13]
+item replace entity @s[scores={eyeclick=60..95}] container.0 with mooshroom_spawn_egg[custom_model_data=14]
 item replace entity @s[scores={eyeclick=95..}] container.0 with air
 
 #> Light blocks

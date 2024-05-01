@@ -43,7 +43,7 @@ execute if score @s CmdData matches 50.. run function game:modifiers/crabs/endsp
 execute on vehicle unless entity @e[type=item_display,tag=CrabTrap,limit=1,distance=..2] run tag @s remove justReleased
 
 #> Crab Rave
-execute if score $crabrave CmdData matches 1 run item replace entity @s container.0 with diamond_hoe{CustomModelData:119}
+execute if score $crabrave CmdData matches 1 run item replace entity @s container.0 with diamond_hoe[custom_model_data=119]
 execute if score $crabrave CmdData matches 1 at @s run particle note ~ ~0.2 ~ 0.2 0.2 0.2 0.1 1 force @a[team=!Lobby]
 execute if score $crabrave CmdData matches 1 on vehicle run effect give @s slowness 1 100 true
 execute if score $ravetime CmdData matches 100.. at @s run function game:modifiers/crabs/endrave

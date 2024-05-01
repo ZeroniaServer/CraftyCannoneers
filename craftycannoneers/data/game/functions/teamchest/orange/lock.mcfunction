@@ -1,4 +1,4 @@
-item replace entity @e[type=item_display,tag=orangechestdisplay,limit=1] container.0 with diamond_hoe{CustomModelData:53}
+item replace entity @e[type=item_display,tag=orangechestdisplay,limit=1] container.0 with diamond_hoe[custom_model_data=53]
 summon area_effect_cloud ~ ~0.85 ~ {Duration:2000000000,Tags:["ChestNotif","Orange","chestdisplay"],CustomNameVisible:1b,CustomName:'{"translate":"teamchest.locked","color":"dark_red","bold":true,"underlined":true}'}
 summon area_effect_cloud ~ ~0.6 ~ {Duration:2000000000,Tags:["ChestNotif","Orange","chestdisplay"],CustomNameVisible:1b,CustomName:'{"translate":"teamchest.locked.subtitle","color":"red","bold":true}'}
 playsound chestlock master @a ~ ~ ~ 1.3 1

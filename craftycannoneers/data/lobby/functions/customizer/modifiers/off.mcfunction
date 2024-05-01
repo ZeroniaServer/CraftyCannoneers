@@ -1,13 +1,13 @@
 item replace entity @e[type=item_display,tag=ModifierIcons] container.0 with air
 fill -53 -24 9 -55 -22 9 air
 
-item replace entity @e[type=item_display,tag=MapEntity,limit=1] container.0 with diamond_hoe{CustomModelData:76}
+item replace entity @e[type=item_display,tag=MapEntity,limit=1] container.0 with diamond_hoe[custom_model_data=76]
 
-item replace entity @e[type=item_display,tag=TimeIcon,limit=1] container.0 with diamond_hoe{CustomModelData:35}
-item replace entity @e[type=item_display,tag=HPIcon,limit=1] container.0 with diamond_hoe{CustomModelData:36}
-item replace entity @e[type=item_display,tag=ConfirmIcon,limit=1] container.0 with diamond_hoe{CustomModelData:37}
-item replace entity @e[type=item_display,tag=DefaultsIcon,limit=1] container.0 with diamond_hoe{CustomModelData:38}
-item replace entity @e[type=item_display,tag=ModiIcon,limit=1] container.0 with diamond_hoe{CustomModelData:83}
+item replace entity @e[type=item_display,tag=TimeIcon,limit=1] container.0 with diamond_hoe[custom_model_data=35]
+item replace entity @e[type=item_display,tag=HPIcon,limit=1] container.0 with diamond_hoe[custom_model_data=36]
+item replace entity @e[type=item_display,tag=ConfirmIcon,limit=1] container.0 with diamond_hoe[custom_model_data=37]
+item replace entity @e[type=item_display,tag=DefaultsIcon,limit=1] container.0 with diamond_hoe[custom_model_data=38]
+item replace entity @e[type=item_display,tag=ModiIcon,limit=1] container.0 with diamond_hoe[custom_model_data=83]
 
 fill -54 -24 9 -55 -23 9 air
 setblock -53 -24 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"red",messages:['{"text":"","clickEvent":{"action":"run_command","value":"trigger modisigns set 6497"}}','{"text":""}','{"text":""}','{"translate":"customizer.restore_default","color":"#FF0003"}']}}
