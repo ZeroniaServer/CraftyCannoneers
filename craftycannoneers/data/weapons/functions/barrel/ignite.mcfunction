@@ -1,5 +1,5 @@
 #> Break Empty Barrels
-execute unless score @s CmdData matches 1.. at @s run particle item{item:"mooshroom_spawn_egg",components:{"minecraft:custom_model_data":1}} ~ ~0.5 ~ 0.2 0.25 0.2 0.1 40 force @a[team=!Lobby]
+execute unless score @s CmdData matches 1.. at @s run particle item{item:{id:"mooshroom_spawn_egg",components:{"minecraft:custom_model_data":1}}} ~ ~0.5 ~ 0.2 0.25 0.2 0.1 40 force @a[team=!Lobby]
 execute unless score @s CmdData matches 1.. at @s run playsound blastbarrelbreak master @a[distance=..2] ~ ~ ~ 0.4 0.9
 execute unless score @s CmdData matches 1.. at @s run playsound blastbarrelbreak master @a[distance=2.0001..3] ~ ~ ~ 0.2 0.9
 execute unless score @s CmdData matches 1.. at @s run playsound blastbarrelbreak master @a[distance=3.0001..] ~ ~ ~ 0.1 0.9

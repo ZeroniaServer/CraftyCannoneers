@@ -1,4 +1,4 @@
-particle item{item:"mooshroom_spawn_egg",components:{"minecraft:custom_model_data":15}} ~ ~ ~ 0.4 0 0.4 0.1 5 force @a[team=!Lobby]
+particle item{item:{id:"mooshroom_spawn_egg",components:{"minecraft:custom_model_data":15}}} ~ ~ ~ 0.4 0 0.4 0.1 5 force @a[team=!Lobby]
 particle cloud ~ ~0.1 ~ 0.2 0.1 0.2 0.03 3 force @a[team=!Lobby]
 playsound crabtrapplace master @a ~ ~ ~ 1 1.2
 playsound crabtrapplace2 master @a ~ ~ ~ 0.6 1.2
