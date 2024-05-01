@@ -31,11 +31,11 @@
               "show_in_tooltip": false
             },
             "minecraft:can_break": {
-              "predciates": [],
+              "predicates": [],
               "show_in_tooltip": false
             },
             "minecraft:can_place_on": {
-              "predciates": [],
+              "predicates": [],
               "show_in_tooltip": false
             },
             "minecraft:hide_additional_tooltip": {},
