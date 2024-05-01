@@ -6,9 +6,9 @@ execute if score @s eyeclick matches 1 run playsound trainingdummy_hit2 master @
 execute if score @s eyeclick matches 1 run playsound trainingdummy_hit2 master @a ~ ~ ~ 1 2
 execute if score @s eyeclick matches 1 run item replace entity @s container.0 with air
 execute if score @s eyeclick matches 1 run particle cloud ~ ~ ~ 0 0 0 0.2 10
-execute if score @s eyeclick matches 1 run particle block oak_planks ~ ~1.3 ~ 0 0.3 0 0.1 50
-execute if score @s eyeclick matches 1 run particle block hay_block ^0.2 ^1 ^ 0 0.1 0 0.1 20
-execute if score @s eyeclick matches 1 run particle block hay_block ^-0.2 ^1 ^ 0 0.1 0 0.1 20
+execute if score @s eyeclick matches 1 run particle block{block_state:"oak_planks"} ~ ~1.3 ~ 0 0.3 0 0.1 50
+execute if score @s eyeclick matches 1 run particle block{block_state:"hay_block"} ^0.2 ^1 ^ 0 0.1 0 0.1 20
+execute if score @s eyeclick matches 1 run particle block{block_state:"hay_block"} ^-0.2 ^1 ^ 0 0.1 0 0.1 20
 execute if score @s[tag=45] eyeclick matches 2 run summon marker ~ ~ ~ {Tags:["DummyRespawn","TrainingDummy","45"]}
 execute if score @s[tag=90] eyeclick matches 2 run summon marker ~ ~ ~ {Tags:["DummyRespawn","TrainingDummy","90"]}
 execute if score @s[tag=135] eyeclick matches 2 run summon marker ~ ~ ~ {Tags:["DummyRespawn","TrainingDummy","135"]}

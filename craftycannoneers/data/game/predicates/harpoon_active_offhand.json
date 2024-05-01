@@ -1,19 +1,17 @@
 {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "equipment": {
-      "mainhand": {
-        "tag": "game:noninteractable"
-      },
-      "offhand": {
-        "items": [
-          "minecraft:trident"
-        ],
-        "components": {
-          "minecraft:custom_data": "{Harpoon:2}"
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "mainhand": {
+                "items": "#game:noninteractable"
+            },
+            "offhand": {
+                "items": "minecraft:trident",
+                "predicates": {
+                    "minecraft:custom_data": "{Harpoon:2}"
+                }
+            }
         }
-      }
     }
-  }
 }

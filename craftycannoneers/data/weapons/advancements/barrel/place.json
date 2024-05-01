@@ -1,7 +1,7 @@
 {
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:item_used_on_block",
+      "trigger": "minecraft:any_block_use",
       "conditions": {
         "player": [
           {
@@ -19,10 +19,8 @@
           {
             "condition": "minecraft:match_tool",
             "predicate": {
-              "items": [
-                "minecraft:mooshroom_spawn_egg"
-              ],
-              "components": {
+              "items": "minecraft:mooshroom_spawn_egg",
+              "predicates": {
                 "minecraft:custom_data": "{Barrel:1b}"
               }
             }

@@ -1,5 +1,5 @@
 #> Dust particles
-execute positioned -54.5 -25 8 unless entity @a[distance=..4] run particle dust 0 1 1 1 -53.6 -22.2 9.8 0.8 0.8 0 0 2 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
+execute positioned -54.5 -25 8 unless entity @a[distance=..4] run particle dust{color:[0.0,1.0,1.0],scale:1.0} -53.6 -22.2 9.8 0.8 0.8 0 0 2 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
 
 #> Range
 execute positioned -54.5 -25 8 run tag @a[distance=..4] add NearModboard

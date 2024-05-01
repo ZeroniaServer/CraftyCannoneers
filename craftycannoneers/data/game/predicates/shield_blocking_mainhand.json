@@ -1,16 +1,14 @@
 {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "equipment": {
-      "mainhand": {
-        "items": [
-          "minecraft:shield"
-        ],
-        "components": {
-          "minecraft:custom_data": "{Blocking:1}"
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "mainhand": {
+                "items": "minecraft:shield",
+                "predicates": {
+                    "minecraft:custom_data": "{Blocking:1}"
+                }
+            }
         }
-      }
     }
-  }
 }

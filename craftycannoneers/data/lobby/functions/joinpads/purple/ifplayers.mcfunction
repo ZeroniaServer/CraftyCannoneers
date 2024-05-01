@@ -1,5 +1,5 @@
 #> Dust particles
-execute unless score $InPurple CmdData > $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData run particle falling_dust purple_concrete ~ ~1 ~ 0.7 0.3 0.7 0 1 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
+execute unless score $InPurple CmdData > $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData run particle falling_dust{block_state:"purple_concrete"} ~ ~1 ~ 0.7 0.3 0.7 0 1 normal @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds]
 
 #> Join team
 execute unless score $InPurple CmdData > $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData run tag @a[team=Lobby,limit=1,sort=random,distance=..1.2] add JoinPurple

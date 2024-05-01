@@ -1,7 +1,7 @@
 playsound blastbarrelplace master @a[distance=..2] ~ ~ ~ 0.4 1
 playsound blastbarrelplace master @a[distance=2.0001..3] ~ ~ ~ 0.2 1
 playsound blastbarrelplace master @a[distance=3.0001..] ~ ~ ~ 0.1 1
-particle item mooshroom_spawn_egg{CustomModelData:1} ~ ~ ~ 0.4 0 0.4 0.1 5 force @a[team=!Lobby]
+particle item{item:"mooshroom_spawn_egg",components:{"minecraft:custom_model_data":1}} ~ ~ ~ 0.4 0 0.4 0.1 5 force @a[team=!Lobby]
 particle cloud ~ ~0.1 ~ 0.2 0.1 0.2 0.03 3 force @a[team=!Lobby]
 summon bat ~ ~-0.01 ~ {NoAI:1b,Silent:1b,NoGravity:1b,Tags:["BlastBarrel"],PersistenceRequired:1b,DeathTime:17s,active_effects:[{id:"minecraft:instant_health",amplifier:10b,duration:-1,show_particles:0b},{id:"minecraft:resistance",amplifier:127b,duration:-1,show_particles:0b},{id:"minecraft:health_boost",amplifier:127b,duration:-1,show_particles:0b}]}
 team join NoName @e[type=bat,tag=BlastBarrel,limit=1,sort=nearest]

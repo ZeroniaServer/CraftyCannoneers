@@ -1,25 +1,20 @@
 {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "equipment": {
-      "mainhand": {
-        "tag": "game:noninteractable"
-      },
-      "offhand": {
-        "items": [
-          "minecraft:mooshroom_spawn_egg"
-        ],
-        "components": {
-          "minecraft:entity_data": {
-            "data": {
-              "durability": 5
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "mainhand": {
+                "items": "#game:noninteractable"
             },
-            "id": "UNKNOWN_ENTITY"
-          },
-          "minecraft:custom_data": "{CrabTrap:1b}"
+            "offhand": {
+                "items": "minecraft:mooshroom_spawn_egg",
+                "predicates": {
+                    "minecraft:damage": {
+                        "durability": 5
+                    }
+                },
+                "minecraft:custom_data": "{CrabTrap:1b}"
+            }
         }
-      }
     }
-  }
 }
