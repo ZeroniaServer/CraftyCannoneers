@@ -1,5 +1,5 @@
 #> Check if this inventory partition contains red Tracer Cannonball
-data modify storage craftycannoneers:inventory Items append from block 0 300 0 Items[{id:"minecraft:diamond_hoe",tag:{CustomModelData:91}}]
+data modify storage craftycannoneers:inventory Items append from block 0 300 0 Items[{id:"minecraft:diamond_hoe",components:{"custom_model_data":91}}]
 
 execute store success score $foundtracer CmdData if data storage craftycannoneers:inventory Items[0]
 

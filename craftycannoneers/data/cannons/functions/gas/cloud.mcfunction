@@ -3,7 +3,7 @@ execute at @s[tag=GasIgnite] at @s run function cannons:firering/ignitecloud
 scoreboard players add @s CmdData 1
 
 execute at @s[scores={CmdData=1}] run playsound gas master @a ~ ~ ~ 1 0.8
-execute at @s[scores={CmdData=1}] run summon item_display ~ ~ ~ {Tags:["gascloud"],Passengers:[{id:"item_display",Tags:["gascloud","GasDisplay"],item:{id:"minecraft:diamond_hoe",Count:1b,tag:{CustomModelData:33}},item_display:"head",transformation:{translation:[0f,-1f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},width:3f,height:3f,brightness:{sky:10,block:12}}]}
+execute at @s[scores={CmdData=1}] run summon item_display ~ ~ ~ {Tags:["gascloud"],Passengers:[{id:"item_display",Tags:["gascloud","GasDisplay"],item:{id:"minecraft:diamond_hoe",Count:1b,components:{"custom_model_data":33}},item_display:"head",transformation:{translation:[0f,-1f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},width:3f,height:3f,brightness:{sky:10,block:12}}]}
 execute at @s[scores={CmdData=1}] run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b,DeathTime:17s,DeathLootTable:"minecraft:empty",active_effects:[{id:"minecraft:invisibility",duration:-1,amplifier:0,show_particles:false}]}
 execute at @s[scores={CmdData=1}] run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b,DeathTime:17s,DeathLootTable:"minecraft:empty",active_effects:[{id:"minecraft:invisibility",duration:-1,amplifier:0,show_particles:false}]}
 execute at @s[scores={CmdData=1}] run summon bat ~ ~2 ~ {Tags:["GasBat"],Silent:1b,Invulnerable:1b,DeathTime:17s,DeathLootTable:"minecraft:empty",active_effects:[{id:"minecraft:invisibility",duration:-1,amplifier:0,show_particles:false}]}

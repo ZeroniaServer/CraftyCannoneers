@@ -2,7 +2,7 @@ forceload add -427 -25 -452 -85
 
 #> New Settings Map display entities
 kill @e[type=glow_item_frame,tag=MapEntity]
-execute unless entity @e[type=item_display,tag=MapEntity,limit=1] run summon item_display -53.5 -22.5 10.03125 {Tags:["MapEntity"],brightness:{block:13,sky:0},item:{id:"diamond_hoe",tag:{CustomModelData:76},Count:1b},item_display:"fixed",transformation:{translation:[0.0f,0.0f,-0.03f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.5f,0.5f,0.5f],left_rotation:[0.0f,0.0f,0.0f,1.0f]}}
+execute unless entity @e[type=item_display,tag=MapEntity,limit=1] run summon item_display -53.5 -22.5 10.03125 {Tags:["MapEntity"],brightness:{block:13,sky:0},item:{id:"diamond_hoe",components:{"custom_model_data":76},Count:1b},item_display:"fixed",transformation:{translation:[0.0f,0.0f,-0.03f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.5f,0.5f,0.5f],left_rotation:[0.0f,0.0f,0.0f,1.0f]}}
 
 kill @e[type=armor_stand,tag=LobbyEntity]
 
