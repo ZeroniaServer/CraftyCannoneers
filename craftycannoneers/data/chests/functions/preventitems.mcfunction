@@ -3,12 +3,12 @@ data modify storage craftycannoneers:chest Inventory set from entity @s Items
 execute if data storage craftycannoneers:chest Inventory[{id:"minecraft:iron_sword"}] as @a[nbt=!{Inventory:[{id:"minecraft:iron_sword"}]},distance=..6] run function chests:checkitems
 execute if data storage craftycannoneers:chest Inventory[{id:"minecraft:crossbow"}] as @a[nbt=!{Inventory:[{id:"minecraft:crossbow"}]},distance=..6] run function chests:checkitems
 execute if data storage craftycannoneers:chest Inventory[{id:"minecraft:spyglass"}] as @a[nbt=!{Inventory:[{id:"minecraft:spyglass"}]},distance=..6] run function chests:checkitems
-execute if data storage craftycannoneers:chest Inventory[{id:"minecraft:diamond_hoe",tag:{Cannonball:8b}}] as @a[nbt=!{Inventory:[{id:"minecraft:diamond_hoe",components:{"minecraft:custom_data":{Cannonball:8b}}}]},distance=..6] run function chests:checkitems
+execute if data storage craftycannoneers:chest Inventory[{id:"minecraft:diamond_hoe",components:{"minecraft:custom_data":{Cannonball:8b}}}] as @a[nbt=!{Inventory:[{id:"minecraft:diamond_hoe",components:{"minecraft:custom_data":{Cannonball:8b}}}]},distance=..6] run function chests:checkitems
 
 data remove storage craftycannoneers:chest Inventory[{id:"minecraft:iron_sword"}]
 data remove storage craftycannoneers:chest Inventory[{id:"minecraft:crossbow"}]
 data remove storage craftycannoneers:chest Inventory[{id:"minecraft:spyglass"}]
-data remove storage craftycannoneers:chest Inventory[{id:"minecraft:diamond_hoe",tag:{Cannonball:8b}}]
+data remove storage craftycannoneers:chest Inventory[{id:"minecraft:diamond_hoe",components:{"minecraft:custom_data":{Cannonball:8b}}}]
 
 #> Count crab traps
 execute if score $Wildlife CmdData matches 1 run scoreboard players operation $prev hasCrabTraps = @s hasCrabTraps

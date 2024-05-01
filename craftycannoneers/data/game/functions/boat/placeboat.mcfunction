@@ -1,7 +1,7 @@
 #> Place Boat
 $summon boat ~ ~ ~ {Rotation:[$(angle)f,0.0f],Invulnerable:1b,Tags:["Boat","BoatBoat","new","Rotate"],Passengers:[{id:"minecraft:interaction",Tags:["boatoccupant","new"],width:0,height:0,response:1b}]}
 
-$execute as @e[type=boat,tag=new] at @s anchored feet rotated ~ 0 run summon item_display ^ ^0.1875 ^-0.6 {Rotation:[$(angle)f,0.0f],Tags:["Boat","BoatBanner","new","Rotate"],teleport_duration:3,width:1f,height:2f,item:{id:"minecraft:black_banner",count:1,tag:{BlockEntityTag:{Patterns:[{Pattern:sku,Color:0}]}}},item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]}}
+$execute as @e[type=boat,tag=new] at @s anchored feet rotated ~ 0 run summon item_display ^ ^0.1875 ^-0.6 {Rotation:[$(angle)f,0.0f],Tags:["Boat","BoatBanner","new","Rotate"],teleport_duration:3,width:1f,height:2f,item:{id:"minecraft:black_banner",count:1,components:{"minecraft:banner_patterns":[{pattern:"minecraft:skull",color:"white"}]}},item_display:"head",transformation:{translation:[0.0f,1.6875f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.625f,0.625f,0.625f],left_rotation:[0.0f,0.0f,0.0f,1.0f]}}
 
 $execute if score $BoatCannons CmdData matches 1 as @e[type=boat,tag=new] at @s anchored feet rotated ~ 0 run summon item_display ^ ^0.1875 ^-0.6 {Rotation:[$(angle)f,0.0f],Tags:["BoatCannonDisplay","BoatCannonCart","new"],item_display:"head",item:{id:"minecraft:diamond_hoe",count:1,components:{"custom_model_data":133}},teleport_duration:3,transformation:{translation:[0.0f,2.375f,0.425f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.4645f,0.4645f,0.4645f],left_rotation:[0.0f,0.0f,0.0f,1.0f]}}
 
