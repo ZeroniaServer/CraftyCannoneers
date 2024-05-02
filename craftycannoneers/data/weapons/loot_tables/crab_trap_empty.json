@@ -11,7 +11,7 @@
             "functions": [
                 {
                     "function": "minecraft:set_custom_data",
-                    "tag": "{Empty:1b,CanPlaceOn:[\"#game:barrel_placeable\"],CrabTrap:1b}"
+                    "tag": "{Empty:1b,CrabTrap:1b}"
                 },
                 {
                     "function": "minecraft:set_components",

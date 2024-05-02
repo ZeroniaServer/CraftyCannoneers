@@ -13,11 +13,7 @@
           "function": "minecraft:set_components",
           "components": {
             "!minecraft:damage": {},
-            "minecraft:custom_name": "[{\"translate\":\"item.saber\",\"italic\":false,\"color\":\"dark_aqua\"}]",
-            "minecraft:enchantments": {
-              "levels": {},
-              "show_in_tooltip": false
-            }
+            "minecraft:custom_name": "[{\"translate\":\"item.saber\",\"italic\":false,\"color\":\"dark_aqua\"}]"
           }
         },
         {

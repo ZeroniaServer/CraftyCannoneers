@@ -1,4 +1,4 @@
-execute store result score $temp crabs run data get entity @s Item.Count
+execute store result score $temp crabs run data get entity @s Item.count
 scoreboard players operation $curr crabs += $temp crabs
 scoreboard players reset $temp crabs
 execute if entity @s[tag=!ctrap] on origin run function game:invcount

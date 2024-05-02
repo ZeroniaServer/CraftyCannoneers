@@ -2,7 +2,7 @@
   "display": {
     "title": {
       "translate": "tutorial.training_island",
-      "color": "green"
+      "color": "dark_green"
     },
     "description": {
       "translate": "achievement.training_island.description",

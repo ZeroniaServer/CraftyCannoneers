@@ -24,6 +24,7 @@
               "show_in_tooltip": false
             },
             "!minecraft:damage": {},
+            "!minecraft:charged_projectiles": {},
             "minecraft:custom_name": "[{\"translate\":\"item.crossbow\",\"italic\":false,\"color\":\"dark_aqua\"}]",
             "minecraft:attribute_modifiers": {
               "modifiers": [],

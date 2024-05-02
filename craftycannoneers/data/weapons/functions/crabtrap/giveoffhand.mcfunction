@@ -10,7 +10,7 @@ execute as @e[type=marker,tag=CrabTrapSpawn,tag=current,limit=1] run loot replac
 item modify entity @s[tag=emptyOffhand] weapon.offhand weapons:blank
 
 #> If offhand has empty crab trap (under a stack), give 2 more and then restore the original stack amount to prevent animation
-execute store result score @s hasCrabTraps run data get entity @s Inventory[{Slot:-106b}].Count
+execute store result score @s hasCrabTraps run data get entity @s Inventory[{Slot:-106b}].count
 item modify entity @s[tag=stackOffhand,tag=!fullStackOffhand] weapon.offhand weapons:add_two
 scoreboard players add @s[tag=stackOffhand,tag=!fullStackOffhand] hasCrabTraps 1
 loot replace entity @s[tag=stackOffhand,tag=!fullStackOffhand] weapon.offhand loot weapons:crab_trap_return

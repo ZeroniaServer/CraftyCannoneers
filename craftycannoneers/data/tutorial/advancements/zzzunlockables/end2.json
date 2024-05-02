@@ -2,7 +2,7 @@
   "display": {
     "title": {
       "translate": "achievement.bonus_goals",
-      "color": "aqua"
+      "color": "dark_aqua"
     },
     "description": {
       "translate": "achievement.bonus_goals.description",

@@ -35,19 +35,6 @@
             "minecraft:attribute_modifiers": {
               "modifiers": [],
               "show_in_tooltip": false
-            },
-            "minecraft:can_break": {
-              "predicates": [],
-              "show_in_tooltip": false
-            },
-            "minecraft:can_place_on": {
-              "predicates": [],
-              "show_in_tooltip": false
-            },
-            "minecraft:hide_additional_tooltip": {},
-            "minecraft:dyed_color": {
-              "rgb": 0,
-              "show_in_tooltip": false
             }
           }
         },

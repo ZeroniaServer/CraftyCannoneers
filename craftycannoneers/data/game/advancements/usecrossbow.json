@@ -1,14 +1,7 @@
 {
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:using_item",
-      "conditions": {
-        "item": {
-          "items": [
-            "minecraft:crossbow"
-          ]
-        }
-      }
+        "trigger": "minecraft:shot_crossbow"
     }
   },
   "rewards": {
