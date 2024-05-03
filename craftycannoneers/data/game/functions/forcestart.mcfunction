@@ -87,5 +87,9 @@ execute if score $LostCargo CmdData matches 1 run function game:modifiers/lostca
 execute if score $LostCargo CmdData matches 1 run scoreboard players set $CargoTime CmdData 0
 execute if score $LostCargo CmdData matches 1 run scoreboard players set $SpawnCargo CmdData 1
 
+#> Shot cancelation on start
+execute as @a[team=Purple,limit=1,sort=random] run function game:shotprevention
+execute as @a[team=Orange,limit=1,sort=random] run function game:shotprevention
+
 #> Disable match canceling
 function lobby:customizer/cancel/reset
