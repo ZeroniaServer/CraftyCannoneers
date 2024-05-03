@@ -14,6 +14,9 @@ execute unless score $PurpleWPDelay CmdData matches 1.. as @e[type=slime,tag=Wea
 #> Disable readyup trigger
 execute as @a run trigger readyup set 0
 
+#> Shoot prevention
+function game:shotpreventiontimer
+
 #> Ingame timer
 execute unless score $TimeLimit CmdData matches 42069.. run function game:ingame/timer
 
