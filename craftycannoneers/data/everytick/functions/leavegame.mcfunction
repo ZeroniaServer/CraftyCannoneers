@@ -1,6 +1,3 @@
-tag @s[scores={LeftGame=1..}] remove KillMVP
-tag @s[scores={LeftGame=1..}] remove DeathMVP
-tag @s[scores={LeftGame=1..}] remove CannonMVP
 tag @s[scores={LeftGame=1..}] add LeaveGame
 
 #Join reset

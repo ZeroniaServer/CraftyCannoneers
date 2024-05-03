@@ -1,3 +1,8 @@
+#Remove MVP status if you have an invalid Game ID
+execute unless score @s GameID = $current GameID run tag @s remove KillMVP
+execute unless score @s GameID = $current GameID run tag @s remove DeathMVP
+execute unless score @s GameID = $current GameID run tag @s remove CannonMVP
+
 #Regular
 item replace entity @s[team=Lobby] armor.head with diamond_hoe[unbreakable={show_in_tooltip:0b},enchantments={levels:{binding_curse:1,vanishing_curse:1},show_in_tooltip:0b},custom_name='[{"translate":"armor.hat","italic":false,"color":"white"}]',lore=['[{"text":"","italic":false}]','[{"translate":"ahoy","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]'],custom_model_data=39,attribute_modifiers={show_in_tooltip:0b,modifiers:[]}]
 

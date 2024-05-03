@@ -13,5 +13,6 @@ execute at @s run playsound joingame master @a ~ ~ ~ 1 1
 tag @s add loaded
 execute unless score $gamestate CmdData matches 2.. run function game:givelobbygear
 execute if score $gamestate CmdData matches 2.. run function game:givegear
+execute if score $gamestate CmdData matches 2.. run scoreboard players operation @s GameID = $current GameID
 tag @s remove JoinOrange
 execute unless score $gamestate CmdData matches 2.. unless score $mcancel CmdData matches -1 run function lobby:customizer/cancel/reset
