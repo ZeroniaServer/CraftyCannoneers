@@ -12,7 +12,7 @@
         {
           "function": "minecraft:set_components",
           "components": {
-            "minecraft:damage": 240,
+            "minecraft:max_damage": 10,
             "minecraft:attribute_modifiers": {
               "modifiers": [
                 {
