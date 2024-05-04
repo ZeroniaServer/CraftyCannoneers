@@ -6,7 +6,9 @@ execute if entity @s[predicate=weapons:crab_trap_mainhand_64] run tag @s add ful
 #> If mainhand is empty, replace with 1 crab trap and use blank NBT to prevent animation
 tag @s add self
 execute if entity @s[tag=emptyMainhand] run scoreboard players set @e[type=marker,tag=CrabTrapSpawn,tag=current,limit=1] spawnPlaceable 0
-execute as @e[type=marker,tag=CrabTrapSpawn,tag=current,limit=1] run loot replace entity @a[tag=self,tag=emptyMainhand,limit=1] weapon.mainhand loot weapons:crab_trap_giveback
+execute store result storage craftycannoneers:crabtrap durability int 1 run scoreboard players get @s TrapDurability
+data modify storage craftycannoneers:crabtrap function set value "replace entity @a[tag=self,tag=emptyMainhand,limit=1] weapon.mainhand"
+execute as @e[type=marker,tag=CrabTrapSpawn,tag=current,limit=1] run function weapons:crabtrap/givewithdura with storage craftycannoneers:crabtrap
 item modify entity @s[tag=emptyMainhand] weapon.mainhand weapons:blank
 
 #> If mainhand has empty crab trap (under a stack), give 2 more and then restore the original stack amount to prevent animation

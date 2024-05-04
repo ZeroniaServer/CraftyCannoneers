@@ -32,7 +32,12 @@
                             "data": {
                                 "durability": 5
                             }
-                        },
+                        }
+                    }
+                },
+                {
+                    "function": "minecraft:set_components",
+                    "components": {
                         "minecraft:can_place_on": {
                             "predicates": [
                                 {
@@ -40,9 +45,21 @@
                                 }
                             ],
                             "show_in_tooltip": false
-                        },
-                        "minecraft:max_damage": 5
-                    }
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "condition": "minecraft:inverted",
+                            "term": {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "type": "minecraft:player",
+                                    "team": "Lobby"
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "function": "minecraft:set_custom_data",
@@ -69,21 +86,6 @@
                                 "scores": {
                                     "spawnPlaceable": 0
                                 }
-                            }
-                        }
-                    ]
-                },
-                {
-                    "function": "minecraft:set_components",
-                    "components": {
-                        "!minecraft:can_place_on": {}
-                    },
-                    "conditions": [
-                        {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "team": "Lobby"
                             }
                         }
                     ]

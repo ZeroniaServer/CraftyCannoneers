@@ -1,5 +1,3 @@
-execute if score @s TrapDurability matches 5 run scoreboard players add $counter TrapDurability 1
-execute if score @s TrapDurability matches 5 store result entity @s item.tag.id int 1 run scoreboard players get $counter TrapDurability
 scoreboard players remove @s TrapDurability 1
 tag @s remove Empty
 
