@@ -27,7 +27,7 @@ execute at @s[tag=!CannonballShot,tag=!playeracc,tag=!clusteracc,tag=!chainacc,t
 execute at @s run function cannons:cannonballrotation
 execute at @s[tag=!CannonballShot,tag=!PlayerCannonball] run function cannons:cannonballtick
 execute at @s[tag=!CannonballShot,tag=PlayerCannonball] run function cannons:playercannonballtick
-execute at @s[tag=CannonballShot] run function cannons:drag
+execute at @s[tag=CannonballShot,predicate=!game:inwater] run function cannons:drag
 execute at @s[tag=BouncyCannonball,tag=Hit1] if entity @a[team=!Lobby,team=!Spectator,distance=..20] run function cannons:bounce/bouncedrag
 execute store result entity @s Air double 1 run scoreboard players get $toggle CmdData
 
