@@ -1,7 +1,7 @@
 {
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:any_block_use",
+      "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "player": [
           {
