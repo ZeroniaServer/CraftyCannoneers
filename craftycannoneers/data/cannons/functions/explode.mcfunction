@@ -134,7 +134,7 @@ execute at @s[tag=CopperCannonball,tag=!StrikeLightning] run particle lava ~ ~ ~
 tag @s add Hit1
 tag @s[tag=!CannonballCluster,tag=!BouncyCannonball,tag=!GasCannonball,tag=!PlayerCannonball,tag=!CopperCannonball,predicate=cannons:safezones/island] add Hit2
 tp @s[tag=CopperCannonball] @s
-data merge entity @s[tag=CopperCannonball] {Motion:[0.0d,0.0d,0.0d]}
+data merge entity @s[tag=CopperCannonball,predicate=!game:inwater] {Motion:[0.0d,0.0d,0.0d]}
 scoreboard players reset @s[tag=CopperCannonball] drag
 scoreboard players reset @s[tag=CopperCannonball] gravity
 tag @s[tag=CopperCannonball] add StrikeLightning
