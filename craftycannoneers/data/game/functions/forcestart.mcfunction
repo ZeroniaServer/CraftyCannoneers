@@ -98,3 +98,6 @@ function lobby:customizer/cancel/reset
 execute store result score $current GameID run random value 0..2147483646
 scoreboard players operation @a[team=Purple] GameID = $current GameID
 scoreboard players operation @a[team=Orange] GameID = $current GameID
+
+#> Fix Cannon interactions
+execute as @e[type=interaction,tag=cannon,tag=!Tutorial] run data modify entity @s response set value 1b
