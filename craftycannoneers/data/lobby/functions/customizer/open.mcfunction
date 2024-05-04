@@ -39,7 +39,7 @@ execute as @e[type=interaction,tag=SettingsInteraction,tag=!ModiOn,tag=!CancelMa
 function lobby:customizer/cancel/disable
 
 execute if score $mcancel CmdData matches 1 if entity @s[type=player] run tellraw @a {"translate":"chat.canceled_match","color":"red","with":[{"selector":"@s","color":"#ff8585","bold":true}]}
-execute if score $mcancel CmdData matches 1 if entity @s[type=player] run tellraw @a ["\n",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.1","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
+execute if score $mcancel CmdData matches 1 if entity @s[type=player] run tellraw @a ["\n",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.2","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
 execute if score $mcancel CmdData matches 1 run return 1
 
 execute as @e[type=hopper_minecart,tag=chest] run data remove entity @s Items
