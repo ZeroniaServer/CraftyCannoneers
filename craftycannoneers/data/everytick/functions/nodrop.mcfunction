@@ -1,6 +1,5 @@
 ##Processes individual items for the purpose of preventing item dropping
 ##Thanks to Cloud Wolf for the tip!
-execute if items entity @s contents diamond_hoe[custom_model_data=91] run kill
 execute if items entity @s contents diamond_hoe[custom_model_data=18] run kill
 execute if items entity @s contents diamond_hoe[custom_model_data=17] run kill
 data modify entity @s[tag=!processed] Owner set from entity @s Thrower

@@ -18,7 +18,8 @@ loot replace entity @s hotbar.2 loot weapons:spyglass
 
 execute if score $NoTracers CmdData matches 1 run loot replace entity @s hotbar.8 loot weapons:arrows
 execute unless score $NoTracers CmdData matches 1 run loot replace entity @s hotbar.7 loot weapons:arrows
-execute unless score $NoTracers CmdData matches 1 run loot replace entity @s hotbar.8 loot cannons:tracer
+execute unless score $NoTracers CmdData matches 1 run loot replace entity @s[tag=!redTracer] hotbar.8 loot cannons:tracer
+execute unless score $NoTracers CmdData matches 1 run loot replace entity @s[tag=redTracer] hotbar.8 loot cannons:tracer_red
 
 effect give @s instant_health 1 100 true
 effect give @s resistance 6 100 true
