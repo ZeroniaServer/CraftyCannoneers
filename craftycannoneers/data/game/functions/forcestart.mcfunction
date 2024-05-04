@@ -95,6 +95,6 @@ execute as @a[team=Orange,limit=1,sort=random] run function game:shotprevention
 function lobby:customizer/cancel/reset
 
 #> Set GameID
-execute store result score $current GameID run random roll 0..2147483646
+execute store result score $current GameID run random value 0..2147483646
 scoreboard players operation @a[team=Purple] GameID = $current GameID
 scoreboard players operation @a[team=Orange] GameID = $current GameID

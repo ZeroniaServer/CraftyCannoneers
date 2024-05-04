@@ -1,0 +1,75 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "weapon.*": {
+                        "items": "minecraft:stone_axe",
+                        "predicates": {
+                            "minecraft:custom_data": "{Knockback:1}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "hotbar.*": {
+                        "items": "minecraft:stone_axe",
+                        "predicates": {
+                            "minecraft:custom_data": "{Knockback:1}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "inventory.*": {
+                        "items": "minecraft:stone_axe",
+                        "predicates": {
+                            "minecraft:custom_data": "{Knockback:1}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "player.crafting.*": {
+                        "items": "minecraft:stone_axe",
+                        "predicates": {
+                            "minecraft:custom_data": "{Knockback:1}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "player.cursor": {
+                        "items": "minecraft:stone_axe",
+                        "predicates": {
+                            "minecraft:custom_data": "{Knockback:1}"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

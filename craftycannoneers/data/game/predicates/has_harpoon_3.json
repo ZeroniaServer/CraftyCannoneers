@@ -1,0 +1,75 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "weapon.*": {
+                        "items": "minecraft:trident",
+                        "predicates": {
+                            "minecraft:custom_data": "{Harpoon:3}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "hotbar.*": {
+                        "items": "minecraft:trident",
+                        "predicates": {
+                            "minecraft:custom_data": "{Harpoon:3}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "inventory.*": {
+                        "items": "minecraft:trident",
+                        "predicates": {
+                            "minecraft:custom_data": "{Harpoon:3}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "player.crafting.*": {
+                        "items": "minecraft:trident",
+                        "predicates": {
+                            "minecraft:custom_data": "{Harpoon:3}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "player.cursor": {
+                        "items": "minecraft:trident",
+                        "predicates": {
+                            "minecraft:custom_data": "{Harpoon:3}"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

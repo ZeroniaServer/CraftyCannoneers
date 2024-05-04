@@ -1,0 +1,60 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "weapon.*": {
+                        "items": "minecraft:iron_sword"
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "hotbar.*": {
+                        "items": "minecraft:iron_sword"
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "inventory.*": {
+                        "items": "minecraft:iron_sword"
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "player.crafting.*": {
+                        "items": "minecraft:iron_sword"
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "player.cursor": {
+                        "items": "minecraft:iron_sword"
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -58,7 +58,7 @@ execute on vehicle run scoreboard players reset @s[tag=!CrabtrapImmune,scores={e
 
 #> Crab tracking
 scoreboard players add $curr crabs 1
-execute on passengers if data entity @s {item:{tag:{CrabTrap:1b,Empty:0b}}} run scoreboard players add $curr crabs 1
+execute on passengers if items entity @s contents mooshroom_spawn_egg[custom_data~{CrabTrap:1b,Empty:0b}] run scoreboard players add $curr crabs 1
 
 #> Vehicle permababy
 execute on vehicle run function everytick:permababy

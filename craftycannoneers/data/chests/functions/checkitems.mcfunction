@@ -1,5 +1,6 @@
-execute unless entity @s[nbt={Inventory:[{id:"minecraft:iron_sword"}]}] run loot give @s loot weapons:cutlass
-execute if entity @s[tag=loaded] unless entity @s[nbt={Inventory:[{id:"minecraft:crossbow"}]}] run loot give @s loot weapons:crossbow_loaded
-execute unless entity @s[tag=loaded] unless entity @s[nbt={Inventory:[{id:"minecraft:crossbow"}]}] run loot give @s loot weapons:crossbow
-execute unless entity @s[nbt={Inventory:[{id:"minecraft:spyglass"}]}] run loot give @s loot weapons:spyglass
-execute unless entity @s[nbt={Inventory:[{id:"minecraft:diamond_hoe",components:{"minecraft:custom_data":{Cannonball:8b}}}]}] unless score $NoTracers CmdData matches 1 run loot give @s loot cannons:tracer
+loot give @s[predicate=!chests:has_cutlass] loot weapons:cutlass
+loot give @s[tag=loaded,predicate=!chests:has_crossbow] loot weapons:crossbow_loaded
+loot give @s[tag=!loaded,predicate=!chests:has_crossbow] loot weapons:crossbow
+loot give @s[predicate=!chests:has_spyglass] loot weapons:spyglass
+# TODO red tracer support
+execute unless score $NoTracers CmdData matches 1 run loot give @s[predicate=!chests:has_tracer] loot cannons:tracer

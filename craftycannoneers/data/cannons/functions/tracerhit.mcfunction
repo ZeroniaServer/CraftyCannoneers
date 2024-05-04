@@ -18,8 +18,8 @@ execute if entity @s[tag=boatshot] run particle block_marker{block_state:"green_
 execute if entity @s[tag=boatshot] run particle block_marker{block_state:"green_concrete"} ^ ^ ^1 0 0 0 0 1 force @a[tag=CurrentTracer2]
 
 tag @a[tag=CurrentTracer2,tag=fullinv,limit=1] add NeedsTracer
-execute unless score $NoTracers CmdData matches 1 as @a[tag=CurrentTracer2,limit=1] unless entity @s[team=Lobby,tag=!OnDock] run function cannons:replacetracer/replace
-execute if score $NoTracers CmdData matches 1 as @a[team=Lobby,tag=CurrentTracer2,tag=OnDock,limit=1] run function cannons:replacetracer/replace
+execute unless score $NoTracers CmdData matches 1 as @a[tag=CurrentTracer2,limit=1] unless entity @s[team=Lobby,tag=!OnDock] run function cannons:replacetracer
+execute if score $NoTracers CmdData matches 1 as @a[team=Lobby,tag=CurrentTracer2,tag=OnDock,limit=1] run function cannons:replacetracer
 
 tag @a remove CurrentTracer2
 scoreboard players reset $currentTracer2 playerUUID

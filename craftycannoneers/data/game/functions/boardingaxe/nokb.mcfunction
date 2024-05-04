@@ -1,5 +1,48 @@
-#> Filter for Boarding Axes with knockback
-data modify storage craftycannoneers:inventory Items append from block 0 300 0 Items[{id:"minecraft:stone_axe",components:{"minecraft:custom_data":{Knockback:1}}}]
+execute if items entity @s weapon.mainhand stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s weapon.mainhand loot weapons:boarding_axe
+execute if items entity @s player.cursor stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s player.cursor loot weapons:boarding_axe
+execute if items entity @s weapon.offhand stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s weapon.offhand loot weapons:boarding_axe
 
-#> Initiate replacement loop
-function game:boardingaxe/initiateloop
+execute if items entity @s hotbar.0 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s hotbar.0 loot weapons:boarding_axe
+execute if items entity @s hotbar.1 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s hotbar.1 loot weapons:boarding_axe
+execute if items entity @s hotbar.2 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s hotbar.2 loot weapons:boarding_axe
+execute if items entity @s hotbar.3 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s hotbar.3 loot weapons:boarding_axe
+execute if items entity @s hotbar.4 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s hotbar.4 loot weapons:boarding_axe
+execute if items entity @s hotbar.5 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s hotbar.5 loot weapons:boarding_axe
+execute if items entity @s hotbar.6 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s hotbar.6 loot weapons:boarding_axe
+execute if items entity @s hotbar.7 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s hotbar.7 loot weapons:boarding_axe
+execute if items entity @s hotbar.8 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s hotbar.8 loot weapons:boarding_axe
+execute if items entity @s hotbar.8 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s hotbar.8 loot weapons:boarding_axe
+
+execute if items entity @s inventory.0 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.0 loot weapons:boarding_axe
+execute if items entity @s inventory.1 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.1 loot weapons:boarding_axe
+execute if items entity @s inventory.2 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.2 loot weapons:boarding_axe
+execute if items entity @s inventory.3 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.3 loot weapons:boarding_axe
+execute if items entity @s inventory.4 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.4 loot weapons:boarding_axe
+execute if items entity @s inventory.5 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.5 loot weapons:boarding_axe
+execute if items entity @s inventory.6 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.6 loot weapons:boarding_axe
+execute if items entity @s inventory.7 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.7 loot weapons:boarding_axe
+execute if items entity @s inventory.8 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.8 loot weapons:boarding_axe
+execute if items entity @s inventory.8 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.8 loot weapons:boarding_axe
+execute if items entity @s inventory.9 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.9 loot weapons:boarding_axe
+execute if items entity @s inventory.10 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.10 loot weapons:boarding_axe
+execute if items entity @s inventory.11 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.11 loot weapons:boarding_axe
+execute if items entity @s inventory.12 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.12 loot weapons:boarding_axe
+execute if items entity @s inventory.13 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.13 loot weapons:boarding_axe
+execute if items entity @s inventory.14 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.14 loot weapons:boarding_axe
+execute if items entity @s inventory.15 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.15 loot weapons:boarding_axe
+execute if items entity @s inventory.16 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.16 loot weapons:boarding_axe
+execute if items entity @s inventory.17 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.17 loot weapons:boarding_axe
+execute if items entity @s inventory.18 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.18 loot weapons:boarding_axe
+execute if items entity @s inventory.19 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.19 loot weapons:boarding_axe
+execute if items entity @s inventory.20 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.20 loot weapons:boarding_axe
+execute if items entity @s inventory.21 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.21 loot weapons:boarding_axe
+execute if items entity @s inventory.22 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.22 loot weapons:boarding_axe
+execute if items entity @s inventory.23 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.23 loot weapons:boarding_axe
+execute if items entity @s inventory.24 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.24 loot weapons:boarding_axe
+execute if items entity @s inventory.25 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.25 loot weapons:boarding_axe
+execute if items entity @s inventory.26 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s inventory.26 loot weapons:boarding_axe
+
+execute if items entity @s player.crafting.0 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s player.crafting.0 loot weapons:boarding_axe
+execute if items entity @s player.crafting.1 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s player.crafting.1 loot weapons:boarding_axe
+execute if items entity @s player.crafting.2 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s player.crafting.2 loot weapons:boarding_axe
+execute if items entity @s player.crafting.3 stone_axe[custom_data~{Knockback:1}] run return run loot replace entity @s player.crafting.3 loot weapons:boarding_axe
