@@ -1,5 +1,6 @@
-advancement revoke @s[tag=replacetracer] only cannons:tracer
+advancement revoke @s only cannons:replacetracer
 tag @s[tag=replacetracer] remove replacetracer
+tag @s[tag=redTracer] remove redTracer
 
 execute if items entity @s weapon.mainhand diamond_hoe[custom_model_data=91] run return run loot replace entity @s weapon.mainhand loot cannons:tracer
 execute if items entity @s player.cursor diamond_hoe[custom_model_data=91] run return run loot replace entity @s player.cursor loot cannons:tracer
@@ -51,4 +52,5 @@ execute if items entity @s player.crafting.2 diamond_hoe[custom_model_data=91] r
 execute if items entity @s player.crafting.3 diamond_hoe[custom_model_data=91] run return run loot replace entity @s player.crafting.3 loot cannons:tracer
 
 #> Failsafe
+tag @s add redTracer
 tag @s add replacetracer

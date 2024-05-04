@@ -47,6 +47,7 @@ execute if entity @s[tag=FillCB,tag=HoldPCB] unless entity @e[type=item_display,
 scoreboard players add @s[team=!Lobby,tag=FillCB,tag=HoldPCB,tag=UsedPCB] MVPcannon 1
 #Tracer
 execute if entity @s[tag=FillCB,tag=HoldTCB,tag=!RedTCB] unless entity @e[type=item_display,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..1] run loot replace entity @s weapon.mainhand loot cannons:tracer_red
+execute if entity @s[tag=FillCB,tag=HoldTCB,tag=!RedTCB] unless entity @e[type=item_display,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..1] run tag @s add redTracer
 execute if entity @s[team=!Lobby,tag=FillCB,tag=HoldTCB,tag=!RedTCB] unless entity @e[type=item_display,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..1] run tag @s add UsedTCB
 execute if entity @s[tag=FillCB,tag=HoldTCB,tag=!RedTCB] unless entity @e[type=item_display,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..1] run scoreboard players operation @e[type=item_display,tag=CannonDisp,limit=1,sort=nearest,distance=..5] playerUUID = @s playerUUID
 execute if entity @s[tag=FillCB,tag=HoldTCB,tag=!RedTCB] unless entity @e[type=item_display,tag=CannonDisp,scores={CmdData=1..},limit=1,sort=nearest,distance=..1] run scoreboard players set @e[type=item_display,tag=CannonDisp,limit=1,sort=nearest,distance=..4] cannonshot 30
