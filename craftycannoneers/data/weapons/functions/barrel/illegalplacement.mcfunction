@@ -16,8 +16,8 @@ execute at @s[tag=!illegal] if block ~ ~ ~ lantern run tag @s add illegal
 execute at @s[tag=!illegal] if block ~ ~ ~ #game:barrel_plants run tag @s add illegal
 execute at @s[tag=!illegal] if block ~ ~-1 ~ #game:barrel_plants run tag @s add illegal
 execute at @s[tag=!illegal] if block ~ ~-0.5 ~ #minecraft:stairs run tag @s add illegal
-execute at @s[tag=!illegal] if block ~ ~-1 ~ water run tag @s add illegal
-execute at @s[tag=!illegal] if block ~ ~ ~ water run tag @s add illegal
+execute at @s[tag=!illegal] if block ~ ~-0.99 ~ water run tag @s add illegal
+execute at @s[tag=!illegal] positioned ~ ~0.01 ~ if predicate game:located_water run tag @s add illegal
 execute at @s[tag=!illegal] if block ~ ~ ~ #minecraft:fences run tag @s add illegal
 execute at @s[tag=!illegal] if block ~ ~ ~ #minecraft:walls run tag @s add illegal
 execute at @s[tag=!illegal] if block ~ ~-1 ~ #minecraft:slabs[waterlogged=true] run tag @s add illegal

@@ -227,7 +227,7 @@ $loot $(function) loot \
                         "crabtrap"\
                     ],\
                     "data": {\
-                        "durability": $(durability)\
+                        "durability": $(durability)b\
                     }\
                 }\
             },\
@@ -251,7 +251,7 @@ $loot $(function) loot \
                         "crabtrap"\
                     ],\
                     "data": {\
-                        "durability": $(durability)\
+                        "durability": $(durability)b\
                     }\
                 }\
             },\
