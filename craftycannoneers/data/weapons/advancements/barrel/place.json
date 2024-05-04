@@ -1,35 +1,43 @@
 {
-  "criteria": {
-    "requirement": {
-      "trigger": "minecraft:any_block_use",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "team": "Lobby"
-              }
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:any_block_use",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:any_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "nbt": "{Tags:[\"barrelMainhand\"]}"
+                                }
+                            },
+                            {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "nbt": "{Tags:[\"barrelOffhand\"]}"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "team": "Lobby"
+                            }
+                        }
+                    }
+                ]
             }
-          }
-        ],
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "minecraft:mooshroom_spawn_egg",
-              "predicates": {
-                "minecraft:custom_data": "{Barrel:1b}"
-              }
-            }
-          }
-        ]
-      }
+        }
+    },
+    "rewards": {
+        "function": "weapons:barrel/place"
     }
-  },
-  "rewards": {
-    "function": "weapons:barrel/place"
-  }
 }
