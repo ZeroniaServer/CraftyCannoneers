@@ -35,4 +35,16 @@ setblock 78 -25 51 dark_oak_door[facing=east,half=upper,hinge=left,open=true] de
 setblock 78 -26 59 dark_oak_door[facing=east,half=lower,hinge=right,open=true] destroy
 setblock 78 -25 59 dark_oak_door[facing=east,half=upper,hinge=right,open=true] destroy
 
+setblock 74 -30 48 air
+setblock 74 -30 47 minecraft:oak_trapdoor[half=top,facing=north,powered=false,waterlogged=false,open=false]
+setblock 74 -30 48 minecraft:oak_trapdoor[half=top,facing=south,powered=false,waterlogged=false,open=false]
+setblock 75 -30 48 minecraft:oak_stairs[facing=east,half=top,shape=straight,waterlogged=false]
+setblock 73 -30 48 minecraft:oak_stairs[facing=west,half=top,shape=straight,waterlogged=false]
+
+setblock 62 -30 49 air
+setblock 62 -30 48 minecraft:oak_trapdoor[half=top,facing=north,powered=false,waterlogged=false,open=false]
+setblock 62 -30 49 minecraft:oak_trapdoor[half=top,facing=south,powered=false,waterlogged=false,open=false]
+setblock 63 -30 48 minecraft:oak_stairs[facing=east,half=top,shape=straight,waterlogged=false]
+setblock 61 -30 49 minecraft:oak_stairs[facing=west,half=top,shape=straight,waterlogged=false]
+
 schedule function arenaclear:shipplacement/purple1 5t

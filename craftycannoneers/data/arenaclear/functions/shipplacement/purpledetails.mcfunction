@@ -34,3 +34,15 @@ setblock 62 -26 -51 dark_oak_door[facing=west,half=lower,hinge=left,open=true] d
 setblock 62 -25 -51 dark_oak_door[facing=west,half=upper,hinge=left,open=true] destroy
 setblock 62 -26 -59 dark_oak_door[facing=west,half=lower,hinge=right,open=true] destroy
 setblock 62 -25 -59 dark_oak_door[facing=west,half=upper,hinge=right,open=true] destroy
+
+setblock 78 -30 -49 air
+setblock 78 -30 -48 minecraft:oak_trapdoor[half=top,facing=south,powered=false,waterlogged=false,open=false]
+setblock 78 -30 -49 minecraft:oak_trapdoor[half=top,facing=north,powered=false,waterlogged=false,open=false]
+setblock 77 -30 -48 minecraft:oak_stairs[facing=west,half=top,shape=straight,waterlogged=false]
+setblock 79 -30 -49 minecraft:oak_stairs[facing=east,half=top,shape=straight,waterlogged=false]
+
+setblock 66 -30 -48 air
+setblock 66 -30 -47 minecraft:oak_trapdoor[half=top,facing=south,powered=false,waterlogged=false,open=false]
+setblock 66 -30 -48 minecraft:oak_trapdoor[half=top,facing=north,powered=false,waterlogged=false,open=false]
+setblock 65 -30 -48 minecraft:oak_stairs[facing=west,half=top,shape=straight,waterlogged=false]
+setblock 67 -30 -48 minecraft:oak_stairs[facing=east,half=top,shape=straight,waterlogged=false]
