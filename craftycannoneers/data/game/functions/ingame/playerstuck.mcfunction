@@ -23,7 +23,7 @@ execute if block ~-1 ~ ~ #minecraft:stairs run tag @s[tag=IsStuck] remove IsStuc
 execute if block ~ ~ ~1 #minecraft:stairs run tag @s[tag=IsStuck] remove IsStuck
 execute if block ~ ~ ~-1 #minecraft:stairs run tag @s[tag=IsStuck] remove IsStuck
 
-effect clear @s[tag=!IsStuck,tag=!dismounter,nbt={OnGround:1b}] jump_boost
+effect clear @s[tag=!IsStuck,nbt={OnGround:1b}] jump_boost
 effect give @s[tag=IsStuck] jump_boost infinite 3 true
 
 tag @s[tag=IsStuck] remove IsStuck
