@@ -1,16 +1,13 @@
 {
-  "criteria": {
-    "requirement": {
-      "trigger": "minecraft:player_interacted_with_entity",
-      "conditions": {
-        "entity": {
-          "type": "minecraft:chest_minecart",
-          "nbt": "{Tags:[\"purpleteamchest\"]}"
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:player_generates_container_loot",
+            "conditions": {
+                "loot_table": "game:purpleteamchest"
+            }
         }
-      }
+    },
+    "rewards": {
+        "function": "game:teamchest/purple/init"
     }
-  },
-  "rewards": {
-    "function": "game:teamchest/purple/open"
-  }
 }

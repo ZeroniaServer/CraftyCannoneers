@@ -10,3 +10,4 @@ Datapack for Crafty Cannoneers. Made by Zeronia.
 - [vdvman1's Raycasting Customizer](https://skylinerw.com/vdvman1/raycast/)
 - [Aeldrion's AESTD Tag Library](https://github.com/Aeldrion/AESTD-tag-library)
 - [Aeldrion's Iris Raycasting Library](https://github.com/Aeldrion/iris)
+- [Highmore's chest closing detection](https://discord.com/channels/154777837382008833/157097006500806656/1236574825208614952)
