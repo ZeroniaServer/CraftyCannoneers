@@ -3,6 +3,9 @@
 ##If it's open, the LootTable is generated before it can be detected here.
 execute if data entity @e[type=chest_minecart,tag=purpleteamchest,limit=1] LootTable run tag @s remove purpleteamchestopen
 
+##This inventory update reduces visual flickering.
+item modify entity @s armor.head []
+
 ##Set items to minecart from storage
 data modify entity @e[type=chest_minecart,tag=purpleteamchest,limit=1] Items set from storage craftycannoneers:purpleteamchest Items
 
