@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:air",
+        "#game:fake_air",
+        "minecraft:ladder",
+        "#minecraft:signs",
+        "#minecraft:wall_signs",
+        "#minecraft:buttons",
+        "minecraft:lever",
+        "#game:barrel_plants"
+    ]
+}

@@ -8,6 +8,12 @@
 execute store success score $loaded iris if blocks ~ ~ ~ ~ ~ ~ ~ ~ ~ masked
 execute if score $loaded iris matches 0 run return fail
 
+# Hack for water
+execute if block ~ ~ ~ water if block ~ ~-1 ~ water store result storage iris:output HitWater int 1 run scoreboard players get $depth iris
+execute if block ~ ~ ~ water if block ~ ~-1 ~ water run return 1
+execute if block ~ ~ ~ water[level=0] store result storage iris:output HitWater int 1 run scoreboard players get $depth iris
+execute if block ~ ~ ~ water[level=0] run return 1
+
 # Check if the current block is blacklisted, or explicitly not whitelisted
 execute if data storage iris:settings Whitelist run data modify storage iris:args id set from storage iris:settings Whitelist
 execute if data storage iris:settings Whitelist store success score $is_whitelisted iris run function iris:raycast/macro_functions/block_id_test with storage iris:args

@@ -20,6 +20,6 @@ execute at @s[tag=!illegal] if block ~ ~-0.99 ~ water run tag @s add illegal
 execute at @s[tag=!illegal] positioned ~ ~0.01 ~ if predicate game:located_water run tag @s add illegal
 execute at @s[tag=!illegal] if block ~ ~ ~ #minecraft:fences run tag @s add illegal
 execute at @s[tag=!illegal] if block ~ ~ ~ #minecraft:walls run tag @s add illegal
-execute at @s[tag=!illegal] if block ~ ~-1 ~ #minecraft:slabs[waterlogged=true] run tag @s add illegal
-execute at @s[tag=!illegal] if block ~ ~ ~ #minecraft:slabs[waterlogged=true] run tag @s add illegal
+execute at @s[tag=!illegal] if block ~ ~-1 ~ #minecraft:slabs[half=bottom,waterlogged=true] run tag @s add illegal
+execute at @s[tag=!illegal] if block ~ ~ ~ #minecraft:slabs[half=bottom,waterlogged=true] run tag @s add illegal
 execute at @s[tag=!illegal] if block ~ ~ ~ minecraft:sea_pickle[waterlogged=true] run tag @s add illegal
