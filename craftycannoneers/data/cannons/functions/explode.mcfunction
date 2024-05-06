@@ -134,10 +134,11 @@ execute at @s[tag=CopperCannonball,tag=!StrikeLightning] run particle lava ~ ~ ~
 tag @s add Hit1
 tag @s[tag=!CannonballCluster,tag=!BouncyCannonball,tag=!GasCannonball,tag=!PlayerCannonball,tag=!CopperCannonball,predicate=cannons:safezones/island] add Hit2
 tp @s[tag=CopperCannonball,predicate=!game:inwater] @s
-data merge entity @s[tag=CopperCannonball,predicate=!game:inwater] {Motion:[0.0d,0.0d,0.0d]}
-scoreboard players reset @s[tag=CopperCannonball] drag
-scoreboard players reset @s[tag=CopperCannonball] gravity
 tag @s[tag=CopperCannonball] add StrikeLightning
+
+execute at @s[scores={copperStrike=1},predicate=!game:inwater] run scoreboard players operation @s drag *= $1200 CmdData
+execute at @s[scores={copperStrike=1},predicate=!game:inwater] run scoreboard players operation @s gravity *= $1200 CmdData
+execute at @s[scores={copperStrike=1},predicate=!game:inwater] run data merge entity @s {Marker:1b,NoGravity:1b,Motion:[0.0d,0.0d,0.0d]}
 
 execute at @s[scores={copperStrike=20},predicate=!game:inwater] run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 execute at @s[scores={copperStrike=20},predicate=!game:inwater] as @a[team=!Spectator,team=!Lobby,predicate=!game:inwater,distance=..7,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
