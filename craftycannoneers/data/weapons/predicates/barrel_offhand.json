@@ -4,13 +4,13 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "tag": "game:noninteractable"
+                "items": "#game:noninteractable"
             },
             "offhand": {
-                "items": [
-                    "minecraft:mooshroom_spawn_egg"
-                ],
-                "nbt": "{Barrel:1b}"
+                "items": "minecraft:mooshroom_spawn_egg",
+                "predicates": {
+                    "minecraft:custom_data": "{Barrel:1b}"
+                }
             }
         }
     }

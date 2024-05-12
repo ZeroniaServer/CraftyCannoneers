@@ -30,8 +30,8 @@ execute if entity @s[tag=NeedsTutorial,tag=!hideTips] run tellraw @s ["","\n",{"
 tag @s[tag=NeedsTutorial] remove NeedsTutorial
 
 #> Notify players about resource pack
-execute if score $gamestate CmdData matches 0..2 run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.1","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"ReadyToPlay","storage":"craftycannoneers:messages","interpret":true}]}]}]
-execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.1","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
+execute if score $gamestate CmdData matches 0..2 run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.2","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"ReadyToPlay","storage":"craftycannoneers:messages","interpret":true}]}]}]
+execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.2","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
 tag @s[tag=firstJoined] add msgReceived
 
 #> Servermode team join
@@ -87,7 +87,7 @@ function everytick:nofall
 
 #> Seagull particles
 execute at @s[team=Spectator] at @e[type=marker,tag=seagullSpawner,distance=..20,limit=1,sort=nearest] at @e[type=item_display,tag=seagull,distance=..12] run particle end_rod ~ ~ ~ 0 0 0 0 0 normal @s[distance=..20]
-execute at @s[team=Spectator] at @e[type=marker,tag=seagullSpawner,distance=..20,limit=1,sort=nearest] run particle dust 0 1 3 2 ~ ~ ~ 1 1 1 0.1 10 normal @s[distance=..20]
+execute at @s[team=Spectator] at @e[type=marker,tag=seagullSpawner,distance=..20,limit=1,sort=nearest] run particle dust{color:[0.0,1.0,3.0],scale:2.0} ~ ~ ~ 1 1 1 0.1 10 normal @s[distance=..20]
 
 #> Shields
 execute if entity @s[team=!Spectator] run function game:shields

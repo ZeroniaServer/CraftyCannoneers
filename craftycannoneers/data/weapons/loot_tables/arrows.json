@@ -5,7 +5,6 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "weapons:arrow",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -15,12 +14,13 @@
                 "max": 4
               }
             }
-          ]
+          ],
+          "value": "weapons:arrow"
         }
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

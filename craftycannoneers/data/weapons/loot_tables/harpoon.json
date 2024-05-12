@@ -10,11 +10,27 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{Unbreakable:1b,Harpoon:1,display:{Name:'[{\"translate\":\"item.minecraft.trident\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.harpoon.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.harpoon.lore.2\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.harpoon.lore.3\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]']},HideFlags:5}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{Harpoon:1}"
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_components",
+          "components": {
+            "!minecraft:damage": {},
+            "minecraft:custom_name": "[{\"translate\":\"item.minecraft.trident\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"item.harpoon.lore.1\",\"italic\":false,\"color\":\"white\"}]",
+              "[{\"translate\":\"item.harpoon.lore.2\",\"italic\":false,\"color\":\"white\"}]",
+              "[{\"translate\":\"item.harpoon.lore.3\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]"
+            ],
+            "minecraft:enchantments": {
+              "levels": {},
+              "show_in_tooltip": false
+            }
+          }
+        },
+        {
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

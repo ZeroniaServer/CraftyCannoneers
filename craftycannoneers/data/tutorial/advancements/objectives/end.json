@@ -1,26 +1,26 @@
 {
-    "display": {
-        "title": {
-            "translate": "tutorial.training_island",
-            "color": "green"
-        },
-        "description": {
-            "translate": "achievement.training_island.description",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:knowledge_book"
-        },
-        "frame": "task",
-        "show_toast": false,
-        "announce_to_chat": false,
-        "hidden": false,
-        "background": "minecraft:textures/block/sand.png"
+  "display": {
+    "title": {
+      "translate": "tutorial.training_island",
+      "color": "dark_green"
     },
-    "criteria": {
-        "location": {
-            "trigger": "minecraft:location"
-        }
+    "description": {
+      "translate": "achievement.training_island.description",
+      "color": "white"
     },
-    "parent": "tutorial:objectives/watchtower"
+    "icon": {
+      "id": "minecraft:knowledge_book"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "minecraft:textures/block/sand.png"
+  },
+  "criteria": {
+    "location": {
+      "trigger": "minecraft:location"
+    }
+  },
+  "parent": "tutorial:objectives/watchtower"
 }

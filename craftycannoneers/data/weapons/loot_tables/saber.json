@@ -10,11 +10,14 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{Unbreakable:1b,display:{Name:'[{\"translate\":\"item.saber\",\"italic\":false,\"color\":\"dark_aqua\"}]'},HideFlags:5}"
+          "function": "minecraft:set_components",
+          "components": {
+            "!minecraft:damage": {},
+            "minecraft:custom_name": "[{\"translate\":\"item.saber\",\"italic\":false,\"color\":\"dark_aqua\"}]"
+          }
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

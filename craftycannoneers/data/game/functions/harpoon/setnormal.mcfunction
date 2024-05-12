@@ -1,6 +1,48 @@
-#> Filter for active and inactive Harpoons
-data modify storage craftycannoneers:inventory Items append from block 0 300 0 Items[{id:"minecraft:trident",tag:{Harpoon:2}}]
-data modify storage craftycannoneers:inventory Items append from block 0 300 0 Items[{id:"minecraft:trident",tag:{Harpoon:3}}]
+execute if items entity @s weapon.mainhand trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s weapon.mainhand loot weapons:harpoon
+execute if items entity @s player.cursor trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s player.cursor loot weapons:harpoon
+execute if items entity @s weapon.offhand trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s weapon.offhand loot weapons:harpoon
 
-#> Initiate replacement loop
-function game:harpoon/initiateloop
+execute if items entity @s hotbar.0 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s hotbar.0 loot weapons:harpoon
+execute if items entity @s hotbar.1 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s hotbar.1 loot weapons:harpoon
+execute if items entity @s hotbar.2 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s hotbar.2 loot weapons:harpoon
+execute if items entity @s hotbar.3 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s hotbar.3 loot weapons:harpoon
+execute if items entity @s hotbar.4 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s hotbar.4 loot weapons:harpoon
+execute if items entity @s hotbar.5 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s hotbar.5 loot weapons:harpoon
+execute if items entity @s hotbar.6 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s hotbar.6 loot weapons:harpoon
+execute if items entity @s hotbar.7 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s hotbar.7 loot weapons:harpoon
+execute if items entity @s hotbar.8 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s hotbar.8 loot weapons:harpoon
+execute if items entity @s hotbar.8 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s hotbar.8 loot weapons:harpoon
+
+execute if items entity @s inventory.0 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.0 loot weapons:harpoon
+execute if items entity @s inventory.1 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.1 loot weapons:harpoon
+execute if items entity @s inventory.2 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.2 loot weapons:harpoon
+execute if items entity @s inventory.3 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.3 loot weapons:harpoon
+execute if items entity @s inventory.4 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.4 loot weapons:harpoon
+execute if items entity @s inventory.5 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.5 loot weapons:harpoon
+execute if items entity @s inventory.6 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.6 loot weapons:harpoon
+execute if items entity @s inventory.7 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.7 loot weapons:harpoon
+execute if items entity @s inventory.8 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.8 loot weapons:harpoon
+execute if items entity @s inventory.8 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.8 loot weapons:harpoon
+execute if items entity @s inventory.9 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.9 loot weapons:harpoon
+execute if items entity @s inventory.10 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.10 loot weapons:harpoon
+execute if items entity @s inventory.11 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.11 loot weapons:harpoon
+execute if items entity @s inventory.12 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.12 loot weapons:harpoon
+execute if items entity @s inventory.13 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.13 loot weapons:harpoon
+execute if items entity @s inventory.14 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.14 loot weapons:harpoon
+execute if items entity @s inventory.15 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.15 loot weapons:harpoon
+execute if items entity @s inventory.16 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.16 loot weapons:harpoon
+execute if items entity @s inventory.17 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.17 loot weapons:harpoon
+execute if items entity @s inventory.18 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.18 loot weapons:harpoon
+execute if items entity @s inventory.19 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.19 loot weapons:harpoon
+execute if items entity @s inventory.20 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.20 loot weapons:harpoon
+execute if items entity @s inventory.21 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.21 loot weapons:harpoon
+execute if items entity @s inventory.22 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.22 loot weapons:harpoon
+execute if items entity @s inventory.23 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.23 loot weapons:harpoon
+execute if items entity @s inventory.24 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.24 loot weapons:harpoon
+execute if items entity @s inventory.25 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.25 loot weapons:harpoon
+execute if items entity @s inventory.26 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s inventory.26 loot weapons:harpoon
+
+execute if items entity @s player.crafting.0 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s player.crafting.0 loot weapons:harpoon
+execute if items entity @s player.crafting.1 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s player.crafting.1 loot weapons:harpoon
+execute if items entity @s player.crafting.2 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s player.crafting.2 loot weapons:harpoon
+execute if items entity @s player.crafting.3 trident[!custom_data~{Harpoon:1}] run return run loot replace entity @s player.crafting.3 loot weapons:harpoon

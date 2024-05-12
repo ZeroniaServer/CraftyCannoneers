@@ -10,7 +10,6 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "weapons:gunpowder",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -20,7 +19,8 @@
                 "max": 13
               }
             }
-          ]
+          ],
+          "value": "weapons:gunpowder"
         }
       ]
     },
@@ -33,7 +33,6 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "weapons:gold",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -43,7 +42,8 @@
                 "max": 13
               }
             }
-          ]
+          ],
+          "value": "weapons:gold"
         }
       ]
     },
@@ -56,7 +56,6 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "weapons:golden_apple",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -66,7 +65,8 @@
                 "max": 2
               }
             }
-          ]
+          ],
+          "value": "weapons:golden_apple"
         }
       ]
     },
@@ -79,7 +79,6 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "weapons:arrow",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -89,7 +88,8 @@
                 "max": 10
               }
             }
-          ]
+          ],
+          "value": "weapons:arrow"
         }
       ]
     },
@@ -102,7 +102,6 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "cannons:golden",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -112,7 +111,8 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "cannons:golden"
         }
       ]
     }

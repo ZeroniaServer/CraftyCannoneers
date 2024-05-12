@@ -5,49 +5,49 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "cannons:normal",
-          "weight": 10
+          "weight": 10,
+          "value": "cannons:normal"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "cannons:hot",
-          "weight": 6
+          "weight": 6,
+          "value": "cannons:hot"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "cannons:gas",
-          "weight": 10
+          "weight": 10,
+          "value": "cannons:gas"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "cannons:cluster",
-          "weight": 10
+          "weight": 10,
+          "value": "cannons:cluster"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "cannons:chain",
-          "weight": 7
+          "weight": 7,
+          "value": "cannons:chain"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "cannons:bouncy",
-          "weight": 10
+          "weight": 10,
+          "value": "cannons:bouncy"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "cannons:copper",
           "weight": 10,
           "conditions": [
             {
               "condition": "minecraft:weather_check",
               "raining": true
             }
-          ]
+          ],
+          "value": "cannons:copper"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "cannons:golden",
-          "weight": 1
+          "weight": 1,
+          "value": "cannons:golden"
         }
       ],
       "functions": [

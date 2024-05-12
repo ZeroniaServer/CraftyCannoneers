@@ -10,11 +10,34 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{HideFlags:127,CustomModelData:31,Cannonball:4b,Unbreakable:1b,display:{Name:'[{\"translate\":\"cannonball.gas\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"cannonball.gas.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"cannonball.gas.lore.2\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"translate\":\"cannonball.gas.lore.3\",\"italic\":false,\"color\":\"aqua\"}]','[{\"translate\":\"cannonball.gas.lore.4\",\"italic\":false,\"color\":\"aqua\"}]']}}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{Cannonball:4b}"
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:custom_model_data": 31,
+            "!minecraft:damage": {},
+            "minecraft:custom_name": "[{\"translate\":\"cannonball.gas\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"cannonball.gas.lore.1\",\"italic\":false,\"color\":\"white\"}]",
+              "[{\"translate\":\"cannonball.gas.lore.2\",\"italic\":false,\"color\":\"white\"}]",
+              "[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
+              "[{\"translate\":\"cannonball.gas.lore.3\",\"italic\":false,\"color\":\"aqua\"}]",
+              "[{\"translate\":\"cannonball.gas.lore.4\",\"italic\":false,\"color\":\"aqua\"}]"
+            ],
+            "minecraft:enchantments": {
+              "levels": {},
+              "show_in_tooltip": false
+            },
+            "minecraft:attribute_modifiers": {
+              "modifiers": [],
+              "show_in_tooltip": false
+            }
+          }
+        },
+        {
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

@@ -1,3 +1,4 @@
+execute at @s[tag=!ascended] unless predicate game:located_water run tag @s add ascended
 execute at @s[tag=!ascended] align y positioned ~ ~1 ~ unless predicate game:located_water at @s run function game:modifiers/graverobbery/emergecheck
 execute at @s[tag=!ascended] run tp @s ~ ~0.0625 ~
 execute at @s[tag=!ascended] run particle minecraft:bubble_column_up ~ ~ ~ 0.2 0.2 0.2 0.04 1 force @a[predicate=cannons:seeparticles]

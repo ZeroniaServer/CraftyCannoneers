@@ -51,14 +51,14 @@ execute if entity @s[tag=Flag,tag=TranslatorCredit,tag=Credit2,tag=!Old,scores={
 execute if entity @s[tag=Flag,tag=TranslatorCredit,tag=Credit3,tag=!Old,scores={CmdData=8}] run data merge entity @s {start_interpolation:0,interpolation_duration:5,transformation:{scale:[2f,2f,2f],translation:[2.0f,0.7f,-1.8f]}}
 
 # Particles
-execute if score @s[tag=Credit1,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 1 at @s run particle dust 1 0.665 0 1 -37 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
-execute if score @s[tag=Credit2,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 1 at @s run particle dust 1 0.498 0.749 1 -35 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
-execute if score @s[tag=Credit3,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 1 at @s run particle dust 0.768 0.07 0.996 1 -33 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
+execute if score @s[tag=Credit1,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 1 at @s run particle dust{color:[1.0,0.665,0.0],scale:1.0} -37 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
+execute if score @s[tag=Credit2,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 1 at @s run particle dust{color:[1.0,0.498,0.749],scale:1.0} -35 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
+execute if score @s[tag=Credit3,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 1 at @s run particle dust{color:[0.768,0.07,0.996],scale:1.0} -33 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
 
-execute if score @s[tag=Credit1,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 2 at @s run particle dust 0.568 0 1 1 -37 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
-execute if score @s[tag=Credit2,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 2 at @s run particle dust 0.75 0.75 0.75 1 -35 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
-execute if score @s[tag=Credit3,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 2 at @s run particle dust 0.75 0.75 0.75 1 -33 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
+execute if score @s[tag=Credit1,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 2 at @s run particle dust{color:[0.568,0.0,1.0],scale:1.0} -37 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
+execute if score @s[tag=Credit2,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 2 at @s run particle dust{color:[0.75,0.75,0.75],scale:1.0} -35 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
+execute if score @s[tag=Credit3,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 2 at @s run particle dust{color:[0.75,0.75,0.75],scale:1.0} -33 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
 
-execute if score @s[tag=Credit1,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 3 at @s run particle dust 0 255 0 1 -37 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
-execute if score @s[tag=Credit2,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 3 at @s run particle dust 0.015 0.521 0.690 1 -35 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
-execute if score @s[tag=Credit3,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 3 at @s run particle dust 0.815 0 0 1 -33 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
+execute if score @s[tag=Credit1,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 3 at @s run particle dust{color:[0.0,1.0,0.0],scale:1.0} -37 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
+execute if score @s[tag=Credit2,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 3 at @s run particle dust{color:[0.015,0.521,0.690],scale:1.0} -35 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]
+execute if score @s[tag=Credit3,tag=!Old] CmdData matches 15.. if score $TranslatorPage CmdData matches 3 at @s run particle dust{color:[0.815,0.0,0.0],scale:1.0} -33 -24.6 17 0.3 0.3 0.3 0.1 1 force @a[distance=..12]

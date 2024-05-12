@@ -10,11 +10,47 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{Damage:240,display:{Name:'[{\"translate\":\"item.shark_tooth\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.modifier_exclusive\",\"italic\":true,\"color\":\"light_purple\"}]']},AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:5.0,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,10659,12629,-21318]},{AttributeName:\"generic.attack_damage\",Amount:8.0,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,10759,12629,-21518]}]}"
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:max_damage": 10,
+            "minecraft:attribute_modifiers": {
+              "modifiers": [
+                {
+                  "amount": 5.0,
+                  "slot": "mainhand",
+                  "name": "generic.attack_speed",
+                  "uuid": [
+                    -12248,
+                    10659,
+                    12629,
+                    -21318
+                  ],
+                  "type": "generic.attack_speed",
+                  "operation": "add_value"
+                },
+                {
+                  "amount": 8.0,
+                  "slot": "mainhand",
+                  "name": "generic.attack_damage",
+                  "uuid": [
+                    -12248,
+                    10759,
+                    12629,
+                    -21518
+                  ],
+                  "type": "generic.attack_damage",
+                  "operation": "add_value"
+                }
+              ]
+            },
+            "minecraft:custom_name": "[{\"translate\":\"item.shark_tooth\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"item.modifier_exclusive\",\"italic\":true,\"color\":\"light_purple\"}]"
+            ]
+          }
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

@@ -1,86 +1,102 @@
 {
-    "pools": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
         {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:loot_table",
-                    "weight": 60,
-                    "name": "chests:rare/normal/resources",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:inverted",
-                            "term": {
-                                "condition": "minecraft:entity_properties",
-                                "entity": "this",
-                                "predicate": {
-                                    "nbt": "{Tags:[\"lowerteam\"]}"
-                                }
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "minecraft:loot_table",
-                    "weight": 40,
-                    "name": "chests:rare/normal/other",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:inverted",
-                            "term": {
-                                "condition": "minecraft:entity_properties",
-                                "entity": "this",
-                                "predicate": {
-                                    "nbt": "{Tags:[\"lowerteam\"]}"
-                                }
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "minecraft:loot_table",
-                    "weight": 60,
-                    "name": "chests:rare/better/resources",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "nbt": "{Tags:[\"lowerteam\"]}"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "minecraft:loot_table",
-                    "weight": 40,
-                    "name": "chests:rare/better/other",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "nbt": "{Tags:[\"lowerteam\"]}"
-                            }
-                        }
-                    ]
+          "type": "minecraft:loot_table",
+          "weight": 60,
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "nbt": "{Tags:[\"lowerteam\"]}"
                 }
-            ],
-            "functions": [
-                {
-                    "function": "minecraft:set_nbt",
-                    "tag": "{NoDrop:1b,CanPlaceOn:[\"\"],HideFlags:127}",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "nbt": "{Tags:[\"fakechest\"]}"
-                            }
-                        }
-                    ]
+              }
+            }
+          ],
+          "value": "chests:rare/normal/resources"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 40,
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "nbt": "{Tags:[\"lowerteam\"]}"
                 }
-            ]
+              }
+            }
+          ],
+          "value": "chests:rare/normal/other"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 60,
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"lowerteam\"]}"
+              }
+            }
+          ],
+          "value": "chests:rare/better/resources"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 40,
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"lowerteam\"]}"
+              }
+            }
+          ],
+          "value": "chests:rare/better/other"
         }
-    ]
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_custom_data",
+          "tag": "{NoDrop:1b}",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"fakechest\"]}"
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "!minecraft:can_place_on": {},
+            "!minecraft:can_break": {}
+          },
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"fakechest\"]}"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

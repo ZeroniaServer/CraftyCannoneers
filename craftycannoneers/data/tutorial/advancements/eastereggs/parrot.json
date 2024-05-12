@@ -1,26 +1,26 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
-    "display": {
-        "title": {
-            "translate": "achievement.parrot",
-            "color": "green"
-        },
-        "description": {
-            "translate": "achievement.parrot.description",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:parrot_spawn_egg"
-        },
-        "frame": "challenge",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "display": {
+    "title": {
+      "translate": "achievement.parrot",
+      "color": "green"
     },
-    "criteria": {
-        "impossible": {
-            "trigger": "minecraft:impossible"
-        }
+    "description": {
+      "translate": "achievement.parrot.description",
+      "color": "white"
     },
-    "parent": "tutorial:zzzunlockables/root"
+    "icon": {
+      "id": "minecraft:parrot_spawn_egg"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "tutorial:zzzunlockables/root"
 }

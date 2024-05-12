@@ -1,5 +1,5 @@
 #> Break Empty Barrels
-execute unless score @s CmdData matches 1.. at @s run particle item mooshroom_spawn_egg{CustomModelData:1} ~ ~0.5 ~ 0.2 0.25 0.2 0.1 40 force @a[team=!Lobby]
+execute unless score @s CmdData matches 1.. at @s run particle item{item:{id:"mooshroom_spawn_egg",components:{"minecraft:custom_model_data":1}}} ~ ~0.5 ~ 0.2 0.25 0.2 0.1 40 force @a[team=!Lobby]
 execute unless score @s CmdData matches 1.. at @s run playsound blastbarrelbreak master @a[distance=..2] ~ ~ ~ 0.4 0.9
 execute unless score @s CmdData matches 1.. at @s run playsound blastbarrelbreak master @a[distance=2.0001..3] ~ ~ ~ 0.2 0.9
 execute unless score @s CmdData matches 1.. at @s run playsound blastbarrelbreak master @a[distance=3.0001..] ~ ~ ~ 0.1 0.9
@@ -29,9 +29,9 @@ execute at @s[scores={eyeclick=10,CmdData=1..5}] run playsound blastbarrelcharge
 scoreboard players set @s[scores={eyeclick=10,CmdData=1..5}] eyeclick 55
 
 #Fire models
-item replace entity @s[scores={eyeclick=2}] container.0 with mooshroom_spawn_egg{CustomModelData:12}
-item replace entity @s[scores={eyeclick=58}] container.0 with mooshroom_spawn_egg{CustomModelData:13}
-item replace entity @s[scores={eyeclick=60..95}] container.0 with mooshroom_spawn_egg{CustomModelData:14}
+item replace entity @s[scores={eyeclick=2}] container.0 with mooshroom_spawn_egg[custom_model_data=12]
+item replace entity @s[scores={eyeclick=58}] container.0 with mooshroom_spawn_egg[custom_model_data=13]
+item replace entity @s[scores={eyeclick=60..95}] container.0 with mooshroom_spawn_egg[custom_model_data=14]
 item replace entity @s[scores={eyeclick=95..}] container.0 with air
 
 #> Light blocks

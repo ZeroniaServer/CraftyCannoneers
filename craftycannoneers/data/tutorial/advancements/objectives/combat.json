@@ -1,26 +1,26 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
-    "display": {
-        "title": {
-            "translate": "tutorial.combat_area",
-            "color": "green"
-        },
-        "description": {
-            "translate": "achievement.combat_area.description",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:iron_sword"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": false
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "display": {
+    "title": {
+      "translate": "tutorial.combat_area",
+      "color": "green"
     },
-    "criteria": {
-        "impossible": {
-            "trigger": "minecraft:impossible"
-        }
+    "description": {
+      "translate": "achievement.combat_area.description",
+      "color": "white"
     },
-    "parent": "tutorial:objectives/root"
+    "icon": {
+      "id": "minecraft:iron_sword"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "tutorial:objectives/root"
 }

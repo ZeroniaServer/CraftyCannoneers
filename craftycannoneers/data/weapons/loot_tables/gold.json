@@ -10,12 +10,40 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{display:{Name:'[{\"translate\":\"item.gold\",\"italic\":false,\"color\":\"gold\"}]',Lore:['[{\"translate\":\"item.gold.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.gold.lore.2\",\"italic\":false,\"color\":\"white\"}]']}}"
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:custom_name": "[{\"translate\":\"item.gold\",\"italic\":false,\"color\":\"gold\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"item.gold.lore.1\",\"italic\":false,\"color\":\"white\"}]",
+              "[{\"translate\":\"item.gold.lore.2\",\"italic\":false,\"color\":\"white\"}]"
+            ]
+          }
         },
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{NoDrop:1b,CanPlaceOn:[\"\"],HideFlags:127}",
+          "function": "minecraft:set_custom_data",
+          "tag": "{NoDrop:1b}",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:enchantments": {
+              "levels": {},
+              "show_in_tooltip": false
+            },
+            "minecraft:attribute_modifiers": {
+              "modifiers": [],
+              "show_in_tooltip": false
+            }
+          },
           "conditions": [
             {
               "condition": "minecraft:entity_properties",

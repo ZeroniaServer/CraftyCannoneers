@@ -10,8 +10,27 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{NoDrop:1b,Unbreakable:1b,display:{Name:'[{\"translate\":\"item.crossbow\",\"italic\":false,\"color\":\"dark_aqua\"}]'},Enchantments:[{id:\"quick_charge\",lvl:2},{id:\"vanishing_curse\",lvl:1}],HideFlags:7}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{NoDrop:1b}"
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:enchantments": {
+              "levels": {
+                "minecraft:quick_charge": 2,
+                "minecraft:vanishing_curse": 1
+              },
+              "show_in_tooltip": false
+            },
+            "!minecraft:damage": {},
+            "!minecraft:charged_projectiles": {},
+            "minecraft:custom_name": "[{\"translate\":\"item.crossbow\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:attribute_modifiers": {
+              "modifiers": [],
+              "show_in_tooltip": false
+            }
+          }
         }
       ]
     }

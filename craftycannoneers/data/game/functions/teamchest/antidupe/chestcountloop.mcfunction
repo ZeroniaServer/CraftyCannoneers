@@ -1,4 +1,4 @@
-execute store result score $temp hasArrows run data get storage craftycannoneers:chest Items[-1].Count
+execute store result score $temp hasArrows run data get storage craftycannoneers:chest Items[-1].count
 data remove storage craftycannoneers:chest Items[-1]
 execute if entity @s[tag=orangeteamchest] run scoreboard players operation $orange hasArrows += $temp hasArrows
 execute if entity @s[tag=purpleteamchest] run scoreboard players operation $purple hasArrows += $temp hasArrows

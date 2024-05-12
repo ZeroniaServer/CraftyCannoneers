@@ -30,9 +30,9 @@ execute at @s[scores={CmdData=102}] run playsound entity.generic.explode master 
 execute at @s[scores={CmdData=105}] run playsound entity.generic.explode master @a ~ ~ ~ 3 0.8
 execute at @s[scores={CmdData=100}] run particle explosion ~ ~2 ~ 1.3 2 1.3 0.1 40 force @a[predicate=!game:tutorialbounds]
 execute at @s[scores={CmdData=102}] run item replace entity @s container.0 with air
-execute at @s[scores={CmdData=102}] run summon item ~ ~ ~ {Tags:["RRHeadItem"],Item:{id:"player_head",Count:1b,tag:{SkullOwner:YZEROgame}},PickupDelay:2000,Motion:[0.0d,0.1d,0.15d]}
-execute at @s[scores={CmdData=102}] run summon item ~ ~ ~ {Tags:["RRHeadItem"],Item:{id:"player_head",Count:1b,tag:{SkullOwner:Evtema3}},PickupDelay:2000,Motion:[0.1d,0.3d,0.1d]}
-execute at @s[scores={CmdData=102}] run summon item ~ ~ ~ {Tags:["RRHeadItem"],Item:{id:"player_head",Count:1b,tag:{SkullOwner:Chronos22}},PickupDelay:2000,Motion:[0.15d,0.2d,0.0d]}
+execute at @s[scores={CmdData=102}] run summon item ~ ~ ~ {Tags:["RRHeadItem"],Item:{id:"minecraft:player_head",count:1,components:{"minecraft:profile":{id:[I;-1879887536,-1673376384,-1653471241,-507601540]}}},PickupDelay:2000,Motion:[0.0d,0.1d,0.15d]}
+execute at @s[scores={CmdData=102}] run summon item ~ ~ ~ {Tags:["RRHeadItem"],Item:{id:"minecraft:player_head",count:1,components:{"minecraft:profile":{id:[I;1143768566,1044072941,-1808662431,483304317]}}},PickupDelay:2000,Motion:[0.1d,0.3d,0.1d]}
+execute at @s[scores={CmdData=102}] run summon item ~ ~ ~ {Tags:["RRHeadItem"],Item:{id:"minecraft:player_head",count:1,components:{"minecraft:profile":{id:[I;-2078491198,1749566810,-1784180285,-778044444]}}},PickupDelay:2000,Motion:[0.15d,0.2d,0.0d]}
 execute at @s[scores={CmdData=102}] run summon area_effect_cloud -57 -18 -21 {Tags:["RRText"],Duration:80,CustomNameVisible:1b,CustomName:'["",{"translate":"easter_egg.launch.should_try","color":"white","with":[{"translate":"easter_egg.launch.rocket","bold":true,"color":"blue"},{"translate":"easter_egg.launch.riders","bold":true,"color":"gold"}]}]'}
 kill @s[scores={CmdData=185..}]
 execute at @s[scores={CmdData=..105}] run tp @s ~ ~0.15 ~

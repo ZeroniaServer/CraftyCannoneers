@@ -6,13 +6,20 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "chests:locked_treasure"
+          "value": "chests:locked_treasure"
         }
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{NoDrop:1b,CanPlaceOn:[\"\"],HideFlags:127}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{NoDrop:1b}"
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "!minecraft:can_break": {},
+            "!minecraft:can_place_on": {}
+          }
         }
       ]
     }

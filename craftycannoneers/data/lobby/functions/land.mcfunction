@@ -1,2 +1,2 @@
-# execute if entity @s[predicate=lobby:hasjumpboost] run effect clear @s jump_boost
+attribute @s[team=!Lobby] generic.safe_fall_distance base set 3
 advancement revoke @s only lobby:land

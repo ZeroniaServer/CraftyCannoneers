@@ -1,1 +1,1 @@
-item replace entity @e[type=item_display,tag=purplechestdisplay,limit=1] container.0 with diamond_hoe{CustomModelData:49}
+item replace entity @e[type=item_display,tag=purplechestdisplay,limit=1] container.0 with diamond_hoe[custom_model_data=49]

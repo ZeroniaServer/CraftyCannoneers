@@ -11,7 +11,7 @@ data remove storage craftycannoneers:inventory Inventory[{Slot:103b}]
 data remove storage craftycannoneers:inventory Inventory[{id:"minecraft:iron_sword"}]
 data remove storage craftycannoneers:inventory Inventory[{id:"minecraft:crossbow"}]
 data remove storage craftycannoneers:inventory Inventory[{id:"minecraft:spyglass"}]
-data remove storage craftycannoneers:inventory Inventory[{id:"minecraft:diamond_hoe",tag:{Cannonball:8b}}]
+data remove storage craftycannoneers:inventory Inventory[{id:"minecraft:diamond_hoe",components:{"minecraft:custom_data":{Cannonball:8b}}}]
 
 #> Soft-remove all arrows if player has starter arrows
 # The logic behind this kinda sucks, but it's way harder to remove only one slot

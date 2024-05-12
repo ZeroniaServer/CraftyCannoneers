@@ -1,19 +1,19 @@
 {
-    "pools": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
         {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:loot_table",
-                    "name": "weapons:barrel",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": 64
-                        }
-                    ]
-                }
-            ]
+          "type": "minecraft:loot_table",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 64
+            }
+          ],
+          "value": "weapons:barrel"
         }
-    ]
+      ]
+    }
+  ]
 }

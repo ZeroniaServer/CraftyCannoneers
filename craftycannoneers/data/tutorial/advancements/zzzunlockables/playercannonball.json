@@ -1,27 +1,29 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
-    "display": {
-        "title": {
-            "translate": "achievement.special_delivery",
-            "color": "dark_aqua"
-        },
-        "description": {
-            "translate": "achievement.special_delivery.description",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:diamond_hoe",
-            "nbt": "{CustomModelData:56}"
-        },
-        "frame": "goal",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": false
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "display": {
+    "title": {
+      "translate": "achievement.special_delivery",
+      "color": "dark_aqua"
     },
-    "criteria": {
-        "impossible": {
-            "trigger": "minecraft:impossible"
-        }
+    "description": {
+      "translate": "achievement.special_delivery.description",
+      "color": "white"
     },
-    "parent": "tutorial:zzzunlockables/killplayer"
+    "icon": {
+      "id": "minecraft:diamond_hoe",
+      "components": {
+        "minecraft:custom_model_data": 56
+      }
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "tutorial:zzzunlockables/killplayer"
 }

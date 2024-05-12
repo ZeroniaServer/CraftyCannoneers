@@ -5,17 +5,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "cannons:player",
-          "weight": 1
+          "weight": 1,
+          "value": "cannons:player"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "weapons:harpoon",
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{Damage:250}",
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:damage": 250
+              },
               "conditions": [
                 {
                   "condition": "minecraft:entity_properties",
@@ -26,16 +27,16 @@
                 }
               ]
             }
-        ]
+          ],
+          "value": "weapons:harpoon"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "weapons:trooper_tonic",
-          "weight": 3
+          "weight": 3,
+          "value": "weapons:trooper_tonic"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "weapons:bomb",
           "weight": 2,
           "functions": [
             {
@@ -45,7 +46,8 @@
                 "max": 3
               }
             }
-          ]
+          ],
+          "value": "weapons:bomb"
         }
       ]
     }

@@ -6,42 +6,41 @@
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "weapons:boarding_axe"
+          "value": "weapons:boarding_axe"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "weapons:hook"
+          "value": "weapons:hook"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "weapons:battle_axe"
+          "value": "weapons:battle_axe"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "weapons:mace"
+          "value": "weapons:mace"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "weapons:saber"
+          "value": "weapons:saber"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "weapons:shield"
+          "value": "weapons:shield"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "name": "weapons:raid_horn"
+          "value": "weapons:raid_horn"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "weapons:arrow",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -50,7 +49,8 @@
                 "max": 5
               }
             }
-          ]
+          ],
+          "value": "weapons:arrow"
         }
       ],
       "functions": [

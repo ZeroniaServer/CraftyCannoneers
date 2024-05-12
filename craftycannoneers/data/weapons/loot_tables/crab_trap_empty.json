@@ -1,49 +1,96 @@
 {
     "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:mooshroom_spawn_egg"
-          }
-        ],
-        "functions": [
-          {
-            "function": "minecraft:set_nbt",
-            "tag": "{Empty:1b,CustomModelData:15,HideFlags:127,CanPlaceOn:[\"#game:barrel_placeable\"],CrabTrap:1b,display:{Name:'{\"translate\":\"item.crab_trap.empty\",\"italic\":false,\"color\":\"dark_aqua\"}',Lore:['[{\"translate\":\"item.crab_trap.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.crab_trap.lore.2\",\"italic\":false,\"color\":\"white\"}]']},EntityTag:{id:\"minecraft:marker\",Tags:[\"CrabTrapSpawn\",\"Empty\",\"crabtrap\"],data:{durability:5}}}"
-          },
-          {
-            "function": "minecraft:set_nbt",
-            "tag": "{NoDrop:1b,CanPlaceOn:[\"\"]}",
-            "conditions": [
-              {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "team": "Lobby"
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:mooshroom_spawn_egg"
                 }
-              }
-            ]
-          },
-          {
-            "function": "minecraft:set_nbt",
-            "tag": "{Blank:1b}",
-            "conditions": [
-              {
-                "condition": "minecraft:inverted",
-                "term": {
-                  "condition": "minecraft:entity_scores",
-                  "entity": "this",
-                  "scores": {
-                    "spawnPlaceable": 0
-                  }
+            ],
+            "functions": [
+                {
+                    "function": "minecraft:set_custom_data",
+                    "tag": "{Empty:1b,CrabTrap:1b}"
+                },
+                {
+                    "function": "minecraft:set_components",
+                    "components": {
+                        "minecraft:custom_model_data": 15,
+                        "minecraft:custom_name": "{\"translate\":\"item.crab_trap.empty\",\"italic\":false,\"color\":\"dark_aqua\"}",
+                        "minecraft:lore": [
+                            "[{\"translate\":\"item.crab_trap.lore.1\",\"italic\":false,\"color\":\"white\"}]",
+                            "[{\"translate\":\"item.crab_trap.lore.2\",\"italic\":false,\"color\":\"white\"}]"
+                        ],
+                        "minecraft:entity_data": {
+                            "id": "minecraft:marker",
+                            "Tags": [
+                                "CrabTrapSpawn",
+                                "Empty",
+                                "crabtrap"
+                            ],
+                            "data": {
+                                "durability": 5
+                            }
+                        }
+                    }
+                },
+                {
+                    "function": "minecraft:set_components",
+                    "components": {
+                        "minecraft:can_place_on": {
+                            "predicates": [
+                                {
+                                    "blocks": "#game:barrel_placeable"
+                                }
+                            ],
+                            "show_in_tooltip": false
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "condition": "minecraft:inverted",
+                            "term": {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "type": "minecraft:player",
+                                    "team": "Lobby"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "function": "minecraft:set_custom_data",
+                    "tag": "{NoDrop:1b}",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "team": "Lobby"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "function": "minecraft:set_custom_data",
+                    "tag": "{Blank:1b}",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:inverted",
+                            "term": {
+                                "condition": "minecraft:entity_scores",
+                                "entity": "this",
+                                "scores": {
+                                    "spawnPlaceable": 0
+                                }
+                            }
+                        }
+                    ]
                 }
-              }
             ]
-          }
-        ]
-      }
+        }
     ]
-  }
-  
+}

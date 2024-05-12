@@ -10,8 +10,33 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{HideFlags:127,Enchantments:[{id:\"vanishing_curse\",lvl:1}],NoDrop:1b,Unbreakable:1b,CustomModelData:91,Cannonball:8b,display:{Name:'[{\"translate\":\"cannonball.tracer\",\"italic\":false,\"color\":\"red\"}]',Lore:['[{\"translate\":\"cannonball.tracer.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"cannonball.tracer.lore.2\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"translate\":\"cannonball.tracer.lore.3\",\"italic\":false,\"color\":\"#66ff99\"}]','[{\"translate\":\"cannonball.tracer.lore.4\",\"italic\":false,\"color\":\"#66ff99\"}]']}}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{NoDrop:1b,Cannonball:8b}"
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:custom_model_data": 91,
+            "minecraft:enchantments": {
+              "levels": {
+                "minecraft:vanishing_curse": 1
+              },
+              "show_in_tooltip": false
+            },
+            "!minecraft:damage": {},
+            "minecraft:custom_name": "[{\"translate\":\"cannonball.tracer\",\"italic\":false,\"color\":\"red\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"cannonball.tracer.lore.1\",\"italic\":false,\"color\":\"white\"}]",
+              "[{\"translate\":\"cannonball.tracer.lore.2\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
+              "[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
+              "[{\"translate\":\"cannonball.tracer.lore.3\",\"italic\":false,\"color\":\"#66ff99\"}]",
+              "[{\"translate\":\"cannonball.tracer.lore.4\",\"italic\":false,\"color\":\"#66ff99\"}]"
+            ],
+            "minecraft:attribute_modifiers": {
+              "modifiers": [],
+              "show_in_tooltip": false
+            }
+          }
         }
       ]
     }

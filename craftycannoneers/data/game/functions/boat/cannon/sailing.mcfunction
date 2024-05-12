@@ -6,7 +6,7 @@ execute if entity @s[tag=still,tag=!FireCannon,tag=!OnFire,scores={PowerM=5}] on
 
 #> Make player weak to prevent sounds
 execute if score $rightdir CmdData matches 1 on passengers run effect give @s[type=player,tag=!lookAtBCannon] weakness infinite 0 true
-execute if score $rightdir CmdData matches 1 on passengers run attribute @s[type=player,tag=!lookAtBCannon] generic.attack_damage modifier add 9c55d773-f866-4def-9740-6253d5ebb737 "nodamage" -100 add
+execute if score $rightdir CmdData matches 1 on passengers run attribute @s[type=player,tag=!lookAtBCannon] generic.attack_damage modifier add 9c55d773-f866-4def-9740-6253d5ebb737 "nodamage" -100 add_value
 execute if score $rightdir CmdData matches 1 on passengers run tag @s[type=player] add lookAtBCannon
 execute if score $rightdir CmdData matches 0 on passengers run tag @s[type=player] remove lookAtBCannon
 
@@ -18,8 +18,7 @@ execute if entity @s[tag=!still,tag=!tipped,tag=!FireCannon,tag=!OnFire] unless 
 execute if entity @s[tag=still,tag=tipped,tag=!FireCannon,tag=!OnFire] run function game:boat/cannon/untipcannon
 
 #> Prevent clicking on Cannon if not looking in right direction
-execute if entity @s[tag=!tipped] if score $rightdir CmdData matches 0 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] run function game:boat/cannon/removeinteraction
-execute if entity @s[tag=tipped] if score $rightdir CmdData matches 0 on passengers on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] run function game:boat/cannon/removeinteraction
+execute if score $rightdir CmdData matches 0 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=interaction] run function game:boat/cannon/removeinteraction
 execute if score $rightdir CmdData matches 1 on passengers on passengers at @s[type=area_effect_cloud,tag=base,tag=!interaction] run function game:boat/cannon/replaceinteraction
 
 #> Prevent click animation if not holding right item

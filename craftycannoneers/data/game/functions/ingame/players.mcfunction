@@ -5,7 +5,7 @@ title @s[scores={drowning=1..},predicate=game:inarena] subtitle {"text":" ","col
 scoreboard players reset @s[scores={drowning=1..},predicate=game:inarena] drowning
 
 #> Boarding Axe
-execute if data entity @s Inventory[{id:"minecraft:stone_axe"}] run function game:ingame/boardingaxe
+function game:boardingaxe/main
 
 #> Raid Horn
 function game:raidhorn/main
@@ -14,8 +14,7 @@ function game:raidhorn/main
 execute unless score $gamestate CmdData matches 3 run function game:ingame/shipeffects
 
 #> Harpoon
-execute if data entity @s Inventory[{id:"minecraft:trident"}] run function game:ingame/harpoon
-scoreboard players reset @s[scores={useharpoon=1..}] useharpoon
+function game:harpoon/main
 
 #> Player stuck
 execute at @s run function game:ingame/playerstuck

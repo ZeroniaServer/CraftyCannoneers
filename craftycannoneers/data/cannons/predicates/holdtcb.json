@@ -1,14 +1,14 @@
 {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "equipment": {
-      "mainhand": {
-        "items": [
-          "minecraft:diamond_hoe"
-        ],
-        "nbt": "{Cannonball:8b}"
-      }
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "mainhand": {
+                "items": "minecraft:diamond_hoe",
+                "predicates": {
+                    "minecraft:custom_data": "{Cannonball:8b}"
+                }
+            }
+        }
     }
-  }
 }

@@ -16,7 +16,7 @@ execute if entity @s[tag=canDamage] run function weapons:barrel/summonimpact
 #> Particles/sounds
 playsound blastbarrelexplode master @a ~ ~ ~ 5 1
 particle flash ~ ~6 ~ 0 2 0 0 12 force @a[team=!Lobby]
-particle dust 1 0 0 2 ~ ~6 ~ 2 4 2 0 40 force @a[team=!Lobby]
+particle dust{color:[1.0,0.0,0.0],scale:2.0} ~ ~6 ~ 2 4 2 0 40 force @a[team=!Lobby]
 particle cloud ~ ~6 ~ 2 4 2 0.3 20 force @a[team=!Lobby]
 execute unless entity @s[tag=canDamage] run particle explosion ~ ~5 ~ 2 4 2 0.1 25 force @a[team=!Lobby]
 particle lava ~ ~5 ~ 2 4 2 0.1 30 force @a[team=!Lobby]

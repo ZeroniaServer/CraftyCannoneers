@@ -4,13 +4,13 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "items": [
-                    "minecraft:mooshroom_spawn_egg"
-                ],
+                "items": "minecraft:mooshroom_spawn_egg",
                 "count": {
                     "min": 63
                 },
-                "nbt": "{Barrel:1b}"
+                "predicates": {
+                    "minecraft:custom_data": "{Barrel:1b}"
+                }
             }
         }
     }

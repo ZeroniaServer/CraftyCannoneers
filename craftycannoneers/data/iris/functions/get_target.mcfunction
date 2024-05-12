@@ -77,6 +77,7 @@ data remove storage iris:output TargetPosition
 data remove storage iris:output Distance
 data remove storage iris:output TargetedBox
 data remove storage iris:output TargetedFace
+data remove storage iris:output HitWater
 
 scoreboard players set $depth iris 0
 scoreboard players set $min_distance iris 2147483647

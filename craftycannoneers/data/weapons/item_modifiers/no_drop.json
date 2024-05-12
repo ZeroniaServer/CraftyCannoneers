@@ -1,4 +1,4 @@
 {
-    "function": "minecraft:set_nbt",
-    "tag": "{NoDrop:1b}"
+  "function": "minecraft:set_custom_data",
+  "tag": "{NoDrop:1b}"
 }

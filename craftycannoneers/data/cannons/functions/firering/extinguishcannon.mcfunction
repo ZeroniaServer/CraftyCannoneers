@@ -1,4 +1,4 @@
-item replace entity @s container.0 with diamond_hoe{CustomModelData:1}
+item replace entity @s container.0 with minecraft:diamond_hoe[custom_model_data=1]
 playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 0.5 1
 tag @s remove OnFire
 tag @s remove ByLightning

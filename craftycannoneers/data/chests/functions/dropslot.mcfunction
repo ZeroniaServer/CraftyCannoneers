@@ -26,5 +26,5 @@ execute if score $currentslot CmdData matches 23 run item replace block -69 -64 
 execute if score $currentslot CmdData matches 24 run item replace block -69 -64 0 container.0 from entity @s container.24
 execute if score $currentslot CmdData matches 25 run item replace block -69 -64 0 container.0 from entity @s container.25
 execute if score $currentslot CmdData matches 26 run item replace block -69 -64 0 container.0 from entity @s container.26
-loot spawn ~ ~0.1 ~ mine -69 -64 0 air{drop_contents:1b}
+loot spawn ~ ~0.1 ~ mine -69 -64 0 stick[custom_data={drop_contents:1b}]
 setblock -69 -64 0 bedrock

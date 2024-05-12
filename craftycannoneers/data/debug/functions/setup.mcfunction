@@ -140,7 +140,7 @@ scoreboard objectives add bestParkourSecs dummy
 scoreboard objectives add bestParkourDeci dummy
 scoreboard objectives add bestParkourDeci2 dummy
 scoreboard objectives add bestParkourTime dummy
-scoreboard objectives add Falling minecraft.custom:minecraft.time_since_death
+scoreboard objectives remove Falling
 scoreboard objectives add GamesPlayed dummy
 scoreboard objectives add toggleTips trigger
 scoreboard objectives add x dummy
@@ -265,7 +265,7 @@ scoreboard players add $BoatCannons CmdData 0
 scoreboard players add $Daytime CmdData 0
 
 #> Messages
-data modify storage craftycannoneers:messages ResourcePack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"We strongly recommend you to ","color":"gray"},{"text":"use the resource pack","bold":true,"color":"red"},{"text":". ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=1X3RzWvaDA8ZxerG08YcAglthcEDsBP15"}}]'
-data modify storage craftycannoneers:messages OutdatedPack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"You are using an outdated version of the resource pack! ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD THE LATEST VERSION]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=1X3RzWvaDA8ZxerG08YcAglthcEDsBP15"}}]'
+data modify storage craftycannoneers:messages ResourcePack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"We strongly recommend you to ","color":"gray"},{"text":"use the resource pack","bold":true,"color":"red"},{"text":". ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=17UZLWBPbPLijzOwr7ztPQAaGKZHdyt3J"}}]'
+data modify storage craftycannoneers:messages OutdatedPack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"You are using an outdated version of the resource pack! ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD THE LATEST VERSION]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=17UZLWBPbPLijzOwr7ztPQAaGKZHdyt3J"}}]'
 data modify storage craftycannoneers:messages SettingsMap set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"chat.confirm","color":"gray","with":[{"translate":"chat.settings_map","color":"aqua","bold":true}]}]'
 data modify storage craftycannoneers:messages ReadyToPlay set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"chat.the_game","color":"gray","with":[{"translate":"chat.ready_to_play","color":"green","bold":true}]}]'

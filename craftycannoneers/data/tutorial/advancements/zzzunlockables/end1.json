@@ -1,25 +1,25 @@
 {
-    "display": {
-        "title": {
-            "translate": "achievement.bonus_goals",
-            "color": "aqua"
-        },
-        "description": {
-            "translate": "achievement.bonus_goals.description",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:book"
-        },
-        "frame": "goal",
-        "show_toast": false,
-        "announce_to_chat": false,
-        "hidden": false
+  "display": {
+    "title": {
+      "translate": "achievement.bonus_goals",
+      "color": "dark_aqua"
     },
-    "criteria": {
-        "location": {
-            "trigger": "minecraft:location"
-        }
+    "description": {
+      "translate": "achievement.bonus_goals.description",
+      "color": "white"
     },
-    "parent": "tutorial:zzzunlockables/cannoneer"
+    "icon": {
+      "id": "minecraft:book"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "location": {
+      "trigger": "minecraft:location"
+    }
+  },
+  "parent": "tutorial:zzzunlockables/cannoneer"
 }

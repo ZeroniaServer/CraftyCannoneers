@@ -1,25 +1,25 @@
 {
-    "display": {
-        "title": {
-            "translate": "achievement.bonus_goals",
-            "color": "aqua"
-        },
-        "description": {
-            "translate": "achievement.bonus_goals.description",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:book"
-        },
-        "frame": "goal",
-        "show_toast": false,
-        "announce_to_chat": false,
-        "hidden": false,
-        "background": "minecraft:textures/block/spruce_planks.png"
+  "display": {
+    "title": {
+      "translate": "achievement.bonus_goals",
+      "color": "dark_aqua"
     },
-    "criteria": {
-        "location": {
-            "trigger": "minecraft:location"
-        }
+    "description": {
+      "translate": "achievement.bonus_goals.description",
+      "color": "white"
+    },
+    "icon": {
+      "id": "minecraft:book"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "minecraft:textures/block/spruce_planks.png"
+  },
+  "criteria": {
+    "location": {
+      "trigger": "minecraft:location"
     }
+  }
 }

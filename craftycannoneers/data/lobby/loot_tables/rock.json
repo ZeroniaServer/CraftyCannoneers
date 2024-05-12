@@ -8,8 +8,32 @@
           "name": "minecraft:snowball",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:7,NoDrop:1b,Enchantments:[{id:\"vanishing_curse\",lvl:1}],display:{Name:'[{\"translate\":\"item.rock\",\"italic\":false,\"bold\":true,\"color\":\"red\"}]',Lore:['[{\"translate\":\"item.rock.lore.1\",\"italic\":false,\"color\":\"dark_red\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"translate\":\"item.rock.lore.2\",\"italic\":false,\"color\":\"gray\"}]','[{\"translate\":\"item.rock.lore.3\",\"italic\":false,\"color\":\"gray\"}]','[{\"translate\":\"item.rock.lore.4\",\"italic\":false,\"color\":\"gray\"}]','[{\"translate\":\"item.rock.lore.5\",\"italic\":false,\"color\":\"gray\"}]']}}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{NoDrop:1b}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantments": {
+                  "levels": {
+                    "minecraft:vanishing_curse": 1
+                  },
+                  "show_in_tooltip": false
+                },
+                "minecraft:custom_name": "[{\"translate\":\"item.rock\",\"italic\":false,\"bold\":true,\"color\":\"red\"}]",
+                "minecraft:lore": [
+                  "[{\"translate\":\"item.rock.lore.1\",\"italic\":false,\"color\":\"dark_red\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
+                  "[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
+                  "[{\"translate\":\"item.rock.lore.2\",\"italic\":false,\"color\":\"gray\"}]",
+                  "[{\"translate\":\"item.rock.lore.3\",\"italic\":false,\"color\":\"gray\"}]",
+                  "[{\"translate\":\"item.rock.lore.4\",\"italic\":false,\"color\":\"gray\"}]",
+                  "[{\"translate\":\"item.rock.lore.5\",\"italic\":false,\"color\":\"gray\"}]"
+                ],
+                "minecraft:attribute_modifiers": {
+                  "modifiers": [],
+                  "show_in_tooltip": false
+                }
+              }
             }
           ]
         }

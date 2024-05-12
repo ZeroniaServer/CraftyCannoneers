@@ -9,7 +9,7 @@ loot replace entity @s[tag=emptyOffhand] weapon.offhand loot weapons:barrel
 item modify entity @s[tag=emptyOffhand] weapon.offhand weapons:blank
 
 #> If offhand has barrel (under a stack), give 2 more and then restore the original stack amount to prevent animation
-execute store result score @s hasBarrels run data get entity @s Inventory[{Slot:-106b}].Count
+execute store result score @s hasBarrels run data get entity @s Inventory[{Slot:-106b}].count
 item modify entity @s[tag=stackOffhand,tag=!fullStackOffhand] weapon.offhand weapons:add_two
 scoreboard players add @s[tag=stackOffhand,tag=!fullStackOffhand] hasBarrels 1
 loot replace entity @s[tag=stackOffhand,tag=!fullStackOffhand] weapon.offhand loot weapons:barrel_return

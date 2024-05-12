@@ -10,11 +10,22 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{CustomModelData:2,Bomb:1b,display:{Name:'[{\"translate\":\"item.blast_bomb\",\"italic\":false,\"color\":\"dark_aqua\"}]',Lore:['[{\"translate\":\"item.blast_bomb.lore.1\",\"italic\":false,\"color\":\"white\"}]','[{\"translate\":\"item.blast_bomb.lore.2\",\"italic\":false,\"color\":\"white\"}]']}}"
+          "function": "minecraft:set_custom_data",
+          "tag": "{Bomb:1b}"
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:custom_model_data": 2,
+            "minecraft:custom_name": "[{\"translate\":\"item.blast_bomb\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"item.blast_bomb.lore.1\",\"italic\":false,\"color\":\"white\"}]",
+              "[{\"translate\":\"item.blast_bomb.lore.2\",\"italic\":false,\"color\":\"white\"}]"
+            ]
+          }
+        },
+        {
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

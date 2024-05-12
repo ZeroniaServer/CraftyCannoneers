@@ -43,7 +43,7 @@ execute if score @s CmdData matches 50.. run function game:modifiers/crabs/endsp
 execute on vehicle unless entity @e[type=item_display,tag=CrabTrap,limit=1,distance=..2] run tag @s remove justReleased
 
 #> Crab Rave
-execute if score $crabrave CmdData matches 1 run item replace entity @s container.0 with diamond_hoe{CustomModelData:119}
+execute if score $crabrave CmdData matches 1 run item replace entity @s container.0 with diamond_hoe[custom_model_data=119]
 execute if score $crabrave CmdData matches 1 at @s run particle note ~ ~0.2 ~ 0.2 0.2 0.2 0.1 1 force @a[team=!Lobby]
 execute if score $crabrave CmdData matches 1 on vehicle run effect give @s slowness 1 100 true
 execute if score $ravetime CmdData matches 100.. at @s run function game:modifiers/crabs/endrave
@@ -58,7 +58,7 @@ execute on vehicle run scoreboard players reset @s[tag=!CrabtrapImmune,scores={e
 
 #> Crab tracking
 scoreboard players add $curr crabs 1
-execute on passengers if data entity @s {item:{tag:{CrabTrap:1b,Empty:0b}}} run scoreboard players add $curr crabs 1
+execute on passengers if items entity @s contents mooshroom_spawn_egg[custom_data~{CrabTrap:1b,Empty:0b}] run scoreboard players add $curr crabs 1
 
 #> Vehicle permababy
 execute on vehicle run function everytick:permababy

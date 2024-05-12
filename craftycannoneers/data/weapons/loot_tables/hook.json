@@ -10,11 +10,44 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{Damage:200,display:{Name:'[{\"translate\":\"item.hook\",\"italic\":false,\"color\":\"dark_aqua\"}]'},AttributeModifiers:[{AttributeName:\"generic.attack_speed\",Amount:20,Slot:mainhand,Name:\"generic.attack_speed\",UUID:[I;-12248,10659,12629,-21318]},{AttributeName:\"generic.attack_damage\",Amount:3.5,Slot:mainhand,Name:\"generic.attack_damage\",UUID:[I;-12248,10759,12629,-21518]}]}"
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:max_damage": 50,
+            "minecraft:attribute_modifiers": {
+              "modifiers": [
+                {
+                  "amount": 20,
+                  "slot": "mainhand",
+                  "name": "generic.attack_speed",
+                  "uuid": [
+                    -12248,
+                    10659,
+                    12629,
+                    -21318
+                  ],
+                  "type": "generic.attack_speed",
+                  "operation": "add_value"
+                },
+                {
+                  "amount": 3.5,
+                  "slot": "mainhand",
+                  "name": "generic.attack_damage",
+                  "uuid": [
+                    -12248,
+                    10759,
+                    12629,
+                    -21518
+                  ],
+                  "type": "generic.attack_damage",
+                  "operation": "add_value"
+                }
+              ]
+            },
+            "minecraft:custom_name": "[{\"translate\":\"item.hook\",\"italic\":false,\"color\":\"dark_aqua\"}]"
+          }
         },
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
           "conditions": [
             {

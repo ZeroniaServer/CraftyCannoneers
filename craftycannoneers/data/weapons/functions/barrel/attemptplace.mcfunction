@@ -6,6 +6,7 @@ execute at @s align xz run tp @s ~0.5 ~ ~0.5
 execute unless data storage iris:output TargetedFace{Direction:"UP"} unless data storage iris:output {TargetType:"NONE"} run function weapons:barrel/alignfloor
 
 # Next, ensure that there is enough space above for this barrel to sit
+data modify storage iris:settings Blacklist set value "#iris:shape_groups/air"
 execute at @s[tag=!illegal] rotated 0 -90 anchored feet positioned ^ ^ ^ store result score $raydist CmdData run function iris:get_target
 execute unless score $raydist CmdData matches 937500.. run tag @s add illegal
 # Didn't hit anything so definitely safe placement

@@ -1,14 +1,14 @@
 {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "equipment": {
-      "mainhand": {
-        "items": [
-          "minecraft:trident"
-        ],
-        "nbt": "{Harpoon:2}"
-      }
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "mainhand": {
+                "items": "minecraft:trident",
+                "predicates": {
+                    "minecraft:custom_data": "{Harpoon:2}"
+                }
+            }
+        }
     }
-  }
 }

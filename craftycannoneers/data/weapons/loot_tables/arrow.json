@@ -10,8 +10,20 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
-          "tag": "{HideFlags:7,Enchantments:[{id:\"vanishing_curse\",lvl:1}],display:{Name:'[{\"translate\":\"item.minecraft.arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]'}}"
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:enchantments": {
+              "levels": {
+                "minecraft:vanishing_curse": 1
+              },
+              "show_in_tooltip": false
+            },
+            "minecraft:custom_name": "[{\"translate\":\"item.minecraft.arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:attribute_modifiers": {
+              "modifiers": [],
+              "show_in_tooltip": false
+            }
+          }
         }
       ]
     }

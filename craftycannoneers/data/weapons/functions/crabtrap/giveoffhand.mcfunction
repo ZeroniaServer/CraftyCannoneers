@@ -6,11 +6,12 @@ execute if entity @s[predicate=weapons:crab_trap_offhand_64] run tag @s add full
 #> If offhand is empty, replace with 1 crab trap and use blank NBT to prevent animation
 tag @s add self
 execute if entity @s[tag=emptyOffhand] run scoreboard players set @e[type=marker,tag=CrabTrapSpawn,tag=current,limit=1] spawnPlaceable 0
-execute as @e[type=marker,tag=CrabTrapSpawn,tag=current,limit=1] run loot replace entity @a[tag=self,tag=emptyOffhand,limit=1] weapon.offhand loot weapons:crab_trap_giveback
+data modify storage craftycannoneers:crabtrap function set value "replace entity @a[tag=self,tag=emptyOffhand,limit=1] weapon.offhand"
+execute as @e[type=marker,tag=CrabTrapSpawn,tag=current,limit=1] run function weapons:crabtrap/givewithdura with storage craftycannoneers:crabtrap
 item modify entity @s[tag=emptyOffhand] weapon.offhand weapons:blank
 
 #> If offhand has empty crab trap (under a stack), give 2 more and then restore the original stack amount to prevent animation
-execute store result score @s hasCrabTraps run data get entity @s Inventory[{Slot:-106b}].Count
+execute store result score @s hasCrabTraps run data get entity @s Inventory[{Slot:-106b}].count
 item modify entity @s[tag=stackOffhand,tag=!fullStackOffhand] weapon.offhand weapons:add_two
 scoreboard players add @s[tag=stackOffhand,tag=!fullStackOffhand] hasCrabTraps 1
 loot replace entity @s[tag=stackOffhand,tag=!fullStackOffhand] weapon.offhand loot weapons:crab_trap_return

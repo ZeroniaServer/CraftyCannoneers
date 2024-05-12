@@ -11,7 +11,6 @@
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "cannons:normal",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -21,17 +20,17 @@
                 "max": 1
               }
             }
-          ]
+          ],
+          "value": "cannons:normal"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "name": "weapons:golden_apple"
+          "value": "weapons:golden_apple"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 3,
-          "name": "weapons:bomb",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -41,7 +40,8 @@
                 "max": 2
               }
             }
-          ]
+          ],
+          "value": "weapons:bomb"
         }
       ]
     }

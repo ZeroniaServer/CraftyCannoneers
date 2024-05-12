@@ -1,26 +1,26 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
-    "display": {
-        "title": {
-            "translate": "achievement.goldy",
-            "color": "green"
-        },
-        "description": {
-            "translate": "achievement.goldy.description",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:tropical_fish_bucket"
-        },
-        "frame": "challenge",
-        "show_toast": true,
-        "announce_to_chat": false,
-        "hidden": true
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "display": {
+    "title": {
+      "translate": "achievement.goldy",
+      "color": "green"
     },
-    "criteria": {
-        "impossible": {
-            "trigger": "minecraft:impossible"
-        }
+    "description": {
+      "translate": "achievement.goldy.description",
+      "color": "white"
     },
-    "parent": "tutorial:eastereggs/planetary"
+    "icon": {
+      "id": "minecraft:tropical_fish_bucket"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "tutorial:eastereggs/planetary"
 }

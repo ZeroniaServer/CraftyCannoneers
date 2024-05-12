@@ -21,16 +21,16 @@ execute at @s[tag=!CannonballShot,tag=!playeracc,tag=!clusteracc,tag=!chainacc,t
 execute at @s run function cannons:cannonballrotation
 execute at @s[tag=!CannonballShot,tag=!PlayerCannonball] run function cannons:cannonballtick
 execute at @s[tag=!CannonballShot,tag=PlayerCannonball] run function cannons:playercannonballtick
-execute at @s[tag=CannonballShot] run function cannons:drag
+execute at @s[tag=CannonballShot,predicate=!game:inwater] run function cannons:drag
 execute at @s[tag=BouncyCannonball,tag=Hit1] if entity @a[team=!Lobby,team=!Spectator,distance=..20] run function cannons:bounce/bouncedrag
 execute store result entity @s Air double 1 run scoreboard players get $toggle CmdData
 
-execute rotated as @s[tag=ChainCannonball,tag=!Submerged,scores={CmdData=4..},predicate=game:inarena] on passengers on passengers on origin positioned as @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^1 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
-execute rotated as @s[tag=ChainCannonball,tag=!Submerged,scores={CmdData=4..},predicate=game:inarena] on passengers on passengers on origin positioned as @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^-1 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
-execute at @s[tag=GoldenCannonball,tag=!Submerged,scores={CmdData=4..},predicate=game:inarena] on passengers on passengers on origin at @s run particle dust_color_transition 1 0.835 0 1.4 1 0.667 0 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
+execute rotated as @s[tag=ChainCannonball,tag=!Submerged,scores={CmdData=4..},predicate=game:inarena] on passengers on passengers on origin positioned as @s run particle dust_color_transition{from_color:[1.0,1.0,1.0],scale:1.7,to_color:[0.398,0.398,0.398]} ^ ^ ^1 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
+execute rotated as @s[tag=ChainCannonball,tag=!Submerged,scores={CmdData=4..},predicate=game:inarena] on passengers on passengers on origin positioned as @s run particle dust_color_transition{from_color:[1.0,1.0,1.0],scale:1.7,to_color:[0.398,0.398,0.398]} ^ ^ ^-1 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=GoldenCannonball,tag=!Submerged,scores={CmdData=4..},predicate=game:inarena] on passengers on passengers on origin at @s run particle dust_color_transition{from_color:[1.0,0.835,0.0],scale:1.4,to_color:[1.0,0.667,0.0]} ^ ^ ^ 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
 
-execute at @s[tag=!TracerCannonball,tag=!CannonballCluster,tag=!Submerged,tag=!StrikeLightning,tag=!ChainCannonball,tag=!GoldenCannonball,tag=!bouncing,scores={CmdData=4..},predicate=game:inarena] on passengers on passengers on origin at @s run particle dust_color_transition 1 1 1 2 0.398 0.398 0.398 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
-execute at @s[tag=!TracerCannonball,tag=CannonballCluster,tag=!Submerged,scores={CmdData=4..},predicate=game:inarena] on passengers on passengers on origin at @s run particle dust_color_transition 1 1 1 1.7 0.398 0.398 0.398 ^ ^ ^ 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=!TracerCannonball,tag=!CannonballCluster,tag=!Submerged,tag=!StrikeLightning,tag=!ChainCannonball,tag=!GoldenCannonball,tag=!bouncing,scores={CmdData=4..},predicate=game:inarena] on passengers on passengers on origin at @s run particle dust_color_transition{from_color:[1.0,1.0,1.0],scale:2,to_color:[0.398,0.398,0.398]} ^ ^ ^ 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=!TracerCannonball,tag=CannonballCluster,tag=!Submerged,scores={CmdData=4..},predicate=game:inarena] on passengers on passengers on origin at @s run particle dust_color_transition{from_color:[1.0,1.0,1.0],scale:1.7,to_color:[0.398,0.398,0.398]} ^ ^ ^ 0.1 0.1 0.1 0.01 3 force @a[predicate=cannons:seeparticles]
 
 execute at @s[tag=!CannonballCluster,tag=!GoldenCannonball,tag=!StrikeLightning,tag=!Submerged,tag=!ChainCannonball,tag=!TracerCannonball,scores={CmdData=4..},predicate=game:inarena,tag=!bouncing] on passengers on passengers on origin at @s run particle large_smoke ^ ^ ^ 0 0 0 0.1 4 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=GoldenCannonball,tag=!Submerged,scores={CmdData=4..},predicate=game:inarena] on passengers on passengers on origin at @s run particle large_smoke ^ ^ ^ 0 0 0 0.1 2 force @a[predicate=cannons:seeparticles]

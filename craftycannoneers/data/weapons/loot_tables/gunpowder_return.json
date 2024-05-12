@@ -1,23 +1,23 @@
 {
-    "pools": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
         {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:loot_table",
-                    "name": "weapons:gunpowder",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "type": "minecraft:score",
-                                "target": "this",
-                                "score": "CmdData"
-                            }
-                        }
-                    ]
-                }
-            ]
+          "type": "minecraft:loot_table",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "CmdData"
+              }
+            }
+          ],
+          "value": "weapons:gunpowder"
         }
-    ]
+      ]
+    }
+  ]
 }

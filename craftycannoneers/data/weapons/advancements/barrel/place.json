@@ -1,35 +1,37 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:item_used_on_block",
-            "conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:inverted",
-                        "term": {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "team": "Lobby"
-                            }
-                        }
-                    }
-                ],
-                "location": [
-                    {
-                        "condition": "minecraft:match_tool",
-                        "predicate": {
-                            "items": [
-                                "minecraft:mooshroom_spawn_egg"
-                            ],
-                            "nbt": "{Barrel:1b}"
-                        }
-                    }
-                ]
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
             }
-        }
-    },
-    "rewards": {
-        "function": "weapons:barrel/place"
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:mooshroom_spawn_egg"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{Barrel:1b}"
+              }
+            }
+          }
+        ]
+      }
     }
+  },
+  "rewards": {
+    "function": "weapons:barrel/place"
+  }
 }

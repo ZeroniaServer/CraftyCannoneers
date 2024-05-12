@@ -2,26 +2,27 @@
 tp @s ~ ~ ~ ~ ~
 
 #> Align to world surface (lowest block) for y-coordinate
-execute store result score @s CmdData run data get entity @s Pos[1]
-execute at @s positioned over motion_blocking summon marker run function game:modifiers/graverobbery/floorcoord
+execute store result score @s CmdData run data get entity @s Pos[1] 1000
+execute summon marker run function game:modifiers/graverobbery/floorcoord
 scoreboard players operation @s CmdData < $y CmdData
-execute store result entity @s Pos[1] double 1 run scoreboard players get @s CmdData
+execute store result entity @s Pos[1] double 0.001 run scoreboard players get @s CmdData
+
+#> Detect water/surface
+execute if data storage iris:output HitWater run tag @s add water
+execute unless data storage iris:output {HitWater:0} run tag @s[tag=water] add surface
+execute at @s[tag=!water] positioned ~ ~0.01 ~ if predicate game:located_water run tag @s add surface
 
 #> Move sufficiently away from other entities
 scoreboard players set $gravetries CmdData 0
 function game:modifiers/graverobbery/nooverlap
 
 #> Another alignment attempt
-execute store result score @s CmdData run data get entity @s Pos[1]
+execute store result score @s CmdData run data get entity @s Pos[1] 1000
 execute at @s positioned over motion_blocking summon marker run function game:modifiers/graverobbery/floorcoord
 scoreboard players operation @s CmdData < $y CmdData
-execute store result entity @s Pos[1] double 1 run scoreboard players get @s CmdData
-execute at @s run function game:modifiers/graverobbery/adjustheight
-
-#> Detect water/surface
-execute at @s positioned ~ ~-1 ~ if predicate game:located_water run tag @s add water
-execute at @s if predicate game:located_water run tag @s add water
-execute at @s positioned ~ ~-1 ~ if predicate game:located_water positioned ~ ~1 ~ unless predicate game:located_water run tag @s add surface
+execute store result entity @s Pos[1] double 0.001 run scoreboard players get @s CmdData
+execute at @s run tp @s[tag=water,tag=!surface] ~ ~-0.2 ~
+execute at @s run tp @s[tag=water,tag=surface] ~ ~0.3 ~
 
 #> Summon rotated grave chest
 data modify storage craftycannoneers:grave angle set from entity @s Rotation[0]

@@ -1,4 +1,4 @@
-summon snowball ~ ~ ~ {NoGravity:1b,Item:{id:"minecraft:slime_ball",Count:1b},Tags:["cbtracker","new"],Passengers:[{id:"minecraft:snowball",NoGravity:1b,Item:{id:"minecraft:slime_ball",Count:1b},Tags:["cbtracker"]}]}
+summon snowball ~ ~ ~ {NoGravity:1b,Item:{id:"minecraft:slime_ball",count:1},Tags:["cbtracker","new"],Passengers:[{id:"minecraft:snowball",NoGravity:1b,Item:{id:"minecraft:slime_ball",count:1},Tags:["cbtracker"]}]}
 summon marker ~ ~ ~ {Tags:["cbmarker","new"]}
 ride @e[type=snowball,tag=cbtracker,tag=new,limit=1] mount @s
 execute on passengers run tag @s remove new

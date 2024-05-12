@@ -1,4 +1,4 @@
-item replace entity @s[tag=init] armor.head with diamond_hoe{CustomModelData:106}
+item replace entity @s[tag=init] armor.head with minecraft:diamond_hoe[custom_model_data=106]
 tag @s[tag=!init] add init
 
 execute if entity @s[tag=vacant] run return 0

@@ -1,21 +1,21 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:inventory_changed",
-            "conditions": {
-                "player": {
-                    "equipment": {
-                        "mainhand": {
-                            "items": [
-                                "minecraft:bucket"
-                            ]
-                        }
-                    }
-                }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:bucket"
+              ]
             }
+          }
         }
-    },
-    "rewards": {
-        "function": "cannons:bucket"
+      }
     }
+  },
+  "rewards": {
+    "function": "cannons:bucket"
+  }
 }
