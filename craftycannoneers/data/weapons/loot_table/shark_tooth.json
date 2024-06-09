@@ -1,0 +1,58 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_shovel"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:max_damage": 10,
+            "minecraft:attribute_modifiers": {
+              "modifiers": [
+                {
+                  "amount": 5.0,
+                  "slot": "mainhand",
+                  "name": "generic.attack_speed",
+                  "id": "craftycannoneers:shark_tooth_attack_speed",
+                  "type": "generic.attack_speed",
+                  "operation": "add_value"
+                },
+                {
+                  "amount": 8.0,
+                  "slot": "mainhand",
+                  "name": "generic.attack_damage",
+                  "id": "crafycannoneers:shark_tooth_attack_damage",
+                  "type": "generic.attack_damage",
+                  "operation": "add_value"
+                }
+              ]
+            },
+            "minecraft:custom_name": "[{\"translate\":\"item.shark_tooth\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"item.modifier_exclusive\",\"italic\":true,\"color\":\"light_purple\"}]"
+            ]
+          }
+        },
+        {
+          "function": "minecraft:set_custom_data",
+          "tag": "{NoDrop:1b}",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
