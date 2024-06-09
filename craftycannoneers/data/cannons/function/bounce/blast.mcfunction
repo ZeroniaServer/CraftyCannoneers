@@ -1,7 +1,7 @@
 #> Summon AECs + slimes and tag players as Blasted
-execute at @s as @a[tag=!Blasted,gamemode=!spectator,distance=..5] at @s run summon area_effect_cloud ~ ~155 ~ {Tags:["BounceAEC"],Particle:"block air",Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:0.1f,Duration:1,effects:[{id:"minecraft:levitation",amplifier:100,duration:2,show_particles:0b}]}
+execute at @s as @a[tag=!Blasted,gamemode=!spectator,distance=..5] at @s run summon area_effect_cloud ~ ~155 ~ {Tags:["BounceAEC"],Particle:{type:"block",block_state:"minecraft:air"},Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:0.1f,Duration:1,effects:[{id:"minecraft:levitation",amplifier:100,duration:2,show_particles:0b}]}
 execute at @s run tag @a[tag=!Blasted,gamemode=!spectator,distance=..5] add Blasted
-execute if score $Wildlife CmdData matches 1 at @s as @e[type=cat,tag=CrabVehicle,distance=..5] at @s run summon area_effect_cloud ~ ~155 ~ {Tags:["BounceAEC"],Particle:"block air",Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:0.1f,Duration:1,effects:[{id:"minecraft:levitation",amplifier:80,duration:2,show_particles:0b}]}
+execute if score $Wildlife CmdData matches 1 at @s as @e[type=cat,tag=CrabVehicle,distance=..5] at @s run summon area_effect_cloud ~ ~155 ~ {Tags:["BounceAEC"],Particle:{type:"block",block_state:"minecraft:air"},Age:-1,ReapplicationDelay:-1,WaitTime:0,Radius:0.1f,Duration:1,effects:[{id:"minecraft:levitation",amplifier:80,duration:2,show_particles:0b}]}
 scoreboard players set $blast BombDelay 0
 execute if entity @a[gamemode=!spectator,distance=..6.75] run scoreboard players set $blast BombDelay 1
 execute unless score $blast BombDelay matches 1 if entity @e[type=cat,tag=CrabVehicle,limit=1,distance=..6.75] run scoreboard players set $blast BombDelay 1
