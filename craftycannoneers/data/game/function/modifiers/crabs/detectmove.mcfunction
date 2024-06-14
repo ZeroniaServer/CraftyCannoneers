@@ -1,4 +1,4 @@
-execute on vehicle unless entity @s[nbt={Motion:[0.0d,0.0d,0.0d]}] on passengers run tag @s add Moving
+execute on vehicle unless predicate game:still on passengers run tag @s add Moving
 item replace entity @s[tag=Moving] container.0 with diamond_hoe[custom_model_data=118]
 item replace entity @s[tag=!Moving] container.0 with diamond_hoe[custom_model_data=117]
 
