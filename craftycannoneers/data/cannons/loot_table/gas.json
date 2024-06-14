@@ -1,0 +1,51 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_hoe"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_custom_data",
+          "tag": "{Cannonball:4b}"
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:custom_model_data": 31,
+            "!minecraft:damage": {},
+            "minecraft:custom_name": "[{\"translate\":\"cannonball.gas\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"cannonball.gas.lore.1\",\"italic\":false,\"color\":\"white\"}]",
+              "[{\"translate\":\"cannonball.gas.lore.2\",\"italic\":false,\"color\":\"white\"}]",
+              "[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
+              "[{\"translate\":\"cannonball.gas.lore.3\",\"italic\":false,\"color\":\"aqua\"}]",
+              "[{\"translate\":\"cannonball.gas.lore.4\",\"italic\":false,\"color\":\"aqua\"}]"
+            ],
+            "minecraft:attribute_modifiers": {
+              "modifiers": [],
+              "show_in_tooltip": false
+            }
+          }
+        },
+        {
+          "function": "minecraft:set_custom_data",
+          "tag": "{NoDrop:1b}",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

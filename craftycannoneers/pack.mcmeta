@@ -3,25 +3,16 @@
         "block": [
             {
                 "namespace": "^minecraft$",
-                "path": "recipes/.*"
+                "path": "recipe/.*"
             },
             {
                 "namespace": "^minecraft$",
-                "path": "advancements/.*"
+                "path": "advancement/.*"
             }
         ]
     },
     "pack": {
-        "pack_format": 26,
-        "description": "Made by Zeronia",
-        "supported_formats": [26, 32]
-    },
-    "overlays": {
-        "entries": [
-            {
-                "formats": [27, 32],
-                "directory": "1_20_5"
-            }
-        ]
+        "pack_format": 48,
+        "description": "Made by Zeronia"
     }
 }
