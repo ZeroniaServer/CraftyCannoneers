@@ -5,7 +5,7 @@
     "predicate": {
       "stepping_on": {
         "block": {
-          "tag": "game:shipblocks"
+          "blocks": "#game:shipblocks"
         }
       }
     }
