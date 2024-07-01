@@ -30,6 +30,7 @@ execute at @s[tag=WaterKill,scores={CmdData=1..,ctr=1}] run tp @s ~ ~-0.015 ~
 scoreboard players reset @s[tag=WaterKill,scores={CmdData=1..}] ctr
 execute at @s[tag=WaterKill,scores={CmdData=1..}] run particle bubble ~ ~ ~ 0 0 0 0 1 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=WaterKill,scores={CmdData=1}] run particle cloud ~ ~1 ~ 0 0 0 0.1 2 force @a[predicate=cannons:seeparticles]
+execute at @s[tag=WaterKill,scores={CmdData=1}] on passengers run kill @s
 execute at @s[tag=WaterKill,scores={CmdData=1}] run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.8 2
 execute at @s[tag=WaterKill,scores={CmdData=2}] run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 0.8 1.6
 data merge entity @s[tag=WaterKill,scores={CmdData=28}] {start_interpolation:0,interpolation_duration:3,transformation:{scale:[0.0f,0.0f,0.0f]}}
