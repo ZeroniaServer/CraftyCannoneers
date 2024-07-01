@@ -1,2 +1,0 @@
-tellraw @s ["",{"translate":"chest.skeleton.warn","color":"red","with":[{"translate":"chest.skeleton","underlined":true,"color":"dark_red"},{"translate":"item.skeleton_key","color":"dark_aqua"}]}]
-advancement revoke @s only chests:notifylock
