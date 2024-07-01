@@ -28,12 +28,10 @@
             "minecraft:charged_projectiles": [
               {
                 "id": "minecraft:arrow",
-                "tag": {
-                  "display": {
-                    "Name": "[{\"translate\":\"item.minecraft.arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]"
-                  }
-                },
-                "count": 1
+                "count": 1,
+                "components": {
+                  "minecraft:custom_name": "[{\"translate\":\"item.minecraft.arrow\",\"italic\":false,\"color\":\"dark_aqua\"}]"
+                }
               }
             ],
             "minecraft:attribute_modifiers": {

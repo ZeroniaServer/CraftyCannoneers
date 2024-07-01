@@ -18,7 +18,6 @@
                 {
                   "amount": 5.0,
                   "slot": "mainhand",
-                  "name": "generic.attack_speed",
                   "id": "craftycannoneers:shark_tooth_attack_speed",
                   "type": "generic.attack_speed",
                   "operation": "add_value"
@@ -26,7 +25,6 @@
                 {
                   "amount": 8.0,
                   "slot": "mainhand",
-                  "name": "generic.attack_damage",
                   "id": "crafycannoneers:shark_tooth_attack_damage",
                   "type": "generic.attack_damage",
                   "operation": "add_value"

@@ -18,7 +18,6 @@
                 {
                   "amount": -3.5,
                   "slot": "mainhand",
-                  "name": "generic.attack_speed",
                   "id": "craftycannoneers:mace_attack_speed",
                   "type": "generic.attack_speed",
                   "operation": "add_value"
@@ -26,7 +25,6 @@
                 {
                   "amount": 12.0,
                   "slot": "mainhand",
-                  "name": "generic.attack_damage",
                   "id": "craftycannoneers:mace_attack_damage",
                   "type": "generic.attack_damage",
                   "operation": "add_value"

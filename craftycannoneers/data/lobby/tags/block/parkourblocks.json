@@ -1,5 +1,4 @@
 {
-    "description": "All blocks used in the parkour",
     "values": [
         "minecraft:spruce_planks",
         "minecraft:air",
