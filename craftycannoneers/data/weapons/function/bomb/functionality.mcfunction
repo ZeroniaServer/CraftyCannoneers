@@ -21,6 +21,7 @@ scoreboard players set @s[predicate=game:inwater,tag=!WaterKill,tag=!boat] CmdDa
 tag @s[predicate=game:inwater,tag=!WaterKill,tag=!boat] add WaterKill 
 tag @s[tag=WaterKill] remove Kaboom
 execute if entity @s[tag=WaterKill,scores={CmdData=0}] on vehicle run kill @s
+execute as @e[type=breeze_wind_charge,predicate=game:inwater] run kill @s
 execute at @s[tag=WaterKill,scores={CmdData=1..}] positioned ~ ~-0.8 ~ if predicate game:located_water run scoreboard players add @s ctr 1
 execute at @s[tag=WaterKill,scores={CmdData=1..}] positioned ~ ~-0.7 ~ if predicate game:located_water run scoreboard players add @s ctr 1
 execute at @s[tag=WaterKill,scores={CmdData=1..}] positioned ~ ~-0.6 ~ if predicate game:located_water run scoreboard players add @s ctr 1
