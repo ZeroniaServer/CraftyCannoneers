@@ -115,8 +115,8 @@ execute if entity @s[tag=SwimBack] at @s run tag @s remove Swimback
 
 #> Attack cooldown
 execute if score @s sharkcooldown matches 1.. run scoreboard players remove @s sharkcooldown 1
-execute if score @s sharkcooldown matches 1.. run data merge entity @s {Attributes:[{Name:"generic.follow_range",Base:0.0d}]}
-execute unless score @s sharkcooldown matches 1.. run data merge entity @s {Attributes:[{Name:"generic.follow_range",Base:15.0d}]}
+execute if score @s sharkcooldown matches 1.. run data merge entity @s {attributes:[{id:"minecraft:generic.follow_range",base:0.0d}]}
+execute unless score @s sharkcooldown matches 1.. run data merge entity @s {attributes:[{id:"minecraft:generic.follow_range",base:15.0d}]}
 execute unless score @s sharkcooldown matches 1.. run tag @s remove OnCooldown
 execute if score @s sharkcooldown matches -2147483648..0 run scoreboard players reset @s sharkcooldown
 
