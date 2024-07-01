@@ -6,10 +6,15 @@ execute if entity @s[tag=boat] on vehicle run kill
 execute if entity @s[tag=!boat] on vehicle run function weapons:bomb/projectile
 
 #> General
+
 execute if score $inair CmdData matches 0 run tag @s[tag=!WaterKill,scores={CmdData=3..}] add Kaboom
 scoreboard players add @s CmdData 1
 execute at @s[tag=!WaterKill] run particle flame ~ ~0.5 ~ 0 0 0 .02 1 force @a[predicate=cannons:seeparticles]
 execute at @s[tag=!WaterKill] run playsound blastbombfuse master @a ~ ~ ~ 0.5 1
+
+execute as @e[type=breeze_wind_charge,tag=BlastCharge] at @s run data merge entity @s {Motion:[0.0d,-10.0d,0.0d]}
+
+execute as @e[type=breeze_wind_charge,tag=BlastCharge] at @s run data modify entity @s Motion set from entity @e[type=potion,tag=Bomb,limit=1,sort=nearest] Motion
 
 #> Water kill
 scoreboard players set @s[predicate=game:inwater,tag=!WaterKill,tag=!boat] CmdData 0

@@ -36,7 +36,7 @@ execute if score @s BombDelay matches 3 as @e[type=item_display,tag=CBDisplay,ta
 execute if score @s BombDelay matches 3 as @e[type=item_display,tag=CrabTrap,distance=..4] at @s run function weapons:crabtrap/break
 
 #> Explosion effects
-execute if score @s BombDelay matches 3 run function weapons:bomb/explode
+execute if score @s BombDelay matches 2 run function weapons:bomb/explode
 
 #> Kill
-execute if score @s BombDelay matches 4.. run function weapons:bomb/kill
+execute if score @s BombDelay matches 3.. run function weapons:bomb/kill
