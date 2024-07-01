@@ -1,7 +1,9 @@
 #> Wind particles on affected projectiles
-execute if score $WindDirection CmdData matches 0 at @s[tag=!TracerCannonball,predicate=game:inarena] positioned ^ ^ ^0.3 rotated -90 0 run particle minecraft:cloud ~-1 ~ ~ ^ ^ ^1000000 0.0000005 0 force @a[predicate=cannons:seeparticles]
-execute if score $WindDirection CmdData matches 1 at @s[tag=!TracerCannonball,predicate=game:inarena] positioned ^ ^ ^0.3 rotated 90 0 run particle minecraft:cloud ~1 ~ ~ ^ ^ ^1000000 0.0000005 0 force @a[predicate=cannons:seeparticles]
+execute if score $WindDirection CmdData matches 0 at @s[tag=!TracerCannonball,predicate=game:inarena] positioned ^ ^ ^0.3 rotated -90 0 run particle minecraft:small_gust ~0.1 ~ ~ 0 0 0 0.0000005 1 force @a[predicate=cannons:seeparticles]
+execute if score $WindDirection CmdData matches 1 at @s[tag=!TracerCannonball,predicate=game:inarena] positioned ^ ^ ^0.3 rotated 90 0 run particle minecraft:small_gust ~-0.1 ~ ~ 0 0 0 0.0000005 1 force @a[predicate=cannons:seeparticles]
 
+execute if score $WindDirection CmdData matches 0 at @s[tag=!TracerCannonball,tag=cannonball,predicate=game:inarena] positioned ^ ^ ^0.3 rotated -90 0 run particle minecraft:small_gust ~0.4 ~ ~ 0.4 0.4 0.4 0.0000005 8 force @a[predicate=cannons:seeparticles]
+execute if score $WindDirection CmdData matches 1 at @s[tag=!TracerCannonball,tag=cannonball,predicate=game:inarena] positioned ^ ^ ^0.3 rotated 90 0 run particle minecraft:small_gust ~-0.4 ~ ~ 0.4 0.4 0.4 0.0000005 8 force @a[predicate=cannons:seeparticles]
 #> Set constants for wind motion calculation
 # TODO refine values?
 scoreboard players set $WindMax CmdData 32000
