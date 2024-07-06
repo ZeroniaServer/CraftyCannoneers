@@ -16,7 +16,9 @@
         {
           "function": "minecraft:set_components",
           "components": {
-            "!minecraft:damage": {},
+            "minecraft:unbreakable": {
+              "show_in_tooltip": false
+            },
             "minecraft:custom_name": "[{\"translate\":\"item.boarding_axe\",\"italic\":false,\"color\":\"green\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"item.boarding_axe.lore.1\",\"italic\":false,\"color\":\"white\"}]",

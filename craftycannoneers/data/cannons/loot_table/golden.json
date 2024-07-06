@@ -17,7 +17,9 @@
           "function": "minecraft:set_components",
           "components": {
             "minecraft:custom_model_data": 73,
-            "!minecraft:damage": {},
+            "minecraft:unbreakable": {
+              "show_in_tooltip": false
+            },
             "minecraft:custom_name": "[{\"translate\":\"cannonball.golden\",\"color\":\"gold\",\"italic\":false}]",
             "minecraft:lore": [
               "[{\"translate\":\"cannonball.golden.lore.1\",\"italic\":false,\"color\":\"dark_red\",\"underlined\":true},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\",\"underlined\":false}]",

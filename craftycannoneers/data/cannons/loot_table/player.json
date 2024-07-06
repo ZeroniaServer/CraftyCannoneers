@@ -17,7 +17,9 @@
           "function": "minecraft:set_components",
           "components": {
             "minecraft:custom_model_data": 56,
-            "!minecraft:damage": {},
+            "minecraft:unbreakable": {
+              "show_in_tooltip": false
+            },
             "minecraft:custom_name": "[{\"translate\":\"cannonball.player\",\"italic\":false,\"color\":\"dark_aqua\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"cannonball.player.lore.1\",\"italic\":false,\"color\":\"white\"}]",

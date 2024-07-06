@@ -16,7 +16,9 @@
         {
           "function": "minecraft:set_components",
           "components": {
-            "!minecraft:damage": {},
+            "minecraft:unbreakable": {
+              "show_in_tooltip": false
+            },
             "minecraft:custom_name": "[{\"translate\":\"item.minecraft.trident\",\"italic\":false,\"color\":\"dark_aqua\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"item.harpoon.lore.1\",\"italic\":false,\"color\":\"white\"}]",

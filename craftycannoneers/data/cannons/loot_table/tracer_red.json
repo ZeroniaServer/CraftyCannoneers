@@ -23,7 +23,9 @@
               },
               "show_in_tooltip": false
             },
-            "!minecraft:damage": {},
+            "minecraft:unbreakable": {
+              "show_in_tooltip": false
+            },
             "minecraft:custom_name": "[{\"translate\":\"cannonball.tracer\",\"italic\":false,\"color\":\"red\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"cannonball.tracer.lore.1\",\"italic\":false,\"color\":\"white\"}]",

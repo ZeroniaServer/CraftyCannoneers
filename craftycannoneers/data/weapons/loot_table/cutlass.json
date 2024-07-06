@@ -22,7 +22,9 @@
               },
               "show_in_tooltip": false
             },
-            "!minecraft:damage": {},
+            "minecraft:unbreakable": {
+              "show_in_tooltip": false
+            },
             "minecraft:custom_name": "[{\"translate\":\"item.cutlass\",\"italic\":false,\"color\":\"dark_aqua\"}]"
           }
         }

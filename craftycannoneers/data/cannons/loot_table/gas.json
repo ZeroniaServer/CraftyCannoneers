@@ -17,7 +17,9 @@
           "function": "minecraft:set_components",
           "components": {
             "minecraft:custom_model_data": 31,
-            "!minecraft:damage": {},
+            "minecraft:unbreakable": {
+              "show_in_tooltip": false
+            },
             "minecraft:custom_name": "[{\"translate\":\"cannonball.gas\",\"italic\":false,\"color\":\"dark_aqua\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"cannonball.gas.lore.1\",\"italic\":false,\"color\":\"white\"}]",
