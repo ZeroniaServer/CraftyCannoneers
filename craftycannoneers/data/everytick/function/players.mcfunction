@@ -12,6 +12,9 @@ effect give @s[team=Lobby] resistance infinite 100 true
 effect give @s[team=Lobby] fire_resistance infinite 100 true
 effect give @s[team=Lobby] water_breathing infinite 127 true
 effect give @s[team=Lobby,tag=!InCombat] weakness infinite 127 true
+effect clear @s[gamemode=spectator] poison
+effect clear @s[gamemode=spectator] nausea
+effect clear @s[gamemode=spectator] blindness
 xp set @s 0 levels
 xp set @s 0 points
 spawnpoint @s[team=Lobby] -55 -21 0 -90
@@ -26,7 +29,7 @@ scoreboard players operation @s leavecheck = $curr leavecheck
 execute at @s[team=Lobby,tag=!firstJoined] run function everytick:welcome
 
 #> Notify players about Training Island
-execute if entity @s[tag=NeedsTutorial,tag=!hideTips] run tellraw @s ["","\n",{"translate":"chat.new_here","color":"green","with":[{"translate":"game.name","with":[{"translate":"game.crafty","bold":true,"color":"dark_purple"},{"translate":"game.cannoneers","bold":true,"color":"gold"}]}]},"\n",{"translate":"chat.recommend","color":"green","with":[{"translate":"tutorial.training_island","bold":true,"color":"aqua"}]},"\n",{"translate":"chat.warp_pad","italic":true,"color":"dark_green"},"\n"]
+execute if entity @s[tag=NeedsTutorial,tag=!hideTips] run tellraw @s ["\n",{"translate":"chat.new_here","color":"green","with":[{"translate":"game.name","with":[{"translate":"game.crafty","bold":true,"color":"dark_purple"},{"translate":"game.cannoneers","bold":true,"color":"gold"}]}]},"\n",{"translate":"chat.recommend","color":"green","with":[{"translate":"tutorial.training_island","bold":true,"color":"aqua"}]},"\n",{"translate":"chat.warp_pad","italic":true,"color":"dark_green"},"\n"]
 tag @s[tag=NeedsTutorial] remove NeedsTutorial
 
 #> Notify players about resource pack

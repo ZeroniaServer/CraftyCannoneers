@@ -12,9 +12,9 @@ kill @s[scores={CmdData=500..}]
 
 execute at @s run function cannons:gas/chase
 
-execute at @s run effect give @a[distance=..3,team=!Lobby,team=!Spectator,team=!Developer] poison 6 100 true
-execute at @s run effect give @a[distance=..3,team=!Lobby,team=!Spectator,team=!Developer] nausea 10 3 true
-execute at @s run effect give @a[distance=..3,team=!Lobby,team=!Spectator,team=!Developer] blindness 2 0 true
+execute at @s run effect give @a[distance=..3,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] poison 6 100 true
+execute at @s run effect give @a[distance=..3,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] nausea 10 3 true
+execute at @s run effect give @a[distance=..3,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] blindness 2 0 true
 execute at @s run effect clear @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] regeneration
 execute at @s run tag @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] add NoRegen
 execute at @s run scoreboard players reset @a[distance=..3.5,gamemode=!spectator,team=!Lobby,team=!Spectator,team=!Developer] NoRegenTimer

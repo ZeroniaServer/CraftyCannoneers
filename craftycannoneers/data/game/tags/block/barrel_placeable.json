@@ -1882,7 +1882,7 @@
             "required": false
         },
         {
-            "id": "minecraft:grass_path",
+            "id": "minecraft:dirt_path",
             "required": false
         },
         {
