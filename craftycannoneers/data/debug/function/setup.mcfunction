@@ -161,6 +161,12 @@ scoreboard objectives add spectate trigger
 scoreboard objectives add joinorange trigger
 scoreboard objectives add joinpurple trigger
 scoreboard players add $curr leavecheck 0
+scoreboard objectives add PowerL dummy
+scoreboard objectives add PowerM dummy
+scoreboard objectives add PowerR dummy
+scoreboard objectives add PowerV dummy
+scoreboard objectives add cannonshot dummy
+scoreboard objectives add checkpoint dummy
 
 #> Bossbars
 bossbar add lobbybar ""
