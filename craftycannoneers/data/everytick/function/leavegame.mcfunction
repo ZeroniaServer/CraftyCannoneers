@@ -11,8 +11,8 @@ execute unless score $servermode CmdData matches 1 run scoreboard players reset 
 execute if score $servermode CmdData matches 1 run scoreboard players enable @s leavegame
 
 #Pirate Hat game leaving
-execute if entity @s[team=Purple,predicate=!game:has_hat] unless score @s death matches 1.. unless score @s respawn matches 1.. run trigger leavegame
-execute if entity @s[team=Orange,predicate=!game:has_hat] unless score @s death matches 1.. unless score @s respawn matches 1.. run trigger leavegame
+execute if entity @s[team=Purple,predicate=!game:has_hat] unless score @s death matches 1.. run trigger leavegame
+execute if entity @s[team=Orange,predicate=!game:has_hat] unless score @s death matches 1.. run trigger leavegame
 execute if entity @s[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveGame
 
 execute if entity @s[team=!Lobby,team=!Spectator,team=!Developer] unless score @s leavegame matches 0 run tellraw @a ["",{"translate":"game.left_team","color":"dark_aqua","with":[{"selector":"@s"}]}]
