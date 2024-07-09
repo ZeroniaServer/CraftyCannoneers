@@ -1,6 +1,6 @@
 effect clear @s
 clear @s
-function lobby:easteregg/buttonreset
+function lobby:easteregg/rocket/reset
 
 item replace entity @s[team=Orange] armor.head with diamond_hoe[unbreakable={show_in_tooltip:0b},enchantments={levels:{vanishing_curse:1},show_in_tooltip:0b},custom_name='[{"translate":"armor.hat.orange","italic":false,"color":"#ff6600"}]',lore=['[{"text":"","italic":false}]','[{"translate":"armor.hat.lore","italic":false,"color":"white","underlined":true,"bold":true},{"text":"","italic":false,"color":"dark_purple","underlined":false,"bold":false}]','[{"text":"","italic":false,"color":"dark_purple"}]','[{"translate":"ahoy","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]'],attribute_modifiers={modifiers:[{type:"generic.armor",slot:"head",operation:"add_value",id:"craftycannoneers:head_armor",amount:2}],show_in_tooltip:0b},custom_model_data=17,custom_data={NoDrop:1b}]
 item replace entity @s[team=Orange] armor.chest with leather_chestplate[unbreakable={show_in_tooltip:0b},enchantments={levels:{binding_curse:1,vanishing_curse:1},show_in_tooltip:0b},custom_name='[{"translate":"armor.chestplate.orange","italic":false,"color":"#ff6600"}]',dyed_color={rgb:16155168,show_in_tooltip:false},attribute_modifiers={modifiers:[{type:"generic.armor",slot:"chest",operation:"add_value",id:"craftycannoneers:chest_armor",amount:6}],show_in_tooltip:0b}]

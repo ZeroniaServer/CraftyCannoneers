@@ -36,7 +36,7 @@ clear @s[tag=LeaveGame]
 execute if entity @s[tag=LeaveGame] run function lobby:items
 effect clear @s[tag=LeaveGame]
 gamemode adventure @s[tag=LeaveGame]
-attribute @s[tag=LeaveGame] minecraft:generic.luck base set 0.0
+attribute @s[tag=LeaveGame] generic.armor base set 0
 recipe take @s[tag=LeaveGame] *
 execute unless score @s leavegame matches 1.. run tag @s[tag=LeaveGame,tag=!WaterTP] remove msgReceived
 execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,tag=!WaterTP,advancements={tutorial:objectives/combat=false}] add NeedsTutorial

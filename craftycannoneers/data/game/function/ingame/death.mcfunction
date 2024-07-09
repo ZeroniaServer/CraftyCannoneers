@@ -1,5 +1,6 @@
 tag @s remove NoRegen
 function cannons:despawnplayerc
+function balancing:pvpskillcheck
 function game:givegear
 gamemode adventure @s[gamemode=!spectator]
 title @s title {"text":""}
