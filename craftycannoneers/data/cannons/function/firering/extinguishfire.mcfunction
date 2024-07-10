@@ -12,5 +12,3 @@ tag @e[type=marker,tag=FireRemover,tag=!HasUUID] add HasUUID
 tag @s remove self
 
 execute as @e[type=marker,tag=FireRemover] at @s run function cannons:firering/extinguishloop
-# execute unless predicate cannons:safezones/tutorial run gamerule doFireTick true
-# execute if predicate cannons:safezones/tutorial unless score $gamestate CmdData matches 2.. run gamerule doFireTick true

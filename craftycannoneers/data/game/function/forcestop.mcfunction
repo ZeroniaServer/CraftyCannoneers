@@ -9,6 +9,7 @@ scoreboard players set $dust3 CmdData -1
 scoreboard players set $dust2 CmdData -1
 
 gamerule fallDamage false
+gamerule doFireTick false
 
 bossbar remove purpleship
 bossbar remove purpleship2

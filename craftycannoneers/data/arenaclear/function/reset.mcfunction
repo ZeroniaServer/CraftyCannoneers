@@ -49,4 +49,9 @@ function arenaclear:fakeairclear
 function arenaclear:teamchests
 
 function game:setreadysign
+
+summon marker 39 -40 -68 {Tags:["FireRemover"]}
+summon marker 34 -40 43 {Tags:["FireRemover"]}
+execute as @e[type=marker,tag=FireRemover] at @s run function cannons:firering/extinguishloop
+
 schedule function arenaclear:shipplacement/orange1 5t
