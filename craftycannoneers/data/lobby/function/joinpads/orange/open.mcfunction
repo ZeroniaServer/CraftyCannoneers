@@ -1,6 +1,6 @@
-#> Barrier display
-execute unless score $orangelock CmdData matches 1 if score $InOrange CmdData > $InPurple CmdData run function lobby:joinpads/orange/lock
-execute unless score $orangelock CmdData matches 1 if score $InOrange CmdData >= $MaxTeamSize CmdData run function lobby:joinpads/orange/lock
+#> Lock effects
+execute if score $InOrange CmdData >= $MaxTeamSize CmdData run function lobby:joinpads/orange/fulllock
+execute unless score $InOrange CmdData >= $MaxTeamSize CmdData if score $InOrange CmdData > $InPurple CmdData run function lobby:joinpads/orange/imbalancedlock
 execute if score $orangelock CmdData matches 1 unless score $InOrange CmdData > $InPurple CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData run function lobby:joinpads/orange/unlock
 
 #> If there's players in the lobby

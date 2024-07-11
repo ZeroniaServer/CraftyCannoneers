@@ -1,0 +1,4 @@
+data modify entity @e[type=text_display,tag=JoinpadLockTitle,tag=Orange,limit=1,distance=..3] text set value '{"translate":"game.full"}'
+execute unless score $InPurple CmdData >= $MaxTeamSize CmdData run data modify entity @e[type=text_display,tag=JoinpadLockSubtitle,tag=Orange,limit=1,distance=..3] text set value '["",{"translate":"game.try_join","color":"dark_aqua","bold":false,"with":[{"translate":"game.try_join.purple","color":"dark_purple","bold":true},{"translate":"game.try_join.team","color":"dark_aqua","bold":false}]}]'
+execute if score $InPurple CmdData >= $MaxTeamSize CmdData run data modify entity @e[type=text_display,tag=JoinpadLockSubtitle,tag=Orange,limit=1,distance=..3] text set value '["",{"translate":"game.watch_game","color":"gray","bold":false}]'
+execute unless score $orangelock CmdData matches 1 run function lobby:joinpads/orange/lock
