@@ -21,8 +21,7 @@ execute store result score @s CmdData run data get entity @s Pos[1] 1000
 execute at @s positioned over motion_blocking summon marker run function game:modifiers/graverobbery/floorcoord
 scoreboard players operation @s CmdData < $y CmdData
 execute store result entity @s Pos[1] double 0.001 run scoreboard players get @s CmdData
-execute at @s run tp @s[tag=water,tag=!surface] ~ ~-0.2 ~
-execute at @s run tp @s[tag=water,tag=surface] ~ ~0.3 ~
+execute at @s run tp @s[tag=water] ~ ~-0.2 ~
 
 #> Summon rotated grave chest
 data modify storage craftycannoneers:grave angle set from entity @s Rotation[0]

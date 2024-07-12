@@ -58,4 +58,5 @@ execute store result storage iris:output Distance double 0.000001 run scoreboard
 execute if data storage iris:settings Callback run data modify storage iris:args function set from storage iris:settings Callback
 execute if data storage iris:settings Callback run function iris:raycast/macro_functions/callback with storage iris:args
 
+tag @s remove iris.executing
 return run scoreboard players get $total_distance iris
