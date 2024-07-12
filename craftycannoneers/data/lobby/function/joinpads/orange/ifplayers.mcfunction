@@ -3,5 +3,5 @@ execute unless score $InOrange CmdData > $InPurple CmdData unless score $InOrang
 
 #> Join team
 execute unless score $InOrange CmdData > $InPurple CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData run tag @a[team=Lobby,limit=1,sort=random,distance=..1.2] add JoinOrange
-execute if score $InOrange CmdData >= $MaxTeamSize CmdData as @a[team=Lobby,distance=..1,tag=!tryJoinOrange] run function lobby:joinpads/orange/full
-execute if score $InOrange CmdData > $InPurple CmdData as @a[team=Lobby,distance=..1,tag=!tryJoinOrange] run function lobby:joinpads/orange/imbalanced
+execute if score $InOrange CmdData >= $MaxTeamSize CmdData as @a[team=Lobby,distance=..4,tag=!tryJoinOrange] run function lobby:joinpads/orange/full
+execute if score $InOrange CmdData > $InPurple CmdData as @a[team=Lobby,distance=..4,tag=!tryJoinOrange] run function lobby:joinpads/orange/imbalanced
