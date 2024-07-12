@@ -20,5 +20,9 @@ function game:shotpreventiontimer
 #> Ingame timer
 execute unless score $TimeLimit CmdData matches 42069.. run function game:ingame/timer
 
+#> Lock joinpads if midgame joins are disabled
+execute if score $NoMidgameJoins CmdData matches 1 as @e[x=0,type=marker,tag=joinpad,tag=!JoinpadSpec,tag=!LockedMidgame,limit=2] at @s run function lobby:joinpads/lockmidgame
+execute unless score $NoMidgameJoins CmdData matches 1 as @e[x=0,type=marker,tag=joinpad,tag=!JoinpadSpec,tag=LockedMidgame,limit=2] at @s run function lobby:joinpads/unlockmidgame
+
 #> Game end criteria
 execute unless score $gamestate CmdData matches 3.. run function game:ingame/endcriteria
