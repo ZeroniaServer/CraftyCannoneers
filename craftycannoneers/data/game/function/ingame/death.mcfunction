@@ -27,4 +27,5 @@ scoreboard players add @s hasArrows 1
 scoreboard players set @s respawn 1
 scoreboard players operation $tempuuid playerUUID = @s playerUUID
 execute as @e[type=item_display,tag=FireCannon,scores={CmdData=7}] if score @s playerUUID = $tempuuid playerUUID run scoreboard players reset @s playerUUID
-function game:mvpstats/ingame_check
+execute unless score $gamestate CmdData matches 3 run function game:mvpstats/ingame_check
+execute if score $gamestate CmdData matches 3 run function game:mvpstats/adaptivehats

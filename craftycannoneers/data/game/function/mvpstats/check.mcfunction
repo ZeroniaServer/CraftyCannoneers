@@ -35,8 +35,3 @@ function game:mvpstats/announce
 
 #> Update everyone's hats
 execute as @a[team=!Lobby,team=!Spectator,team=!Developer] run function game:mvpstats/adaptivehats
-
-scoreboard players reset @a MVPkill
-scoreboard players reset @a MVPdeath
-scoreboard players reset @a MVPcannon
-scoreboard players reset @a MVPdamage

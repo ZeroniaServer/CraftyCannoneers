@@ -1,3 +1,6 @@
+#> MVP stats are locked in at the end of the game
+execute if score $gamestate CmdData matches 3 run return 0
+
 tag @a remove KillMVP
 tag @a remove DeathMVP
 tag @a remove DamageMVP
