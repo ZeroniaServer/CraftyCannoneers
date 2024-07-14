@@ -1,0 +1,2 @@
+data modify storage craftycannoneers:cachetemp name set from entity @s item.components."minecraft:custom_data".name
+function lobby:credit/skullcache/translators2 with storage craftycannoneers:cachetemp
