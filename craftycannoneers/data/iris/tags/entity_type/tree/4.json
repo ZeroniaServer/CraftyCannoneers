@@ -1,15 +1,48 @@
 {
     "values": [
-        "minecraft:snow_golem",
-        "minecraft:strider",
-        "#iris:squids",
-        "minecraft:spider",
-        "minecraft:tropical_fish",
-        "minecraft:turtle",
-        "minecraft:vex",
-        "minecraft:wither",
-        "minecraft:wither_skeleton",
-        "minecraft:wolf",
-        "#iris:zombie_like"
+        {
+            "id": "minecraft:sniffer",
+            "required": false
+        },
+        {
+            "id": "minecraft:snow_golem",
+            "required": false
+        },
+        {
+            "id": "minecraft:spider",
+            "required": false
+        },
+        {
+            "id": "minecraft:strider",
+            "required": false
+        },
+        {
+            "id": "minecraft:tropical_fish",
+            "required": false
+        },
+        {
+            "id": "minecraft:turtle",
+            "required": false
+        },
+        {
+            "id": "minecraft:vex",
+            "required": false
+        },
+        {
+            "id": "minecraft:warden",
+            "required": false
+        },
+        {
+            "id": "minecraft:wither",
+            "required": false
+        },
+        {
+            "id": "minecraft:wither_skeleton",
+            "required": false
+        },
+        {
+            "id": "minecraft:wolf",
+            "required": false
+        }
     ]
 }

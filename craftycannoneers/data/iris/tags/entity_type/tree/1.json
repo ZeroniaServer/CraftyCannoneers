@@ -1,14 +1,56 @@
 {
     "values": [
-        "minecraft:creeper",
-        "minecraft:dolphin",
-        "minecraft:donkey",
-        "minecraft:elder_guardian",
-        "minecraft:end_crystal",
-        "minecraft:enderman",
-        "#iris:endermite_like",
-        "#iris:falling_block_like",
-        "minecraft:ghast",
-        "minecraft:giant"
+        {
+            "id": "minecraft:camel",
+            "required": false
+        },
+        {
+            "id": "#iris:shape_groups/cat",
+            "required": false
+        },
+        {
+            "id": "minecraft:cave_spider",
+            "required": false
+        },
+        {
+            "id": "#iris:shape_groups/chest_minecart",
+            "required": false
+        },
+        {
+            "id": "minecraft:chicken",
+            "required": false
+        },
+        {
+            "id": "minecraft:cod",
+            "required": false
+        },
+        {
+            "id": "#iris:shape_groups/cow",
+            "required": false
+        },
+        {
+            "id": "minecraft:creeper",
+            "required": false
+        },
+        {
+            "id": "minecraft:dolphin",
+            "required": false
+        },
+        {
+            "id": "minecraft:donkey",
+            "required": false
+        },
+        {
+            "id": "#iris:shape_groups/dragon_fireball",
+            "required": false
+        },
+        {
+            "id": "#iris:shape_groups/drowned",
+            "required": false
+        },
+        {
+            "id": "#iris:shape_groups/egg",
+            "required": false
+        }
     ]
 }

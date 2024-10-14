@@ -1,12 +1,13 @@
-scoreboard players set $entity_found iris 1
-
-execute if entity @s[type=minecraft:pufferfish] run return run function iris:get_hitbox/entity/shape_groups/pufferfish
-execute if entity @s[type=#iris:player_like] run return run function iris:get_hitbox/entity/shape_groups/player_like
-execute if entity @s[type=minecraft:polar_bear] run return run function iris:get_hitbox/entity/shape_groups/polar_bear
-execute if entity @s[type=minecraft:rabbit] run return run function iris:get_hitbox/entity/shape_groups/rabbit
-execute if entity @s[type=minecraft:ravager] run return run function iris:get_hitbox/entity/shape_groups/ravager
-execute if entity @s[type=minecraft:salmon] run return run function iris:get_hitbox/entity/shape_groups/salmon
-execute if entity @s[type=#iris:sheep_like] run return run function iris:get_hitbox/entity/shape_groups/sheep
-execute if entity @s[type=minecraft:shulker] run return run function iris:get_hitbox/entity/shape_groups/shulker
-execute if entity @s[type=#minecraft:skeletons] run return run function iris:get_hitbox/entity/shape_groups/skeleton
-execute if entity @s[type=#iris:slime_like] run return run function iris:get_hitbox/entity/shape_groups/magma_cube
+execute if entity @s[type=#iris:shape_groups/horse] run function iris:get_hitbox/entity/shape_groups/horse
+execute if entity @s[type=minecraft:iron_golem] run function iris:get_hitbox/entity/shape_groups/iron_golem
+execute if entity @s[type=minecraft:leash_knot] run function iris:get_hitbox/entity/shape_groups/leash_knot
+execute if entity @s[type=#iris:shape_groups/llama] run function iris:get_hitbox/entity/shape_groups/llama
+execute if entity @s[type=#iris:shape_groups/magma_cube] run function iris:get_hitbox/entity/shape_groups/magma_cube
+execute if entity @s[type=minecraft:panda] run function iris:get_hitbox/entity/shape_groups/panda
+execute if entity @s[type=minecraft:phantom] run function iris:get_hitbox/entity/shape_groups/phantom
+execute if entity @s[type=minecraft:pig] run function iris:get_hitbox/entity/shape_groups/pig
+execute if entity @s[type=minecraft:polar_bear] run function iris:get_hitbox/entity/shape_groups/polar_bear
+execute if entity @s[type=minecraft:pufferfish] run function iris:get_hitbox/entity/shape_groups/pufferfish
+execute if entity @s[type=minecraft:rabbit] run function iris:get_hitbox/entity/shape_groups/rabbit
+execute if entity @s[type=minecraft:ravager] run function iris:get_hitbox/entity/shape_groups/ravager
+execute if entity @s[type=minecraft:salmon] run function iris:get_hitbox/entity/shape_groups/salmon

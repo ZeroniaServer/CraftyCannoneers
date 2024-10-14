@@ -1,2 +1,2 @@
-scoreboard players set $entity_half_width iris 975000
-scoreboard players set $entity_height iris 2000000
+scoreboard players set $entity_width iris 1950000
+scoreboard players set $entity_height iris 2200000

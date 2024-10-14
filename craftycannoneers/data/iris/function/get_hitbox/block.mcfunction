@@ -12,5 +12,4 @@ execute if block ~ ~ ~ #iris:tree/1 run function iris:get_hitbox/block/tree/1
 execute if block ~ ~ ~ #iris:tree/2 run function iris:get_hitbox/block/tree/2
 execute if block ~ ~ ~ #iris:tree/3 run function iris:get_hitbox/block/tree/3
 execute if block ~ ~ ~ #iris:tree/4 run function iris:get_hitbox/block/tree/4
-
 execute if block ~ ~ ~ #iris:has_block_offset run function iris:get_hitbox/block/offset

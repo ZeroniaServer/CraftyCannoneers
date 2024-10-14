@@ -9,6 +9,10 @@
             "required": false
         },
         {
+            "id": "minecraft:heavy_core",
+            "required": false
+        },
+        {
             "id": "minecraft:player_head",
             "required": false
         },

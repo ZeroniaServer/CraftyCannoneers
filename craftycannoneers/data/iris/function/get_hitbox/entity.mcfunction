@@ -7,6 +7,7 @@
 #	storage iris:data Shape: compound[]
 #       A list of cuboids given by two corners in the format {min: [x, y, z], max: [x, y z]}
 
+# Get entity dimensions
 scoreboard players set $entity_found iris 0
 execute if score $entity_found iris matches 0 if entity @s[type=#iris:tree/0] run function iris:get_hitbox/entity/tree/0
 execute if score $entity_found iris matches 0 if entity @s[type=#iris:tree/1] run function iris:get_hitbox/entity/tree/1
@@ -14,6 +15,11 @@ execute if score $entity_found iris matches 0 if entity @s[type=#iris:tree/2] ru
 execute if score $entity_found iris matches 0 if entity @s[type=#iris:tree/3] run function iris:get_hitbox/entity/tree/3
 execute if score $entity_found iris matches 0 if entity @s[type=#iris:tree/4] run function iris:get_hitbox/entity/tree/4
 execute if score $entity_found iris matches 0 if entity @s[type=#iris:tree/5] run function iris:get_hitbox/entity/tree/5
+
+# Scale
+function iris:get_hitbox/entity/scale
+execute if predicate iris:baby run scoreboard players operation $entity_width iris /= $2 iris
+execute if predicate iris:baby run scoreboard players operation $entity_height iris /= $2 iris
 
 # Get the entity's coordinates
 scoreboard players operation $entity_[x] iris = $[x] iris
@@ -45,6 +51,8 @@ scoreboard players operation $entity_dz iris *= $1000000 iris
 scoreboard players operation $entity_dz iris += $entity_{z} iris
 
 # Get the coordinates of the bounding box
+scoreboard players operation $entity_half_width iris = $entity_width iris
+scoreboard players operation $entity_half_width iris /= $2 iris
 scoreboard players operation $entity_x0 iris = $entity_dx iris
 scoreboard players operation $entity_x0 iris -= $entity_half_width iris
 execute if score $entity_x0 iris matches ..0 run scoreboard players set $entity_x0 iris 0
@@ -74,7 +82,7 @@ execute store result storage iris:data Shape[-1].max[2] double 0.000001 run scor
 
 # Special case for item frames and paintings which are annoying
 execute if score $entity_found iris matches 0 store success score $entity_found iris store success score $entity.is_item_frame iris if entity @s[type=#iris:item_frames]
-execute if score $entity.is_item_frame iris matches 1 run function iris:get_hitbox/entity/shape_groups/item_frame
+execute if score $entity.is_item_frame iris matches 1 run function iris:get_hitbox/entity/item_frame
 
 # Give this entity a tag and an ID, and store the ID in the hitbox
 tag @s add iris.possible_target

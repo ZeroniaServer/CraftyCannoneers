@@ -1,12 +1,13 @@
-scoreboard players set $entity_found iris 1
-
-execute if entity @s[type=minecraft:guardian] run return run function iris:get_hitbox/entity/shape_groups/guardian
-execute if entity @s[type=#iris:hoglins] run return run function iris:get_hitbox/entity/shape_groups/hoglin
-execute if entity @s[type=#iris:horses] run return run function iris:get_hitbox/entity/shape_groups/horse
-execute if entity @s[type=minecraft:iron_golem] run return run function iris:get_hitbox/entity/shape_groups/iron_golem
-execute if entity @s[type=minecraft:leash_knot] run return run function iris:get_hitbox/entity/shape_groups/leash_knot
-execute if entity @s[type=#iris:llamas] run return run function iris:get_hitbox/entity/shape_groups/llama
-execute if entity @s[type=#iris:minecarts] run return run function iris:get_hitbox/entity/shape_groups/minecart
-execute if entity @s[type=minecraft:panda] run return run function iris:get_hitbox/entity/shape_groups/panda
-execute if entity @s[type=minecraft:phantom] run return run function iris:get_hitbox/entity/shape_groups/phantom
-execute if entity @s[type=minecraft:pig] run return run function iris:get_hitbox/entity/shape_groups/pig
+execute if entity @s[type=minecraft:elder_guardian] run function iris:get_hitbox/entity/shape_groups/elder_guardian
+execute if entity @s[type=minecraft:end_crystal] run function iris:get_hitbox/entity/shape_groups/end_crystal
+execute if entity @s[type=minecraft:ender_dragon] run function iris:get_hitbox/entity/shape_groups/ender_dragon
+execute if entity @s[type=minecraft:enderman] run function iris:get_hitbox/entity/shape_groups/enderman
+execute if entity @s[type=#iris:shape_groups/endermite] run function iris:get_hitbox/entity/shape_groups/endermite
+execute if entity @s[type=minecraft:evoker_fangs] run function iris:get_hitbox/entity/shape_groups/evoker_fangs
+execute if entity @s[type=#iris:shape_groups/falling_block] run function iris:get_hitbox/entity/shape_groups/falling_block
+execute if entity @s[type=minecraft:ghast] run function iris:get_hitbox/entity/shape_groups/ghast
+execute if entity @s[type=minecraft:giant] run function iris:get_hitbox/entity/shape_groups/giant
+execute if entity @s[type=#iris:shape_groups/glow_squid] run function iris:get_hitbox/entity/shape_groups/glow_squid
+execute if entity @s[type=#iris:shape_groups/goat] run function iris:get_hitbox/entity/shape_groups/goat
+execute if entity @s[type=minecraft:guardian] run function iris:get_hitbox/entity/shape_groups/guardian
+execute if entity @s[type=#iris:shape_groups/hoglin] run function iris:get_hitbox/entity/shape_groups/hoglin

@@ -1,0 +1,12 @@
+{
+    "values": [
+        {
+            "id": "minecraft:breeze",
+            "required": false
+        },
+        {
+            "id": "minecraft:creeper",
+            "required": false
+        }
+    ]
+}

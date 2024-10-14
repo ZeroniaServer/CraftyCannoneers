@@ -69,6 +69,10 @@
             "required": false
         },
         {
+            "id": "minecraft:polished_tuff_wall",
+            "required": false
+        },
+        {
             "id": "minecraft:prismarine_wall",
             "required": false
         },
@@ -86,6 +90,14 @@
         },
         {
             "id": "minecraft:stone_brick_wall",
+            "required": false
+        },
+        {
+            "id": "minecraft:tuff_brick_wall",
+            "required": false
+        },
+        {
+            "id": "minecraft:tuff_wall",
             "required": false
         }
     ]

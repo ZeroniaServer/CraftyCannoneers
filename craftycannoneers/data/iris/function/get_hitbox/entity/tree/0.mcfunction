@@ -1,12 +1,13 @@
-scoreboard players set $entity_found iris 1
-
-execute if entity @s[type=minecraft:armor_stand] run return run function iris:get_hitbox/entity/shape_groups/armor_stand
-execute if entity @s[type=minecraft:axolotl] run return run function iris:get_hitbox/entity/shape_groups/axolotl
-execute if entity @s[type=#iris:bat_like] run return run function iris:get_hitbox/entity/shape_groups/bat
-execute if entity @s[type=minecraft:bee] run return run function iris:get_hitbox/entity/shape_groups/bee
-execute if entity @s[type=minecraft:oak_boat] run return run function iris:get_hitbox/entity/shape_groups/boat
-execute if entity @s[type=#iris:cat_like] run return run function iris:get_hitbox/entity/shape_groups/cat
-execute if entity @s[type=minecraft:cave_spider] run return run function iris:get_hitbox/entity/shape_groups/cave_spider
-execute if entity @s[type=minecraft:chicken] run return run function iris:get_hitbox/entity/shape_groups/chicken
-execute if entity @s[type=minecraft:cod] run return run function iris:get_hitbox/entity/shape_groups/cod
-execute if entity @s[type=#iris:cows] run return run function iris:get_hitbox/entity/shape_groups/cow
+execute if entity @s[type=minecraft:allay] run function iris:get_hitbox/entity/shape_groups/allay
+execute if entity @s[type=minecraft:area_effect_cloud] run function iris:get_hitbox/entity/shape_groups/area_effect_cloud
+execute if entity @s[type=minecraft:armadillo] run function iris:get_hitbox/entity/shape_groups/armadillo
+execute if entity @s[type=minecraft:armor_stand] run function iris:get_hitbox/entity/shape_groups/armor_stand
+execute if entity @s[type=#iris:shape_groups/arrow] run function iris:get_hitbox/entity/shape_groups/arrow
+execute if entity @s[type=minecraft:axolotl] run function iris:get_hitbox/entity/shape_groups/axolotl
+execute if entity @s[type=#iris:shape_groups/bat] run function iris:get_hitbox/entity/shape_groups/bat
+execute if entity @s[type=minecraft:bee] run function iris:get_hitbox/entity/shape_groups/bee
+execute if entity @s[type=#iris:shape_groups/blaze] run function iris:get_hitbox/entity/shape_groups/blaze
+execute if entity @s[type=#iris:shape_groups/boat] run function iris:get_hitbox/entity/shape_groups/boat
+execute if entity @s[type=#iris:shape_groups/bogged] run function iris:get_hitbox/entity/shape_groups/bogged
+execute if entity @s[type=minecraft:breeze] run function iris:get_hitbox/entity/shape_groups/breeze
+execute if entity @s[type=#iris:shape_groups/breeze_wind_charge] run function iris:get_hitbox/entity/shape_groups/breeze_wind_charge

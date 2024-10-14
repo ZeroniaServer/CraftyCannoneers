@@ -1,14 +1,56 @@
 {
     "values": [
-        "minecraft:pufferfish",
-        "#iris:player_like",
-        "minecraft:polar_bear",
-        "minecraft:rabbit",
-        "minecraft:ravager",
-        "minecraft:salmon",
-        "#iris:sheep_like",
-        "minecraft:shulker",
-        "minecraft:skeleton",
-        "#iris:slime_like"
+        {
+            "id": "#iris:shape_groups/horse",
+            "required": false
+        },
+        {
+            "id": "minecraft:iron_golem",
+            "required": false
+        },
+        {
+            "id": "minecraft:leash_knot",
+            "required": false
+        },
+        {
+            "id": "#iris:shape_groups/llama",
+            "required": false
+        },
+        {
+            "id": "#iris:shape_groups/magma_cube",
+            "required": false
+        },
+        {
+            "id": "minecraft:panda",
+            "required": false
+        },
+        {
+            "id": "minecraft:phantom",
+            "required": false
+        },
+        {
+            "id": "minecraft:pig",
+            "required": false
+        },
+        {
+            "id": "minecraft:polar_bear",
+            "required": false
+        },
+        {
+            "id": "minecraft:pufferfish",
+            "required": false
+        },
+        {
+            "id": "minecraft:rabbit",
+            "required": false
+        },
+        {
+            "id": "minecraft:ravager",
+            "required": false
+        },
+        {
+            "id": "minecraft:salmon",
+            "required": false
+        }
     ]
 }

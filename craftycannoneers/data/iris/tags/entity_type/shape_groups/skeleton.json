@@ -1,0 +1,12 @@
+{
+    "values": [
+        {
+            "id": "minecraft:skeleton",
+            "required": false
+        },
+        {
+            "id": "minecraft:stray",
+            "required": false
+        }
+    ]
+}

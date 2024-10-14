@@ -17,11 +17,19 @@
             "required": false
         },
         {
+            "id": "minecraft:copper_door",
+            "required": false
+        },
+        {
             "id": "minecraft:crimson_door",
             "required": false
         },
         {
             "id": "minecraft:dark_oak_door",
+            "required": false
+        },
+        {
+            "id": "minecraft:exposed_copper_door",
             "required": false
         },
         {
@@ -41,11 +49,35 @@
             "required": false
         },
         {
+            "id": "minecraft:oxidized_copper_door",
+            "required": false
+        },
+        {
             "id": "minecraft:spruce_door",
             "required": false
         },
         {
             "id": "minecraft:warped_door",
+            "required": false
+        },
+        {
+            "id": "minecraft:waxed_copper_door",
+            "required": false
+        },
+        {
+            "id": "minecraft:waxed_exposed_copper_door",
+            "required": false
+        },
+        {
+            "id": "minecraft:waxed_oxidized_copper_door",
+            "required": false
+        },
+        {
+            "id": "minecraft:waxed_weathered_copper_door",
+            "required": false
+        },
+        {
+            "id": "minecraft:weathered_copper_door",
             "required": false
         }
     ]
