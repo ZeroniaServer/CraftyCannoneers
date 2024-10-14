@@ -27,7 +27,7 @@ execute if entity @s[type=endermite,tag=CrabController,tag=!inwater] on vehicle 
 execute if entity @s[type=endermite,tag=CrabController,tag=inwater] on vehicle at @s[type=item_display,tag=hasitem,tag=!hashorn] run function game:modifiers/crabs/dropitem
 
 #> Shooting Boat Cannon entities hurts the player
-execute if score $arrow CmdData matches 1 if entity @s[type=camel,tag=BoatCannonAnchor] on vehicle if entity @s[type=boat] on passengers at @s[type=player] run function entityid:hit/fakearrow
+execute if score $arrow CmdData matches 1 if entity @s[type=camel,tag=BoatCannonAnchor] on vehicle if entity @s[type=oak_boat] on passengers at @s[type=player] run function entityid:hit/fakearrow
 
 #> Tags for interacting with Cannons
 execute if entity @s[tag=CannonVLeft,tag=!GPLocked] run tag @a[limit=1,tag=hitter] add FillLeft

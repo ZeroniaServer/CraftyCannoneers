@@ -1,8 +1,8 @@
-execute if predicate cannons:ships/purple if block ~1 ~1 ~ #game:playerstuck if block ~-1 ~1 ~ #game:shipblocks if block ~ ~1 ~1 #game:shipblocks if block ~ ~1 ~-1 #game:shipblocks run tag @s add IsStuck
-execute if predicate cannons:ships/orange if block ~1 ~1 ~ #game:playerstuck if block ~-1 ~1 ~ #game:shipblocks if block ~ ~1 ~1 #game:shipblocks if block ~ ~1 ~-1 #game:shipblocks run tag @s add IsStuck
+execute if predicate cannons:ships/purple if block ~1 ~1 ~ #game:playerstuck if block ~-1 ~1 ~ #game:playerstuck if block ~ ~1 ~1 #game:playerstuck if block ~ ~1 ~-1 #game:playerstuck run tag @s add IsStuck
+execute if predicate cannons:ships/orange if block ~1 ~1 ~ #game:playerstuck if block ~-1 ~1 ~ #game:playerstuck if block ~ ~1 ~1 #game:playerstuck if block ~ ~1 ~-1 #game:playerstuck run tag @s add IsStuck
 
-execute if predicate cannons:ships/purple if block ~2 ~1 ~ #game:playerstuck if block ~-2 ~1 ~ #game:shipblocks if block ~ ~1 ~2 #game:shipblocks if block ~ ~1 ~-2 #game:shipblocks run tag @s add IsStuck
-execute if predicate cannons:ships/orange if block ~2 ~1 ~ #game:playerstuck if block ~-2 ~1 ~ #game:shipblocks if block ~ ~1 ~2 #game:shipblocks if block ~ ~1 ~-2 #game:shipblocks run tag @s add IsStuck
+execute if predicate cannons:ships/purple if block ~2 ~1 ~ #game:playerstuck if block ~-2 ~1 ~ #game:playerstuck if block ~ ~1 ~2 #game:playerstuck if block ~ ~1 ~-2 #game:playerstuck run tag @s add IsStuck
+execute if predicate cannons:ships/orange if block ~2 ~1 ~ #game:playerstuck if block ~-2 ~1 ~ #game:playerstuck if block ~ ~1 ~2 #game:playerstuck if block ~ ~1 ~-2 #game:playerstuck run tag @s add IsStuck
 
 tag @s[predicate=cannons:ships/purple,predicate=cannons:ships/bottom] add IsStuck
 tag @s[predicate=cannons:ships/orange,predicate=cannons:ships/bottom] add IsStuck

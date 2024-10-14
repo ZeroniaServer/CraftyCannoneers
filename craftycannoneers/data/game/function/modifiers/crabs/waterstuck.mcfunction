@@ -4,7 +4,7 @@ execute store result score $crab y run data get storage craftycannoneers:crab Po
 execute store result score $crab z run data get storage craftycannoneers:crab Pos[2] 1000000
 
 execute facing entity @a[limit=1,sort=nearest,distance=1..7,team=!Lobby,team=!Spectator,predicate=game:inwater] feet positioned ^ ^-0.01 ^0.01 as 00000539-ffff-fe5c-0000-004500000015 run function game:modifiers/crabs/waterstuck2
-tp @s ~ ~ ~ facing entity @a[limit=1,sort=nearest,distance=1..7,team=!Lobby,team=!Spectator,predicate=game:inwater] feet
+rotate @s facing entity @a[limit=1,sort=nearest,distance=1..7,team=!Lobby,team=!Spectator,predicate=game:inwater] feet
 
 scoreboard players operation $crab dx -= $crab x
 scoreboard players operation $crab dy -= $crab y

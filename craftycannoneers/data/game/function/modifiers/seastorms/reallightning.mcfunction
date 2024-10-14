@@ -15,4 +15,4 @@ execute as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..3] a
 execute as @e[type=item_display,tag=CrabTrap,distance=..3] at @s run function weapons:crabtrap/break
 
 #> Break nearby Boats
-kill @e[type=boat,tag=Sailing,distance=..3]
+kill @e[type=oak_boat,tag=Sailing,distance=..3]

@@ -1,6 +1,6 @@
 #> Projectile functions
 scoreboard players set $inair CmdData 0
-execute at @s positioned ~ ~0.1 ~ if entity @e[type=boat,dx=0,limit=1] run scoreboard players add @s ctr 1
+execute at @s positioned ~ ~0.1 ~ if entity @e[type=oak_boat,dx=0,limit=1] run scoreboard players add @s ctr 1
 execute if score @s ctr matches 2.. run tag @s add boat
 execute if entity @s[tag=boat] on vehicle run kill
 execute if entity @s[tag=!boat] on vehicle run function weapons:bomb/projectile

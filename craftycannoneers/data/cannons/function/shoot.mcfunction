@@ -12,7 +12,7 @@ scoreboard players add @s[tag=bouncing,scores={bouncedelay=1..}] bouncedelay 1
 
 scoreboard players set @s[tag=CannonballCluster] doublehit 69
 
-execute at @s[tag=ChainCannonball,tag=chainacc,scores={CmdData=2..}] run tp @s ~ ~ ~ ~40 ~
+execute at @s[tag=ChainCannonball,tag=chainacc,scores={CmdData=2..}] run rotate @s ~40 ~
 execute at @s[tag=PlayerCannonball] run function cannons:playercbtravel
 
 scoreboard players operation @s[tag=!CannonballShot] PowerL *= $3 CmdData
@@ -46,7 +46,7 @@ execute at @s[tag=PlayerCannonball,tag=!Submerged,scores={CmdData=4..},predicate
 execute at @s[tag=TracerCannonball,scores={CmdData=1..}] run function cannons:tracertrail
 
 #> Landing conditions
-execute at @s if entity @e[type=boat,distance=..2,limit=1] run scoreboard players set $hitboat CmdData 1
+execute at @s if entity @e[type=oak_boat,distance=..2,limit=1] run scoreboard players set $hitboat CmdData 1
 execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball,tag=!Submerged] if predicate game:located_water run function cannons:detectedwater
 execute at @s[tag=!TracerCannonball,tag=!PlayerCannonball,tag=Submerged,tag=!boatlaunch] unless score $hitboat CmdData matches 1 run function cannons:waterkill
 

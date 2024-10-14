@@ -151,11 +151,7 @@ $loot $(function) loot \
                     "function": "minecraft:set_components",\
                     "components": {\
                         "minecraft:can_place_on": {\
-                            "predicates": [\
-                                {\
-                                    "blocks": "#game:barrel_placeable"\
-                                }\
-                            ],\
+                            "predicates": [{}],\
                             "show_in_tooltip": false\
                         }\
                     },\

@@ -1,6 +1,6 @@
 #> Rotate with vehicle
-execute on vehicle rotated as @s on passengers positioned as @s[tag=CrabDisplay] run tp @s ~ ~ ~ ~ 0
-execute on vehicle rotated as @s on passengers on passengers positioned as @s run tp @s[type=item_display] ~ ~ ~ ~ 0
+execute on vehicle rotated as @s on passengers run rotate @s[tag=CrabDisplay] ~ 0
+execute on vehicle rotated as @s on passengers on passengers run rotate @s[type=item_display] ~ 0
 
 #> Moving detection
 tag @s remove Moving

@@ -5,7 +5,18 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ],
+          "name": "minecraft:stone"
         }
       ]
     }

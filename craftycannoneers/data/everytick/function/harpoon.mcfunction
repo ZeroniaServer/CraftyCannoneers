@@ -1,6 +1,6 @@
 #Harpoons continue doing damage when near boats
-execute at @s[tag=!nearboat,nbt={DealtDamage:0b,inGround:0b}] if entity @e[type=boat,tag=Boat,distance=..4] run function everytick:nearboat
-execute at @s[tag=nearboat] unless entity @e[type=boat,tag=Boat,distance=..4] run tag @s remove nearboat
+execute at @s[tag=!nearboat,nbt={DealtDamage:0b,inGround:0b}] if entity @e[type=oak_boat,tag=Boat,distance=..4] run function everytick:nearboat
+execute at @s[tag=nearboat] unless entity @e[type=oak_boat,tag=Boat,distance=..4] run tag @s remove nearboat
 tag @s[tag=nearboat,nbt={inGround:1b}] remove nearboat
 
 #On Training Island, kills Harpoons in the ground / outside Combat Area

@@ -1,4 +1,4 @@
-summon slime ~ ~-33 ~ {Invulnerable:1b,Silent:1b,attributes:[{id:"minecraft:generic.attack_damage",base:0d}],Tags:["BlastSlime"],Size:16,NoGravity:1b,CustomNameVisible:0b,DeathTime:17s,DeathLootTable:"minecraft:empty"}
-summon slime ~ ~-33 ~ {Invulnerable:1b,Silent:1b,attributes:[{id:"minecraft:generic.attack_damage",base:0d}],Tags:["BlastSlime"],Size:16,NoGravity:1b,CustomNameVisible:0b,DeathTime:17s,DeathLootTable:"minecraft:empty"}
-summon slime ~ ~-33 ~ {Invulnerable:1b,Silent:1b,attributes:[{id:"minecraft:generic.attack_damage",base:0d}],Tags:["BlastSlime"],Size:16,NoGravity:1b,CustomNameVisible:0b,DeathTime:17s,DeathLootTable:"minecraft:empty"}
-summon slime ~ ~-33 ~ {Invulnerable:1b,Silent:1b,attributes:[{id:"minecraft:generic.attack_damage",base:0d}],Tags:["BlastSlime"],Size:16,NoGravity:1b,CustomNameVisible:0b,DeathTime:17s,DeathLootTable:"minecraft:empty"}
+summon slime ~ ~-33 ~ {Invulnerable:1b,Silent:1b,attributes:[{id:"minecraft:attack_damage",base:0d}],Tags:["BlastSlime"],Size:16,NoGravity:1b,CustomNameVisible:0b,DeathTime:17s,DeathLootTable:"minecraft:empty"}
+summon slime ~ ~-33 ~ {Invulnerable:1b,Silent:1b,attributes:[{id:"minecraft:attack_damage",base:0d}],Tags:["BlastSlime"],Size:16,NoGravity:1b,CustomNameVisible:0b,DeathTime:17s,DeathLootTable:"minecraft:empty"}
+summon slime ~ ~-33 ~ {Invulnerable:1b,Silent:1b,attributes:[{id:"minecraft:attack_damage",base:0d}],Tags:["BlastSlime"],Size:16,NoGravity:1b,CustomNameVisible:0b,DeathTime:17s,DeathLootTable:"minecraft:empty"}
+summon slime ~ ~-33 ~ {Invulnerable:1b,Silent:1b,attributes:[{id:"minecraft:attack_damage",base:0d}],Tags:["BlastSlime"],Size:16,NoGravity:1b,CustomNameVisible:0b,DeathTime:17s,DeathLootTable:"minecraft:empty"}

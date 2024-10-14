@@ -1,2 +1,2 @@
-$tp @s ~ ~ ~ $(angle) ~
+$rotate @s $(angle) ~
 tag @s add Rotated

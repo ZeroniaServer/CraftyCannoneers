@@ -18,7 +18,7 @@ execute if score @s click matches 4 as @e[type=husk,tag=CBTrap,distance=..4] on 
 execute if score @s click matches 4 as @e[type=bat,tag=BlastBarrel,distance=..4] run function weapons:barrel/chainreact
 
 #> Break nearby Boats
-execute if score @s click matches 2 run kill @e[type=boat,tag=BoatBoat,distance=..4]
+execute if score @s click matches 2 run kill @e[type=oak_boat,tag=BoatBoat,distance=..4]
 
 #> Break nearby Cargo Barrels
 execute if score @s click matches 2 as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..4] at @s run function game:modifiers/lostcargo/spillbarrel

@@ -32,7 +32,7 @@ execute unless entity @s[tag=canDamage] as @e[type=bat,tag=BlastBarrel,distance=
 execute unless entity @s[tag=canDamage] as @e[type=husk,tag=CBTrap,distance=..6] on vehicle run function game:modifiers/lostcargo/chainreact
 
 #> Break nearby Boats
-kill @e[type=boat,tag=BoatBoat,distance=..10]
+kill @e[type=oak_boat,tag=BoatBoat,distance=..10]
 
 #> Blast items/projectiles back
 execute as @e[type=item,distance=..10] run function weapons:barrel/blast3

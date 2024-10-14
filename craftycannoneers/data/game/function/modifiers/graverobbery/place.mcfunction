@@ -1,5 +1,5 @@
 #> Copy rotation
-tp @s ~ ~ ~ ~ ~
+rotate @s ~ ~
 
 #> Align to world surface (lowest block) for y-coordinate
 execute store result score @s CmdData run data get entity @s Pos[1] 1000

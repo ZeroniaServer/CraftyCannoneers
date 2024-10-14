@@ -15,7 +15,7 @@ execute unless score $blast BombDelay matches 1 if entity @e[type=drowned,tag=Sh
 execute if score @s BombDelay matches 2 if score $blast BombDelay matches 1 run function weapons:bomb/summonslime
 
 #> Blast nearby Boats backwards
-execute if score @s BombDelay matches 2.. at @s as @e[type=boat,tag=BoatBoat,distance=..6] run function game:boat/blast
+execute if score @s BombDelay matches 2.. at @s as @e[type=oak_boat,tag=BoatBoat,distance=..6] run function game:boat/blast
 
 #> Do the same for items/projectiles
 execute if score @s BombDelay matches 2..3 at @s as @e[type=item,distance=..6] run function weapons:bomb/blast

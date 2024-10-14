@@ -34,6 +34,6 @@ execute if score @s CmdData matches 30 as @e[type=item_display,tag=CBDisplay,tag
 execute if score @s CmdData matches 30 as @e[type=item_display,tag=CrabTrap,distance=..3] at @s run function weapons:crabtrap/break
 
 #> Break nearby Boats
-execute if score @s CmdData matches 30 run kill @e[type=boat,tag=Sailing,distance=..3]
+execute if score @s CmdData matches 30 run kill @e[type=oak_boat,tag=Sailing,distance=..3]
 
 kill @s[scores={CmdData=30..}]

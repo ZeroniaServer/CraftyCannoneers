@@ -6,7 +6,7 @@ execute at @s as @e[type=item_display,tag=GasBubble,distance=0.001..8] if score 
 execute at @s as @e[type=item_display,tag=GasBubble,distance=0.001..8] if score @s ChaseUUID = $current ChaseUUID run scoreboard players reset @s ChaseUUID
 scoreboard players reset $current ChaseUUID
 
-execute at @s[tag=HasPlayer] facing entity @a[tag=GasChase,limit=1] eyes if entity @e[type=marker,tag=GasCloud,distance=..7] run tp @s ~ ~ ~ ~ ~
+execute at @s[tag=HasPlayer] facing entity @a[tag=GasChase,limit=1] eyes if entity @e[type=marker,tag=GasCloud,distance=..7] run rotate @s ~ ~
 execute at @s[tag=HasPlayer] if entity @e[type=marker,tag=GasCloud,distance=..7] run tp @s ^ ^ ^0.08
 
 tag @a[tag=GasChase] remove GasChase

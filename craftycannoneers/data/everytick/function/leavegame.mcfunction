@@ -36,7 +36,7 @@ clear @s[tag=LeaveGame]
 execute if entity @s[tag=LeaveGame] run function lobby:items
 effect clear @s[tag=LeaveGame]
 gamemode adventure @s[tag=LeaveGame]
-attribute @s[tag=LeaveGame] generic.armor base set 0
+attribute @s[tag=LeaveGame] armor base set 0
 recipe take @s[tag=LeaveGame] *
 execute unless score @s leavegame matches 1.. run tag @s[tag=LeaveGame,tag=!WaterTP] remove msgReceived
 execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,tag=!WaterTP,advancements={tutorial:objectives/combat=false}] add NeedsTutorial
@@ -50,8 +50,8 @@ tag @s[tag=LeaveGame] remove onboatweakness
 tag @s[tag=LeaveGame] remove lookAtBarrel
 tag @s[tag=LeaveGame] remove lookAtCannon
 tag @s[tag=LeaveGame] remove WaterTP
-attribute @s[tag=LeaveGame] generic.attack_damage modifier remove craftycannoneers:nodamage
-attribute @s[tag=LeaveGame] generic.safe_fall_distance base set 1024
+attribute @s[tag=LeaveGame] attack_damage modifier remove craftycannoneers:nodamage
+attribute @s[tag=LeaveGame] safe_fall_distance base set 1024
 tag @s[tag=LeaveGame] remove lookAtBCannon
 tag @s[tag=LeaveGame] remove barrelMainhand
 tag @s[tag=LeaveGame] remove barrelOffhand

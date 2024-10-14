@@ -1,5 +1,5 @@
 kill @e[x=0,type=item_display,tag=Boat]
-kill @e[x=0,type=boat,tag=Boat]
+kill @e[x=0,type=oak_boat,tag=Boat]
 kill @e[x=0,type=interaction,tag=boatoccupant]
 
 #> Boat Cannons

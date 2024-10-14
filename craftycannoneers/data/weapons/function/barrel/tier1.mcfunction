@@ -19,7 +19,7 @@ execute as @e[type=bat,tag=BlastBarrel,distance=..5] run function weapons:barrel
 execute as @e[type=husk,tag=CBTrap,distance=..5] on vehicle run function game:modifiers/lostcargo/chainreact
 
 #> Break nearby Boats
-kill @e[type=boat,tag=BoatBoat,distance=..5]
+kill @e[type=oak_boat,tag=BoatBoat,distance=..5]
 
 #> Blast items/projectiles back
 execute as @e[type=item,distance=..5] run function weapons:barrel/blast1

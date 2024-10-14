@@ -7,7 +7,7 @@ execute if score $tp bounceID matches 1 as @e[type=cat,tag=CrabVehicle,tag=!dism
 execute if score $tp bounceID matches 1 as @e[type=cod,tag=NewVCod,tag=!dismounted,distance=..7] run function game:modifiers/sharks/dismount
 
 #> Blast nearby Boats backwards
-execute at @s as @e[type=boat,tag=BoatBoat,distance=..7] run function game:boat/blast
+execute at @s as @e[type=oak_boat,tag=BoatBoat,distance=..7] run function game:boat/blast
 
 #> Blast nearby items/projectiles backwards
 execute at @s as @e[type=item,distance=..7] run function weapons:bomb/blast

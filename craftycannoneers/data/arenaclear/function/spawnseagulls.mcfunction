@@ -1,7 +1,7 @@
 execute at @s run summon item_display ^ ^ ^4 {Tags:["seagull","SeagullDeco","1"],item_display:"head",item:{id:"minecraft:diamond_hoe",count:1,components:{"custom_model_data":59}},teleport_duration:2,transformation:{scale:[0.625f,0.625f,0.625f],translation:[0.0f,1.6875f,0.0f],left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f]}}
-execute at @s run tp @s ~ ~ ~ ~90 ~
+execute at @s run rotate @s ~90 ~
 execute at @s run summon item_display ^ ^ ^4 {Tags:["seagull","SeagullDeco","2"],item_display:"head",item:{id:"minecraft:diamond_hoe",count:1,components:{"custom_model_data":59}},teleport_duration:2,transformation:{scale:[0.625f,0.625f,0.625f],translation:[0.0f,1.6875f,0.0f],left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f]}}
-execute at @s run tp @s ~ ~ ~ ~90 ~
+execute at @s run rotate @s ~90 ~
 execute at @s run summon item_display ^ ^ ^4 {Tags:["seagull","SeagullDeco","3"],item_display:"head",item:{id:"minecraft:diamond_hoe",count:1,components:{"custom_model_data":59}},teleport_duration:2,transformation:{scale:[0.625f,0.625f,0.625f],translation:[0.0f,1.6875f,0.0f],left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f]}}
-execute at @s run tp @s ~ ~ ~ ~90 ~
+execute at @s run rotate @s ~90 ~
 execute at @s run summon item_display ^ ^ ^4 {Tags:["seagull","SeagullDeco","4"],item_display:"head",item:{id:"minecraft:diamond_hoe",count:1,components:{"custom_model_data":59}},teleport_duration:2,transformation:{scale:[0.625f,0.625f,0.625f],translation:[0.0f,1.6875f,0.0f],left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f]}}

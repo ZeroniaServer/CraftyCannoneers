@@ -65,12 +65,12 @@ execute if entity @s[tag=BlastBarrel1] as @e[type=item_display,tag=CBDisplay,tag
 execute if entity @s[tag=BlastBarrel2] as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..7] at @s run function game:modifiers/lostcargo/spillbarrel
 
 #> Break nearby Boats
-execute if entity @s[tag=Power1] run kill @e[type=boat,tag=BoatBoat,distance=..5]
-execute if entity @s[tag=Power2] run kill @e[type=boat,tag=BoatBoat,distance=..6]
-execute if entity @s[tag=Power3] run kill @e[type=boat,tag=BoatBoat,distance=..7]
-execute if entity @s[tag=GasPower] run kill @e[type=boat,tag=BoatBoat,distance=..7]
-execute if entity @s[tag=BlastBarrel1] run kill @e[type=boat,tag=BoatBoat,distance=..6]
-execute if entity @s[tag=BlastBarrel2] run kill @e[type=boat,tag=BoatBoat,distance=..7]
+execute if entity @s[tag=Power1] run kill @e[type=oak_boat,tag=BoatBoat,distance=..5]
+execute if entity @s[tag=Power2] run kill @e[type=oak_boat,tag=BoatBoat,distance=..6]
+execute if entity @s[tag=Power3] run kill @e[type=oak_boat,tag=BoatBoat,distance=..7]
+execute if entity @s[tag=GasPower] run kill @e[type=oak_boat,tag=BoatBoat,distance=..7]
+execute if entity @s[tag=BlastBarrel1] run kill @e[type=oak_boat,tag=BoatBoat,distance=..6]
+execute if entity @s[tag=BlastBarrel2] run kill @e[type=oak_boat,tag=BoatBoat,distance=..7]
 
 #> Break nearby Crab Traps
 execute if entity @s[tag=Power1] as @e[type=item_display,tag=CrabTrap,distance=..5] at @s run function weapons:crabtrap/break

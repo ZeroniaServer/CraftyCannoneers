@@ -12,7 +12,7 @@ tag @s remove onboatweakness
 tag @s remove lookAtBarrel
 tag @s remove lookAtCannon
 tag @s remove lookAtBCannon
-attribute @s generic.attack_damage modifier remove craftycannoneers:nodamage
+attribute @s attack_damage modifier remove craftycannoneers:nodamage
 tag @s add loaded
 tag @s remove NeedsCutlass
 tag @s remove NeedsCrossbow
