@@ -6,7 +6,6 @@
 #
 # @context a marker
 # @within iris:get_target
-# @within iris:get_hitbox/entity
 # @writes
 #    score $[x] iris
 #        The integer x coordinate of the current position
@@ -29,3 +28,7 @@
 
 function iris:get_position/get_coordinates
 function iris:get_position/get_rotation
+
+# Clean up
+data remove storage iris:data Pos
+kill @s
