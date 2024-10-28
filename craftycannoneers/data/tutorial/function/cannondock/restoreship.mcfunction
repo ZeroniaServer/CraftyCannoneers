@@ -1,9 +1,9 @@
 scoreboard players set $shipstatus CmdData 0
 scoreboard players set $shiptimer CmdData 0
 
-place template training_flag -389 11 -55
-place template training_ship1 -400 -37 -83
-place template training_ship2 -400 -37 -35
+place template tutorial:training_flag -389 11 -55
+place template tutorial:training_ship1 -400 -37 -83
+place template tutorial:training_ship2 -400 -37 -35
 
 setblock -382 -30 -58 oak_trapdoor[facing=west,half=top]
 setblock -381 -30 -58 oak_trapdoor[facing=east,half=top]
