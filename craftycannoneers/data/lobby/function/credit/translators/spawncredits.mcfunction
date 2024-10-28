@@ -22,7 +22,7 @@ execute if score $TranslatorPage CmdData matches 1 unless score $Online CmdData 
 execute if score $TranslatorPage CmdData matches 1 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Name"],billboard:"fixed",transformation:{translation:[0f,0f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"storage":"craftycannoneers:skullcache","nbt":"minus","color":"#C412FE"}]',alignment:"center"}
 execute if score $TranslatorPage CmdData matches 1 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Flag"],billboard:"fixed",background:0,transformation:{translation:[0f,0f,0f],scale:[0.0f,0.0f,0.0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"translate":":flag_fr:","color":"white"}]',alignment:"center"}
 #Globe Text
-execute if score $TranslatorPage CmdData matches 1 run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"text":"[1/3]","color":"white"}]',start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
+execute if score $TranslatorPage CmdData matches 1 run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"text":"[1/4]","color":"white"}]',start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
 
 #> Page 2
 #Pingoda - Italian
@@ -45,7 +45,7 @@ execute if score $TranslatorPage CmdData matches 2 run summon text_display -35 -
 execute if score $TranslatorPage CmdData matches 2 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Flag"],billboard:"fixed",background:0,transformation:{translation:[0f,0f,0f],scale:[0.0f,0.0f,0.0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"translate":":flag_ru:","color":"white"}]',alignment:"center"}
 
 #Globe Text
-execute if score $TranslatorPage CmdData matches 2 run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"text":"[2/3]","color":"white"}]',start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
+execute if score $TranslatorPage CmdData matches 2 run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"text":"[2/4]","color":"white"}]',start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
 
 #> Page 3
 #YZEROgame - Dutch
@@ -67,7 +67,29 @@ execute if score $TranslatorPage CmdData matches 3 unless score $Online CmdData 
 execute if score $TranslatorPage CmdData matches 3 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Name"],billboard:"fixed",transformation:{translation:[0f,0f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"storage":"craftycannoneers:skullcache","nbt":"evtema","color":"red"}]',alignment:"center"}
 execute if score $TranslatorPage CmdData matches 3 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Flag"],billboard:"fixed",background:0,transformation:{translation:[0f,0f,0f],scale:[0.0f,0.0f,0.0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"translate":":flag_au:","color":"white"}]',alignment:"center"}
 #Globe Text
-execute if score $TranslatorPage CmdData matches 3 run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"text":"[3/3]","color":"white"}]',start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
+execute if score $TranslatorPage CmdData matches 3 run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"text":"[3/4]","color":"white"}]',start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
+
+#> Page 4
+#Armero - Spanish
+execute if score $TranslatorPage CmdData matches 4 run summon item_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit1","Skull"],start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed"}
+execute if score $TranslatorPage CmdData matches 4 if score $Online CmdData matches 1 run item replace entity @e[type=item_display,tag=Credit1,tag=Skull,tag=!Old,limit=1] contents with player_head[profile={id:[I;1935623980,767770881,-1801401555,-1824800623]}]
+execute if score $TranslatorPage CmdData matches 4 unless score $Online CmdData matches 1 run item replace entity @e[type=item_display,tag=Credit1,tag=Skull,tag=!Old,limit=1] contents from entity @e[type=item_display,tag=SkullCache,tag=armero,limit=1] contents
+execute if score $TranslatorPage CmdData matches 4 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit1","Name"],billboard:"fixed",transformation:{translation:[0f,0f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"storage":"craftycannoneers:skullcache","nbt":"armero","color":"gold"}]',alignment:"center"}
+execute if score $TranslatorPage CmdData matches 4 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit1","Flag"],billboard:"fixed",background:0,transformation:{translation:[0f,0f,0f],scale:[0.0f,0.0f,0.0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"translate":":flag_es:","color":"white"}]',alignment:"center"}
+#Shirowh_ - Spanish
+execute if score $TranslatorPage CmdData matches 4 run summon item_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit2","Skull"],start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed"}
+execute if score $TranslatorPage CmdData matches 4 if score $Online CmdData matches 1 run item replace entity @e[type=item_display,tag=Credit2,tag=Skull,tag=!Old,limit=1] contents with player_head[profile={id:[I;-1533562451,550719413,-1348927752,-160709537]}]
+execute if score $TranslatorPage CmdData matches 4 unless score $Online CmdData matches 1 run item replace entity @e[type=item_display,tag=Credit2,tag=Skull,tag=!Old,limit=1] contents from entity @e[type=item_display,tag=SkullCache,tag=shirowh,limit=1] contents
+execute if score $TranslatorPage CmdData matches 4 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit2","Name"],billboard:"fixed",transformation:{translation:[0f,0f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"storage":"craftycannoneers:skullcache","nbt":"shirowh","color":"#ffff00"}]',alignment:"center"}
+execute if score $TranslatorPage CmdData matches 4 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit2","Flag"],billboard:"fixed",background:0,transformation:{translation:[0f,0f,0f],scale:[0.0f,0.0f,0.0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"translate":":flag_es:","color":"white"}]',alignment:"center"}
+#? - ?
+execute if score $TranslatorPage CmdData matches 4 run summon item_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Skull"],start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed"}
+execute if score $TranslatorPage CmdData matches 4 if score $Online CmdData matches 1 run item replace entity @e[type=item_display,tag=Credit3,tag=Skull,tag=!Old,limit=1] contents with player_head[profile={id:[I;1617833968,-310949822,-1653808685,840726584]}]
+execute if score $TranslatorPage CmdData matches 4 unless score $Online CmdData matches 1 run item replace entity @e[type=item_display,tag=Credit3,tag=Skull,tag=!Old,limit=1] contents from entity @e[type=item_display,tag=SkullCache,tag=Tester,limit=1] contents
+execute if score $TranslatorPage CmdData matches 4 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Name"],billboard:"fixed",transformation:{translation:[0f,0f,0f],scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"text":"?"}]',alignment:"center"}
+execute if score $TranslatorPage CmdData matches 4 run summon text_display -35 -26.2 19.7 {Tags:["TranslatorCredit","Credit","Credit3","Flag"],billboard:"fixed",background:0,transformation:{translation:[0f,0f,0f],scale:[0.0f,0.0f,0.0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},text:'[{"translate":":question:","color":"white"}]',alignment:"center"}
+#Globe Text
+execute if score $TranslatorPage CmdData matches 4 run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"text":"[4/4]","color":"white"}]',start_interpolation:0,background:0,billboard:"fixed",interpolation_duration:6,transformation:{translation:[0.0f,-1.0f,0.7f]}}
 
 execute as @e[tag=Name,tag=!Old] run data merge entity @s {start_interpolation:0,interpolation_duration:0,transformation:{scale:[0.0f,0.0f,0.0f]}}
 

@@ -3,7 +3,7 @@ tag @s add Spin
 
 
 execute if score $TranslatorCreditActive CmdData matches 1 run scoreboard players add $TranslatorPage CmdData 1
-execute if score $TranslatorPage CmdData matches 4.. run scoreboard players set $TranslatorPage CmdData 1
+execute if score $TranslatorPage CmdData matches 5.. run scoreboard players set $TranslatorPage CmdData 1
 
 
 execute unless score $TranslatorCreditActive CmdData matches 1 run scoreboard players set $TranslatorPage CmdData 1

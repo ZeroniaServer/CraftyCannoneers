@@ -19,6 +19,12 @@ summon item_display 0 -100 0 {Tags:["SkullCache","tai"],view_range:0,start_inter
 #syktyvkar
 summon item_display 0 -100 0 {Tags:["SkullCache","sykt"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_data":{name:"sykt"},"minecraft:profile":{id:[I;-1282859003,-1903145212,-2110567181,371897253]}}}}
 
+#Armero
+summon item_display 0 -100 0 {Tags:["SkullCache","armero"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_data":{name:"armero"},"minecraft:profile":{id:[I;1935623980,767770881,-1801401555,-1824800623]}}}}
+
+#Shirowh_
+summon item_display 0 -100 0 {Tags:["SkullCache","shirowh"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_data":{name:"shirowh"},"minecraft:profile":{id:[I;-1533562451,550719413,-1348927752,-160709537]}}}}
+
 #> Developers
 #YZEROgame
 summon item_display 0 -100 0 {Tags:["SkullCache","yzero"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_data":{name:"yzero"},"minecraft:profile":{id:[I;-1879887536,-1673376384,-1653471241,-507601540]}}}}
@@ -36,10 +42,10 @@ summon item_display 0 -100 0 {Tags:["SkullCache","klar"],view_range:0,start_inte
 summon item_display 0 -100 0 {Tags:["SkullCache","carl"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_data":{name:"carl"},"minecraft:profile":{id:[I;-598004646,-1437447436,-1716246720,274625028]}}}}
 
 #BlockyM_
-summon item_display 0 -100 0 {Tags:["SkullCache"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_data":{name:"blocky"},"minecraft:profile":{id:[I;1483758530,847266185,-1434587083,1169713739]}}}}
+summon item_display 0 -100 0 {Tags:["SkullCache","blocky"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_data":{name:"blocky"},"minecraft:profile":{id:[I;1483758530,847266185,-1434587083,1169713739]}}}}
 
 #> Tester
-summon item_display 0 -100 0 {Tags:["SkullCache","Tester"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:profile":{id:[I;91954247,320948323,-1493268345,-101964193]}}}}
+summon item_display 0 -100 0 {Tags:["SkullCache","Tester"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:profile":{id:[I;1617833968,-310949822,-1653808685,840726584]}}}}
 
 schedule function lobby:credit/skullcache/async 3s replace
 schedule function lobby:credit/skullcache/start 0.75d replace

@@ -1,6 +1,6 @@
 #> Offline check
 scoreboard players set $Online CmdData 0
-execute as @e[type=item_display,tag=Tester,tag=SkullCache] unless data entity @s {item:{components:{"minecraft:profile":{"name":"MHF_Creeper"}}}} run return run kill @e[type=item_display,tag=SkullCache,tag=!Old]
+execute as @e[type=item_display,tag=Tester,tag=SkullCache] unless data entity @s {item:{components:{"minecraft:profile":{"name":"MHF_Question"}}}} run return run kill @e[type=item_display,tag=SkullCache,tag=!Old]
 
 #> If online, update all skulls/names
 scoreboard players set $Online CmdData 1
