@@ -113,4 +113,4 @@ execute if score $gamestate CmdData matches 2.. if score $Wildlife CmdData match
 scoreboard players set $subticked CmdData 0
 
 #> Skull cache
-execute if score $load CmdData matches 40 if score $WorldVersion CmdData matches 1130.. run function lobby:credit/skullcache/start
+execute if score $load CmdData matches 39 if score $WorldVersion CmdData matches 1130.. run function lobby:credit/skullcache/start
