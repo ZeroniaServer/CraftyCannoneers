@@ -16,7 +16,9 @@
         {
           "function": "minecraft:set_components",
           "components": {
-            "minecraft:custom_model_data": 60,
+            "minecraft:custom_model_data": {
+              "floats": [60]
+            },
             "minecraft:enchantments": {
               "levels": {
                 "minecraft:vanishing_curse": 1

@@ -1,1 +1,1 @@
-item replace entity @e[type=item_display,tag=orangechestdisplay,limit=1] container.0 with diamond_hoe[custom_model_data=52]
+item replace entity @e[type=item_display,tag=orangechestdisplay,limit=1] container.0 with diamond_hoe[custom_model_data={floats:[52.0f]}]

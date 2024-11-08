@@ -13,7 +13,7 @@ execute at @s[scores={firetime=3},tag=ByLightning] run scoreboard players add @s
 execute at @s run setblock ^ ^1 ^2 light[level=15]
 
 #> Continuous effects
-item replace entity @s container.0 with minecraft:diamond_hoe[custom_model_data=74]
+item replace entity @s container.0 with minecraft:diamond_hoe[custom_model_data={floats:[74.0f]}]
 particle smoke ^ ^1.4 ^0.4 0 0 1 0.1 2 normal @a[team=!Lobby]
 particle flame ^ ^1.4 ^0.5 0 0 1 0.03 2 normal @a[team=!Lobby]
 execute if entity @s[tag=ByLightning] run particle electric_spark ^ ^1.4 ^0.5 0.3 0.2 1 0.03 7 normal @a[team=!Lobby]

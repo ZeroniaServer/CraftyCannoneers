@@ -23,16 +23,16 @@ scoreboard players set $gamestate CmdData -1
 tag @e[type=marker,tag=joinpad] add Locked
 kill @e[type=item,predicate=game:inarena]
 
-item replace entity @e[type=item_display,tag=TimeIcon,limit=1] container.0 with diamond_hoe[custom_model_data=35]
-item replace entity @e[type=item_display,tag=HPIcon,limit=1] container.0 with diamond_hoe[custom_model_data=36]
-item replace entity @e[type=item_display,tag=ConfirmIcon,limit=1] container.0 with diamond_hoe[custom_model_data=37]
-item replace entity @e[type=item_display,tag=DefaultsIcon,limit=1] container.0 with diamond_hoe[custom_model_data=38]
-item replace entity @e[type=item_display,tag=ModiIcon,limit=1] container.0 with diamond_hoe[custom_model_data=83]
-execute if score $Daytime CmdData matches 0 run item replace entity @e[type=item_display,tag=DaytimeIcon,limit=1] container.0 with diamond_hoe[custom_model_data=120]
-execute if score $Daytime CmdData matches 1 run item replace entity @e[type=item_display,tag=DaytimeIcon,limit=1] container.0 with diamond_hoe[custom_model_data=121]
-execute if score $Daytime CmdData matches 2 run item replace entity @e[type=item_display,tag=DaytimeIcon,limit=1] container.0 with diamond_hoe[custom_model_data=122]
+item replace entity @e[type=item_display,tag=TimeIcon,limit=1] container.0 with diamond_hoe[custom_model_data={floats:[35.0f]}]
+item replace entity @e[type=item_display,tag=HPIcon,limit=1] container.0 with diamond_hoe[custom_model_data={floats:[36.0f]}]
+item replace entity @e[type=item_display,tag=ConfirmIcon,limit=1] container.0 with diamond_hoe[custom_model_data={floats:[37.0f]}]
+item replace entity @e[type=item_display,tag=DefaultsIcon,limit=1] container.0 with diamond_hoe[custom_model_data={floats:[38.0f]}]
+item replace entity @e[type=item_display,tag=ModiIcon,limit=1] container.0 with diamond_hoe[custom_model_data={floats:[83.0f]}]
+execute if score $Daytime CmdData matches 0 run item replace entity @e[type=item_display,tag=DaytimeIcon,limit=1] container.0 with diamond_hoe[custom_model_data={floats:[120.0f]}]
+execute if score $Daytime CmdData matches 1 run item replace entity @e[type=item_display,tag=DaytimeIcon,limit=1] container.0 with diamond_hoe[custom_model_data={floats:[121.0f]}]
+execute if score $Daytime CmdData matches 2 run item replace entity @e[type=item_display,tag=DaytimeIcon,limit=1] container.0 with diamond_hoe[custom_model_data={floats:[122.0f]}]
 
-item replace entity @e[type=item_display,tag=MapEntity,limit=1] container.0 with diamond_hoe[custom_model_data=76]
+item replace entity @e[type=item_display,tag=MapEntity,limit=1] container.0 with diamond_hoe[custom_model_data={floats:[76.0f]}]
 
 execute as @e[type=interaction,tag=SettingsInteraction,tag=!ModiOn,tag=!CancelMatch] run data merge entity @s {width:0.5f,height:0.5f}
 

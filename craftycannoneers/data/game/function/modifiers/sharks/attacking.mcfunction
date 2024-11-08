@@ -1,9 +1,9 @@
 scoreboard players add @s CmdData 1
-item replace entity @s[scores={CmdData=1}] armor.head with diamond_hoe[unbreakable={},custom_model_data=88]
-item replace entity @s[scores={CmdData=3}] armor.head with diamond_hoe[unbreakable={},custom_model_data=89]
-item replace entity @s[scores={CmdData=5}] armor.head with diamond_hoe[unbreakable={},custom_model_data=90]
-item replace entity @s[scores={CmdData=7}] armor.head with diamond_hoe[unbreakable={},custom_model_data=89]
-item replace entity @s[scores={CmdData=9}] armor.head with diamond_hoe[unbreakable={},custom_model_data=88]
+item replace entity @s[scores={CmdData=1}] armor.head with diamond_hoe[unbreakable={},custom_model_data={floats:[88.0f]}]
+item replace entity @s[scores={CmdData=3}] armor.head with diamond_hoe[unbreakable={},custom_model_data={floats:[89.0f]}]
+item replace entity @s[scores={CmdData=5}] armor.head with diamond_hoe[unbreakable={},custom_model_data={floats:[90.0f]}]
+item replace entity @s[scores={CmdData=7}] armor.head with diamond_hoe[unbreakable={},custom_model_data={floats:[89.0f]}]
+item replace entity @s[scores={CmdData=9}] armor.head with diamond_hoe[unbreakable={},custom_model_data={floats:[88.0f]}]
 
 execute at @s[scores={CmdData=1}] run playsound minecraft:entity.evoker_fangs.attack master @a ~ ~ ~ 0.5 1.1
 
@@ -27,7 +27,7 @@ execute at @s[scores={CmdData=9}] positioned ^ ^ ^1 run kill @e[type=oak_boat,ta
 execute unless score $bitcargo CmdData matches 1 at @s[scores={CmdData=9}] positioned ^ ^ ^1 run effect give @a[team=!Lobby,team=!Spectator,tag=SharkTarget,gamemode=adventure,distance=..2,limit=1,sort=nearest] instant_damage 1 1 true
 execute at @s[scores={CmdData=9}] if predicate game:tooth_chance positioned ^ ^ ^1 if entity @a[team=!Lobby,team=!Spectator,tag=SharkTarget,distance=..2,limit=1] at @s run function game:modifiers/sharks/losttooth
 execute at @s[scores={CmdData=9}] run particle bubble ^ ^ ^2 0 0 0 0.1 10 force @a[team=!Lobby]
-item replace entity @s[scores={CmdData=11}] armor.head with diamond_hoe[unbreakable={},custom_model_data=87]
+item replace entity @s[scores={CmdData=11}] armor.head with diamond_hoe[unbreakable={},custom_model_data={floats:[87.0f]}]
 
 execute at @s[scores={CmdData=9}] store result score @s sharkcooldown run random value 1..60
 

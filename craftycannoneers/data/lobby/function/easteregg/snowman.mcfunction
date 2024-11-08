@@ -3,7 +3,7 @@ execute at @s[scores={CmdData=2}] run data merge entity @s {start_interpolation:
 execute at @s[scores={CmdData=2}] on passengers run data merge entity @s {start_interpolation:0,interpolation_duration:10,transformation:{translation:[0.0f,1.8f,0.0f]}}
 execute at @s[scores={CmdData=..10}] run playsound snowmandig master @a ~ ~ ~ 0.6 1
 execute at @s[scores={CmdData=..10}] run particle block{block_state:"sand"} ~ ~0.5 ~ 0.2 1 0.2 0.1 4
-execute at @s[scores={CmdData=25}] run item replace entity @s container.0 with diamond_hoe[custom_model_data=67]
+execute at @s[scores={CmdData=25}] run item replace entity @s container.0 with diamond_hoe[custom_model_data={floats:[67.0f]}]
 execute at @s[scores={CmdData=25}] on passengers run item replace entity @s container.0 with carrot
 execute at @s[scores={CmdData=25}] run particle block{block_state:"snow_block"} ~ ~1 ~ 0.2 0.5 0.5 1 80
 execute at @s[scores={CmdData=25}] run particle block{block_state:"packed_ice"} ~ ~1 ~ 0.2 0.5 0.5 1 80

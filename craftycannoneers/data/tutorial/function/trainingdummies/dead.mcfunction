@@ -18,7 +18,7 @@ execute if score @s eyeclick matches 2 run summon item ~ ~1.2 ~ {Age:-32768,Tags
 execute if score @s eyeclick matches 2 run summon item ~ ~1.2 ~ {Age:-32768,Tags:["DummyDeadItem","wheat"],Item:{id:"minecraft:wheat",count:1},PickupDelay:1000,Motion:[-0.05d,0.25d,0.05d]}
 execute if score @s eyeclick matches 2 run summon item ~ ~1.2 ~ {Age:-32768,Tags:["DummyDeadItem","wheat"],Item:{id:"minecraft:wheat",count:1},PickupDelay:1000,Motion:[-0.01d,0.22d,0.05d]}
 execute if score @s eyeclick matches 2 run summon item ~ ~1.2 ~ {Age:-32768,Tags:["DummyDeadItem","wheat"],Item:{id:"minecraft:wheat",count:1},PickupDelay:1000,Motion:[0.05d,0.2d,-0.02d]}
-execute if score @s eyeclick matches 2 run summon item ~ ~1.2 ~ {Age:-32768,Tags:["DummyDeadItem","hat"],Item:{id:"minecraft:diamond_hoe",components:{"custom_model_data":108},count:1},PickupDelay:1000,Motion:[-0.05d,0.2d,-0.05d]}
+execute if score @s eyeclick matches 2 run summon item ~ ~1.2 ~ {Age:-32768,Tags:["DummyDeadItem","hat"],Item:{id:"minecraft:diamond_hoe",components:{"custom_model_data":{floats:[108.0f]}},count:1},PickupDelay:1000,Motion:[-0.05d,0.2d,-0.05d]}
 execute if score @s eyeclick matches 5.. run kill @e[type=area_effect_cloud,tag=NameTag,distance=..2,limit=1,sort=nearest]
 
 kill @s[scores={eyeclick=5..}]

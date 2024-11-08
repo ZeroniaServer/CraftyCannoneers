@@ -12,7 +12,9 @@
     "icon": {
       "id": "minecraft:ender_eye",
       "components": {
-        "minecraft:custom_model_data": 1
+        "minecraft:custom_model_data": {
+          "floats": [1]
+        }
       }
     },
     "frame": "goal",

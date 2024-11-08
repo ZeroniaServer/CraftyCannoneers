@@ -5,7 +5,7 @@ execute as @s[scores={CmdData=12..13}] run rotate @s ~-4 ~
 execute at @s[scores={CmdData=30}] run playsound crabstruggle master @a ~ ~ ~ 0.6 1.5
 execute at @s[scores={CmdData=30..31}] run rotate @s ~-4 ~
 execute at @s[scores={CmdData=32..33}] run rotate @s ~4 ~
-execute at @s[scores={CmdData=40}] run particle item{item:{id:"mooshroom_spawn_egg",components:{"minecraft:custom_model_data":15}}} ~ ~0.5 ~ 0.2 0.25 0.2 0.1 40 force @a[team=!Lobby]
+execute at @s[scores={CmdData=40}] run particle item{item:{id:"mooshroom_spawn_egg",components:{"minecraft:custom_model_data":{floats:[15.0f]}}}} ~ ~0.5 ~ 0.2 0.25 0.2 0.1 40 force @a[team=!Lobby]
 execute at @s[scores={CmdData=40}] run particle cloud ~ ~ ~ 0.2 0.2 0.2 0.05 20 force @a[team=!Lobby]
 execute if entity @s[scores={CmdData=40..}] run data modify storage craftycannoneers:crab angle set from entity @s Rotation[0]
 execute if entity @s[scores={CmdData=40..}] run function game:modifiers/crabs/releasecrab with storage craftycannoneers:crab

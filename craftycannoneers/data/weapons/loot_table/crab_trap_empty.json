@@ -16,7 +16,9 @@
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:custom_model_data": 15,
+                        "minecraft:custom_model_data": {
+                            "floats": [15]
+                        },
                         "minecraft:custom_name": "{\"translate\":\"item.crab_trap.empty\",\"italic\":false,\"color\":\"dark_aqua\"}",
                         "minecraft:lore": [
                             "[{\"translate\":\"item.crab_trap.lore.1\",\"italic\":false,\"color\":\"white\"}]",
@@ -39,7 +41,9 @@
                     "function": "minecraft:set_components",
                     "components": {
                         "minecraft:can_place_on": {
-                            "predicates": [{}],
+                            "predicates": [
+                                {}
+                            ],
                             "show_in_tooltip": false
                         }
                     },

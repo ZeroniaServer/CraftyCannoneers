@@ -16,7 +16,9 @@
         {
           "function": "minecraft:set_components",
           "components": {
-            "minecraft:custom_model_data": 2,
+            "minecraft:custom_model_data": {
+              "floats": [2]
+            },
             "minecraft:custom_name": "[{\"translate\":\"item.blast_bomb\",\"italic\":false,\"color\":\"dark_aqua\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"item.blast_bomb.lore.1\",\"italic\":false,\"color\":\"white\"}]",

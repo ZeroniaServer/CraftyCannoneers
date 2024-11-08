@@ -16,7 +16,9 @@
         {
           "function": "minecraft:set_components",
           "components": {
-            "minecraft:custom_model_data": 1,
+            "minecraft:custom_model_data": {
+              "floats": [1]
+            },
             "minecraft:custom_name": "[{\"translate\":\"item.skeleton_key\",\"italic\":false,\"color\":\"dark_aqua\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"item.skeleton_key.lore.1\",\"italic\":false,\"color\":\"white\"}]",

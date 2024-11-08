@@ -110,7 +110,9 @@ $loot $(function) loot \
                 {\
                     "function": "minecraft:set_components",\
                     "components": {\
-                        "minecraft:custom_model_data": 15,\
+                        "minecraft:custom_model_data": {\
+                            "floats": [15]\
+                        },\
                         "minecraft:lore": [\
                             "[{\"translate\":\"item.crab_trap.lore.1\",\"italic\":false,\"color\":\"white\"}]",\
                             "[{\"translate\":\"item.crab_trap.lore.2\",\"italic\":false,\"color\":\"white\"}]"\
