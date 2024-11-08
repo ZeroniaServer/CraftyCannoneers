@@ -80,7 +80,7 @@ execute at @s[scores={cannonshot=26}] unless score @s CannonID matches 8 run par
 execute at @s[scores={cannonshot=26}] unless score @s CannonID matches 8 run particle lava ^ ^2.1 ^2 0.1 0.1 0.1 0.02 10 force @a[predicate=cannons:seeparticles]
 
 #> Recoil
-execute at @s[scores={cannonshot=27}] run function game:boat/motionunlock
+execute at @s[scores={cannonshot=33}] run function game:boat/motionunlock
 execute at @s[scores={cannonshot=27..}] unless score @s CannonID matches 8 run function game:boat/cannon/recoil
 
 #> Set light
