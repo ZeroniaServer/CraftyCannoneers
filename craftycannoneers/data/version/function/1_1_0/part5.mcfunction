@@ -56,11 +56,11 @@ execute as @e[type=item_display,tag=DecoPCB,limit=1] at @s rotated as @e[type=ar
 kill @e[type=armor_stand,tag=CannonballDeco]
 
 #Golden Cannonball
-execute unless entity @e[type=item_display,tag=CannonballDeco,tag=DecoGOCB] run summon item_display -40.5 -26.6 -8.5 {width:1f,height:1f,item_display:"fixed",Tags:["CannonballDeco","HasDisplay","DecoGOCB"],Rotation:[40.231f,1.392f],item:{id:"diamond_hoe",count:1,components:{"custom_model_data":73}}}
+execute unless entity @e[type=item_display,tag=CannonballDeco,tag=DecoGOCB] run summon item_display -40.5 -26.6 -8.5 {width:1f,height:1f,item_display:"head",Tags:["CannonballDeco","HasDisplay","DecoGOCB"],Rotation:[40.231f,1.392f],item:{id:"diamond_hoe",count:1,components:{"custom_model_data":73}},transformation:{translation:[0.0f,0.9f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.4375f,0.4375f,0.4375f],left_rotation:[0.0f,0.0f,0.0f,1.0f]}}
 setblock -41 -27 -9 creeper_head
 
 #Copper Cannonball
-execute unless entity @e[type=item_display,tag=CannonballDeco,tag=DecoCOCB] run summon item_display -41.5 -26.55 -5.5 {width:1f,height:1f,item_display:"fixed",Tags:["CannonballDeco","HasDisplay","DecoCOCB"],Rotation:[60.282f,2.056f],item:{id:"diamond_hoe",count:1,components:{"custom_model_data":109}}}
+execute unless entity @e[type=item_display,tag=CannonballDeco,tag=DecoCOCB] run summon item_display -41.5 -26.55 -5.5 {width:1f,height:1f,item_display:"head",Tags:["CannonballDeco","HasDisplay","DecoCOCB"],Rotation:[60.282f,2.056f],item:{id:"diamond_hoe",count:1,components:{"custom_model_data":109}},transformation:{translation:[0.0f,0.9f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.4375f,0.4375f,0.4375f],left_rotation:[0.0f,0.0f,0.0f,1.0f]}}
 setblock -42 -27 -6 creeper_head
 
 #> Light up the Training Island for nighttime
