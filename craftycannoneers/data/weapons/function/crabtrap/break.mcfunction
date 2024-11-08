@@ -9,5 +9,7 @@ execute store result storage craftycannoneers:crabtrap durability int 1 run scor
 data modify storage craftycannoneers:crabtrap function set value "spawn ~ ~0.1 ~"
 execute if score @s TrapDurability matches 0.. run function weapons:crabtrap/givewithdura with storage craftycannoneers:crabtrap
 execute if score @s TrapDurability matches ..-1 run playsound crabtrapbreak4 master @a ~ ~ ~ 2 1
+
+execute on vehicle on passengers run kill @s[type=interaction]
 execute on vehicle run kill
-kill @s
+kill

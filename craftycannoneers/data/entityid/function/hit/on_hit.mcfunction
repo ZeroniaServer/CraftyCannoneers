@@ -6,7 +6,7 @@ execute at @s[type=bat,tag=BlastBarrel] run function weapons:barrel/punch
 execute at @s[type=interaction,tag=BlastBarrel] as @e[type=item_display,tag=BlastBarrel,distance=..1,sort=nearest,limit=1] at @s run function weapons:barrel/empty
 
 #> Crab Trap 
-execute at @s[type=interaction,tag=CrabTrap] on passengers run function weapons:crabtrap/break
+execute at @s[type=interaction,tag=CrabTrap] on vehicle on passengers if entity @s[type=item_display] run function weapons:crabtrap/break
 
 #> Cargo Trap
 execute if entity @s[type=husk,tag=CBTrap] on vehicle run function game:modifiers/lostcargo/punchtrap
