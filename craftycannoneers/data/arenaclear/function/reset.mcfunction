@@ -47,6 +47,8 @@ scoreboard players set $curr crabs 0
 function arenaclear:villagertrades
 function arenaclear:fakeairclear
 function arenaclear:teamchests
+function arenaclear:boatvehicles
+function arenaclear:cannons
 
 function game:setreadysign
 
