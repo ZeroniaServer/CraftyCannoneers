@@ -10,15 +10,7 @@ item modify entity @s[tag=emptyMainhand] weapon.mainhand weapons:blank
 
 #> If mainhand has barrel (under a stack), give 2 more and then restore the original stack amount to prevent animation
 scoreboard players reset @s hasBarrels
-execute if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:0}] store result score @s hasBarrels run data get entity @s Inventory[{Slot:0b}].count
-execute unless score @s hasBarrels = @s hasBarrels if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:1}] store result score @s hasBarrels run data get entity @s Inventory[{Slot:1b}].count
-execute unless score @s hasBarrels = @s hasBarrels if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:2}] store result score @s hasBarrels run data get entity @s Inventory[{Slot:2b}].count
-execute unless score @s hasBarrels = @s hasBarrels if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:3}] store result score @s hasBarrels run data get entity @s Inventory[{Slot:3b}].count
-execute unless score @s hasBarrels = @s hasBarrels if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:4}] store result score @s hasBarrels run data get entity @s Inventory[{Slot:4b}].count
-execute unless score @s hasBarrels = @s hasBarrels if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:5}] store result score @s hasBarrels run data get entity @s Inventory[{Slot:5b}].count
-execute unless score @s hasBarrels = @s hasBarrels if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:6}] store result score @s hasBarrels run data get entity @s Inventory[{Slot:6b}].count
-execute unless score @s hasBarrels = @s hasBarrels if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:7}] store result score @s hasBarrels run data get entity @s Inventory[{Slot:7b}].count
-execute unless score @s hasBarrels = @s hasBarrels if entity @s[tag=stackMainhand,tag=!fullStackMainhand,nbt={SelectedItemSlot:8}] store result score @s hasBarrels run data get entity @s Inventory[{Slot:8b}].count
+execute if entity @s[tag=stackMainhand,tag=!fullStackMainhand] store result score @s hasBarrels run data get entity @s SelectedItem.count
 item modify entity @s[tag=stackMainhand,tag=!fullStackMainhand] weapon.mainhand weapons:add_two
 scoreboard players add @s[tag=stackMainhand,tag=!fullStackMainhand] hasBarrels 1
 loot replace entity @s[tag=stackMainhand,tag=!fullStackMainhand] weapon.mainhand loot weapons:barrel_return
