@@ -146,7 +146,7 @@ execute at @s[scores={copperStrike=20},predicate=!game:inwater] run tag @e[type=
 execute at @s[scores={copperStrike=20},predicate=!game:inwater] run tag @e[type=oak_boat,tag=!OnFire,distance=..7,limit=2,sort=nearest] add ByLightning
 execute at @s[scores={copperStrike=20},predicate=!game:inwater] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add OnFire
 execute at @s[scores={copperStrike=20},predicate=!game:inwater] run tag @e[type=oak_boat,tag=!OnFire,distance=..7,limit=2,sort=nearest] add OnFire
-item replace entity @s[scores={copperStrike=20},predicate=!game:inwater] armor.head with minecraft:diamond_hoe[custom_model_data=110]
+item replace entity @s[scores={copperStrike=20},predicate=!game:inwater] armor.head with minecraft:diamond_hoe[custom_model_data={floats:[110.0f]}]
 
 execute at @s[scores={copperStrike=35},predicate=!game:inwater] run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 execute at @s[scores={copperStrike=35},predicate=!game:inwater] as @a[team=!Spectator,team=!Lobby,predicate=!game:inwater,distance=..7,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
@@ -154,7 +154,7 @@ execute at @s[scores={copperStrike=35},predicate=!game:inwater] run tag @e[type=
 execute at @s[scores={copperStrike=35},predicate=!game:inwater] run tag @e[type=oak_boat,tag=!OnFire,distance=..7,limit=2,sort=nearest] add ByLightning
 execute at @s[scores={copperStrike=35},predicate=!game:inwater] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add OnFire
 execute at @s[scores={copperStrike=35},predicate=!game:inwater] run tag @e[type=oak_boat,tag=!OnFire,distance=..7,limit=2,sort=nearest] add OnFire
-item replace entity @s[scores={copperStrike=35},predicate=!game:inwater] armor.head with minecraft:diamond_hoe[custom_model_data=111]
+item replace entity @s[scores={copperStrike=35},predicate=!game:inwater] armor.head with minecraft:diamond_hoe[custom_model_data={floats:[111.0f]}]
 
 execute at @s[scores={copperStrike=55},predicate=!game:inwater] run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 execute at @s[scores={copperStrike=55},predicate=!game:inwater] as @a[team=!Spectator,team=!Lobby,predicate=!game:inwater,distance=..7,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
@@ -162,7 +162,7 @@ execute at @s[scores={copperStrike=55},predicate=!game:inwater] run tag @e[type=
 execute at @s[scores={copperStrike=55},predicate=!game:inwater] run tag @e[type=oak_boat,tag=!OnFire,distance=..7,limit=2,sort=nearest] add ByLightning
 execute at @s[scores={copperStrike=55},predicate=!game:inwater] run tag @e[type=item_display,tag=!OnFire,tag=CannonDisp,tag=CannonCart,tag=!OnFire,distance=..7,sort=nearest] add OnFire
 execute at @s[scores={copperStrike=55},predicate=!game:inwater] run tag @e[type=oak_boat,tag=!OnFire,distance=..7,limit=2,sort=nearest] add OnFire
-item replace entity @s[scores={copperStrike=55},predicate=!game:inwater] armor.head with minecraft:diamond_hoe[custom_model_data=112]
+item replace entity @s[scores={copperStrike=55},predicate=!game:inwater] armor.head with minecraft:diamond_hoe[custom_model_data={floats:[112.0f]}]
 
 execute at @s[scores={copperStrike=70},predicate=!game:inwater] run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}
 execute at @s[scores={copperStrike=70},predicate=!game:inwater] as @a[team=!Spectator,team=!Lobby,predicate=!game:inwater,distance=..7,sort=random] at @s run summon marker ~ ~1 ~ {Tags:["LightningMarker","StormEntity","Instant"]}

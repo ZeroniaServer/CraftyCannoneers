@@ -1,7 +1,7 @@
 ##Processes individual items for the purpose of preventing item dropping
 ##Thanks to Cloud Wolf for the tip!
-execute if items entity @s contents diamond_hoe[custom_model_data=18] run kill
-execute if items entity @s contents diamond_hoe[custom_model_data=17] run kill
+execute if items entity @s contents diamond_hoe[custom_model_data={floats:[18.0f]}] run kill
+execute if items entity @s contents diamond_hoe[custom_model_data={floats:[17.0f]}] run kill
 data modify entity @s[tag=!processed] Owner set from entity @s Thrower
 data merge entity @s {NoGravity:1b}
 data merge entity @s[tag=!processed] {PickupDelay:0s}

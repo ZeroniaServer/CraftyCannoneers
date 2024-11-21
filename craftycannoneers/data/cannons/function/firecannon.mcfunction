@@ -7,7 +7,7 @@ execute at @s[scores={cannonshot=1}] as @e[type=interaction,tag=GPLocked,distanc
 execute at @s[scores={cannonshot=1}] as @e[type=interaction,tag=CannonVMain,distance=..2,limit=1,sort=nearest] run data modify entity @s response set value 0b
 execute at @s[scores={cannonshot=1}] run item replace entity @e[type=item_display,tag=GPDispR,distance=..2,limit=1,sort=nearest] container.0 with air
 execute at @s[scores={cannonshot=1}] run item replace entity @e[type=item_display,tag=GPDispL,distance=..2,limit=1,sort=nearest] container.0 with air
-execute at @s[scores={cannonshot=1}] run item replace entity @s container.0 with minecraft:diamond_hoe[custom_model_data=107]
+execute at @s[scores={cannonshot=1}] run item replace entity @s container.0 with minecraft:diamond_hoe[custom_model_data={floats:[107.0f]}]
 execute at @s[scores={cannonshot=1}] run playsound cannonload master @a ~ ~ ~ 1 1
 execute at @s[scores={cannonshot=5}] run scoreboard players set @s cannonclaim 91
 execute at @s[scores={cannonshot=30,CmdData=8}] run scoreboard players set @s cannonclaim 91
@@ -22,7 +22,7 @@ execute at @s[scores={cannonshot=26}] unless score @s CmdData matches 8 run part
 execute at @s[scores={cannonshot=26}] unless score @s CmdData matches 8 run particle campfire_cosy_smoke ^ ^0.8 ^2 0.1 0.1 0.1 0.02 10 force @a[predicate=cannons:seeparticles]
 execute at @s[scores={cannonshot=26}] unless score @s CmdData matches 8 run particle lava ^ ^2.1 ^2 0.1 0.1 0.1 0.02 10 force @a[predicate=cannons:seeparticles]
 execute at @s[scores={cannonshot=28}] unless score @s CmdData matches 8 run tag @e[type=item_display,tag=CannonBarrel,limit=1,sort=nearest] add RecoilAnimation
-execute at @s[scores={cannonshot=30}] unless score @s CmdData matches 8 run item replace entity @s container.0 with minecraft:diamond_hoe[custom_model_data=1]
+execute at @s[scores={cannonshot=30}] unless score @s CmdData matches 8 run item replace entity @s container.0 with minecraft:diamond_hoe[custom_model_data={floats:[1.0f]}]
 execute at @s[scores={cannonshot=30}] unless score @s CmdData matches 8 run summon marker ^ ^2 ^4 {Tags:["LightFlash","cannon"]}
 
 execute at @s[scores={cannonshot=5}] store result score @s PowerL run scoreboard players get @e[type=item_display,tag=GPDispL,limit=1,sort=nearest,distance=..2] CmdData

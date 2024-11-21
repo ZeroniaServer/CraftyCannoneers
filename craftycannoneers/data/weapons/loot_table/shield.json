@@ -16,7 +16,9 @@
         {
           "function": "minecraft:set_components",
           "components": {
-            "minecraft:custom_model_data": 1,
+            "minecraft:custom_model_data": {
+              "floats": [1]
+            },
             "minecraft:max_damage": 20,
             "minecraft:custom_name": "[{\"translate\":\"item.minecraft.shield\",\"italic\":false,\"color\":\"dark_aqua\"}]"
           }

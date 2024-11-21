@@ -6,7 +6,9 @@
       "head": {
         "items": "minecraft:diamond_hoe",
         "components": {
-          "minecraft:custom_model_data": 61
+          "minecraft:custom_model_data": {
+            "floats": [61]
+          }
         }
       }
     }
