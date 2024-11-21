@@ -26,4 +26,4 @@ execute if entity @s[tag=!emptyOffhand,tag=!stackOffhand] run loot give @s loot 
 tag @s[tag=emptyOffhand] remove emptyOffhand
 tag @s[tag=stackOffhand] remove stackOffhand
 tag @s[tag=fullStackOffhand] remove fullStackOffhand
-scoreboard players reset @s[scores={spawnPlaceable=0..}]
+scoreboard players reset @s[scores={spawnPlaceable=0..}] spawnPlaceable

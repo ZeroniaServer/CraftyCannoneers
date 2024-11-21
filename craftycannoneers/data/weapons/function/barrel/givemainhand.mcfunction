@@ -35,4 +35,4 @@ execute if entity @s[tag=!emptyMainhand,tag=!stackMainhand] run loot give @s loo
 tag @s[tag=emptyMainhand] remove emptyMainhand
 tag @s[tag=stackMainhand] remove stackMainhand
 tag @s[tag=fullStackMainhand] remove fullStackMainhand
-scoreboard players reset @s[scores={spawnPlaceable=0..}]
+scoreboard players reset @s[scores={spawnPlaceable=0..}] spawnPlaceable
