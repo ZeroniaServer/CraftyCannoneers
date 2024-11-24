@@ -42,12 +42,14 @@ tag @s[tag=firstJoined] add msgReceived
 execute if score $servermode CmdData matches 1 run scoreboard players enable @s joinorange
 execute unless score $servermode CmdData matches 1 run trigger joinorange set 0
 
-execute unless entity @e[x=0,tag=JoinpadOrange,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 unless score $InOrange CmdData > $InPurple CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData run tag @s[team=!Orange,scores={joinorange=1..}] add JoinOrange
+execute unless entity @e[x=0,tag=JoinpadOrange,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 unless score $InOrange CmdData > $InPurple CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData run tag @s[team=!Orange,team=!Purple,scores={joinorange=1..}] add JoinOrange
+execute unless entity @e[x=0,tag=JoinpadOrange,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 unless score $InOrange CmdData >= $InPurple CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData run tag @s[team=Purple,scores={joinorange=1..}] add JoinOrange
 execute unless entity @e[x=0,tag=JoinpadOrange,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 if score $InOrange CmdData >= $MaxTeamSize CmdData if entity @s[team=!Orange,scores={joinorange=1..},tag=!tryJoinOrange] run function lobby:joinpads/orange/full
 execute if entity @e[x=0,tag=JoinpadOrange,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 if entity @s[team=!Orange,scores={joinorange=1..},tag=!tryJoinOrange] run function lobby:joinpads/orange/full
 execute unless entity @e[x=0,tag=JoinpadOrange,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 if score $InOrange CmdData > $InPurple CmdData if entity @s[team=!Orange,scores={joinorange=1..},tag=!tryJoinOrange] run function lobby:joinpads/orange/imbalanced
 
 execute unless score $gamestate CmdData matches 0..2 if score @s joinorange matches 1.. run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
+execute if score $gamestate CmdData matches 0..2 if score @s joinorange matches 1.. if score $InOrange CmdData = $InPurple CmdData run tellraw @s[team=Purple] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
 execute if entity @s[team=Orange,scores={joinorange=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_joined","color":"red"}]
 
 scoreboard players reset @s[scores={joinorange=1..}] joinorange
@@ -56,12 +58,14 @@ scoreboard players reset @s[scores={joinorange=1..}] joinorange
 execute if score $servermode CmdData matches 1 run scoreboard players enable @s joinpurple
 execute unless score $servermode CmdData matches 1 run trigger joinpurple set 0
 
-execute unless entity @e[x=0,tag=JoinpadPurple,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 unless score $InPurple CmdData > $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData run tag @s[team=!Purple,scores={joinpurple=1..}] add JoinPurple
+execute unless entity @e[x=0,tag=JoinpadPurple,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 unless score $InPurple CmdData > $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData run tag @s[team=!Purple,team=!Orange,scores={joinpurple=1..}] add JoinPurple
+execute unless entity @e[x=0,tag=JoinpadPurple,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 unless score $InPurple CmdData >= $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData run tag @s[team=Orange,scores={joinpurple=1..}] add JoinPurple
 execute unless entity @e[x=0,tag=JoinpadPurple,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 if score $InPurple CmdData >= $MaxTeamSize CmdData if entity @s[team=!Purple,scores={joinpurple=1..},tag=!tryJoinPurple] run function lobby:joinpads/purple/full
 execute if entity @e[x=0,tag=JoinpadPurple,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 if entity @s[team=!Purple,scores={joinpurple=1..},tag=!tryJoinPurple] run function lobby:joinpads/purple/full
 execute unless entity @e[x=0,tag=JoinpadPurple,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 if score $InPurple CmdData > $InOrange CmdData if entity @s[team=!Purple,scores={joinpurple=1..},tag=!tryJoinPurple] run function lobby:joinpads/purple/imbalanced
 
 execute unless score $gamestate CmdData matches 0..2 if score @s joinpurple matches 1.. run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
+execute if score $gamestate CmdData matches 0..2 if score @s joinpurple matches 1.. if score $InPurple CmdData = $InOrange CmdData run tellraw @s[team=Orange] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
 execute if entity @s[team=Purple,scores={joinpurple=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_joined","color":"red"}]
 
 scoreboard players reset @s[scores={joinpurple=1..}] joinpurple
