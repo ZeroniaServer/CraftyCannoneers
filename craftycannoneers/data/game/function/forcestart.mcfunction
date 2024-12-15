@@ -19,7 +19,7 @@ scoreboard players set $PVPbal BalanceScore 0
 
 tag @a remove ClickedReady
 scoreboard players set $Tip CmdData 0
-function tutorial:newset
+function tutorial:tips/newset
 
 execute if score $ShipHP CmdData matches 42069.. run function game:autohp
 function lobby:customizer/lockboxdamage
