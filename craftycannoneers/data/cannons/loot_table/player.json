@@ -19,9 +19,7 @@
             "minecraft:custom_model_data": {
               "floats": [56]
             },
-            "minecraft:unbreakable": {
-              "show_in_tooltip": false
-            },
+            "minecraft:unbreakable": {},
             "minecraft:custom_name": "[{\"translate\":\"cannonball.player\",\"italic\":false,\"color\":\"dark_aqua\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"cannonball.player.lore.1\",\"italic\":false,\"color\":\"white\"}]",
@@ -29,9 +27,11 @@
               "[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
               "[{\"translate\":\"cannonball.player.lore.3\",\"italic\":false,\"color\":\"aqua\"}]"
             ],
-            "minecraft:attribute_modifiers": {
-              "modifiers": [],
-              "show_in_tooltip": false
+            "minecraft:tooltip_display": {
+              "hidden_components": [
+                "minecraft:attribute_modifiers",
+                "minecraft:unbreakable"
+              ]
             }
           }
         },

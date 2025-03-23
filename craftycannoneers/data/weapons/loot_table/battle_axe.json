@@ -12,13 +12,12 @@
         {
           "function": "minecraft:set_components",
           "components": {
-            "minecraft:unbreakable": {
-              "show_in_tooltip": false
-            },
+            "minecraft:unbreakable": {},
             "minecraft:custom_name": "[{\"translate\":\"item.battle_axe\",\"italic\":false,\"color\":\"dark_aqua\"}]",
-            "minecraft:enchantments": {
-              "levels": {},
-              "show_in_tooltip": false
+            "minecraft:tooltip_display": {
+              "hidden_components": [
+                "minecraft:unbreakable"
+              ]
             }
           }
         },

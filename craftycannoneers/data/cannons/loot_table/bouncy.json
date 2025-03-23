@@ -19,9 +19,6 @@
             "minecraft:custom_model_data": {
               "floats": [55]
             },
-            "minecraft:unbreakable": {
-              "show_in_tooltip": false
-            },
             "minecraft:custom_name": "[{\"translate\":\"cannonball.bouncy\",\"italic\":false,\"color\":\"dark_aqua\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"cannonball.bouncy.lore.1\",\"italic\":false,\"color\":\"white\"}]",
@@ -30,9 +27,11 @@
               "[{\"translate\":\"cannonball.bouncy.lore.3\",\"italic\":false,\"color\":\"aqua\"}]",
               "[{\"translate\":\"cannonball.bouncy.lore.4\",\"italic\":false,\"color\":\"aqua\"}]"
             ],
-            "minecraft:attribute_modifiers": {
-              "modifiers": [],
-              "show_in_tooltip": false
+            "minecraft:tooltip_display": {
+              "hidden_components": [
+                "minecraft:attribute_modifiers",
+                "minecraft:unbreakable"
+              ]
             }
           }
         },

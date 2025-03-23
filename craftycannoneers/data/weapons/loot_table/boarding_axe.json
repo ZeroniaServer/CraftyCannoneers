@@ -16,14 +16,17 @@
         {
           "function": "minecraft:set_components",
           "components": {
-            "minecraft:unbreakable": {
-              "show_in_tooltip": false
-            },
+            "minecraft:unbreakable": {},
             "minecraft:custom_name": "[{\"translate\":\"item.boarding_axe\",\"italic\":false,\"color\":\"dark_aqua\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"item.boarding_axe.lore.1\",\"italic\":false,\"color\":\"white\"}]",
               "[{\"translate\":\"item.boarding_axe.lore.2\",\"italic\":false,\"color\":\"white\"}]"
-            ]
+            ],
+            "minecraft:tooltip_display": {
+              "hidden_components": [
+                "minecraft:unbreakable"
+              ]
+            }
           }
         },
         {

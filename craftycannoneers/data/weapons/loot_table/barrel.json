@@ -1,87 +1,91 @@
 {
-    "pools": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
         {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:mooshroom_spawn_egg"
-                }
-            ],
-            "functions": [
-                {
-                    "function": "minecraft:set_custom_data",
-                    "tag": "{Barrel:1b}"
-                },
-                {
-                    "function": "minecraft:set_components",
-                    "components": {
-                        "minecraft:custom_model_data": {
-                            "floats": [1]
-                        },
-                        "minecraft:custom_name": "[{\"translate\":\"item.blast_barrel\",\"italic\":false,\"color\":\"dark_aqua\"}]",
-                        "minecraft:lore": [
-                            "[{\"translate\":\"item.blast_barrel.lore.1\",\"italic\":false,\"color\":\"white\"}]",
-                            "[{\"translate\":\"item.blast_barrel.lore.2\",\"italic\":false,\"color\":\"white\"}]"
-                        ],
-                        "minecraft:entity_data": {
-                            "id": "minecraft:marker",
-                            "Tags": [
-                                "BlastBarrelSpawn",
-                                "barrel"
-                            ]
-                        },
-                        "minecraft:can_place_on": {
-                            "predicates": [{}],
-                            "show_in_tooltip": false
-                        }
-                    }
-                },
-                {
-                    "function": "minecraft:set_custom_data",
-                    "tag": "{NoDrop:1b}",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "team": "Lobby"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "function": "minecraft:set_components",
-                    "components": {
-                        "!minecraft:can_place_on": {}
-                    },
-                    "conditions": [
-                        {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "team": "Lobby"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "function": "minecraft:set_custom_data",
-                    "tag": "{Blank:1b}",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:inverted",
-                            "term": {
-                                "condition": "minecraft:entity_scores",
-                                "entity": "this",
-                                "scores": {
-                                    "spawnPlaceable": 0
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+          "type": "minecraft:item",
+          "name": "minecraft:mooshroom_spawn_egg"
         }
-    ]
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_custom_data",
+          "tag": "{Barrel:1b}"
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:custom_model_data": {
+              "floats": [1]
+            },
+            "minecraft:custom_name": "[{\"translate\":\"item.blast_barrel\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:lore": [
+              "[{\"translate\":\"item.blast_barrel.lore.1\",\"italic\":false,\"color\":\"white\"}]",
+              "[{\"translate\":\"item.blast_barrel.lore.2\",\"italic\":false,\"color\":\"white\"}]"
+            ],
+            "minecraft:entity_data": {
+              "id": "minecraft:marker",
+              "Tags": [
+                "BlastBarrelSpawn",
+                "barrel"
+              ]
+            },
+            "minecraft:can_place_on": {
+              "predicates": {}
+            },
+            "minecraft:tooltip_display": {
+              "hidden_components": [
+                "minecraft:can_place_on"
+              ]
+            }
+          }
+        },
+        {
+          "function": "minecraft:set_custom_data",
+          "tag": "{NoDrop:1b}",
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "!minecraft:can_place_on": {}
+          },
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "Lobby"
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_custom_data",
+          "tag": "{Blank:1b}",
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "spawnPlaceable": 0
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

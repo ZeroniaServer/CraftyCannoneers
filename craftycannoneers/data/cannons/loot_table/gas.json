@@ -19,9 +19,7 @@
             "minecraft:custom_model_data": {
               "floats": [31]
             },
-            "minecraft:unbreakable": {
-              "show_in_tooltip": false
-            },
+            "minecraft:unbreakable": {},
             "minecraft:custom_name": "[{\"translate\":\"cannonball.gas\",\"italic\":false,\"color\":\"dark_aqua\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"cannonball.gas.lore.1\",\"italic\":false,\"color\":\"white\"}]",
@@ -30,9 +28,11 @@
               "[{\"translate\":\"cannonball.gas.lore.3\",\"italic\":false,\"color\":\"aqua\"}]",
               "[{\"translate\":\"cannonball.gas.lore.4\",\"italic\":false,\"color\":\"aqua\"}]"
             ],
-            "minecraft:attribute_modifiers": {
-              "modifiers": [],
-              "show_in_tooltip": false
+            "minecraft:tooltip_display": {
+              "hidden_components": [
+                "minecraft:attribute_modifiers",
+                "minecraft:unbreakable"
+              ]
             }
           }
         },

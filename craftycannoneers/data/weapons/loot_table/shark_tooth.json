@@ -13,24 +13,22 @@
           "function": "minecraft:set_components",
           "components": {
             "minecraft:max_damage": 10,
-            "minecraft:attribute_modifiers": {
-              "modifiers": [
-                {
-                  "amount": 5.0,
-                  "slot": "mainhand",
-                  "id": "craftycannoneers:shark_tooth_attack_speed",
-                  "type": "attack_speed",
-                  "operation": "add_value"
-                },
-                {
-                  "amount": 8.0,
-                  "slot": "mainhand",
-                  "id": "crafycannoneers:shark_tooth_attack_damage",
-                  "type": "attack_damage",
-                  "operation": "add_value"
-                }
-              ]
-            },
+            "minecraft:attribute_modifiers": [
+              {
+                "amount": 5.0,
+                "slot": "mainhand",
+                "id": "craftycannoneers:shark_tooth_attack_speed",
+                "type": "attack_speed",
+                "operation": "add_value"
+              },
+              {
+                "amount": 8.0,
+                "slot": "mainhand",
+                "id": "crafycannoneers:shark_tooth_attack_damage",
+                "type": "attack_damage",
+                "operation": "add_value"
+              }
+            ],
             "minecraft:custom_name": "[{\"translate\":\"item.shark_tooth\",\"italic\":false,\"color\":\"dark_aqua\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"item.modifier_exclusive\",\"italic\":true,\"color\":\"light_purple\"}]"

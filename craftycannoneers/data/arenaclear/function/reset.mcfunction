@@ -38,7 +38,7 @@ kill @e[type=item_display,tag=CrabTrap]
 kill @e[type=interaction,tag=CrabTrap]
 kill @e[type=marker,tag=gravedata]
 kill @e[type=marker,tag=CargoEntity]
-kill @e[type=potion,tag=Bomb]
+kill @e[type=splash_potion,tag=Bomb]
 kill @e[type=item_display,tag=Bomb]
 kill @e[type=interaction,tag=ShootPrevention]
 scoreboard players set $total crabs 0

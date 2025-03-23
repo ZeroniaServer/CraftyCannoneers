@@ -13,28 +13,28 @@
           "function": "minecraft:set_components",
           "components": {
             "minecraft:max_damage": 11,
-            "minecraft:attribute_modifiers": {
-              "modifiers": [
-                {
-                  "amount": -3.5,
-                  "slot": "mainhand",
-                  "id": "craftycannoneers:mace_attack_speed",
-                  "type": "attack_speed",
-                  "operation": "add_value"
-                },
-                {
-                  "amount": 12.0,
-                  "slot": "mainhand",
-                  "id": "craftycannoneers:mace_attack_damage",
-                  "type": "attack_damage",
-                  "operation": "add_value"
-                }
-              ]
-            },
+            "minecraft:attribute_modifiers": [
+              {
+                "amount": -3.5,
+                "slot": "mainhand",
+                "id": "craftycannoneers:mace_attack_speed",
+                "type": "attack_speed",
+                "operation": "add_value"
+              },
+              {
+                "amount": 12.0,
+                "slot": "mainhand",
+                "id": "craftycannoneers:mace_attack_damage",
+                "type": "attack_damage",
+                "operation": "add_value"
+              }
+            ],
             "minecraft:custom_name": "[{\"translate\":\"item.mace\",\"italic\":false,\"color\":\"dark_aqua\"}]",
-            "minecraft:enchantments": {
-              "levels": {},
-              "show_in_tooltip": false
+            "minecraft:tooltip_display": {
+              "hidden_components": [
+                "enchantment",
+                "attribute_modifiers"
+              ]
             }
           }
         },

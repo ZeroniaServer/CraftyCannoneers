@@ -13,24 +13,22 @@
           "function": "minecraft:set_components",
           "components": {
             "minecraft:max_damage": 50,
-            "minecraft:attribute_modifiers": {
-              "modifiers": [
-                {
-                  "amount": 20,
-                  "slot": "mainhand",
-                  "id": "craftycannoneers:hook_attack_speed",
-                  "type": "attack_speed",
-                  "operation": "add_value"
-                },
-                {
-                  "amount": 3.5,
-                  "slot": "mainhand",
-                  "id": "craftycannoneers:hook_attack_damage",
-                  "type": "attack_damage",
-                  "operation": "add_value"
-                }
-              ]
-            },
+            "minecraft:attribute_modifiers": [
+              {
+                "amount": 20,
+                "slot": "mainhand",
+                "id": "craftycannoneers:hook_attack_speed",
+                "type": "attack_speed",
+                "operation": "add_value"
+              },
+              {
+                "amount": 3.5,
+                "slot": "mainhand",
+                "id": "craftycannoneers:hook_attack_damage",
+                "type": "attack_damage",
+                "operation": "add_value"
+              }
+            ],
             "minecraft:custom_name": "[{\"translate\":\"item.hook\",\"italic\":false,\"color\":\"dark_aqua\"}]"
           }
         },

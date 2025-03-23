@@ -13,13 +13,13 @@ execute if entity @s[tag=templeader] run data modify entity @e[type=area_effect_
 
 execute if entity @s[tag=templeader] run loot replace entity @e[type=armor_stand,tag=ParkourAS,limit=1] armor.head 1 loot cannons:playerhead
 
-execute if entity @s[tag=templeader] run item replace entity @a[predicate=lobby:hasparkourhat,tag=!templeader] armor.head with diamond_hoe[unbreakable={show_in_tooltip:0b},enchantments={levels:{binding_curse:1,vanishing_curse:1},show_in_tooltip:0b},custom_name='[{"translate":"armor.hat","italic":false,"color":"white"}]',lore=['[{"text":"","italic":false}]','[{"translate":"ahoy","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]'],custom_model_data={floats:[39.0f]},attribute_modifiers={show_in_tooltip:0b,modifiers:[]}]
-item replace entity @s[tag=templeader] armor.head with diamond_hoe[unbreakable={show_in_tooltip:0b},enchantments={levels:{vanishing_curse:1},show_in_tooltip:0b},custom_name='[{"translate":"armor.hat.parkour","italic":false,"color":"red"}]',lore=['[{"text":"","italic":false}]','[{"translate":"armor.hat.parkour.lore","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]'],custom_model_data={floats:[61.0f]},attribute_modifiers={show_in_tooltip:0b,modifiers:[]}]
+execute if entity @s[tag=templeader] run item replace entity @a[predicate=lobby:hasparkourhat,tag=!templeader] armor.head with diamond_hoe[unbreakable={},enchantments={binding_curse:1,vanishing_curse:1},enchantment_glint_override=false,custom_name='[{"translate":"armor.hat","italic":false,"color":"white"}]',lore=['[{"text":"","italic":false}]','[{"translate":"ahoy","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]'],custom_model_data={floats:[39.0f]},tooltip_display={hidden_components:["unbreakable","attribute_modifiers","enchantments"]}]
+item replace entity @s[tag=templeader] armor.head with diamond_hoe[unbreakable={},enchantments={vanishing_curse:1},enchantment_glint_override=false,custom_name='[{"translate":"armor.hat.parkour","italic":false,"color":"red"}]',lore=['[{"text":"","italic":false}]','[{"translate":"armor.hat.parkour.lore","italic":false,"color":"aqua"},{"text":"","italic":false,"color":"dark_purple"}]'],custom_model_data={floats:[61.0f]},tooltip_display={hidden_components:["unbreakable","attribute_modifiers","enchantments"]}]
 
 execute if entity @s[tag=templeader] run tellraw @a[team=!Purple,team=!Orange] ["",{"translate":"parkour.new_record","color":"dark_green","with":[{"selector":"@s"}]}]
 tag @s remove templeader
 
 #> Save parkour data into storage
-data modify storage craftycannoneers:parkour Head set from entity @e[type=armor_stand,tag=ParkourAS,limit=1] ArmorItems[3]
+data modify storage craftycannoneers:parkour Head set from entity @e[type=armor_stand,tag=ParkourAS,limit=1] equipment.head
 data modify storage craftycannoneers:parkour Name set from entity @e[type=area_effect_cloud,tag=ParkourNameAEC,limit=1] CustomName
 data modify storage craftycannoneers:parkour Time set from entity @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] CustomName

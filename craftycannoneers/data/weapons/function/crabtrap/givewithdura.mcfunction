@@ -153,8 +153,12 @@ $loot $(function) loot \
                     "function": "minecraft:set_components",\
                     "components": {\
                         "minecraft:can_place_on": {\
-                            "predicates": [{}],\
-                            "show_in_tooltip": false\
+                            "predicates": {}\
+                        },\
+                        "minecraft:tooltip_display": {\
+                            "hidden_components": [\
+                                "minecraft:can_place_on"\
+                            ]\
                         }\
                     },\
                     "conditions": [\

@@ -19,9 +19,7 @@
             "minecraft:custom_model_data": {
               "floats": [1]
             },
-            "minecraft:unbreakable": {
-              "show_in_tooltip": false
-            },
+            "minecraft:unbreakable": {},
             "minecraft:custom_name": "[{\"translate\":\"cannonball.hot\",\"italic\":false,\"color\":\"dark_aqua\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"cannonball.hot.lore.1\",\"italic\":false,\"color\":\"white\"}]",
@@ -30,7 +28,12 @@
               "[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
               "[{\"translate\":\"cannonball.hot.lore.4\",\"italic\":false,\"color\":\"aqua\"}]",
               "[{\"translate\":\"cannonball.hot.lore.5\",\"italic\":false,\"color\":\"aqua\"}]"
-            ]
+            ],
+            "minecraft:tooltip_display": {
+              "hidden_components": [
+                "minecraft:unbreakable"
+              ]
+            }
           }
         },
         {

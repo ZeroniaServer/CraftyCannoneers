@@ -25,7 +25,7 @@ kill @e[type=oak_boat,tag=BoatBoat,distance=..5]
 execute as @e[type=item,distance=..5] run function weapons:barrel/blast1
 execute as @e[type=arrow,distance=..5] run function weapons:barrel/blast1
 execute as @e[type=trident,distance=..5] run function weapons:barrel/blast1
-execute as @e[type=potion,distance=..5] run function weapons:barrel/blast1
+execute as @e[type=splash_potion,distance=..5] run function weapons:barrel/blast1
 
 #> Break nearby Cargo Barrels
 execute as @e[type=item_display,tag=CBDisplay,tag=!CBTrapDisplay,distance=..5] at @s run function game:modifiers/lostcargo/spillbarrel

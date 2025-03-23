@@ -17,15 +17,11 @@
           "function": "minecraft:set_components",
           "components": {
             "minecraft:enchantments": {
-              "levels": {
-                "minecraft:quick_charge": 2,
-                "minecraft:vanishing_curse": 1
-              },
-              "show_in_tooltip": false
+              "minecraft:quick_charge": 2,
+              "minecraft:vanishing_curse": 1
             },
-            "minecraft:unbreakable": {
-              "show_in_tooltip": false
-            },
+            "minecraft:enchantment_glint_override": false,
+            "minecraft:unbreakable": {},
             "minecraft:custom_name": "[{\"translate\":\"item.crossbow\",\"italic\":false,\"color\":\"dark_aqua\"}]",
             "minecraft:charged_projectiles": [
               {
@@ -36,9 +32,12 @@
                 }
               }
             ],
-            "minecraft:attribute_modifiers": {
-              "modifiers": [],
-              "show_in_tooltip": false
+            "minecraft:tooltip_display": {
+              "hidden_components": [
+                "minecraft:attribute_modifiers",
+                "minecraft:enchantments",
+                "minecraft:unbreakable"
+              ]
             }
           }
         }

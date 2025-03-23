@@ -19,9 +19,7 @@
             "minecraft:custom_model_data": {
               "floats": [109]
             },
-            "minecraft:unbreakable": {
-              "show_in_tooltip": false
-            },
+            "minecraft:unbreakable": {},
             "minecraft:custom_name": "[{\"translate\":\"cannonball.copper\",\"italic\":false,\"color\":\"dark_aqua\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"item.modifier_exclusive\",\"italic\":true,\"color\":\"light_purple\"}]",
@@ -29,9 +27,11 @@
               "[{\"translate\":\"cannonball.copper.lore.1\",\"italic\":false,\"color\":\"white\"}]",
               "[{\"translate\":\"cannonball.copper.lore.2\",\"italic\":false,\"color\":\"white\"}]"
             ],
-            "minecraft:attribute_modifiers": {
-              "modifiers": [],
-              "show_in_tooltip": false
+            "minecraft:tooltip_display": {
+              "hidden_components": [
+                "minecraft:attribute_modifiers",
+                "minecraft:unbreakable"
+              ]
             }
           }
         },

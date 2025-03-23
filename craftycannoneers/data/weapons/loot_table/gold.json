@@ -31,28 +31,6 @@
               }
             }
           ]
-        },
-        {
-          "function": "minecraft:set_components",
-          "components": {
-            "minecraft:enchantments": {
-              "levels": {},
-              "show_in_tooltip": false
-            },
-            "minecraft:attribute_modifiers": {
-              "modifiers": [],
-              "show_in_tooltip": false
-            }
-          },
-          "conditions": [
-            {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "team": "Lobby"
-              }
-            }
-          ]
         }
       ]
     }

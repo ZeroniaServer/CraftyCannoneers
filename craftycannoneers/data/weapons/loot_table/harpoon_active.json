@@ -17,20 +17,22 @@
           "function": "minecraft:set_components",
           "components": {
             "minecraft:enchantments": {
-              "levels": {
-                "minecraft:riptide": 1
-              },
-              "show_in_tooltip": false
+              "minecraft:riptide": 1
             },
-            "minecraft:unbreakable": {
-              "show_in_tooltip": false
-            },
+            "minecraft:enchantment_glint_override": false,
+            "minecraft:unbreakable": {},
             "minecraft:custom_name": "[{\"translate\":\"item.minecraft.trident\",\"italic\":false,\"color\":\"green\"}]",
             "minecraft:lore": [
               "[{\"translate\":\"item.harpoon.lore.1\",\"italic\":false,\"color\":\"white\"}]",
               "[{\"translate\":\"item.harpoon.lore.2\",\"italic\":false,\"color\":\"white\"}]",
               "[{\"translate\":\"item.harpoon.lore.3\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]"
-            ]
+            ],
+            "minecraft:tooltip_display": {
+              "hidden_components": [
+                "minecraft:enchantments",
+                "minecraft:unbreakable"
+              ]
+            }
           }
         },
         {
