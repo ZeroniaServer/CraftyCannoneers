@@ -32,8 +32,8 @@
             "minecraft:custom_name": [{"translate":"item.mace","italic":false,"color":"dark_aqua"}],
             "minecraft:tooltip_display": {
               "hidden_components": [
-                "enchantment",
-                "attribute_modifiers"
+                "minecraft:enchantments",
+                "minecraft:attribute_modifiers"
               ]
             }
           }

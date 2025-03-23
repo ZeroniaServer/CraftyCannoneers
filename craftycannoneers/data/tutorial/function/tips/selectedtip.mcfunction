@@ -20,7 +20,7 @@ execute if entity @s[tag=Tip19] run tellraw @a[tag=!hideTips] ["",{text:"<",colo
 execute if entity @s[tag=Tip20] run tellraw @a[tag=!hideTips] ["",{text:"<",color:"aqua"},{translate:"tip.tip",bold:true,color:"dark_aqua"},{text:"> ",color:"aqua"},{translate:"tip.20",color:"gray"}]
 execute if entity @s[tag=Tip21] run tellraw @a[tag=!hideTips] ["",{text:"<",color:"aqua"},{translate:"tip.tip",bold:true,color:"dark_aqua"},{text:"> ",color:"aqua"},{translate:"tip.21",color:"gray"}]
 
-tellraw @a[tag=!hideTips] ["",{translate:"tip.click",color:"dark_aqua",with:[{translate:"tip.here",color:"green",click_event:{action:"run_command",command:"/trigger toggleTips"},hover_event:{action:"show_text","contents":[{translate:"tip.here.hover"}]}}]}]
+tellraw @a[tag=!hideTips] ["",{translate:"tip.click",color:"dark_aqua",with:[{translate:"tip.here",color:"green",click_event:{action:"run_command",command:"/trigger toggleTips"},hover_event:{action:"show_text",value:[{translate:"tip.here.hover"}]}}]}]
 
 scoreboard players set $Tip CmdData 0
 
