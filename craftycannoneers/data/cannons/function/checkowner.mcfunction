@@ -9,12 +9,12 @@ execute as @e[type=item_display,tag=CurrentCheck] at @s run tag @e[type=interact
 execute as @e[type=item_display,tag=CurrentCheck] at @s run tag @e[type=interaction,tag=CannonVRight,limit=1,sort=nearest,distance=..2] add CurrentCheck
 execute as @e[type=item_display,tag=CurrentCheck] at @s run tag @e[type=interaction,tag=CannonVMain,limit=1,sort=nearest,distance=..2] add CurrentCheck
 
-execute unless entity @e[type=item_display,tag=CurrentCheck,limit=1] run tellraw @s {"translate":"cannon.occupied","italic":true,"color":"red"}
+execute unless entity @e[type=item_display,tag=CurrentCheck,limit=1] run tellraw @s {translate:"cannon.occupied",italic:true,color:"red"}
 execute unless entity @e[type=item_display,tag=CurrentCheck,limit=1] run tag @s remove FillLeft
 execute unless entity @e[type=item_display,tag=CurrentCheck,limit=1] run tag @s remove FillRight
 execute unless entity @e[type=item_display,tag=CurrentCheck,limit=1] run tag @s remove FillCB
 
-execute if entity @e[type=item_display,tag=CurrentCheck,tag=OnFire] run tellraw @s {"translate":"cannon.on_fire","italic":true,"color":"red"}
+execute if entity @e[type=item_display,tag=CurrentCheck,tag=OnFire] run tellraw @s {translate:"cannon.on_fire",italic:true,color:"red"}
 execute if entity @e[type=item_display,tag=CurrentCheck,tag=OnFire] run tag @s remove FillLeft
 execute if entity @e[type=item_display,tag=CurrentCheck,tag=OnFire] run tag @s remove FillRight
 execute if entity @e[type=item_display,tag=CurrentCheck,tag=OnFire] run tag @s remove FillCB

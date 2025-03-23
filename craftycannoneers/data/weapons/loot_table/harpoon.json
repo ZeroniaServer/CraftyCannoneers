@@ -17,11 +17,11 @@
           "function": "minecraft:set_components",
           "components": {
             "minecraft:unbreakable": {},
-            "minecraft:custom_name": "[{\"translate\":\"item.minecraft.trident\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:custom_name": [{"translate":"item.minecraft.trident","italic":false,"color":"dark_aqua"}],
             "minecraft:lore": [
-              "[{\"translate\":\"item.harpoon.lore.1\",\"italic\":false,\"color\":\"white\"}]",
-              "[{\"translate\":\"item.harpoon.lore.2\",\"italic\":false,\"color\":\"white\"}]",
-              "[{\"translate\":\"item.harpoon.lore.3\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]"
+              [{"translate":"item.harpoon.lore.1","italic":false,"color":"white"}],
+              [{"translate":"item.harpoon.lore.2","italic":false,"color":"white"}],
+              [{"translate":"item.harpoon.lore.3","italic":false,"color":"white"}]
             ],
             "minecraft:enchantments": {},
             "minecraft:enchantment_glint_override": false,

@@ -18,7 +18,7 @@ bossbar remove orangeship
 bossbar remove orangeship2
 bossbar set lobbybar players @a
 bossbar set lobbybar value 10
-execute if score $gamestate CmdData matches 0.. run bossbar set lobbybar name [{"translate":"chat.confirm","color":"aqua","with":[{"translate":"chat.settings_map","color":"aqua"}]}]
+execute if score $gamestate CmdData matches 0.. run bossbar set lobbybar name [{translate:"chat.confirm",color:"aqua",with:[{translate:"chat.settings_map",color:"aqua"}]}]
 execute if score $gamestate CmdData matches 0.. run function lobby:customizer/open
 bossbar set lobbybar max 10
 bossbar set lobbybar color blue

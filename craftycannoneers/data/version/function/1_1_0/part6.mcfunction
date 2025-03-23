@@ -70,16 +70,16 @@ scoreboard players set $BoatCannons CmdData 0
 scoreboard players set $Daytime CmdData 0
 
 #> FORG
-data modify entity 4d04e6ee-535e-4c9a-b905-7be5343f5b96 CustomName set value '{"translate":"credits.forg","bold":true}'
+data modify entity 4d04e6ee-535e-4c9a-b905-7be5343f5b96 CustomName set value {translate:"credits.forg",bold:true}
 
 function lobby:credit/translators/spawnglobe
 
-bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"6","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
+bossbar set updatebar name ["",{translate:"game.updating_to",color:"green",with:[{text:"1.1.0",color:"green"},[{text:"[",color:"gray"},{text:"6",color:"white"},{text:"/",color:"gray"},{text:"6",color:"white"},{text:"]",color:"gray"}]]}]
 bossbar set updatebar value 6
 
 function lobby:customizer/open
 
-tellraw @a [{"translate":"game.applied_updates","color":"green","with":[{"translate":"game.name","with":[{"translate":"game.crafty"},{"translate":"game.cannoneers"}]},{"text":"v1.1.0","color":"green"}]}]
+tellraw @a [{translate:"game.applied_updates",color:"green",with:[{translate:"game.name",with:[{translate:"game.crafty"},{translate:"game.cannoneers"}]},{text:"v1.1.0",color:"green"}]}]
 scoreboard players set $WorldVersion CmdData 1100
 scoreboard players set $updating CmdData 0
 

@@ -20,12 +20,12 @@
               "floats": [109]
             },
             "minecraft:unbreakable": {},
-            "minecraft:custom_name": "[{\"translate\":\"cannonball.copper\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:custom_name": [{"translate":"cannonball.copper","italic":false,"color":"dark_aqua"}],
             "minecraft:lore": [
-              "[{\"translate\":\"item.modifier_exclusive\",\"italic\":true,\"color\":\"light_purple\"}]",
-              "[{\"text\":\"\"}]",
-              "[{\"translate\":\"cannonball.copper.lore.1\",\"italic\":false,\"color\":\"white\"}]",
-              "[{\"translate\":\"cannonball.copper.lore.2\",\"italic\":false,\"color\":\"white\"}]"
+              [{"translate":"item.modifier_exclusive","italic":true,"color":"light_purple"}],
+              [{"text":""}],
+              [{"translate":"cannonball.copper.lore.1","italic":false,"color":"white"}],
+              [{"translate":"cannonball.copper.lore.2","italic":false,"color":"white"}]
             ],
             "minecraft:tooltip_display": {
               "hidden_components": [

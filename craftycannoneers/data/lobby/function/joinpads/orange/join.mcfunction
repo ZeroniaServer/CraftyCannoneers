@@ -1,6 +1,6 @@
-execute unless score $gamestate CmdData matches 2.. run tellraw @a ["",{"translate":"game.joined","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"game.joined.orange","color":"gold"}]}]
-execute if score $gamestate CmdData matches 2.. run tellraw @a ["",{"translate":"game.joined.late","color":"dark_aqua","with":[{"selector":"@s","color":"blue"},{"translate":"game.joined.orange","color":"gold"}]}]
-execute if score $gamestate CmdData matches 2.. run tellraw @s ["",{"translate":"game.take_off","color":"aqua","italic":true,"with":[{"translate":"armor.hat.instruction","bold":true,"color":"gold"}]}]
+execute unless score $gamestate CmdData matches 2.. run tellraw @a ["",{translate:"game.joined",color:"dark_aqua",with:[{selector:"@s",color:"blue"},{translate:"game.joined.orange",color:"gold"}]}]
+execute if score $gamestate CmdData matches 2.. run tellraw @a ["",{translate:"game.joined.late",color:"dark_aqua",with:[{selector:"@s",color:"blue"},{translate:"game.joined.orange",color:"gold"}]}]
+execute if score $gamestate CmdData matches 2.. run tellraw @s ["",{translate:"game.take_off",color:"aqua",italic:true,with:[{translate:"armor.hat.instruction",bold:true,color:"gold"}]}]
 title @s actionbar ""
 gamemode adventure @s
 attribute @s safe_fall_distance base set 3

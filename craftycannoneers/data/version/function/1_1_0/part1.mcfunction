@@ -1,7 +1,7 @@
 function game:forcestop
 
 bossbar set lobbybar visible false
-bossbar add updatebar ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"0","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
+bossbar add updatebar ["",{translate:"game.updating_to",color:"green",with:[{text:"1.1.0",color:"green"},[{text:"[",color:"gray"},{text:"0",color:"white"},{text:"/",color:"gray"},{text:"6",color:"white"},{text:"]",color:"gray"}]]}]
 bossbar set updatebar color green
 bossbar set updatebar players @a
 bossbar set updatebar max 6
@@ -51,7 +51,7 @@ function version:1_1_0/interactions/protect
 setblock -51 -27 -3 air
 setblock -51 -27 -3 minecraft:purple_wall_banner[facing=west]{Patterns:[{Color:15,Pattern:"mc"},{Color:10,Pattern:"ls"},{Color:10,Pattern:"rs"},{Color:10,Pattern:"hhb"},{Color:10,Pattern:"ts"},{Color:0,Pattern:"pig"}]}
 
-bossbar set updatebar name ["",{"translate":"game.updating_to","color":"green","with":[{"text":"1.1.0","color":"green"},[{"text":"[","color":"gray"},{"text":"1","color":"white"},{"text":"/","color":"gray"},{"text":"6","color":"white"},{"text":"]","color":"gray"}]]}]
+bossbar set updatebar name ["",{translate:"game.updating_to",color:"green",with:[{text:"1.1.0",color:"green"},[{text:"[",color:"gray"},{text:"1",color:"white"},{text:"/",color:"gray"},{text:"6",color:"white"},{text:"]",color:"gray"}]]}]
 bossbar set updatebar value 1
 schedule function version:1_1_0/part2 5t
 

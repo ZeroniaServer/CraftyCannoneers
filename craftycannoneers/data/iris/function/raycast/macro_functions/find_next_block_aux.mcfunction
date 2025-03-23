@@ -5,9 +5,9 @@
 #
 # @within iris:raycast/find_next_block
 # @input
-#   a: The axis along which we are moving (for example, if the ray moves one tile up, this is 'y'). One of 'x', 'y', or 'z'.
-#   b: Another axis. One of 'x', 'y', or 'z'.
-#   c: The third axis. One of 'x', 'y', or 'z'.
+#   a: The axis along which we are moving (for example, if the ray moves one tile up, this is y). One of x, y, or z.
+#   b: Another axis. One of x, y, or z.
+#   c: The third axis. One of x, y, or z.
 
 $scoreboard players operation $to_next_block iris = $to_next_$(a) iris
 

@@ -77,7 +77,7 @@ execute if entity @s[tag=ZeroniaCredit] on target at @s run function lobby:credi
 execute at @s[tag=BlastBarrel] if entity @a[limit=1,tag=self,predicate=cannons:holdgp] as @e[type=item_display,tag=BlastBarrel,distance=..1,sort=nearest,limit=1] at @s run function weapons:barrel/fill
 
 #> Locked Chest Warns
-execute if entity @s[tag=notifylock] on target run tellraw @s ["",{"translate":"chest.skeleton.warn","color":"red","with":[{"translate":"chest.skeleton","underlined":true,"color":"dark_red"},{"translate":"item.skeleton_key","color":"dark_aqua"}]}]
+execute if entity @s[tag=notifylock] on target run tellraw @s ["",{translate:"chest.skeleton.warn",color:"red",with:[{translate:"chest.skeleton",underlined:true,color:"dark_red"},{translate:"item.skeleton_key",color:"dark_aqua"}]}]
 
 #> Easter Eggs
 execute at @s[tag=Parrot] unless score $parrotpet CmdData matches 1.. on target run function lobby:easteregg/parrot

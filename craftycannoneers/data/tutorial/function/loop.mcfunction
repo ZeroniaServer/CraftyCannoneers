@@ -46,7 +46,7 @@ execute if entity @e[type=armor_stand,tag=fakechest,scores={CmdData=..9},limit=1
 execute if score $runtreasure CmdData matches 1 run function tutorial:treasurepit/main
 
 #> Pirate Teachers
-execute as @e[type=wandering_trader,tag=Teacher] run data merge entity @s {Offers:{Recipes:[]},CustomName:'["",{"translate":"space.-4096"},{"text":"\\uE003"},{"translate":"space.-4096"}]',equipment:{mainhand:{},offhand:{}},NoAI:1b,Silent:1b}
+execute as @e[type=wandering_trader,tag=Teacher] run data merge entity @s {Offers:{Recipes:[]},CustomName:["",{translate:"space.-4096"},{text:"\uE003"},{translate:"space.-4096"}],equipment:{mainhand:{},offhand:{}},NoAI:1b,Silent:1b}
 execute as @e[type=wandering_trader,tag=Teacher] at @s run rotate @s facing entity @p[team=Lobby,distance=..10]
 execute as @e[type=wandering_trader,tag=CannonTeacher] at @s unless entity @a[team=Lobby,distance=..10,limit=1] run rotate @s -90 0
 execute as @e[type=wandering_trader,tag=ChestTeacher] at @s unless entity @a[team=Lobby,distance=..10,limit=1] run rotate @s 90 0

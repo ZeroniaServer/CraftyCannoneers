@@ -14,10 +14,10 @@ data remove storage craftycannoneers:inventory Inventory[{id:"minecraft:spyglass
 data remove storage craftycannoneers:inventory Inventory[{id:"minecraft:diamond_hoe",components:{"minecraft:custom_data":{Cannonball:8b}}}]
 
 #> Soft-remove all arrows if player has starter arrows
-# The logic behind this kinda sucks, but it's way harder to remove only one slot
+# The logic behind this kinda sucks, but its way harder to remove only one slot
 # and guarantee that it accounts for all starter arrows that this player has/needs
 # (what if they spread out their arrow stack?). So we have to remove all arrows.
-# But then, it's also hard to mark all slots as invalid in advance like we do with
+# But then, its also hard to mark all slots as invalid in advance like we do with
 # the single slots for other default items. So we have to soft-remove them and let
 # the system filter out the empty slots by itself.
 execute if score @s arrowsToShoot matches 1.. run data remove storage craftycannoneers:inventory Inventory[{id:"minecraft:arrow"}]

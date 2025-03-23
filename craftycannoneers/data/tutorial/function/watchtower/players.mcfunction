@@ -4,8 +4,8 @@ execute at @s[predicate=!tutorial:watchtower,tag=InTower] run function tutorial:
 #> Spot fake
 execute at @s[tag=SpotFake] run function tutorial:watchtower/spotfake
 
-title @s[tag=!SpotFake,scores={spotfakewp=1..}] title {"text":""}
-title @s[tag=!SpotFake,scores={spotfakewp=1..}] subtitle {"text":""}
+title @s[tag=!SpotFake,scores={spotfakewp=1..}] title {text:""}
+title @s[tag=!SpotFake,scores={spotfakewp=1..}] subtitle {text:""}
 scoreboard players reset @s[tag=!SpotFake,scores={spotfakewp=1..}] spotfakewp
 
 #> Remove exposed status over time

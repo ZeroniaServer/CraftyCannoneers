@@ -170,7 +170,7 @@ scoreboard objectives add checkpoint dummy
 
 #> Bossbars
 bossbar add lobbybar ""
-execute if score $gamestate CmdData matches -1 unless entity @a[tag=ModiOwner,limit=1] run bossbar set lobbybar name [{"translate":"chat.confirm","color":"aqua","with":[{"translate":"chat.settings_map","color":"aqua"}]}]
+execute if score $gamestate CmdData matches -1 unless entity @a[tag=ModiOwner,limit=1] run bossbar set lobbybar name [{translate:"chat.confirm",color:"aqua",with:[{translate:"chat.settings_map",color:"aqua"}]}]
 bossbar set lobbybar max 10
 execute if score $gamestate CmdData matches -1 run bossbar set lobbybar value 10
 execute if score $gamestate CmdData matches ..0 run bossbar set lobbybar color blue
@@ -271,10 +271,10 @@ scoreboard players add $BoatCannons CmdData 0
 scoreboard players add $Daytime CmdData 0
 
 #> Messages
-data modify storage craftycannoneers:messages ResourcePack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"We strongly recommend you to ","color":"gray"},{"text":"use the resource pack","bold":true,"color":"red"},{"text":". ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=10cQpDUFTjMoysGvn-qteVYAui3JFNtN9"}}]'
-data modify storage craftycannoneers:messages OutdatedPack set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"You are using an outdated version of the resource pack! ","color":"gray"},{"text":"[CLICK HERE TO DOWNLOAD THE LATEST VERSION]","color":"green","bold":true,"underlined":true,"clickEvent":{"action":"open_url","value":"https://drive.google.com/uc?export=download&id=10cQpDUFTjMoysGvn-qteVYAui3JFNtN9"}}]'
-data modify storage craftycannoneers:messages SettingsMap set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"chat.confirm","color":"gray","with":[{"translate":"chat.settings_map","color":"aqua","bold":true}]}]'
-data modify storage craftycannoneers:messages ReadyToPlay set value '[{"text":"[","color":"dark_gray"},{"text":"!","color":"green","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"chat.the_game","color":"gray","with":[{"translate":"chat.ready_to_play","color":"green","bold":true}]}]'
+data modify storage craftycannoneers:messages ResourcePack set value [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{text:"We strongly recommend you to ",color:"gray"},{text:"use the resource pack",bold:true,color:"red"},{text:". ",color:"gray"},{text:"[CLICK HERE TO DOWNLOAD]",color:"green",bold:true,underlined:true,click_event:{action:"open_url",url:"https://drive.google.com/uc?export=download&id=10cQpDUFTjMoysGvn-qteVYAui3JFNtN9"}}]
+data modify storage craftycannoneers:messages OutdatedPack set value [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{text:"You are using an outdated version of the resource pack! ",color:"gray"},{text:"[CLICK HERE TO DOWNLOAD THE LATEST VERSION]",color:"green",bold:true,underlined:true,click_event:{action:"open_url",url:"https://drive.google.com/uc?export=download&id=10cQpDUFTjMoysGvn-qteVYAui3JFNtN9"}}]
+data modify storage craftycannoneers:messages SettingsMap set value [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"chat.confirm",color:"gray",with:[{translate:"chat.settings_map",color:"aqua",bold:true}]}]
+data modify storage craftycannoneers:messages ReadyToPlay set value [{text:"[",color:"dark_gray"},{text:"!",color:"green",bold:true},{text:"] ",color:"dark_gray"},{translate:"chat.the_game",color:"gray",with:[{translate:"chat.ready_to_play",color:"green",bold:true}]}]
 
 #> Skull cache
 schedule clear lobby:credit/skullcache/start

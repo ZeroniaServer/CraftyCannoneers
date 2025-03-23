@@ -29,12 +29,12 @@ scoreboard players operation @s leavecheck = $curr leavecheck
 execute at @s[team=Lobby,tag=!firstJoined] run function everytick:welcome
 
 #> Notify players about Training Island
-execute if entity @s[tag=NeedsTutorial,tag=!hideTips] run tellraw @s ["\n",{"translate":"chat.new_here","color":"green","with":[{"translate":"game.name","with":[{"translate":"game.crafty","bold":true,"color":"dark_purple"},{"translate":"game.cannoneers","bold":true,"color":"gold"}]}]},"\n",{"translate":"chat.recommend","color":"green","with":[{"translate":"tutorial.training_island","bold":true,"color":"aqua"}]},"\n",{"translate":"chat.warp_pad","italic":true,"color":"dark_green"},"\n"]
+execute if entity @s[tag=NeedsTutorial,tag=!hideTips] run tellraw @s ["\n",{translate:"chat.new_here",color:"green",with:[{translate:"game.name",with:[{translate:"game.crafty",bold:true,color:"dark_purple"},{translate:"game.cannoneers",bold:true,color:"gold"}]}]},"\n",{translate:"chat.recommend",color:"green",with:[{translate:"tutorial.training_island",bold:true,color:"aqua"}]},"\n",{translate:"chat.warp_pad",italic:true,color:"dark_green"},"\n"]
 tag @s[tag=NeedsTutorial] remove NeedsTutorial
 
 #> Notify players about resource pack
-execute if score $gamestate CmdData matches 0..2 run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.5","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"ReadyToPlay","storage":"craftycannoneers:messages","interpret":true}]}]}]
-execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.5","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
+execute if score $gamestate CmdData matches 0..2 run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{translate:"%1$s",with:[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{translate:"ver1.1.5","fallback":"%1$s",with:[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"ReadyToPlay","storage":"craftycannoneers:messages","interpret":true}]}]}]
+execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{translate:"%1$s",with:[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{translate:"ver1.1.5","fallback":"%1$s",with:[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
 tag @s[tag=firstJoined] add msgReceived
 
 #> Servermode team join
@@ -48,9 +48,9 @@ execute unless entity @e[x=0,tag=JoinpadOrange,tag=LockedMidgame,limit=1] unless
 execute if entity @e[x=0,tag=JoinpadOrange,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 if entity @s[team=!Orange,scores={joinorange=1..},tag=!tryJoinOrange] run function lobby:joinpads/orange/full
 execute unless entity @e[x=0,tag=JoinpadOrange,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 if score $InOrange CmdData > $InPurple CmdData if entity @s[team=!Orange,scores={joinorange=1..},tag=!tryJoinOrange] run function lobby:joinpads/orange/imbalanced
 
-execute unless score $gamestate CmdData matches 0..2 if score @s joinorange matches 1.. run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
-execute if score $gamestate CmdData matches 0..2 if score @s joinorange matches 1.. if score $InOrange CmdData = $InPurple CmdData run tellraw @s[team=Purple] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
-execute if entity @s[team=Orange,scores={joinorange=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_joined","color":"red"}]
+execute unless score $gamestate CmdData matches 0..2 if score @s joinorange matches 1.. run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_join",color:"red"}]
+execute if score $gamestate CmdData matches 0..2 if score @s joinorange matches 1.. if score $InOrange CmdData = $InPurple CmdData run tellraw @s[team=Purple] [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_join",color:"red"}]
+execute if entity @s[team=Orange,scores={joinorange=1..}] run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.already_joined",color:"red"}]
 
 scoreboard players reset @s[scores={joinorange=1..}] joinorange
 
@@ -64,9 +64,9 @@ execute unless entity @e[x=0,tag=JoinpadPurple,tag=LockedMidgame,limit=1] unless
 execute if entity @e[x=0,tag=JoinpadPurple,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 if entity @s[team=!Purple,scores={joinpurple=1..},tag=!tryJoinPurple] run function lobby:joinpads/purple/full
 execute unless entity @e[x=0,tag=JoinpadPurple,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 if score $InPurple CmdData > $InOrange CmdData if entity @s[team=!Purple,scores={joinpurple=1..},tag=!tryJoinPurple] run function lobby:joinpads/purple/imbalanced
 
-execute unless score $gamestate CmdData matches 0..2 if score @s joinpurple matches 1.. run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
-execute if score $gamestate CmdData matches 0..2 if score @s joinpurple matches 1.. if score $InPurple CmdData = $InOrange CmdData run tellraw @s[team=Orange] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_join","color":"red"}]
-execute if entity @s[team=Purple,scores={joinpurple=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_joined","color":"red"}]
+execute unless score $gamestate CmdData matches 0..2 if score @s joinpurple matches 1.. run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_join",color:"red"}]
+execute if score $gamestate CmdData matches 0..2 if score @s joinpurple matches 1.. if score $InPurple CmdData = $InOrange CmdData run tellraw @s[team=Orange] [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_join",color:"red"}]
+execute if entity @s[team=Purple,scores={joinpurple=1..}] run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.already_joined",color:"red"}]
 
 scoreboard players reset @s[scores={joinpurple=1..}] joinpurple
 
@@ -76,8 +76,8 @@ execute unless score $servermode CmdData matches 1 run trigger spectate set 0
 
 execute unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 run tag @s[team=!Spectator,scores={spectate=1..}] add JoinSpec
 
-execute unless score $gamestate CmdData matches 0..2 if score @s spectate matches 1.. run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_spectate","color":"red"}]
-execute if entity @s[team=Spectator,scores={spectate=1..}] run tellraw @s [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.already_spectating","color":"red"}]
+execute unless score $gamestate CmdData matches 0..2 if score @s spectate matches 1.. run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_spectate",color:"red"}]
+execute if entity @s[team=Spectator,scores={spectate=1..}] run tellraw @s [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.already_spectating",color:"red"}]
 
 scoreboard players reset @s[scores={spectate=1..}] spectate
 

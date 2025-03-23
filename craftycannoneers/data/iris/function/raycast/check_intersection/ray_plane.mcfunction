@@ -23,7 +23,7 @@ execute store result score $y1 iris run data get storage iris:data Face.max[1] 1
 execute store result score $z1 iris run data get storage iris:data Face.max[2] 1000000
 
 # Get distance (in mm) to the plane, i.e. how long the ray should extend before it hits the plane
-# This value should be at most sqrt(3)*1000; if it's more than 2000, we fail (otherwise we risk overflow errors)
+# This value should be at most sqrt(3)*1000; if its more than 2000, we fail (otherwise we risk overflow errors)
 execute if data storage iris:data {Face: {Direction: "WEST_EAST"}} run scoreboard players operation $distance iris = $x0 iris
 execute if data storage iris:data {Face: {Direction: "WEST_EAST"}} run scoreboard players operation $distance iris -= ${x} iris
 execute if data storage iris:data {Face: {Direction: "UP_DOWN"}} run scoreboard players operation $distance iris = $y0 iris

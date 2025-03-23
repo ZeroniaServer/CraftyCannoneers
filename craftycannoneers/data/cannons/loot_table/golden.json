@@ -20,15 +20,15 @@
               "floats": [73]
             },
             "minecraft:unbreakable": {},
-            "minecraft:custom_name": "[{\"translate\":\"cannonball.golden\",\"color\":\"gold\",\"italic\":false}]",
+            "minecraft:custom_name": [{"translate":"cannonball.golden","color":"gold","italic":false}],
             "minecraft:lore": [
-              "[{\"translate\":\"cannonball.golden.lore.1\",\"italic\":false,\"color\":\"dark_red\",\"underlined\":true},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\",\"underlined\":false}]",
-              "[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
-              "[{\"translate\":\"cannonball.golden.lore.2\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
-              "[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
-              "[{\"translate\":\"cannonball.golden.lore.3\",\"italic\":false,\"color\":\"aqua\"}]",
-              "[{\"translate\":\"cannonball.golden.lore.4\",\"italic\":false,\"color\":\"aqua\"}]",
-              "[{\"translate\":\"cannonball.golden.lore.5\",\"italic\":false,\"color\":\"aqua\"}]"
+              [{"translate":"cannonball.golden.lore.1","italic":false,"color":"dark_red","underlined":true}],
+              [{"text":"","italic":false,"color":"dark_purple"}],
+              [{"translate":"cannonball.golden.lore.2","italic":false,"color":"white"}],
+              [{"text":"","italic":false,"color":"dark_purple"}],
+              [{"translate":"cannonball.golden.lore.3","italic":false,"color":"aqua"}],
+              [{"translate":"cannonball.golden.lore.4","italic":false,"color":"aqua"}],
+              [{"translate":"cannonball.golden.lore.5","italic":false,"color":"aqua"}]
             ],
             "minecraft:tooltip_display": {
               "hidden_components": [

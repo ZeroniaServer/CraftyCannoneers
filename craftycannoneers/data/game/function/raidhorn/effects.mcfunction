@@ -22,7 +22,7 @@ effect give @s strength 20 0 true
 
 item replace entity @s[predicate=game:horn_mainhand,gamemode=!creative] weapon.mainhand with air
 item replace entity @s[predicate=game:horn_offhand,gamemode=!creative] weapon.offhand with air
-title @s subtitle {"text":" ","color":"white"}
+title @s subtitle {text:" ",color:"white"}
 
 execute at @s[team=Orange] run playsound raidhorn master @a[team=Orange] ~ ~ ~ 6 1
 execute at @s[team=Orange] run playsound raidhornenemy master @a[team=!Orange,team=!Lobby] ~ ~ ~ 6 1

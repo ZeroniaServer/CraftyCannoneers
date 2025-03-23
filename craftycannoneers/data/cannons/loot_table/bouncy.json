@@ -19,13 +19,13 @@
             "minecraft:custom_model_data": {
               "floats": [55]
             },
-            "minecraft:custom_name": "[{\"translate\":\"cannonball.bouncy\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:custom_name": [{"translate":"cannonball.bouncy","italic":false,"color":"dark_aqua"}],
             "minecraft:lore": [
-              "[{\"translate\":\"cannonball.bouncy.lore.1\",\"italic\":false,\"color\":\"white\"}]",
-              "[{\"translate\":\"cannonball.bouncy.lore.2\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
-              "[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
-              "[{\"translate\":\"cannonball.bouncy.lore.3\",\"italic\":false,\"color\":\"aqua\"}]",
-              "[{\"translate\":\"cannonball.bouncy.lore.4\",\"italic\":false,\"color\":\"aqua\"}]"
+              [{"translate":"cannonball.bouncy.lore.1","italic":false,"color":"white"}],
+              [{"translate":"cannonball.bouncy.lore.2","italic":false,"color":"white"}],
+              [{"text":"","italic":false,"color":"dark_purple"}],
+              [{"translate":"cannonball.bouncy.lore.3","italic":false,"color":"aqua"}],
+              [{"translate":"cannonball.bouncy.lore.4","italic":false,"color":"aqua"}]
             ],
             "minecraft:tooltip_display": {
               "hidden_components": [

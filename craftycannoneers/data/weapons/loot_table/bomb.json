@@ -19,10 +19,10 @@
             "minecraft:custom_model_data": {
               "floats": [2]
             },
-            "minecraft:custom_name": "[{\"translate\":\"item.blast_bomb\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:custom_name": [{"translate":"item.blast_bomb","italic":false,"color":"dark_aqua"}],
             "minecraft:lore": [
-              "[{\"translate\":\"item.blast_bomb.lore.1\",\"italic\":false,\"color\":\"white\"}]",
-              "[{\"translate\":\"item.blast_bomb.lore.2\",\"italic\":false,\"color\":\"white\"}]"
+              [{"translate":"item.blast_bomb.lore.1","italic":false,"color":"white"}],
+              [{"translate":"item.blast_bomb.lore.2","italic":false,"color":"white"}]
             ]
           }
         },

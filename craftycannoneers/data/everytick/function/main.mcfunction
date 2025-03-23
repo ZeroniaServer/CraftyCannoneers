@@ -13,7 +13,7 @@ execute as @a at @s run function everytick:players
 execute if score $load CmdData matches 10.. unless score $updating CmdData matches 1 if entity @e[type=area_effect_cloud,tag=ParkourNameAEC,name="???",limit=1] if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. if data storage craftycannoneers:parkour Name run function lobby:parkour/restore
 
 #> Reset Parkour high score if necessary
-execute if score $load CmdData matches 10.. unless score $updating CmdData matches 1 unless score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.parkour","color":"gray","with":[{"translate":"error.report","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"translate":"error.discord","color":"white"}]}}]},"\n"]
+execute if score $load CmdData matches 10.. unless score $updating CmdData matches 1 unless score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. run tellraw @a [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.parkour",color:"gray",with:[{translate:"error.report",underlined:true,color:"red",click_event:{action:"open_url",url:"https://discord.gg/X9bZgw7"},hover_event:{action:"show_text","contents":[{translate:"error.discord",color:"white"}]}}]},"\n"]
 execute if score $load CmdData matches 10.. unless score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. run function lobby:parkour/resethighscore
 
 #> Slime killing (failsafe)
@@ -105,7 +105,7 @@ execute if entity @a[team=Lobby] run function everytick:resolvesigns
 execute if score $InTeams CmdData matches 0 if score $gamestate CmdData matches 0 if score $mcancel CmdData matches -1 run function lobby:customizer/cancel/resume
 
 #> Failsafe for reset scoreboards
-execute unless score $gamestate CmdData matches -1.. if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run tellraw @a [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.game","color":"gray","with":[{"translate":"error.report","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://discord.gg/X9bZgw7"},"hoverEvent":{"action":"show_text","contents":[{"translate":"error.discord","color":"white"}]}}]},"\n"]
+execute unless score $gamestate CmdData matches -1.. if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run tellraw @a [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.game",color:"gray",with:[{translate:"error.report",underlined:true,color:"red",click_event:{action:"open_url",url:"https://discord.gg/X9bZgw7"},hover_event:{action:"show_text","contents":[{translate:"error.discord",color:"white"}]}}]},"\n"]
 execute unless score $gamestate CmdData matches -1.. if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function debug:preparerelease
 
 execute if score $gamestate CmdData matches 2.. if score $Wildlife CmdData matches 1 run function game:modifiers/crabs/detectchange

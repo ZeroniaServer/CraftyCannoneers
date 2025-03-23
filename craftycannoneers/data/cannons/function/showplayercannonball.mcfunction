@@ -5,15 +5,15 @@ execute if entity @s[tag=vacant] run return 0
 execute unless entity @a[tag=PlayerCannon,limit=1] on passengers run item replace entity @s[tag=PCannonballdeco] armor.head with air
 execute unless entity @a[tag=PlayerCannon,limit=1] on passengers run item replace entity @s[tag=PCannonballhat] container.0 with air
 execute unless entity @a[tag=PlayerCannon,limit=1] if entity @s[tag=!vacant] on passengers on passengers run data modify entity @s[tag=PCannonballname] CustomNameVisible set value 0b
-execute unless entity @a[tag=PlayerCannon,limit=1] if entity @s[tag=!vacant] on passengers on passengers run data modify entity @s[tag=PCannonballname] CustomName set value '{"text":""}'
+execute unless entity @a[tag=PlayerCannon,limit=1] if entity @s[tag=!vacant] on passengers on passengers run data modify entity @s[tag=PCannonballname] CustomName set value {text:""}
 execute unless entity @a[tag=PlayerCannon,limit=1] run tag @s[tag=!vacant] add vacant
 execute if entity @s[tag=vacant] run return 0
 
 execute on passengers run item replace entity @s[tag=PCannonballhat] container.0 from entity @a[tag=PlayerCannon,limit=1] armor.head
 data modify storage craftycannoneers:playercb CustomName set from entity @s CustomName
 execute if entity @a[tag=PlayerCannon,tag=!CannonMVP,tag=!KillMVP,limit=1] on passengers on passengers run data modify entity @s[tag=PCannonballname,type=slime] CustomName set from storage craftycannoneers:playercb CustomName
-execute if entity @a[tag=PlayerCannon,tag=!CannonMVP,tag=!KillMVP,limit=1] on passengers on passengers run data modify entity @s[tag=PCannonballname,type=cow] CustomName set value '[{"translate":"space.-4096"},{"text":""},{"translate":"space.-4096"}]'
-execute unless entity @a[tag=PlayerCannon,tag=!CannonMVP,tag=!KillMVP,limit=1] on passengers on passengers run data modify entity @s[tag=PCannonballname,type=slime] CustomName set value '[{"translate":"space.-4096"},{"text":""},{"translate":"space.-4096"}]'
+execute if entity @a[tag=PlayerCannon,tag=!CannonMVP,tag=!KillMVP,limit=1] on passengers on passengers run data modify entity @s[tag=PCannonballname,type=cow] CustomName set value [{translate:"space.-4096"},{text:""},{translate:"space.-4096"}]
+execute unless entity @a[tag=PlayerCannon,tag=!CannonMVP,tag=!KillMVP,limit=1] on passengers on passengers run data modify entity @s[tag=PCannonballname,type=slime] CustomName set value [{translate:"space.-4096"},{text:""},{translate:"space.-4096"}]
 execute unless entity @a[tag=PlayerCannon,tag=!CannonMVP,tag=!KillMVP,limit=1] on passengers on passengers run data modify entity @s[tag=PCannonballname,type=cow] CustomName set from storage craftycannoneers:playercb CustomName
 
 execute if entity @s[tag=occupied] run return 0

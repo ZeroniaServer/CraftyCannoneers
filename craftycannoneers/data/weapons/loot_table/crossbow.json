@@ -23,7 +23,7 @@
             "minecraft:enchantment_glint_override": false,
             "minecraft:unbreakable": {},
             "!minecraft:charged_projectiles": {},
-            "minecraft:custom_name": "[{\"translate\":\"item.crossbow\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:custom_name": [{"translate":"item.crossbow","italic":false,"color":"dark_aqua"}],
             "minecraft:tooltip_display": {
               "hidden_components": [
                 "minecraft:attribute_modifiers",

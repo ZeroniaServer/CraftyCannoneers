@@ -21,7 +21,7 @@
             },
             "minecraft:enchantment_glint_override": false,
             "minecraft:unbreakable": {},
-            "minecraft:custom_name": "[{\"translate\":\"item.cutlass\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:custom_name": [{"translate":"item.cutlass","italic":false,"color":"dark_aqua"}],
             "minecraft:tooltip_display": {
               "hidden_components": [
                 "minecraft:enchantments",

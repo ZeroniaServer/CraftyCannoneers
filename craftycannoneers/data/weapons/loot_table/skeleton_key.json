@@ -19,10 +19,10 @@
             "minecraft:custom_model_data": {
               "floats": [1]
             },
-            "minecraft:custom_name": "[{\"translate\":\"item.skeleton_key\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:custom_name": [{"translate":"item.skeleton_key","italic":false,"color":"dark_aqua"}],
             "minecraft:lore": [
-              "[{\"translate\":\"item.skeleton_key.lore.1\",\"italic\":false,\"color\":\"white\"}]",
-              "[{\"translate\":\"item.skeleton_key.lore.2\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]"
+              [{"translate":"item.skeleton_key.lore.1","italic":false,"color":"white"}],
+              [{"translate":"item.skeleton_key.lore.2","italic":false,"color":"white"},{"text":"","italic":false,"color":"dark_purple"}]
             ]
           }
         },

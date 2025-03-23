@@ -37,4 +37,4 @@ kill @e[type=marker,tag=RingOfFire,predicate=cannons:ships/tutorialfull]
 
 function tutorial:cannondock/restoreweakpoints
 
-title @a[tag=OnDock] actionbar {"translate":"tutorial.ship_timer.repaired","color":"green"}
+title @a[tag=OnDock] actionbar {translate:"tutorial.ship_timer.repaired",color:"green"}

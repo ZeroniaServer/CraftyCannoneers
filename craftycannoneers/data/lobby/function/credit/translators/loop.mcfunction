@@ -15,7 +15,7 @@ scoreboard players reset @s[tag=Globe,scores={CmdData=35..}] CmdData
 execute if score $TranslatorCreditActive CmdData matches 1.. at @s[tag=Globe] unless entity @a[distance=..8] run scoreboard players set $TranslatorPage CmdData 1
 execute if score $TranslatorCreditActive CmdData matches 1.. at @s[tag=Globe] unless entity @a[distance=..8] run scoreboard players reset @e[tag=TranslatorCredit,tag=Credit] CmdData
 execute if score $TranslatorCreditActive CmdData matches 1.. at @s[tag=Globe] unless entity @a[distance=..8] run tag @e[tag=TranslatorCredit,tag=Credit] add Old
-execute if score $TranslatorCreditActive CmdData matches 1.. at @s[tag=Globe] unless entity @a[distance=..8] run data merge entity @e[tag=GlobeText,limit=1] {text:'[{"translate":"credits.translators","color":"white"}]',start_interpolation:0,interpolation_duration:6,background:838860800,billboard:"center",transformation:{translation:[0.0f,0.0f,0.0f]}}
+execute if score $TranslatorCreditActive CmdData matches 1.. at @s[tag=Globe] unless entity @a[distance=..8] run data merge entity @e[tag=GlobeText,limit=1] {text:[{translate:"credits.translators",color:"white"}],start_interpolation:0,interpolation_duration:6,background:838860800,billboard:"center",transformation:{translation:[0.0f,0.0f,0.0f]}}
 execute if score $TranslatorCreditActive CmdData matches 1.. at @s[tag=Globe] unless entity @a[distance=..8] run scoreboard players set $TranslatorCreditActive CmdData 0
 
 scoreboard players add @s[tag=TranslatorCredit,tag=Credit] CmdData 1

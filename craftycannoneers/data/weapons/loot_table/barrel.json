@@ -19,10 +19,10 @@
             "minecraft:custom_model_data": {
               "floats": [1]
             },
-            "minecraft:custom_name": "[{\"translate\":\"item.blast_barrel\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:custom_name": [{"translate":"item.blast_barrel","italic":false,"color":"dark_aqua"}],
             "minecraft:lore": [
-              "[{\"translate\":\"item.blast_barrel.lore.1\",\"italic\":false,\"color\":\"white\"}]",
-              "[{\"translate\":\"item.blast_barrel.lore.2\",\"italic\":false,\"color\":\"white\"}]"
+              [{"translate":"item.blast_barrel.lore.1","italic":false,"color":"white"}],
+              [{"translate":"item.blast_barrel.lore.2","italic":false,"color":"white"}]
             ],
             "minecraft:entity_data": {
               "id": "minecraft:marker",

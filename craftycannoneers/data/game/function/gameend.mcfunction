@@ -1,80 +1,80 @@
 scoreboard players add $EndTime CmdData 1
 
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1..10 run title @a title {"translate":"\uE031 "}
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1..10 run title @a title {translate:"\uE031 "}
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a at @s run playsound ding master @s ~ ~ ~ 1 1.1
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 run title @a subtitle {"translate":"game.tie","color":"#000000"}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 2 run title @a subtitle {"translate":"game.tie","color":"#1a0000"}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 3 run title @a subtitle {"translate":"game.tie","color":"#330000"}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 4 run title @a subtitle {"translate":"game.tie","color":"#4d0000"}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 5 run title @a subtitle {"translate":"game.tie","color":"#660000"}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 6 run title @a subtitle {"translate":"game.tie","color":"#800000"}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 7 run title @a subtitle {"translate":"game.tie","color":"#990000"}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 8 run title @a subtitle {"translate":"game.tie","color":"#b30000"}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 9 run title @a subtitle {"translate":"game.tie","color":"#cc0000"}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 10 run title @a subtitle {"translate":"game.tie","color":"#e60000"}
-execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 11 run title @a subtitle {"translate":"game.tie","color":"#ff0000"}
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 run title @a subtitle {translate:"game.tie",color:"#000000"}
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 2 run title @a subtitle {translate:"game.tie",color:"#1a0000"}
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 3 run title @a subtitle {translate:"game.tie",color:"#330000"}
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 4 run title @a subtitle {translate:"game.tie",color:"#4d0000"}
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 5 run title @a subtitle {translate:"game.tie",color:"#660000"}
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 6 run title @a subtitle {translate:"game.tie",color:"#800000"}
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 7 run title @a subtitle {translate:"game.tie",color:"#990000"}
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 8 run title @a subtitle {translate:"game.tie",color:"#b30000"}
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 9 run title @a subtitle {translate:"game.tie",color:"#cc0000"}
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 10 run title @a subtitle {translate:"game.tie",color:"#e60000"}
+execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 11 run title @a subtitle {translate:"game.tie",color:"#ff0000"}
 execute if score $WinningTeam CmdData matches 0 if score $EndTime CmdData matches 1 as @a[team=!Lobby,team=!Spectator,team=!Developer] at @s run playsound tiegame master @s ~ ~ ~ 1 0
 
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1..16 run title @a title {"text":"\uE02E "}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1..16 run title @a title {text:"\uE02E "}
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a at @s run playsound ding master @s ~ ~ ~ 1 1.1
 #Global
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 run title @a subtitle {"translate":"game.win.orange","color":"#000000"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 2 run title @a subtitle {"translate":"game.win.orange","color":"#1a0a00"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 3 run title @a subtitle {"translate":"game.win.orange","color":"#331400"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 4 run title @a subtitle {"translate":"game.win.orange","color":"#4d1f00"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 5 run title @a subtitle {"translate":"game.win.orange","color":"#662900"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 6 run title @a subtitle {"translate":"game.win.orange","color":"#803300"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 7 run title @a subtitle {"translate":"game.win.orange","color":"#993d00"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 8 run title @a subtitle {"translate":"game.win.orange","color":"#b34700"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 9 run title @a subtitle {"translate":"game.win.orange","color":"#cc5200"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 10 run title @a subtitle {"translate":"game.win.orange","color":"#e65c00"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 11 run title @a subtitle {"translate":"game.win.orange","color":"#ff6600"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 run title @a subtitle {translate:"game.win.orange",color:"#000000"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 2 run title @a subtitle {translate:"game.win.orange",color:"#1a0a00"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 3 run title @a subtitle {translate:"game.win.orange",color:"#331400"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 4 run title @a subtitle {translate:"game.win.orange",color:"#4d1f00"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 5 run title @a subtitle {translate:"game.win.orange",color:"#662900"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 6 run title @a subtitle {translate:"game.win.orange",color:"#803300"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 7 run title @a subtitle {translate:"game.win.orange",color:"#993d00"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 8 run title @a subtitle {translate:"game.win.orange",color:"#b34700"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 9 run title @a subtitle {translate:"game.win.orange",color:"#cc5200"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 10 run title @a subtitle {translate:"game.win.orange",color:"#e65c00"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 11 run title @a subtitle {translate:"game.win.orange",color:"#ff6600"}
 #Winners
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 30 run title @a[team=Orange] subtitle {"translate":"game.win.orange","color":"#c58c00"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 31 run title @a[team=Orange] subtitle {"translate":"game.win.orange","color":"#8ab300"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 32 run title @a[team=Orange] subtitle {"translate":"game.win.orange","color":"#50d900"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 33 run title @a[team=Orange] subtitle {"translate":"game.win.orange","color":"#15ff00"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 30 run title @a[team=Orange] subtitle {translate:"game.win.orange",color:"#c58c00"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 31 run title @a[team=Orange] subtitle {translate:"game.win.orange",color:"#8ab300"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 32 run title @a[team=Orange] subtitle {translate:"game.win.orange",color:"#50d900"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 33 run title @a[team=Orange] subtitle {translate:"game.win.orange",color:"#15ff00"}
 #Losers
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 30 run title @a[team=Purple] subtitle {"translate":"game.win.orange","color":"#ff4d00"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 31 run title @a[team=Purple] subtitle {"translate":"game.win.orange","color":"#ff3300"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 32 run title @a[team=Purple] subtitle {"translate":"game.win.orange","color":"#ff1a00"}
-execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 33 run title @a[team=Purple] subtitle {"translate":"game.win.orange","color":"#ff0000"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 30 run title @a[team=Purple] subtitle {translate:"game.win.orange",color:"#ff4d00"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 31 run title @a[team=Purple] subtitle {translate:"game.win.orange",color:"#ff3300"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 32 run title @a[team=Purple] subtitle {translate:"game.win.orange",color:"#ff1a00"}
+execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 33 run title @a[team=Purple] subtitle {translate:"game.win.orange",color:"#ff0000"}
 
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a[team=Orange] at @s run playsound wingame master @s ~ ~ ~ 1 1.3
 execute if score $WinningTeam CmdData matches 1 if score $EndTime CmdData matches 1 as @a[team=Purple] at @s run playsound losegame master @s ~ ~ ~ 1 2
 
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1..16 run title @a title {"text":"\uE030 "}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1..16 run title @a title {text:"\uE030 "}
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a at @s run playsound splash master @s ~ ~ ~ 1 0.7
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a at @s run playsound ding master @s ~ ~ ~ 1 1.1
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 run title @a subtitle {"translate":"game.win.purple","color":"#000000"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 2 run title @a subtitle {"translate":"game.win.purple","color":"#0f051a"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 3 run title @a subtitle {"translate":"game.win.purple","color":"#1f0a33"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 4 run title @a subtitle {"translate":"game.win.purple","color":"#2e0f4d"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 5 run title @a subtitle {"translate":"game.win.purple","color":"#3d1466"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 6 run title @a subtitle {"translate":"game.win.purple","color":"#4d1a80"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 7 run title @a subtitle {"translate":"game.win.purple","color":"#5c1f99"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 8 run title @a subtitle {"translate":"game.win.purple","color":"#6b24b3"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 9 run title @a subtitle {"translate":"game.win.purple","color":"#7a29cc"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 10 run title @a subtitle {"translate":"game.win.purple","color":"#8a2ee6"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 11 run title @a subtitle {"translate":"game.win.purple","color":"#9933ff"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 run title @a subtitle {translate:"game.win.purple",color:"#000000"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 2 run title @a subtitle {translate:"game.win.purple",color:"#0f051a"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 3 run title @a subtitle {translate:"game.win.purple",color:"#1f0a33"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 4 run title @a subtitle {translate:"game.win.purple",color:"#2e0f4d"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 5 run title @a subtitle {translate:"game.win.purple",color:"#3d1466"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 6 run title @a subtitle {translate:"game.win.purple",color:"#4d1a80"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 7 run title @a subtitle {translate:"game.win.purple",color:"#5c1f99"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 8 run title @a subtitle {translate:"game.win.purple",color:"#6b24b3"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 9 run title @a subtitle {translate:"game.win.purple",color:"#7a29cc"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 10 run title @a subtitle {translate:"game.win.purple",color:"#8a2ee6"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 11 run title @a subtitle {translate:"game.win.purple",color:"#9933ff"}
 #Winners
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 30 run title @a[team=Purple] subtitle {"translate":"game.win.purple","color":"#9933ff"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 31 run title @a[team=Purple] subtitle {"translate":"game.win.purple","color":"#579980"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 32 run title @a[team=Purple] subtitle {"translate":"game.win.purple","color":"#36cc40"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 33 run title @a[team=Purple] subtitle {"translate":"game.win.purple","color":"#15ff00"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 30 run title @a[team=Purple] subtitle {translate:"game.win.purple",color:"#9933ff"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 31 run title @a[team=Purple] subtitle {translate:"game.win.purple",color:"#579980"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 32 run title @a[team=Purple] subtitle {translate:"game.win.purple",color:"#36cc40"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 33 run title @a[team=Purple] subtitle {translate:"game.win.purple",color:"#15ff00"}
 #Losers
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 30 run title @a[team=Orange] subtitle {"translate":"game.win.purple","color":"#b326bf"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 31 run title @a[team=Orange] subtitle {"translate":"game.win.purple","color":"#cc1a80"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 32 run title @a[team=Orange] subtitle {"translate":"game.win.purple","color":"#e60d40"}
-execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 33 run title @a[team=Orange] subtitle {"translate":"game.win.purple","color":"#ff0000"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 30 run title @a[team=Orange] subtitle {translate:"game.win.purple",color:"#b326bf"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 31 run title @a[team=Orange] subtitle {translate:"game.win.purple",color:"#cc1a80"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 32 run title @a[team=Orange] subtitle {translate:"game.win.purple",color:"#e60d40"}
+execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 33 run title @a[team=Orange] subtitle {translate:"game.win.purple",color:"#ff0000"}
 
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Purple] at @s run playsound wingame master @s ~ ~ ~ 1 1.3
 execute if score $WinningTeam CmdData matches 2 if score $EndTime CmdData matches 1 as @a[team=Orange] at @s run playsound losegame master @s ~ ~ ~ 1 2
@@ -94,7 +94,7 @@ execute if score $EndTime CmdData matches 1 run function game:mvpstats/check
 execute if score $EndTime CmdData matches 1 run scoreboard players remove @a[team=Purple,scores={GamesPlayed=1..}] GamesPlayed 1
 execute if score $EndTime CmdData matches 1 run scoreboard players remove @a[team=Orange,scores={GamesPlayed=1..}] GamesPlayed 1
 execute if score $EndTime CmdData matches 1 run bossbar set lobbybar color red
-execute if score $EndTime CmdData matches 1 run bossbar set lobbybar name {"translate":"game.ending","bold":true,"color":"red"}
+execute if score $EndTime CmdData matches 1 run bossbar set lobbybar name {translate:"game.ending",bold:true,color:"red"}
 execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator,team=!Developer] resistance infinite 100 true
 execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator,team=!Developer] instant_health infinite 100 true
 execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator,team=!Developer] regeneration infinite 100 true

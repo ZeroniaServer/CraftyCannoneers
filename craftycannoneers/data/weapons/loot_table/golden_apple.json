@@ -11,7 +11,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_name": "[{\"translate\":\"item.minecraft.golden_apple\",\"italic\":false,\"color\":\"dark_aqua\"}]"
+                "minecraft:custom_name": [{"translate":"item.minecraft.golden_apple","italic":false,"color":"dark_aqua"}]
               }
             },
             {

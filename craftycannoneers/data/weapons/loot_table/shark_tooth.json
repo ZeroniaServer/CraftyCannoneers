@@ -29,9 +29,9 @@
                 "operation": "add_value"
               }
             ],
-            "minecraft:custom_name": "[{\"translate\":\"item.shark_tooth\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:custom_name": [{"translate":"item.shark_tooth","italic":false,"color":"dark_aqua"}],
             "minecraft:lore": [
-              "[{\"translate\":\"item.modifier_exclusive\",\"italic\":true,\"color\":\"light_purple\"}]"
+              [{"translate":"item.modifier_exclusive","italic":true,"color":"light_purple"}]
             ]
           }
         },

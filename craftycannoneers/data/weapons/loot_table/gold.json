@@ -12,10 +12,10 @@
         {
           "function": "minecraft:set_components",
           "components": {
-            "minecraft:custom_name": "[{\"translate\":\"item.gold\",\"italic\":false,\"color\":\"gold\"}]",
+            "minecraft:custom_name": [{"translate":"item.gold","italic":false,"color":"gold"}],
             "minecraft:lore": [
-              "[{\"translate\":\"item.gold.lore.1\",\"italic\":false,\"color\":\"white\"}]",
-              "[{\"translate\":\"item.gold.lore.2\",\"italic\":false,\"color\":\"white\"}]"
+              [{"translate":"item.gold.lore.1","italic":false,"color":"white"}],
+              [{"translate":"item.gold.lore.2","italic":false,"color":"white"}]
             ]
           }
         },

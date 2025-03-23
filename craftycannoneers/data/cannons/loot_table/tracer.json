@@ -24,13 +24,13 @@
             },
             "minecraft:enchantment_glint_override": false,
             "minecraft:unbreakable": {},
-            "minecraft:custom_name": "[{\"translate\":\"cannonball.tracer\",\"italic\":false,\"color\":\"green\"}]",
+            "minecraft:custom_name": [{"translate":"cannonball.tracer","italic":false,"color":"green"}],
             "minecraft:lore": [
-              "[{\"translate\":\"cannonball.tracer.lore.1\",\"italic\":false,\"color\":\"white\"}]",
-              "[{\"translate\":\"cannonball.tracer.lore.2\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
-              "[{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]",
-              "[{\"translate\":\"cannonball.tracer.lore.3\",\"italic\":false,\"color\":\"#66ff99\"}]",
-              "[{\"translate\":\"cannonball.tracer.lore.4\",\"italic\":false,\"color\":\"#66ff99\"}]"
+              [{"translate":"cannonball.tracer.lore.1","italic":false,"color":"white"}],
+              [{"translate":"cannonball.tracer.lore.2","italic":false,"color":"white"}],
+              [{"text":"","italic":false,"color":"dark_purple"}],
+              [{"translate":"cannonball.tracer.lore.3","italic":false,"color":"#66ff99"}],
+              [{"translate":"cannonball.tracer.lore.4","italic":false,"color":"#66ff99"}]
             ],
             "minecraft:tooltip_display": {
               "hidden_components": [

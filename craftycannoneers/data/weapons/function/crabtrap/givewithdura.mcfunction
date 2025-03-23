@@ -114,8 +114,8 @@ $loot $(function) loot \
                             "floats": [15]\
                         },\
                         "minecraft:lore": [\
-                            "[{\"translate\":\"item.crab_trap.lore.1\",\"italic\":false,\"color\":\"white\"}]",\
-                            "[{\"translate\":\"item.crab_trap.lore.2\",\"italic\":false,\"color\":\"white\"}]"\
+                            [{"translate":"item.crab_trap.lore.1","italic":false,"color":"white"}],\
+                            [{"translate":"item.crab_trap.lore.2","italic":false,"color":"white"}]\
                         ]\
                     }\
                 },\
@@ -183,9 +183,9 @@ $loot $(function) loot \
             "function": "minecraft:set_name",\
             "entity": "this",\
             "name": {\
-                "translate": "item.crab_trap.empty",\
-                "color": "dark_aqua",\
-                "italic": false\
+                translate: "item.crab_trap.empty",\
+                color: "dark_aqua",\
+                italic: false\
             },\
             "conditions": [\
                 {\
@@ -201,9 +201,9 @@ $loot $(function) loot \
             "function": "minecraft:set_name",\
             "entity": "this",\
             "name": {\
-                "translate": "item.crab_trap",\
-                "color": "dark_aqua",\
-                "italic": false\
+                translate: "item.crab_trap",\
+                color: "dark_aqua",\
+                italic: false\
             },\
             "conditions": [\
                 {\

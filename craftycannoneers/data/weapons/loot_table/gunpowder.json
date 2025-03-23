@@ -12,9 +12,9 @@
         {
           "function": "minecraft:set_components",
           "components": {
-            "minecraft:custom_name": "[{\"translate\":\"item.minecraft.gunpowder\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:custom_name": [{"translate":"item.minecraft.gunpowder","italic":false,"color":"dark_aqua"}],
             "minecraft:lore": [
-              "[{\"translate\":\"item.gunpowder.lore\",\"italic\":false,\"color\":\"white\"}]"
+              [{"translate":"item.gunpowder.lore","italic":false,"color":"white"}]
             ]
           }
         },

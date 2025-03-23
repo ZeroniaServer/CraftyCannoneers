@@ -20,7 +20,7 @@
               "floats": [1]
             },
             "minecraft:max_damage": 20,
-            "minecraft:custom_name": "[{\"translate\":\"item.minecraft.shield\",\"italic\":false,\"color\":\"dark_aqua\"}]"
+            "minecraft:custom_name": [{"translate":"item.minecraft.shield","italic":false,"color":"dark_aqua"}]
           }
         },
         {

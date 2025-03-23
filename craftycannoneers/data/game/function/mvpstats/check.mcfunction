@@ -33,5 +33,5 @@ scoreboard players reset $count MVPdamage
 
 function game:mvpstats/announce
 
-#> Update everyone's hats
+#> Update everyones hats
 execute as @a[team=!Lobby,team=!Spectator,team=!Developer] run function game:mvpstats/adaptivehats

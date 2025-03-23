@@ -17,10 +17,10 @@
           "function": "minecraft:set_components",
           "components": {
             "minecraft:unbreakable": {},
-            "minecraft:custom_name": "[{\"translate\":\"item.raid_horn\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:custom_name": [{"translate":"item.raid_horn","italic":false,"color":"dark_aqua"}],
             "minecraft:lore": [
-              "[{\"translate\":\"item.raid_horn.lore.1\",\"italic\":false,\"color\":\"white\"}]",
-              "[{\"translate\":\"item.raid_horn.lore.2\",\"italic\":false,\"color\":\"white\"}]"
+              [{"translate":"item.raid_horn.lore.1","italic":false,"color":"white"}],
+              [{"translate":"item.raid_horn.lore.2","italic":false,"color":"white"}]
             ],
             "minecraft:instrument": "minecraft:ponder_goat_horn",
             "minecraft:tooltip_display": {

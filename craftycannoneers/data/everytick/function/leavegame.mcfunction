@@ -15,10 +15,10 @@ execute if entity @s[team=Purple,predicate=!game:has_hat] unless score @s death 
 execute if entity @s[team=Orange,predicate=!game:has_hat] unless score @s death matches 1.. run trigger leavegame
 execute if entity @s[team=!Lobby] unless score @s leavegame matches 0 run tag @s add LeaveGame
 
-execute if entity @s[team=!Lobby,team=!Spectator,team=!Developer] unless score @s leavegame matches 0 run tellraw @a ["",{"translate":"game.left_team","color":"dark_aqua","with":[{"selector":"@s"}]}]
-execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run tellraw @a ["",{"translate":"game.left_spectator","color":"gray","with":[{"selector":"@s","color":"dark_gray"}]}]
+execute if entity @s[team=!Lobby,team=!Spectator,team=!Developer] unless score @s leavegame matches 0 run tellraw @a ["",{translate:"game.left_team",color:"dark_aqua",with:[{selector:"@s"}]}]
+execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run tellraw @a ["",{translate:"game.left_spectator",color:"gray",with:[{selector:"@s",color:"dark_gray"}]}]
 execute if entity @s[team=Spectator] unless score @s leavegame matches 0 run title @s actionbar ""
-tellraw @s[team=Lobby,scores={leavegame=1..}] [{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"translate":"error.cannot_leave","color":"red"}]
+tellraw @s[team=Lobby,scores={leavegame=1..}] [{text:"[",color:"dark_gray"},{text:"!",color:"red",bold:true},{text:"] ",color:"dark_gray"},{translate:"error.cannot_leave",color:"red"}]
 
 #Unready by leaving
 execute if score $gamestate CmdData matches 0 if score $PurpleReady CmdData matches 1 unless entity @a[team=Purple,tag=ClickedReady] run function game:readyteams/unreadyleavepurple
@@ -78,7 +78,7 @@ title @s[tag=LeaveGame] title ""
 title @s[tag=LeaveGame] subtitle ""
 scoreboard players reset @s[scores={leavegame=1..}] leavegame
 
-tellraw @s[tag=LeaveGame,tag=inParkour] [{"translate":"parkour.left_canceled","color":"red"}]
+tellraw @s[tag=LeaveGame,tag=inParkour] [{translate:"parkour.left_canceled",color:"red"}]
 tag @s[tag=LeaveGame,tag=inParkour] remove resettimeonce
 tag @s[tag=LeaveGame,tag=inParkour] remove inParkour
 

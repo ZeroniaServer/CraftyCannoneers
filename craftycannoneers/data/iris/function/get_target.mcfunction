@@ -2,7 +2,7 @@
 #
 # Returns the position of the block targeted
 # To tell where a player is looking, anchoring to the eye position is needed: execute as <player> at @s anchored eyes positioned ^ ^ ^ run function iris:get_target
-# Targeted block/entity information is sent to storage (see output below) but a marker with tag 'iris.ray' is also present in the targeted block after running this function
+# Targeted block/entity information is sent to storage (see output below) but a marker with tag iris.ray is also present in the targeted block after running this function
 #
 # @public
 # @context an entity, their eye position, and their rotation

@@ -8,16 +8,16 @@ execute if entity @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPN
 execute if entity @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1},limit=1] run scoreboard players operation $RemainWPOrange CmdData -= $PurpleWP CmdData
 execute if entity @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1},limit=1] run scoreboard players set $RemainWPPurple CmdData 6
 execute if entity @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1},limit=1] run scoreboard players operation $RemainWPPurple CmdData -= $OrangeWP CmdData
-title @a[tag=UsingSpyglass,scores={WPNotify=1}] title {"text":" "}
-execute if score $RemainWPOrange CmdData matches 1.. run title @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] subtitle ["",{"translate":"weakpoint.plural","color":"green"},{"text":": ","color":"green"},{"score":{"name":"$RemainWPOrange","objective":"CmdData"},"color":"dark_green"}]
-execute if score $RemainWPOrange CmdData matches ..0 run title @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] subtitle ["",{"translate":"weakpoint.plural","color":"red"},{"text":": ","color":"red"},{"score":{"name":"$RemainWPOrange","objective":"CmdData"},"color":"dark_red"}]
-execute if score $RemainWPPurple CmdData matches 1.. run title @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] subtitle ["",{"translate":"weakpoint.plural","color":"green"},{"text":": ","color":"green"},{"score":{"name":"$RemainWPPurple","objective":"CmdData"},"color":"dark_green"}]
-execute if score $RemainWPPurple CmdData matches ..0 run title @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] subtitle ["",{"translate":"weakpoint.plural","color":"red"},{"text":": ","color":"red"},{"score":{"name":"$RemainWPPurple","objective":"CmdData"},"color":"dark_red"}]
+title @a[tag=UsingSpyglass,scores={WPNotify=1}] title {text:" "}
+execute if score $RemainWPOrange CmdData matches 1.. run title @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] subtitle ["",{translate:"weakpoint.plural",color:"green"},{text:": ",color:"green"},{"score":{"name":"$RemainWPOrange","objective":"CmdData"},color:"dark_green"}]
+execute if score $RemainWPOrange CmdData matches ..0 run title @a[team=Purple,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] subtitle ["",{translate:"weakpoint.plural",color:"red"},{text:": ",color:"red"},{"score":{"name":"$RemainWPOrange","objective":"CmdData"},color:"dark_red"}]
+execute if score $RemainWPPurple CmdData matches 1.. run title @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] subtitle ["",{translate:"weakpoint.plural",color:"green"},{text:": ",color:"green"},{"score":{"name":"$RemainWPPurple","objective":"CmdData"},color:"dark_green"}]
+execute if score $RemainWPPurple CmdData matches ..0 run title @a[team=Orange,tag=!SeeWeakpoint,tag=UsingSpyglass,scores={WPNotify=1}] subtitle ["",{translate:"weakpoint.plural",color:"red"},{text:": ",color:"red"},{"score":{"name":"$RemainWPPurple","objective":"CmdData"},color:"dark_red"}]
 
-title @a[team=!Lobby,tag=UsingSpyglass,scores={WPNotify=40}] title {"text":""}
-title @a[team=!Lobby,tag=UsingSpyglass,scores={WPNotify=40}] subtitle {"text":""}
-title @a[team=!Lobby,tag=!UsingSpyglass,tag=!SeeWeakpoint,scores={WPNotify=1..}] title {"text":""}
-title @a[team=!Lobby,tag=!UsingSpyglass,tag=!SeeWeakpoint,scores={WPNotify=1..}] subtitle {"text":""}
+title @a[team=!Lobby,tag=UsingSpyglass,scores={WPNotify=40}] title {text:""}
+title @a[team=!Lobby,tag=UsingSpyglass,scores={WPNotify=40}] subtitle {text:""}
+title @a[team=!Lobby,tag=!UsingSpyglass,tag=!SeeWeakpoint,scores={WPNotify=1..}] title {text:""}
+title @a[team=!Lobby,tag=!UsingSpyglass,tag=!SeeWeakpoint,scores={WPNotify=1..}] subtitle {text:""}
 scoreboard players reset @a[tag=!UsingSpyglass,scores={WPNotify=1..}] WPNotify
 
 #> X particles

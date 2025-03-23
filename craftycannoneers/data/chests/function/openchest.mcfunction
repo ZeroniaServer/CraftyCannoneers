@@ -9,20 +9,20 @@ execute at @s[team=Orange,tag=HoldKey,scores={eyeclick=1..}] if entity @e[type=a
 
 execute at @s[team=Lobby,tag=HoldKey,scores={eyeclick=1..}] if entity @e[type=armor_stand,tag=LChestFakeC,scores={CmdData=10..},tag=!Unlocked,distance=..3] run scoreboard players add @s openchest 1
 
-title @s[scores={openchest=1..4}] title {"text":" ","color":"dark_aqua"}
-title @s[scores={openchest=1}] subtitle ["",{"translate":"chest.unlocking","color":"dark_aqua","with":[[{"text":"[ ","color":"gray"},{"text":"||||||||||","bold":true,"color":"red"},{"text":" ]","color":"gray"}]]}]
-title @s[scores={openchest=2}] subtitle ["",{"translate":"chest.unlocking","color":"dark_aqua","with":[[{"text":"[ ","color":"gray"},{"text":"|","bold":true,"color":"green"},{"text":"|||||||||","bold":true,"color":"red"},{"text":" ]","color":"gray"}]]}]
-title @s[scores={openchest=3..4}] subtitle ["",{"translate":"chest.unlocking","color":"dark_aqua","with":[[{"text":"[ ","color":"gray"},{"text":"||","bold":true,"color":"green"},{"text":"||||||||","bold":true,"color":"red"},{"text":" ]","color":"gray"}]]}]
-title @s[scores={openchest=5..6}] subtitle ["",{"translate":"chest.unlocking","color":"dark_aqua","with":[[{"text":"[ ","color":"gray"},{"text":"|||","bold":true,"color":"green"},{"text":"|||||||","bold":true,"color":"red"},{"text":" ]","color":"gray"}]]}]
-title @s[scores={openchest=7..8}] subtitle ["",{"translate":"chest.unlocking","color":"dark_aqua","with":[[{"text":"[ ","color":"gray"},{"text":"||||","bold":true,"color":"green"},{"text":"||||||","bold":true,"color":"red"},{"text":" ]","color":"gray"}]]}]
-title @s[scores={openchest=9..10}] subtitle ["",{"translate":"chest.unlocking","color":"dark_aqua","with":[[{"text":"[ ","color":"gray"},{"text":"|||||","bold":true,"color":"green"},{"text":"|||||","bold":true,"color":"red"},{"text":" ]","color":"gray"}]]}]
-title @s[scores={openchest=11..12}] subtitle ["",{"translate":"chest.unlocking","color":"dark_aqua","with":[[{"text":"[ ","color":"gray"},{"text":"||||||","bold":true,"color":"green"},{"text":"||||","bold":true,"color":"red"},{"text":" ]","color":"gray"}]]}]
-title @s[scores={openchest=13..14}] subtitle ["",{"translate":"chest.unlocking","color":"dark_aqua","with":[[{"text":"[ ","color":"gray"},{"text":"|||||||","bold":true,"color":"green"},{"text":"|||","bold":true,"color":"red"},{"text":" ]","color":"gray"}]]}]
-title @s[scores={openchest=15..16}] subtitle ["",{"translate":"chest.unlocking","color":"dark_aqua","with":[[{"text":"[ ","color":"gray"},{"text":"||||||||","bold":true,"color":"green"},{"text":"||","bold":true,"color":"red"},{"text":" ]","color":"gray"}]]}]
-title @s[scores={openchest=17..18}] subtitle ["",{"translate":"chest.unlocking","color":"dark_aqua","with":[[{"text":"[ ","color":"gray"},{"text":"|||||||||","bold":true,"color":"green"},{"text":"|","bold":true,"color":"red"},{"text":" ]","color":"gray"}]]}]
-title @s[scores={openchest=19..20}] subtitle ["",{"translate":"chest.unlocking","color":"dark_aqua","with":[[{"text":"[ ","color":"gray"},{"text":"||||||||||","bold":true,"color":"green"},{"text":" ]","color":"gray"}]]}]
+title @s[scores={openchest=1..4}] title {text:" ",color:"dark_aqua"}
+title @s[scores={openchest=1}] subtitle ["",{translate:"chest.unlocking",color:"dark_aqua",with:[[{text:"[ ",color:"gray"},{text:"||||||||||",bold:true,color:"red"},{text:" ]",color:"gray"}]]}]
+title @s[scores={openchest=2}] subtitle ["",{translate:"chest.unlocking",color:"dark_aqua",with:[[{text:"[ ",color:"gray"},{text:"|",bold:true,color:"green"},{text:"|||||||||",bold:true,color:"red"},{text:" ]",color:"gray"}]]}]
+title @s[scores={openchest=3..4}] subtitle ["",{translate:"chest.unlocking",color:"dark_aqua",with:[[{text:"[ ",color:"gray"},{text:"||",bold:true,color:"green"},{text:"||||||||",bold:true,color:"red"},{text:" ]",color:"gray"}]]}]
+title @s[scores={openchest=5..6}] subtitle ["",{translate:"chest.unlocking",color:"dark_aqua",with:[[{text:"[ ",color:"gray"},{text:"|||",bold:true,color:"green"},{text:"|||||||",bold:true,color:"red"},{text:" ]",color:"gray"}]]}]
+title @s[scores={openchest=7..8}] subtitle ["",{translate:"chest.unlocking",color:"dark_aqua",with:[[{text:"[ ",color:"gray"},{text:"||||",bold:true,color:"green"},{text:"||||||",bold:true,color:"red"},{text:" ]",color:"gray"}]]}]
+title @s[scores={openchest=9..10}] subtitle ["",{translate:"chest.unlocking",color:"dark_aqua",with:[[{text:"[ ",color:"gray"},{text:"|||||",bold:true,color:"green"},{text:"|||||",bold:true,color:"red"},{text:" ]",color:"gray"}]]}]
+title @s[scores={openchest=11..12}] subtitle ["",{translate:"chest.unlocking",color:"dark_aqua",with:[[{text:"[ ",color:"gray"},{text:"||||||",bold:true,color:"green"},{text:"||||",bold:true,color:"red"},{text:" ]",color:"gray"}]]}]
+title @s[scores={openchest=13..14}] subtitle ["",{translate:"chest.unlocking",color:"dark_aqua",with:[[{text:"[ ",color:"gray"},{text:"|||||||",bold:true,color:"green"},{text:"|||",bold:true,color:"red"},{text:" ]",color:"gray"}]]}]
+title @s[scores={openchest=15..16}] subtitle ["",{translate:"chest.unlocking",color:"dark_aqua",with:[[{text:"[ ",color:"gray"},{text:"||||||||",bold:true,color:"green"},{text:"||",bold:true,color:"red"},{text:" ]",color:"gray"}]]}]
+title @s[scores={openchest=17..18}] subtitle ["",{translate:"chest.unlocking",color:"dark_aqua",with:[[{text:"[ ",color:"gray"},{text:"|||||||||",bold:true,color:"green"},{text:"|",bold:true,color:"red"},{text:" ]",color:"gray"}]]}]
+title @s[scores={openchest=19..20}] subtitle ["",{translate:"chest.unlocking",color:"dark_aqua",with:[[{text:"[ ",color:"gray"},{text:"||||||||||",bold:true,color:"green"},{text:" ]",color:"gray"}]]}]
 execute at @s[scores={openchest=20}] anchored eyes run particle item{item:{id:"ender_eye",components:{"minecraft:custom_model_data":{floats:[1.0f]}}}} ^ ^ ^0.6 0 0 0 0.1 10
-title @s[scores={openchest=20}] subtitle {"text":" "}
+title @s[scores={openchest=20}] subtitle {text:" "}
 item modify entity @s[team=!Lobby,predicate=chests:key,scores={openchest=20..},gamemode=!creative] weapon.mainhand game:reducecount
 item modify entity @s[team=!Lobby,predicate=chests:key_offhand,scores={openchest=20..},gamemode=!creative] weapon.offhand game:reducecount
 
@@ -49,15 +49,15 @@ execute at @s[team=Lobby,scores={openchest=20..}] run kill @e[type=interaction,t
 execute at @s[team=Lobby,scores={openchest=20..}] run tag @e[type=armor_stand,tag=LChestFakeC,tag=!Unlocked,limit=1,sort=nearest] add Unlocked
 scoreboard players reset @s[scores={openchest=20..}] openchest
 
-execute at @s[team=!Lobby,scores={openchest=1..}] unless entity @e[type=armor_stand,tag=LChestAS,tag=!Spawned,distance=..3] unless entity @e[type=item_display,tag=chestdisplay,tag=!Unlocked,distance=..3] run title @s title {"text":" ","color":"dark_aqua"}
-execute at @s[team=!Lobby,scores={openchest=1..}] unless entity @e[type=armor_stand,tag=LChestAS,tag=!Spawned,distance=..3] unless entity @e[type=item_display,tag=chestdisplay,tag=!Unlocked,distance=..3] run title @s subtitle {"text":" ","color":"dark_aqua"}
+execute at @s[team=!Lobby,scores={openchest=1..}] unless entity @e[type=armor_stand,tag=LChestAS,tag=!Spawned,distance=..3] unless entity @e[type=item_display,tag=chestdisplay,tag=!Unlocked,distance=..3] run title @s title {text:" ",color:"dark_aqua"}
+execute at @s[team=!Lobby,scores={openchest=1..}] unless entity @e[type=armor_stand,tag=LChestAS,tag=!Spawned,distance=..3] unless entity @e[type=item_display,tag=chestdisplay,tag=!Unlocked,distance=..3] run title @s subtitle {text:" ",color:"dark_aqua"}
 execute at @s[team=!Lobby,scores={openchest=1..}] unless entity @e[type=armor_stand,tag=LChestAS,tag=!Spawned,distance=..3] unless entity @e[type=item_display,tag=chestdisplay,tag=!Unlocked,distance=..3] run scoreboard players reset @s openchest
 
 execute at @s[team=Lobby,scores={openchest=1..}] unless entity @e[type=armor_stand,tag=LChestFakeC,tag=!Spawned,distance=..3] run title @s clear
 execute at @s[team=Lobby,scores={openchest=1..}] unless entity @e[type=armor_stand,tag=LChestFakeC,tag=!Spawned,distance=..3] run scoreboard players reset @s openchest
 
-execute if score @s openchest matches 1.. unless score @s eyeclick matches 1.. run title @s title {"text":" ","color":"dark_aqua"}
-execute if score @s openchest matches 1.. unless score @s eyeclick matches 1.. run title @s subtitle {"text":" ","color":"dark_aqua"}
+execute if score @s openchest matches 1.. unless score @s eyeclick matches 1.. run title @s title {text:" ",color:"dark_aqua"}
+execute if score @s openchest matches 1.. unless score @s eyeclick matches 1.. run title @s subtitle {text:" ",color:"dark_aqua"}
 execute if score @s openchest matches 1.. unless score @s eyeclick matches 1.. run scoreboard players reset @s openchest
 
 tag @s[tag=HoldKey] remove HoldKey

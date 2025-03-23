@@ -1,4 +1,4 @@
-tellraw @s ["\n",{"translate":"weakpoint.exposed_by","color":"aqua","with":[{"selector":"@s"}]},"\n"]
+tellraw @s ["\n",{translate:"weakpoint.exposed_by",color:"aqua",with:[{selector:"@s"}]},"\n"]
 
 tag @s[tag=SpotFake1] add Exposed1
 tag @s[tag=SpotFake2] add Exposed2
@@ -17,6 +17,6 @@ scoreboard players set @s[tag=SpotFake6] fakeexpose6 -2
 scoreboard players set @s[tag=SpotFake7] fakeexpose7 -2
 
 playsound weakpointspot master @s ~ ~ ~ 0.4 1.4
-title @s title {"text":" ","color":"white"}
-title @s subtitle {"text":" ","color":"white"}
+title @s title {text:" ",color:"white"}
+title @s subtitle {text:" ",color:"white"}
 tag @s remove SpotFake

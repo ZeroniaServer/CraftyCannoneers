@@ -1,7 +1,7 @@
 #> Arena water
 execute unless predicate game:inarena run function game:ingame/water
-title @s[scores={drowning=1..},predicate=game:inarena] title {"text":" ","color":"dark_red"}
-title @s[scores={drowning=1..},predicate=game:inarena] subtitle {"text":" ","color":"dark_red"}
+title @s[scores={drowning=1..},predicate=game:inarena] title {text:" ",color:"dark_red"}
+title @s[scores={drowning=1..},predicate=game:inarena] subtitle {text:" ",color:"dark_red"}
 scoreboard players reset @s[scores={drowning=1..},predicate=game:inarena] drowning
 
 #> Boarding Axe

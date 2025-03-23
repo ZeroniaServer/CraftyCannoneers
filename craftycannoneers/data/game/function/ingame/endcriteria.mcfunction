@@ -1,5 +1,5 @@
 #players leave
-execute unless entity @a[team=Purple] unless entity @a[team=Orange] if entity @e[type=item_display,tag=ConfirmIcon] run tellraw @a ["\n",{"translate":"game.no_players","color":"red"}]
+execute unless entity @a[team=Purple] unless entity @a[team=Orange] if entity @e[type=item_display,tag=ConfirmIcon] run tellraw @a ["\n",{translate:"game.no_players",color:"red"}]
 execute unless entity @a[team=Purple] unless entity @a[team=Orange] if entity @e[type=item_display,tag=ConfirmIcon] run function game:forcestop
 execute if entity @s[type=player] run return 0
 

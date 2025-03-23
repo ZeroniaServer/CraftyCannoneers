@@ -4,12 +4,12 @@ scoreboard players set $WasAuto CmdData 0
 
 fill -54 -24 9 -55 -23 9 air
 fill -53 -22 9 -55 -24 9 air replace crimson_wall_sign
-setblock -53 -24 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"red",messages:['{"text":"","clickEvent":{"action":"run_command","value":"/trigger modisigns set 6497"}}','{"text":""}','{"text":""}','{"translate":"customizer.restore_default","color":"#FF0003"}']}}
-setblock -55 -24 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"green",messages:['{"text":"","clickEvent":{"action":"run_command","value":"/trigger modisigns set 5732"}}','{"text":""}','{"text":""}','{"translate":"customizer.confirm","color":"#00FF38"}']}}
-setblock -54 -24 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"light_blue",messages:['{"text":"","clickEvent":{"action":"run_command","value":"/trigger modisigns set 9152"}}','{"text":""}','{"text":""}','{"translate":"customizer.modifiers","color":"#33ccff"}']}}
-setblock -53 -22 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"orange",messages:['{"text":"","clickEvent":{"action":"run_command","value":"/trigger modisigns set 7853"}}','{"text":""}','{"translate":"customizer.game_time","color":"#FFFB00"}','{"text":""}']}}
-setblock -54 -22 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"blue",messages:['{"text":"","clickEvent":{"action":"run_command","value":"/trigger modisigns set 2049"}}','{"text":""}','{"translate":"customizer.daytime","color":"blue"}','{"text":""}']}}
-setblock -55 -22 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"pink",messages:['{"text":"","clickEvent":{"action":"run_command","value":"/trigger modisigns set 3384"}}','{"text":""}','{"translate":"customizer.ship_health","color":"#F8005B"}','{"text":""}']}}
+setblock -53 -24 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"red",messages:[{text:"",click_event:{action:"run_command",command:"/trigger modisigns set 6497"}},{text:""},{text:""},{translate:"customizer.restore_default",color:"#FF0003"}]}}
+setblock -55 -24 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"green",messages:[{text:"",click_event:{action:"run_command",command:"/trigger modisigns set 5732"}},{text:""},{text:""},{translate:"customizer.confirm",color:"#00FF38"}]}}
+setblock -54 -24 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"light_blue",messages:[{text:"",click_event:{action:"run_command",command:"/trigger modisigns set 9152"}},{text:""},{text:""},{translate:"customizer.modifiers",color:"#33ccff"}]}}
+setblock -53 -22 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"orange",messages:[{text:"",click_event:{action:"run_command",command:"/trigger modisigns set 7853"}},{text:""},{translate:"customizer.game_time",color:"#FFFB00"},{text:""}]}}
+setblock -54 -22 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"blue",messages:[{text:"",click_event:{action:"run_command",command:"/trigger modisigns set 2049"}},{text:""},{translate:"customizer.daytime",color:"blue"},{text:""}]}}
+setblock -55 -22 9 minecraft:crimson_wall_sign{front_text:{has_glowing_text:1b,color:"pink",messages:[{text:"",click_event:{action:"run_command",command:"/trigger modisigns set 3384"}},{text:""},{translate:"customizer.ship_health",color:"#F8005B"},{text:""}]}}
 function lobby:customizer/updatesigns
 setblock -54 -23 9 light[level=14]
 setblock -54 -21 9 light[level=13]
@@ -38,8 +38,8 @@ execute as @e[type=interaction,tag=SettingsInteraction,tag=!ModiOn,tag=!CancelMa
 
 function lobby:customizer/cancel/disable
 
-execute if score $mcancel CmdData matches 1 if entity @s[type=player] run tellraw @a {"translate":"chat.canceled_match","color":"red","with":[{"selector":"@s","color":"#ff8585","bold":true}]}
-execute if score $mcancel CmdData matches 1 if entity @s[type=player] run tellraw @a ["\n",{"translate":"%1$s","with":[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{"translate":"ver1.1.5","fallback":"%1$s","with":[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
+execute if score $mcancel CmdData matches 1 if entity @s[type=player] run tellraw @a {translate:"chat.canceled_match",color:"red",with:[{selector:"@s",color:"#ff8585",bold:true}]}
+execute if score $mcancel CmdData matches 1 if entity @s[type=player] run tellraw @a ["\n",{translate:"%1$s",with:[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{translate:"ver1.1.5","fallback":"%1$s",with:[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
 execute if score $mcancel CmdData matches 1 run return 1
 
 execute as @e[type=hopper_minecart,tag=chest] run data remove entity @s Items

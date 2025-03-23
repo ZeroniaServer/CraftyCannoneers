@@ -20,9 +20,9 @@
               "floats": [16]
             },
             "minecraft:unbreakable": {},
-            "minecraft:custom_name": "[{\"translate\":\"cannonball.normal\",\"italic\":false,\"color\":\"dark_aqua\"}]",
+            "minecraft:custom_name": [{"translate":"cannonball.normal","italic":false,"color":"dark_aqua"}],
             "minecraft:lore": [
-              "[{\"translate\":\"cannonball.normal.lore\",\"italic\":false,\"color\":\"white\"}]"
+              [{"translate":"cannonball.normal.lore","italic":false,"color":"white"}]
             ],
             "minecraft:tooltip_display": {
               "hidden_components": [
