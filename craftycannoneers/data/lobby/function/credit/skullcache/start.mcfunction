@@ -25,6 +25,9 @@ summon item_display 0 -100 0 {Tags:["SkullCache","armero"],view_range:0,start_in
 #Shirowh_
 summon item_display 0 -100 0 {Tags:["SkullCache","shirowh"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_data":{name:"shirowh"},"minecraft:profile":{id:[I;-1533562451,550719413,-1348927752,-160709537]}}}}
 
+#Ostensvig
+summon item_display 0 -100 0 {Tags:["SkullCache","ostensvig"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_data":{name:"ostensvig"},"minecraft:profile":{id:[I;-881789103,-367833766,-1490456486,161544423]}}}}
+
 #> Developers
 #YZEROgame
 summon item_display 0 -100 0 {Tags:["SkullCache","yzero"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_data":{name:"yzero"},"minecraft:profile":{id:[I;-1879887536,-1673376384,-1653471241,-507601540]}}}}
