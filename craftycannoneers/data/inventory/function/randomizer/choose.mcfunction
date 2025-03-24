@@ -1,4 +1,4 @@
-#> Dont do anything if $chooseinv is less than 1
+#> Don't do anything if $chooseinv is less than 1
 execute unless score $chooseinv CmdData matches 1.. run return 0
 
 #> Prepare filtered inventory

@@ -20,7 +20,7 @@ function iris:get_hitbox/entity/scale
 execute if predicate iris:baby run scoreboard players operation $entity_width iris /= $2 iris
 execute if predicate iris:baby run scoreboard players operation $entity_height iris /= $2 iris
 
-# Get the entitys coordinates
+# Get the entity's coordinates
 scoreboard players operation $entity_[x] iris = $[x] iris
 scoreboard players operation $entity_[y] iris = $[y] iris
 scoreboard players operation $entity_[z] iris = $[z] iris

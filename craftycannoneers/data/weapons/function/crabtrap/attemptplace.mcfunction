@@ -9,7 +9,7 @@ execute unless data storage iris:output TargetedFace{Direction:"UP"} unless data
 data modify storage iris:settings Blacklist set value "#iris:shape_groups/air"
 execute at @s[tag=!illegal] rotated 0 -90 anchored feet positioned ^ ^ ^ store result score $raydist CmdData run function iris:get_target
 execute unless score $raydist CmdData matches 500000.. run tag @s add illegal
-# Didnt hit anything so definitely safe placement
+# Didn't hit anything so definitely safe placement
 execute if data storage iris:output {TargetType:"NONE"} run tag @s remove illegal
 
 # Finally, protect against other illegal placement conditions

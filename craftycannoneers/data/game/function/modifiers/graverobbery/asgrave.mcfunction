@@ -21,7 +21,7 @@ execute if entity @s[tag=!water] unless score @s CmdData matches 31.. run scoreb
 execute at @s[tag=water,tag=rightheight,tag=!underwater] positioned ~ ~-0.01 ~ if predicate game:located_water at @s run function game:modifiers/graverobbery/bobble
 
 #> Crab tracker
-# The idea in this case is that we will first store crab traps in the markers data, which is used as a reference for loot loading and gradually removed with each filled slot. Then, we check physical slots normally in chest functions.
+# The idea in this case is that we will first store crab traps in the marker's data, which is used as a reference for loot loading and gradually removed with each filled slot. Then, we check physical slots normally in chest functions.
 scoreboard players set $temp hasCrabTraps 0
 execute on passengers unless entity @s[tag=Opened,tag=!LoadLoot] on passengers store result score $temp hasCrabTraps if data entity @s data.Items[{components:{"minecraft:custom_data":{CrabTrap:1b,Empty:0b}}}]
 scoreboard players operation $curr crabs += $temp hasCrabTraps
