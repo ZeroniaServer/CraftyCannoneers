@@ -10,14 +10,14 @@ execute if entity @s[tag=Sailing] run function game:boat/cannon/sailing
 #> Display functions
 execute rotated as @s on passengers positioned as @s[type=item_display,tag=BoatCannonDisplay] run function game:boat/display
 
-#> Make sure Cannon doesnt tip when first mounted
+#> Make sure Cannon doesn't tip when first mounted
 execute if entity @s[tag=!Sailing,tag=!fakestill] run function game:boat/cannon/fakestill
 
 #> Permababy camel
 execute on passengers if entity @s[type=camel] run function everytick:permababy
 execute on passengers on passengers if entity @s[type=camel] run function everytick:permababy
 
-#> Make passengers invulnerable unless an arrows nearby
+#> Make passengers invulnerable unless an arrow's nearby
 execute at @s store success score $arrownearby CmdData if entity @e[type=arrow,limit=1,distance=..6]
 execute if score $arrownearby CmdData matches 1 if entity @s[tag=invul] on passengers run function game:boat/cannon/noninvul
 execute if score $arrownearby CmdData matches 1 run tag @s remove invul
