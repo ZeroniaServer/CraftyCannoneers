@@ -18,7 +18,7 @@ function cannons:bounce/summon4slime
 function cannons:bounce/summon4slime
 function cannons:bounce/summon4slime
 
-#> Store this Cannonball entitys UUID into slimes
+#> Store this Cannonball entity's UUID into slimes
 execute store result score @s bounceID run data get entity @s UUID[0]
 execute store result score @e[type=slime,tag=BounceSlime,tag=!HasName] bounceID run scoreboard players get @s bounceID
 
