@@ -98,9 +98,6 @@ function everytick:nofall
 execute at @s[team=Spectator] at @e[type=marker,tag=seagullSpawner,distance=..20,limit=1,sort=nearest] at @e[type=item_display,tag=seagull,distance=..12] run particle end_rod ~ ~ ~ 0 0 0 0 0 normal @s[distance=..20]
 execute at @s[team=Spectator] at @e[type=marker,tag=seagullSpawner,distance=..20,limit=1,sort=nearest] run particle dust{color:[0.0,1.0,3.0],scale:2.0} ~ ~ ~ 1 1 1 0.1 10 normal @s[distance=..20]
 
-#> Shields
-execute if entity @s[team=!Spectator] run function game:shields
-
 #> Hitmarkers
 execute if entity @s[team=!Spectator] run function cannons:hitmarkers
 
