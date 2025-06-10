@@ -141,7 +141,7 @@ scoreboard objectives add bestParkourDeci dummy
 scoreboard objectives add bestParkourDeci2 dummy
 scoreboard objectives add bestParkourTime dummy
 scoreboard objectives remove Falling
-scoreboard objectives add GamesPlayed dummy
+scoreboard objectives remove GamesPlayed
 scoreboard objectives add toggleTips trigger
 scoreboard objectives add x dummy
 scoreboard objectives add y dummy

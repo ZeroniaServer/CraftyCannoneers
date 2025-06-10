@@ -91,8 +91,6 @@ execute if score $EndTime CmdData matches 1 as @e[type=marker,tag=joinpad] at @s
 execute if score $EndTime CmdData matches 1 as @e[type=item_display,tag=CannonDisp,tag=OnFire] at @s run function cannons:firering/extinguishcannon
 execute if score $EndTime CmdData matches 1 as @e[type=villager,tag=Trader] at @s run function arenaclear:replacetrader
 execute if score $EndTime CmdData matches 1 run function game:mvpstats/check
-execute if score $EndTime CmdData matches 1 run scoreboard players remove @a[team=Purple,scores={GamesPlayed=1..}] GamesPlayed 1
-execute if score $EndTime CmdData matches 1 run scoreboard players remove @a[team=Orange,scores={GamesPlayed=1..}] GamesPlayed 1
 execute if score $EndTime CmdData matches 1 run bossbar set lobbybar color red
 execute if score $EndTime CmdData matches 1 run bossbar set lobbybar name {translate:"game.ending",bold:true,color:"red"}
 execute if score $EndTime CmdData matches 1.. run effect give @a[team=!Lobby,team=!Spectator,team=!Developer] resistance infinite 100 true
