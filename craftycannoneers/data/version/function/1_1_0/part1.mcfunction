@@ -49,7 +49,7 @@ kill @e[type=interaction,tag=protect]
 function version:1_1_0/interactions/protect
 
 setblock -51 -27 -3 air
-setblock -51 -27 -3 minecraft:purple_wall_banner[facing=west]{Patterns:[{Color:15,Pattern:"mc"},{Color:10,Pattern:"ls"},{Color:10,Pattern:"rs"},{Color:10,Pattern:"hhb"},{Color:10,Pattern:"ts"},{Color:0,Pattern:"pig"}]}
+setblock -51 -27 -3 minecraft:purple_wall_banner[facing=west]{patterns:[{color:"black",pattern:"minecraft:circle"},{color:"purple",pattern:"minecraft:stripe_left"},{color:"purple",pattern:"minecraft:stripe_right"},{color:"purple",pattern:"minecraft:half_horizontal_bottom"},{color:"purple",pattern:"minecraft:stripe_top"},{color:"white",pattern:"minecraft:piglin"}]}
 
 bossbar set updatebar name ["",{translate:"game.updating_to",color:"green",with:[{text:"1.1.0",color:"green"},[{text:"[",color:"gray"},{text:"1",color:"white"},{text:"/",color:"gray"},{text:"6",color:"white"},{text:"]",color:"gray"}]]}]
 bossbar set updatebar value 1
