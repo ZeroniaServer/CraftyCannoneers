@@ -10,9 +10,9 @@ execute at @s[scores={CmdData=25}] run particle block{block_state:"packed_ice"} 
 execute at @s[scores={CmdData=25}] run playsound snowmanemerge master @a ~ ~ ~ 1 0
 execute at @s[scores={CmdData=25}] run playsound snowmanemerge master @a ~ ~ ~ 1 1
 
-execute at @s[scores={CmdData=45}] run summon area_effect_cloud ~ ~1.7 ~ {Tags:["EasterEgg","SnowmanText"],Duration:30,CustomNameVisible:1b,CustomName:{translate:"easter_egg.snowman.1"}}
+execute at @s[scores={CmdData=45}] run summon area_effect_cloud ~ ~1.7 ~ {Tags:["EasterEgg","SnowmanText"],Duration:30,CustomNameVisible:1b,CustomName:{translate:"easter_egg.snowman.1"},Radius:0f,Particle:{type:"block",block_state:"minecraft:air"}}
 execute at @s[scores={CmdData=45}] run playsound snowmanspeak master @a ~ ~ ~ 1 1
-execute at @s[scores={CmdData=75}] run summon area_effect_cloud ~ ~1.7 ~ {Tags:["EasterEgg","SnowmanText"],Duration:30,CustomNameVisible:1b,CustomName:{translate:"easter_egg.snowman.2"}}
+execute at @s[scores={CmdData=75}] run summon area_effect_cloud ~ ~1.7 ~ {Tags:["EasterEgg","SnowmanText"],Duration:30,CustomNameVisible:1b,CustomName:{translate:"easter_egg.snowman.2"},Radius:0f,Particle:{type:"block",block_state:"minecraft:air"}}
 execute at @s[scores={CmdData=75}] run playsound snowmanspeak master @a ~ ~ ~ 1 1
 execute at @s[scores={CmdData=120}] run clear @a[distance=..6] snow_block
 execute at @s[scores={CmdData=120}] run give @a[distance=..6] snow_block[custom_name=[{translate:"block.minecraft.snow_block",italic:false,color:"light_purple"}],lore=[[{translate:"item.snow_block.lore",color:"dark_gray"},{text:"",color:"dark_purple",italic:false}]],custom_data={NoDrop:1b}]

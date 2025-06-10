@@ -65,8 +65,8 @@ kill @e[type=marker,tag=TutorialWarp]
 kill @e[type=area_effect_cloud,tag=TutorialWarp]
 summon marker -42 -22 -21 {Tags:["TutorialWarp","ToIsland"]}
 summon marker -264 -21 -21 {Tags:["TutorialWarp","FromIsland"]}
-summon area_effect_cloud -42 -21 -21 {Tags:["TutorialWarp","ToIsland"],CustomName:{translate:"tutorial.warp.to_island",color:"aqua",bold:true},CustomNameVisible:1b,Duration:2000000000}
-summon area_effect_cloud -264 -20 -21 {Tags:["TutorialWarp","FromIsland"],CustomName:{translate:"tutorial.warp.from_island",color:"aqua",bold:true},CustomNameVisible:1b,Duration:2000000000}
+summon area_effect_cloud -42 -21 -21 {Tags:["TutorialWarp","ToIsland"],CustomName:{translate:"tutorial.warp.to_island",color:"aqua",bold:true},CustomNameVisible:1b,Duration:2000000000,Radius:0f,Particle:{type:"block",block_state:"minecraft:air"}}
+summon area_effect_cloud -264 -20 -21 {Tags:["TutorialWarp","FromIsland"],CustomName:{translate:"tutorial.warp.from_island",color:"aqua",bold:true},CustomNameVisible:1b,Duration:2000000000,Radius:0f,Particle:{type:"block",block_state:"minecraft:air"}}
 
 function tutorial:restoreship
 
