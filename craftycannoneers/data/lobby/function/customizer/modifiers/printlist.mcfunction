@@ -7,3 +7,4 @@ execute if score $LostCargo CmdData matches 1 run tellraw @a [{text:"- ",color:"
 execute if score $Storms CmdData matches 1 run tellraw @a [{text:"- ",color:"gray"},{translate:"modifier.sea_storms",color:"aqua",hover_event:{action:"show_text",value:["",{translate:"modifier.sea_storms.description",color:"white"},"\n",{translate:"modifier.experienced_pirates",color:"gray",italic:true}]}}]
 execute if score $Wildlife CmdData matches 1 run tellraw @a [{text:"- ",color:"gray"},{translate:"modifier.wildlife",color:"aqua",hover_event:{action:"show_text",value:["",{translate:"modifier.wildlife.description",color:"white"}]}}]
 execute if score $NoTracers CmdData matches 1 run tellraw @a [{text:"- ",color:"gray"},{translate:"modifier.no_tracers",color:"aqua",hover_event:{action:"show_text",value:["",{translate:"modifier.no_tracers.description",color:"white"},"\n",{translate:"modifier.experienced_pirates",color:"gray",italic:true}]}}]
+tellraw @a ""

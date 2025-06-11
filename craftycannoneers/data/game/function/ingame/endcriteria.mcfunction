@@ -1,7 +1,7 @@
 #players leave
 execute unless entity @a[team=Purple] unless entity @a[team=Orange] if entity @e[type=item_display,tag=ConfirmIcon] run tellraw @a ["\n",{translate:"game.no_players",color:"red"}]
 execute unless entity @a[team=Purple] unless entity @a[team=Orange] if entity @e[type=item_display,tag=ConfirmIcon] run function game:forcestop
-execute if entity @s[type=player] run return 0
+execute if entity @s[type=player] unless entity @a[team=Purple] unless entity @a[team=Orange] run return run scoreboard players set #noplayers CmdData 1
 
 #shiphp
 execute if score $PurpleHP CmdData matches ..0 run scoreboard players set $WinningTeam CmdData 1

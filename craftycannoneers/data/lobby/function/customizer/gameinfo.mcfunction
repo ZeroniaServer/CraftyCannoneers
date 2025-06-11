@@ -13,3 +13,4 @@ execute if score $GraveRobbery CmdData matches 1 run scoreboard players add $mod
 execute if score $BoatCannons CmdData matches 1 run scoreboard players add $modifiers CmdData 1
 
 execute if score $modifiers CmdData matches 1.. run function lobby:customizer/modifiers/printlist
+execute unless score $modifiers CmdData matches 1.. run tellraw @a ""

@@ -27,6 +27,8 @@ execute if score $gamestate CmdData matches 0 if score $OrangeReady CmdData matc
 title @s[tag=LeaveGame] times 0 50 15
 team join Lobby @s[tag=LeaveGame]
 execute if score $gamestate CmdData matches 2.. run function game:ingame/endcriteria
+execute if score #noplayers CmdData matches 1 run tag @s[tag=LeaveGame] remove msgReceived
+scoreboard players reset #noplayers CmdData
 execute at @s[tag=LeaveGame] run tp @s @s
 execute if entity @s[tag=LeaveGame,predicate=!game:tutorialbounds_extended] run tp @s -55 -21 0 -90 0
 execute if entity @s[tag=LeaveGame,predicate=game:tutorialbounds_extended] run tag @s add Warped
@@ -44,6 +46,8 @@ execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=Lea
 execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,tag=!WaterTP,advancements={tutorial:objectives/treasure=false}] add NeedsTutorial
 execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,tag=!WaterTP,advancements={tutorial:objectives/watchtower=false}] add NeedsTutorial
 execute if entity @s[tag=LeaveGame] unless entity @s[team=] unless score @s LeftGame matches 1.. at @s run playsound leavegame master @s ~ ~ ~ 1 1
+title @s[tag=firstJoined,scores={LeftGame=1..}] title ["",{translate:"game.name",with:[{translate:"game.crafty",bold:true,color:"dark_purple"},{translate:"game.cannoneers",bold:true,color:"gold"}]}]
+title @s[tag=firstJoined,scores={LeftGame=1..}] subtitle ["",{translate:"game.made_by",color:"gray",with:[{text:"v1.1.6",color:"aqua"},{translate:"zeronia",color:"green"}]}]
 scoreboard players reset @s[scores={LeftGame=1..}] LeftGame
 tag @s[tag=LeaveGame] remove onboatregen
 tag @s[tag=LeaveGame] remove onboatweakness
@@ -74,8 +78,6 @@ advancement revoke @s[tag=LeaveGame,advancements={tutorial:zzzunlockables/rocks=
 scoreboard players reset @s[tag=LeaveGame] shotArrows
 scoreboard players reset @s[tag=LeaveGame] KillerUUID
 scoreboard players reset @s[tag=LeaveGame] KillerUUIDreset
-title @s[tag=LeaveGame] title ""
-title @s[tag=LeaveGame] subtitle ""
 scoreboard players reset @s[scores={leavegame=1..}] leavegame
 
 tellraw @s[tag=LeaveGame,tag=inParkour] [{translate:"parkour.left_canceled",color:"red"}]
