@@ -23,6 +23,7 @@ gamerule doTraderSpawning false
 gamerule spectatorsGenerateChunks false
 gamerule maxEntityCramming 10000
 execute unless score $gamestate CmdData matches 2 run gamerule fallDamage false
+gamerule locatorBar false
 difficulty hard
 
 #> Scoreboards

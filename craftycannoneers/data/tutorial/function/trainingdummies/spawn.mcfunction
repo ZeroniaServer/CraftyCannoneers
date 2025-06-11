@@ -5,6 +5,6 @@ execute if entity @s[tag=135] positioned ~ ~ ~ run summon item_display ~ ~ ~ {wi
 
 summon husk ~ ~ ~ {DeathTime:17s,Tags:["TrainingDummy","TDZombie"],attributes:[{id:"minecraft:armor",base:15d}],NoGravity:1b,Health:20.0f,Silent:1b,NoAI:1b,PersistenceRequired:1b}
 tp @e[type=husk,tag=TrainingDummy,tag=TDZombie,limit=1,sort=nearest,distance=..0.1] ~ ~ ~ ~ ~
-summon area_effect_cloud ~ ~1.6 ~ {Tags:["TrainingDummy","NameTag"],Duration:2000000000,CustomNameVisible:1b,CustomName:["",{text:"❤ ",color:"red"},{text:"20",color:"green"},{text:"/",color:"gray"},{text:"20",color:"dark_green"}],Radius:0f,Particle:{type:"block",block_state:"minecraft:air"}}
+summon area_effect_cloud ~ ~1.6 ~ {Tags:["TrainingDummy","NameTag"],Duration:2000000000,CustomNameVisible:1b,CustomName:["",{text:"❤ ",color:"red"},{text:"20",color:"green"},{text:"/",color:"gray"},{text:"20",color:"dark_green"}],Radius:0f,custom_particle:{type:"block",block_state:"minecraft:air"}}
 execute as @e[type=husk,tag=TDZombie] store result score @s eyeclick run data get entity @s Health
 particle cloud ~ ~1 ~ 0 0.5 0 0.1 20 force @a[team=Lobby,predicate=game:tutorialbounds]

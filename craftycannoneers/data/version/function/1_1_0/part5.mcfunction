@@ -6,8 +6,8 @@ data merge entity @e[type=area_effect_cloud,tag=TutorialWarp,tag=ToIsland,limit=
 data merge entity @e[type=area_effect_cloud,tag=TutorialWarp,tag=FromIsland,limit=1] {CustomName:{translate:"tutorial.warp.from_island",color:"aqua",bold:true}}
 kill @e[type=area_effect_cloud,tag=TutorialText]
 kill @e[type=area_effect_cloud,tag=TutorialText2]
-summon area_effect_cloud -46.5 -20.5 -14.5 {Tags:["LobbyText","TutorialText"],RadiusPerTick:0.0f,Particle:{type:"block",block_state:"minecraft:air"},Duration:2000000000,CustomNameVisible:1b,Radius:0.0f,CustomName:{bold:true,color:"aqua",translate:"tutorial.training_island"},RadiusOnUse:0.0f}
-summon area_effect_cloud -46.5 -20.8 -14.5 {Tags:["LobbyText","TutorialText2"],RadiusPerTick:0.0f,Particle:{type:"block",block_state:"minecraft:air"},Duration:2000000000,CustomNameVisible:1b,Radius:0.0f,CustomName:{italic:true,color:"yellow",translate:"lobby.label.tutorial"},RadiusOnUse:0.0f}
+summon area_effect_cloud -46.5 -20.5 -14.5 {Tags:["LobbyText","TutorialText"],RadiusPerTick:0.0f,custom_particle:{type:"block",block_state:"minecraft:air"},Duration:2000000000,CustomNameVisible:1b,Radius:0.0f,CustomName:{bold:true,color:"aqua",translate:"tutorial.training_island"},RadiusOnUse:0.0f}
+summon area_effect_cloud -46.5 -20.8 -14.5 {Tags:["LobbyText","TutorialText2"],RadiusPerTick:0.0f,custom_particle:{type:"block",block_state:"minecraft:air"},Duration:2000000000,CustomNameVisible:1b,Radius:0.0f,CustomName:{italic:true,color:"yellow",translate:"lobby.label.tutorial"},RadiusOnUse:0.0f}
 data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=ParkourText,limit=1] {CustomName:{translate:"lobby.label.parkour.1",color:"aqua",bold:true}}
 data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=ParkourText2,limit=1] {CustomName:{translate:"lobby.label.parkour.2",color:"yellow",italic:true}}
 data merge entity @e[type=area_effect_cloud,tag=LobbyText,tag=Madeby,limit=1] {CustomName:{color:"gray",translate:"lobby.label.credits.1",with:[{color:"green",translate:"zeronia"}]}}
