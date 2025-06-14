@@ -27,6 +27,8 @@ summon interaction -56 -25 2 {width:1.01f,height:1.01f,Tags:["protect116"]}
 setblock -56 -25 2 minecraft:lectern[facing=east,has_book=false,powered=false]{}
 summon interaction -56 -25 -2 {width:1.01f,height:1.01f,Tags:["protect116"]}
 setblock -56 -25 -2 minecraft:lectern[facing=east,has_book=false,powered=false]{}
+summon interaction -42 -28 13 {width:1.01f,height:1.01f,Tags:["protect116"]}
+setblock -42 -28 13 minecraft:lectern[facing=north,has_book=false,powered=false]{}
 
 function tutorial:initialize
 
