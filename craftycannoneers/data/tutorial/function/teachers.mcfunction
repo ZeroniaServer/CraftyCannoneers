@@ -1,4 +1,4 @@
-data merge entity @s {Offers:{Recipes:[]},CustomName:["",{translate:"space.-4096"},{text:"\uE003"},{translate:"space.-4096"}],NoAI:1b,Silent:1b}
+data merge entity @s {Offers:{Recipes:[]},CustomNameVisible:0b,NoAI:1b,Silent:1b}
 item replace entity @s weapon.mainhand with air
 item replace entity @s weapon.offhand with air
 execute at @s run rotate @s facing entity @p[team=Lobby,distance=..10]
