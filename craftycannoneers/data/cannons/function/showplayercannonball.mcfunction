@@ -13,6 +13,7 @@ execute on passengers run item replace entity @s[tag=PCannonballhat] contents fr
 data modify storage craftycannoneers:playercb CustomName set from entity @s CustomName
 execute on passengers on passengers run data modify entity @s[tag=PCannonballname,type=cow] CustomName set from storage craftycannoneers:playercb CustomName
 execute if entity @a[tag=PlayerCannon,tag=!CannonMVP,tag=!KillMVP,limit=1] on passengers on passengers run attribute @s[tag=PCannonballname,type=cow] scale base set 0.8
+execute unless entity @a[tag=PlayerCannon,tag=!CannonMVP,tag=!KillMVP,limit=1] on passengers on passengers run attribute @s[tag=PCannonballname,type=cow] scale base set 1.0
 
 execute if entity @s[tag=occupied] run return 0
 execute as @a[tag=PlayerCannon,limit=1] as @e[type=item_display,tag=PCannonballdeco,limit=1,sort=nearest] at @s run rotate @s ~180 ~
