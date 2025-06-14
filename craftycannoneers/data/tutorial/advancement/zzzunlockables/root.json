@@ -15,7 +15,7 @@
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": false,
-    "background": "minecraft:textures/block/spruce_planks.png"
+    "background": "minecraft:block/spruce_planks"
   },
   "criteria": {
     "location": {
