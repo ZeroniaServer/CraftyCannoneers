@@ -51,4 +51,3 @@ summon item_display 0 -100 0 {Tags:["SkullCache","blocky"],view_range:0,start_in
 summon item_display 0 -100 0 {Tags:["SkullCache","Tester"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:profile":{id:[I;1617833968,-310949822,-1653808685,840726584]}}}}
 
 schedule function lobby:credit/skullcache/async 3s replace
-schedule function lobby:credit/skullcache/start 0.75d replace

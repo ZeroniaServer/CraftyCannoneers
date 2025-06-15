@@ -11,5 +11,9 @@ function entityid:flush
 function tutorial:initialize
 function tutorial:tips/newset
 function debug:setup
+
+# part of the reset routine now -- needs manual checking!!!
+function lobby:credit/skullcache/start
+
 scoreboard players reset $servermode CmdData
 scoreboard players set $forcedmodes CmdData 1

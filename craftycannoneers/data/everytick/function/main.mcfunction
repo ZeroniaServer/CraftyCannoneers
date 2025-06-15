@@ -111,6 +111,3 @@ execute unless score $gamestate CmdData matches -1.. if score $load CmdData matc
 execute if score $gamestate CmdData matches 2.. if score $Wildlife CmdData matches 1 run function game:modifiers/crabs/detectchange
 
 scoreboard players set $subticked CmdData 0
-
-#> Skull cache
-execute if score $load CmdData matches 39 if score $WorldVersion CmdData matches 1130.. run function lobby:credit/skullcache/start
