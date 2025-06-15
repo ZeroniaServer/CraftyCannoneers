@@ -44,4 +44,24 @@ execute as @a[tag=inParkour] run item replace entity @s hotbar.5 with nautilus_s
 schedule clear lobby:credit/skullcache/start
 schedule clear lobby:credit/skullcache/async
 
+#to fix block gaps
+setblock 55 -33 15 sand strict
+setblock 55 -37 17 sandstone strict
+setblock 85 -37 -17 sandstone strict
+fill 85 -36 -20 84 -36 -20 sand strict
+setblock 91 -36 18 sand strict
+setblock 83 -36 17 sand strict
+setblock 101 -40 20 sand strict
+setblock 104 -42 24 sand strict
+fill 105 -42 22 106 -38 22 sand strict
+fill 106 -42 23 102 -42 23 sand strict
+setblock 102 -41 23 sand strict
+setblock 104 -41 22 sand strict
+fill 103 -41 21 101 -41 22 sand strict
+fill 103 -40 21 102 -40 21 sand strict
+setblock 103 -39 21 sand strict
+setblock 91 -36 18 sand strict
+setblock 83 -36 17 sand strict
+fill 84 -36 -20 85 -36 -20 sand strict
+
 scoreboard players set $WorldVersion CmdData 1160
