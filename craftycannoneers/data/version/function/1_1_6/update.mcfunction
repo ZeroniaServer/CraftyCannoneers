@@ -44,7 +44,7 @@ execute as @a[tag=inParkour] run item replace entity @s hotbar.5 with nautilus_s
 schedule clear lobby:credit/skullcache/start
 schedule clear lobby:credit/skullcache/async
 
-#to fix block gaps
+#to fix air gaps
 setblock 55 -33 15 sand strict
 setblock 55 -37 17 sandstone strict
 setblock 85 -37 -17 sandstone strict
@@ -63,5 +63,45 @@ setblock 103 -39 21 sand strict
 setblock 91 -36 18 sand strict
 setblock 83 -36 17 sand strict
 fill 84 -36 -20 85 -36 -20 sand strict
+fill -39 -40 -42 -41 -37 -42 sand strict
+fill -28 -44 -37 -28 -43 -37 sand strict
+fill -27 -50 -44 -25 -49 -44 sand strict
+fill -23 -49 -41 -23 -48 -42 sand strict
+fill -33 -52 -52 -32 -52 -52 sand strict
+fill -20 -53 -44 -21 -50 -44 sand strict
+setblock -40 -49 -53 sand strict
+setblock -73 -41 -54 sand strict
+setblock -75 -41 -55 sand strict
+setblock -78 -34 -47 sand strict
+setblock -85 -35 -47 sand strict
+setblock -90 -36 -45 sand strict
+setblock -103 -42 -38 sand strict
+setblock -104 -41 -32 sand strict
+setblock -102 -40 -19 sand strict
+setblock -100 -39 -17 sand strict
+setblock -20 -41 -12 sand strict
+setblock -24 -44 41 sand strict
+setblock -48 -38 52 sand strict
+fill -55 -39 54 -51 -41 55 sand strict
+fill -56 -40 56 -57 -39 55 sand strict
+fill -58 -41 56 -58 -40 56 sand strict
+fill -80 -46 47 -80 -45 47 sand strict
+setblock -81 -43 40 sand strict
+setblock -84 -43 34 sand strict
+fill -76 -40 34 -76 -39 34 sand strict
+setblock -86 -43 26 sand strict
+setblock -83 -39 20 sand strict
+setblock -89 -41 10 sand strict
+fill -98 -42 -5 -98 -41 -5 sand strict
+setblock -99 -42 -6 sand strict
+fill -100 -42 -7 -100 -42 -8 sand strict
+fill -93 -38 -11 -92 -35 -11 sand strict
+fill -91 -35 -39 -91 -33 -38 sand strict
+fill -94 -33 -31 -94 -33 -32 sand strict
+fill -90 -44 20 -90 -42 20 sand strict
+fill -91 -45 20 -91 -45 23 sand strict
+setblock -91 -44 20 sand strict
+fill -91 -46 24 -91 -46 26 sand strict
+fill -70 -36 39 -68 -35 41 sand strict
 
 scoreboard players set $WorldVersion CmdData 1160
