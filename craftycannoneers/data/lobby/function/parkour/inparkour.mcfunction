@@ -47,12 +47,6 @@ execute positioned -73 -22 -1 if entity @s[tag=!CancelParkour,distance=5..] at @
 #> Cancel parkour
 execute at @s[tag=CancelParkour] run function lobby:parkour/cancel
 
-#> Controls
-tag @s[scores={click=1..,clickcooldown=0},predicate=lobby:parkourrestart] add RestartParkour
-tag @s[scores={click=1..,clickcooldown=0},predicate=lobby:parkourquit] add QuitParkour
-execute at @s[tag=RestartParkour] run function lobby:parkour/restart
-execute at @s[tag=QuitParkour] run function lobby:parkour/quit
-
 #> Finish parkour
 execute at @s if entity @s[x=-71,y=2,z=-4,dx=0,dy=0,dz=0] run tag @s add finishedParkour
 execute at @s[tag=finishedParkour] run function lobby:parkour/finished

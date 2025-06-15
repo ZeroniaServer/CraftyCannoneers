@@ -128,8 +128,6 @@ scoreboard objectives add hasCrabTraps dummy
 scoreboard objectives add crabs dummy
 scoreboard objectives add Lifetime dummy
 scoreboard objectives add cancelMatch trigger
-
-#> Parkour
 scoreboard objectives add parkourMins dummy
 scoreboard objectives add parkourSecs dummy
 scoreboard objectives add parkourDeci dummy
@@ -168,6 +166,7 @@ scoreboard objectives add PowerR dummy
 scoreboard objectives add PowerV dummy
 scoreboard objectives add cannonshot dummy
 scoreboard objectives add checkpoint dummy
+scoreboard objectives add impulse_cooldown dummy
 
 #> Bossbars
 bossbar add lobbybar ""

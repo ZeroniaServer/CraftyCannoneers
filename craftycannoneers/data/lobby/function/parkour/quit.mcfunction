@@ -7,3 +7,4 @@ function lobby:items
 title @s actionbar {text:""}
 tellraw @s {translate:"parkour.canceled",color:"red",bold:true}
 tag @s remove QuitParkour
+advancement revoke @s only lobby:quit_parkour

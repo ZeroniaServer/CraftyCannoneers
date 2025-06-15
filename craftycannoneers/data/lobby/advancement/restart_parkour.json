@@ -1,0 +1,19 @@
+
+{
+    "criteria": {
+        "use_item": {
+            "trigger": "minecraft:using_item",
+            "conditions": {
+                "item": {
+                    "items": "nautilus_shell",
+                    "predicates": {
+                        "custom_data": "{Restart:1b}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "lobby:parkour/userestart"
+    }
+}
