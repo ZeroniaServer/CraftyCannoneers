@@ -104,4 +104,6 @@ setblock -91 -44 20 sand strict
 fill -91 -46 24 -91 -46 26 sand strict
 fill -70 -36 39 -68 -35 41 sand strict
 
+function version:1_1_6/fixbarrels
+
 scoreboard players set $WorldVersion CmdData 1160

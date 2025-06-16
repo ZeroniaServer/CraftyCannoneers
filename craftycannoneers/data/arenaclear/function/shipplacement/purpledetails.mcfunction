@@ -54,3 +54,5 @@ setblock 66 -30 -63 oak_trapdoor[half=top,facing=north]
 setblock 66 -30 -62 oak_trapdoor[half=top,facing=south]
 setblock 65 -30 -62 oak_stairs[facing=west,half=top]
 setblock 67 -30 -62 oak_stairs[facing=east,half=top]
+
+function arenaclear:shipplacement/barrels
