@@ -1,5 +1,5 @@
 execute unless score $OrangeWPDelay CmdData matches 1.. if entity @s[type=slime,tag=Spotted] run tellraw @a[team=Orange] ["\n",{translate:"weakpoint.destroyed.enemy",italic:true,color:"green"},"\n",{translate:"weakpoint.destroyed",color:"dark_aqua",with:[{translate:"weakpoint.destroyed.something",color:"dark_aqua"},{translate:"weakpoint.destroyed.exposed",underlined:true,color:"dark_green"},"\n"]}]
-execute unless score $OrangeWPDelay CmdData matches 1.. if entity @s[type=slime,tag=!Spotted] run tellraw @a[team=Orange] ["\n",{translate:"weakpoint.destroyed.enemy",italic:true,color:"green"},"\n",{translate:"weakpoint.destroyed",color:"dark_aqua",with:[{translate:"weakpoint.destroyed.something",color:"dark_aqua"},{translate:"weakpoint.destroyed.unexposed",underlined:true,color:"red"},{translate:"weakpoint.destroyed.no_bonus",color:"dark_aqua"}]},"\n"]
+execute unless score $OrangeWPDelay CmdData matches 1.. if entity @s[type=slime,tag=!Spotted] run tellraw @a[team=Orange] ["\n",{translate:"weakpoint.destroyed.enemy",italic:true,color:"green"},"\n",{translate:"weakpoint.destroyed",color:"dark_aqua",with:[{translate:"weakpoint.destroyed.something",color:"dark_aqua"},{translate:"weakpoint.destroyed.unexposed",underlined:true,color:"red"},{translate:"weakpoint.destroyed.no_bonus",color:"red"}]},"\n"]
 execute unless score $OrangeWPDelay CmdData matches 1.. if entity @s[type=slime,tag=Spotted] run tellraw @a[team=Purple] ["\n",{translate:"weakpoint.destroyed.something_own",color:"red",with:[""]},"\n"]
 execute unless score $OrangeWPDelay CmdData matches 1.. if entity @s[type=slime,tag=!Spotted] run tellraw @a[team=Purple] ["\n",{translate:"weakpoint.destroyed.something_own",color:"dark_aqua",with:[{translate:"weakpoint.destroyed.no_bonus",color:"green"}]},"\n"]
 execute unless score $OrangeWPDelay CmdData matches 1.. if entity @s[type=slime,tag=Spotted] run scoreboard players add $DamagePurple CmdData 85
@@ -21,7 +21,7 @@ execute as @e[type=marker,tag=SelectedWeakP,tag=Purple,limit=1] at @s run functi
 team join NoName @e[type=slime,tag=Weakpoint,tag=Orange,limit=1]
 
 scoreboard players set @a[team=Orange,scores={WPNotify=-1000..}] WPNotify -20
-execute if score $OrangeWP CmdData matches 6.. run tellraw @a[team=Orange] ["\n",{translate:"weakpoint.destroyed.all_enemy",color:"aqua"},"\n"]
+execute if score $OrangeWP CmdData matches 6.. run tellraw @a[team=Orange] ["\n",{translate:"weakpoint.destroyed.all_enemy",color:"green"},"\n"]
 execute if score $OrangeWP CmdData matches 6.. run tellraw @a[team=Purple] ["\n",{translate:"weakpoint.destroyed.all_own",color:"red"},"\n"]
 
 kill @e[type=marker,tag=SelectedWeakP,limit=1]
