@@ -14,6 +14,6 @@
     "pack": {
         "pack_format": 81,
         "supported_formats": [80, 81],
-        "description": "Made by Zeronia"
+        "description": "v1.1.7 Made by Zeronia"
     }
 }
