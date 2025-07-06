@@ -31,7 +31,7 @@ execute if score $PurpleWPDelay CmdData matches 1.. run scoreboard players add $
 execute if score $PurpleWPDelay CmdData matches 20.. run scoreboard players reset $PurpleWPDelay CmdData
 
 #> Damage Calculation
-execute as @e[type=marker,tag=ImpactMarker,tag=!BlastBarrel] at @s run function cannons:damagecalc
+execute as @e[type=marker,tag=ImpactMarker,tag=!calcingDamage,limit=1] at @s run function cannons:damagecalc
 
 #> Remove hold tags
 execute as @a run function cannons:removeholdtags

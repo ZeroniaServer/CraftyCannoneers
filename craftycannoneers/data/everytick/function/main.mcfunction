@@ -32,12 +32,6 @@ execute if score $load CmdData matches 40.. unless score $updating CmdData match
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=item_display,tag=seagull] at @s at @e[type=marker,tag=seagullSpawner,limit=1,sort=nearest] run function everytick:seagull
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 as @e[type=marker,tag=seagull] at @s run function everytick:seagullspin
 
-#> Cannons
-scoreboard players set $runcannons CmdData 0
-execute if entity @a[team=Lobby,predicate=game:tutorialbounds] run scoreboard players set $runcannons CmdData 1
-execute if score $gamestate CmdData matches 2.. run scoreboard players set $runcannons CmdData 1
-execute if score $runcannons CmdData matches 1 if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function cannons:main
-
 #> Entity effects
 execute if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function everytick:entityeffects
 
@@ -70,6 +64,12 @@ execute if score $load CmdData matches 40.. as @e[type=text_display,tag=Translat
 execute if score $gamestate CmdData matches 3 run function game:gameend
 execute if score $gamestate CmdData matches 2 run function game:ingame
 execute if score $gamestate CmdData matches 2.. run function game:duringgame
+
+#> Cannons
+scoreboard players set $runcannons CmdData 0
+execute if entity @a[team=Lobby,predicate=game:tutorialbounds] run scoreboard players set $runcannons CmdData 1
+execute if score $gamestate CmdData matches 2.. run scoreboard players set $runcannons CmdData 1
+execute if score $runcannons CmdData matches 1 if score $load CmdData matches 40.. unless score $updating CmdData matches 1 run function cannons:main
 
 #> Reset eyeclick/climb
 scoreboard players add @a[scores={eyeclick=1..}] eyeclick 1

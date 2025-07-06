@@ -7,5 +7,8 @@ execute at @s[tag=HitWeakpointPurple,tag=!WeakpointAnnounced] run function canno
 execute at @s[tag=HitWeakpointFake,tag=!WeakpointAnnounced] run function cannons:hitweakpointfake
 
 tag @s add currImpactMarker
+tag @s add calcingDamage
+
+execute if score $debugdamage CmdData matches 1 run tellraw @a [{text:"preexplode "},{score:{name:"@s","objective":"CalcAir1"}}]
 
 execute as @r run function cannons:postexplodetrigger
