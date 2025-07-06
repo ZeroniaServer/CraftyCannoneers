@@ -56,5 +56,15 @@ execute as @e[type=endermite,tag=CrabEntity] run function arenaclear:kill
 execute as @e[type=cat,tag=CrabEntity] run function arenaclear:kill
 kill @e[type=item_display,tag=CrabEntity]
 
+#> Kill other cannon stuff that shouldn't tick if players enter tutorial area
+execute as @e[type=armor_stand,tag=cannonball,predicate=!cannons:safezones/tutorial] run function cannons:killcb
+kill @e[type=armor_stand,tag=GasBubble,predicate=!cannons:ships/tutorialfull]
+kill @e[type=item_display,tag=GasBubble,predicate=!cannons:ships/tutorialfull]
+kill @e[type=item_display,tag=gascloud,predicate=!cannons:ships/tutorialfull]
+kill @e[type=marker,tag=GasCloud,predicate=!cannons:ships/tutorialfull]
+kill @e[type=bat,predicate=!cannons:ships/tutorialfull]
+kill @e[type=marker,tag=RingOfFire,predicate=!cannons:ships/tutorialfull]
+kill @e[type=marker,tag=ImpactMarker,predicate=!cannons:ships/tutorialfull]
+
 #> Game timer
 scoreboard players reset $gametime CmdData
