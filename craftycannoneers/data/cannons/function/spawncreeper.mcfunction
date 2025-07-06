@@ -1,5 +1,3 @@
-scoreboard players set @s CmdData 1
-
 #> Dismount nearby Crabs/Sharks so they can be moved
 execute if entity @s[tag=Power1] as @e[type=cat,tag=CrabVehicle,tag=!dismounted,distance=..5] run function game:modifiers/crabs/dismount
 execute if entity @s[tag=Power1] as @e[type=cod,tag=NewVCod,tag=!dismounted,distance=..5] run function game:modifiers/sharks/dismount
