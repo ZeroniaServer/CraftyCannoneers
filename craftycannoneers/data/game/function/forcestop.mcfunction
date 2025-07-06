@@ -56,5 +56,8 @@ execute as @e[type=endermite,tag=CrabEntity] run function arenaclear:kill
 execute as @e[type=cat,tag=CrabEntity] run function arenaclear:kill
 kill @e[type=item_display,tag=CrabEntity]
 
+#> Kill cannon effects that shouldn't tick if players enter tutorial area
+function arenaclear:cannoneffects
+
 #> Game timer
 scoreboard players reset $gametime CmdData

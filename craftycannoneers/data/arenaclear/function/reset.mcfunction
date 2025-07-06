@@ -2,7 +2,6 @@ execute as @e[type=marker,tag=LightFlash] at @s run fill ~ ~ ~ ~ ~ ~ air replace
 kill @e[type=marker,tag=LightFlash]
 execute as @e[type=item_display,tag=CannonDisp,tag=!Tutorial] at @s run function cannons:resetgunpowder
 tag @e[type=interaction,tag=CannonVMain,tag=Charged,tag=!Tutorial] remove Charged
-execute as @e[type=armor_stand,tag=cannonball,predicate=!cannons:safezones/tutorial] run function cannons:killcb
 execute as @e[type=slime,tag=Weakpoint] run function arenaclear:kill
 kill @e[type=marker,tag=Weakpoint]
 kill @e[type=marker,tag=WeakpointLoc]
@@ -14,13 +13,7 @@ kill @e[type=item,predicate=game:inarena]
 kill @e[type=item_display,tag=EndFirework]
 kill @e[type=arrow,predicate=!game:tutorialbounds]
 kill @e[type=trident,predicate=!game:tutorialbounds]
-kill @e[type=armor_stand,tag=GasBubble,predicate=!cannons:ships/tutorialfull]
-kill @e[type=item_display,tag=GasBubble,predicate=!cannons:ships/tutorialfull]
-kill @e[type=item_display,tag=gascloud,predicate=!cannons:ships/tutorialfull]
-kill @e[type=marker,tag=GasCloud,predicate=!cannons:ships/tutorialfull]
-kill @e[type=bat,predicate=!cannons:ships/tutorialfull]
-kill @e[type=marker,tag=RingOfFire,predicate=!cannons:ships/tutorialfull]
-kill @e[type=marker,tag=ImpactMarker,predicate=!cannons:ships/tutorialfull]
+function arenaclear:cannoneffects
 kill @e[type=area_effect_cloud,tag=GPDispText,tag=!Tutorial]
 kill @e[type=area_effect_cloud,tag=CannonNametag,tag=!Tutorial]
 kill @e[type=interaction,tag=LChest]
@@ -34,6 +27,7 @@ execute as @e[type=cod,tag=SharkEntity] run function arenaclear:kill
 execute as @e[type=endermite,tag=CrabEntity] run function arenaclear:kill
 execute as @e[type=cat,tag=CrabEntity] run function arenaclear:kill
 kill @e[type=item_display,tag=CrabEntity]
+kill @e[type=item_display,tag=CrabTrapAnchor]
 execute as @e[type=item_display,tag=CargoBarrel] run function game:modifiers/lostcargo/killbarrel
 kill @e[type=item_display,tag=CrabTrap]
 kill @e[type=interaction,tag=CrabTrap]
