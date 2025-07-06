@@ -47,7 +47,7 @@ execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=Lea
 execute unless score @s leavegame matches 1.. run tag @s[tag=firstJoined,tag=LeaveGame,tag=!WaterTP,advancements={tutorial:objectives/watchtower=false}] add NeedsTutorial
 execute if entity @s[tag=LeaveGame] unless entity @s[team=] unless score @s LeftGame matches 1.. at @s run playsound leavegame master @s ~ ~ ~ 1 1
 title @s[tag=firstJoined,scores={LeftGame=1..}] title ["",{translate:"game.name",with:[{translate:"game.crafty",bold:true,color:"dark_purple"},{translate:"game.cannoneers",bold:true,color:"gold"}]}]
-title @s[tag=firstJoined,scores={LeftGame=1..}] subtitle ["",{translate:"game.made_by",color:"gray",with:[{text:"v1.1.7",color:"aqua"},{translate:"zeronia",color:"green"}]}]
+title @s[tag=firstJoined,scores={LeftGame=1..}] subtitle ["",{translate:"game.made_by",color:"gray",with:[{text:"v1.1.8",color:"aqua"},{translate:"zeronia",color:"green"}]}]
 scoreboard players reset @s[scores={LeftGame=1..}] LeftGame
 tag @s[tag=LeaveGame] remove onboatregen
 tag @s[tag=LeaveGame] remove onboatweakness
