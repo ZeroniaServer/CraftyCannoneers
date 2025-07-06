@@ -3,7 +3,6 @@ execute as @e[type=item_display,tag=GasDisplay,distance=..1,limit=1,sort=nearest
 summon marker ~ ~ ~ {Tags:["ImpactMarker","GasPower"],CustomName:'{"translate":"gas_explosion.generic"}'}
 scoreboard players operation @e[type=marker,tag=ImpactMarker,tag=GasPower,limit=1,sort=nearest] playerUUID = @s playerUUID
 execute as @e[type=marker,tag=ImpactMarker,tag=GasPower] at @s unless score @s CmdData matches 1.. run function cannons:namecannonball
-execute as @e[type=marker,tag=ImpactMarker,tag=GasPower] at @s unless score @s CmdData matches 1.. run function cannons:spawncreeper
 particle flame ~ ~ ~ 2 2 2 1 150 force @a[predicate=cannons:seeparticles]
 particle flash ~ ~ ~ 0.1 0.1 0.1 0 4 force @a[predicate=cannons:seeparticles]
 particle large_smoke ~ ~ ~ 2 2 2 0.7 200 force @a[predicate=cannons:seeparticles]
