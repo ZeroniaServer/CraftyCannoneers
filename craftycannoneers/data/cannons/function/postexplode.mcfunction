@@ -1,3 +1,5 @@
+function game:ingame/indestructible
+
 execute at @s[predicate=!cannons:safezones/island,predicate=!cannons:safezones/lobby] run function cannons:lightfill2
 execute if score $debugdamage CmdData matches 1 run tellraw @a [{text:"postexplode "},{score:{name:"@s",objective:"CalcAir2"}}]
 
