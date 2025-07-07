@@ -1,6 +1,18 @@
-execute unless block 88 -27 55 spruce_slab[type=top] run setblock 88 -27 55 spruce_slab[type=top]
+#> Orange spawnpoint
+fill 89 -27 58 88 -27 52 spruce_slab[type=top]
+fill 87 -27 57 87 -27 53 dark_oak_slab[type=top]
+setblock 87 -27 58 dark_oak_slab[type=double]
+setblock 87 -27 55 dark_oak_slab[type=double]
+setblock 87 -27 52 dark_oak_slab[type=double]
+fill 86 -27 58 85 -27 52 spruce_slab[type=top]
 
-execute unless block 52 -27 -55 spruce_slab[type=top] run setblock 52 -27 -55 spruce_slab[type=top]
+#> Purple spawnpoint
+fill 51 -27 -58 52 -27 -52 spruce_slab[type=top]
+fill 53 -27 -57 53 -27 -53 dark_oak_slab[type=top]
+setblock 53 -27 -58 dark_oak_slab[type=double]
+setblock 53 -27 -55 dark_oak_slab[type=double]
+setblock 53 -27 -52 dark_oak_slab[type=double]
+fill 54 -27 -58 55 -27 -52 spruce_slab[type=top]
 
 execute unless block 77 -23 55 dark_oak_slab run setblock 77 -23 55 dark_oak_slab
 execute unless block 63 -23 -55 dark_oak_slab run setblock 63 -23 -55 dark_oak_slab
