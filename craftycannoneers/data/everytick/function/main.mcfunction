@@ -10,7 +10,7 @@ scoreboard players add $curr leavecheck 1
 execute as @a at @s run function everytick:players
 
 #> Open settings map for the first player to join
-execute if score $load CmdData matches 40.. if score $openmap CmdData matches 1 run function everytick:openmap
+execute if score $load CmdData matches 5.. if score $openmap CmdData matches 1 run function everytick:openmap
 
 #> Restore Parkour high score if necessary
 execute if score $load CmdData matches 10.. unless score $updating CmdData matches 1 if entity @e[type=area_effect_cloud,tag=ParkourNameAEC,name="???",limit=1] if score @e[type=area_effect_cloud,tag=ParkourRecordAEC,limit=1] bestParkourTime matches 0.. if data storage craftycannoneers:parkour Name run function lobby:parkour/restore
