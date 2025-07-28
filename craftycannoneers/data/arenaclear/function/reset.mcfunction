@@ -24,6 +24,7 @@ kill @e[type=marker,tag=bbarrel]
 kill @e[type=marker,tag=StormEntity]
 execute as @e[type=drowned,tag=SharkEntity] run function arenaclear:kill
 execute as @e[type=cod,tag=SharkEntity] run function arenaclear:kill
+kill @e[type=interaction,tag=SharkEntity]
 execute as @e[type=endermite,tag=CrabEntity] run function arenaclear:kill
 execute as @e[type=cat,tag=CrabEntity] run function arenaclear:kill
 kill @e[type=item_display,tag=CrabEntity]

@@ -5,6 +5,8 @@
     "minecraft:cat",
     "minecraft:interaction",
     "minecraft:camel",
-    "minecraft:bat"
+    "minecraft:bat",
+    "minecraft:drowned",
+    "minecraft:cod"
   ]
 }

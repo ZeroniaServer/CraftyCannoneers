@@ -12,29 +12,12 @@ execute at @s[tag=NewPCod,tag=Pos4] run ride @s mount @e[type=drowned,tag=Pos4,t
 execute at @s[tag=NewPCod,tag=Pos5] run ride @s mount @e[type=drowned,tag=Pos5,tag=SharkEntity,limit=1,sort=nearest]
 execute at @s[tag=NewPCod,tag=Pos6] run ride @s mount @e[type=drowned,tag=Pos6,tag=SharkEntity,limit=1,sort=nearest]
 
-execute at @s[tag=Pos1] unless entity @e[type=drowned,tag=Pos1,tag=IsBack] unless entity @e[type=drowned,tag=Pos1,tag=OnCooldown] on passengers run ride @s dismount
-execute at @s[tag=Pos1] unless entity @e[type=drowned,tag=Pos1,tag=IsBack] unless entity @e[type=drowned,tag=Pos1,tag=OnCooldown] on vehicle run ride @s dismount
-execute at @s[tag=Pos1] unless entity @e[type=drowned,tag=Pos1,tag=IsBack] unless entity @e[type=drowned,tag=Pos1,tag=OnCooldown] run function arenaclear:kill
-
-execute at @s[tag=Pos2] unless entity @e[type=drowned,tag=Pos2,tag=IsBack] unless entity @e[type=drowned,tag=Pos2,tag=OnCooldown] on passengers run ride @s dismount
-execute at @s[tag=Pos2] unless entity @e[type=drowned,tag=Pos2,tag=IsBack] unless entity @e[type=drowned,tag=Pos2,tag=OnCooldown] on vehicle run ride @s dismount
-execute at @s[tag=Pos2] unless entity @e[type=drowned,tag=Pos2,tag=IsBack] unless entity @e[type=drowned,tag=Pos2,tag=OnCooldown] run function arenaclear:kill
-
-execute at @s[tag=Pos3] unless entity @e[type=drowned,tag=Pos3,tag=IsBack] unless entity @e[type=drowned,tag=Pos3,tag=OnCooldown] on passengers run ride @s dismount
-execute at @s[tag=Pos3] unless entity @e[type=drowned,tag=Pos3,tag=IsBack] unless entity @e[type=drowned,tag=Pos3,tag=OnCooldown] on vehicle run ride @s dismount
-execute at @s[tag=Pos3] unless entity @e[type=drowned,tag=Pos3,tag=IsBack] unless entity @e[type=drowned,tag=Pos3,tag=OnCooldown] run function arenaclear:kill
-
-execute at @s[tag=Pos4] unless entity @e[type=drowned,tag=Pos4,tag=IsBack] unless entity @e[type=drowned,tag=Pos4,tag=OnCooldown] on passengers run ride @s dismount
-execute at @s[tag=Pos4] unless entity @e[type=drowned,tag=Pos4,tag=IsBack] unless entity @e[type=drowned,tag=Pos4,tag=OnCooldown] on vehicle run ride @s dismount
-execute at @s[tag=Pos4] unless entity @e[type=drowned,tag=Pos4,tag=IsBack] unless entity @e[type=drowned,tag=Pos4,tag=OnCooldown] run function arenaclear:kill
-
-execute at @s[tag=Pos5] unless entity @e[type=drowned,tag=Pos5,tag=IsBack] unless entity @e[type=drowned,tag=Pos5,tag=OnCooldown] on passengers run ride @s dismount
-execute at @s[tag=Pos5] unless entity @e[type=drowned,tag=Pos5,tag=IsBack] unless entity @e[type=drowned,tag=Pos5,tag=OnCooldown] on vehicle run ride @s dismount
-execute at @s[tag=Pos5] unless entity @e[type=drowned,tag=Pos5,tag=IsBack] unless entity @e[type=drowned,tag=Pos5,tag=OnCooldown] run function arenaclear:kill
-
-execute at @s[tag=Pos6] unless entity @e[type=drowned,tag=Pos6,tag=IsBack] unless entity @e[type=drowned,tag=Pos6,tag=OnCooldown] on passengers run ride @s dismount
-execute at @s[tag=Pos6] unless entity @e[type=drowned,tag=Pos6,tag=IsBack] unless entity @e[type=drowned,tag=Pos6,tag=OnCooldown] on vehicle run ride @s dismount
-execute at @s[tag=Pos6] unless entity @e[type=drowned,tag=Pos6,tag=IsBack] unless entity @e[type=drowned,tag=Pos6,tag=OnCooldown] run function arenaclear:kill
+execute at @s[tag=Pos1] if entity @e[type=drowned,tag=Pos1,tag=!IsBack,tag=!OnCooldown] run function game:modifiers/sharks/killcod
+execute at @s[tag=Pos2] if entity @e[type=drowned,tag=Pos2,tag=!IsBack,tag=!OnCooldown] run function game:modifiers/sharks/killcod
+execute at @s[tag=Pos3] if entity @e[type=drowned,tag=Pos3,tag=!IsBack,tag=!OnCooldown] run function game:modifiers/sharks/killcod
+execute at @s[tag=Pos4] if entity @e[type=drowned,tag=Pos4,tag=!IsBack,tag=!OnCooldown] run function game:modifiers/sharks/killcod
+execute at @s[tag=Pos5] if entity @e[type=drowned,tag=Pos5,tag=!IsBack,tag=!OnCooldown] run function game:modifiers/sharks/killcod
+execute at @s[tag=Pos6] if entity @e[type=drowned,tag=Pos6,tag=!IsBack,tag=!OnCooldown] run function game:modifiers/sharks/killcod
 
 execute at @s[tag=NewVCod] unless block ~ ~3 ~ water run tp @s ~ ~-0.1 ~
 

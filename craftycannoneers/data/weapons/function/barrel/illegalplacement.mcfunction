@@ -7,6 +7,7 @@ execute positioned ~ ~-0.5 ~ if entity @e[type=item_display,tag=CrabTrap,distanc
 execute if entity @e[type=villager,distance=..0.5] run return run tag @s add illegal
 execute if entity @e[type=hopper_minecart,distance=..0.5] run return run tag @s add illegal
 execute if entity @e[type=chest_minecart,distance=..0.5] run return run tag @s add illegal
+execute if entity @e[type=interaction,tag=LChest,distance=..0.5] run return run tag @s add illegal
 
 #> Block-based illegal cases
 execute at @s[tag=!illegal] if block ~ ~-0.5 ~ #game:barrel_exclude run return run tag @s add illegal

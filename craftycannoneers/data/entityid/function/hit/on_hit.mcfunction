@@ -16,6 +16,18 @@ execute if entity @s[type=interaction,tag=CBTrap] on vehicle run function game:m
 execute if entity @s[type=endermite,tag=CrabController,tag=!inwater] on vehicle run damage @s 1 mob_attack by @a[tag=hitter,limit=1]
 execute if entity @s[type=endermite,tag=CrabController,tag=inwater] on vehicle on vehicle run damage @s 1 mob_attack by @a[tag=hitter,limit=1]
 
+#> Do knockback to shark vehicle if hitting upper drowned
+execute if entity @s[type=drowned,tag=SharkEntity] on vehicle run damage @s 1 mob_attack by @a[tag=hitter,limit=1]
+execute if entity @s[type=interaction,tag=SharkEntity] on vehicle run damage @s 1 mob_attack by @a[tag=hitter,limit=1]
+execute if entity @s[type=interaction,tag=SharkEntity] on vehicle at @s run playsound entity.player.attack.nodamage player @a ~ ~ ~
+execute if entity @s[type=interaction,tag=SharkEntity] on vehicle at @s run particle damage_indicator ~ ~ ~ 0.2 0.2 0.2 0.1 4 normal
+execute if entity @s[type=interaction,tag=SharkEntity] on vehicle on vehicle run damage @s 1 mob_attack by @a[tag=hitter,limit=1]
+
+#> Make sharks aggro if you hit them
+execute if entity @s[type=drowned,tag=SharkEntity] run tag @a[limit=1,tag=hitter] add SharkTarget
+execute if entity @s[type=cod,tag=SharkEntity] run tag @a[limit=1,tag=hitter] add SharkTarget
+execute if entity @s[type=interaction,tag=SharkEntity] run tag @a[limit=1,tag=hitter] add SharkTarget
+
 #> Crab enters steal mode when passive
 execute if entity @s[type=cat,tag=CrabVehicle] on passengers at @s[type=item_display,tag=!hasitem,tag=!steal] run function game:modifiers/crabs/forcestealmode
 execute if entity @s[type=endermite,tag=CrabController,tag=!inwater] on vehicle on passengers at @s[type=item_display,tag=!hasitem,tag=!steal] run function game:modifiers/crabs/forcestealmode
