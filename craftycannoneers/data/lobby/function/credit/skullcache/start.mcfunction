@@ -13,10 +13,10 @@ summon item_display 0 -100 0 {Tags:["SkullCache","minus"],view_range:0,start_int
 #Pingoda
 summon item_display 0 -100 0 {Tags:["SkullCache","pingoda"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_data":{name:"pingoda"},"minecraft:profile":{id:[I;153821213,-1550038881,-1824307139,1741933896]}}}}
 
-#Tai_zazanek
+#tainoji_z
 summon item_display 0 -100 0 {Tags:["SkullCache","tai"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_data":{name:"tai"},"minecraft:profile":{id:[I;483675371,1918650750,-1877476915,1372624576]}}}}
 
-#syktyvkar
+#syktyvkarr
 summon item_display 0 -100 0 {Tags:["SkullCache","sykt"],view_range:0,start_interpolation:0,interpolation_duration:0,transformation:{scale:[0f,0f,0f],translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]},item_display:"fixed",item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_data":{name:"sykt"},"minecraft:profile":{id:[I;-1282859003,-1903145212,-2110567181,371897253]}}}}
 
 #Armero
