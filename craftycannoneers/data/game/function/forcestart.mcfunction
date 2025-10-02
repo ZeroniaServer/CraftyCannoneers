@@ -42,10 +42,10 @@ execute as @a[team=Purple] at @s run tp @s @s
 execute as @a[team=Orange] at @s run tp @s @s
 
 tp @a[team=Orange] 88 -26 55 90 0
-spawnpoint @a[team=Orange] 88 -26 55 90
+spawnpoint @a[team=Orange] 88 -26 55 90 0
 
 tp @a[team=Purple] 52 -26 -55 -90 0
-spawnpoint @a[team=Purple] 52 -26 -55 -90
+spawnpoint @a[team=Purple] 52 -26 -55 -90 0
 
 execute as @a at @s run playsound gamestart master @s ~ ~ ~ 100 1.2
 

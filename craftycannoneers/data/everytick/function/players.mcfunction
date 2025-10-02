@@ -17,7 +17,7 @@ effect clear @s[gamemode=spectator] nausea
 effect clear @s[gamemode=spectator] blindness
 xp set @s 0 levels
 xp set @s 0 points
-spawnpoint @s[team=Lobby] -55 -21 0 -90
+spawnpoint @s[team=Lobby] -55 -21 0 -90 0
 execute unless score @s playerUUID matches -2147483648.. store result score @s playerUUID run data get entity @s UUID[0]
 tag @s[team=] add LeaveGame
 
@@ -33,8 +33,8 @@ execute if entity @s[tag=NeedsTutorial,tag=!hideTips] run tellraw @s ["\n",{tran
 tag @s[tag=NeedsTutorial] remove NeedsTutorial
 
 #> Notify players about resource pack
-execute if score $gamestate CmdData matches 0..2 run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{translate:"%1$s",with:[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{translate:"ver1.1.8","fallback":"%1$s",with:[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"ReadyToPlay","storage":"craftycannoneers:messages","interpret":true}]}]}]
-execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{translate:"%1$s",with:[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{translate:"ver1.1.8","fallback":"%1$s",with:[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
+execute if score $gamestate CmdData matches 0..2 run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{translate:"%1$s",with:[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{translate:"ver1.1.9","fallback":"%1$s",with:[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"ReadyToPlay","storage":"craftycannoneers:messages","interpret":true}]}]}]
+execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{translate:"%1$s",with:[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{translate:"ver1.1.9","fallback":"%1$s",with:[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
 tag @s[tag=firstJoined] add msgReceived
 
 #> Servermode team join

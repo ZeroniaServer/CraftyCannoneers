@@ -1,5 +1,5 @@
 execute if block ~ ~ ~ #iris:shape_groups/cauldron run function iris:get_hitbox/block/shape_groups/cauldron
-execute if block ~ ~ ~ minecraft:chain run function iris:get_hitbox/block/shape_groups/chain
+execute if block ~ ~ ~ minecraft:iron_chain run function iris:get_hitbox/block/shape_groups/chain
 execute if block ~ ~ ~ #iris:shape_groups/chest run function iris:get_hitbox/block/shape_groups/chest
 execute if block ~ ~ ~ minecraft:chorus_plant run function iris:get_hitbox/block/shape_groups/chorus_plant
 execute if block ~ ~ ~ minecraft:cocoa run function iris:get_hitbox/block/shape_groups/cocoa

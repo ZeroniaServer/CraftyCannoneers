@@ -34,8 +34,8 @@ scoreboard players remove @s[tag=loaded,scores={arrowsToShoot=0}] remainderArrow
 scoreboard players remove @s[scores={useCrossbow=1..}] useCrossbow 1
 
 #> Spawnpoints
-spawnpoint @s[team=Orange] 88 -26 55 90
-spawnpoint @s[team=Purple] 52 -26 -55 -90
+spawnpoint @s[team=Orange] 88 -26 55 90 0
+spawnpoint @s[team=Purple] 52 -26 -55 -90 0
 
 #> Give back items
 execute at @s[tag=NeedsCutlass,tag=!fullinv] run function game:giveback/cutlass

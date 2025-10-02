@@ -16,6 +16,6 @@ execute at @s[tag=!ascended] if block ~ ~ ~ water[level=14] align y positioned ~
 execute at @s[tag=!ascended] if block ~ ~ ~ water[level=15] align y positioned ~ ~0.875 ~ if entity @s[distance=..0.1] at @s run return run function game:modifiers/graverobbery/emerge
 
 execute at @s[tag=!ascended] if block ~ ~ ~ #slabs[waterlogged=true] align y positioned ~ ~0.875 ~ if entity @s[distance=..0.1] at @s run return run function game:modifiers/graverobbery/emerge
-execute at @s[tag=!ascended] if block ~ ~ ~ chain[waterlogged=true] align y positioned ~ ~0.875 ~ if entity @s[distance=..0.1] at @s run return run function game:modifiers/graverobbery/emerge
+execute at @s[tag=!ascended] if block ~ ~ ~ iron_chain[waterlogged=true] align y positioned ~ ~0.875 ~ if entity @s[distance=..0.1] at @s run return run function game:modifiers/graverobbery/emerge
 execute at @s[tag=!ascended] if block ~ ~ ~ #candles[waterlogged=true] align y positioned ~ ~0.875 ~ if entity @s[distance=..0.1] at @s run return run function game:modifiers/graverobbery/emerge
 execute at @s[tag=!ascended] if block ~ ~ ~ #stairs[waterlogged=true] align y positioned ~ ~0.875 ~ if entity @s[distance=..0.1] at @s run return run function game:modifiers/graverobbery/emerge

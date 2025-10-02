@@ -18,7 +18,7 @@ execute if score @s[tag=Instant,tag=!InSafezone,tag=HasUUID] CmdData matches 30 
 execute if score @s[tag=Instant,tag=!InSafezone,tag=HasUUID] CmdData matches 30 run tag @e[type=marker,tag=ImpactMarker,tag=lightningstrike,tag=!HasUUID] add HasUUID
 
 execute if score @s CmdData matches 30 run playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~10 ~ 20 0
-execute if score @s CmdData matches 30 run particle flash ~ ~ ~ 0 0 0 0 3 force @a[team=!Lobby]
+execute if score @s CmdData matches 30 run particle flash{color:0xFFFFFF} ~ ~ ~ 0 0 0 0 3 force @a[team=!Lobby]
 execute if score @s CmdData matches 30 run particle minecraft:firework ~ ~20 ~ 0 30 0 0.1 100
 
 #> Set off Blast Barrels/Cargo Traps

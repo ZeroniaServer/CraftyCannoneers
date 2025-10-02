@@ -5,7 +5,7 @@
             "required": false
         },
         {
-            "id": "minecraft:chain",
+            "id": "minecraft:iron_chain",
             "required": false
         },
         {

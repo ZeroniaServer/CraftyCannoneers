@@ -2,7 +2,7 @@ scoreboard players operation $currentTracer2 playerUUID = @s playerUUID
 
 execute as @a[team=!Spectator] if score @s playerUUID = $currentTracer2 playerUUID run tag @s add CurrentTracer2
 
-particle flash ~ ~ ~ 0 0 0 0 10 force @a[tag=CurrentTracer2]
+particle flash{color:0xFFFFFF} ~ ~ ~ 0 0 0 0 10 force @a[tag=CurrentTracer2]
 particle dust{color:[0.0,1.0,0.3],scale:4.0} ~ ~ ~ 1 1 1 0 40 force @a[tag=CurrentTracer2]
 
 execute unless entity @s[tag=boatshot] run particle block_marker{block_state:"lime_concrete"} ~ ~ ~ 0.5 0.5 0 0 20 force @a[predicate=!game:tutorialbounds,tag=CurrentTracer2]
