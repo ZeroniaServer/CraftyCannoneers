@@ -8,8 +8,8 @@ scoreboard players set $dust6 CmdData -1
 scoreboard players set $dust3 CmdData -1
 scoreboard players set $dust2 CmdData -1
 
-gamerule fallDamage false
-gamerule doFireTick false
+gamerule minecraft:fall_damage false
+gamerule minecraft:fire_spread_radius_around_player 0
 
 bossbar remove purpleship
 bossbar remove purpleship2

@@ -1,5 +1,5 @@
-execute unless predicate cannons:safezones/tutorial run gamerule doFireTick false
-execute if predicate cannons:safezones/tutorial unless score $gamestate CmdData matches 2.. run gamerule doFireTick false
+execute unless predicate cannons:safezones/tutorial run gamerule minecraft:fire_spread_radius_around_player 0
+execute if predicate cannons:safezones/tutorial unless score $gamestate CmdData matches 2.. run gamerule minecraft:fire_spread_radius_around_player 0
 
 execute if predicate cannons:ships/purple run summon marker 39 -40 -68 {Tags:["FireRemover","Purple"]}
 execute if predicate cannons:ships/orange run summon marker 34 -40 43 {Tags:["FireRemover","Orange"]}

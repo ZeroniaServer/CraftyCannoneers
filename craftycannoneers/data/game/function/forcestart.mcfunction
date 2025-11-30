@@ -9,7 +9,7 @@ data modify block -44 -28 0 front_text.messages[1] set value {text:""}
 data modify block -44 -28 0 front_text.messages[2] set value {text:""}
 data modify block -44 -28 0 front_text.messages[3] set value {text:""}
 
-gamerule fallDamage true
+gamerule minecraft:fall_damage true
 
 #Balancing
 scoreboard players set $OrangeKills BalanceScore 0
@@ -76,7 +76,7 @@ scoreboard players set $purple hasArrows 0
 scoreboard players add @a[team=Orange] hasArrows 1
 scoreboard players add @a[team=Purple] hasArrows 1
 
-execute unless entity @e[type=marker,tag=RingOfFire,predicate=cannons:safezones/tutorial] run gamerule doFireTick false
+execute unless entity @e[type=marker,tag=RingOfFire,predicate=cannons:safezones/tutorial] run gamerule minecraft:fire_spread_radius_around_player 0
 
 #> Enable modifiers
 execute if score $Wildlife CmdData matches 1 run function game:modifiers/sharks/spawnsharks

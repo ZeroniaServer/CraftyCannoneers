@@ -5,25 +5,28 @@ forceload add -235 -19 -235 -19
 forceload add -385 -17 -416 -96
 
 #> Gamerules
-gamerule mobGriefing true
-gamerule keepInventory true
-gamerule doImmediateRespawn true
-gamerule doLimitedCrafting true
-gamerule doMobSpawning false
-gamerule doMobLoot true
-gamerule naturalRegeneration false
-gamerule sendCommandFeedback false
-gamerule logAdminCommands false
-gamerule disableRaids true
-gamerule doWardenSpawning false
-gamerule doInsomnia false
-gamerule doPatrolSpawning false
-gamerule announceAdvancements false
-gamerule doTraderSpawning false
-gamerule spectatorsGenerateChunks false
-gamerule maxEntityCramming 10000
-execute unless score $gamestate CmdData matches 2 run gamerule fallDamage false
-gamerule locatorBar false
+gamerule minecraft:mob_griefing false
+gamerule minecraft:keep_inventory true
+gamerule minecraft:immediate_respawn true
+gamerule minecraft:limited_crafting true
+gamerule minecraft:spawn_mobs false
+gamerule minecraft:spawn_monsters false
+gamerule minecraft:mob_drops true
+gamerule minecraft:entity_drops true
+gamerule minecraft:natural_health_regeneration false
+gamerule minecraft:send_command_feedback false
+gamerule minecraft:log_admin_commands false
+gamerule minecraft:raids false
+gamerule minecraft:spawn_wardens false
+gamerule minecraft:spawn_phantoms false
+gamerule minecraft:spawn_patrols false
+gamerule minecraft:show_advancement_messages false
+gamerule minecraft:spawn_wandering_traders false
+gamerule minecraft:spectators_generate_chunks false
+gamerule minecraft:max_entity_cramming 10000
+execute unless score $gamestate CmdData matches 2 run gamerule minecraft:fall_damage false
+gamerule minecraft:locator_bar false
+gamerule minecraft:pvp true
 difficulty hard
 
 #> Scoreboards
@@ -215,6 +218,10 @@ scoreboard players set $60 CmdData 60
 
 #> Other lobby blocks
 fill -40 -23 -18 -38 -22 -18 air
+
+#> Arena cleanup
+setblock 78 -31 5 moving_piston
+setblock 62 -31 -5 moving_piston
 
 #> Entity ID
 scoreboard objectives add entityid dummy

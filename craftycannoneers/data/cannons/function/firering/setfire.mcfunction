@@ -5,9 +5,9 @@ execute at @s[scores={CmdData=3}] run fill ~-1 ~1 ~-1 ~1 ~1 ~1 air replace fire
 execute at @s[scores={CmdData=3}] run fill ~-2 ~2 ~-2 ~2 ~2 ~2 fire replace air
 execute at @s[scores={CmdData=5}] run fill ~-2 ~2 ~-2 ~2 ~2 ~2 air replace fire
 execute at @s[scores={CmdData=5}] run fill ~-3 ~3 ~-3 ~3 ~3 ~3 fire replace air
-execute at @s[predicate=!cannons:safezones/tutorial,scores={CmdData=5..}] run gamerule doFireTick true
-execute at @s[predicate=!cannons:safezones/tutorial,scores={CmdData=155}] run gamerule doFireTick false
-execute at @s[predicate=cannons:safezones/tutorial,scores={CmdData=5..}] unless score $gamestate CmdData matches 2.. run gamerule doFireTick true
-execute at @s[predicate=cannons:safezones/tutorial,scores={CmdData=155}] unless score $gamestate CmdData matches 2.. run gamerule doFireTick false
+execute at @s[predicate=!cannons:safezones/tutorial,scores={CmdData=5..}] run gamerule minecraft:fire_spread_radius_around_player -1
+execute at @s[predicate=!cannons:safezones/tutorial,scores={CmdData=155}] run gamerule minecraft:fire_spread_radius_around_player 0
+execute at @s[predicate=cannons:safezones/tutorial,scores={CmdData=5..}] unless score $gamestate CmdData matches 2.. run gamerule minecraft:fire_spread_radius_around_player -1
+execute at @s[predicate=cannons:safezones/tutorial,scores={CmdData=155}] unless score $gamestate CmdData matches 2.. run gamerule minecraft:fire_spread_radius_around_player 0
 execute at @s[scores={CmdData=305}] run function cannons:firering/extinguishfire
 kill @s[scores={CmdData=305..}]
