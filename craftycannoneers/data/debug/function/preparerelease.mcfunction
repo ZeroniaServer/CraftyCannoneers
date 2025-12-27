@@ -16,5 +16,4 @@ function debug:setup
 # TODO removed after fetchprofile junk :(
 # function lobby:credit/skullcache/start
 
-scoreboard players reset $servermode CmdData
 scoreboard players set $forcedmodes CmdData 1

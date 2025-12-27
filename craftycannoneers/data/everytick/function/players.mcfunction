@@ -37,10 +37,9 @@ execute if score $gamestate CmdData matches 0..2 run tellraw @s[tag=firstJoined,
 execute unless score $gamestate CmdData matches 0.. run tellraw @s[tag=firstJoined,tag=!msgReceived] ["",{translate:"%1$s",with:[{"nbt":"ResourcePack","storage":"craftycannoneers:messages","interpret":true},{translate:"ver1.1.10","fallback":"%1$s",with:[{"nbt":"OutdatedPack","storage":"craftycannoneers:messages","interpret":true},{"nbt":"SettingsMap","storage":"craftycannoneers:messages","interpret":true}]}]}]
 tag @s[tag=firstJoined] add msgReceived
 
-#> Servermode team join
+#> Trigger team join
 #Orange
-execute if score $servermode CmdData matches 1 run scoreboard players enable @s joinorange
-execute unless score $servermode CmdData matches 1 run trigger joinorange set 0
+scoreboard players enable @s joinorange
 
 execute unless entity @e[x=0,tag=JoinpadOrange,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 unless score $InOrange CmdData > $InPurple CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData run tag @s[team=!Orange,team=!Purple,scores={joinorange=1..}] add JoinOrange
 execute unless entity @e[x=0,tag=JoinpadOrange,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 unless score $InOrange CmdData >= $InPurple CmdData unless score $InOrange CmdData >= $MaxTeamSize CmdData run tag @s[team=Purple,scores={joinorange=1..}] add JoinOrange
@@ -55,8 +54,7 @@ execute if entity @s[team=Orange,scores={joinorange=1..}] run tellraw @s [{text:
 scoreboard players reset @s[scores={joinorange=1..}] joinorange
 
 #Purple
-execute if score $servermode CmdData matches 1 run scoreboard players enable @s joinpurple
-execute unless score $servermode CmdData matches 1 run trigger joinpurple set 0
+scoreboard players enable @s joinpurple
 
 execute unless entity @e[x=0,tag=JoinpadPurple,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 unless score $InPurple CmdData > $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData run tag @s[team=!Purple,team=!Orange,scores={joinpurple=1..}] add JoinPurple
 execute unless entity @e[x=0,tag=JoinpadPurple,tag=LockedMidgame,limit=1] unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 unless score $InPurple CmdData >= $InOrange CmdData unless score $InPurple CmdData >= $MaxTeamSize CmdData run tag @s[team=Orange,scores={joinpurple=1..}] add JoinPurple
@@ -71,8 +69,7 @@ execute if entity @s[team=Purple,scores={joinpurple=1..}] run tellraw @s [{text:
 scoreboard players reset @s[scores={joinpurple=1..}] joinpurple
 
 #Spectator
-execute if score $servermode CmdData matches 1 run scoreboard players enable @s spectate
-execute unless score $servermode CmdData matches 1 run trigger spectate set 0
+scoreboard players enable @s spectate
 
 execute unless score $gamestate CmdData matches -1 unless score $gamestate CmdData matches 3 run tag @s[team=!Spectator,scores={spectate=1..}] add JoinSpec
 

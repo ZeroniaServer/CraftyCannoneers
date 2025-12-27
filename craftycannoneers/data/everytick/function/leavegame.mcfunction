@@ -5,9 +5,7 @@ tag @s add self
 execute if score @s LeftGame matches 1.. at @s unless entity @a[tag=!self] run function everytick:joinreset
 tag @s remove self
 
-execute unless score $servermode CmdData matches 1 run scoreboard players enable @s[team=!Lobby] leavegame
-execute unless score $servermode CmdData matches 1 run scoreboard players reset @s[team=Lobby] leavegame
-execute if score $servermode CmdData matches 1 run scoreboard players enable @s leavegame
+scoreboard players enable @s leavegame
 
 #Pirate Hat game leaving
 execute if entity @s[team=Purple,predicate=!game:has_hat] unless score @s death matches 1.. run trigger leavegame
