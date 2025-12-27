@@ -23,11 +23,7 @@
             "minecraft:lore": [
               [{"translate":"item.blast_bomb.lore.1","italic":false,"color":"white"}],
               [{"translate":"item.blast_bomb.lore.2","italic":false,"color":"white"}]
-            ],
-            "minecraft:use_effects": {
-              "can_sprint": true,
-              "speed_multiplier": 1
-            }
+            ]
           }
         },
         {
