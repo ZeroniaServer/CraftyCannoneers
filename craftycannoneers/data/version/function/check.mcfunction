@@ -18,6 +18,7 @@ execute unless score $updating CmdData matches 1 unless score $WorldVersion CmdD
 execute unless score $updating CmdData matches 1 unless score $WorldVersion CmdData matches 1190.. run function version:1_1_9/update
 execute unless score $updating CmdData matches 1 unless score $WorldVersion CmdData matches 1191.. run function version:1_1_10/update
 execute unless score $updating CmdData matches 1 unless score $WorldVersion CmdData matches 1192.. run function version:1_1_11/update
+execute unless score $updating CmdData matches 1 unless score $WorldVersion CmdData matches 1193.. run function version:1_1_12/update
 
 execute if score $updating CmdData matches 0 run scoreboard players reset $updating CmdData
 execute if score $updating CmdData matches 1 run scoreboard players reset @a modisigns
