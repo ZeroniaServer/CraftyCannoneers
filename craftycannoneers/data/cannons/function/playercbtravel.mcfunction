@@ -5,6 +5,7 @@ execute unless entity @s[tag=outside] run advancement grant @a[tag=PlayerCannon,
 
 execute unless entity @s[tag=outside] as @a[tag=PlayerCannon,gamemode=!spectator,limit=1] run ride @s dismount
 execute unless entity @s[tag=outside] run tag @a[tag=PlayerCannon,gamemode=creative,limit=1] add cr
+execute unless entity @s[tag=outside] as @a[tag=PlayerCannon,gamemode=!spectator,limit=1] run title @s actionbar ""
 execute unless entity @s[tag=outside] as @a[tag=PlayerCannon,gamemode=!spectator,limit=1] run gamemode spectator @s
 execute unless entity @s[tag=outside] on passengers on passengers on passengers run spectate @s @a[tag=PlayerCannon,limit=1]
 execute unless entity @s[tag=outside] run tag @a[tag=PlayerCannon,limit=1] add InPlayerCB
