@@ -27,6 +27,8 @@ gamerule minecraft:max_entity_cramming 10000
 execute unless score $gamestate CmdData matches 2 run gamerule minecraft:fall_damage false
 gamerule minecraft:locator_bar false
 gamerule minecraft:pvp true
+# gamerule minecraft:advance_time false
+# gamerule minecraft:block_drops false
 difficulty hard
 
 #> Scoreboards

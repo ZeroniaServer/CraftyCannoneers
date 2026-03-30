@@ -1,5 +1,7 @@
-#> Throwing
-function weapons:bomb/throw
+#> Bomb throw delay
+scoreboard players add @a[tag=BombDelay] BombDelay 1
+tag @a[tag=BombDelay,scores={BombDelay=5..}] remove BombDelay
+scoreboard players reset @a[tag=!BombDelay,scores={BombDelay=1..}] BombDelay
 
 #> Functionality
 execute as @e[type=item_display,tag=BombTracker] at @s run function weapons:bomb/functionality
