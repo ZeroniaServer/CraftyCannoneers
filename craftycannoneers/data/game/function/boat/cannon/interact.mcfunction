@@ -19,6 +19,7 @@ execute if predicate cannons:holdgocb on vehicle run scoreboard players set @s[t
 execute if predicate cannons:holdcocb on vehicle run scoreboard players set @s[tag=!FireCannon] CannonID 10
 scoreboard players operation $temp playerUUID = @s playerUUID
 execute on vehicle run scoreboard players operation @s[scores={CannonID=1..},tag=!FireCannon] playerUUID = $temp playerUUID
+execute on vehicle if entity @s[scores={CannonID=1..},tag=!FireCannon] on passengers run function game:boat/cannon/swing
 execute unless predicate cannons:holdtcb_red unless predicate cannons:holdgp on vehicle if entity @s[scores={CannonID=1..},tag=!FireCannon] on passengers run scoreboard players set @s PowerM 0
 execute unless predicate cannons:holdtcb_red unless predicate cannons:holdgp on vehicle run tag @s[scores={CannonID=1..},tag=!FireCannon] add FireCannon
 execute if entity @s[team=Orange] unless predicate cannons:holdtcb_red unless predicate cannons:holdgp on vehicle run execute as @e[type=slime,tag=Spotted,tag=Weakpoint,tag=Orange,scores={spotting=80..}] run scoreboard players set @s spotting 80
