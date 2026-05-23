@@ -4,7 +4,7 @@
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
         "entity": {
-          "type": "#entityid:targets"
+          "entity_type": "#entityid:targets"
         }
       }
     },
@@ -18,7 +18,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type": "#entityid:targets"
+                "entity_type": "#entityid:targets"
               }
             }
           }

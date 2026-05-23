@@ -23,8 +23,12 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "attacker",
                 "predicate": {
-                  "type": "minecraft:cat",
-                  "nbt": "{Tags:[\"teamless\"]}"
+                  "entity_type": "minecraft:cat",
+                  "entity_tags": {
+                    "all_of": [
+                      "teamless"
+                    ]
+                  }
                 }
               }
             },
@@ -34,7 +38,7 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "attacker",
                 "predicate": {
-                  "type": "minecraft:drowned"
+                  "entity_type": "minecraft:drowned"
                 }
               }
             },
@@ -59,7 +63,11 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "nbt": "{Tags:[\"onboatregen\"]}"
+                  "entity_tags": {
+                    "all_of": [
+                      "onboatregen"
+                    ]
+                  }
                 }
               }
             },

@@ -4,11 +4,14 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "type_specific": {
-            "type": "player",
+          "type_specific/player": {
             "looking_at": {
-              "type": "minecraft:interaction",
-              "nbt": "{Tags:[\"cannon\"]}"
+              "entity_type": "minecraft:interaction",
+              "entity_tags": {
+                "all_of": [
+                  "cannon"
+                ]
+              }
             }
           }
         }

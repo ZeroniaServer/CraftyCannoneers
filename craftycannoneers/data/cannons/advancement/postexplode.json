@@ -4,8 +4,12 @@
         "trigger": "minecraft:player_hurt_entity",
         "conditions": {
           "entity": {
-            "type": "minecraft:bat",
-            "nbt": "{Tags:[\"postexplode\"]}"
+            "entity_type": "minecraft:bat",
+            "entity_tags": {
+              "all_of": [
+                "postexplode"
+              ]
+            }
           }
         }
       }

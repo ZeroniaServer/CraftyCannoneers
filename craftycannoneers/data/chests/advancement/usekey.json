@@ -7,7 +7,7 @@
           "items": [
             "minecraft:ender_eye"
           ],
-          "components": {
+          "predicates": {
             "custom_data": {
               "Key": true
             }

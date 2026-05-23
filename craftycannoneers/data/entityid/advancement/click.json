@@ -8,7 +8,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "#entityid:clickable"
+              "entity_type": "#entityid:clickable"
             }
           }
         ]
@@ -24,7 +24,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type": "#entityid:clickable"
+                "entity_type": "#entityid:clickable"
               }
             }
           }

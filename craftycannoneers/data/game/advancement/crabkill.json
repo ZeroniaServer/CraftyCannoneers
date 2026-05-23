@@ -11,8 +11,12 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "type": "minecraft:cat",
-                  "nbt": "{Tags:[\"CrabVehicle\"]}"
+                  "entity_type": "minecraft:cat",
+                  "entity_tags": {
+                    "all_of": [
+                      "CrabVehicle"
+                    ]
+                  }
                 }
               },
               {

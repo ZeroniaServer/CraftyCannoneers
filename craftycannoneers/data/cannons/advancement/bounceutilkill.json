@@ -4,8 +4,12 @@
       "trigger": "minecraft:entity_killed_player",
       "conditions": {
         "entity": {
-          "type": "minecraft:slime",
-          "nbt": "{Tags:[\"BounceSlime\"]}"
+          "entity_type": "minecraft:slime",
+          "entity_tags": {
+            "all_of": [
+              "BounceSlime"
+            ]
+          }
         }
       }
     }

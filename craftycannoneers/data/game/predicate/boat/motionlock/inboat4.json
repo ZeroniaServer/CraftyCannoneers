@@ -3,8 +3,12 @@
   "entity": "this",
   "predicate": {
     "vehicle": {
-      "type": "minecraft:interaction",
-      "nbt": "{Tags:[\"4\"]}"
+      "entity_type": "minecraft:interaction",
+      "entity_tags": {
+        "all_of": [
+          "4"
+        ]
+      }
     }
   }
 }

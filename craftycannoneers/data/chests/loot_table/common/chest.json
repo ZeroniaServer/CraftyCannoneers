@@ -13,7 +13,11 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "nbt": "{Tags:[\"lowerteam\"]}"
+                  "entity_tags": {
+                    "all_of": [
+                      "lowerteam"
+                    ]
+                  }
                 }
               }
             }
@@ -30,7 +34,11 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "nbt": "{Tags:[\"lowerteam\"]}"
+                  "entity_tags": {
+                    "all_of": [
+                      "lowerteam"
+                    ]
+                  }
                 }
               }
             }
@@ -45,7 +53,11 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "nbt": "{Tags:[\"lowerteam\"]}"
+                "entity_tags": {
+                    "all_of": [
+                      "lowerteam"
+                    ]
+                  }
               }
             }
           ],
@@ -59,7 +71,11 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "nbt": "{Tags:[\"lowerteam\"]}"
+                "entity_tags": {
+                    "all_of": [
+                      "lowerteam"
+                    ]
+                  }
               }
             }
           ],
@@ -75,7 +91,11 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "nbt": "{Tags:[\"fakechest\"]}"
+                "entity_tags": {
+                  "all_of": [
+                    "fakechest"
+                  ]
+                }
               }
             }
           ]
@@ -91,7 +111,11 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "nbt": "{Tags:[\"fakechest\"]}"
+                "entity_tags": {
+                  "all_of": [
+                    "fakechest"
+                  ]
+                }
               }
             }
           ]

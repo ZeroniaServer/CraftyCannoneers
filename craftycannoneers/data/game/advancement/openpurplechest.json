@@ -4,8 +4,12 @@
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:chest_minecart",
-          "nbt": "{Tags:[\"purpleteamchest\"]}"
+          "entity_type": "minecraft:chest_minecart",
+          "entity_tags": {
+            "all_of": [
+              "purpleteamchest"
+            ]
+          }
         }
       }
     }

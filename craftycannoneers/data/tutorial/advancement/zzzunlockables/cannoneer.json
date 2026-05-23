@@ -26,7 +26,11 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "nbt": "{Tags:[\"UsedCB\"]}"
+          "entity_tags": {
+            "all_of": [
+              "UsedCB"
+            ]
+          }
         }
       }
     },
@@ -34,7 +38,11 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "nbt": "{Tags:[\"UsedFB\"]}"
+          "entity_tags": {
+            "all_of": [
+              "UsedFB"
+            ]
+          }
         }
       }
     },
@@ -42,7 +50,11 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "nbt": "{Tags:[\"UsedCBC\"]}"
+          "entity_tags": {
+            "all_of": [
+              "UsedCBC"
+            ]
+          }
         }
       }
     },
@@ -50,7 +62,11 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "nbt": "{Tags:[\"UsedGCB\"]}"
+          "entity_tags": {
+            "all_of": [
+              "UsedGCB"
+            ]
+          }
         }
       }
     },
@@ -58,7 +74,11 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "nbt": "{Tags:[\"UsedCCB\"]}"
+          "entity_tags": {
+            "all_of": [
+              "UsedCCB"
+            ]
+          }
         }
       }
     },
@@ -66,7 +86,11 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "nbt": "{Tags:[\"UsedBCB\"]}"
+          "entity_tags": {
+            "all_of": [
+              "UsedBCB"
+            ]
+          }
         }
       }
     },
@@ -74,7 +98,11 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "nbt": "{Tags:[\"UsedPCB\"]}"
+          "entity_tags": {
+            "all_of": [
+              "UsedPCB"
+            ]
+          }
         }
       }
     },
@@ -82,7 +110,11 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "nbt": "{Tags:[\"UsedTCB\"]}"
+          "entity_tags": {
+            "all_of": [
+              "UsedTCB"
+            ]
+          }
         }
       }
     },
@@ -90,7 +122,11 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "nbt": "{Tags:[\"UsedGOCB\"]}"
+          "entity_tags": {
+            "all_of": [
+              "UsedGOCB"
+            ]
+          }
         }
       }
     },
@@ -98,7 +134,11 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "nbt": "{Tags:[\"UsedCOCB\"]}"
+          "entity_tags": {
+            "all_of": [
+              "UsedCOCB"
+            ]
+          }
         }
       }
     }

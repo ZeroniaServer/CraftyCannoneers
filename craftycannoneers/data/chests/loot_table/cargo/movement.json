@@ -22,7 +22,11 @@
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"CargoHopperFake\"]}"
+                    "entity_tags": {
+                      "all_of": [
+                        "CargoHopperFake"
+                      ]
+                    }
                   }
                 }
               ]

@@ -9,11 +9,15 @@
           ]
         },
         "player": {
-          "type_specific": {
-            "type": "player",
+          "type_specific/player": {
             "looking_at": {
-              "type": "minecraft:slime",
-              "nbt": "{Tags:[\"FakeWeakpoint\",\"S7\"]}"
+              "entity_type": "minecraft:slime",
+              "entity_tags": {
+                "all_of": [
+                  "FakeWeakpoint",
+                  "S7"
+                ]
+              }
             }
           }
         }

@@ -4,8 +4,12 @@
       "trigger": "minecraft:entity_killed_player",
       "conditions": {
         "entity": {
-          "type": "minecraft:creeper",
-          "nbt": "{Tags:[\"CannonballCreeper\"]}"
+          "entity_type": "minecraft:creeper",
+          "entity_tags": {
+            "all_of": [
+              "CannonballCreeper"
+            ]
+          }
         }
       }
     }

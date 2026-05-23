@@ -127,7 +127,7 @@ $loot $(function) loot \
                             "condition": "minecraft:entity_properties",\
                             "entity": "this",\
                             "predicate": {\
-                                "type": "minecraft:player",\
+                                "entity_type": "minecraft:player",\
                                 "team": "Lobby"\
                             }\
                         }\
@@ -168,7 +168,7 @@ $loot $(function) loot \
                                 "condition": "minecraft:entity_properties",\
                                 "entity": "this",\
                                 "predicate": {\
-                                    "type": "minecraft:player",\
+                                    "entity_type": "minecraft:player",\
                                     "team": "Lobby"\
                                 }\
                             }\
@@ -192,7 +192,11 @@ $loot $(function) loot \
                     "condition": "minecraft:entity_properties",\
                     "entity": "this",\
                     "predicate": {\
-                        "nbt": "{Tags:[\"Empty\"]}"\
+                        "entity_tags": {\
+                            "all_of": [\
+                            "Empty"\
+                            ]\
+                        }\
                     }\
                 }\
             ]\
@@ -212,7 +216,11 @@ $loot $(function) loot \
                         "condition": "minecraft:entity_properties",\
                         "entity": "this",\
                         "predicate": {\
-                            "nbt": "{Tags:[\"Empty\"]}"\
+                            "entity_tags": {\
+                                "all_of": [\
+                                "Empty"\
+                                ]\
+                            }\
                         }\
                     }\
                 }\
@@ -238,7 +246,11 @@ $loot $(function) loot \
                     "condition": "minecraft:entity_properties",\
                     "entity": "this",\
                     "predicate": {\
-                        "nbt": "{Tags:[\"Empty\"]}"\
+                        "entity_tags": {\
+                            "all_of": [\
+                            "Empty"\
+                            ]\
+                        }\
                     }\
                 }\
             ]\
@@ -264,7 +276,11 @@ $loot $(function) loot \
                         "condition": "minecraft:entity_properties",\
                         "entity": "this",\
                         "predicate": {\
-                            "nbt": "{Tags:[\"Empty\"]}"\
+                            "entity_tags": {\
+                                "all_of": [\
+                                "Empty"\
+                                ]\
+                            }\
                         }\
                     }\
                 }\

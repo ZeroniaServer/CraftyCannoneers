@@ -4,7 +4,11 @@
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "player": {
-                    "nbt": "{Tags:[\"replacetracer\"]}"
+                    "entity_tags": {
+                        "all_of": [
+                            "replacetracer"
+                        ]
+                    }
                 },
                 "items": [
                     {
