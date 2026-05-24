@@ -10,3 +10,4 @@ Datapack for Crafty Cannoneers. Made by Zeronia.
 - [vdvman1's Raycasting Customizer](https://skylinerw.com/vdvman1/raycast/)
 - [Aeldrion's AESTD Tag Library](https://github.com/Aeldrion/AESTD-tag-library)
 - [Aeldrion's Iris Raycasting Library](https://github.com/Aeldrion/iris)
+- [Animated Java](https://animated-java.dev/)
