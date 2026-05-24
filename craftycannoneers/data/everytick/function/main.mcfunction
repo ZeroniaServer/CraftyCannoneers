@@ -49,6 +49,8 @@ execute if score $load CmdData matches 10.. unless score $updating CmdData match
 execute if score $load CmdData matches 10.. unless score $updating CmdData matches 1 if score $gamestate CmdData matches -1 if entity @a[team=Lobby,tag=!inParkour,predicate=!game:tutorialbounds] run function lobby:customizer/controller
 
 #> Easter Eggs
+function animated_java:global/on_tick
+
 execute if score $load CmdData matches 40.. run function lobby:easteregg/loop
 
 #> Training Island
