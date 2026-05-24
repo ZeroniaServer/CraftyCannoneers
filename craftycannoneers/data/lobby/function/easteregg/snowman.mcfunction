@@ -2,10 +2,10 @@ scoreboard players add @s CmdData 1
 execute at @s[scores={CmdData=1}] run function animated_java:snowman/animations/spawn/set_frame {frame:20}
 execute at @s[scores={CmdData=..10}] run playsound snowmandig master @a ~ ~ ~ 0.6 1
 execute at @s[scores={CmdData=..10}] run particle block{block_state:"sand"} ~ ~0.5 ~ 0.2 1 0.2 0.1 4
-execute at @s[scores={CmdData=25}] run particle block{block_state:"snow_block"} ~ ~1 ~ 0.2 0.5 0.5 1 80
-execute at @s[scores={CmdData=25}] run particle block{block_state:"packed_ice"} ~ ~1 ~ 0.2 0.5 0.5 1 80
-execute at @s[scores={CmdData=25}] run playsound snowmanemerge master @a ~ ~ ~ 1 0
-execute at @s[scores={CmdData=25}] run playsound snowmanemerge master @a ~ ~ ~ 1 1
+execute at @s[scores={CmdData=25}] run particle block{block_state:"sand"} ~ ~1 ~ 0.2 0.5 0.5 1 80
+execute at @s[scores={CmdData=25}] run particle block{block_state:"red_sand"} ~ ~1 ~ 0.2 0.5 0.5 1 80
+execute at @s[scores={CmdData=25}] run playsound snowmanemerge master @a ~ ~ ~ 0.5 0
+execute at @s[scores={CmdData=25}] run playsound snowmanemerge2 master @a ~ ~ ~ 1 1
 execute at @s[scores={CmdData=25}] run function animated_java:snowman/variants/default/apply
 execute at @s[scores={CmdData=38}] run function animated_java:snowman/animations/idle_sway/play
 execute at @s[scores={CmdData=45}] run summon area_effect_cloud ~ ~1.5 ~ {Tags:["EasterEgg","SnowmanText"],Duration:30,CustomNameVisible:1b,CustomName:{translate:"easter_egg.snowman.1"},WaitTime:0,Radius:0f,custom_particle:{type:"block",block_state:"minecraft:air"}}
