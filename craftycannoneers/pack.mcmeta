@@ -12,8 +12,8 @@
         ]
     },
     "pack": {
-        "min_format": 106,
-        "max_format": 106,
+        "min_format": 107,
+        "max_format": 107,
         "description": "v1.1.14 Made by Zeronia"
     }
 }
