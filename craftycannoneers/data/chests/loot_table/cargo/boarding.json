@@ -16,16 +16,15 @@
         {
           "type": "minecraft:loot_table",
           "weight": 3,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 4,
-                "max": 6
-              }
+          "value": "weapons:gunpowder",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 4,
+              "max": 6
             }
-          ],
-          "value": "weapons:gunpowder"
+          }
         },
         {
           "type": "minecraft:loot_table",

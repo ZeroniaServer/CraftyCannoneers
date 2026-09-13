@@ -1,5 +1,4 @@
 {
-  "description": "Any non-solid blocks used in ships",
   "values": [
     "#minecraft:trapdoors",
     "#minecraft:slabs",

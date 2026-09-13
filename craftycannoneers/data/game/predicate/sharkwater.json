@@ -1,12 +1,9 @@
 {
-    "condition": "minecraft:any_of",
+    "type": "minecraft:any_of",
     "terms": [
+        "game:inwater",
         {
-            "condition": "minecraft:reference",
-            "name": "game:inwater"
-        },
-        {
-            "condition": "minecraft:entity_properties",
+            "type": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
                 "movement_affected_by": {

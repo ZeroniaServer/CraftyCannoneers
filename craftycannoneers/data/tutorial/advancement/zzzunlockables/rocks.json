@@ -20,801 +20,701 @@
     "1": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 1
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 1
             }
           }
-        ]
+        }
       }
     },
     "2": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 2
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 2
             }
           }
-        ]
+        }
       }
     },
     "3": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 3
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 3
             }
           }
-        ]
+        }
       }
     },
     "4": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 4
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 4
             }
           }
-        ]
+        }
       }
     },
     "5": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 5
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 5
             }
           }
-        ]
+        }
       }
     },
     "6": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 6
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 6
             }
           }
-        ]
+        }
       }
     },
     "7": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 7
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 7
             }
           }
-        ]
+        }
       }
     },
     "8": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 8
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 8
             }
           }
-        ]
+        }
       }
     },
     "9": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 9
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 9
             }
           }
-        ]
+        }
       }
     },
     "10": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 10
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 10
             }
           }
-        ]
+        }
       }
     },
     "11": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 11
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 11
             }
           }
-        ]
+        }
       }
     },
     "12": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 12
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 12
             }
           }
-        ]
+        }
       }
     },
     "13": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 13
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 13
             }
           }
-        ]
+        }
       }
     },
     "14": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 14
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 14
             }
           }
-        ]
+        }
       }
     },
     "15": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 15
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 15
             }
           }
-        ]
+        }
       }
     },
     "16": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 16
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 16
             }
           }
-        ]
+        }
       }
     },
     "17": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 17
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 17
             }
           }
-        ]
+        }
       }
     },
     "18": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 18
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 18
             }
           }
-        ]
+        }
       }
     },
     "19": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 19
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 19
             }
           }
-        ]
+        }
       }
     },
     "20": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 20
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 20
             }
           }
-        ]
+        }
       }
     },
     "21": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 21
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 21
             }
           }
-        ]
+        }
       }
     },
     "22": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 22
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 22
             }
           }
-        ]
+        }
       }
     },
     "23": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 23
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 23
             }
           }
-        ]
+        }
       }
     },
     "24": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 24
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 24
             }
           }
-        ]
+        }
       }
     },
     "25": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 25
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 25
             }
           }
-        ]
+        }
       }
     },
     "26": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 26
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 26
             }
           }
-        ]
+        }
       }
     },
     "27": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 27
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 27
             }
           }
-        ]
+        }
       }
     },
     "28": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 28
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 28
             }
           }
-        ]
+        }
       }
     },
     "29": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 29
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 29
             }
           }
-        ]
+        }
       }
     },
     "30": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 30
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 30
             }
           }
-        ]
+        }
       }
     },
     "31": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 31
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 31
             }
           }
-        ]
+        }
       }
     },
     "32": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 32
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 32
             }
           }
-        ]
+        }
       }
     },
     "33": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 33
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 33
             }
           }
-        ]
+        }
       }
     },
     "34": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 34
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 34
             }
           }
-        ]
+        }
       }
     },
     "35": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 35
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 35
             }
           }
-        ]
+        }
       }
     },
     "36": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 36
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 36
             }
           }
-        ]
+        }
       }
     },
     "37": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 37
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 37
             }
           }
-        ]
+        }
       }
     },
     "38": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 38
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 38
             }
           }
-        ]
+        }
       }
     },
     "39": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 39
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 39
             }
           }
-        ]
+        }
       }
     },
     "40": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 40
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 40
             }
           }
-        ]
+        }
       }
     },
     "41": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 41
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 41
             }
           }
-        ]
+        }
       }
     },
     "42": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 42
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 42
             }
           }
-        ]
+        }
       }
     },
     "43": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 43
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 43
             }
           }
-        ]
+        }
       }
     },
     "44": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 44
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 44
             }
           }
-        ]
+        }
       }
     },
     "45": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 45
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 45
             }
           }
-        ]
+        }
       }
     },
     "46": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 46
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 46
             }
           }
-        ]
+        }
       }
     },
     "47": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 47
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 47
             }
           }
-        ]
+        }
       }
     },
     "48": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 48
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 48
             }
           }
-        ]
+        }
       }
     },
     "49": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 49
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 49
             }
           }
-        ]
+        }
       }
     },
     "50": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "loverocks": {
-                "min": 50
-              }
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "loverocks": {
+              "min": 50
             }
           }
-        ]
+        }
       }
     }
   },

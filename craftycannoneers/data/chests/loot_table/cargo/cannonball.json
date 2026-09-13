@@ -36,13 +36,11 @@
         {
           "type": "minecraft:loot_table",
           "weight": 10,
-          "conditions": [
-            {
-              "condition": "minecraft:weather_check",
-              "raining": true
-            }
-          ],
-          "value": "cannons:copper"
+          "value": "cannons:copper",
+          "condition": {
+            "type": "minecraft:weather_check",
+            "raining": true
+          }
         },
         {
           "type": "minecraft:loot_table",
@@ -50,15 +48,14 @@
           "value": "cannons:golden"
         }
       ],
-      "functions": [
-        {
-          "function": "minecraft:set_count",
-          "count": {
-            "min": 1,
-            "max": 1
-          }
+      "modifier": {
+        "type": "minecraft:set_count",
+        "count": {
+          "type": "minecraft:uniform",
+          "min": 1,
+          "max": 1
         }
-      ]
+      }
     }
   ]
 }

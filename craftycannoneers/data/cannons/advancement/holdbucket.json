@@ -4,11 +4,15 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "player": {
-          "equipment": {
-            "mainhand": {
-              "items": [
-                "minecraft:bucket"
-              ]
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": [
+                  "minecraft:bucket"
+                ]
+              }
             }
           }
         }

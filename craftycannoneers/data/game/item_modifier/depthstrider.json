@@ -1,9 +1,7 @@
-[
-  {
-    "function": "minecraft:set_enchantments",
-    "enchantments": {
-      "minecraft:depth_strider": 3
-    },
-    "add": false
-  }
-]
+{
+  "type": "minecraft:set_enchantments",
+  "enchantments": {
+    "minecraft:depth_strider": 3
+  },
+  "add": false
+}

@@ -3,32 +3,30 @@
     "requirement": {
       "trigger": "minecraft:any_block_use",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "position": {
-                "x": {
-                  "min": -53,
-                  "max": -52
-                },
-                "y": {
-                  "min": -25,
-                  "max": -24
-                },
-                "z": {
-                  "min": -10,
-                  "max": -9
-                }
+        "location": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "position": {
+              "x": {
+                "min": -53,
+                "max": -52
               },
-              "block": {
-                "blocks": [
-                  "minecraft:stone_button"
-                ]
+              "y": {
+                "min": -25,
+                "max": -24
+              },
+              "z": {
+                "min": -10,
+                "max": -9
               }
+            },
+            "block": {
+              "blocks": [
+                "minecraft:stone_button"
+              ]
             }
           }
-        ]
+        }
       }
     }
   },

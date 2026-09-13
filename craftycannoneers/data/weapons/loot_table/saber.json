@@ -8,12 +8,18 @@
           "name": "minecraft:diamond_sword"
         }
       ],
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:set_components",
+          "type": "minecraft:set_components",
           "components": {
             "minecraft:unbreakable": {},
-            "minecraft:custom_name": [{"translate":"item.saber","italic":false,"color":"dark_aqua"}],
+            "minecraft:custom_name": [
+              {
+                "translate": "item.saber",
+                "italic": false,
+                "color": "dark_aqua"
+              }
+            ],
             "minecraft:tooltip_display": {
               "hidden_components": [
                 "minecraft:unbreakable"
@@ -22,17 +28,15 @@
           }
         },
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
-          "conditions": [
-            {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "team": "Lobby"
-              }
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "team": "Lobby"
             }
-          ]
+          }
         }
       ]
     }

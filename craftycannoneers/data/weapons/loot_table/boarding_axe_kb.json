@@ -8,19 +8,37 @@
           "name": "minecraft:stone_axe"
         }
       ],
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
           "tag": "{Knockback:1}"
         },
         {
-          "function": "minecraft:set_components",
+          "type": "minecraft:set_components",
           "components": {
             "minecraft:unbreakable": {},
-            "minecraft:custom_name": [{"translate":"item.boarding_axe","italic":false,"color":"green"}],
+            "minecraft:custom_name": [
+              {
+                "translate": "item.boarding_axe",
+                "italic": false,
+                "color": "green"
+              }
+            ],
             "minecraft:lore": [
-              [{"translate":"item.boarding_axe.lore.1","italic":false,"color":"white"}],
-              [{"translate":"item.boarding_axe.lore.2","italic":false,"color":"white"}]
+              [
+                {
+                  "translate": "item.boarding_axe.lore.1",
+                  "italic": false,
+                  "color": "white"
+                }
+              ],
+              [
+                {
+                  "translate": "item.boarding_axe.lore.2",
+                  "italic": false,
+                  "color": "white"
+                }
+              ]
             ],
             "minecraft:tooltip_display": {
               "hidden_components": [
@@ -30,23 +48,21 @@
           }
         },
         {
-          "function": "minecraft:set_enchantments",
+          "type": "minecraft:set_enchantments",
           "enchantments": {
             "minecraft:knockback": 1
           }
         },
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
-          "conditions": [
-            {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "team": "Lobby"
-              }
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "team": "Lobby"
             }
-          ]
+          }
         }
       ]
     }

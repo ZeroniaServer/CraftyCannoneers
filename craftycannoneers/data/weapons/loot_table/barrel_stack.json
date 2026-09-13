@@ -5,13 +5,11 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 64
-            }
-          ],
-          "value": "weapons:barrel"
+          "value": "weapons:barrel",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": 64
+          }
         }
       ]
     }

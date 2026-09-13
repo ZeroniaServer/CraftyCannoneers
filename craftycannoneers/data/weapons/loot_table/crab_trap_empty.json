@@ -8,21 +8,39 @@
           "name": "minecraft:mooshroom_spawn_egg"
         }
       ],
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
           "tag": "{Empty:1b,CrabTrap:1b}"
         },
         {
-          "function": "minecraft:set_components",
+          "type": "minecraft:set_components",
           "components": {
             "minecraft:custom_model_data": {
-              "floats": [15]
+              "floats": [
+                15
+              ]
             },
-            "minecraft:custom_name": {"translate":"item.crab_trap.empty","italic":false,"color":"dark_aqua"},
+            "minecraft:custom_name": {
+              "translate": "item.crab_trap.empty",
+              "italic": false,
+              "color": "dark_aqua"
+            },
             "minecraft:lore": [
-              [{"translate":"item.crab_trap.lore.1","italic":false,"color":"white"}],
-              [{"translate":"item.crab_trap.lore.2","italic":false,"color":"white"}]
+              [
+                {
+                  "translate": "item.crab_trap.lore.1",
+                  "italic": false,
+                  "color": "white"
+                }
+              ],
+              [
+                {
+                  "translate": "item.crab_trap.lore.2",
+                  "italic": false,
+                  "color": "white"
+                }
+              ]
             ],
             "minecraft:entity_data": {
               "id": "minecraft:marker",
@@ -38,7 +56,7 @@
           }
         },
         {
-          "function": "minecraft:set_components",
+          "type": "minecraft:set_components",
           "components": {
             "minecraft:can_place_on": {
               "predicates": {}
@@ -49,48 +67,42 @@
               ]
             }
           },
-          "conditions": [
-            {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "entity_type": "minecraft:player",
-                  "team": "Lobby"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_custom_data",
-          "tag": "{NoDrop:1b}",
-          "conditions": [
-            {
-              "condition": "minecraft:entity_properties",
+          "condition": {
+            "type": "minecraft:inverted",
+            "term": {
+              "type": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
+                "entity_type": "minecraft:player",
                 "team": "Lobby"
               }
             }
-          ]
+          }
         },
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
+          "tag": "{NoDrop:1b}",
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "team": "Lobby"
+            }
+          }
+        },
+        {
+          "type": "minecraft:set_custom_data",
           "tag": "{Blank:1b}",
-          "conditions": [
-            {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:entity_scores",
-                "entity": "this",
-                "scores": {
-                  "spawnPlaceable": 0
-                }
+          "condition": {
+            "type": "minecraft:inverted",
+            "term": {
+              "type": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "spawnPlaceable": 0
               }
             }
-          ]
+          }
         }
       ]
     }

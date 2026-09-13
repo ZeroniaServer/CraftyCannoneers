@@ -7,16 +7,14 @@
         {
           "type": "minecraft:loot_table",
           "value": "weapons:gold",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 12,
-                "max": 20
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 12,
+              "max": 20
             }
-          ]
+          }
         }
       ]
     }

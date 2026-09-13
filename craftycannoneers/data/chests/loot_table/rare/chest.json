@@ -6,119 +6,107 @@
         {
           "type": "minecraft:loot_table",
           "weight": 60,
-          "conditions": [
-            {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "entity_tags": {
-                    "all_of": [
-                      "lowerteam"
-                    ]
-                  }
+          "value": "chests:rare/normal/resources",
+          "condition": {
+            "type": "minecraft:inverted",
+            "term": {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "entity_tags": {
+                  "all_of": [
+                    "lowerteam"
+                  ]
                 }
               }
             }
-          ],
-          "value": "chests:rare/normal/resources"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 40,
-          "conditions": [
-            {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "entity_tags": {
-                    "all_of": [
-                      "lowerteam"
-                    ]
-                  }
+          "value": "chests:rare/normal/other",
+          "condition": {
+            "type": "minecraft:inverted",
+            "term": {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "entity_tags": {
+                  "all_of": [
+                    "lowerteam"
+                  ]
                 }
               }
             }
-          ],
-          "value": "chests:rare/normal/other"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 60,
-          "conditions": [
-            {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "entity_tags": {
-                    "all_of": [
-                      "lowerteam"
-                    ]
-                  }
+          "value": "chests:rare/better/resources",
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "entity_tags": {
+                "all_of": [
+                  "lowerteam"
+                ]
               }
             }
-          ],
-          "value": "chests:rare/better/resources"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 40,
-          "conditions": [
-            {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "entity_tags": {
-                    "all_of": [
-                      "lowerteam"
-                    ]
-                  }
+          "value": "chests:rare/better/other",
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "entity_tags": {
+                "all_of": [
+                  "lowerteam"
+                ]
               }
             }
-          ],
-          "value": "chests:rare/better/other"
+          }
         }
       ],
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
-          "conditions": [
-            {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "entity_tags": {
-                  "all_of": [
-                    "fakechest"
-                  ]
-                }
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "entity_tags": {
+                "all_of": [
+                  "fakechest"
+                ]
               }
             }
-          ]
+          }
         },
         {
-          "function": "minecraft:set_components",
+          "type": "minecraft:set_components",
           "components": {
             "!minecraft:can_place_on": {},
             "!minecraft:can_break": {}
           },
-          "conditions": [
-            {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "entity_tags": {
-                  "all_of": [
-                    "fakechest"
-                  ]
-                }
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "entity_tags": {
+                "all_of": [
+                  "fakechest"
+                ]
               }
             }
-          ]
+          }
         }
       ]
     }

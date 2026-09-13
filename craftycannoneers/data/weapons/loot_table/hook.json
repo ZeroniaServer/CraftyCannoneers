@@ -8,9 +8,9 @@
           "name": "minecraft:iron_hoe"
         }
       ],
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:set_components",
+          "type": "minecraft:set_components",
           "components": {
             "minecraft:max_damage": 50,
             "minecraft:attribute_modifiers": [
@@ -29,21 +29,25 @@
                 "operation": "add_value"
               }
             ],
-            "minecraft:custom_name": [{"translate":"item.hook","italic":false,"color":"dark_aqua"}]
+            "minecraft:custom_name": [
+              {
+                "translate": "item.hook",
+                "italic": false,
+                "color": "dark_aqua"
+              }
+            ]
           }
         },
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
-          "conditions": [
-            {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "team": "Lobby"
-              }
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "team": "Lobby"
             }
-          ]
+          }
         }
       ]
     }

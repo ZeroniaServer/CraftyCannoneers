@@ -3,31 +3,27 @@
     "requirement": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "team": "Lobby"
-              }
-            }
-          }
-        ],
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
+        "player": {
+          "type": "minecraft:inverted",
+          "term": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
-              "items": [
-                "minecraft:mooshroom_spawn_egg"
-              ],
-              "predicates": {
-                "minecraft:custom_data": "{Barrel:1b}"
-              }
+              "team": "Lobby"
             }
           }
-        ]
+        },
+        "location": {
+          "type": "minecraft:match_tool",
+          "predicate": {
+            "items": [
+              "minecraft:mooshroom_spawn_egg"
+            ],
+            "predicates": {
+              "minecraft:custom_data": "{Barrel:1b}"
+            }
+          }
+        }
       }
     }
   },

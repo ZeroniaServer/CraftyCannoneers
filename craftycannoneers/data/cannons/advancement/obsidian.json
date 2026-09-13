@@ -3,13 +3,11 @@
     "requirement": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:block_state_property",
-            "block": "minecraft:obsidian",
-            "properties": {}
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "minecraft:obsidian",
+          "state": {}
+        }
       }
     }
   },

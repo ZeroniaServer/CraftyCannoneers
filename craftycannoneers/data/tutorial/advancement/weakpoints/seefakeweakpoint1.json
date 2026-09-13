@@ -9,14 +9,18 @@
           ]
         },
         "player": {
-          "type_specific/player": {
-            "looking_at": {
-              "entity_type": "minecraft:slime",
-              "entity_tags": {
-                "all_of": [
-                  "FakeWeakpoint",
-                  "S1"
-                ]
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "type_specific/player": {
+              "looking_at": {
+                "entity_type": "minecraft:slime",
+                "entity_tags": {
+                  "all_of": [
+                    "FakeWeakpoint",
+                    "S1"
+                  ]
+                }
               }
             }
           }

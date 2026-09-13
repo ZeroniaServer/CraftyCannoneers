@@ -1,21 +1,24 @@
-[
-  {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-      "stepping_on": {
-        "block": {
-          "blocks": "#game:shipblocks"
+{
+  "type": "minecraft:all_of",
+  "terms": [
+    {
+      "type": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "stepping_on": {
+          "block": {
+            "blocks": "#game:shipblocks"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:location_check",
+      "predicate": {
+        "position": {
+          "y": -36
         }
       }
     }
-  },
-  {
-    "condition": "minecraft:location_check",
-    "predicate": {
-      "position": {
-        "y": -36
-      }
-    }
-  }
-]
+  ]
+}

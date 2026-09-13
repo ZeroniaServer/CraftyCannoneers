@@ -3,13 +3,11 @@
     "requirement": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:weather_check",
-            "raining": true,
-            "thundering": true
-          }
-        ]
+        "player": {
+          "type": "minecraft:weather_check",
+          "raining": true,
+          "thundering": true
+        }
       }
     }
   },

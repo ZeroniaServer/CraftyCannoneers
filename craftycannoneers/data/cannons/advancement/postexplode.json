@@ -1,21 +1,24 @@
 {
     "criteria": {
-      "requirement": {
-        "trigger": "minecraft:player_hurt_entity",
-        "conditions": {
-          "entity": {
-            "entity_type": "minecraft:bat",
-            "entity_tags": {
-              "all_of": [
-                "postexplode"
-              ]
+        "requirement": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "entity_type": "minecraft:bat",
+                        "entity_tags": {
+                            "all_of": [
+                                "postexplode"
+                            ]
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     },
     "rewards": {
-      "function": "cannons:postexplodereward"
+        "function": "cannons:postexplodereward"
     }
-  }
-  
+}

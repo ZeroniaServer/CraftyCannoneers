@@ -10,17 +10,15 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 8,
-                "max": 13
-              }
+          "value": "weapons:gunpowder",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 8,
+              "max": 13
             }
-          ],
-          "value": "weapons:gunpowder"
+          }
         }
       ]
     },
@@ -33,17 +31,15 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 9,
-                "max": 13
-              }
+          "value": "weapons:gold",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 9,
+              "max": 13
             }
-          ],
-          "value": "weapons:gold"
+          }
         }
       ]
     },
@@ -56,17 +52,15 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 0,
-                "max": 2
-              }
+          "value": "weapons:golden_apple",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 0,
+              "max": 2
             }
-          ],
-          "value": "weapons:golden_apple"
+          }
         }
       ]
     },
@@ -79,17 +73,15 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 7,
-                "max": 10
-              }
+          "value": "weapons:arrow",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 7,
+              "max": 10
             }
-          ],
-          "value": "weapons:arrow"
+          }
         }
       ]
     },
@@ -102,17 +94,15 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "cannons:golden",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "cannons:golden"
+          }
         }
       ]
     }

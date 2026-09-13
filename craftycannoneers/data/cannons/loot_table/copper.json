@@ -8,24 +8,54 @@
           "name": "minecraft:diamond_hoe"
         }
       ],
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
           "tag": "{Cannonball:10b}"
         },
         {
-          "function": "minecraft:set_components",
+          "type": "minecraft:set_components",
           "components": {
             "minecraft:custom_model_data": {
-              "floats": [109]
+              "floats": [
+                109
+              ]
             },
             "minecraft:unbreakable": {},
-            "minecraft:custom_name": [{"translate":"cannonball.copper","italic":false,"color":"dark_aqua"}],
+            "minecraft:custom_name": [
+              {
+                "translate": "cannonball.copper",
+                "italic": false,
+                "color": "dark_aqua"
+              }
+            ],
             "minecraft:lore": [
-              [{"translate":"item.modifier_exclusive","italic":true,"color":"light_purple"}],
-              [{"text":""}],
-              [{"translate":"cannonball.copper.lore.1","italic":false,"color":"white"}],
-              [{"translate":"cannonball.copper.lore.2","italic":false,"color":"white"}]
+              [
+                {
+                  "translate": "item.modifier_exclusive",
+                  "italic": true,
+                  "color": "light_purple"
+                }
+              ],
+              [
+                {
+                  "text": ""
+                }
+              ],
+              [
+                {
+                  "translate": "cannonball.copper.lore.1",
+                  "italic": false,
+                  "color": "white"
+                }
+              ],
+              [
+                {
+                  "translate": "cannonball.copper.lore.2",
+                  "italic": false,
+                  "color": "white"
+                }
+              ]
             ],
             "minecraft:tooltip_display": {
               "hidden_components": [
@@ -36,17 +66,15 @@
           }
         },
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
-          "conditions": [
-            {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "team": "Lobby"
-              }
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "team": "Lobby"
             }
-          ]
+          }
         }
       ]
     }

@@ -12,7 +12,9 @@
       "id": "minecraft:diamond_hoe",
       "components": {
         "minecraft:custom_model_data": {
-          "floats": [29]
+          "floats": [
+            29
+          ]
         }
       }
     },
@@ -26,10 +28,14 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "entity_tags": {
-            "all_of": [
-              "UsedCB"
-            ]
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "entity_tags": {
+              "all_of": [
+                "UsedCB"
+              ]
+            }
           }
         }
       }
@@ -38,10 +44,14 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "entity_tags": {
-            "all_of": [
-              "UsedFB"
-            ]
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "entity_tags": {
+              "all_of": [
+                "UsedFB"
+              ]
+            }
           }
         }
       }
@@ -50,10 +60,14 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "entity_tags": {
-            "all_of": [
-              "UsedCBC"
-            ]
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "entity_tags": {
+              "all_of": [
+                "UsedCBC"
+              ]
+            }
           }
         }
       }
@@ -62,10 +76,14 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "entity_tags": {
-            "all_of": [
-              "UsedGCB"
-            ]
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "entity_tags": {
+              "all_of": [
+                "UsedGCB"
+              ]
+            }
           }
         }
       }
@@ -74,10 +92,14 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "entity_tags": {
-            "all_of": [
-              "UsedCCB"
-            ]
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "entity_tags": {
+              "all_of": [
+                "UsedCCB"
+              ]
+            }
           }
         }
       }
@@ -86,10 +108,14 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "entity_tags": {
-            "all_of": [
-              "UsedBCB"
-            ]
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "entity_tags": {
+              "all_of": [
+                "UsedBCB"
+              ]
+            }
           }
         }
       }
@@ -98,10 +124,14 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "entity_tags": {
-            "all_of": [
-              "UsedPCB"
-            ]
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "entity_tags": {
+              "all_of": [
+                "UsedPCB"
+              ]
+            }
           }
         }
       }
@@ -110,10 +140,14 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "entity_tags": {
-            "all_of": [
-              "UsedTCB"
-            ]
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "entity_tags": {
+              "all_of": [
+                "UsedTCB"
+              ]
+            }
           }
         }
       }
@@ -122,10 +156,14 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "entity_tags": {
-            "all_of": [
-              "UsedGOCB"
-            ]
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "entity_tags": {
+              "all_of": [
+                "UsedGOCB"
+              ]
+            }
           }
         }
       }
@@ -134,10 +172,14 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "entity_tags": {
-            "all_of": [
-              "UsedCOCB"
-            ]
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "entity_tags": {
+              "all_of": [
+                "UsedCOCB"
+              ]
+            }
           }
         }
       }

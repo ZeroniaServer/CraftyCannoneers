@@ -9,13 +9,13 @@
           "value": "chests:locked_treasure"
         }
       ],
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}"
         },
         {
-          "function": "minecraft:set_components",
+          "type": "minecraft:set_components",
           "components": {
             "!minecraft:can_break": {},
             "!minecraft:can_place_on": {}

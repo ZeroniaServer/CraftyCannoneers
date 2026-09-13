@@ -11,28 +11,24 @@
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_components",
-              "components": {
-                "minecraft:damage": 250
-              },
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "entity_tags": {
-                      "all_of": [
-                        "CargoHopperFake"
-                      ]
-                    }
-                  }
+          "value": "weapons:harpoon",
+          "modifier": {
+            "type": "minecraft:set_components",
+            "components": {
+              "minecraft:damage": 250
+            },
+            "condition": {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "entity_tags": {
+                  "all_of": [
+                    "CargoHopperFake"
+                  ]
                 }
-              ]
+              }
             }
-          ],
-          "value": "weapons:harpoon"
+          }
         },
         {
           "type": "minecraft:loot_table",
@@ -42,16 +38,15 @@
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              }
+          "value": "weapons:bomb",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
             }
-          ],
-          "value": "weapons:bomb"
+          }
         }
       ]
     }

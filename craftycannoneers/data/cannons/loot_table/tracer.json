@@ -8,29 +8,67 @@
           "name": "minecraft:diamond_hoe"
         }
       ],
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b,Cannonball:8b}"
         },
         {
-          "function": "minecraft:set_components",
+          "type": "minecraft:set_components",
           "components": {
             "minecraft:custom_model_data": {
-              "floats": [60]
+              "floats": [
+                60
+              ]
             },
             "minecraft:enchantments": {
               "minecraft:vanishing_curse": 1
             },
             "minecraft:enchantment_glint_override": false,
             "minecraft:unbreakable": {},
-            "minecraft:custom_name": [{"translate":"cannonball.tracer","italic":false,"color":"green"}],
+            "minecraft:custom_name": [
+              {
+                "translate": "cannonball.tracer",
+                "italic": false,
+                "color": "green"
+              }
+            ],
             "minecraft:lore": [
-              [{"translate":"cannonball.tracer.lore.1","italic":false,"color":"white"}],
-              [{"translate":"cannonball.tracer.lore.2","italic":false,"color":"white"}],
-              [{"text":"","italic":false,"color":"dark_purple"}],
-              [{"translate":"cannonball.tracer.lore.3","italic":false,"color":"#66ff99"}],
-              [{"translate":"cannonball.tracer.lore.4","italic":false,"color":"#66ff99"}]
+              [
+                {
+                  "translate": "cannonball.tracer.lore.1",
+                  "italic": false,
+                  "color": "white"
+                }
+              ],
+              [
+                {
+                  "translate": "cannonball.tracer.lore.2",
+                  "italic": false,
+                  "color": "white"
+                }
+              ],
+              [
+                {
+                  "text": "",
+                  "italic": false,
+                  "color": "dark_purple"
+                }
+              ],
+              [
+                {
+                  "translate": "cannonball.tracer.lore.3",
+                  "italic": false,
+                  "color": "#66ff99"
+                }
+              ],
+              [
+                {
+                  "translate": "cannonball.tracer.lore.4",
+                  "italic": false,
+                  "color": "#66ff99"
+                }
+              ]
             ],
             "minecraft:tooltip_display": {
               "hidden_components": [

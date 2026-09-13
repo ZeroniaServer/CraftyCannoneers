@@ -11,270 +11,235 @@
         {
           "type": "minecraft:loot_table",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "cannons:normal",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "cannons:normal"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "cannons:copper",
+          "condition": {
+            "type": "minecraft:weather_check",
+            "raining": true
+          },
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:weather_check",
-              "raining": true
-            }
-          ],
-          "value": "cannons:copper"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "cannons:hot",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "cannons:hot"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "cannons:cluster",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "cannons:cluster"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "cannons:gas",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "cannons:gas"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "cannons:chain",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "cannons:chain"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "cannons:bouncy",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "cannons:bouncy"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "cannons:player",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "cannons:player"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "weapons:golden_apple",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "weapons:golden_apple"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 6,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 2,
-                "max": 3
-              }
+          "value": "weapons:bomb",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 3
             }
-          ],
-          "value": "weapons:bomb"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 7,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "weapons:barrel",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "weapons:barrel"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 4,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "weapons:skeleton_key",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "weapons:skeleton_key"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "weapons:shield",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "weapons:shield"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "weapons:trooper_tonic",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "weapons:trooper_tonic"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "weapons:mace",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "weapons:mace"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "weapons:saber",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "weapons:saber"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "weapons:battle_axe",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "weapons:battle_axe"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "functions": [
+          "value": "weapons:harpoon",
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1,
@@ -282,67 +247,57 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:damage": 250
               },
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "team": "Lobby"
-                  }
+              "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "team": "Lobby"
                 }
-              ]
+              }
             }
-          ],
-          "value": "weapons:harpoon"
+          ]
         },
         {
           "type": "minecraft:loot_table",
           "weight": 2,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
+          "value": "weapons:raid_horn",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "weapons:raid_horn"
+          }
         },
         {
           "type": "minecraft:loot_table",
           "weight": 3,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$Wildlife"
-                },
-                "score": "CmdData",
-                "scale": 1
+          "value": "weapons:crab_trap_empty",
+          "condition": {
+            "type": "minecraft:int_value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "$Wildlife"
               },
-              "range": 1
+              "score": "CmdData"
+            },
+            "test": 1
+          },
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 1
             }
-          ],
-          "value": "weapons:crab_trap_empty"
+          }
         }
       ]
     }

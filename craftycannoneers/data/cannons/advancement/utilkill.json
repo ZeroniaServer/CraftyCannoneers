@@ -4,13 +4,17 @@
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
         "player": {
-          "nbt": "{Health:0.0f}"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "nbt": "{Health:0.0f}"
+          }
         },
         "damage": {
           "type": {
             "tags": [
               {
-                "id": "cannons:damage",
+                "id": "#cannons:damage",
                 "expected": true
               }
             ]

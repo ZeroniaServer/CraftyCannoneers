@@ -8,25 +8,63 @@
           "name": "minecraft:diamond_hoe"
         }
       ],
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
           "tag": "{Cannonball:3b}"
         },
         {
-          "function": "minecraft:set_components",
+          "type": "minecraft:set_components",
           "components": {
             "minecraft:custom_model_data": {
-              "floats": [29]
+              "floats": [
+                29
+              ]
             },
             "minecraft:unbreakable": {},
-            "minecraft:custom_name": [{"translate":"cannonball.cluster","italic":false,"color":"dark_aqua"}],
+            "minecraft:custom_name": [
+              {
+                "translate": "cannonball.cluster",
+                "italic": false,
+                "color": "dark_aqua"
+              }
+            ],
             "minecraft:lore": [
-              [{"translate":"cannonball.cluster.lore.1","italic":false,"color":"white"}],
-              [{"translate":"cannonball.cluster.lore.2","italic":false,"color":"white"}],
-              [{"text":"","italic":false,"color":"dark_purple"}],
-              [{"translate":"cannonball.cluster.lore.3","italic":false,"color":"aqua"}],
-              [{"translate":"cannonball.cluster.lore.4","italic":false,"color":"aqua"}]
+              [
+                {
+                  "translate": "cannonball.cluster.lore.1",
+                  "italic": false,
+                  "color": "white"
+                }
+              ],
+              [
+                {
+                  "translate": "cannonball.cluster.lore.2",
+                  "italic": false,
+                  "color": "white"
+                }
+              ],
+              [
+                {
+                  "text": "",
+                  "italic": false,
+                  "color": "dark_purple"
+                }
+              ],
+              [
+                {
+                  "translate": "cannonball.cluster.lore.3",
+                  "italic": false,
+                  "color": "aqua"
+                }
+              ],
+              [
+                {
+                  "translate": "cannonball.cluster.lore.4",
+                  "italic": false,
+                  "color": "aqua"
+                }
+              ]
             ],
             "minecraft:tooltip_display": {
               "hidden_components": [
@@ -37,17 +75,15 @@
           }
         },
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
           "tag": "{NoDrop:1b}",
-          "conditions": [
-            {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "team": "Lobby"
-              }
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "team": "Lobby"
             }
-          ]
+          }
         }
       ]
     }
