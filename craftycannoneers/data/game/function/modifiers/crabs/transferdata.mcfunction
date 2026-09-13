@@ -10,7 +10,7 @@ execute if entity @s[tag=Purple] on controller run team join Purple @s
 
 execute unless entity @s[tag=Purple] unless entity @s[tag=Orange] run tag @s add teamless
 
-setblock ~ 256 ~ oak_sign
+setblock ~ 256 ~ oak_sign{allow_op_features:true}
 execute as @a[predicate=game:matches_uuid,limit=1] run data modify block ~ 256 ~ front_text.messages[0] set value ["",{color:"white",translate:"mob.crab.possessive",with:[{selector:"@a[limit=1,predicate=game:matches_uuid]"}]}]
 data modify entity @s CustomName set from block ~ 256 ~ front_text.messages[0]
 setblock ~ 256 ~ air

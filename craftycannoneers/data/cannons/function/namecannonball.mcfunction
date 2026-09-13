@@ -1,5 +1,5 @@
 execute store result score $tempuuid playerUUID run scoreboard players get @s playerUUID
-setblock ~ 256 ~ oak_sign
+setblock ~ 256 ~ oak_sign{allow_op_features:true}
 execute if entity @s[tag=Cannonball] as @a[predicate=game:matches_uuid,limit=1] run data modify block ~ 256 ~ front_text.messages[0] set value ["",{translate:"cannonball.normal.possessive",with:[{selector:"@a[limit=1,predicate=game:matches_uuid]"}]}]
 execute if entity @s[tag=HotCannonball] as @a[predicate=game:matches_uuid,limit=1] run data modify block ~ 256 ~ front_text.messages[0] set value ["",{translate:"cannonball.hot.possessive",with:[{selector:"@a[limit=1,predicate=game:matches_uuid]"}]}]
 execute if entity @s[tag=ChainCannonball] as @a[predicate=game:matches_uuid,limit=1] run data modify block ~ 256 ~ front_text.messages[0] set value ["",{translate:"cannonball.chain.possessive",with:[{selector:"@a[limit=1,predicate=game:matches_uuid]"}]}]
